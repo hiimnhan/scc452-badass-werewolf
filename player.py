@@ -3,6 +3,7 @@ from enum import Enum
 import json
 from typing import List, override
 from langchain_core.language_models import BaseChatModel
+from pathlib import Path
 
 
 class Role(Enum):
@@ -27,6 +28,7 @@ class Player:
         self._model = model
         self._is_alive = is_alive
         self._notes = []  # Player's private notes or thoughts
+        self._guidelines = ""  # Actionable guidelines for the player based on feedback
         self._suspicions = defaultdict(float)  # Suspicion scores for other players
         self._personality = personality
 
@@ -179,7 +181,7 @@ class Player:
         self._add_note(f"Learned that {target} is a {role.value}.")
 
     def debate(self, dialogue_history: List[dict]) -> tuple[str, dict]:
-        """Engages in debate with other players based on dialogue history
+        """Engages in debate with other players based on dialogue history and guideline for the role.
         returns message to contribute to debate and log
         """
         prompt = ""
@@ -253,3 +255,43 @@ class Player:
         )
 
         return target, resp
+
+    def _get_guideline_and_update(self) -> dict | None:
+        """
+        Pulls feedback for the given role from the system prompt then update her own notes
+        return error if any
+        """
+        # get feedback file from player's role in feedbacks folder
+        feedback_file = Path(f"feedbacks/{self._role.value.lower()}.txt")
+        try:
+            with open(feedback_file, "r") as f:
+                feedback = f.read()
+        except FileNotFoundError:
+            return {
+                "error": f"No feedback file found for role {self._role.value} at {feedback_file}"
+            }
+        except PermissionError:
+            return {
+                "error": f"Permission denied when trying to read feedback file for role {self._role.value} at {feedback_file}"
+            }
+
+        # call model to summarize feedback into key points and actionable guidelines from its own reasoning, then update player's notes
+        prompt = ""
+        """
+        TODO - prompt should return JSON format
+        {{
+            "summary": "<summary of key feedback points>",
+            "guidelines": "<actionable guidelines for improvement>"
+        }}
+        """
+
+        resp = self.call_model(prompt)
+
+        self._guidelines = f"Here are some guidelines for me based on feedback from coach: {resp.get('summary', 'No summary provided.')}. Actionable guidelines: {resp.get('guidelines', 'No guidelines provided.')}"
+        return None
+
+    def _export_knowledge(self):
+        """
+        Export player's knowledge from current game note, guideline so they can use it in the next game
+        """
+        pass
