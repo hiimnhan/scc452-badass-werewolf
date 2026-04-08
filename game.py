@@ -26,7 +26,7 @@ class Phase(Enum):
     SUMMARIZE = "summarize"
 
 
-class GameState():
+class GameState:
     def __init__(
         self,
         round_num: int = 0,
