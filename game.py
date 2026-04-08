@@ -2,8 +2,10 @@ from __future__ import annotations
 
 from collections import defaultdict
 from typing import Literal, Optional
-from players.base_player import Role
 
+import tqdm
+from players.base_player import Role
+from langchain_core.runnables import RunnableConfig
 from enum import Enum
 
 from langgraph.graph import StateGraph, END
@@ -92,9 +94,37 @@ class GameState:
     def eliminate_node(self, state: GameState) -> GameState:
         # TODO: ELIMINATE
         return state
+    
+    def protect_node(self, state: GameState, config: RunnableConfig) -> GameState:
+        """Guard chooses a player to protect during the night."""
+        player_objects = config.get("configurable", {}).get("player_objects", {})
+        guard_name = state._guard
+        guard_obj = player_objects.get(guard_name)
+        # check if guard was killed 
+        if guard_name not in state.alive_players:
+            return state.model_copy(update={"phase": "unmask"})
 
-    def protect_node(self, state: GameState) -> GameState:
-        # TODO: PROTECT
+        protect_target, log = guard_obj.protect(self._alive_players)
+
+        if not protect_target:
+            raise ValueError(f"{guard_name} failed to specify a protection target.")
+
+        tqdm.tqdm.write(f"{guard_name} protected {protect_target}")
+
+        # Convert log to string if it's a dict
+        log_str = str(log) if isinstance(log, dict) else log
+        
+        state =  state.model_copy(update={
+            "protected": protect_target,
+            "protect_log": log_str,
+            "phase": "unmask"
+        })
+
+        #log event haven't been implemented yet.
+        # state = log_event(state, "protect", guard_name, {
+        # "target": protect_target,
+        # "raw_output": log
+        # })
         return state
 
     def unmask_node(self, state: GameState) -> GameState:
