@@ -239,9 +239,10 @@ class Seer(BasePlayer):
             history = []
 
         confirmed = self._is_confirmed(speaker_name)
+        resp = super().detect_deception(speaker_name, statement, context, history)
         if confirmed is not None:
             # Run analysis for chain-of-thought / game log value
-            resp = super().detect_deception(speaker_name, statement, context, history)
+            
             fixed_score = 1.0 if confirmed else 0.0
             original_llm_suspicion = resp.get(
                 "suspicion_level")  # save before overwrite
@@ -253,7 +254,7 @@ class Seer(BasePlayer):
             return resp
 
         # Not yet investigated — normal inference applies, score updates freely
-        return super().detect_deception(speaker_name, statement, context, history)
+        return resp
 
     def vote(self, alive_players: List[str]) -> tuple[str, dict]:
         """
