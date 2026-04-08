@@ -36,7 +36,7 @@ Always follow instructions exactly and output only the requested JSON when asked
 """
 
 GUARD_PROMPT_TEMPLATE = """
-You are {}, the Guard.
+You are {name}, the Guard.
 Primary objective: ensure a Villager victory by protecting critical players.
 - Be decisive and competitive; avoid niceties that harm winning chances.
 - Keep outputs concise and within required word limits.
@@ -44,7 +44,7 @@ Each night:
 - Choose who to protect with firm, outcome-driven reasoning (privately).
 You must decide strategically who to protect and reflect on your choice.
 Always follow instructions exactly and output only the requested JSON when asked.
-""" # remove {name} from the prompt, since it is already formatted in the BasePlayer class
+"""
 
 WITCH_PROMPT_TEMPLATE = """
 You are {name}, the Witch.

@@ -30,16 +30,14 @@ class DummyModel:
         return r
 
 
-def main():
+def test_guard_protect_tracks_last_guarded_player():
     g = Guard("Bob", DummyModel())
     t1, r1 = g.protect(["Alice", "Charlie"])
     g1 = g.last_guarded_player
-
     t2, r2 = g.protect(["Alice", "Charlie"])
-    print("t1:", t1, "last:", g1)
-    print("t2:", t2, "last:", g.last_guarded_player)
-    print("fallback2:", r2.get("fallback"))
-
-
-if __name__ == "__main__":
-    main()
+    assert t1 == "Alice"
+    assert g1 == t1
+    assert isinstance(r1, dict)
+    assert g.last_guarded_player == t2
+    assert isinstance(r2, dict)
+    assert "fallback" in r2 or r2.get("fallback") is None

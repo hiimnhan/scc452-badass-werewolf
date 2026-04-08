@@ -16,9 +16,9 @@ class Guard(BasePlayer):
         super().__init__(name=name, role=role, model=model, system_prompt=system_prompt)
         self.last_guarded_player = None
 
-    def protect(self, alive_players: List[str] = None):
+    def protect(self, alive_players: List[str] = None) -> tuple[str, dict]:
         # Implement the logic to protect a player
-        # input: alive players (list), output: target player to protect (str)
+        # input: alive players (list), output: target player to protect (str), log (dict)
         # how to use: call this method, it will return the name of the player to protect
         if alive_players is None:
             return "", {"error": "No alive players provided."}
@@ -32,16 +32,16 @@ class Guard(BasePlayer):
         prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
             name=self._name, list_player=", ".join(available_targets)
         )
-        print(prompt)  # Debug only
+        # print(prompt)  # Debug only
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
         
         # Validate that the target is actually in the available targets
         if target not in available_targets:
             # If invalid target, try to extract a valid name from the response
-            # COPY FROM ORIGINAL CODE, DON'T KNOW WHY
+            # prevent model doesn't reply expected JSON format
             if "raw" in resp:
-                print(f"Raw response for debugging: {resp}")  # Debug only
+                # print(f"Raw response for debugging: {resp}")  # Debug only
                 raw_response = resp["raw"]
                 for player in available_targets:
                     if player in raw_response:
