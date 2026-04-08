@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Literal, Optional
 
-from pydantic import BaseModel
 import tqdm
 from players.base_player import Role
 from langchain_core.runnables import RunnableConfig
@@ -27,7 +26,7 @@ class Phase(Enum):
     SUMMARIZE = "summarize"
 
 
-class GameState(BaseModel):
+class GameState():
     def __init__(
         self,
         round_num: int = 0,
@@ -103,9 +102,10 @@ class GameState(BaseModel):
         guard_obj = player_objects.get(guard_name)
         # check if guard was killed 
         if guard_name not in state._alive_players:
-            return state.model_copy(update={"phase": "unmask"})
+            state._phase = Phase.UNMASK
+            return state
 
-        protect_target, log = guard_obj.protect(self._alive_players)
+        protect_target, log = guard_obj.protect(state._alive_players)
 
         if not protect_target:
             raise ValueError(f"{guard_name} failed to specify a protection target.")
@@ -115,11 +115,9 @@ class GameState(BaseModel):
         # Convert log to string if it's a dict
         log_str = str(log) if isinstance(log, dict) else log
         
-        state =  state.model_copy(update={
-            "protected": protect_target,
-            "protect_log": log_str,
-            "phase": "unmask"
-        })
+        state._protected = protect_target
+        state._protect_log = log_str
+        state._phase = Phase.UNMASK
 
         #log event haven't been implemented yet.
         # state = log_event(state, "protect", guard_name, {
@@ -168,23 +166,22 @@ class GameState(BaseModel):
         # TODO: END
         return state
 
-    @classmethod
-    def build_graph(cls):
-        graph = StateGraph(cls)
+    def build_graph(self):
+        graph = StateGraph(GameState)
 
-        graph.add_node("wolf_debate", cls.wolf_debate_node)
-        graph.add_node("eliminate", cls.eliminate_node)
-        graph.add_node("protect", cls.protect_node)
-        graph.add_node("unmask", cls.unmask_node)
-        graph.add_node("save_or_poison", cls.save_or_poison_node)
-        graph.add_node("resolve_night", cls.resolve_night_node)
-        graph.add_node("check_winner_night", cls.check_winner_night_node)
-        graph.add_node("debate", cls.debate_node)
-        graph.add_node("vote", cls.vote_node)
-        graph.add_node("exile", cls.exile_node)
-        graph.add_node("check_winner_day", cls.check_winner_day_node)
-        graph.add_node("summarize", cls.summarize_node)
-        graph.add_node("end", cls.end_node)
+        graph.add_node("wolf_debate", self.wolf_debate_node)
+        graph.add_node("eliminate", self.eliminate_node)
+        graph.add_node("protect", self.protect_node)
+        graph.add_node("unmask", self.unmask_node)
+        graph.add_node("save_or_poison", self.save_or_poison_node)
+        graph.add_node("resolve_night", self.resolve_night_node)
+        graph.add_node("check_winner_night", self.check_winner_night_node)
+        graph.add_node("debate", self.debate_node)
+        graph.add_node("vote", self.vote_node)
+        graph.add_node("exile", self.exile_node)
+        graph.add_node("check_winner_day", self.check_winner_day_node)
+        graph.add_node("summarize", self.summarize_node)
+        graph.add_node("end", self.end_node)
 
         graph.set_entry_point("wolf_debate")
 

@@ -64,7 +64,7 @@ def run(model_name="gpt-4o"):
         roles=roles
     )
     
-    runnable = GameState.build_graph()
+    runnable = initial_state.build_graph()
     final_state = runnable.invoke(initial_state, config={
         "recursion_limit": 1000,
         "configurable": {
