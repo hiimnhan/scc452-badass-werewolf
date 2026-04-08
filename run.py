@@ -3,6 +3,7 @@ from game import GameState
 from config import MODEL_PROVIDERS
 from players.guard import Guard
 from utils import get_llm
+from players.base_player import Role
 
 
 def parse_args() -> argparse.Namespace:
@@ -24,28 +25,28 @@ def run(model_name="gpt-4o"):
 
     players = ["Alice", "Bob", "Selena", "Raj", "Frank", "Joy", "Cyrus"]
     roles = {
-        "Alice": "Guard",
-        "Bob": "Seer", 
-        "Selena": "Witch", 
-        "Raj": "Villager", 
-        "Frank": "Villager", 
-        "Joy": "Werewolf", 
-        "Cyrus": "Werewolf",
+        "Alice": Role.GUARD,
+        "Bob": Role.SEER,
+        "Selena": Role.WITCH,
+        "Raj": Role.VILLAGER,
+        "Frank": Role.VILLAGER,
+        "Joy": Role.WEREWOLF,
+        "Cyrus": Role.WEREWOLF,
     }
 
-    seer = next((p for p in players if roles[p] == "Seer"), None)
-    guard = next((p for p in players if roles[p] == "Guard"), None)
-    witch = next((p for p in players if roles[p] == "Witch"), None)
-    villagers = [p for p in players if roles[p] == "Villager"]
-    werewolves = [p for p in players if roles[p] == "Werewolf"]
-    
+    seer = next((p for p in players if roles[p] == Role.SEER), None)
+    guard = next((p for p in players if roles[p] == Role.GUARD), None)
+    witch = next((p for p in players if roles[p] == Role.WITCH), None)
+    villagers = [p for p in players if roles[p] == Role.VILLAGER]
+    werewolves = [p for p in players if roles[p] == Role.WEREWOLF]
+
     role_to_player_class = {
-        "Guard": Guard,
+        Role.GUARD: Guard,
         # TODO: replace these fallbacks when concrete role classes are implemented.
-        "Seer": Guard,
-        "Witch": Guard,
-        "Villager": Guard,
-        "Werewolf": Guard,
+        Role.SEER: Guard,
+        Role.WITCH: Guard,
+        Role.VILLAGER: Guard,
+        Role.WEREWOLF: Guard,
     }
 
     player_objects = {
