@@ -82,7 +82,8 @@ class GameState:
     def _compute_current_winner(
         self, state: GameState
     ) -> Optional[Literal["Villagers", "Werewolves"]]:
-        pass
+        # TODO: compute current winner
+        return None
 
     def wolf_debate_node(self, state: GameState) -> GameState:
         # TODO: WOLF_DEBATE
@@ -156,18 +157,18 @@ class GameState:
 
         graph.set_entry_point("wolf_debate")
 
-        graph.add_conditional_edges("wolf_debate", lambda s: s._phase.value)
-        graph.add_conditional_edges("eliminate", lambda s: s._phase.value)
-        graph.add_conditional_edges("protect", lambda s: s._phase.value)
-        graph.add_conditional_edges("unmask", lambda s: s._phase.value)
-        graph.add_conditional_edges("save_or_poison", lambda s: s._phase.value)
-        graph.add_conditional_edges("resolve_night", lambda s: s._phase.value)
-        graph.add_conditional_edges("check_winner_night", lambda s: s._phase.value)
-        graph.add_conditional_edges("debate", lambda s: s._phase.value)
-        graph.add_conditional_edges("vote", lambda s: s._phase.value)
-        graph.add_conditional_edges("exile", lambda s: s._phase.value)
-        graph.add_conditional_edges("check_winner_day", lambda s: s._phase.value)
-        graph.add_conditional_edges("summarize", lambda s: s._phase.value)
+        graph.add_conditional_edges("wolf_debate", lambda s: s._phase)
+        graph.add_conditional_edges("eliminate", lambda s: s._phase)
+        graph.add_conditional_edges("protect", lambda s: s._phase)
+        graph.add_conditional_edges("unmask", lambda s: s._phase)
+        graph.add_conditional_edges("save_or_poison", lambda s: s._phase)
+        graph.add_conditional_edges("resolve_night", lambda s: s._phase)
+        graph.add_conditional_edges("check_winner_night", lambda s: s._phase)
+        graph.add_conditional_edges("debate", lambda s: s._phase)
+        graph.add_conditional_edges("vote", lambda s: s._phase)
+        graph.add_conditional_edges("exile", lambda s: s._phase)
+        graph.add_conditional_edges("check_winner_day", lambda s: s._phase)
+        graph.add_conditional_edges("summarize", lambda s: s._phase)
         graph.add_edge("end", END)
 
         return graph.compile()
