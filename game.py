@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Literal, Optional
 
+from pydantic import BaseModel
 import tqdm
 from players.base_player import Role
 from langchain_core.runnables import RunnableConfig
@@ -26,7 +27,7 @@ class Phase(Enum):
     SUMMARIZE = "summarize"
 
 
-class GameState:
+class GameState(BaseModel):
     def __init__(
         self,
         round_num: int = 0,
@@ -101,7 +102,7 @@ class GameState:
         guard_name = state._guard
         guard_obj = player_objects.get(guard_name)
         # check if guard was killed 
-        if guard_name not in state.alive_players:
+        if guard_name not in state._alive_players:
             return state.model_copy(update={"phase": "unmask"})
 
         protect_target, log = guard_obj.protect(self._alive_players)
