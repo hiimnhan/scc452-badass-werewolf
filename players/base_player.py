@@ -40,7 +40,7 @@ class BasePlayer(ABC):
 
         self.setup_prompt = ", ".join(
             [
-                system_prompt.format(name),
+                system_prompt.format(name=name),
                 f"Your personality is: {personality}" if personality else "",
             ]
         )
