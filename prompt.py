@@ -143,7 +143,6 @@ Respond in JSON format with these exact keys:
 }}
 No extra text, no markdown, no code fences.
 """
-<<<<<<< HEAD
 
 WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
 You are {name}, a Werewolf. It is night. 
@@ -182,5 +181,3 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-=======
->>>>>>> 4d01d9d7f36a67da89ecb727fa3a322cbf49cf9d
