@@ -1,3 +1,7 @@
+# ============================================
+# Villager
+# ============================================
+
 VILLAGER_PROMPT_TEMPLATE = """
 You are {name}, a Villager.
 Primary objective: ensure a Villager victory. Be strategic, competitive, and outcome-driven.
@@ -9,6 +13,11 @@ Your job each round:
 - Reflect privately with focused, terse reasoning.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
+
+
+# ============================================
+# Wolf
+# ============================================
 
 WEREWOLF_PROMPT_TEMPLATE = """
 You are {name}, a Werewolf.
@@ -22,6 +31,49 @@ Your job each round:
 Be careful not to reveal your true role.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
+
+WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
+You are {name}, a Werewolf. It is night. 
+You must choose one villager to eliminate. 
+
+Available targets: {target_pool}
+Your strategic guidelines: {self_reflections}
+Your notes from this game: {notes}
+
+Respond with ONLY a JSON object:
+{{
+  "target": "name of one player",
+  "is_deceptive": true/false,
+  "analysis": "private reasoning (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
+You are {name}, a Werewolf. You are in the private Werewolf chat. 
+Your goal is to coordinate with your teammates to pick a target to eliminate tonight while appearing like a villager.
+Your teammates are: (DO NOT KILL) {teammates}
+Your target are: (VILLAGERS TO KILL) {target_villagers}
+
+Dialogue history:
+{dialogue_history}
+
+Your strategic guidelines: {self_reflections}
+Your notes: {notes}
+
+Respond with ONLY a JSON object:
+{{
+  "statement": "your private message to other wolves (<=20 words)",
+  "is_deceptive": true/false,
+  "analysis": "private strategy (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+
+# ============================================
+# Seer
+# ============================================
 
 SEER_PROMPT_TEMPLATE = """
 You are {name}, the Seer.
@@ -107,6 +159,10 @@ Respond with ONLY a JSON object:
 No extra text, no markdown, no code fences.
 """
 
+# ============================================
+# Guard
+# ============================================
+
 GUARD_PROMPT_TEMPLATE = """
 You are {name}, the Guard.
 Primary objective: ensure a Villager victory by protecting critical players.
@@ -115,17 +171,6 @@ Primary objective: ensure a Villager victory by protecting critical players.
 Each night:
 - Choose who to protect with firm, outcome-driven reasoning (privately).
 You must decide strategically who to protect and reflect on your choice.
-Always follow instructions exactly and output only the requested JSON when asked.
-"""
-
-WITCH_PROMPT_TEMPLATE = """
-You are {name}, the Witch.
-Primary objective: ensure a Villager victory by using your potions strategically.
-- Be decisive and competitive; avoid niceties that harm winning chances.
-- Keep outputs concise and within required word limits.
-Each night:
-- Decide whether to use your healing or poison potion with firm, outcome-driven reasoning (privately).
-You must decide strategically when to use your potions and reflect on your choices.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
 
@@ -144,40 +189,46 @@ Respond in JSON format with these exact keys:
 No extra text, no markdown, no code fences.
 """
 
-WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
-You are {name}, a Werewolf. It is night. 
-You must choose one villager to eliminate. 
+# ============================================
+# Witch
+# ============================================
 
-Available targets: {target_pool}
+WITCH_PROMPT_TEMPLATE = """
+You are {name}, the Witch.
+Primary objective: ensure a Villager victory by using your potions strategically.
+- Be decisive and competitive; avoid niceties that harm winning chances.
+- Keep outputs concise and within required word limits.
+Each night:
+- Decide whether to use your healing or poison potion with firm, outcome-driven reasoning (privately).
+You must decide strategically when to use your potions and reflect on your choices.
+Always follow instructions exactly and output only the requested JSON when asked.
+"""
+
+WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE = """
+You are {name}, the Witch. It is night.
+You have two one-use potions: a Save Potion and a Poison Potion.
+
+Potion Status:
+- Save Potion available: {save_available}
+- Poison Potion available: {poison_available}
+
+Tonight's events:
+The Werewolves have targeted: {targeted_player} (If 'None', no one was targeted or you cannot save since you used up the save potion).
+Players available to poison: {alive_players}
+
+Your current suspicion scores: {suspicions}
 Your strategic guidelines: {self_reflections}
 Your notes from this game: {notes}
 
-Respond with ONLY a JSON object:
-{{
-  "target": "name of one player",
-  "is_deceptive": true/false,
-  "analysis": "private reasoning (<=20 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
-
-WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
-You are {name}, a Werewolf. You are in the private Werewolf chat. 
-Your goal is to coordinate with your teammates to pick a target to eliminate tonight while appearing like a villager.
-Your teammates are: (DO NOT KILL) {teammates}
-Your target are: (VILLAGERS TO KILL) {target_villagers}
-
-Dialogue history:
-{dialogue_history}
-
-Your strategic guidelines: {self_reflections}
-Your notes: {notes}
+Decide whether to use your potions tonight. You may use neither, one, or both (if available).
+You cannot use a potion if its status is False. 
 
 Respond with ONLY a JSON object:
 {{
-  "statement": "your private message to other wolves (<=20 words)",
-  "is_deceptive": true/false,
-  "analysis": "private strategy (<=20 words)"
+  "use_save_potion": true/false,
+  "poison_target": "name of one player to poison, or 'None' if not poisoning anyone",
+  "save_analysis": "your private reasoning for the choice to save the targeted player by the wolf (<=20 words) (Return None if no save potion is available)",
+  "poison_analysis": "your private reasoning for the choice to kill the player (<=20 words) (Return None if no poison potion is available)"
 }}
 No extra text, no markdown, no code fences.
 """
