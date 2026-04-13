@@ -53,7 +53,7 @@ WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
 You are {name}, a Werewolf. You are in the private Werewolf chat. 
 Your goal is to coordinate with your teammates to pick a target to eliminate tonight while appearing like a villager.
 Your teammates are: (DO NOT KILL) {teammates}
-Your target are: (VILLAGERS TO KILL) {target_villagers}
+Your target are: (VILLAGERS TO KILL) {target_pool}
 
 Dialogue history:
 {dialogue_history}

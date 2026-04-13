@@ -17,12 +17,12 @@ class Wolf(BasePlayer):
         """Private conversation between wolves for picking a target to eliminate, similar to voting logic that picks a name to eliminate"""
         self._teammates = other_wolves
         target = [p for p in alive_players if p not in other_wolves]
-        history_conv = "\n".join([f"{s['player']}: {s['text']}" for s in dialogue_history])
+        history_conv = "\n".join([f"{s}: {t}" for s, t in dialogue_history])
         
         prompt = WEREWOLF_DEBATE_PROMPT_TEMPLATE.format(
                 name=self._name,
                 teammates = ", ".join(other_wolves),
-                target_villagers = ", ".join(target),
+                target_pool = ", ".join(target),
                 dialogue_history=history_conv  if history_conv else "There's no discussion yet.",
                 self_reflections=self._self_reflections,
                 notes=", ".join(self._current_game_notes)
