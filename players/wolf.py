@@ -16,7 +16,7 @@ class Wolf(BasePlayer):
     def wolf_debate(self, alive_players: List[str], other_wolves: List[str], dialogue_history: List[dict]) -> tuple[str, dict]:
         """Private conversation between wolves for picking a target to eliminate, similar to voting logic that picks a name to eliminate"""
         self._teammates = other_wolves
-        target = [p for p in alive_players if p not in other_wolves]
+        target = [p for p in alive_players if p not in other_wolves and p != self._name]
         history_conv = "\n".join([f"{s}: {t}" for s, t in dialogue_history])
         
         prompt = WEREWOLF_DEBATE_PROMPT_TEMPLATE.format(
@@ -45,11 +45,11 @@ class Wolf(BasePlayer):
 
     def eliminate(self, alive_players: List[str]) -> tuple[str, dict]:
         """The final decision on who dies tonight."""
-        available_targets = [p for p in alive_players if p != self._name and p not in self._teammates]
+        targets = [p for p in alive_players if p != self._name and p not in self._teammates]
         
         prompt = WEREWOLF_ELIMINATE_PROMPT_TEMPLATE.format(
             name=self._name,
-            target_pool=", ".join(available_targets),
+            target_pool=", ".join(targets),
             self_reflections=self._self_reflections,
             notes=", ".join(self._current_game_notes)
         )
@@ -57,8 +57,8 @@ class Wolf(BasePlayer):
         target_eliminate = response.get("target", "")
         
         # In case if AI picks not existed name, proceed with picking the first valid one
-        if target_eliminate not in available_targets:
-            target_eliminate = available_targets[0] if available_targets else ""
+        if target_eliminate not in targets:
+            target_eliminate = targets[0] if targets else ""
 
         self._add_note(f"Night Action: Eliminating {target_eliminate}.")
         return target_eliminate, response
