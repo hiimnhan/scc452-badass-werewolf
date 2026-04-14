@@ -12,8 +12,9 @@ class Guard(BasePlayer):
         model: BaseChatModel,
         role: Role = Role.GUARD,
         system_prompt: str = GUARD_PROMPT_TEMPLATE,
+        personality: str = "",
     ):
-        super().__init__(name=name, role=role, model=model, system_prompt=system_prompt)
+        super().__init__(name=name, role=role, model=model, system_prompt=system_prompt, personality=personality)
         self.last_guarded_player = None
 
     def protect(self, alive_players: List[str] = None) -> tuple[str, dict]:

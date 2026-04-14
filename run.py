@@ -2,6 +2,10 @@ import argparse
 from game import GameState
 from config import MODEL_PROVIDERS
 from players.guard import Guard
+from players.seer import Seer
+from players.witch import Witch
+from players.base_player import BasePlayer
+from players.wolf import Wolf
 from utils import get_llm
 from players.base_player import Role
 
@@ -42,11 +46,10 @@ def run(model_name="gpt-4o"):
 
     role_to_player_class = {
         Role.GUARD: Guard,
-        # TODO: replace these fallbacks when concrete role classes are implemented.
-        Role.SEER: Guard,
-        Role.WITCH: Guard,
-        Role.VILLAGER: Guard,
-        Role.WEREWOLF: Guard,
+        Role.SEER: Seer,
+        Role.WITCH: Witch,
+        Role.VILLAGER: BasePlayer,
+        Role.WEREWOLF: Wolf,
     }
 
     player_objects = {
