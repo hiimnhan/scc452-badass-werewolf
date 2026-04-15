@@ -78,7 +78,7 @@ class Coach:
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def _call_model(self, system: str, prompt: str, max_tokens: int = 500) -> dict:
+    def _call_model(self, system: str, prompt: str, max_tokens: int = 500, timeout: int = 15) -> dict:
         """Send a two-message request to the LLM.
         Returns parsed JSON dict; falls back to {"raw": str} on parse failure.
         """
@@ -86,7 +86,15 @@ class Coach:
             SystemMessage(content=system),
             HumanMessage(content=prompt),
         ]
-        resp = self._model.invoke(messages, max_tokens=max_tokens).content
+        kwargs = {"timeout": timeout}
+
+        # Fix for the LangChain/Google kwarg bug
+        if "GoogleGenerativeAI" not in type(self._model).__name__:
+            # Only enforce max_tokens at the invoke level for OpenAI/Anthropic.
+            # Gemini will naturally stop based on the prompt's word limits!
+            kwargs["max_tokens"] = max_tokens
+
+        resp = self._model.invoke(messages, **kwargs).content
         resp = resp.strip() if isinstance(resp, str) else resp
 
         try:

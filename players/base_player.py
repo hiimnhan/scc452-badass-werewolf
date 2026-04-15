@@ -404,21 +404,16 @@ No extra text, no markdown, no code fences.
 
         return target, resp
 
-    def debate(self, dialogue_history: List[tuple]) -> tuple[str, dict]:
+    def debate(self) -> tuple[str, dict]:
         """Contribute a statement to the day debate.
-        dialogue_history: list of (speaker_name, statement) tuples.
         Returns (statement, log_dict).
         """
-        history_text = "\n".join(f"{speaker}: {text}" for speaker, text in dialogue_history)
 
         prompt = f"""
 You are {self._name} ({self._role.value}).
 Win for your faction. Be assertive — avoid hedging.
 
 {self._note}
-
-=== Debate So Far ===
-{history_text if history_text else "You are speaking first."}
 
 Make a strong, decisive accusation or defence.
 

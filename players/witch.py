@@ -54,7 +54,8 @@ class Witch(BasePlayer):
         # The Witch only learns the wolf target while her Save potion is available.
         # Once the Save potion is spent, the wolf target is hidden from her entirely.
         target_display = targeted_player_by_wolves if (self._save_available and targeted_player_by_wolves) else "None"
-        alive_display = ", ".join(alive_players) if self._poison_available else "None"
+        alive_players_except_witch = [player for player in alive_players if player != self._name]
+        alive_display = ", ".join(alive_players_except_witch) if self._poison_available else "None"
 
         prompt = WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE.format(
             name=self._name,
@@ -86,7 +87,7 @@ class Witch(BasePlayer):
         if isinstance(poison_target, str) and poison_target.lower() == "none":
             poison_target = None
             
-        if poison_target and (not self._poison_available or poison_target not in alive_players):
+        if poison_target and (not self._poison_available or poison_target not in alive_players_except_witch):
             poison_target = None
             resp["fallback_poison"] = "Forced None: Poison unavailable or target is invalid/dead."
 

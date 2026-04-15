@@ -90,7 +90,7 @@ if __name__ == "__main__":
         time.sleep(30)
         
         ### Debate: As everything is updated in the note, do we need the dialouge history?
-        message, _ = player_witch.debate([])
+        message, _ = player_witch.debate()
         print("==="*30)
         print("Player's statement:")
         print(message)
