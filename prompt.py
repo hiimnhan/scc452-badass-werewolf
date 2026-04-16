@@ -203,32 +203,37 @@ Each night:
 You must decide strategically when to use your potions and reflect on your choices.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
-
+ 
 WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE = """
 You are {name}, the Witch. It is night.
 You have two one-use potions: a Save Potion and a Poison Potion.
-
+ 
+POTION RULES:
+- Save Potion: cancels the wolf kill on their target. Single use.
+- Poison Potion: kills any player you choose. Single use.
+  The Poison bypasses the Guard — your target dies even if the Guard is protecting them.
+- You only learn who the wolves targeted when your Save Potion is still available.
+  If your Save Potion is already spent, the wolf target is hidden from you.
+ 
 Potion Status:
 - Save Potion available: {save_available}
 - Poison Potion available: {poison_available}
-
+ 
 Tonight's events:
-The Werewolves have targeted: {targeted_player} (If 'None', no one was targeted or you cannot save since you used up the save potion).
+Werewolf target: {targeted_player}
 Players available to poison: {alive_players}
-
-Your current suspicion scores: {suspicions}
-Your strategic guidelines: {self_reflections}
-Your notes from this game: {notes}
-
+ 
+{note}
+ 
 Decide whether to use your potions tonight. You may use neither, one, or both (if available).
-You cannot use a potion if its status is False. 
-
+You cannot use a potion if its status is False.
+ 
 Respond with ONLY a JSON object:
 {{
   "use_save_potion": true/false,
   "poison_target": "name of one player to poison, or 'None' if not poisoning anyone",
-  "save_analysis": "your private reasoning for the choice to save the targeted player by the wolf (<=20 words) (Return None if no save potion is available)",
-  "poison_analysis": "your private reasoning for the choice to kill the player (<=20 words) (Return None if no poison potion is available)"
+  "save_analysis": "your private reasoning for saving the wolf target (<=20 words) — return null if Save Potion unavailable",
+  "poison_analysis": "your private reasoning for poisoning a player (<=20 words) — return null if Poison Potion unavailable"
 }}
 No extra text, no markdown, no code fences.
 """
