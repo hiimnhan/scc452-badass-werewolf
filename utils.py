@@ -1,7 +1,7 @@
 from langchain_core.language_models import BaseChatModel
-from datetime import datetime
-from typing import Dict, Optional
+from pathlib import Path
 from config import LLM_BASE_CONFIG, MODEL_PROVIDERS
+from game import GameState
 
 
 def get_llm(model_name: str, **kwargs) -> BaseChatModel:
@@ -14,7 +14,12 @@ def get_llm(model_name: str, **kwargs) -> BaseChatModel:
     return provider(model_name=model_name, **{**LLM_BASE_CONFIG, **kwargs})
 
 
-def log_game_summary(state, announcement):
+def write_to_file(path: Path, content):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content)
+
+
+def log_game_summary(state: GameState, announcement):
     state._summary_logs.append(
         f"Round {state._round_num} - Phase {state._phase}: {announcement}"
     )

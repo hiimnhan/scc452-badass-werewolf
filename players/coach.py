@@ -4,6 +4,7 @@ from typing import Optional
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
 from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME
+from utils import write_to_file
 
 class Coach:
     """
@@ -37,17 +38,11 @@ class Coach:
         self._model = model
         self._game_id = game_id
         self._strategy = self._load_coach_strategy()
-
-    # ── File path helpers ───────────────────────────────────────────────
-
-    def _base_dir(self) -> Path:
-        return Path(__file__).parent
-
-    def _coach_strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / COACH_STRATEGY_FILENAME).resolve()
-
-    def _coach_feedback_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
+        
+        # ── File path ───────────────────────────────────────────────────
+        BASE_DIR_PATH = Path(__file__).parent.parent
+        self._coach_strategy_path = (BASE_DIR_PATH / "strategies" / COACH_STRATEGY_FILENAME).resolve()
+        self._coach_feedback_path = (BASE_DIR_PATH / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
 
     # ── Disk helpers ────────────────────────────────────────────────────
 
@@ -65,16 +60,12 @@ class Coach:
 
     def _write_coach_strategy(self, strategy: str) -> None:
         """Persist the coach's updated strategy and refresh the in-memory copy."""
-        path = self._coach_strategy_path()
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(strategy)
+        write_to_file(self._coach_strategy_path, strategy)
         self._strategy = strategy
 
     def _write_coach_feedback(self, feedback: str) -> None:
         """Write coach feedback to the file BasePlayer._coach_feedback reads."""
-        path = self._coach_feedback_path()
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(feedback)
+        write_to_file(self._coach_feedback_path, feedback)
 
     # ── LLM call ────────────────────────────────────────────────────────
 

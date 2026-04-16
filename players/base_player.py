@@ -6,6 +6,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from abc import ABC
 from pathlib import Path
 from constants import COACH_FEEDBACK_FILENAME
+from utils import write_to_file
 
 
 # ============================================
@@ -132,26 +133,17 @@ class BasePlayer(ABC):
         # System prompt — built once, sent on every call
         strategy = self._load_strategy()
         self._setup_prompt = self._build_setup_prompt(strategy)
+        
+        # ── File path ───────────────────────────────────────────────────
+        BASE_DIR_PATH = Path(__file__).parent.parent
+        self._strategy_path = (BASE_DIR_PATH / "strategies" / f"{self._name}_strategy.txt").resolve()
+        self._note_path = (BASE_DIR_PATH / "game_logs" / f"game_{self._game_id}" / f"{self._name}_{self._role.value}_note.txt").resolve()
+        self._feedback_path = (BASE_DIR_PATH / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve() # This is game-specific: one feedback file is written after each game and read by all villager-side players before their strategy update.
 
     # ── Dunder ──────────────────────────────────────────────────────────
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name={self._name}, role={self._role.value}, alive={self._is_alive})"
-
-    # ── File path helpers ───────────────────────────────────────────────
-
-    def _base_dir(self) -> Path:
-        return Path(__file__).parent.parent
-
-    def _strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / f"{self._name}_strategy.txt").resolve()
-
-    def _note_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / f"{self._name}_{self._role.value}_note.txt").resolve()
-
-    def _feedback_path(self) -> Path:
-        # This is game-specific: one feedback file is written after each game and read by all villager-side players before their strategy update.
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
 
     # ── Setup helpers ───────────────────────────────────────────────────
 
@@ -171,7 +163,7 @@ class BasePlayer(ABC):
         """Read [name]_strategy.txt from disk.
         Returns empty string on first game (file does not exist yet).
         """
-        path = self._strategy_path()
+        path = self._strategy_path
         if not path.exists():
             return ""
         try:
@@ -322,9 +314,7 @@ No extra text, no markdown, no code fences.
         Call at round end (after resolve_night_node and after exile_node).
         This is the ONLY disk write during a game.
         """
-        path = self._note_path()
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(self._note)
+        write_to_file(self._note_path, self._note)
 
     # ── Intra-game: decision actions ────────────────────────────────────
 
@@ -478,7 +468,7 @@ No extra text, no markdown, no code fences.
         Returns empty string if file is missing — coaching was not run.
         Only meaningful for villager-side players.
         """
-        path = self._feedback_path()
+        path = self._feedback_path
         if not path.exists():
             return ""
         try:
@@ -608,9 +598,7 @@ No extra text, no markdown, no code fences.
 
     def _write_strategy(self, strategy: str) -> None:
         """Persist strategy to disk and refresh self._setup_prompt."""
-        path = self._strategy_path()
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(strategy)
+        write_to_file(self._strategy_path, strategy)
         self._setup_prompt = self._build_setup_prompt(strategy)
 
     # ── Between-game reset ───────────────────────────────────────────────
