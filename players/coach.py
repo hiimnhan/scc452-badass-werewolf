@@ -44,9 +44,11 @@ class Coach:
     def _base_dir(self) -> Path:
         return Path(__file__).parent
 
+    @property
     def _coach_strategy_path(self) -> Path:
         return (self._base_dir() / "strategies" / COACH_STRATEGY_FILENAME).resolve()
 
+    @property
     def _coach_feedback_path(self) -> Path:
         return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
 
@@ -56,7 +58,7 @@ class Coach:
         """Read the coach's own strategy from disk.
         Returns empty string on first game (file does not exist yet).
         """
-        path = self._coach_strategy_path()
+        path = self._coach_strategy_path
         if not path.exists():
             return ""
         try:
@@ -66,12 +68,12 @@ class Coach:
 
     def _write_coach_strategy(self, strategy: str) -> None:
         """Persist the coach's updated strategy and refresh the in-memory copy."""
-        write_to_file(self._coach_strategy_path(), strategy)
+        write_to_file(self._coach_strategy_path, strategy)
         self._strategy = strategy
 
     def _write_coach_feedback(self, feedback: str) -> None:
         """Write coach feedback to the file BasePlayer._coach_feedback reads."""
-        write_to_file(self._coach_feedback_path(), feedback)
+        write_to_file(self._coach_feedback_path, feedback)
 
     # ── LLM call ────────────────────────────────────────────────────────
 
