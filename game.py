@@ -142,8 +142,54 @@ class GameState:
         # })
         return state
 
-    def unmask_node(self, state: GameState) -> GameState:
-        # TODO: UNMASK
+    def unmask_node(self, state: GameState, config: RunnableConfig) -> GameState:
+        """Seer secretly investigates one player during the night.
+
+        Moderator check: the seer receives ONLY the binary wolf/not-wolf
+        answer — never the exact role. The result is piped into the
+        Seer object via reveal_and_update().
+        """
+        player_objects = config.get("configurable", {}).get("player_objects", {})
+        seer_name = state._seer
+        seer_obj = player_objects.get(seer_name)
+
+        # Skip if no seer in game or seer has been eliminated
+        if not seer_name or seer_name not in state._alive_players:
+            state._phase = Phase.SAVE_OR_POISON
+            return state
+
+        # Seer picks a target
+        target, log = seer_obj.unmask(state._alive_players, state._round_num)
+
+        # Guard against empty response (error case — e.g. only self alive)
+        if not target:
+            tqdm.tqdm.write(f"{seer_name} did not investigate this round.")
+            state._unmask_log = str(log) if isinstance(log, dict) else log
+            state._phase = Phase.SAVE_OR_POISON
+            return state
+
+        # Moderator check — seer only learns the binary answer
+        is_wolf = target in state._werewolves
+        seer_obj.reveal_and_update(target, is_wolf, state._round_num)
+
+        # Private terminal output (for debugging; never sent to players)
+        tqdm.tqdm.write(
+            f"{seer_name} investigated {target} — result: "
+            f"{'WOLF' if is_wolf else 'not a wolf'}"
+        )
+
+        # Game-level summary log (visible to coach post-game, not to players)
+        state = log_game_summary(
+            state,
+            f"{seer_name} investigated {target}"
+        )
+
+        # Store moderator-side record
+        state._unmasked = target
+        state._unmask_log = str(log) if isinstance(log, dict) else log
+
+        # Advance phase
+        state._phase = Phase.SAVE_OR_POISON
         return state
 
     def save_or_poison_node(self, state: GameState, config: RunnableConfig) -> GameState:
