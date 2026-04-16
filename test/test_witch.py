@@ -28,7 +28,7 @@ player_witch._poison_available = True
 
 
 # ============================================
-# Run test
+# Run test: /opt/miniconda3/envs/scc452-badass-werewolf/bin/python -m test.test_witch
 # ============================================
 
 if __name__ == "__main__":
