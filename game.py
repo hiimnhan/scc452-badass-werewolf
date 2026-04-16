@@ -4,6 +4,7 @@ from collections import defaultdict
 from typing import Literal, Optional
 
 import tqdm
+import random
 from players.base_player import Role
 from langchain_core.runnables import RunnableConfig
 from enum import Enum
@@ -87,12 +88,75 @@ class GameState:
         # TODO: compute current winner
         return None
 
-    def wolf_debate_node(self, state: GameState) -> GameState:
-        # TODO: WOLF_DEBATE
+    def wolf_debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
+        player_objects = config.get("configurable", {}).get("player_objects", {})
+        active_wolves = [w for w in state._werewolves if w in state._alive_players]
+    
+        if not active_wolves: # Just in case, if the wolves are actually killed.
+            state._phase = Phase.ELIMINATE
+            return state
+
+        # 2 rounds of talking, one for proposing and another one for thinking to stick with it or not.
+        for _ in range(2): 
+            for name in active_wolves:
+                wolf_obj = player_objects.get(name)
+                others = [w for w in active_wolves if w != name]
+                
+                statement, log = wolf_obj.wolf_debate(
+                    state._alive_players, 
+                    others, 
+                    state._debate_log
+                )
+                
+                # Save the dialogue to the history so they can refer to it in 'eliminate'
+                state._debate_log.append([name, statement])
+                
+                state._game_logs.append({
+                    "phase": "wolf_debate",
+                    "player": name,
+                    "data": log 
+                })
+
+        state._phase = Phase.ELIMINATE
         return state
 
-    def eliminate_node(self, state: GameState) -> GameState:
-        # TODO: ELIMINATE
+    def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:
+        player_objects = config.get("configurable", {}).get("player_objects", {})
+        active_wolves = [w for w in state._werewolves if w in state._alive_players]
+        
+        if not active_wolves: # Just in case, if the wolves are actually killed.
+            state._phase = Phase.PROTECT
+            return state
+
+        final_votes = {}
+        raw_logs = {}
+
+        # Each wolf choose their final player to kill
+        for name in active_wolves:
+            wolf_obj = player_objects.get(name)
+            target, log = wolf_obj.eliminate(state._alive_players)
+            final_votes[name] = target
+            raw_logs[name] = log # Store the log (analysis, etc.)
+
+        # For tie breaker, to handle situation if there's two names 
+        choices = list(set(final_votes.values()))
+
+        if len(choices) == 1:
+            chosen_target = choices[0]
+        else:
+            chosen_target = random.choice(choices) # If there's 2 different name, pick 1 randomly
+
+        # Update state with the final result
+        state._eliminated = chosen_target
+        state._eliminate_log = str({
+            "final_target": chosen_target,
+            "votes": final_votes,
+            "decisions_metadata": raw_logs
+        })
+        
+        tqdm.tqdm.write(f"Wolves picked {chosen_target}")
+
+        state._phase = Phase.PROTECT
         return state
     
     def protect_node(self, state: GameState, config: RunnableConfig) -> GameState:
