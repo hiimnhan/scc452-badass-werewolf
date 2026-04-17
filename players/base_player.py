@@ -32,7 +32,7 @@ PHASES (repeated each round until a faction wins)
        f. Resolve Night      — apply kills, saves, and poisons; announce the outcome.
   2. DAY — all alive players participate:
        a. Debate — players discuss and accuse (bidding determines speaker order).
-       b. Vote   — each player votes to exile one suspect.
+       b. Vote   — each player votes to exile one suspect (the vote is only executed if the number of votes for one person is greater or equal to half of the total alive players. Ties meeting this threshold are broken randomly).
        c. Exile  — the player with the most votes is eliminated.
  
 ROLES
@@ -43,6 +43,7 @@ ROLES
   Witch    — has one Save potion (cancels wolf kill) and one Poison potion (kills any player).
              Each potion is single-use.
              The Poison potion bypasses the Guard — a poisoned player dies even if protected.
+             Note: The Witch does not know who the Guard protected. She may accidentally waste her Save potion on a player already protected by the Guard.
  
 INFORMATION RULES
   • The eliminated player's role is NOT revealed publicly.
@@ -211,7 +212,7 @@ class BasePlayer(ABC):
         """
         self._game_summary_entries.append(f"Round {round_num} {phase}: {announcement}")
 
-    def _record_own_action(self, round_num: int, phase: str, event: str) -> None:
+    def record_own_action(self, round_num: int, phase: str, event: str) -> None:
         """Append a private action to the game summary.
         Used by role action methods for events only this player knows
         (e.g. Witch recording her own potion use, Seer logging an investigation).
@@ -228,7 +229,7 @@ class BasePlayer(ABC):
 
     # ── Intra-game: suspicion ───────────────────────────────────────────
 
-    def _update_suspicion(self, speaker_name: str, statement: str) -> dict:
+    def update_suspicion(self, speaker_name: str, statement: str) -> dict:
         """Update suspicion scores for ALL players after a statement is made.
 
         The LLM receives the speaker's statement AND the existing note, and is asked to 
@@ -286,10 +287,6 @@ No extra text, no markdown, no code fences.
 
         return resp
 
-    def _suspicion_score(self, player_name: str) -> float:
-        """Return just the float score for a player (0.5 if not tracked)."""
-        return self._suspicion.get(player_name, {}).get("score", 0.5)
-
     # ── Intra-game: note (the human-message context block) ──────────────
 
     def _format_suspicion_block(self) -> str:
@@ -321,7 +318,7 @@ No extra text, no markdown, no code fences.
             f"{self._format_suspicion_block()}"
         )
 
-    def _compile_note(self) -> None:
+    def compile_note(self) -> None:
         """Flush the current note to [name]_game_{id}_note.txt.
         Call at round end (after resolve_night_node and after exile_node).
         This is the ONLY disk write during a game.
@@ -330,7 +327,7 @@ No extra text, no markdown, no code fences.
 
     # ── Intra-game: decision actions ────────────────────────────────────
 
-    def _get_bid(self) -> tuple[int, dict]:
+    def get_bid(self) -> tuple[int, dict]:
         """Return a bid score 0-10: how urgently this player wants to speak next.
 
         High suspicion of a specific player → high urgency.
@@ -490,7 +487,7 @@ No extra text, no markdown, no code fences.
 
     # ── Post-game: strategy update ───────────────────────────────────────
 
-    def _update_strategy(self, self_analyze: bool, coaching: bool) -> None:
+    def update_strategy(self, self_analyze: bool, coaching: bool) -> None:
         """Update [name]_strategy.txt after a game ends.
 
         Villager-side  (Villager, Seer, Guard, Witch)

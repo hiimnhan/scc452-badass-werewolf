@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import TYPE_CHECKING
 
 from collections import defaultdict
 from typing import Literal, Optional
@@ -10,8 +11,13 @@ from concurrent.futures import ThreadPoolExecutor
 from langchain_core.runnables import RunnableConfig
 from enum import Enum
 import random
+import math
 
 from langgraph.graph import StateGraph, END
+
+if TYPE_CHECKING: # for type checking purposes
+    from players.base_player import BasePlayer
+    from players.witch import Witch
 
 
 class Phase(Enum):
@@ -195,9 +201,9 @@ class GameState:
     def save_or_poison_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Witch decides whether to use her save and/or poison potions."""
         # Retrieve player objects from the LangGraph config
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         witch_name = state._witch
-        witch_obj = player_objects.get(witch_name)
+        witch_obj: Witch = player_objects.get(witch_name)
 
         # Transition to the next phase if there is no witch or the witch is dead
         if not witch_name or witch_name not in state._alive_players:
@@ -293,7 +299,7 @@ class GameState:
         return state
 
     def debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
 
         last_speaker = state._debate_log[-1][0] if state._debate_log else None
@@ -314,7 +320,7 @@ class GameState:
         top_bidders = [name for name, bid in bid_dict.items() if bid == max_bid_value]
         chosen_speaker = random.choice(top_bidders)
         
-        # 3. Generate the statement (fixed to .debate() without underscore)
+        # 3. Generate the statement
         statement, log = player_objects[chosen_speaker].debate()
         
         if not statement:
@@ -346,14 +352,13 @@ class GameState:
 
     def vote_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """All alive players cast a vote simultaneously to exile someone."""
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         
         vote_dict = {}
         vote_logs = []
 
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
-            # Notice we pass state._alive_players as an argument to the .vote() method!
             futures = {
                 name: executor.submit(player_objects[name].vote, state._alive_players) 
                 for name in state._alive_players
@@ -370,20 +375,25 @@ class GameState:
         # 2. Tally the votes
         vote_counts = defaultdict(int)
         for target in vote_dict.values():
-            if target:  # Failsafe in case a model hallucinates or returns an error
+            if target:  
                 vote_counts[target] += 1
 
-        # 3. Determine the outcome (and handle ties!)
+        # 3. Determine the outcome
+        threshold = math.ceil(len(state._alive_players) / 2.0)
+        
         if vote_counts:
             max_votes = max(vote_counts.values())
             # Find everyone who tied for the highest number of votes
             tied_players = [p for p, c in vote_counts.items() if c == max_votes]
             
-            # Standard Werewolf rule: if there is a tie, pick randomly (or you can code a re-vote mechanic later!)
-            exiled_player = random.choice(tied_players)
+            if max_votes >= threshold:
+                exiled_player = random.choice(tied_players)
+            else:
+                exiled_player = None
         else:
             exiled_player = None
             max_votes = 0
+            tied_players = []
 
         # 4. Print the dramatic results to your terminal
         tqdm.tqdm.write("\n=== VOTING RESULTS ===")
@@ -391,7 +401,12 @@ class GameState:
             tqdm.tqdm.write(log)
             
         if exiled_player:
-            tqdm.tqdm.write(f"\n=> {exiled_player} has the most votes ({max_votes}) and will be exiled!")
+            tqdm.tqdm.write(f"\n=> {exiled_player} received {max_votes} votes. They will be exiled!")
+        else:
+            if max_votes > 0:
+                tqdm.tqdm.write(f"\n=> The highest vote count was {max_votes} for {' and '.join(tied_players)} (Require at least {threshold} vote{'s' if threshold > 1 else ''}). Not enough consensus. No one is exiled.")
+            else:
+                tqdm.tqdm.write("\n=> No valid votes were cast. No one is exiled.")
 
         # 5. Mutate State manually
         state._votes = vote_dict
