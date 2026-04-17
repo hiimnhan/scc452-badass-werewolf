@@ -19,6 +19,9 @@ from langgraph.graph import StateGraph, END
 if TYPE_CHECKING:  # for type checking purposes
     from players.base_player import BasePlayer
     from players.witch import Witch
+    from players.guard import Guard
+    from players.seer import Seer
+    from players.coach import Coach
 
 
 class Phase(Enum):
@@ -67,20 +70,10 @@ class GameState:
         self._saved: str = None  # the name of the player has been saved
         self._poisoned: str = None  # the name of the player has been poisoned
         self._exiled = None
-        self._votes = {}
-        self._bids = []
-        self._debate_log = []  # Log all statements from day discussions. Coach and players will analyze at the end of the game.
-        self._summaries = []
-
-        self._vote_logs = []  # Log all votes. Coach and players will analyze at the end of the game.
+        self._debate_log: dict[int, list] = defaultdict(list) # Log all statements from day discussions. Coach will analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
+        self._vote_logs = [] # Log all votes. Coach and players will analyze at the end of the game.
         self._bid_logs = []
-        self._summary_logs = []  # Log all game announcements here for the coach and players to analyze at the end of the game.
-        self._protect_log = None
-        self._eliminate_log = None
-        self._unmask_log = None
-        self._witch_log = None
-
-        self._game_logs = []
+        self._summary_logs = [] # Log all game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
 
         self._deception_history = {}
         self._deception_scores = {}
@@ -91,13 +84,7 @@ class GameState:
         self._phase: Phase = Phase.WOLF_DEBATE
         self._step: int = 0
 
-        self._log_dir = None
-        self._log_run_id = None
-        self._log_paths = {}
-
-    def _compute_current_winner(
-        self, state: GameState
-    ) -> Optional[Literal["Villagers", "Werewolves"]]:
+    def _compute_current_winner(self, state: GameState) -> Optional[Literal["Villagers", "Werewolves"]]:
         """Compute winner based on current alive players.
 
         Villagers win if no Werewolves remain.
@@ -108,9 +95,13 @@ class GameState:
         villagers_alive = [p for p in state._alive_players if p not in wolves_alive]
 
         if not wolves_alive:
-            return "Villagers"
-        if len(wolves_alive) >= len(villagers_alive):
-            return "Werewolves"
+            self._winner = "Villagers"
+        elif len(wolves_alive) >= len(villagers_alive):
+            self._winner = "Werewolves"
+        
+        if self._winner:
+            return self._winner
+        
         return None
 
     def wolf_debate_node(self, state: GameState) -> GameState:
@@ -123,10 +114,10 @@ class GameState:
 
     def protect_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Guard chooses a player to protect during the night."""
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         guard_name = state._guard
-        guard_obj = player_objects.get(guard_name)
-        # check if guard was killed
+        guard_obj: Guard = player_objects.get(guard_name)
+        # check if guard was killed 
         if guard_name not in state._alive_players:
             state._phase = Phase.UNMASK
             return state
@@ -136,20 +127,13 @@ class GameState:
         if not protect_target:
             raise ValueError(f"{guard_name} failed to specify a protection target.")
 
-        tqdm.tqdm.write(f"{guard_name} protected {protect_target}")
-
-        # Convert log to string if it's a dict
-        log_str = str(log) if isinstance(log, dict) else log
-
+        announcement = f"{guard_name} protected {protect_target}"
+        tqdm.tqdm.write(announcement)
+        state = log_game_summary(state, announcement)
+        
         state._protected = protect_target
-        state._protect_log = log_str
         state._phase = Phase.UNMASK
-
-        # log event haven't been implemented yet.
-        # state = log_event(state, "protect", guard_name, {
-        # "target": protect_target,
-        # "raw_output": log
-        # })
+        
         return state
 
     def unmask_node(self, state: GameState, config: RunnableConfig) -> GameState:
@@ -159,9 +143,9 @@ class GameState:
         answer — never the exact role. The result is piped into the
         Seer object via reveal_and_update().
         """
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         seer_name = state._seer
-        seer_obj = player_objects.get(seer_name)
+        seer_obj: Seer = player_objects.get(seer_name)
 
         # Skip if no seer in game or seer has been eliminated
         if not seer_name or seer_name not in state._alive_players:
@@ -174,7 +158,6 @@ class GameState:
         # Guard against empty response (error case — e.g. only self alive)
         if not target:
             tqdm.tqdm.write(f"{seer_name} did not investigate this round.")
-            state._unmask_log = str(log) if isinstance(log, dict) else log
             state._phase = Phase.SAVE_OR_POISON
             return state
 
@@ -183,30 +166,23 @@ class GameState:
         seer_obj.reveal_and_update(target, is_wolf, state._round_num)
 
         # Private terminal output (for debugging; never sent to players)
-        tqdm.tqdm.write(
-            f"{seer_name} investigated {target} — result: "
-            f"{'WOLF' if is_wolf else 'not a wolf'}"
-        )
+        announcement = f"{seer_name} investigated {target} — result: {'WOLF' if is_wolf else 'not a wolf'}"
+        tqdm.tqdm.write(announcement)
 
         # Game-level summary log (visible to coach post-game, not to players)
-        state = log_game_summary(state, f"{seer_name} investigated {target}")
+        state = log_game_summary(state, announcement)
 
         # Store moderator-side record
         state._unmasked = target
-        state._unmask_log = str(log) if isinstance(log, dict) else log
 
         # Advance phase
         state._phase = Phase.SAVE_OR_POISON
         return state
 
-    def save_or_poison_node(
-        self, state: GameState, config: RunnableConfig
-    ) -> GameState:
+    def save_or_poison_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Witch decides whether to use her save and/or poison potions."""
         # Retrieve player objects from the LangGraph config
-        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get(
-            "player_objects", {}
-        )
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         witch_name = state._witch
         witch_obj: Witch = player_objects.get(witch_name)
 
@@ -220,7 +196,6 @@ class GameState:
             tqdm.tqdm.write(f"{witch_name} has no potions left. Skipping turn.")
             state._saved = None
             state._poisoned = None
-            state._witch_log = "Skipped: No potions available."
             state._phase = Phase.RESOLVE_NIGHT
             return state
 
@@ -242,25 +217,25 @@ class GameState:
         state._poisoned = poison_target
 
         # Print the outcomes to the terminal
+        action_parts = []
         if use_save:
-            announcement = f"{witch_name} used SAVE potion on {target_by_wolves}"
+            action_parts.append(f"used SAVE potion on {target_by_wolves}")
         if poison_target:
-            announcement = f"{witch_name} used POISON potion on {poison_target}"
-        if not use_save and not poison_target:
+            action_parts.append(f"used POISON potion on {poison_target}")
+        if action_parts:
+            announcement = f"{witch_name} {" and ".join(action_parts)}"
+        else:
             announcement = f"{witch_name} did not use any potions."
 
         tqdm.tqdm.write(announcement)
         state = log_game_summary(state, announcement)
-
-        # Store the raw log for history/debugging
-        state._witch_log = str(log) if isinstance(log, dict) else log
-
+        
         # Advance the phase
         state._phase = Phase.RESOLVE_NIGHT
 
         return state
 
-    def resolve_night_node(self, state: GameState) -> GameState:
+    def resolve_night_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Apply elimination/protection/save/poison outcome and broadcast announcement."""
 
         killed_players = []
@@ -298,36 +273,46 @@ class GameState:
         tqdm.tqdm.write(announcement)
         state = log_game_summary(state, announcement)
 
-        # Advance State and Log the Announcement
+        # Broadcast to ALL alive players so their _note stays current
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        with ThreadPoolExecutor(max_workers=max(1, len(state._alive_players))) as executor:
+            threads = [
+                executor.submit(
+                    player_objects[name].receive_announcement,
+                    state._round_num, "Night", announcement
+                )
+                for name in state._alive_players if name in player_objects
+            ]
+            for thread in threads:
+                thread.result()
+ 
+        # Advance State
         state._phase = Phase.CHECK_WINNER_NIGHT
-
+ 
         return state
 
     def check_winner_night_node(self, state: GameState) -> GameState:
         """Return to day phase or finish game if a faction wins."""
         winner = self._compute_current_winner(state)
-        state._phase = Phase.DEBATE if not winner else Phase.SUMMARIZE
+        state._phase = Phase.DEBATE if not winner else Phase.END
         state._step = 0
 
         return state
 
     def debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get(
-            "player_objects", {}
-        )
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
 
-        last_speaker = state._debate_log[-1][0] if state._debate_log else None
+        current_round_log = state._debate_log.get(state._round_num, [])
+        last_speaker = current_round_log[-1][0] if current_round_log else None
+        
         next_possible_speakers = [p for p in state._alive_players if p != last_speaker]
         bid_logs = []
         bid_dict = {}
 
         # 1. Run bids in parallel
         with ThreadPoolExecutor(max_workers=len(next_possible_speakers)) as executor:
-            futures = {
-                name: executor.submit(player_objects[name].get_bid)
-                for name in next_possible_speakers
-            }
+            futures = {name: executor.submit(player_objects[name].get_bid) for name in next_possible_speakers}
             for name, future in futures.items():
                 bid, raw_output = future.result()
                 bid_dict[name] = bid
@@ -337,34 +322,42 @@ class GameState:
         max_bid_value = max(bid_dict.values())
         top_bidders = [name for name, bid in bid_dict.items() if bid == max_bid_value]
         chosen_speaker = random.choice(top_bidders)
-
-        # 3. Generate the statement
-        statement, log = player_objects[chosen_speaker].debate()
-
+        
+        # 3. Generate the statement (with a safety net)
+        statement = None
+        retries = 0
+        while not statement and retries < 3:
+            statement, log = player_objects[chosen_speaker].debate()
+            retries += 1
+            
+        # Fallback if the LLM completely fails
         if not statement:
-            raise ValueError(f"{chosen_speaker} failed to produce a debate line.")
+            statement = "I have nothing to add at this moment."
 
         tqdm.tqdm.write(f"{chosen_speaker}: {statement}")
 
         # 4. Make the other players "listen" and update suspicions in parallel!
         listeners = [p for p in state._alive_players if p != chosen_speaker]
         with ThreadPoolExecutor(max_workers=len(listeners)) as executor:
-            # We submit the suspicion update for all listeners.
-            # We don't strictly need to track the return futures unless we want to log them.
-            for name in listeners:
-                executor.submit(
-                    player_objects[name].update_suspicion, chosen_speaker, statement
-                )
+            threads = [
+                executor.submit(player_objects[name].update_suspicion_from_statement, chosen_speaker, statement)
+                for name in listeners
+            ]
+            
+            # Pause the game until everyone finishes updating their notes!
+            for thread in threads:
+                thread.result()
 
         # 5. Mutate State Manually
-        state._debate_log.append([chosen_speaker, statement])
+        state._debate_log[state._round_num].append((chosen_speaker, statement))
         state._bid_logs.extend(bid_logs)
         state._current_speaker = chosen_speaker
         state._step += 1
-
-        # Advance phase using your Enum
+        
+        # 6. Advance phase 
         if state._step >= MAX_DEBATE_TURNS:
             state._phase = Phase.VOTE
+            state._step = 0
         else:
             state._phase = Phase.DEBATE
 
@@ -372,9 +365,7 @@ class GameState:
 
     def vote_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """All alive players cast a vote simultaneously to exile someone."""
-        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get(
-            "player_objects", {}
-        )
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
 
         vote_dict = {}
         vote_logs = []
@@ -435,8 +426,7 @@ class GameState:
                 tqdm.tqdm.write("\n=> No valid votes were cast. No one is exiled.")
 
         # 5. Mutate State manually
-        state._votes = vote_dict
-        state._vote_logs.extend(vote_logs)
+        state._vote_logs.append(vote_logs)
         state._exiled = exiled_player
 
         # Advance phase
@@ -446,8 +436,8 @@ class GameState:
 
     def exile_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Apply the vote outcome, broadcast announcement, and flush notes to disk."""
-        player_objects = config.get("configurable", {}).get("player_objects", {})
-
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        
         exiled_player = state._exiled
 
         # 1. Apply the elimination and format the announcement
@@ -467,50 +457,103 @@ class GameState:
         state = log_game_summary(state, announcement)
 
         # 2. Broadcast the announcement to ALL currently alive players
-        for name in state._alive_players:
-            if name in player_objects:
-                player_objects[name].receive_announcement(
-                    round_num=state._round_num, phase="Day", announcement=announcement
-                )
-
-        # 3. Flush notes to disk (Disk I/O is slow, so we use parallel threading!)
-        # We also want the exiled player to write their final note before they "die"
-        players_to_compile = state._alive_players.copy()
-        if exiled_player and exiled_player not in players_to_compile:
-            players_to_compile.append(exiled_player)
-
-        with ThreadPoolExecutor(max_workers=len(players_to_compile)) as executor:
-            for name in players_to_compile:
-                if name in player_objects:
-                    executor.submit(player_objects[name]._compile_note)
+        with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
+            threads = [
+                executor.submit(player_objects[name].receive_announcement, state._round_num, "Day", announcement)
+                for name in state._alive_players if name in player_objects
+            ]
+            # Wait for all players to receive the message
+            for thread in threads:
+                thread.result()
+                
+        # 3. We want the exiled player to write their final note before they "die"
+        if exiled_player and exiled_player in player_objects:
+            player_objects[exiled_player].compile_note()
 
         # 4. Advance State
         state._phase = Phase.CHECK_WINNER_DAY
 
         return state
 
-    def check_winner_day_node(self, state: GameState) -> GameState:
+    def check_winner_day_node(self, state: GameState, config: RunnableConfig) -> GameState:
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        
         winner = self._compute_current_winner(state)
-        state._phase = Phase.WOLF_DEBATE if not winner else Phase.END
+        if not winner:
+            state._phase = Phase.WOLF_DEBATE
+            state._round_num += 1
+            announcement = "After voting, the game continues."
+        else:
+            state._phase = Phase.END
+            announcement = "After voting, the game ends."
+        
+        analyzers = state._alive_players.copy()
+        if state._exiled and state._exiled not in analyzers:
+            analyzers.append(state._exiled)
+            
+        current_votes = state._vote_logs[-1] if state._vote_logs else []
+        
+        with ThreadPoolExecutor(max_workers=len(analyzers)) as executor:
+            threads = [
+                executor.submit(player_objects[name].update_suspicion_from_vote, current_votes, state._exiled, announcement) 
+                for name in analyzers if name in player_objects
+            ]
+            
+            # Pause the game right here until every single thread finishes its work!
+            for thread in threads:
+                thread.result()  # We don't save the result, we just wait for it to finish.
+            
         state._step = 0
 
         return state
 
     def end_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get(
-            "player_objects", {}
-        )
-
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        coach_object: Coach = config.get("configurable", {}).get("coach") # Passed in from your run.py!
+        
         scenario = config.get("configurable", {}).get("scenario", "baseline")
-
         scenario_config = SCENARIO_CONFIG[scenario]
+        
+        tqdm.tqdm.write(f"\n=== GAME OVER ===\nWinner: {state._winner}")
 
-        for _, player in player_objects.items():
-            player.update_strategy(
-                self_analyze=scenario_config["self_analyze"],
-                coaching=scenario_config["coaching"],
-            )
+        # 1. Update surviving players' notes
+        # (The dead players already compiled their notes when they died!)
+        with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
+            threads = [
+                executor.submit(player_objects[name].compile_note)
+                for name in state._alive_players if name in player_objects
+            ]
+            # Pause the game until all files are safely written to disk
+            for thread in threads:
+                thread.result()
 
+        # 2. Generate coach's feedback and update coach strategy
+        if scenario_config.get("coaching"):
+            if coach_object:
+                tqdm.tqdm.write("=> Coach is reviewing the game and writing feedback...")
+                # The coach needs the full public game record to analyze what happened
+                game_record = "\n".join(state._summary_logs) if state._summary_logs else "No events recorded."
+                coach_object.run(game_record)
+            else:
+                tqdm.tqdm.write("=> WARNING: Coaching is enabled, but no coach object was provided in config.")
+
+        # 3. Update and write out strategy for ALL players (alive and dead)
+        # We run this in parallel so you don't have to wait minutes for the game to close!
+        tqdm.tqdm.write("=> Players are analyzing their performance and updating strategies...")
+        with ThreadPoolExecutor(max_workers=len(player_objects)) as executor:
+            threads = [
+                executor.submit(
+                    player.update_strategy,
+                    self_analyze=scenario_config.get("self_analyze", False),
+                    coaching=scenario_config.get("coaching", False)
+                )
+                for player in player_objects.values()
+            ]
+            # Wait for everyone to finish writing to disk
+            for thread in threads:
+                thread.result()
+        
+        tqdm.tqdm.write("=> Game successfully wrapped up. Ready for the next round!")
         return state
 
     def build_graph(self):

@@ -79,7 +79,7 @@ if __name__ == "__main__":
         print("Player's bid:", bid)
         time.sleep(30)
         
-        _ = player_witch.update_suspicion(speaker_name="Bob", statement="I am a Seer. I looked into Selena and Raj and see that they are both wolves. We need to vote them out.")
+        _ = player_witch.update_suspicion_from_statement(speaker_name="Bob", statement="I am a Seer. I looked into Selena and Raj and see that they are both wolves. We need to vote them out.")
         
         ### Update suspicion after a statement
         print("==="*30)
