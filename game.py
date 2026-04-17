@@ -33,7 +33,7 @@ class Phase(Enum):
     VOTE = "vote"
     EXILE = "exile"
     CHECK_WINNER_DAY = "check_winner_day"
-    SUMMARIZE = "summarize"
+    # SUMMARIZE = "summarize"
     END = "end"
 
 
@@ -491,12 +491,12 @@ class GameState:
 
     def check_winner_day_node(self, state: GameState) -> GameState:
         winner = self._compute_current_winner(state)
-        state._phase = Phase.WOLF_DEBATE if not winner else Phase.SUMMARIZE
+        state._phase = Phase.WOLF_DEBATE if not winner else Phase.END
         state._step = 0
 
         return state
 
-    def summarize_node(self, state: GameState, config: RunnableConfig) -> GameState:
+    def end_node(self, state: GameState, config: RunnableConfig) -> GameState:
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get(
             "player_objects", {}
         )
@@ -511,12 +511,6 @@ class GameState:
                 coaching=scenario_config["coaching"],
             )
 
-        state._phase = Phase.END
-
-        return state
-
-    def end_node(self, state: GameState) -> GameState:
-        # TODO: END
         return state
 
     def build_graph(self):
@@ -533,7 +527,7 @@ class GameState:
         graph.add_node("vote", self.vote_node)
         graph.add_node("exile", self.exile_node)
         graph.add_node("check_winner_day", self.check_winner_day_node)
-        graph.add_node("summarize", self.summarize_node)
+        # graph.add_node("summarize", self.summarize_node)
         graph.add_node("end", self.end_node)
 
         graph.set_entry_point("wolf_debate")
@@ -549,7 +543,7 @@ class GameState:
         graph.add_conditional_edges("vote", lambda s: s._phase)
         graph.add_conditional_edges("exile", lambda s: s._phase)
         graph.add_conditional_edges("check_winner_day", lambda s: s._phase)
-        graph.add_conditional_edges("summarize", lambda s: s._phase)
+        """ graph.add_conditional_edges("summarize", lambda s: s._phase) """
         graph.add_edge("end", END)
 
         return graph.compile()
