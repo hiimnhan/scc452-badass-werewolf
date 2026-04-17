@@ -11,20 +11,29 @@ from players.base_player import Role
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Majority Influence Debate Simulation")
+    parser = argparse.ArgumentParser(description="Werewolf Game")
     parser.add_argument(
         "-m",
         "--model",
         type=str,
         default="gpt-4o",
         choices=MODEL_PROVIDERS.keys(),
-        help="Debate scenario to run (default: 1v1), choices: "
+        help="LLM Model to run (default: gpt-4o), choices: "
+        + ", ".join(MODEL_PROVIDERS.keys()),
+    )
+    parser.add_argument(
+        "-s",
+        "--scenario",
+        type=str,
+        default="gpt-4o",
+        choices=MODEL_PROVIDERS.keys(),
+        help="LLM Model to run (default: gpt-4o), choices: "
         + ", ".join(MODEL_PROVIDERS.keys()),
     )
     return parser.parse_args()
 
 
-def run(model_name="gpt-4o"):
+def run(model_name="gpt-4o", scenario="baseline"):
     llm = get_llm(model_name)
 
     players = ["Alice", "Bob", "Selena", "Raj", "Frank", "Joy", "Cyrus"]
@@ -65,19 +74,23 @@ def run(model_name="gpt-4o"):
         seer=seer,
         guard=guard,
         witch=witch,
-        roles=roles
+        roles=roles,
     )
-    
+
     runnable = initial_state.build_graph()
-    final_state = runnable.invoke(initial_state, config={
-        "recursion_limit": 1000,
-        "configurable": {
-            "player_objects": player_objects,
-            "MAX_DEBATE_TURNS": 6
-        }
-    })
+    final_state = runnable.invoke(
+        initial_state,
+        config={
+            "recursion_limit": 1000,
+            "configurable": {
+                "player_objects": player_objects,
+                "MAX_DEBATE_TURNS": 6,
+                "scenario": scenario,
+            },
+        },
+    )
 
 
 if __name__ == "__main__":
     args = parse_args()
-    run(model_name=args.model)
+    run(model_name=args.model, scenario=args.scenario)

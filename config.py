@@ -18,4 +18,37 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
+SCENARIO_CONFIG = {
+    "baseline": {
+        "coaching": False,
+        "self_analyze": True,
+        "deviation": False,
+        "personality": False,
+    },
+    "coach_no_self_analyze": {
+        "coaching": True,
+        "self_analyze": False,
+        "deviation": False,
+        "personality": False,
+    },
+    "coach_and_self_analyze": {
+        "coaching": True,
+        "self_analyze": True,
+        "deviation": False,
+        "personality": False,
+    },
+    "deviate": {
+        "coaching": True,
+        "self_analyze": True,
+        "deviation": True,
+        "personality": False,
+    },
+    "personality": {
+        "coaching": True,
+        "self_analyze": True,
+        "deviation": False,
+        "personality": True,
+    },
+}
+
 # ==========
