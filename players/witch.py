@@ -99,19 +99,19 @@ class Witch(BasePlayer):
 
         if use_save:
             self._save_available = False
-            self._record_own_action(
+            self.record_own_action(
                 round_num, "Night",
                 f"Used SAVE potion on {targeted_player_by_wolves}. Reason: {save_reason}."
             )
 
         if poison_target:
             self._poison_available = False
-            self._record_own_action(
+            self.record_own_action(
                 round_num, "Night",
                 f"Used POISON potion on {poison_target}. Reason: {poison_reason}."
             )
 
         if not use_save and not poison_target:
-            self._record_own_action(round_num, "Night", "Used no potions tonight.")
+            self.record_own_action(round_num, "Night", "Used no potions tonight.")
 
         return {"use_save_potion": use_save, "poison_target": poison_target}, resp
