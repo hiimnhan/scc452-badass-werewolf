@@ -75,18 +75,6 @@ No extra text, no markdown, no code fences.
 # Seer
 # ============================================
 
-SEER_PROMPT_TEMPLATE = """
-You are {name}, the Seer.
-Primary objective: ensure a Villager victory. Be strategic and surgical with revelations.
-- Use your knowledge to steer outcomes. Be assertive; avoid hedging.
-- Keep outputs concise and within required word limits.
-Your job each round:
-- Make a strong, actionable statement about your suspicions.
-- Reflect privately on your secret knowledge and others' statements.
-Be strategic in how you share your insights.
-Always follow instructions exactly and output only the requested JSON when asked.
-"""
-
 SEER_UNMASK_PROMPT_TEMPLATE = """
 You are {name}, the Seer. It is night. Choose one player to secretly investigate.
 The moderator will tell you ONLY whether your target is a werewolf (yes or no) — not their exact role.
