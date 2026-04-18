@@ -229,7 +229,7 @@ class BasePlayer(ABC):
 
     # ── Intra-game: suspicion ───────────────────────────────────────────
 
-    def update_suspicion(self, speaker_name: str, statement: str) -> dict:
+    def update_suspicion_from_statement(self, speaker_name: str, statement: str) -> dict:
         """Update suspicion scores for ALL players after a statement is made.
 
         The LLM receives the speaker's statement AND the existing note, and is asked to 
@@ -261,7 +261,7 @@ Respond with ONLY a JSON object using this exact structure:
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
-"""     
+"""
 
         resp = self.call_model(prompt, max_tokens=800)
 
@@ -283,6 +283,67 @@ No extra text, no markdown, no code fences.
                 new_reason = data.get("reason", current["reason"])
 
                 # Apply the update
+                self._suspicion[player] = {"score": new_score, "reason": new_reason}
+
+        return resp
+    
+    def update_suspicion_from_vote(self, current_round_vote_logs: list[str], exiled_player: str, game_status: str) -> dict:
+        """Analyze the results of the voting phase and update suspicion scores for all players."""
+        
+        # If no one voted, skip the analysis
+        if not current_round_vote_logs:
+            return {"error": "No votes to analyze"}
+
+        # Format the voting results into a clean string
+        voting_summary = "\n".join(current_round_vote_logs)
+        voting_summary += f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
+        voting_summary += f"\n{game_status}"
+        
+        prompt = f"""
+You are {self._name} ({self._role.value}).
+The daily vote just concluded. Here is how everyone voted:
+
+{voting_summary}
+
+Here is your current knowledge:
+{self._note}
+
+Analyse these voting patterns and how they impact your suspicion scores for EVERY player. Consider:
+1. Did Werewolves coordinate their votes (bandwagoning) on a single target?
+2. Did anyone vote defensively to save themselves?
+3. Does someone's vote contradict their previous statements or accusations?
+
+Provide an updated score and a concise reason justifying your read on them based on this voting data.
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about the voting patterns (<=40 words)",
+  "updates": {{
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+        
+        # Use 800 max_tokens since it outputs updates for all players
+        resp = self.call_model(prompt, max_tokens=800)
+
+        # Extract and apply the updates (using the plural _suspicions we fixed earlier!)
+        updates: dict = resp.get("updates", {})
+        
+        for player, data in updates.items():
+            if player in self._suspicion:
+                current = self._suspicion[player]
+                
+                try:
+                    new_score = max(0.0, min(1.0, float(data.get("score", current["score"]))))
+                except (ValueError, TypeError):
+                    new_score = current["score"]
+                    
+                new_reason = data.get("reason", current["reason"])
+                
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
         return resp
@@ -362,17 +423,17 @@ No extra text, no markdown, no code fences.
 
         return bid, resp
 
-    def vote(self, alive_players: List[str]) -> tuple[str, dict]:
-        """Vote to eliminate a player during the day phase.
-        Returns (target_name, log_dict).
+    def vote(self, alive_players: List[str]) -> tuple[Optional[str], dict]:
+        """Vote to eliminate a player during the day phase, or abstain.
+        Returns (target_name or None, log_dict).
         """
         available = [p for p in alive_players if p != self._name]
         if not available:
-            return "", {"error": "No available targets to vote for."}
+            return None, {"error": "No available targets to vote for."}
 
         prompt = f"""
 You are {self._name} ({self._role.value}). Win for your faction.
-Cast a decisive vote for who should be exiled.
+Cast a vote for who should be exiled. You may choose to skip voting if you are unsure.
 
 {self._note}
 
@@ -380,7 +441,7 @@ Available targets: {", ".join(available)}
 
 Respond with ONLY a JSON object:
 {{
-  "vote": "name of one player to exile",
+  "vote": "name of one player to exile, or 'None' to skip",
   "is_deceptive": true/false,
   "analysis": "private rationale (<=20 words)",
   "reasoning": "public explanation (<=20 words)"
@@ -388,19 +449,18 @@ Respond with ONLY a JSON object:
 No extra text, no markdown, no code fences.
 """
         resp = self.call_model(prompt, max_tokens=200)
-        target = resp.get("vote", "")
+        target = resp.get("vote", "None")
 
+        # 1. Handle explicit abstention
+        if target == "None" or target is None:
+            return None, resp
+
+        # 2. If the target is NOT in the list, immediately make it None (skip)
         if target not in available:
-            if "raw" in resp:
-                for t in available:
-                    if t in resp["raw"]:
-                        target = t
-                        break
-            if target not in available:
-                return "", {
-                    "error": f"Invalid vote '{target}'. Must be one of: {available}"
-                }
+            resp["fallback_vote"] = f"Forced None: Invalid vote '{target}' not in alive players."
+            return None, resp
 
+        # 3. Otherwise, return the valid target!
         return target, resp
 
     def debate(self) -> tuple[str, dict]:
