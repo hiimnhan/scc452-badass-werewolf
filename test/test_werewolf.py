@@ -33,10 +33,12 @@ def test_wolf_danger_update():
     """Verify that suspicion updates treat villagers as 'Danger' sources."""
     print("\n" + "="*10 + " TESTING DANGER SCORE UPDATE " + "="*10)
     statement = "I am the Seer and I know Cyrus is a wolf!"
-    # We call the overridden update_suspicion
-    resp = player_wolf.update_suspicion(speaker_name="Alice", statement=statement)
+    resp = player_wolf.update_suspicion_from_statement(speaker_name="Alice", statement=statement)
     
-    print(f"Analysis for Alice's threat: {json.dumps(resp.get('updates', {}).get('Alice'), indent=2)}")
+    # DEBUG: ADD THIS LINE TO SEE THE RAW TEXT
+    print(f"Raw AI Response: {resp.get('_raw_response')}")
+    
+    print(f"Analysis for Alice's threat: {resp.get('updates', {}).get('Alice')}")
     print(f"Current Danger Table:\n{player_wolf._format_suspicion_block()}")
 
 def test_wolf_debate_flow():

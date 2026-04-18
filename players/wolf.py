@@ -46,7 +46,7 @@ class Wolf(BasePlayer):
             if not message:
                 return "", {"error": "No valid message generated for wolf debate."}
 
-        self._record_own_action(round_num, "Night", f"Wolf Chat: {message}")
+        self.record_own_action(round_num, "Night", f"Wolf Chat: {message}")
         return message, response
 
     def eliminate(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:
@@ -70,10 +70,10 @@ class Wolf(BasePlayer):
         if target_eliminate not in targets:
             target_eliminate = targets[0] if targets else ""
 
-        self._record_own_action(round_num, "Night", f"Night Action: Eliminating {target_eliminate}.")
+        self.record_own_action(round_num, "Night", f"Night Action: Eliminating {target_eliminate}.")
         return target_eliminate, response
     
-    def update_suspicion(self, speaker_name: str, statement: str) -> dict:
+    def update_suspicion_from_statement(self, speaker_name: str, statement: str) -> dict:
         """To evaluate danger to the wolf-side."""
         prompt = f"""
     You are {self._name} (Werewolf). 
@@ -115,3 +115,45 @@ class Wolf(BasePlayer):
                 }
         return resp
     
+    def update_suspicion_from_vote(self, current_round_vote_logs: list[str], exiled_player: str, game_status: str) -> dict:
+        """Override to evaluate DANGER to the pack based on voting behavior."""
+        voting_summary = "\n".join(current_round_vote_logs)
+        voting_summary += f"\n\nOutcome: {exiled_player} exiled. {game_status}"
+        
+        prompt = f"""
+    You are {self._name} (Werewolf). 
+    The daily vote just concluded. Here are the results:
+    {voting_summary}
+
+    {self._note}
+
+    Analyse these voting patterns. Identify DANGER to the Werewolves:
+    1. Who is successfully leading votes against your teammates?
+    2. Who is consistently voting with the majority against the pack?
+    3. Who is the most 'dangerous' villager based on their voting accuracy?
+
+    Respond with ONLY a JSON object:
+    {{
+    "chain_of_thought": "voting analysis (<=40 words)",
+    "updates": {{
+        "PlayerName": {{"score": 0.0 to 1.0, "reason": "danger analysis (<=40 words)"}}
+    }}
+    }}
+    """
+        resp = self.call_model(prompt, max_tokens=800)
+        
+        if "updates" not in resp:
+            match = re.search(r"\{.*\}", resp.get("_raw_response", ""), re.DOTALL)
+            if match:
+                try: resp.update(json.loads(match.group()))
+                except: pass
+
+        updates = resp.get("updates", {})
+        for player, data in updates.items():
+            if player in self._suspicion:
+                try:
+                    new_score = float(data.get("score", self._suspicion[player]["score"]))
+                except:
+                    new_score = self._suspicion[player]["score"]
+                self._suspicion[player] = {"score": new_score, "reason": data.get("reason", self._suspicion[player]["reason"])}
+        return resp
