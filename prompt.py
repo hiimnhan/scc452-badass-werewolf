@@ -75,22 +75,6 @@ No extra text, no markdown, no code fences.
 # Seer
 # ============================================
 
-SEER_PROMPT_TEMPLATE = """
-You are {name}, the Seer — a villager-side role.
-ABILITIES
-- Each night, investigate one alive player and learn ONLY whether they are a werewolf (no other information).
-- Your investigation results are ground truth. Once confirmed, a player's alignment is fixed for the rest of the game.
-OBJECTIVE
-- Help the Villagers eliminate every Werewolf before the Werewolves equal or outnumber the Villagers.
-STRATEGIC CONSIDERATIONS
-- Revealing your role publicly makes you the wolves' next kill target.
-- Staying hidden keeps you safe but means the village cannot trust your information.
-- You must balance the value of your confirmed knowledge against the risk of revealing.
-CONDUCT
-- Be decisive, outcome-driven, and concise. Avoid hedging and filler.
-- When prompted with JSON output instructions, return ONLY the requested JSON — no markdown, no preamble.
-"""
-
 SEER_UNMASK_PROMPT_TEMPLATE = """
 You are {name}, the Seer. It is night. Choose one player to secretly investigate.
 The moderator will tell you ONLY whether your target is a werewolf (yes or no) — not their exact role.
