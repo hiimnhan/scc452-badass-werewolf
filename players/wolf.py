@@ -1,6 +1,7 @@
 from players.base_player import BasePlayer, Role
 from typing import List
 from prompt import WEREWOLF_PROMPT_TEMPLATE, WEREWOLF_ELIMINATE_PROMPT_TEMPLATE, WEREWOLF_DEBATE_PROMPT_TEMPLATE
+import json
 import re
 
 class Wolf(BasePlayer):
@@ -28,6 +29,11 @@ class Wolf(BasePlayer):
                 note=self._note
             )
         response = self.call_model(prompt)
+        
+        if "statement" not in response:
+            match = re.search(r"\{.*\}", response.get("_raw_response", ""), re.DOTALL)
+            if match: response.update(json.loads(match.group()))
+        
         message = response.get("statement", "")
         
         if not message or message.strip() == "":
@@ -40,7 +46,7 @@ class Wolf(BasePlayer):
             if not message:
                 return "", {"error": "No valid message generated for wolf debate."}
 
-        self.record_own_action(round_num, "Night", f"Wolf Chat: {message}")
+        self._record_own_action(round_num, "Night", f"Wolf Chat: {message}")
         return message, response
 
     def eliminate(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:
@@ -53,13 +59,18 @@ class Wolf(BasePlayer):
             note=self._note
         )
         response = self.call_model(prompt)
+        
+        if "target" not in response:
+            match = re.search(r"\{.*\}", response.get("_raw_response", ""), re.DOTALL)
+            if match: response.update(json.loads(match.group()))
+        
         target_eliminate = response.get("target", "")
         
         # In case if AI picks not existed name, proceed with picking the first valid one
         if target_eliminate not in targets:
             target_eliminate = targets[0] if targets else ""
 
-        self.record_own_action(round_num, "Night", f"Night Action: Eliminating {target_eliminate}.")
+        self._record_own_action(round_num, "Night", f"Night Action: Eliminating {target_eliminate}.")
         return target_eliminate, response
     
     def update_suspicion(self, speaker_name: str, statement: str) -> dict:
@@ -84,11 +95,22 @@ class Wolf(BasePlayer):
     """
         resp = self.call_model(prompt, max_tokens=800)
         
+        if "updates" not in resp:
+            match = re.search(r'\{.*\}', resp.get("_raw_response", ""), re.DOTALL)
+            if match:
+                try: resp.update(json.loads(match.group()))
+                except: pass
+    
         updates = resp.get("updates", {})
+    
         for player, data in updates.items():
             if player in self._suspicion:
+                try:
+                    new_score = float(data.get("score", self._suspicion[player]["score"]))
+                except:
+                    new_score = self._suspicion[player]["score"]
                 self._suspicion[player] = {
-                    "score": float(data.get("score", self._suspicion[player]["score"])),
+                    "score": new_score,
                     "reason": data.get("reason", self._suspicion[player]["reason"])
                 }
         return resp
