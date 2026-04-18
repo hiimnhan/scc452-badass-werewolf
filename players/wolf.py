@@ -5,13 +5,15 @@ import re
 
 class Wolf(BasePlayer):
     def __init__(self,
-                    name,
-                    model,
-                    is_alive=True,
-                    personality=""
-                 ):
-          super().__init__(name, Role.WEREWOLF, model, is_alive, WEREWOLF_PROMPT_TEMPLATE, personality)
-          self._teammates = []
+        name,
+        model,
+        game_id: str = "",
+        scenario: str = "baseline",
+        is_alive=True,
+        personality=""
+    ):
+        super().__init__(name=name, role=Role.WEREWOLF, model=model, game_id=game_id, scenario=scenario, is_alive=is_alive, system_prompt=WEREWOLF_PROMPT_TEMPLATE, personality=personality)
+        self._teammates = []
 
     def wolf_debate(self, alive_players: List[str], other_wolves: List[str], dialogue_history: List[dict]) -> tuple[str, dict]:
         """Private conversation between wolves for picking a target to eliminate, similar to voting logic that picks a name to eliminate"""
@@ -24,8 +26,8 @@ class Wolf(BasePlayer):
                 teammates = ", ".join(other_wolves),
                 target_villagers = ", ".join(target),
                 dialogue_history=history_conv  if history_conv else "There's no discussion yet.",
-                self_reflections=self._self_reflections,
-                notes=", ".join(self._current_game_notes)
+                self_reflections=self._game_summary,
+                notes=self._format_suspicion_block()
             )
         response = self.call_model(prompt)
         message = response.get("statement", "")
@@ -40,7 +42,7 @@ class Wolf(BasePlayer):
             if not message:
                 return "", {"error": "No valid message generated for wolf debate."}
 
-        self._add_note(f"Wolf Chat Contribution: {message}")
+        # Note: record_own_action not called here — wolf chat is private and not part of the public game summary
         return message, response
 
     def eliminate(self, alive_players: List[str]) -> tuple[str, dict]:
@@ -50,8 +52,8 @@ class Wolf(BasePlayer):
         prompt = WEREWOLF_ELIMINATE_PROMPT_TEMPLATE.format(
             name=self._name,
             target_pool=", ".join(available_targets),
-            self_reflections=self._self_reflections,
-            notes=", ".join(self._current_game_notes)
+            self_reflections=self._game_summary,
+            notes=self._format_suspicion_block()
         )
         response = self.call_model(prompt)
         target_eliminate = response.get("target", "")
@@ -60,6 +62,5 @@ class Wolf(BasePlayer):
         if target_eliminate not in available_targets:
             target_eliminate = available_targets[0] if available_targets else ""
 
-        self._add_note(f"Night Action: Eliminating {target_eliminate}.")
+        # Note: record_own_action not called here — wolf kill is recorded when resolve_night broadcasts to players
         return target_eliminate, response
-    

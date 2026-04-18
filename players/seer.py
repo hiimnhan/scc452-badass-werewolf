@@ -5,10 +5,8 @@ from langchain_core.language_models import BaseChatModel
 
 from players.base_player import BasePlayer, Role
 from prompt import (
-    SEER_DEBATE_PROMPT_TEMPLATE,
     SEER_PROMPT_TEMPLATE,
-    SEER_UNMASK_PROMPT_TEMPLATE,
-    SEER_VOTE_PROMPT_TEMPLATE,
+    SEER_UNMASK_PROMPT_TEMPLATE
 )
 
 
@@ -35,6 +33,7 @@ class Seer(BasePlayer):
         name: str,
         model: BaseChatModel,
         game_id: str = "",
+        scenario: str = "baseline",
         role: Role = Role.SEER,
         system_prompt: str = SEER_PROMPT_TEMPLATE,
         personality: str = "",
@@ -44,6 +43,7 @@ class Seer(BasePlayer):
             role=role,
             model=model,
             game_id=game_id,
+            scenario=scenario,
             system_prompt=system_prompt,
             personality=personality,
         )
