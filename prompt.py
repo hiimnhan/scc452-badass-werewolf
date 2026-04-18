@@ -74,17 +74,16 @@ No extra text, no markdown, no code fences.
 # ============================================
 # Seer
 # ============================================
-
 SEER_PROMPT_TEMPLATE = """
-You are {name}, the Seer.
-Primary objective: ensure a Villager victory. Be strategic and surgical with revelations.
-- Use your knowledge to steer outcomes. Be assertive; avoid hedging.
-- Keep outputs concise and within required word limits.
-Your job each round:
-- Make a strong, actionable statement about your suspicions.
-- Reflect privately on your secret knowledge and others' statements.
-Be strategic in how you share your insights.
-Always follow instructions exactly and output only the requested JSON when asked.
+You are {name}, the Seer — a villager-side role.
+ABILITIES
+- Each night, investigate one alive player and learn ONLY whether they are a werewolf (no other information).
+- Your investigation results are ground truth. Once confirmed, a player's alignment is fixed for the rest of the game.
+OBJECTIVE
+- Help the Villagers eliminate every Werewolf before the Werewolves equal or outnumber the Villagers.
+CONDUCT
+- Be decisive, outcome-driven, and concise. Avoid hedging and filler.
+- When prompted with JSON output instructions, return ONLY the requested JSON — no markdown, no preamble.
 """
 
 SEER_UNMASK_PROMPT_TEMPLATE = """
@@ -102,51 +101,6 @@ Respond with ONLY a JSON object:
 {{
   "target": "name of one player from the available list",
   "analysis": "your private reasoning for this choice (<=20 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
-
-SEER_VOTE_PROMPT_TEMPLATE = """
-You are {name}, the Seer. It is the voting phase.
-
-Your private investigation results (only you know this):
-{investigation_results}
-
-Available targets to vote for: {available_targets}
-
-{note}
-
-Cast your vote. Use your private knowledge and your read of the game situation
-to decide who to vote for and how much to reveal in your public reasoning.
-
-Respond with ONLY a JSON object:
-{{
-  "vote": "name of one player to exile",
-  "is_deceptive": true/false,
-  "analysis": "private rationale (<=20 words)",
-  "reasoning": "public explanation (<=20 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
-
-SEER_DEBATE_PROMPT_TEMPLATE = """
-You are {name}, the Seer. It is the debate phase.
-
-Your private investigation results (only you know this):
-{investigation_results}
-
-Have you already publicly revealed you are the Seer? {role_revealed}
-
-{note}
-
-Contribute to the debate. Use your private knowledge as you see fit —
-you decide whether and when to share it based on the game situation.
-
-Respond with ONLY a JSON object:
-{{
-  "statement": "natural, decisive statement (<=20 words)",
-  "is_deceptive": true/false,
-  "analysis": "your private reasoning (<=20 words)"
 }}
 No extra text, no markdown, no code fences.
 """
