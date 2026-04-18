@@ -122,7 +122,7 @@ class GameState:
             state._phase = Phase.UNMASK
             return state
 
-        protect_target, log = guard_obj.protect(state._alive_players)
+        protect_target, log = guard_obj.protect(state._alive_players, state._round_num)
 
         if not protect_target:
             raise ValueError(f"{guard_name} failed to specify a protection target.")
@@ -288,7 +288,7 @@ class GameState:
  
         # Advance State
         state._phase = Phase.CHECK_WINNER_NIGHT
- 
+
         return state
 
     def check_winner_night_node(self, state: GameState) -> GameState:
@@ -553,6 +553,42 @@ class GameState:
             for thread in threads:
                 thread.result()
         
+        # 4. Write per-game log files to disk
+        from pathlib import Path
+        from utils import write_to_file
+        game_dir = (
+            Path(__file__).parent / "game_logs" / scenario / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
+        ).resolve()
+
+        # game_summary.txt — every public announcement in order
+        write_to_file(
+            game_dir / "game_summary.txt",
+            "\n".join(state._summary_logs) if state._summary_logs else "No events recorded."
+        )
+
+        # debate_log.txt — all statements from all day rounds
+        debate_lines = []
+        for round_num in sorted(state._debate_log):
+            for speaker, text in state._debate_log[round_num]:
+                debate_lines.append(f"Round {round_num} | {speaker}: {text}")
+        write_to_file(
+            game_dir / "debate_log.txt",
+            "\n".join(debate_lines) if debate_lines else "No debate recorded."
+        )
+
+        # vote_log.txt — all vote entries across all rounds
+        vote_lines = []
+        for round_votes in state._vote_logs:
+            vote_lines.extend(round_votes)
+        write_to_file(
+            game_dir / "vote_log.txt",
+            "\n".join(vote_lines) if vote_lines else "No votes recorded."
+        )
+
+        # roles_this_game.txt — who played what role (useful for analysis)
+        role_lines = [f"{name}: {role.value}" for name, role in state._roles.items()]
+        write_to_file(game_dir / "roles_this_game.txt", "\n".join(role_lines))
+
         tqdm.tqdm.write("=> Game successfully wrapped up. Ready for the next round!")
         return state
 

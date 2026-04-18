@@ -6,6 +6,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from abc import ABC
 from pathlib import Path
 from constants import COACH_FEEDBACK_FILENAME
+from config import SCENARIO_CONFIG
 from utils import write_to_file
 
 
@@ -115,6 +116,7 @@ class BasePlayer(ABC):
         role: Role,
         model: BaseChatModel,
         game_id: str = "",
+        scenario: str = "baseline",
         is_alive: bool = True,
         system_prompt: str = "", # role definition template; receives {name}
         personality: str = "",
@@ -123,6 +125,9 @@ class BasePlayer(ABC):
         self._role = role
         self._model = model
         self._game_id = game_id
+        self._scenario = scenario
+        self._self_analyze = SCENARIO_CONFIG[self._scenario]['self_analyze']
+        self._coaching = SCENARIO_CONFIG[self._scenario]['coaching']
         self._is_alive = is_alive
         self._role_definition = system_prompt
         self._personality = personality
@@ -147,16 +152,15 @@ class BasePlayer(ABC):
 
     @property
     def _strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / f"{self._name}_strategy.txt").resolve()
+        return (self._base_dir() / "strategies" / self._scenario / f"{self._name}_strategy.txt").resolve()
 
     @property
     def _note_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / f"{self._name}_{self._role.value}_note.txt").resolve()
+        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / f"{self._name}_{self._role.value}_note.txt").resolve()
 
     @property
     def _feedback_path(self) -> Path:
-        # This is game-specific: one feedback file is written after each game and read by all villager-side players before their strategy update.
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
+        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
 
     # ── Setup helpers ───────────────────────────────────────────────────
 
@@ -547,7 +551,7 @@ No extra text, no markdown, no code fences.
 
     # ── Post-game: strategy update ───────────────────────────────────────
 
-    def update_strategy(self, self_analyze: bool, coaching: bool) -> None:
+    def update_strategy(self) -> None:
         """Update [name]_strategy.txt after a game ends.
 
         Villager-side  (Villager, Seer, Guard, Witch)
@@ -571,13 +575,11 @@ No extra text, no markdown, no code fences.
 
         if self._role in VILLAGER_SIDE:
             new_strategy = self._update_strategy_villager(
-                self_analyze=self_analyze,
-                coaching=coaching,
                 current_strategy=current_strategy,
                 game_record=game_record,
             )
         else:
-            # Wolves: always self-analyze, never use coach, flags ignored
+            # Wolves: always self-analyze, never use coach
             new_strategy = self._update_strategy_wolf(
                 current_strategy=current_strategy,
                 game_record=game_record,
@@ -586,23 +588,23 @@ No extra text, no markdown, no code fences.
         if new_strategy:
             self._write_strategy(new_strategy)
 
-    def _update_strategy_villager(self, self_analyze: bool, coaching: bool, current_strategy: str, game_record: str) -> Optional[str]:
+    def _update_strategy_villager(self, current_strategy: str, game_record: str) -> Optional[str]:
         """Build and execute the LLM prompt for villager-side strategy update.
         Returns the new strategy string, or None when both flags are False.
         """
-        if not self_analyze and not coaching:
+        if not self._self_analyze and not self._coaching:
             return None
 
         sources: List[str] = []
 
-        if self_analyze:
+        if self._self_analyze:
             sources.append(
                 "=== Your Own Game Analysis ===\n"
                 f"What happened this game from your point of view:\n{game_record}\n"
                 "Reflect: what worked, what failed, what you should do differently."
             )
 
-        if coaching:
+        if self._coaching:
             feedback = self._coach_feedback
             if feedback:
                 sources.append(f"=== Coach Feedback ===\n{feedback}")
@@ -672,7 +674,7 @@ No extra text, no markdown, no code fences.
 
     # ── Between-game reset ───────────────────────────────────────────────
 
-    def reset_game_state(self, game_id: str, other_players: List[str]) -> None:
+    def reset_game_state(self, game_id: str, other_players: List[str], scenario: str = None) -> None:
         """Clear all intra-game state for a fresh game.
         Call from run.py at the start of each game instead of re-instantiating.
         Strategy (in _setup_prompt) is preserved across resets.
@@ -680,8 +682,11 @@ No extra text, no markdown, no code fences.
         Args:
             game_id:       New game identifier used in file names.
             other_players: Names of all other players in this new game.
+            scenario:      Experiment scenario; updates _scenario if provided.
         """
         self._game_id = game_id
+        if scenario is not None:
+            self._scenario = scenario
         self._game_summary_entries = []
         self._is_alive = True
         self.init_suspicions(other_players)

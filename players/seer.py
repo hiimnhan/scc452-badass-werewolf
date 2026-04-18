@@ -38,6 +38,7 @@ class Seer(BasePlayer):
         name: str,
         model: BaseChatModel,
         game_id: str = "",
+        scenario: str = "baseline",
         role: Role = Role.SEER,
         system_prompt: str = SEER_PROMPT_TEMPLATE,
         personality: str = "",
@@ -47,6 +48,7 @@ class Seer(BasePlayer):
             role=role,
             model=model,
             game_id=game_id,
+            scenario=scenario,
             system_prompt=system_prompt,
             personality=personality,
         )
@@ -140,7 +142,7 @@ class Seer(BasePlayer):
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response."
 
-        self._record_own_action(
+        self.record_own_action(
             round_num,
             "Night",
             f"Chose to investigate {target}. "
@@ -195,7 +197,7 @@ class Seer(BasePlayer):
         }
 
         result_text = "a werewolf" if is_wolf else "NOT a werewolf"
-        self._record_own_action(
+        self.record_own_action(
             round_num,
             "Night",
             f"Investigation result [CONFIRMED]: {player_name} is {result_text}.",

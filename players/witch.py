@@ -20,12 +20,13 @@ class Witch(BasePlayer):
         name: str,
         model: BaseChatModel,
         game_id: str = "",
+        scenario: str = "baseline",
         role: Role = Role.WITCH,
         is_alive: bool = True,
         system_prompt: str = WITCH_PROMPT_TEMPLATE,
         personality: str = "",
     ) -> None:
-        super().__init__(name=name, role=role, model=model, game_id=game_id, is_alive=is_alive, system_prompt=system_prompt, personality=personality)
+        super().__init__(name=name, role=role, model=model, game_id=game_id, scenario=scenario, is_alive=is_alive, system_prompt=system_prompt, personality=personality)
         self._save_available: bool = True
         self._poison_available: bool = True
 
