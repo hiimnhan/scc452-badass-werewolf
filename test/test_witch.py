@@ -3,12 +3,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 from dotenv import load_dotenv
 load_dotenv()
+from utils import get_llm
+from config import VILLAGER_MODEL
 
-lm_model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.7,
-    google_api_key=os.environ["GEMINI_API_KEY"]
-)
+lm_model = get_llm(VILLAGER_MODEL)
 
 all_players = ["Alice", "Bob", "Selena", "Raj", "Frank", "Joy", "Cyrus"]
 witch_player_name = "Joy"
@@ -117,11 +115,11 @@ if __name__ == "__main__":
     
     # ------------------------------------------
     test_dict = {
-        test_AI_model: "skip", 
+        test_AI_model: "", 
         test_setup_prompt: "skip",
         test_init_suspicion: "skip",
         test_game_summary: "skip",
-        test_game_flow: "",
+        test_game_flow: "skip",
     }
     
     for i, (test_func, info) in enumerate(test_dict.items()):

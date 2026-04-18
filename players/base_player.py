@@ -8,6 +8,12 @@ from pathlib import Path
 from constants import COACH_FEEDBACK_FILENAME
 from config import SCENARIO_CONFIG
 from utils import write_to_file
+from prompt import (
+    VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
+    VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
+    WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
+    WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
+)
 
 
 # ============================================
@@ -190,16 +196,33 @@ class BasePlayer(ABC):
 
     # ── Intra-game: initialisation ──────────────────────────────────────
 
-    def init_suspicions(self, other_players: List[str]) -> None:
+    def init_suspicions(self, other_players: List[str], wolf_teammates: Optional[List[str]] = None) -> None:
         """Seed suspicion dict for all other players at game start.
-        Everyone begins at 0.5 (completely unknown) with no reason.
+        Villagers start everyone at 0.5.
+        Wolves start fellow wolves at 0.0 (no threat) and others at 0.5.
         Call once from game setup before Round 1.
         """
-        self._suspicion = {
-            p: {"score": 0.5, "reason": ""}
-            for p in other_players
-            if p != self._name
-        }
+        if wolf_teammates is None:
+            wolf_teammates = []
+            
+        self._suspicion = {}
+        
+        for p in other_players:
+            if p == self._name:
+                continue
+                
+            if self._role in WOLF_SIDE and p in wolf_teammates:
+                # Wolves know their teammates immediately
+                self._suspicion[p] = {
+                    "score": 0.0, 
+                    "reason": "Fellow Werewolf. Ally and coordination partner."
+                }
+            else:
+                # Everyone else starts as a complete unknown
+                self._suspicion[p] = {
+                    "score": 0.5, 
+                    "reason": "Unknown alignment and role."
+                }
 
     # ── Intra-game: game summary ────────────────────────────────────────
 
@@ -242,30 +265,18 @@ class BasePlayer(ABC):
 
         Returns the raw LLM response dict.
         """
-        prompt = f"""
-You are {self._name} ({self._role.value}).
-{speaker_name} just said: "{statement}"
-
-{self._note}
-
-Analyse this new statement and how it impacts your read on EVERY player. Consider:
-1. Does it contradict prior behaviour or claims?
-2. Does it link {speaker_name} to anyone else (e.g., defending or accusing them)?
-3. Does it help or hurt the villager side?
-
-Extend the reason field for the players — do not erase prior notes.
-
-Respond with ONLY a JSON object using this exact structure:
-{{
-  "chain_of_thought": "your private reasoning about how this statement connects players (<=40 words)",
-  "updates": {{
-    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
-    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
-  }}
-}}
-Include ALL other players you are tracking in the "updates" dictionary.
-No extra text, no markdown, no code fences.
-"""
+        if self._role in VILLAGER_SIDE:
+            prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
+        elif self._role in WOLF_SIDE:
+            prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
+            
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            speaker_name=speaker_name,
+            statement=statement,
+            note=self._note
+        )
 
         resp = self.call_model(prompt, max_tokens=800)
 
@@ -303,33 +314,17 @@ No extra text, no markdown, no code fences.
         voting_summary += f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
         voting_summary += f"\n{game_status}"
         
-        prompt = f"""
-You are {self._name} ({self._role.value}).
-The daily vote just concluded. Here is how everyone voted:
-
-{voting_summary}
-
-Here is your current knowledge:
-{self._note}
-
-Analyse these voting patterns and how they impact your suspicion scores for EVERY player. Consider:
-1. Did Werewolves coordinate their votes (bandwagoning) on a single target?
-2. Did anyone vote defensively to save themselves?
-3. Does someone's vote contradict their previous statements or accusations?
-
-Provide an updated score and a concise reason justifying your read on them based on this voting data.
-
-Respond with ONLY a JSON object using this exact structure:
-{{
-  "chain_of_thought": "your private reasoning about the voting patterns (<=40 words)",
-  "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
-  }}
-}}
-Include ALL other players you are tracking in the "updates" dictionary.
-No extra text, no markdown, no code fences.
-"""
+        if self._role in VILLAGER_SIDE:
+            prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT
+        elif self._role in WOLF_SIDE:
+            prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
+            
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            voting_summary=voting_summary,
+            note=self._note
+        )
         
         # Use 800 max_tokens since it outputs updates for all players
         resp = self.call_model(prompt, max_tokens=800)

@@ -27,7 +27,7 @@ game_logs/
 
 strategies/
   {scenario}/
-    {name}_{role}_strategy.txt  each player's accumulated strategy
+    {name}_strategy.txt  each player's accumulated strategy
     coach_strategy.txt          coach's accumulated coaching strategy
 """
 from __future__ import annotations
@@ -188,14 +188,24 @@ def build_player_objects(
         cls   = ROLE_TO_CLASS[role]
         player_objects[name] = cls(
             name=name,
+            role=role,
             model=model,
             game_id=game_id,
             scenario=scenario,
         )
 
-    # Seed suspicion scores — pure Python, no LLM call needed
+    # Find out who the actual wolves are in THIS specific game
+    actual_wolves = [p for p, r in roles.items() if r in WOLF_SIDE]
+
     for name, player_obj in player_objects.items():
-        player_obj.init_suspicions([p for p in PLAYERS if p != name])
+        other_players = [p for p in PLAYERS if p != name]
+        
+        if player_obj._role in WOLF_SIDE:
+            # Wolves get the dynamic list of their teammates
+            player_obj.init_suspicions(other_players, wolf_teammates=actual_wolves)
+        else:
+            # Villagers get no one
+            player_obj.init_suspicions(other_players)
 
     return player_objects
 

@@ -179,3 +179,116 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
+
+
+# ============================================
+# Update suspicion
+# ============================================
+
+VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
+You are {name} ({role}).
+{speaker_name} just said: "{statement}"
+
+{note}
+
+Analyse this new statement and how it impacts your read on EVERY player. Consider:
+1. Does it contradict prior behaviour or claims?
+2. Does it link {speaker_name} to anyone else (e.g., defending or accusing them)?
+3. Does it help or hurt the villager side?
+
+Extend the reason field for the players — do not erase prior notes.
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about how this statement connects players (<=40 words)",
+  "updates": {{
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
+You are {name} ({role}).
+{speaker_name} just said: "{statement}"
+
+{note}
+
+Analyse this new statement from a Werewolf's perspective and how it impacts your assessment of EVERY player. Consider:
+1. Does this statement threaten you or your fellow wolves?
+2. Does it hint that {speaker_name} or anyone else holds a special power role (Seer, Guard, Witch)?
+3. Does it create an opportunity to frame a villager or sow confusion?
+
+Extend the reason field for the players — do not erase prior notes.
+Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about the threat this statement poses and framing opportunities (<=40 words)",
+  "updates": {{
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
+VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
+You are {name} ({role}).
+The daily vote just concluded. Here is how everyone voted:
+
+{voting_summary}
+
+Here is your current knowledge:
+{note}
+
+Analyse these voting patterns and how they impact your suspicion scores for EVERY player. Consider:
+1. Did Werewolves coordinate their votes (bandwagoning) on a single target?
+2. Did anyone vote defensively to save themselves?
+3. Does someone's vote contradict their previous statements or accusations?
+
+Provide an updated score and a concise reason justifying your read on them based on this voting data.
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about the voting patterns (<=40 words)",
+  "updates": {{
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
+You are {name} ({role}).
+The daily vote just concluded. Here is how everyone voted:
+
+{voting_summary}
+
+Here is your current knowledge:
+{note}
+
+Analyse these voting patterns from a Werewolf's perspective and how they impact your assessment of EVERY player. Consider:
+1. Did anyone's vote reveal they might have special knowledge (potentially a Seer, Guard, or Witch)?
+2. Are the villagers starting to coordinate their votes against you or your fellow wolves?
+3. Did anyone vote erratically or poorly, making them an easy target to frame or manipulate tomorrow?
+
+Provide an updated score and a concise reason justifying your read on them based on this voting data.
+Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about the voting patterns, threats, and framing opportunities (<=40 words)",
+  "updates": {{
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
