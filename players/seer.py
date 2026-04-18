@@ -5,10 +5,8 @@ from langchain_core.language_models import BaseChatModel
 
 from players.base_player import BasePlayer, Role
 from prompt import (
-    SEER_DEBATE_PROMPT_TEMPLATE,
     SEER_PROMPT_TEMPLATE,
-    SEER_UNMASK_PROMPT_TEMPLATE,
-    SEER_VOTE_PROMPT_TEMPLATE,
+    SEER_UNMASK_PROMPT_TEMPLATE
 )
 
 
@@ -20,9 +18,6 @@ class Seer(BasePlayer):
     Extra state beyond BasePlayer:
         _investigations  list[dict]  ground-truth records {"player", "is_wolf"}
                                      append-only after reveal_and_update()
-        _role_revealed   bool        True once the seer publicly claims their
-                                     role in debate; prevents contradictory
-                                     re-revelation in later turns
 
     Confirmed investigation results are stored in self._suspicion[name] with
     score 1.0 or 0.0 and a fixed reason string. The _update_suspicion override
@@ -38,6 +33,7 @@ class Seer(BasePlayer):
         name: str,
         model: BaseChatModel,
         game_id: str = "",
+        scenario: str = "baseline",
         role: Role = Role.SEER,
         system_prompt: str = SEER_PROMPT_TEMPLATE,
         personality: str = "",
@@ -47,11 +43,11 @@ class Seer(BasePlayer):
             role=role,
             model=model,
             game_id=game_id,
+            scenario=scenario,
             system_prompt=system_prompt,
             personality=personality,
         )
         self._investigations: list[dict] = []
-        self._role_revealed: bool = False
 
     # Public query helpers
 
@@ -140,7 +136,7 @@ class Seer(BasePlayer):
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response."
 
-        self._record_own_action(
+        self.record_own_action(
             round_num,
             "Night",
             f"Chose to investigate {target}. "
@@ -195,102 +191,8 @@ class Seer(BasePlayer):
         }
 
         result_text = "a werewolf" if is_wolf else "NOT a werewolf"
-        self._record_own_action(
+        self.record_own_action(
             round_num,
             "Night",
             f"Investigation result [CONFIRMED]: {player_name} is {result_text}.",
         )
-
-    # Overridden inherited actions
-
-    def _update_suspicion(self, speaker_name: str, statement: str) -> dict:
-        """Override to protect confirmed investigation results from LLM inference.
-
-        Players confirmed by investigation have their score AND reason locked.
-        The base implementation still runs (to update every other player
-        normally and to produce the chain-of-thought), then confirmed entries
-        are restored immediately after.
-        """
-        # Snapshot confirmed entries before base overwrites them
-        locked: dict = {}
-        for name in self._suspicion:
-            if self._is_confirmed(name) is not None:
-                locked[name] = dict(self._suspicion[name])
-
-        # Base updates every player freely
-        resp = super()._update_suspicion(speaker_name, statement)
-
-        # Restore confirmed entries — moderator's answer is ground truth
-        for name, entry in locked.items():
-            self._suspicion[name] = entry
-
-        if locked:
-            resp["_confirmed_preserved"] = list(locked.keys())
-        return resp
-
-    def vote(self, alive_players: List[str]) -> tuple[str, dict]:
-        """Override to include investigation results as private context.
-
-        The LLM decides freely how to vote — including voting for someone
-        other than a confirmed wolf to hide the seer's identity.
-        """
-        available = [p for p in alive_players if p != self._name]
-        if not available:
-            return "", {"error": "No available targets to vote for."}
-
-        prompt = SEER_VOTE_PROMPT_TEMPLATE.format(
-            name=self._name,
-            available_targets=", ".join(available),
-            investigation_results=self._format_investigation_results(),
-            note=self._note,
-        )
-
-        resp = self.call_model(prompt, max_tokens=200)
-        target = resp.get("vote", "")
-
-        if target not in available:
-            if "raw" in resp:
-                for t in available:
-                    if t in resp["raw"]:
-                        target = t
-                        break
-            if target not in available:
-                return "", {
-                    "error": f"Invalid vote '{target}'. Must be one of: {available}"
-                }
-
-        return target, resp
-
-    def debate(self) -> tuple[str, dict]:
-        """Override to include investigation results and track _role_revealed.
-
-        Signature matches BasePlayer.debate() — no dialogue_history parameter;
-        per-statement context is already in self._note via _update_suspicion.
-
-        The LLM decides freely when and whether to reveal.
-        """
-        prompt = SEER_DEBATE_PROMPT_TEMPLATE.format(
-            name=self._name,
-            investigation_results=self._format_investigation_results(),
-            role_revealed=self._role_revealed,
-            note=self._note,
-        )
-
-        resp = self.call_model(prompt, max_tokens=200)
-        statement = resp.get("statement", "").strip()
-
-        if not statement:
-            raw = resp.get("raw", "")
-            match = re.search(r'"statement"\s*:\s*"([^"]+)"', raw)
-            statement = match.group(1).strip() if match else ""
-            if not statement:
-                return "", {"error": "No valid statement generated."}
-
-        # State tracking: detect public role revelation so later turns
-        # see role_revealed=True in the prompt and avoid contradicting.
-        role_keywords = ["i am the seer",
-                         "as the seer", "i'm the seer", "seer here"]
-        if not self._role_revealed and any(kw in statement.lower() for kw in role_keywords):
-            self._role_revealed = True
-
-        return statement, resp

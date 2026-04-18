@@ -10,14 +10,16 @@ class Guard(BasePlayer):
         self,
         name: str,
         model: BaseChatModel,
+        game_id: str = "",
+        scenario: str = "baseline",
         role: Role = Role.GUARD,
         system_prompt: str = GUARD_PROMPT_TEMPLATE,
         personality: str = "",
     ):
-        super().__init__(name=name, role=role, model=model, system_prompt=system_prompt, personality=personality)
+        super().__init__(name=name, role=role, model=model, game_id=game_id, scenario=scenario, system_prompt=system_prompt, personality=personality)
         self.last_guarded_player = None
 
-    def protect(self, alive_players: List[str] = None) -> tuple[str, dict]:
+    def protect(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:
         # Implement the logic to protect a player
         # input: alive players (list), output: target player to protect (str), log (dict)
         # how to use: call this method, it will return the name of the player to protect
@@ -56,8 +58,9 @@ class Guard(BasePlayer):
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response"
 
-        self._add_note(
-            f"Guard protect {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
+        self.record_own_action(
+            round_num, "Night",
+            f"Protected {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
         )
         self.last_guarded_player = target
         return target, resp

@@ -6,14 +6,15 @@ import re
 
 class Wolf(BasePlayer):
     def __init__(self,
-                    name,
-                    model,
-                    game_id,
-                    is_alive=True,
-                    personality=""
-                 ):
-          super().__init__(name, Role.WEREWOLF, model,game_id , is_alive, WEREWOLF_PROMPT_TEMPLATE, personality)
-          self._teammates = []
+        name,
+        model,
+        game_id: str = "",
+        scenario: str = "baseline",
+        is_alive=True,
+        personality=""
+    ):
+        super().__init__(name=name, role=Role.WEREWOLF, model=model, game_id=game_id, scenario=scenario, is_alive=is_alive, system_prompt=WEREWOLF_PROMPT_TEMPLATE, personality=personality)
+        self._teammates = []
 
     def wolf_debate(self, alive_players: List[str], other_wolves: List[str], dialogue_history: List[dict], round_num: int) -> tuple[str, dict]:
         """Private conversation between wolves for picking a target to eliminate, similar to voting logic that picks a name to eliminate"""

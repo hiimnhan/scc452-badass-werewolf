@@ -34,23 +34,24 @@ class Coach:
     Always call coach.run() BEFORE player._update_strategy() so the feedback file exists on disk when villager-side players go to read it.
     """
 
-    def __init__(self, model: BaseChatModel, game_id: str = "") -> None:
+    def __init__(self, model: BaseChatModel, game_id: str = "", scenario: str = "baseline") -> None:
         self._model = model
         self._game_id = game_id
+        self._scenario = scenario
         self._strategy = self._load_coach_strategy()
 
     # ── File path helpers ───────────────────────────────────────────────
 
     def _base_dir(self) -> Path:
-        return Path(__file__).parent
+        return Path(__file__).parent.parent
 
     @property
     def _coach_strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / COACH_STRATEGY_FILENAME).resolve()
+        return (self._base_dir() / "strategies" / self._scenario / COACH_STRATEGY_FILENAME).resolve()
 
     @property
     def _coach_feedback_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
+        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
 
     # ── Disk helpers ────────────────────────────────────────────────────
 
