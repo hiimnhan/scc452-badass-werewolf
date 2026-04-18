@@ -33,12 +33,11 @@ Always follow instructions exactly and output only the requested JSON when asked
 """
 
 WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
-You are {name}, a Werewolf. It is night. 
-You must choose one villager to eliminate. 
+It is night. You are {name} (Werewolf). You must choose one villager to eliminate. 
+
+{note}
 
 Available targets: {target_pool}
-Your strategic guidelines: {self_reflections}
-Your notes from this game: {notes}
 
 Respond with ONLY a JSON object:
 {{
@@ -46,28 +45,25 @@ Respond with ONLY a JSON object:
   "is_deceptive": true/false,
   "analysis": "private reasoning (<=20 words)"
 }}
-No extra text, no markdown, no code fences.
 """
 
 WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
-You are {name}, a Werewolf. You are in the private Werewolf chat. 
-Your goal is to coordinate with your teammates to pick a target to eliminate tonight while appearing like a villager.
-Your teammates are: (DO NOT KILL) {teammates}
-Your target are: (VILLAGERS TO KILL) {target_villagers}
+You are {name} in the private Werewolf chat. 
+Your goal: Coordinate with teammates to pick a target while appearing like a villager.
+Your teammates: {teammates}
+Available targets: {target_pool} 
+
+{note}
 
 Dialogue history:
 {dialogue_history}
 
-Your strategic guidelines: {self_reflections}
-Your notes: {notes}
-
 Respond with ONLY a JSON object:
 {{
-  "statement": "your private message to other wolves (<=20 words)",
+  "statement": "private message (<=20 words)",
   "is_deceptive": true/false,
   "analysis": "private strategy (<=20 words)"
 }}
-No extra text, no markdown, no code fences.
 """
 
 

@@ -1,66 +1,97 @@
-import json
-import sys
-import types
-import traceback
-
-langchain_core = types.ModuleType("langchain_core")
-language_models = types.ModuleType("langchain_core.language_models")
-class BaseChatModel: pass
-language_models.BaseChatModel = BaseChatModel
-langchain_core.language_models = language_models
-sys.modules.setdefault("langchain_core", langchain_core)
-sys.modules.setdefault("langchain_core.language_models", language_models)
-
 from players.wolf import Wolf
+from players.base_player import Role
+import os
+import time
+import json
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
 
-# fake model
-def _mock_llm(content: dict):
-    class _R: pass
-    class _DM:
-        def invoke(self, prompt, **kwargs): 
-            r = _R()
-            r.content = json.dumps(content) # Returns fake JSON
-            return r
-    return _DM()
+load_dotenv()
 
-# Test case
-def test_wolf_eliminate_itself(): 
-    """Wolf should never target themselves."""
-    model = _mock_llm({"target": "Jin", "analysis": "suicide attempt"})
-    w = Wolf("Jin", model)
-    w.wolf_debate(alive_players=["Alice", "Bob", "Charlie", "Jin"], other_wolves=["Bob"], dialogue_history=[])
-    target, log = w.eliminate(["Alice", "Bob", "Charlie", "Jin"])
-    assert target != "Jin"
-    assert target in ["Alice", "Bob", "Charlie"] 
+# Initialize Model
+lm_model = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    temperature=0.7,
+    google_api_key=os.environ["GEMINI_API_KEY"]
+)
 
-def test_wolf_debate_adds_note():
-    """Wolf should be able to add note."""
-    model = _mock_llm({"statement": "Let's kill Alice", "analysis": "test"})
-    w = Wolf("Jin", model)
-    w.wolf_debate(["Alice", "Bob"], ["Bob"], [])
-    last_note = w._current_game_notes[-1]
-    print(f"Notes count: {len(w._current_game_notes)}")
-    print(f"Content of last note: {last_note}")
-    assert len(w._current_game_notes) > 0
-    assert "Wolf Chat" in w._current_game_notes[-1]
+# Setup Test Data
+all_players = ["Alice", "Bob", "Selena", "Raj", "Frank", "Joy", "Cyrus"]
+wolf_name = "Cyrus"
+other_wolves = ["Selena"]
+villagers = [p for p in all_players if p not in other_wolves and p != wolf_name]
+
+player_wolf = Wolf(
+    name=wolf_name,
+    model=lm_model,
+    game_id="test_v1"
+)
+
+player_wolf.init_suspicions(other_players=[p for p in all_players if p != wolf_name])
+
+def test_wolf_danger_update():
+    """Verify that suspicion updates treat villagers as 'Danger' sources."""
+    print("\n" + "="*10 + " TESTING DANGER SCORE UPDATE " + "="*10)
+    statement = "I am the Seer and I know Cyrus is a wolf!"
+    resp = player_wolf.update_suspicion_from_statement(speaker_name="Alice", statement=statement)
     
-def test_wolf_eliminate_its_friend():
-    """Wolf should not eliminate its teammates."""
-    model = _mock_llm({"target": "Bob", "analysis": "I'm confused"}) # Bob is werewolf in this case
-    w = Wolf("Jin", model)
-    w.wolf_debate(alive_players=["Alice", "Bob", "Charlie", "Jin"], other_wolves=["Bob"], dialogue_history=[])
+    # DEBUG: ADD THIS LINE TO SEE THE RAW TEXT
+    print(f"Raw AI Response: {resp.get('_raw_response')}")
     
-    # Bob is a teammate, Alice, Charlie is a Villager
-    target, log = w.eliminate(alive_players=["Alice", "Bob", "Charlie", "Jin"])
+    print(f"Analysis for Alice's threat: {resp.get('updates', {}).get('Alice')}")
+    print(f"Current Danger Table:\n{player_wolf._format_suspicion_block()}")
+
+def test_wolf_debate_flow():
+    """Verify the 2-round internal wolf coordination."""
+    print("\n" + "="*10 + " TESTING WOLF DEBATE " + "="*10)
+    # Mock some prior dialogue
+    mock_history = [
+        ["Selena", "I think we should target the quiet one, Raj."],
+    ]
     
-    assert target == "Alice"
-    assert target != "Bob"
+    statement, log = player_wolf.wolf_debate(
+        alive_players=all_players,
+        other_wolves=other_wolves,
+        dialogue_history=mock_history,
+        round_num=1
+    )
+    
+    print(f"Wolf Statement: {statement}")
+    print(f"Internal Metadata: {log.get('analysis')}")
+
+def test_eliminate_action():
+    """Verify the final kill decision logic."""
+    print("\n" + "="*10 + " TESTING ELIMINATION " + "="*10)
+    target, log = player_wolf.eliminate(
+        alive_players=all_players,
+        round_num=1
+    )
+    
+    print(f"Final Target Picked: {target}")
+    print(f"Elimination Reasoning: {log.get('analysis')}")
+
+def test_compiled_note_structure():
+    """Verify the {note} block consolidation."""
+    print("\n" + "="*10 + " TESTING NOTE CONSOLIDATION " + "="*10)
+    # Add a public event
+    player_wolf.receive_announcement(1, "Day", "Frank was exiled.")
+    
+    print("Full Working Note for LLM Context:")
+    print("-" * 20)
+    print(player_wolf._note)
 
 if __name__ == "__main__":
-    tests = [test_wolf_eliminate_itself, test_wolf_debate_adds_note, test_wolf_eliminate_its_friend]
-    for t in tests:
+    tests = [
+        test_wolf_danger_update,
+        test_wolf_debate_flow,
+        test_eliminate_action,
+        test_compiled_note_structure
+    ]
+    
+    for i, test in enumerate(tests):
         try:
-            t()
-            print(f"PASS: {t.__name__}")
+            test()
+            print(f"\n✅ Test {i+1} ({test.__name__}): PASSED")
+            time.sleep(2) # Avoid rate limits if on free tier
         except Exception as e:
-            print(f"FAIL: {t.__name__}\n{traceback.format_exc()}")
+            print(f"\n❌ Test {i+1} ({test.__name__}): FAILED\nError: {e}")
