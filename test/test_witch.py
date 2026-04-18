@@ -1,6 +1,4 @@
-from players.base_player import Role
 from players.witch import Witch
-from game import GameState
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 from dotenv import load_dotenv
@@ -76,12 +74,12 @@ if __name__ == "__main__":
         player_witch.receive_announcement(round_num, "Day", "No one was exiled.")
         
         ### Get bid
-        bid, resp = player_witch._get_bid()
+        bid, resp = player_witch.get_bid()
         print("==="*30)
         print("Player's bid:", bid)
         time.sleep(30)
         
-        _ = player_witch._update_suspicion(speaker_name="Bob", statement="I am a Seer. I looked into Selena and Raj and see that they are both wolves. We need to vote them out.")
+        _ = player_witch.update_suspicion_from_statement(speaker_name="Bob", statement="I am a Seer. I looked into Selena and Raj and see that they are both wolves. We need to vote them out.")
         
         ### Update suspicion after a statement
         print("==="*30)

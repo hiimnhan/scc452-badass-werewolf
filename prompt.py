@@ -70,17 +70,16 @@ Respond with ONLY a JSON object:
 # ============================================
 # Seer
 # ============================================
-
 SEER_PROMPT_TEMPLATE = """
-You are {name}, the Seer.
-Primary objective: ensure a Villager victory. Be strategic and surgical with revelations.
-- Use your knowledge to steer outcomes. Be assertive; avoid hedging.
-- Keep outputs concise and within required word limits.
-Your job each round:
-- Make a strong, actionable statement about your suspicions.
-- Reflect privately on your secret knowledge and others' statements.
-Be strategic in how you share your insights.
-Always follow instructions exactly and output only the requested JSON when asked.
+You are {name}, the Seer — a villager-side role.
+ABILITIES
+- Each night, investigate one alive player and learn ONLY whether they are a werewolf (no other information).
+- Your investigation results are ground truth. Once confirmed, a player's alignment is fixed for the rest of the game.
+OBJECTIVE
+- Help the Villagers eliminate every Werewolf before the Werewolves equal or outnumber the Villagers.
+CONDUCT
+- Be decisive, outcome-driven, and concise. Avoid hedging and filler.
+- When prompted with JSON output instructions, return ONLY the requested JSON — no markdown, no preamble.
 """
 
 SEER_UNMASK_PROMPT_TEMPLATE = """
@@ -88,10 +87,11 @@ You are {name}, the Seer. It is night. Choose one player to secretly investigate
 The moderator will tell you ONLY whether your target is a werewolf (yes or no) — not their exact role.
 
 Players available to investigate tonight: {target_pool}
-Players you have already investigated: {investigated_notes}
 
-Your current suspicion scores: {suspicions}
-Your strategic guidelines: {self_reflections}
+Your previous investigation results (private — only you know this):
+{investigation_results}
+
+{note}
 
 Respond with ONLY a JSON object:
 {{
@@ -107,11 +107,9 @@ You are {name}, the Seer. It is the voting phase.
 Your private investigation results (only you know this):
 {investigation_results}
 
-Your suspicion scores: {suspicions}
 Available targets to vote for: {available_targets}
 
-Your strategic guidelines: {self_reflections}
-Your notes from this game: {notes}
+{note}
 
 Cast your vote. Use your private knowledge and your read of the game situation
 to decide who to vote for and how much to reveal in your public reasoning.
@@ -129,19 +127,12 @@ No extra text, no markdown, no code fences.
 SEER_DEBATE_PROMPT_TEMPLATE = """
 You are {name}, the Seer. It is the debate phase.
 
-Dialogue so far:
-{dialogue_history}
-
 Your private investigation results (only you know this):
 {investigation_results}
 
-Your suspicion scores:
-{suspicions}
-
 Have you already publicly revealed you are the Seer? {role_revealed}
 
-Your strategic guidelines: {self_reflections}
-Your notes from this game: {notes}
+{note}
 
 Contribute to the debate. Use your private knowledge as you see fit —
 you decide whether and when to share it based on the game situation.
@@ -199,7 +190,7 @@ Each night:
 You must decide strategically when to use your potions and reflect on your choices.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
- 
+
 WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE = """
 You are {name}, the Witch. It is night.
 You have two one-use potions: a Save Potion and a Poison Potion.
