@@ -3,19 +3,20 @@ run.py — Werewolf experiment runner
 
 Usage
 -----
-Single scenario, 100 games (default):
-    python run.py --scenario baseline
+Start fresh (overwrite everything from game_001):
+    python run.py --scenario baseline --mode override
 
-Different scenario:
-    python run.py --scenario coach_and_self_analyze
+Resume from where you left off:
+    python run.py --scenario baseline --mode append
 
 Override number of games:
-    python run.py --scenario baseline --games 10
+    python run.py --scenario baseline --mode override --games 10
 
 File layout produced
 --------------------
 game_logs/
   {scenario}/
+    results_summary.txt
     game_001/
       game_summary.txt        all public announcements in order
       debate_log.txt          every statement from every day debate
@@ -26,12 +27,12 @@ game_logs/
 
 strategies/
   {scenario}/
-    {name}_strategy.txt  each player's accumulated strategy (updated after every game)
+    {name}_{role}_strategy.txt  each player's accumulated strategy
     coach_strategy.txt          coach's accumulated coaching strategy
 """
-
+from __future__ import annotations
+from typing import TYPE_CHECKING
 import argparse
-import random
 from pathlib import Path
 
 from game import GameState
@@ -39,12 +40,14 @@ from config import MODEL_PROVIDERS, SCENARIO_CONFIG, VILLAGER_MODEL, WOLF_MODEL
 from players.guard import Guard
 from players.seer import Seer
 from players.witch import Witch
-from players.base_player import BasePlayer
+from players.villager import Villager
 from players.wolf import Wolf
 from players.coach import Coach
 from players.base_player import Role, VILLAGER_SIDE, WOLF_SIDE
-from utils import get_llm
+from utils import get_llm, write_to_file
 
+if TYPE_CHECKING:
+    from players.base_player import BasePlayer
 
 # ============================================================
 # Player roster & role pool
@@ -54,19 +57,22 @@ VILLAGER_PLAYERS: list[str] = ["Alice", "Bob", "Selena", "Raj", "Frank"]
 WOLF_PLAYERS: list[str] = ["Joy", "Cyrus"]
 PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 
-# Villager Role pool — reshuffled randomly before every game.
-# Edit counts here to change game balance; must equal len(VILLAGER_PLAYERS).
+# Villager role pool — reshuffled randomly before every game.
+# Must equal len(VILLAGER_PLAYERS).
 VILLAGER_ROLE_POOL: list[Role] = (
-    + [Role.SEER]     * 1
-    + [Role.GUARD]    * 1
-    + [Role.WITCH]    * 1
+    [Role.SEER]     * 1
+    + [Role.GUARD]  * 1
+    + [Role.WITCH]  * 1
     + [Role.VILLAGER] * 2
 )
 
-assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
+assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
+    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries "
+    f"but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
+)
 
 ROLE_TO_CLASS: dict[Role, type] = {
-    Role.VILLAGER: BasePlayer,
+    Role.VILLAGER: Villager,
     Role.WEREWOLF: Wolf,
     Role.SEER:     Seer,
     Role.GUARD:    Guard,
@@ -96,20 +102,66 @@ def parse_args() -> argparse.Namespace:
         "-g", "--games",
         type=int,
         default=100,
-        help="Number of games to run back-to-back",
+        help="Total number of games to run",
+    )
+    parser.add_argument(
+        "-m", "--mode",
+        type=str,
+        default="append",
+        choices=["override", "append"],
+        help=(
+            "override: wipe existing results and start from game_001. "
+            "append:   detect the last completed game and continue from there."
+        ),
     )
     return parser.parse_args()
+
+
+# ============================================================
+# Append-mode: detect the last completed game number
+# ============================================================
+
+def _last_completed_game(scenario: str) -> int:
+    """Return the highest game number already completed for this scenario.
+
+    A game folder is considered complete when it contains game_summary.txt.
+    Returns 0 if no completed games are found (i.e. start from game_001).
+    """
+    log_root = (Path(__file__).parent / "game_logs" / scenario).resolve()
+    if not log_root.exists():
+        return 0
+
+    completed = []
+    for folder in log_root.iterdir():
+        if not folder.is_dir():
+            continue
+        # Folder names: game_001, game_002, ...
+        if folder.name.startswith("game_") and (folder / "game_summary.txt").exists():
+            try:
+                completed.append(int(folder.name.split("_")[1]))
+            except (IndexError, ValueError):
+                pass
+
+    return max(completed, default=0)
 
 
 # ============================================================
 # Role assignment
 # ============================================================
 
-def assign_roles_randomly() -> dict[str, Role]:
-    """Shuffle the role pool and assign one role to each player."""
-    shuffled = VILLAGER_ROLE_POOL.copy()
-    random.shuffle(shuffled)
-    return dict(zip(PLAYERS, shuffled + ([Role.WEREWOLF] * 2)))
+def assign_roles_round_robin() -> dict[str, Role]:
+    """Rotate villager roles by one position each game (round-robin).
+    Wolves are always wolves — only villager-side roles rotate.
+    
+    Example over 5 games (5 villager players, 3 roles):
+      Game 1: Alice=Seer,  Bob=Guard, Selena=Witch, Raj=Villager, Frank=Villager
+      Game 2: Alice=Guard, Bob=Witch, Selena=Villager, Raj=Villager, Frank=Seer
+      Game 3: Alice=Witch, Bob=Villager, Selena=Villager, Raj=Seer, Frank=Guard
+      ... and so on
+    """
+    global VILLAGER_ROLE_POOL
+    VILLAGER_ROLE_POOL = VILLAGER_ROLE_POOL[1:] + VILLAGER_ROLE_POOL[:1]
+    return dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
 
 
 # ============================================================
@@ -126,13 +178,14 @@ def build_player_objects(
     """Instantiate one player object per player for the given role assignment.
 
     Villager-side players get the small model; wolves get the large model.
-    Player objects are created fresh every game because the role (and therefore the class) can change. Strategies persist on disk and are loaded at init.
+    Objects are created fresh every game because the role (and class) can change.
+    Strategies persist on disk and are loaded automatically at __init__.
     """
     player_objects: dict[str, BasePlayer] = {}
     for name in PLAYERS:
-        role = roles[name]
+        role  = roles[name]
         model = wolf_llm if role in WOLF_SIDE else villager_llm
-        cls = ROLE_TO_CLASS[role]
+        cls   = ROLE_TO_CLASS[role]
         player_objects[name] = cls(
             name=name,
             model=model,
@@ -158,12 +211,16 @@ def run_game(
     game_id: str,
     scenario: str,
 ) -> GameState:
-    """Build player objects, run one game, and return the final GameState."""
+    """Build player objects, run one game, return the final GameState.
 
-    player_objects = build_player_objects(roles, villager_llm, wolf_llm, game_id, scenario)
+    Raises immediately on any exception — caller decides how to handle it.
+    """
+    player_objects = build_player_objects(
+        roles, villager_llm, wolf_llm, game_id, scenario
+    )
+    # Coach uses villager_llm — it coaches the villager side, not the wolves
     coach = Coach(model=wolf_llm, game_id=game_id, scenario=scenario)
 
-    # Derive GameState fields from the role dict
     seer       = next((p for p in PLAYERS if roles[p] == Role.SEER),  None)
     guard      = next((p for p in PLAYERS if roles[p] == Role.GUARD), None)
     witch      = next((p for p in PLAYERS if roles[p] == Role.WITCH), None)
@@ -171,7 +228,7 @@ def run_game(
     werewolves = [p for p in PLAYERS if roles[p] == Role.WEREWOLF]
 
     initial_state = GameState(
-        round_num=0,
+        round_num=1,
         players=PLAYERS,
         alive_players=PLAYERS.copy(),
         villagers=villagers,
@@ -188,11 +245,11 @@ def run_game(
         config={
             "recursion_limit": 1000,
             "configurable": {
-                "player_objects":    player_objects,
-                "MAX_DEBATE_TURNS":  MAX_DEBATE_TURNS,
-                "scenario":          scenario,
-                "game_id":           game_id,   # used by end_node for file paths
-                "coach":             coach,
+                "player_objects":   player_objects,
+                "MAX_DEBATE_TURNS": MAX_DEBATE_TURNS,
+                "scenario":         scenario,
+                "game_id":          game_id,
+                "coach":            coach,
             },
         },
     )
@@ -203,17 +260,39 @@ def run_game(
 # Multi-game experiment loop
 # ============================================================
 
-def run(scenario: str = "baseline", num_games: int = 100) -> None:
-    """
-    Run num_games games back-to-back under the given scenario.
+def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override") -> None:
+    """Run num_games games back-to-back under the given scenario.
 
-    Roles are reshuffled randomly before every game.
-    Villager-side players share a small model; wolf-side players share a large model.
-    Strategies accumulate on disk across games — each player learns from all the
-    games they play, indexed by their role in that game.
+    mode="override"  Start from game_001, overwriting any existing results.
+    mode="append"    Detect the last completed game and continue from there.
+                     If all games are already done, prints a message and exits.
+
+    Any exception inside a game stops the program immediately.
     """
+    # ── Determine starting game number ────────────────────────────────
+    if mode == "append":
+        last_done = _last_completed_game(scenario)
+        start_from = last_done + 1
+        if start_from > num_games:
+            print(
+                f"\nNothing to do: {last_done} games already completed for "
+                f"scenario '{scenario}' (target: {num_games})."
+            )
+            return
+        if last_done > 0:
+            print(f"\nAppend mode: resuming from game {start_from} "
+                  f"({last_done} games already completed).")
+    elif mode == "override":
+        start_from = 1
+        print(f"\nOverride mode: starting fresh from game_001.")
+    else:
+        raise ValueError("Mode can only be either append or override.")
+
+    games_to_run = num_games - start_from + 1
+
     print(f"\n{'='*62}")
-    print(f"  EXPERIMENT: {scenario}  |  {num_games} games")
+    print(f"  EXPERIMENT : {scenario}")
+    print(f"  Games      : {start_from:03d} → {num_games:03d}  ({games_to_run} to run)")
     print(f"  Villager model : {VILLAGER_MODEL}")
     print(f"  Wolf model     : {WOLF_MODEL}")
     print(f"{'='*62}\n")
@@ -224,66 +303,59 @@ def run(scenario: str = "baseline", num_games: int = 100) -> None:
 
     results: list[dict] = []
 
-    for i in range(1, num_games + 1):
-        game_id = f"{i:03d}"   # path becomes game_logs/{scenario}/game_{i:03d}/
+    for i in range(start_from, num_games + 1):
+        game_id = f"{i:03d}"
 
-        # Random role assignment for this game
-        roles = assign_roles_randomly()
-
-        # Print header
+        roles = assign_roles_round_robin()
         role_summary = ", ".join(f"{n}={r.value}" for n, r in roles.items())
         print(f"\n--- Game {i:3d} / {num_games}  [{game_id}] ---")
         print(f"    Roles: {role_summary}")
 
-        try:
-            final_state = run_game(villager_llm, wolf_llm, roles, game_id, scenario)
-            winner = final_state._winner or "Unknown"
-        except Exception as e:
-            # Log the failure and continue — don't let one bad game kill 100
-            print(f"    !! Game {game_id} crashed: {e}")
-            winner = "Error"
+        # No try/except — any error stops the program immediately
+        final_state = run_game(villager_llm, wolf_llm, roles, game_id, scenario)
+        winner = final_state._winner
+        assert winner is not None
 
         results.append({"game_id": game_id, "winner": winner, "roles": roles})
         print(f"    Winner: {winner}")
 
     # ── Final summary ──────────────────────────────────────────────────
     print(f"\n{'='*62}")
-    print(f"  FINAL RESULTS — {scenario} ({num_games} games)")
+    print(f"  RESULTS — {scenario}  (games {start_from:03d}-{num_games:03d})")
     print(f"{'='*62}")
 
     villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
     wolf_wins     = sum(1 for r in results if r["winner"] == "Werewolves")
-    errors        = sum(1 for r in results if r["winner"] == "Error")
 
     for r in results:
         print(f"  {r['game_id']}: {r['winner']}")
 
-    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins/num_games*100:.1f}%)")
-    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins/num_games*100:.1f}%)")
-    if errors:
-        print(f"  Errors     : {errors:3d}")
+    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins/games_to_run*100:.1f}%)")
+    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins/games_to_run*100:.1f}%)")
 
-    # Save results summary to disk
-    from utils import write_to_file
-    summary_lines = [
-        f"Experiment : {scenario}",
-        f"Games      : {num_games}",
+    # Append results to the summary file (so override and append both accumulate)
+    out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
+
+    # Read existing content if appending, so we don't lose prior games' records
+    existing = ""
+    if mode == "append" and out_path.exists():
+        existing = out_path.read_text().strip() + "\n\n"
+
+    new_block = "\n".join([
+        f"Run: games {start_from:03d}–{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
         f"Villager model : {VILLAGER_MODEL}",
         f"Wolf model     : {WOLF_MODEL}",
-        "",
-        f"Villager wins : {villager_wins} ({villager_wins/num_games*100:.1f}%)",
-        f"Wolf wins     : {wolf_wins} ({wolf_wins/num_games*100:.1f}%)",
+        f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins/games_to_run*100:.1f}%)",
+        f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins/games_to_run*100:.1f}%)",
         "",
         "Per-game results:",
     ] + [
         f"  {r['game_id']}: {r['winner']}  "
         + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
         for r in results
-    ]
-    out_path = (
-        Path(__file__).parent / "game_logs" / scenario / "results_summary.txt"
-    ).resolve()
-    write_to_file(out_path, "\n".join(summary_lines))
+    ])
+
+    write_to_file(out_path, existing + new_block)
     print(f"\n  Results saved to: {out_path}")
 
 
@@ -293,4 +365,4 @@ def run(scenario: str = "baseline", num_games: int = 100) -> None:
 
 if __name__ == "__main__":
     args = parse_args()
-    run(scenario=args.scenario, num_games=args.games)
+    run(scenario=args.scenario, num_games=args.games, mode=args.mode)

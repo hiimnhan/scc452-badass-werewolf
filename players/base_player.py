@@ -621,7 +621,7 @@ You are {self._name}, a {self._role.value}. The game has ended.
 
 Win condition: ensure the Villagers eliminate all Werewolves.
 
-Produce an updated strategy — clear, actionable behavioural rules for future games.
+Produce an updated strategy — clear, actionable behavioural rules for future games based on the roles, not the players' names.
 Cover early-game, mid-game, and late-game. Discard rules that failed; keep what worked.
 
 Respond with ONLY a JSON object:
