@@ -30,20 +30,21 @@ strategies/
     {name}_strategy.txt  each player's accumulated strategy
     coach_strategy.txt          coach's accumulated coaching strategy
 """
+
 from __future__ import annotations
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 import argparse
 from pathlib import Path
 
 from game import GameState
-from config import MODEL_PROVIDERS, SCENARIO_CONFIG, VILLAGER_MODEL, WOLF_MODEL
+from config import SCENARIO_CONFIG, VILLAGER_MODEL, WOLF_MODEL
 from players.guard import Guard
 from players.seer import Seer
 from players.witch import Witch
 from players.villager import Villager
 from players.wolf import Wolf
 from players.coach import Coach
-from players.base_player import Role, VILLAGER_SIDE, WOLF_SIDE
+from players.base_player import Role, WOLF_SIDE
 from utils import get_llm, write_to_file
 
 if TYPE_CHECKING:
@@ -59,24 +60,18 @@ PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 
 # Villager role pool — reshuffled randomly before every game.
 # Must equal len(VILLAGER_PLAYERS).
-VILLAGER_ROLE_POOL: list[Role] = (
-    [Role.SEER]     * 1
-    + [Role.GUARD]  * 1
-    + [Role.WITCH]  * 1
-    + [Role.VILLAGER] * 2
-)
+VILLAGER_ROLE_POOL: list[Role] = [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
 
 assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
-    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries "
-    f"but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
+    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
 )
 
 ROLE_TO_CLASS: dict[Role, type] = {
     Role.VILLAGER: Villager,
     Role.WEREWOLF: Wolf,
-    Role.SEER:     Seer,
-    Role.GUARD:    Guard,
-    Role.WITCH:    Witch,
+    Role.SEER: Seer,
+    Role.GUARD: Guard,
+    Role.WITCH: Witch,
 }
 
 MAX_DEBATE_TURNS = 6
@@ -86,26 +81,30 @@ MAX_DEBATE_TURNS = 6
 # CLI
 # ============================================================
 
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run a Werewolf game experiment.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
-        "-s", "--scenario",
+        "-s",
+        "--scenario",
         type=str,
         default="baseline",
         choices=list(SCENARIO_CONFIG.keys()),
         help="Experiment scenario to run",
     )
     parser.add_argument(
-        "-g", "--games",
+        "-g",
+        "--games",
         type=int,
         default=100,
         help="Total number of games to run",
     )
     parser.add_argument(
-        "-m", "--mode",
+        "-m",
+        "--mode",
         type=str,
         default="append",
         choices=["override", "append"],
@@ -120,6 +119,7 @@ def parse_args() -> argparse.Namespace:
 # ============================================================
 # Append-mode: detect the last completed game number
 # ============================================================
+
 
 def _last_completed_game(scenario: str) -> int:
     """Return the highest game number already completed for this scenario.
@@ -149,10 +149,11 @@ def _last_completed_game(scenario: str) -> int:
 # Role assignment
 # ============================================================
 
+
 def assign_roles_round_robin() -> dict[str, Role]:
     """Rotate villager roles by one position each game (round-robin).
     Wolves are always wolves — only villager-side roles rotate.
-    
+
     Example over 5 games (5 villager players, 3 roles):
       Game 1: Alice=Seer,  Bob=Guard, Selena=Witch, Raj=Villager, Frank=Villager
       Game 2: Alice=Guard, Bob=Witch, Selena=Villager, Raj=Villager, Frank=Seer
@@ -168,13 +169,14 @@ def assign_roles_round_robin() -> dict[str, Role]:
 # Player construction
 # ============================================================
 
+
 def build_player_objects(
     roles: dict[str, Role],
     villager_llm,
     wolf_llm,
     game_id: str,
     scenario: str,
-) -> dict[str, object]:
+) -> dict[str, BasePlayer]:
     """Instantiate one player object per player for the given role assignment.
 
     Villager-side players get the small model; wolves get the large model.
@@ -183,9 +185,9 @@ def build_player_objects(
     """
     player_objects: dict[str, BasePlayer] = {}
     for name in PLAYERS:
-        role  = roles[name]
+        role = roles[name]
         model = wolf_llm if role in WOLF_SIDE else villager_llm
-        cls   = ROLE_TO_CLASS[role]
+        cls = ROLE_TO_CLASS[role]
         player_objects[name] = cls(
             name=name,
             role=role,
@@ -199,7 +201,7 @@ def build_player_objects(
 
     for name, player_obj in player_objects.items():
         other_players = [p for p in PLAYERS if p != name]
-        
+
         if player_obj._role in WOLF_SIDE:
             # Wolves get the dynamic list of their teammates
             player_obj.init_suspicions(other_players, wolf_teammates=actual_wolves)
@@ -214,6 +216,7 @@ def build_player_objects(
 # Single game
 # ============================================================
 
+
 def run_game(
     villager_llm,
     wolf_llm,
@@ -225,16 +228,14 @@ def run_game(
 
     Raises immediately on any exception — caller decides how to handle it.
     """
-    player_objects = build_player_objects(
-        roles, villager_llm, wolf_llm, game_id, scenario
-    )
+    player_objects = build_player_objects(roles, villager_llm, wolf_llm, game_id, scenario)
     # Coach uses villager_llm — it coaches the villager side, not the wolves
     coach = Coach(model=wolf_llm, game_id=game_id, scenario=scenario)
 
-    seer       = next((p for p in PLAYERS if roles[p] == Role.SEER),  None)
-    guard      = next((p for p in PLAYERS if roles[p] == Role.GUARD), None)
-    witch      = next((p for p in PLAYERS if roles[p] == Role.WITCH), None)
-    villagers  = [p for p in PLAYERS if roles[p] == Role.VILLAGER]
+    seer = next((p for p in PLAYERS if roles[p] == Role.SEER), None)
+    guard = next((p for p in PLAYERS if roles[p] == Role.GUARD), None)
+    witch = next((p for p in PLAYERS if roles[p] == Role.WITCH), None)
+    villagers = [p for p in PLAYERS if roles[p] == Role.VILLAGER]
     werewolves = [p for p in PLAYERS if roles[p] == Role.WEREWOLF]
 
     initial_state = GameState(
@@ -255,20 +256,21 @@ def run_game(
         config={
             "recursion_limit": 1000,
             "configurable": {
-                "player_objects":   player_objects,
+                "player_objects": player_objects,
                 "MAX_DEBATE_TURNS": MAX_DEBATE_TURNS,
-                "scenario":         scenario,
-                "game_id":          game_id,
-                "coach":            coach,
+                "scenario": scenario,
+                "game_id": game_id,
+                "coach": coach,
             },
         },
     )
-    return final_state
+    return cast(GameState, final_state)
 
 
 # ============================================================
 # Multi-game experiment loop
 # ============================================================
+
 
 def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override") -> None:
     """Run num_games games back-to-back under the given scenario.
@@ -285,31 +287,29 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
         start_from = last_done + 1
         if start_from > num_games:
             print(
-                f"\nNothing to do: {last_done} games already completed for "
-                f"scenario '{scenario}' (target: {num_games})."
+                f"\nNothing to do: {last_done} games already completed for scenario '{scenario}' (target: {num_games})."
             )
             return
         if last_done > 0:
-            print(f"\nAppend mode: resuming from game {start_from} "
-                  f"({last_done} games already completed).")
+            print(f"\nAppend mode: resuming from game {start_from} ({last_done} games already completed).")
     elif mode == "override":
         start_from = 1
-        print(f"\nOverride mode: starting fresh from game_001.")
+        print("\nOverride mode: starting fresh from game_001.")
     else:
         raise ValueError("Mode can only be either append or override.")
 
     games_to_run = num_games - start_from + 1
 
-    print(f"\n{'='*62}")
+    print(f"\n{'=' * 62}")
     print(f"  EXPERIMENT : {scenario}")
     print(f"  Games      : {start_from:03d} → {num_games:03d}  ({games_to_run} to run)")
     print(f"  Villager model : {VILLAGER_MODEL}")
     print(f"  Wolf model     : {WOLF_MODEL}")
-    print(f"{'='*62}\n")
+    print(f"{'=' * 62}\n")
 
     # Build LLM instances once — reused across all games
     villager_llm = get_llm(VILLAGER_MODEL)
-    wolf_llm     = get_llm(WOLF_MODEL)
+    wolf_llm = get_llm(WOLF_MODEL)
 
     results: list[dict] = []
 
@@ -330,18 +330,18 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
         print(f"    Winner: {winner}")
 
     # ── Final summary ──────────────────────────────────────────────────
-    print(f"\n{'='*62}")
+    print(f"\n{'=' * 62}")
     print(f"  RESULTS — {scenario}  (games {start_from:03d}-{num_games:03d})")
-    print(f"{'='*62}")
+    print(f"{'=' * 62}")
 
     villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
-    wolf_wins     = sum(1 for r in results if r["winner"] == "Werewolves")
+    wolf_wins = sum(1 for r in results if r["winner"] == "Werewolves")
 
     for r in results:
         print(f"  {r['game_id']}: {r['winner']}")
 
-    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins/games_to_run*100:.1f}%)")
-    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins/games_to_run*100:.1f}%)")
+    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)")
+    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)")
 
     # Append results to the summary file (so override and append both accumulate)
     out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
@@ -351,19 +351,21 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
     if mode == "append" and out_path.exists():
         existing = out_path.read_text().strip() + "\n\n"
 
-    new_block = "\n".join([
-        f"Run: games {start_from:03d}–{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
-        f"Villager model : {VILLAGER_MODEL}",
-        f"Wolf model     : {WOLF_MODEL}",
-        f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins/games_to_run*100:.1f}%)",
-        f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins/games_to_run*100:.1f}%)",
-        "",
-        "Per-game results:",
-    ] + [
-        f"  {r['game_id']}: {r['winner']}  "
-        + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
-        for r in results
-    ])
+    new_block = "\n".join(
+        [
+            f"Run: games {start_from:03d}–{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
+            f"Villager model : {VILLAGER_MODEL}",
+            f"Wolf model     : {WOLF_MODEL}",
+            f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",
+            f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins / games_to_run * 100:.1f}%)",
+            "",
+            "Per-game results:",
+        ]
+        + [
+            f"  {r['game_id']}: {r['winner']}  " + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
+            for r in results
+        ]
+    )
 
     write_to_file(out_path, existing + new_block)
     print(f"\n  Results saved to: {out_path}")

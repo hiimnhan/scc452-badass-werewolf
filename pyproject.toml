@@ -1,0 +1,32 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+# [tool.ruff.lint]
+# select = [
+#     "E",   # pycodestyle errors
+#     "F",   # pyflakes (undefined names, unused imports)
+#     "I",   # isort (import ordering)
+#     "UP",  # pyupgrade (modernise type hints)
+#     "B",   # flake8-bugbear (common bugs)
+#     "RUF", # ruff-specific rules
+# ]
+# ignore = [
+#     "E501",   # line too long — handled by formatter
+#     "B008",   # function calls in default args (common in LangChain patterns)
+#     "RUF012", # mutable class vars — used intentionally in GameState
+# ]
+#
+# [tool.ruff.lint.isort]
+# known-first-party = ["config", "constants", "game", "players", "prompt", "utils"]
+
+[tool.ruff.lint]
+ignore = ["E261"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]

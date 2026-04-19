@@ -16,7 +16,15 @@ class Guard(BasePlayer):
         system_prompt: str = GUARD_PROMPT_TEMPLATE,
         personality: str = "",
     ):
-        super().__init__(name=name, role=role, model=model, game_id=game_id, scenario=scenario, system_prompt=system_prompt, personality=personality)
+        super().__init__(
+            name=name,
+            role=role,
+            model=model,
+            game_id=game_id,
+            scenario=scenario,
+            system_prompt=system_prompt,
+            personality=personality,
+        )
         self.last_guarded_player = None
 
     def protect(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:
@@ -26,41 +34,36 @@ class Guard(BasePlayer):
         if alive_players is None:
             return "", {"error": "No alive players provided."}
 
-        available_targets = [
-            player for player in alive_players if player != self.last_guarded_player
-        ]
+        available_targets = [player for player in alive_players if player != self.last_guarded_player]
         if not available_targets:
             return "", {"error": "No valid targets to protect."}
 
-        prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
-            name=self._name, list_player=", ".join(available_targets)
-        )
-        # print(prompt)  # Debug only
+        prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(name=self._name, list_player=", ".join(available_targets))
+        # print(prompt) # Debug only
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
-        
+
         # Validate that the target is actually in the available targets
         if target not in available_targets:
             # If invalid target, try to extract a valid name from the response
             # prevent model doesn't reply expected JSON format
             if "raw" in resp:
-                # print(f"Raw response for debugging: {resp}")  # Debug only
+                # print(f"Raw response for debugging: {resp}") # Debug only
                 raw_response = resp["raw"]
                 for player in available_targets:
                     if player in raw_response:
                         target = player
                         break
-            
+
             # If still no valid target, pick the first available target
             if target not in available_targets:
-                print(f"Invalid target '{target}' received. Available targets: {available_targets}.")  # Debug only
+                print(f"Invalid target '{target}' received. Available targets: {available_targets}.") # Debug only
                 target = available_targets[0]
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response"
 
         self.record_own_action(
-            round_num, "Night",
-            f"Protected {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
+            round_num, "Night", f"Protected {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
         )
         self.last_guarded_player = target
         return target, resp

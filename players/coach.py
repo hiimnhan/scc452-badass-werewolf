@@ -1,10 +1,10 @@
 import json
 from pathlib import Path
-from typing import Optional
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
 from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME
 from utils import write_to_file
+
 
 class Coach:
     """
@@ -51,7 +51,9 @@ class Coach:
 
     @property
     def _coach_feedback_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
+        return (
+            self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
+        ).resolve()
 
     # ── Disk helpers ────────────────────────────────────────────────────
 

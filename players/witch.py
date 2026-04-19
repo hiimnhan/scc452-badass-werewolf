@@ -26,7 +26,16 @@ class Witch(BasePlayer):
         system_prompt: str = WITCH_PROMPT_TEMPLATE,
         personality: str = "",
     ) -> None:
-        super().__init__(name=name, role=role, model=model, game_id=game_id, scenario=scenario, is_alive=is_alive, system_prompt=system_prompt, personality=personality)
+        super().__init__(
+            name=name,
+            role=role,
+            model=model,
+            game_id=game_id,
+            scenario=scenario,
+            is_alive=is_alive,
+            system_prompt=system_prompt,
+            personality=personality,
+        )
         self._save_available: bool = True
         self._poison_available: bool = True
 
@@ -39,8 +48,10 @@ class Witch(BasePlayer):
     def has_any_potion(self) -> bool:
         """Returns True if the Witch has at least one potion left."""
         return self.has_save_potion() or self.has_poison_potion()
-    
-    def save_or_poison(self, targeted_player_by_wolves: Optional[str], alive_players: List[str], round_num: int) -> Tuple[dict, dict]:
+
+    def save_or_poison(
+        self, targeted_player_by_wolves: Optional[str], alive_players: List[str], round_num: int
+    ) -> Tuple[dict, dict]:
         """Night action: decide whether to use the save and/or poison potion.
 
         Returns (actions_dict, raw_response_dict).
@@ -66,19 +77,19 @@ class Witch(BasePlayer):
             alive_players=alive_display,
             note=self._note,
         )
-        
+
         resp = self.call_model(prompt, max_tokens=300)
-        
+
         # ------------------------------------------------------------------
         # Extract intents
         # ------------------------------------------------------------------
         use_save = resp.get("use_save_potion", False)
         poison_target = resp.get("poison_target", "None")
-        
+
         # ---------------------------------------------------------
         # Validation & Fallbacks
         # ---------------------------------------------------------
-        
+
         # 1. Validate Save Potion
         if use_save and (not self._save_available or not targeted_player_by_wolves):
             use_save = False
@@ -87,7 +98,7 @@ class Witch(BasePlayer):
         # 2. Validate Poison Potion
         if isinstance(poison_target, str) and poison_target.lower() == "none":
             poison_target = None
-            
+
         if poison_target and (not self._poison_available or poison_target not in alive_players_except_witch):
             poison_target = None
             resp["fallback_poison"] = "Forced None: Poison unavailable or target is invalid/dead."
@@ -95,21 +106,19 @@ class Witch(BasePlayer):
         # ------------------------------------------------------------------
         # State update & own-action logging
         # ------------------------------------------------------------------
-        save_reason   = resp.get("save_analysis")
+        save_reason = resp.get("save_analysis")
         poison_reason = resp.get("poison_analysis")
 
         if use_save:
             self._save_available = False
             self.record_own_action(
-                round_num, "Night",
-                f"Used SAVE potion on {targeted_player_by_wolves}. Reason: {save_reason}."
+                round_num, "Night", f"Used SAVE potion on {targeted_player_by_wolves}. Reason: {save_reason}."
             )
 
         if poison_target:
             self._poison_available = False
             self.record_own_action(
-                round_num, "Night",
-                f"Used POISON potion on {poison_target}. Reason: {poison_reason}."
+                round_num, "Night", f"Used POISON potion on {poison_target}. Reason: {poison_reason}."
             )
 
         if not use_save and not poison_target:

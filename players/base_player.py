@@ -12,7 +12,7 @@ from prompt import (
     VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
     VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
     WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
-    WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
+    WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
 )
 
 
@@ -66,21 +66,23 @@ INFORMATION RULES
 # Roles
 # ============================================
 
+
 class Role(Enum):
     VILLAGER = "Villager"
     WEREWOLF = "Werewolf"
-    SEER     = "Seer"
-    GUARD    = "Guard"
-    WITCH    = "Witch"
+    SEER = "Seer"
+    GUARD = "Guard"
+    WITCH = "Witch"
 
 
 VILLAGER_SIDE = {Role.VILLAGER, Role.SEER, Role.GUARD, Role.WITCH}
-WOLF_SIDE     = {Role.WEREWOLF}
+WOLF_SIDE = {Role.WEREWOLF}
 
 
 # ============================================
 # Base Player
 # ============================================
+
 
 class BasePlayer(ABC):
     """
@@ -132,8 +134,8 @@ class BasePlayer(ABC):
         self._model = model
         self._game_id = game_id
         self._scenario = scenario
-        self._self_analyze = SCENARIO_CONFIG[self._scenario]['self_analyze']
-        self._coaching = SCENARIO_CONFIG[self._scenario]['coaching']
+        self._self_analyze = SCENARIO_CONFIG[self._scenario]["self_analyze"]
+        self._coaching = SCENARIO_CONFIG[self._scenario]["coaching"]
         self._is_alive = is_alive
         self._role_definition = system_prompt
         self._personality = personality
@@ -162,11 +164,19 @@ class BasePlayer(ABC):
 
     @property
     def _note_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / f"{self._name}_{self._role.value}_note.txt").resolve()
+        return (
+            self._base_dir()
+            / "game_logs"
+            / self._scenario
+            / f"game_{self._game_id}"
+            / f"{self._name}_{self._role.value}_note.txt"
+        ).resolve()
 
     @property
     def _feedback_path(self) -> Path:
-        return (self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME).resolve()
+        return (
+            self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
+        ).resolve()
 
     # ── Setup helpers ───────────────────────────────────────────────────
 
@@ -204,25 +214,19 @@ class BasePlayer(ABC):
         """
         if wolf_teammates is None:
             wolf_teammates = []
-            
+
         self._suspicion = {}
-        
+
         for p in other_players:
             if p == self._name:
                 continue
-                
+
             if self._role in WOLF_SIDE and p in wolf_teammates:
                 # Wolves know their teammates immediately
-                self._suspicion[p] = {
-                    "score": 0.0, 
-                    "reason": "Fellow Werewolf. Ally and coordination partner."
-                }
+                self._suspicion[p] = {"score": 0.0, "reason": "Fellow Werewolf. Ally and coordination partner."}
             else:
                 # Everyone else starts as a complete unknown
-                self._suspicion[p] = {
-                    "score": 0.5, 
-                    "reason": "Unknown alignment and role."
-                }
+                self._suspicion[p] = {"score": 0.5, "reason": "Unknown alignment and role."}
 
     # ── Intra-game: game summary ────────────────────────────────────────
 
@@ -259,8 +263,8 @@ class BasePlayer(ABC):
     def update_suspicion_from_statement(self, speaker_name: str, statement: str) -> dict:
         """Update suspicion scores for ALL players after a statement is made.
 
-        The LLM receives the speaker's statement AND the existing note, and is asked to 
-        EXTEND the reasons for any relevant players. 
+        The LLM receives the speaker's statement AND the existing note, and is asked to
+        EXTEND the reasons for any relevant players.
         In-memory only; call _compile_note() at round end to flush to disk.
 
         Returns the raw LLM response dict.
@@ -269,80 +273,77 @@ class BasePlayer(ABC):
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
-            
+
         prompt = prompt_template.format(
-            name=self._name,
-            role=self._role.value,
-            speaker_name=speaker_name,
-            statement=statement,
-            note=self._note
+            name=self._name, role=self._role.value, speaker_name=speaker_name, statement=statement, note=self._note
         )
 
         resp = self.call_model(prompt, max_tokens=800)
 
         # Extract the updates dictionary from the AI's response
         updates = resp.get("updates", {})
-        
+
         # Loop through every player the AI returned
         for player, data in updates.items():
             # Only update if they are actually in our active tracking dictionary
             if player in self._suspicion:
                 current = self._suspicion[player]
-                
+
                 # Safely extract the new score and reason, falling back to old ones if missing
                 try:
                     new_score = max(0.0, min(1.0, float(data.get("score", current["score"]))))
                 except (ValueError, TypeError):
                     new_score = current["score"]
-                    
+
                 new_reason = data.get("reason", current["reason"])
 
                 # Apply the update
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
         return resp
-    
-    def update_suspicion_from_vote(self, current_round_vote_logs: list[str], exiled_player: str, game_status: str) -> dict:
+
+    def update_suspicion_from_vote(
+        self, current_round_vote_logs: list[str], exiled_player: str, game_status: str
+    ) -> dict:
         """Analyze the results of the voting phase and update suspicion scores for all players."""
-        
+
         # If no one voted, skip the analysis
         if not current_round_vote_logs:
             return {"error": "No votes to analyze"}
 
         # Format the voting results into a clean string
         voting_summary = "\n".join(current_round_vote_logs)
-        voting_summary += f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
+        voting_summary += (
+            f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
+        )
         voting_summary += f"\n{game_status}"
-        
+
         if self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
-            
+
         prompt = prompt_template.format(
-            name=self._name,
-            role=self._role.value,
-            voting_summary=voting_summary,
-            note=self._note
+            name=self._name, role=self._role.value, voting_summary=voting_summary, note=self._note
         )
-        
+
         # Use 800 max_tokens since it outputs updates for all players
         resp = self.call_model(prompt, max_tokens=800)
 
         # Extract and apply the updates (using the plural _suspicions we fixed earlier!)
         updates: dict = resp.get("updates", {})
-        
+
         for player, data in updates.items():
             if player in self._suspicion:
                 current = self._suspicion[player]
-                
+
                 try:
                     new_score = max(0.0, min(1.0, float(data.get("score", current["score"]))))
                 except (ValueError, TypeError):
                     new_score = current["score"]
-                    
+
                 new_reason = data.get("reason", current["reason"])
-                
+
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
         return resp
@@ -361,8 +362,8 @@ class BasePlayer(ABC):
             key=lambda x: x[1]["score"],
             reverse=True,
         ):
-            reason = f' — {data["reason"]}' if data["reason"] else ""
-            lines.append(f'  {name}: {data["score"]:.2f}{reason}')
+            reason = f" — {data['reason']}" if data["reason"] else ""
+            lines.append(f"  {name}: {data['score']:.2f}{reason}")
         return "\n".join(lines)
 
     @property
@@ -566,7 +567,7 @@ No extra text, no markdown, no code fences.
         After writing, refreshes self._setup_prompt so the NEXT game immediately benefits from the updated strategy.
         """
         current_strategy = self._load_strategy()
-        game_record      = self._game_summary
+        game_record = self._game_summary
 
         if self._role in VILLAGER_SIDE:
             new_strategy = self._update_strategy_villager(
