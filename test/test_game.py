@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
     def test_debate():
         print("\n--- Testing DEBATE ---")
-        initial_state._phase = Phase.DEBATE  # Force state correctly
+        initial_state._phase = Phase.DEBATE # Force state correctly
         initial_state._step = 0
         state = initial_state.debate_node(initial_state, config)
         assert state._phase in [Phase.DEBATE, Phase.VOTE], f"Expected Phase.DEBATE or VOTE, got {state._phase}"

@@ -39,7 +39,7 @@ class Guard(BasePlayer):
             return "", {"error": "No valid targets to protect."}
 
         prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(name=self._name, list_player=", ".join(available_targets))
-        # print(prompt)  # Debug only
+        # print(prompt) # Debug only
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
 
@@ -48,7 +48,7 @@ class Guard(BasePlayer):
             # If invalid target, try to extract a valid name from the response
             # prevent model doesn't reply expected JSON format
             if "raw" in resp:
-                # print(f"Raw response for debugging: {resp}")  # Debug only
+                # print(f"Raw response for debugging: {resp}") # Debug only
                 raw_response = resp["raw"]
                 for player in available_targets:
                     if player in raw_response:
@@ -57,7 +57,7 @@ class Guard(BasePlayer):
 
             # If still no valid target, pick the first available target
             if target not in available_targets:
-                print(f"Invalid target '{target}' received. Available targets: {available_targets}.")  # Debug only
+                print(f"Invalid target '{target}' received. Available targets: {available_targets}.") # Debug only
                 target = available_targets[0]
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response"

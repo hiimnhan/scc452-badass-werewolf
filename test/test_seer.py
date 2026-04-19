@@ -83,7 +83,7 @@ if __name__ == "__main__":
         player_seer.receive_announcement(round_num, "Day", "Frank was found dead this morning.")
 
         target = "Alice"
-        player_seer.reveal_and_update(target, True, round_num)  # Ground truth: Alice is WOLF
+        player_seer.reveal_and_update(target, True, round_num) # Ground truth: Alice is WOLF
         time.sleep(30)
 
         print(f"\n[NIGHT 0] Seer knows {target} is a WOLF.")

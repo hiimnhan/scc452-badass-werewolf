@@ -78,6 +78,6 @@ if __name__ == "__main__":
         try:
             test()
             print(f"\n✅ Test {i + 1} ({test.__name__}): PASSED")
-            time.sleep(2)  # Avoid rate limits if on free tier
+            time.sleep(2) # Avoid rate limits if on free tier
         except Exception as e:
             print(f"\n❌ Test {i + 1} ({test.__name__}): FAILED\nError: {e}")

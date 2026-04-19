@@ -126,7 +126,7 @@ class BasePlayer(ABC):
         game_id: str = "",
         scenario: str = "baseline",
         is_alive: bool = True,
-        system_prompt: str = "",  # role definition template; receives {name}
+        system_prompt: str = "", # role definition template; receives {name}
         personality: str = "",
     ) -> None:
         self._name = name
@@ -142,7 +142,7 @@ class BasePlayer(ABC):
 
         # Intra-game state — reset by reset_game_state()
         self._game_summary_entries: List[str] = []
-        self._suspicion: dict = {}  # {name: {"score": float, "reason": str}}
+        self._suspicion: dict = {} # {name: {"score": float, "reason": str}}
 
         # System prompt — built once, sent on every call
         strategy = self._load_strategy()

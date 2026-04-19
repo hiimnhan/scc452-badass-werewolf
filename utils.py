@@ -1,4 +1,4 @@
-from __future__ import annotations  # MUST be the absolute first line!
+from __future__ import annotations # MUST be the absolute first line!
 from typing import TYPE_CHECKING
 from langchain_core.language_models import BaseChatModel
 from pathlib import Path

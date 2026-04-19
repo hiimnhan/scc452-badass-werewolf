@@ -19,8 +19,8 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-VILLAGER_MODEL = "gpt-4o-mini"  # small — villager side
-WOLF_MODEL = "gpt-4o"  # large — wolf side
+VILLAGER_MODEL = "gpt-4o-mini" # small — villager side
+WOLF_MODEL = "gpt-4o" # large — wolf side
 
 # ============================================================
 # Experiment scenarios
