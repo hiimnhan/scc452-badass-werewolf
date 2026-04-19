@@ -1,13 +1,9 @@
-import re
 from typing import List, Optional
 
 from langchain_core.language_models import BaseChatModel
 
 from players.base_player import BasePlayer, Role
-from prompt import (
-    SEER_PROMPT_TEMPLATE,
-    SEER_UNMASK_PROMPT_TEMPLATE
-)
+from prompt import SEER_PROMPT_TEMPLATE, SEER_UNMASK_PROMPT_TEMPLATE
 
 
 class Seer(BasePlayer):
@@ -110,8 +106,7 @@ class Seer(BasePlayer):
 
         # Soft preference: show uninvestigated first. LLM may still pick any available target.
         already_investigated = {inv["player"] for inv in self._investigations}
-        uninvestigated = [
-            p for p in available_targets if p not in already_investigated]
+        uninvestigated = [p for p in available_targets if p not in already_investigated]
         target_pool = uninvestigated if uninvestigated else available_targets
 
         prompt = SEER_UNMASK_PROMPT_TEMPLATE.format(
@@ -139,8 +134,7 @@ class Seer(BasePlayer):
         self.record_own_action(
             round_num,
             "Night",
-            f"Chose to investigate {target}. "
-            f"Reason: {resp.get('analysis', 'No analysis provided.')}",
+            f"Chose to investigate {target}. Reason: {resp.get('analysis', 'No analysis provided.')}",
         )
         return target, resp
 
@@ -163,9 +157,7 @@ class Seer(BasePlayer):
             — duplicate call with conflicting result raises ValueError
         """
         if not player_name:
-            raise ValueError(
-                "reveal_and_update: player_name must be a non-empty string."
-            )
+            raise ValueError("reveal_and_update: player_name must be a non-empty string.")
 
         existing = self._is_confirmed(player_name)
         if existing is not None:
@@ -180,13 +172,12 @@ class Seer(BasePlayer):
             return
 
         # Append-only: never mutated after this point
-        self._investigations.append(
-            {"player": player_name, "is_wolf": is_wolf})
+        self._investigations.append({"player": player_name, "is_wolf": is_wolf})
 
         # Lock the suspicion entry — score and reason are ground truth.
         # Protected from LLM overwrite by _update_suspicion() override below.
         self._suspicion[player_name] = {
-            "score":  1.0 if is_wolf else 0.0,
+            "score": 1.0 if is_wolf else 0.0,
             "reason": self.CONFIRMED_WOLF_REASON if is_wolf else self.CONFIRMED_INNOCENT_REASON,
         }
 

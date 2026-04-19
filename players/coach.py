@@ -34,9 +34,7 @@ class Coach:
     Always call coach.run() BEFORE player._update_strategy() so the feedback file exists on disk when villager-side players go to read it.
     """
 
-    def __init__(
-        self, model: BaseChatModel, game_id: str = "", scenario: str = "baseline"
-    ) -> None:
+    def __init__(self, model: BaseChatModel, game_id: str = "", scenario: str = "baseline") -> None:
         self._model = model
         self._game_id = game_id
         self._scenario = scenario
@@ -49,18 +47,12 @@ class Coach:
 
     @property
     def _coach_strategy_path(self) -> Path:
-        return (
-            self._base_dir() / "strategies" / self._scenario / COACH_STRATEGY_FILENAME
-        ).resolve()
+        return (self._base_dir() / "strategies" / self._scenario / COACH_STRATEGY_FILENAME).resolve()
 
     @property
     def _coach_feedback_path(self) -> Path:
         return (
-            self._base_dir()
-            / "game_logs"
-            / self._scenario
-            / f"game_{self._game_id}"
-            / COACH_FEEDBACK_FILENAME
+            self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
         ).resolve()
 
     # ── Disk helpers ────────────────────────────────────────────────────
@@ -88,9 +80,7 @@ class Coach:
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def _call_model(
-        self, system: str, prompt: str, max_tokens: int = 500, timeout: int = 15
-    ) -> dict:
+    def _call_model(self, system: str, prompt: str, max_tokens: int = 500, timeout: int = 15) -> dict:
         """Send a two-message request to the LLM.
         Returns parsed JSON dict; falls back to {"raw": str} on parse failure.
         """
@@ -226,4 +216,3 @@ No extra text, no markdown, no code fences.
 
         if feedback_parts:
             self._write_coach_feedback("\n\n".join(feedback_parts))
-

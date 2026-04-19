@@ -1,14 +1,12 @@
 from players.seer import Seer
-from players.base_player import BasePlayer
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 lm_model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.7,
-    google_api_key=os.environ["GEMINI_API_KEY"]
+    model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
 )
 
 all_players = ["Alice", "Bob", "Selena", "Raj", "Frank", "Joy", "Cyrus"]
@@ -16,11 +14,7 @@ seer_player_name = "Bob"
 other_players = [player for player in all_players if player != seer_player_name]
 
 # SWAP THIS LINE to use the RawSLMSeer for your ablation test
-player_seer = Seer(
-    name = seer_player_name,
-    model = lm_model,
-    game_id = "g_ablation_test"
-)
+player_seer = Seer(name=seer_player_name, model=lm_model, game_id="g_ablation_test")
 
 player_seer.init_suspicions(other_players=other_players)
 
@@ -39,13 +33,11 @@ if __name__ == "__main__":
         ai_msg = lm_model.invoke(messages)
         print("\nTranslation:", ai_msg.content)
 
-
     # Test setup prompt
     def test_setup_prompt():
         setup_prompt = player_seer._build_setup_prompt(strategy=player_seer._load_strategy())
         assert len(setup_prompt) > 0
         print(setup_prompt)
-
 
     # Test init suspicion
     def test_init_suspicion():
@@ -53,7 +45,6 @@ if __name__ == "__main__":
         print(player_seer._suspicion)
         assert all(score["score"] == 0.5 for score in player_seer._suspicion.values())
         assert seer_player_name not in player_seer._suspicion
-
 
     # Test investigation flow (unmask + reveal_and_update)
     def test_investigation():
@@ -65,7 +56,7 @@ if __name__ == "__main__":
             alive_players=all_players,
             round_num=round_num,
         )
-        print("==="*30)
+        print("===" * 30)
         print("Seer's investigation target:", target)
         print("Reasoning:", resp.get("analysis", "(none)"))
 
@@ -75,26 +66,26 @@ if __name__ == "__main__":
         is_wolf = target in ["Joy", "Cyrus"]
         player_seer.reveal_and_update(target, is_wolf, round_num)
 
-        print("==="*30)
+        print("===" * 30)
         print(f"Moderator result: {target} is_wolf={is_wolf}")
         print("Confirmed wolves:  ", player_seer.get_confirmed_wolves())
         print("Confirmed innocents:", player_seer.get_confirmed_innocents())
         print("Suspicion after reveal:")
         print(player_seer._suspicion)
 
-
     def test_game_flow():
         import time
+
         print("\n--- STARTING HIGH-STAKES PATIENCE TEST ---")
-        
+
         # Round 0 Night: Seer finds Alice is a Wolf
         round_num = 0
         player_seer.receive_announcement(round_num, "Day", "Frank was found dead this morning.")
-        
+
         target = "Alice"
-        player_seer.reveal_and_update(target, True, round_num) # Ground truth: Alice is WOLF
+        player_seer.reveal_and_update(target, True, round_num)  # Ground truth: Alice is WOLF
         time.sleep(30)
-        
+
         print(f"\n[NIGHT 0] Seer knows {target} is a WOLF.")
 
         ### TRICKY DEBATE: The "Helpful" Wolf
@@ -140,11 +131,11 @@ if __name__ == "__main__":
         func_name = test_func.__name__
 
         if info == "skip":
-            print(f"⏭️ Test {i+1} - function {func_name}: Skipped")
+            print(f"⏭️ Test {i + 1} - function {func_name}: Skipped")
             continue
 
         try:
             test_func()
-            print(f"✅ Test {i+1} - function {func_name}: Passed")
+            print(f"✅ Test {i + 1} - function {func_name}: Passed")
         except Exception as e:
-            print(f"❌ Test {i+1} - function {func_name}: Failed ({e})")
+            print(f"❌ Test {i + 1} - function {func_name}: Failed ({e})")

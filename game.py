@@ -17,7 +17,6 @@ import math
 from langgraph.graph import StateGraph, END
 
 if TYPE_CHECKING:  # for type checking purposes
-    from players.base_player import BasePlayer
     from players.witch import Witch
     from players.guard import Guard
     from players.seer import Seer
@@ -90,9 +89,7 @@ class GameState:
         self._phase: Phase = Phase.WOLF_DEBATE
         self._step: int = 0
 
-    def _compute_current_winner(
-        self, state: GameState
-    ) -> Optional[Literal["Villagers", "Werewolves"]]:
+    def _compute_current_winner(self, state: GameState) -> Optional[Literal["Villagers", "Werewolves"]]:
         """Compute winner based on current alive players.
 
         Villagers win if no Werewolves remain.
@@ -116,8 +113,8 @@ class GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
 
-        if (
-            (not active_wolves) or (len(active_wolves) == 1)
+        if (not active_wolves) or (
+            len(active_wolves) == 1
         ):  # If all the wolves are actually killed or there is only 1 wolf, immediately go to ELIMINATE phase.
             state._phase = Phase.ELIMINATE
             return state
@@ -165,9 +162,7 @@ class GameState:
         if len(choices) == 1:
             chosen_target = choices[0]
         else:
-            chosen_target = random.choice(
-                choices
-            )  # If there's 2 different name, pick 1 randomly
+            chosen_target = random.choice(choices)  # If there's 2 different name, pick 1 randomly
 
         # Update state with the final result
         state._eliminated = chosen_target
@@ -246,9 +241,7 @@ class GameState:
         state._phase = Phase.SAVE_OR_POISON
         return state
 
-    def save_or_poison_node(
-        self, state: GameState, config: RunnableConfig
-    ) -> GameState:
+    def save_or_poison_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Witch decides whether to use her save and/or poison potions."""
         # Retrieve player objects from the LangGraph config
         player_objects = config.get("configurable", {}).get("player_objects", {})
@@ -310,11 +303,7 @@ class GameState:
         killed_players = []
 
         # Evaluate Wolf Kill
-        if (
-            state._eliminated
-            and state._eliminated != state._protected
-            and state._eliminated != state._saved
-        ):
+        if state._eliminated and state._eliminated != state._protected and state._eliminated != state._saved:
             killed_players.append(state._eliminated)
 
         # Evaluate Witch Poison (bypasses guard and save)
@@ -327,15 +316,11 @@ class GameState:
             killed_players = list(set(killed_players))
 
             # Remove killed players from the alive list
-            state._alive_players = [
-                p for p in state._alive_players if p not in killed_players
-            ]
+            state._alive_players = [p for p in state._alive_players if p not in killed_players]
 
             # Safely format the announcement string
             verb = "was" if len(killed_players) == 1 else "were"
-            announcement = (
-                f"{' and '.join(killed_players)} {verb} killed during the night."
-            )
+            announcement = f"{' and '.join(killed_players)} {verb} killed during the night."
         else:
             announcement = "No one was killed during the night."
 
@@ -344,9 +329,7 @@ class GameState:
 
         # Broadcast to ALL alive players so their _note stays current
         player_objects = config.get("configurable", {}).get("player_objects", {})
-        with ThreadPoolExecutor(
-            max_workers=max(1, len(state._alive_players))
-        ) as executor:
+        with ThreadPoolExecutor(max_workers=max(1, len(state._alive_players))) as executor:
             threads = [
                 executor.submit(
                     player_objects[name].receive_announcement,
@@ -386,10 +369,7 @@ class GameState:
 
         # 1. Run bids in parallel
         with ThreadPoolExecutor(max_workers=len(next_possible_speakers)) as executor:
-            futures = {
-                name: executor.submit(player_objects[name].get_bid)
-                for name in next_possible_speakers
-            }
+            futures = {name: executor.submit(player_objects[name].get_bid) for name in next_possible_speakers}
             for name, future in futures.items():
                 bid, raw_output = future.result()
                 bid_dict[name] = bid
@@ -454,8 +434,7 @@ class GameState:
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
             futures = {
-                name: executor.submit(player_objects[name].vote, state._alive_players)
-                for name in state._alive_players
+                name: executor.submit(player_objects[name].vote, state._alive_players) for name in state._alive_players
             }
 
             for name, future in futures.items():
@@ -495,9 +474,7 @@ class GameState:
             tqdm.tqdm.write(log)
 
         if exiled_player:
-            tqdm.tqdm.write(
-                f"\n=> {exiled_player} received {max_votes} votes. They will be exiled!"
-            )
+            tqdm.tqdm.write(f"\n=> {exiled_player} received {max_votes} votes. They will be exiled!")
         else:
             if max_votes > 0:
                 tqdm.tqdm.write(
@@ -524,14 +501,10 @@ class GameState:
         # 1. Apply the elimination and format the announcement
         if exiled_player:
             # Safely remove the player from the alive list
-            state._alive_players = [
-                p for p in state._alive_players if p != exiled_player
-            ]
+            state._alive_players = [p for p in state._alive_players if p != exiled_player]
             announcement = f"{exiled_player} was exiled by the village."
         else:
-            announcement = (
-                "The village could not reach a decision, and no one was exiled."
-            )
+            announcement = "The village could not reach a decision, and no one was exiled."
 
         # Print to terminal and save to game history
         tqdm.tqdm.write(f"\n=> {announcement}")
@@ -562,9 +535,7 @@ class GameState:
 
         return state
 
-    def check_winner_day_node(
-        self, state: GameState, config: RunnableConfig
-    ) -> GameState:
+    def check_winner_day_node(self, state: GameState, config: RunnableConfig) -> GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
 
         winner = self._compute_current_winner(state)
@@ -605,9 +576,7 @@ class GameState:
 
     def end_node(self, state: GameState, config: RunnableConfig) -> GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
-        coach_object: Coach | None = config.get("configurable", {}).get(
-            "coach", None
-        )  # Passed in from your run.py!
+        coach_object: Coach | None = config.get("configurable", {}).get("coach", None)  # Passed in from your run.py!
 
         scenario = config.get("configurable", {}).get("scenario", "baseline")
         scenario_config = SCENARIO_CONFIG[scenario]
@@ -629,26 +598,16 @@ class GameState:
         # 2. Generate coach's feedback and update coach strategy
         if scenario_config.get("coaching"):
             if coach_object:
-                tqdm.tqdm.write(
-                    "=> Coach is reviewing the game and writing feedback..."
-                )
+                tqdm.tqdm.write("=> Coach is reviewing the game and writing feedback...")
                 # The coach needs the full public game record to analyze what happened
-                game_record = (
-                    "\n".join(state._summary_logs)
-                    if state._summary_logs
-                    else "No events recorded."
-                )
+                game_record = "\n".join(state._summary_logs) if state._summary_logs else "No events recorded."
                 coach_object.run(game_record)
             else:
-                tqdm.tqdm.write(
-                    "=> WARNING: Coaching is enabled, but no coach object was provided in config."
-                )
+                tqdm.tqdm.write("=> WARNING: Coaching is enabled, but no coach object was provided in config.")
 
         # 3. Update and write out strategy for ALL players (alive and dead)
         # We run this in parallel so you don't have to wait minutes for the game to close!
-        tqdm.tqdm.write(
-            "=> Players are analyzing their performance and updating strategies..."
-        )
+        tqdm.tqdm.write("=> Players are analyzing their performance and updating strategies...")
         with ThreadPoolExecutor(max_workers=len(player_objects)) as executor:
             threads = [
                 executor.submit(
@@ -676,9 +635,7 @@ class GameState:
         # game_summary.txt — every public announcement in order
         write_to_file(
             game_dir / "game_summary.txt",
-            "\n".join(state._summary_logs)
-            if state._summary_logs
-            else "No events recorded.",
+            "\n".join(state._summary_logs) if state._summary_logs else "No events recorded.",
         )
 
         # debate_log.txt — all statements from all day rounds

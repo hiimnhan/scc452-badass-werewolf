@@ -60,13 +60,10 @@ PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 
 # Villager role pool — reshuffled randomly before every game.
 # Must equal len(VILLAGER_PLAYERS).
-VILLAGER_ROLE_POOL: list[Role] = (
-    [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
-)
+VILLAGER_ROLE_POOL: list[Role] = [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
 
 assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
-    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries "
-    f"but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
+    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
 )
 
 ROLE_TO_CLASS: dict[Role, type] = {
@@ -165,9 +162,7 @@ def assign_roles_round_robin() -> dict[str, Role]:
     """
     global VILLAGER_ROLE_POOL
     VILLAGER_ROLE_POOL = VILLAGER_ROLE_POOL[1:] + VILLAGER_ROLE_POOL[:1]
-    return dict(
-        zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS)))
-    )
+    return dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
 
 
 # ============================================================
@@ -233,9 +228,7 @@ def run_game(
 
     Raises immediately on any exception — caller decides how to handle it.
     """
-    player_objects = build_player_objects(
-        roles, villager_llm, wolf_llm, game_id, scenario
-    )
+    player_objects = build_player_objects(roles, villager_llm, wolf_llm, game_id, scenario)
     # Coach uses villager_llm — it coaches the villager side, not the wolves
     coach = Coach(model=wolf_llm, game_id=game_id, scenario=scenario)
 
@@ -279,9 +272,7 @@ def run_game(
 # ============================================================
 
 
-def run(
-    scenario: str = "baseline", num_games: int = 100, mode: str = "override"
-) -> None:
+def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override") -> None:
     """Run num_games games back-to-back under the given scenario.
 
     mode="override"  Start from game_001, overwriting any existing results.
@@ -296,18 +287,14 @@ def run(
         start_from = last_done + 1
         if start_from > num_games:
             print(
-                f"\nNothing to do: {last_done} games already completed for "
-                f"scenario '{scenario}' (target: {num_games})."
+                f"\nNothing to do: {last_done} games already completed for scenario '{scenario}' (target: {num_games})."
             )
             return
         if last_done > 0:
-            print(
-                f"\nAppend mode: resuming from game {start_from} "
-                f"({last_done} games already completed)."
-            )
+            print(f"\nAppend mode: resuming from game {start_from} ({last_done} games already completed).")
     elif mode == "override":
         start_from = 1
-        print(f"\nOverride mode: starting fresh from game_001.")
+        print("\nOverride mode: starting fresh from game_001.")
     else:
         raise ValueError("Mode can only be either append or override.")
 
@@ -353,17 +340,11 @@ def run(
     for r in results:
         print(f"  {r['game_id']}: {r['winner']}")
 
-    print(
-        f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)"
-    )
-    print(
-        f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)"
-    )
+    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)")
+    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)")
 
     # Append results to the summary file (so override and append both accumulate)
-    out_path = (
-        Path(__file__).parent / "game_logs" / scenario / "results_summary.txt"
-    ).resolve()
+    out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
 
     # Read existing content if appending, so we don't lose prior games' records
     existing = ""
@@ -381,8 +362,7 @@ def run(
             "Per-game results:",
         ]
         + [
-            f"  {r['game_id']}: {r['winner']}  "
-            + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
+            f"  {r['game_id']}: {r['winner']}  " + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
             for r in results
         ]
     )
@@ -398,4 +378,3 @@ def run(
 if __name__ == "__main__":
     args = parse_args()
     run(scenario=args.scenario, num_games=args.games, mode=args.mode)
-

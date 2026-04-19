@@ -1,5 +1,4 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING
 from players.guard import Guard
 from players.seer import Seer
 from players.witch import Witch
@@ -7,11 +6,10 @@ from players.villager import Villager
 from players.wolf import Wolf
 from players.coach import Coach
 from dotenv import load_dotenv
+
 load_dotenv()
 from players.base_player import Role
 from run import build_player_objects
-from utils import get_llm
-from config import VILLAGER_MODEL, WOLF_MODEL
 from game import GameState, Phase
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
@@ -23,24 +21,18 @@ PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 
 # Villager role pool — reshuffled randomly before every game.
 # Must equal len(VILLAGER_PLAYERS).
-VILLAGER_ROLE_POOL: list[Role] = (
-    [Role.SEER]     * 1
-    + [Role.GUARD]  * 1
-    + [Role.WITCH]  * 1
-    + [Role.VILLAGER] * 2
-)
+VILLAGER_ROLE_POOL: list[Role] = [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
 
 assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
-    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries "
-    f"but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
+    f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
 )
 
 ROLE_TO_CLASS: dict[Role, type] = {
     Role.VILLAGER: Villager,
     Role.WEREWOLF: Wolf,
-    Role.SEER:     Seer,
-    Role.GUARD:    Guard,
-    Role.WITCH:    Witch,
+    Role.SEER: Seer,
+    Role.GUARD: Guard,
+    Role.WITCH: Witch,
 }
 
 MAX_DEBATE_TURNS = 6
@@ -50,29 +42,23 @@ roles = dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYE
 # wolf_llm = get_llm(WOLF_MODEL)
 
 villager_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.7,
-    google_api_key=os.environ["GEMINI_API_KEY"]
+    model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
 )
 wolf_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0.7,
-    google_api_key=os.environ["GEMINI_API_KEY"]
+    model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
 )
 
 game_id = "023"
 scenario = "coach_and_self_analyze"
 
-player_objects = build_player_objects(
-    roles, villager_llm, wolf_llm, game_id, scenario
-)
+player_objects = build_player_objects(roles, villager_llm, wolf_llm, game_id, scenario)
 
 coach = Coach(model=wolf_llm, game_id=game_id, scenario=scenario)
 
-seer       = next((p for p in PLAYERS if roles[p] == Role.SEER),  None)
-guard      = next((p for p in PLAYERS if roles[p] == Role.GUARD), None)
-witch      = next((p for p in PLAYERS if roles[p] == Role.WITCH), None)
-villagers  = [p for p in PLAYERS if roles[p] == Role.VILLAGER]
+seer = next((p for p in PLAYERS if roles[p] == Role.SEER), None)
+guard = next((p for p in PLAYERS if roles[p] == Role.GUARD), None)
+witch = next((p for p in PLAYERS if roles[p] == Role.WITCH), None)
+villagers = [p for p in PLAYERS if roles[p] == Role.VILLAGER]
 werewolves = [p for p in PLAYERS if roles[p] == Role.WEREWOLF]
 
 initial_state = GameState(
@@ -94,7 +80,7 @@ config = {
         "coach": coach,
         "scenario": scenario,
         "game_id": game_id,
-        "MAX_DEBATE_TURNS": MAX_DEBATE_TURNS
+        "MAX_DEBATE_TURNS": MAX_DEBATE_TURNS,
     }
 }
 
@@ -145,7 +131,7 @@ if __name__ == "__main__":
 
     def test_debate():
         print("\n--- Testing DEBATE ---")
-        initial_state._phase = Phase.DEBATE # Force state correctly
+        initial_state._phase = Phase.DEBATE  # Force state correctly
         initial_state._step = 0
         state = initial_state.debate_node(initial_state, config)
         assert state._phase in [Phase.DEBATE, Phase.VOTE], f"Expected Phase.DEBATE or VOTE, got {state._phase}"
@@ -187,22 +173,22 @@ if __name__ == "__main__":
         test_vote: "skip",
         test_exile: "skip",
         test_check_winner_day: "skip",
-        test_end: "skip"
+        test_end: "skip",
     }
-    
+
     print("\nStarting Test Pipeline...")
     for i, (test_func, info) in enumerate(test_dict.items()):
         func_name = test_func.__name__
-        
+
         if info == "skip":
-            print(f"⏭️ Test {i+1} - function {func_name}: Skipped")
+            print(f"⏭️ Test {i + 1} - function {func_name}: Skipped")
             continue
-        
+
         try:
-            test_func() 
-            print(f"✅ Test {i+1} - function {func_name}: Passed")
+            test_func()
+            print(f"✅ Test {i + 1} - function {func_name}: Passed")
         except Exception as e:
-            print(f"❌ Test {i+1} - function {func_name}: Failed ({e})")
+            print(f"❌ Test {i + 1} - function {func_name}: Failed ({e})")
             # We break the loop on failure because subsequent nodes rely on the state of previous nodes
             print("Stopping execution due to pipeline failure.")
             break
