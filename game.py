@@ -5,11 +5,7 @@ from collections import defaultdict
 from typing import Literal, Optional
 
 import tqdm
-<<<<<<< HEAD
-import random
-=======
 from config import SCENARIO_CONFIG
->>>>>>> origin/main
 from players.base_player import Role
 from utils import log_game_summary
 from concurrent.futures import ThreadPoolExecutor
@@ -26,6 +22,7 @@ if TYPE_CHECKING:  # for type checking purposes
     from players.guard import Guard
     from players.seer import Seer
     from players.coach import Coach
+    from players.wolf import Wolf
 
 
 class Phase(Enum):
@@ -74,6 +71,7 @@ class GameState:
         self._saved: str = None  # the name of the player has been saved
         self._poisoned: str = None  # the name of the player has been poisoned
         self._exiled = None
+        self._wolf_debate_log: dict[int, list] = defaultdict(list) # Log all night discussions between wolves. {round_num: [list of statements]}
         self._debate_log: dict[int, list] = defaultdict(list) # Log all statements from day discussions. Coach will analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
         self._vote_logs = [] # Log all votes. Coach and players will analyze at the end of the game.
         self._bid_logs = []
@@ -109,39 +107,33 @@ class GameState:
         return None
 
     def wolf_debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
     
-        if not active_wolves: # Just in case, if the wolves are actually killed.
+        if (not active_wolves) or (len(active_wolves) == 1): # If all the wolves are actually killed or there is only 1 wolf, immediately go to ELIMINATE phase.
             state._phase = Phase.ELIMINATE
             return state
 
         # 2 rounds of talking, one for proposing and another one for thinking to stick with it or not.
         for _ in range(2): 
             for name in active_wolves:
-                wolf_obj = player_objects.get(name)
+                wolf_obj: Wolf = player_objects.get(name)
                 others = [w for w in active_wolves if w != name]
                 
                 statement, log = wolf_obj.wolf_debate(
                     state._alive_players, 
                     others, 
-                    state._debate_log
+                    state._wolf_debate_log[state._round_num]
                 )
                 
                 # Save the dialogue to the history so they can refer to it in 'eliminate'
-                state._debate_log.append([name, statement])
-                
-                state._game_logs.append({
-                    "phase": "wolf_debate",
-                    "player": name,
-                    "data": log 
-                })
+                state._wolf_debate_log[state._round_num].append([name, statement])
 
         state._phase = Phase.ELIMINATE
         return state
 
     def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
         
         if not active_wolves: # Just in case, if the wolves are actually killed.
@@ -153,7 +145,7 @@ class GameState:
 
         # Each wolf choose their final player to kill
         for name in active_wolves:
-            wolf_obj = player_objects.get(name)
+            wolf_obj: Wolf = player_objects.get(name)
             target, log = wolf_obj.eliminate(state._alive_players)
             final_votes[name] = target
             raw_logs[name] = log # Store the log (analysis, etc.)
@@ -168,13 +160,10 @@ class GameState:
 
         # Update state with the final result
         state._eliminated = chosen_target
-        state._eliminate_log = str({
-            "final_target": chosen_target,
-            "votes": final_votes,
-            "decisions_metadata": raw_logs
-        })
         
-        tqdm.tqdm.write(f"Wolves picked {chosen_target}")
+        announcement = f"{chosen_target} is targeted by the wolves."
+        tqdm.tqdm.write(announcement)
+        state = log_game_summary(state, announcement)
 
         state._phase = Phase.PROTECT
         return state
@@ -571,6 +560,7 @@ class GameState:
                 thread.result()  # We don't save the result, we just wait for it to finish.
             
         state._step = 0
+        state._round_num += 1
 
         return state
 
