@@ -33,21 +33,6 @@ Always follow instructions exactly and output only the requested JSON when asked
 """
 
 WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
-It is night. You are {name} (Werewolf). You must choose one villager to eliminate. 
-
-{note}
-
-Available targets: {target_pool}
-
-Respond with ONLY a JSON object:
-{{
-  "target": "name of one player",
-  "is_deceptive": true/false,
-  "analysis": "private reasoning (<=20 words)"
-}}
-"""
-
-WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
 You are {name} in the private Werewolf chat. 
 Your goal: Coordinate with teammates to pick a target while appearing like a villager.
 Your teammates: {teammates}
@@ -60,8 +45,8 @@ Dialogue history:
 
 Respond with ONLY a JSON object:
 {{
+  "target": "name of one player",
   "statement": "private message (<=20 words)",
-  "is_deceptive": true/false,
   "analysis": "private strategy (<=20 words)"
 }}
 """
@@ -121,6 +106,8 @@ You are {name} (the Guard). Your sole objective is to win for your faction.
 It is night. Choose exactly one player to guard (privately protect them from elimination).
 Allowed players to guard: {list_player}
 Be decisive and strategic; avoid niceties and hedging.
+
+{note}
 
 Respond in JSON format with these exact keys:
 {{

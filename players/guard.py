@@ -38,7 +38,9 @@ class Guard(BasePlayer):
         if not available_targets:
             return "", {"error": "No valid targets to protect."}
 
-        prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(name=self._name, list_player=", ".join(available_targets))
+        prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
+            name=self._name, note=self._note, list_player=", ".join(available_targets)
+        )
         # print(prompt) # Debug only
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
@@ -57,7 +59,7 @@ class Guard(BasePlayer):
 
             # If still no valid target, pick the first available target
             if target not in available_targets:
-                print(f"Invalid target '{target}' received. Available targets: {available_targets}.") # Debug only
+                print(f"Invalid target '{target}' received. Available targets: {available_targets}.")  # Debug only
                 target = available_targets[0]
                 resp["target"] = target
                 resp["fallback"] = "Used first available target due to invalid response"

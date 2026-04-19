@@ -1,0 +1,32 @@
+{
+  "game": {
+    "0": {
+      "night_eliminated": "Alice/None",
+      "day_exiled": "Bob/None",
+      "day_discussion": [
+        ["Alice", "I think Bob is a werewolf."],
+        ["Bob", "No, I'm not. I think Charlie is suspicious."],
+        ["Charlie", "I'm just a villager. I have no idea who the werewolf is."]
+      ],
+      "votes": {
+        "Alice": "Bob",
+        "Bob": "Charlie",
+        "Charlie": "Alice"
+      }
+    },
+    "1": {
+      "night_eliminated": "Charlie/None",
+      "day_exiled": "Alice/None",
+      "day_discussion": [
+        ["Alice", "I was right, Charlie was the werewolf!"],
+        ["Bob", "I can't believe I got exiled. I was innocent!"]
+      ],
+      "votes": {
+        "Alice": "Bob",
+        "Bob": "Charlie",
+        "Charlie": "Alice"
+      }
+    }
+  },
+  "winner": "Wolves"
+}

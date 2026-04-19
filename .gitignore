@@ -2,11 +2,6 @@
 __pycache__/
 *.py[cod]
 
-# runtime-generated — git-ignored
-strategies/*.txt
-game_logs/*.json
-game_belief_state/*.json
-feedbacks/coach_strategy.txt
 
 # IDE
 .vscode/

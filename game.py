@@ -16,7 +16,7 @@ import math
 
 from langgraph.graph import StateGraph, END
 
-if TYPE_CHECKING: # for type checking purposes
+if TYPE_CHECKING:  # for type checking purposes
     from players.witch import Witch
     from players.guard import Guard
     from players.seer import Seer
@@ -67,22 +67,26 @@ class GameState:
         self._eliminated = None
         self._protected = None
         self._unmasked = None
-        self._saved: str = "" # the name of the player has been saved
-        self._poisoned: str = "" # the name of the player has been poisoned
+        self._saved: str = ""  # the name of the player has been saved
+        self._poisoned: str = ""  # the name of the player has been poisoned
         self._exiled: str = ""
         self._wolf_debate_log: dict[int, list] = defaultdict(
             list
-        ) # Log all night discussions between wolves. {round_num: [list of statements]}
+        )  # Log all night discussions between wolves. {round_num: [list of statements]}
         self._debate_log: dict[int, list] = defaultdict(
             list
-        ) # Log all statements from day discussions. Coach will analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
-        self._vote_logs = [] # Log all votes. Coach and players will analyze at the end of the game.
-        self._bid_logs = []
-        self._summary_logs = [] # Log all game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
+        )  # Log all statements from day discussions. Coach will analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
+        self._vote_log: dict[int, dict] = defaultdict(dict)
+        self._guard_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._seer_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._villager_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._witch_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._eliminate_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._suspicion_log: dict[int, dict] = defaultdict(dict)  # FIXME:
+        self._game_summary_log: dict[
+            int, dict
+        ] = {}  # FIXME: Log all game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
 
-        self._deception_history = {}
-        self._deception_scores = {}
-        self._deception_iterations = []
         self._current_speaker = None
         self._winner: Literal["Villagers", "Werewolves"] | None = None
 
@@ -109,13 +113,17 @@ class GameState:
 
         return None
 
-    def wolf_debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
+    def wolf_debate_node(
+        self, state: GameState, config: RunnableConfig
+    ) -> (
+        GameState
+    ):  # FIXME: this is pretty messy right now, we can refactor the logic and make it cleaner in the future!
         player_objects = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
 
         if (not active_wolves) or (
             len(active_wolves) == 1
-        ): # If all the wolves are actually killed or there is only 1 wolf, immediately go to ELIMINATE phase.
+        ):  # If all the wolves are actually killed or there is only 1 wolf, immediately go to ELIMINATE phase.
             state._phase = Phase.ELIMINATE
             return state
 
@@ -138,11 +146,11 @@ class GameState:
         state._phase = Phase.ELIMINATE
         return state
 
-    def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:
+    def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:  # FIXME
         player_objects = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
 
-        if not active_wolves: # Just in case, if the wolves are actually killed.
+        if not active_wolves:  # Just in case, if the wolves are actually killed.
             state._phase = Phase.PROTECT
             return state
 
@@ -154,7 +162,7 @@ class GameState:
             wolf_obj: Wolf = player_objects.get(name)
             target, log = wolf_obj.eliminate(state._alive_players, state._round_num)
             final_votes[name] = target
-            raw_logs[name] = log # Store the log (analysis, etc.)
+            raw_logs[name] = log  # Store the log (analysis, etc.)
 
         # For tie breaker, to handle situation if there's two names
         choices = list(set(final_votes.values()))
@@ -162,7 +170,7 @@ class GameState:
         if len(choices) == 1:
             chosen_target = choices[0]
         else:
-            chosen_target = random.choice(choices) # If there's 2 different name, pick 1 randomly
+            chosen_target = random.choice(choices)  # If there's 2 different name, pick 1 randomly
 
         # Update state with the final result
         state._eliminated = chosen_target
@@ -411,7 +419,6 @@ class GameState:
 
         # 5. Mutate State Manually
         state._debate_log[state._round_num].append((chosen_speaker, statement))
-        state._bid_logs.extend(bid_logs)
         state._current_speaker = chosen_speaker
         state._step += 1
 
@@ -567,7 +574,7 @@ class GameState:
 
             # Pause the game right here until every single thread finishes its work!
             for thread in threads:
-                thread.result() # We don't save the result, we just wait for it to finish.
+                thread.result()  # We don't save the result, we just wait for it to finish.
 
         state._step = 0
         state._round_num += 1
@@ -576,7 +583,7 @@ class GameState:
 
     def end_node(self, state: GameState, config: RunnableConfig) -> GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
-        coach_object: Coach | None = config.get("configurable", {}).get("coach", None) # Passed in from your run.py!
+        coach_object: Coach | None = config.get("configurable", {}).get("coach", None)  # Passed in from your run.py!
 
         scenario = config.get("configurable", {}).get("scenario", "baseline")
         scenario_config = SCENARIO_CONFIG[scenario]
@@ -600,7 +607,7 @@ class GameState:
             if coach_object:
                 tqdm.tqdm.write("=> Coach is reviewing the game and writing feedback...")
                 # The coach needs the full public game record to analyze what happened
-                game_record = "\n".join(state._summary_logs) if state._summary_logs else "No events recorded."
+                game_record = "\n".join(state._game_summary_logs) if state._game_summary_logs else "No events recorded."
                 coach_object.run(game_record)
             else:
                 tqdm.tqdm.write("=> WARNING: Coaching is enabled, but no coach object was provided in config.")
@@ -635,7 +642,7 @@ class GameState:
         # game_summary.txt — every public announcement in order
         write_to_file(
             game_dir / "game_summary.txt",
-            "\n".join(state._summary_logs) if state._summary_logs else "No events recorded.",
+            "\n".join(state._game_summary_logs) if state._game_summary_logs else "No events recorded.",
         )
 
         # debate_log.txt — all statements from all day rounds

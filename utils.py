@@ -1,4 +1,4 @@
-from __future__ import annotations # MUST be the absolute first line!
+from __future__ import annotations  # MUST be the absolute first line!
 from typing import TYPE_CHECKING
 from langchain_core.language_models import BaseChatModel
 from pathlib import Path
@@ -22,5 +22,5 @@ def write_to_file(path: Path, content):
 
 
 def log_game_summary(state: GameState, announcement):
-    state._summary_logs.append(f"Round {state._round_num} - Phase {state._phase}: {announcement}")
+    state._game_summary_logs.append(f"Round {state._round_num} - Phase {state._phase}: {announcement}")
     return state
