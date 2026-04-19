@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config import VILLAGER_MODEL, WOLF_MODEL
 from players.guard import Guard
 from players.seer import Seer
 from players.witch import Witch
@@ -6,6 +7,8 @@ from players.villager import Villager
 from players.wolf import Wolf
 from players.coach import Coach
 from dotenv import load_dotenv
+
+from utils import get_llm
 
 load_dotenv()
 from players.base_player import Role
@@ -38,15 +41,15 @@ ROLE_TO_CLASS: dict[Role, type] = {
 MAX_DEBATE_TURNS = 6
 
 roles = dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
-# villager_llm = get_llm(VILLAGER_MODEL)
-# wolf_llm = get_llm(WOLF_MODEL)
+villager_llm = get_llm(VILLAGER_MODEL)
+wolf_llm = get_llm(WOLF_MODEL)
 
-villager_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
-)
-wolf_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
-)
+# villager_llm = ChatGoogleGenerativeAI(
+#     model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
+# )
+# wolf_llm = ChatGoogleGenerativeAI(
+#     model="gemini-2.5-flash", temperature=0.7, google_api_key=os.environ["GEMINI_API_KEY"]
+# )
 
 game_id = "023"
 scenario = "coach_and_self_analyze"
@@ -131,7 +134,7 @@ if __name__ == "__main__":
 
     def test_debate():
         print("\n--- Testing DEBATE ---")
-        initial_state._phase = Phase.DEBATE # Force state correctly
+        initial_state._phase = Phase.DEBATE  # Force state correctly
         initial_state._step = 0
         state = initial_state.debate_node(initial_state, config)
         assert state._phase in [Phase.DEBATE, Phase.VOTE], f"Expected Phase.DEBATE or VOTE, got {state._phase}"
@@ -162,7 +165,7 @@ if __name__ == "__main__":
     # ------------------------------------------
     # Dictionary mapping functions to status ("run" or "skip")
     test_dict = {
-        test_wolf_debate: "run",
+        test_wolf_debate: "skip",
         test_eliminate: "skip",
         test_protect: "skip",
         test_unmask: "skip",
