@@ -15,13 +15,14 @@ class Villager(BasePlayer):
         model: BaseChatModel,
         game_id: str = "",
         scenario: str = "baseline",
+        role: Role = Role.VILLAGER,
         is_alive: bool = True,
         system_prompt: str = VILLAGER_PROMPT_TEMPLATE,
         personality: str = "",
     ) -> None:
         super().__init__(
             name=name,
-            role=Role.VILLAGER,
+            role=role,
             model=model,
             game_id=game_id,
             scenario=scenario,

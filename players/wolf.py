@@ -6,10 +6,19 @@ import re
 
 
 class Wolf(BasePlayer):
-    def __init__(self, name, model, game_id: str = "", scenario: str = "baseline", is_alive=True, personality=""):
+    def __init__(
+        self,
+        name,
+        model,
+        game_id: str = "",
+        scenario: str = "baseline",
+        role: Role = Role.WEREWOLF,
+        is_alive=True,
+        personality="",
+    ):
         super().__init__(
             name=name,
-            role=Role.WEREWOLF,
+            role=role,
             model=model,
             game_id=game_id,
             scenario=scenario,
