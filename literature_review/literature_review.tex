@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[style=apa, backend=biber]{biblatex}
+
+\addbibresource{references.bib}
+
+\title{Coach-Player Paradigm in Multi-Agent Systems:\\
+A Literature Review}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Literature Review}
+
+The coach-player paradigm formalizes a persistent tension in multi-agent systems: how to exploit
+global information for coordination while preserving decentralized execution. The foundational
+theoretical substrate is the \textit{Centralized Training with Decentralized Execution} (CTDE)
+framework, instantiated by MADDPG \parencite{lowe2017maddpg} and QMIX
+\parencite{rashid2018qmix}, where a centralized critic with access to joint observations trains
+agents that later act from local observations alone. CTDE is effectively a training-time
+coach---it holds global knowledge but dissolves before deployment. The most explicit
+operationalization of a live, runtime coach is \textbf{COPA} \parencite{liu2021copa}, which
+introduces a persistent coach agent with full environmental observability that distributes
+individualized strategies to players operating under partial views. COPA couples attention
+mechanisms for selective information routing, a variational regularization objective to prevent
+strategy collapse, and an adaptive communication protocol that sustains high performance while
+the coach intervenes as little as 13\% of the time---demonstrating that sparse, asymmetric
+guidance can match or exceed full-information baselines. Critically, COPA generalizes zero-shot
+to unseen team compositions across StarCraft, resource collection, and rescue benchmarks,
+establishing that coach-player role separation confers structural robustness beyond what flat
+peer-coordination designs (e.g., QMIX or CommNet) can achieve when team membership is dynamic.
+
+In LLM-based multi-agent systems, the coach-player paradigm resurfaces through a structurally
+analogous but mechanistically distinct lens: \textit{role specialization via prompting}.
+\textbf{CAMEL} \parencite{li2023camel} instantiates a three-role architecture---a task specifier
+(coach) that refines and constrains the objective, an AI assistant (player) that executes, and an
+AI user that drives task progression---with inception prompting ensuring agents remain aligned
+with the task specification without human re-intervention. \textbf{MetaGPT}
+\parencite{hong2024metagpt} extends this to software engineering workflows by encoding
+Standardized Operating Procedures (SOPs) that assign Product Manager and Architect agents as
+planning-layer coaches over Engineer and Tester agents as executing players; structured
+message-passing and role-gated subscriptions replace the attention-based communication channel
+of COPA, yielding a more rigid but scalable coordination fabric. \textbf{AutoGen}
+\parencite{wu2024autogen} generalizes further with a programmable orchestrator-worker topology,
+where a \texttt{GroupChatManager} or \texttt{SelectorGroupChat} dynamically routes tasks to
+specialized agents---an implicit coaching layer operating purely through conversational steering
+without fine-tuning. Across these systems, a common finding emerges: explicit role
+asymmetry---whether implemented as a trained coach agent \parencite{liu2021copa}, a prompted
+task specifier \parencite{li2023camel}, or an orchestration layer
+\parencite{hong2024metagpt, wu2024autogen}---consistently reduces error compounding, improves
+task coherence, and enables generalization that fully peer-symmetric or single-agent designs
+struggle to match.
+
+\printbibliography
+
+\end{document}
