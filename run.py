@@ -46,6 +46,10 @@ from players.wolf import Wolf
 from players.coach import Coach
 from players.base_player import Role, WOLF_SIDE
 from utils import get_llm, write_to_file
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from .env
 
 if TYPE_CHECKING:
     from players.base_player import BasePlayer
@@ -252,7 +256,7 @@ def run_game(
 
     runnable = initial_state.build_graph()
     final_state = runnable.invoke(
-        initial_state,
+        {"game": initial_state},
         config={
             "recursion_limit": 1000,
             "configurable": {
@@ -264,7 +268,7 @@ def run_game(
             },
         },
     )
-    return cast(GameState, final_state)
+    return cast(GameState, final_state["game"])
 
 
 # ============================================================
@@ -353,7 +357,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
 
     new_block = "\n".join(
         [
-            f"Run: games {start_from:03d}–{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
+            f"Run: games {start_from:03d}-{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
             f"Villager model : {VILLAGER_MODEL}",
             f"Wolf model     : {WOLF_MODEL}",
             f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",

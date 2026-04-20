@@ -1,14 +1,14 @@
 from __future__ import annotations  # MUST be the absolute first line!
-from typing import TYPE_CHECKING
 from langchain_core.language_models import BaseChatModel
 from pathlib import Path
 from config import LLM_BASE_CONFIG, MODEL_PROVIDERS
+from dotenv import load_dotenv
+import os
 
-if TYPE_CHECKING:
-    from game import GameState
+load_dotenv()  # Load environment variables from .env
 
 
-def get_llm(model_name: str, **kwargs) -> BaseChatModel:
+def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> BaseChatModel:
     provider = MODEL_PROVIDERS.get(model_name)
     if not provider:
         raise ValueError(f"Model '{model_name}' is not supported. Choose from: {list(MODEL_PROVIDERS.keys())}")

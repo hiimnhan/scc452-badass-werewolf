@@ -15,6 +15,8 @@ from prompt import (
     VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
     WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
     WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
+    VILLAGER_DEBATE_PROMPT_TEMPLATE,
+    WEREWOLF_DEBATE_PROMPT_TEMPLATE,
 )
 
 
@@ -269,17 +271,13 @@ class BasePlayer(ABC):
             prompt_template = VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
-            
-        prompt = prompt_template.format(
-            name=self._name,
-            role=self._role.value,
-            note=self._note
-        )
+
+        prompt = prompt_template.format(name=self._name, role=self._role.value, note=self._note)
 
         resp = self.call_model(prompt, max_tokens=800)
 
         updates: dict = resp.get("updates", {})
-        
+
         for player, data in updates.items():
             if player in self._suspicion:
                 current = self._suspicion[player]
@@ -287,7 +285,7 @@ class BasePlayer(ABC):
                     new_score = max(0.0, min(1.0, float(data.get("score", current["score"]))))
                 except (ValueError, TypeError):
                     new_score = current["score"]
-                    
+
                 new_reason = data.get("reason", current["reason"])
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
@@ -335,7 +333,9 @@ class BasePlayer(ABC):
 
         return resp  # TODO: use updates in resp (log it!) for belief accuracy
 
-    def update_suspicion_from_vote(self, current_round_vote_logs: list[str], exiled_player: str, game_status: str) -> dict:
+    def update_suspicion_from_vote(
+        self, current_round_vote_logs: list[str], exiled_player: str, game_status: str
+    ) -> dict:
         """Analyze the results of the voting phase and update suspicion scores for all players."""
 
         # If no one voted, skip the analysis
@@ -344,7 +344,9 @@ class BasePlayer(ABC):
 
         # Format the voting results into a clean string
         voting_summary = "\n".join(current_round_vote_logs)
-        voting_summary += f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
+        voting_summary += (
+            f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
+        )
         voting_summary += f"\n{game_status}"
 
         if self._role in VILLAGER_SIDE:
@@ -491,38 +493,34 @@ No extra text, no markdown, no code fences.
         # 3. Otherwise, return the valid target!
         return target, resp
 
-    def debate(self, debate_log: list) -> tuple[str, dict]:
+    def debate(self, debate_log: list, alive_players: list[str]) -> tuple[str, dict]:
         """Contribute a statement to the day debate.
         Returns (statement, log_dict).
         """
-        
+
         formatted_current_debate = ""
         if debate_log:
             for speaker_statement in debate_log:
                 formatted_current_debate += f"\n{speaker_statement['speaker']}: {speaker_statement['statement']}"
         else:
             formatted_current_debate = "You speak first."
-            
-        
-        prompt = f"""
-You are {self._name} ({self._role.value}).
-Win for your faction. Be assertive — avoid hedging.
 
-Here is your current knowledge:
-{self._note}
+        alive_players_str = ", ".join(alive_players)
 
-Here is the current debate:
-{formatted_current_debate}
+        # Select the right psychology for the debate
+        if self._role in WOLF_SIDE:  # Assuming WOLF_SIDE is defined (e.g., [Role.WEREWOLF])
+            prompt_template = WEREWOLF_DEBATE_PROMPT_TEMPLATE
+        elif self._role in VILLAGER_SIDE:
+            prompt_template = VILLAGER_DEBATE_PROMPT_TEMPLATE
 
-Make a strong, decisive accusation or defence.
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            note=self._note,
+            alive_players=alive_players_str,
+            formatted_current_debate=formatted_current_debate,
+        )
 
-Respond with ONLY a JSON object:
-{{
-  "statement": "natural, decisive line (<=20 words)",
-  "analysis": "private reasoning (<=20 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
         resp = self.call_model(prompt, max_tokens=200)
         message = resp.get("statement", "").strip()
 
@@ -556,7 +554,10 @@ No extra text, no markdown, no code fences.
             kwargs["max_tokens"] = max_tokens
 
         resp = self._model.invoke(messages, **kwargs).content
-        resp = resp.strip() if isinstance(resp, str) else resp
+        if isinstance(resp, list):
+            resp = " ".join(block.get("text", "") if isinstance(block, dict) else str(block) for block in resp).strip()
+        elif isinstance(resp, str):
+            resp = resp.strip()
 
         result: dict = {}
         try:
@@ -704,6 +705,12 @@ No extra text, no markdown, no code fences.
 
     def _write_strategy(self, strategy: str) -> None:
         """Persist strategy to disk and refresh self._setup_prompt."""
+        # Coerce list to string in case the LLM returns bullet points as a JSON array
+        if isinstance(strategy, list):
+            strategy = "\n".join(f"- {item}" for item in strategy)
+        elif not isinstance(strategy, str):
+            strategy = str(strategy)
+
         write_to_file(self._strategy_path, strategy)
         self._setup_prompt = self._build_setup_prompt(strategy)
 

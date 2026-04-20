@@ -338,3 +338,52 @@ Respond with ONLY a JSON object using this exact structure:
 Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
+
+
+# ============================================
+# Debate prompt
+# ============================================
+
+VILLAGER_DEBATE_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
+
+Here is your current knowledge:
+{note}
+
+Players currently alive: {alive_players}.
+
+Here is the current day's debate so far:
+{formatted_current_debate}
+
+Analyze what has been said. Look for suspicious behavior, defend yourself if attacked, or push a strong, logical accusation against your top suspect from the alive players. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
+
+Respond with ONLY a JSON object:
+{{
+  "statement": "natural, decisive line (<=20 words)",
+  "analysis": "private reasoning for your suspicion or defense (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
+
+Here is your current knowledge:
+{note}
+
+Players currently alive: {alive_players}.
+
+Here is the current day's debate so far:
+{formatted_current_debate}
+
+Act like a frustrated villager trying to find wolves. Deflect any suspicion on you, build false logic, or opportunistically attack a vulnerable alive villager. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
+
+Respond with ONLY a JSON object:
+{{
+  "statement": "natural, decisive deceptive line (<=20 words)",
+  "analysis": "private reasoning and manipulation strategy (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""

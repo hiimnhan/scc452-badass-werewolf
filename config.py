@@ -10,6 +10,7 @@ MODEL_PROVIDERS = {
     "gpt-4o": ChatOpenAI,
     "gpt-4o-mini": ChatOpenAI,
     "gpt-4-turbo": ChatOpenAI,
+    "gpt-5-nano": ChatOpenAI,
     # Google
     "gemini-2.5-flash": ChatGoogleGenerativeAI,
     "gemini-1.5-pro": ChatGoogleGenerativeAI,
@@ -19,8 +20,8 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-VILLAGER_MODEL = "gpt-4o-mini" # small — villager side
-WOLF_MODEL = "gpt-4o" # large — wolf side
+VILLAGER_MODEL = "gpt-4o-mini"  # small — villager side
+WOLF_MODEL = "gpt-4o"  # large — wolf side
 
 # ============================================================
 # Experiment scenarios
