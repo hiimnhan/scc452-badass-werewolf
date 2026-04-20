@@ -33,22 +33,27 @@ Always follow instructions exactly and output only the requested JSON when asked
 """
 
 WEREWOLF_ELIMINATE_PROMPT_TEMPLATE = """
-You are {name} in the private Werewolf chat. 
-Your goal: Coordinate with teammates to pick a target while appearing like a villager.
-Your teammates: {teammates}
-Available targets: {target_pool} 
+You are {name} ({role}) in the Night Phase. 
+Your goal is to lock in the final target to eliminate tonight.
 
+Alive Teammates: {teammates}
+Available Targets: {target_pool} 
+
+Here is your current knowledge:
 {note}
 
-Dialogue history:
+Dialogue history from tonight's wolf debate:
 {dialogue_history}
 
-Respond with ONLY a JSON object:
+Based on the debate and your overall strategy, make your final decision on who to kill.
+
+Respond with ONLY a JSON object using this exact structure:
 {{
-  "target": "name of one player",
-  "statement": "private message (<=20 words)",
-  "analysis": "private strategy (<=20 words)"
+  "target": "name of one player from the available targets",
+  "statement": "your final declaration to the pack or yourself (<=20 words)",
+  "analysis": "private justification for this target (<=20 words)"
 }}
+No extra text, no markdown, no code fences.
 """
 
 
@@ -76,6 +81,7 @@ Players available to investigate tonight: {target_pool}
 Your previous investigation results (private — only you know this):
 {investigation_results}
 
+Here is your current knowledge:
 {note}
 
 Respond with ONLY a JSON object:
@@ -107,12 +113,12 @@ It is night. Choose exactly one player to guard (privately protect them from eli
 Allowed players to guard: {list_player}
 Be decisive and strategic; avoid niceties and hedging.
 
+Here is your current knowledge:
 {note}
 
 Respond in JSON format with these exact keys:
 {{
   "target": "name of player to guard (must be one of the available players, one word)",
-  "is_deceptive": true/false,
   "analysis": "your private reasoning for this choice (max 15-20 words)"
 }}
 No extra text, no markdown, no code fences.
@@ -152,6 +158,7 @@ Tonight's events:
 Werewolf target: {targeted_player}
 Players available to poison: {alive_players}
  
+Here is your current knowledge:
 {note}
  
 Decide whether to use your potions tonight. You may use neither, one, or both (if available).
@@ -172,10 +179,62 @@ No extra text, no markdown, no code fences.
 # Update suspicion
 # ============================================
 
+VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
+You are {name} ({role}). The night has ended and the morning announcements have been made.
+
+Here is your current knowledge (the most recent events show what happened last night):
+{note}
+
+Analyse the outcome of the night phase and how it impacts your suspicion scores for EVERY alive player. Consider:
+1. Who was killed? (Wolves typically eliminate threats, leaders, or players who suspect them).
+2. Who benefits most from this death? Who was arguing with the victim yesterday?
+3. If no one died, what does that tell you about the Guard or Witch's potential actions?
+4. If an unexpected player died, could it be Witch poison?
+
+Provide an updated score (0.0 = innocent → 1.0 = wolf) and a concise reason justifying your read based on the night's events.
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about the night's outcome and who is responsible (<=40 words)",
+  "updates": {{
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated reason based on night outcome (<=40 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
+You are {name} ({role}). The night has ended and the morning announcements have been made.
+
+Here is your current knowledge:
+{note}
+
+Analyse the outcome of the night phase from a Werewolf's perspective. Update your assessment of EVERY alive player. Consider:
+1. If your night kill failed, who is likely the Guard or Witch that stopped it?
+2. If an extra player died, who is the Witch that poisoned them?
+3. How will the village react to this morning's news, and who is the easiest target to frame today?
+
+Provide an updated score. Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
+
+Respond with ONLY a JSON object using this exact structure:
+{{
+  "chain_of_thought": "your private reasoning about power roles and framing opportunities (<=40 words)",
+  "updates": {{
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated threat assessment based on night outcome (<=40 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+  }}
+}}
+Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
 VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
 You are {name} ({role}).
 {speaker_name} just said: "{statement}"
 
+Here is your current knowledge:
 {note}
 
 Analyse this new statement and how it impacts your read on EVERY player. Consider:

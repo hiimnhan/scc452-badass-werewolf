@@ -118,6 +118,7 @@ class Seer(BasePlayer):
 
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
+        analysis = resp.get("analysis", "")
 
         # Validation: must be in available_targets (uninvestigated preference is soft)
         if target not in available_targets:
@@ -129,6 +130,7 @@ class Seer(BasePlayer):
             if target not in available_targets:
                 target = target_pool[0]
                 resp["target"] = target
+                resp["analysis"] = "Used first available target due to invalid response."
                 resp["fallback"] = "Used first available target due to invalid response."
 
         self.record_own_action(
@@ -136,7 +138,7 @@ class Seer(BasePlayer):
             "Night",
             f"Chose to investigate {target}. Reason: {resp.get('analysis', 'No analysis provided.')}",
         )
-        return target, resp
+        return target, analysis, resp
 
     def reveal_and_update(self, player_name: str, is_wolf: bool, round_num: int) -> None:
         """Moderator calls this after checking the investigated player's role.

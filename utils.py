@@ -19,8 +19,3 @@ def get_llm(model_name: str, **kwargs) -> BaseChatModel:
 def write_to_file(path: Path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content)
-
-
-def log_game_summary(state: GameState, announcement):
-    state._game_summary_logs.append(f"Round {state._round_num} - Phase {state._phase}: {announcement}")
-    return state
