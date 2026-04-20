@@ -7,7 +7,6 @@ from typing import Literal, Optional
 import tqdm
 from config import SCENARIO_CONFIG
 from players.base_player import Role
-from utils import log_game_summary
 from concurrent.futures import ThreadPoolExecutor
 from langchain_core.runnables import RunnableConfig
 from enum import Enum
@@ -22,10 +21,10 @@ if TYPE_CHECKING:  # for type checking purposes
     from players.seer import Seer
     from players.coach import Coach
     from players.wolf import Wolf
+    from players.base_player import BasePlayer
 
 
 class Phase(Enum):
-    WOLF_DEBATE = "wolf_debate"
     ELIMINATE = "eliminate"
     PROTECT = "protect"
     UNMASK = "unmask"
@@ -36,7 +35,6 @@ class Phase(Enum):
     VOTE = "vote"
     EXILE = "exile"
     CHECK_WINNER_DAY = "check_winner_day"
-    # SUMMARIZE = "summarize"
     END = "end"
 
 
@@ -67,30 +65,21 @@ class GameState:
         self._eliminated = None
         self._protected = None
         self._unmasked = None
-        self._saved: str = ""  # the name of the player has been saved
-        self._poisoned: str = ""  # the name of the player has been poisoned
-        self._exiled: str = ""
-        self._wolf_debate_log: dict[int, list] = defaultdict(
-            list
-        )  # Log all night discussions between wolves. {round_num: [list of statements]}
-        self._debate_log: dict[int, list] = defaultdict(
-            list
-        )  # Log all statements from day discussions. Coach will analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
-        self._vote_log: dict[int, dict] = defaultdict(dict)
-        self._guard_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._seer_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._villager_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._witch_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._eliminate_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._suspicion_log: dict[int, dict] = defaultdict(dict)  # FIXME:
-        self._game_summary_log: dict[
-            int, dict
-        ] = {}  # FIXME: Log all game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
+        self._saved:    str | None = None  # the name of the player has been saved
+        self._poisoned: str | None = None  # the name of the player has been poisoned
+        self._exiled:   str | None = None
+        
+        self._wolf_debate_log:  list[list] = []  # Log all night discussions between wolves.
+        self._wolf_target_log:  list[list] = []  # Wolves' target for each night, NOT players eliminated each night
+        self._guard_log:        list[list] = []
+        self._seer_log:         list[list] = []
+        self._witch_log:        list[list] = []
+        self._suspicion_log:    dict[int, dict] = defaultdict(dict)
+        self._game_summary_log: dict[int, dict] = {}  # Log all public game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
 
-        self._current_speaker = None
         self._winner: Literal["Villagers", "Werewolves"] | None = None
 
-        self._phase: Phase = Phase.WOLF_DEBATE
+        self._phase: Phase = Phase.ELIMINATE
         self._step: int = 0
 
     def _compute_current_winner(self, state: GameState) -> Optional[Literal["Villagers", "Werewolves"]]:
@@ -104,82 +93,81 @@ class GameState:
         villagers_alive = [p for p in state._alive_players if p not in wolves_alive]
 
         if not wolves_alive:
-            self._winner = "Villagers"
+            state._winner = "Villagers"
         elif len(wolves_alive) >= len(villagers_alive):
-            self._winner = "Werewolves"
+            state._winner = "Werewolves"
 
-        if self._winner:
-            return self._winner
+        if state._winner:
+            state._game_summary_log['winner'] = state._winner
+            return state._winner
 
         return None
 
-    def wolf_debate_node(
-        self, state: GameState, config: RunnableConfig
-    ) -> (
-        GameState
-    ):  # FIXME: this is pretty messy right now, we can refactor the logic and make it cleaner in the future!
+    def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in state._werewolves if w in state._alive_players]
+        state._eliminated = None # Crucial: Reset for the logic of wolf agreement of target
 
-        if (not active_wolves) or (
-            len(active_wolves) == 1
-        ):  # If all the wolves are actually killed or there is only 1 wolf, immediately go to ELIMINATE phase.
-            state._phase = Phase.ELIMINATE
+        if not active_wolves:  # If all the wolves are actually killed
+            state._phase = Phase.PROTECT
+            state._step = 0
             return state
-
-        # 2 rounds of talking, one for proposing and another one for thinking to stick with it or not.
-        for _ in range(2):
+        
+        wolf_targets = []
+        for _ in range(3):
+            agreed = False # Used to safely break both loops
+            
+            # Let the wolves debate
             for name in active_wolves:
+                try:
+                    dialogue_history = [statement for statement in state._wolf_debate_log if statement[0] == state._round_num]
+                except Exception:
+                    dialogue_history = []
+                    
                 wolf_obj: Wolf = player_objects.get(name)
-                others = [w for w in active_wolves if w != name]
 
-                statement, log = wolf_obj.wolf_debate(
-                    state._alive_players,
-                    others,
-                    state._wolf_debate_log[state._round_num],
-                    state._round_num,
+                target, statement, analysis, _ = wolf_obj.eliminate(
+                    alive_players=state._alive_players,
+                    wolf_teammates=active_wolves,
+                    dialogue_history=dialogue_history,
+                    round_num=state._round_num
                 )
 
-                # Save the dialogue to the history so they can refer to it in 'eliminate'
-                state._wolf_debate_log[state._round_num].append([name, statement])
+                # Save the dialogue to the history so they can refer to it next time
+                state._wolf_debate_log.append([state._round_num, name, statement, target, analysis]) # Log _wolf_debate_log
+                wolf_targets.append(target) 
+                
+                # Check for agreement
+                if (
+                    (len(active_wolves) == 1) or
+                    ((len(wolf_targets) >= 2) and (wolf_targets[-2] == wolf_targets[-1]))
+                ):
+                    state._eliminated = target
+                    agreed = True
+                    break 
 
-        state._phase = Phase.ELIMINATE
-        return state
+            if agreed:
+                break # Safely exit the while loop if they agreed!
 
-    def eliminate_node(self, state: GameState, config: RunnableConfig) -> GameState:  # FIXME
-        player_objects = config.get("configurable", {}).get("player_objects", {})
-        active_wolves = [w for w in state._werewolves if w in state._alive_players]
-
-        if not active_wolves:  # Just in case, if the wolves are actually killed.
-            state._phase = Phase.PROTECT
-            return state
-
-        final_votes = {}
-        raw_logs = {}
-
-        # Each wolf choose their final player to kill
+        if not state._eliminated:
+            # Fallback tiebreaker
+            if len(wolf_targets) >= 2:
+                state._eliminated = random.choice([wolf_targets[-2], wolf_targets[-1]])
+            elif wolf_targets:
+                state._eliminated = wolf_targets[-1]
+        
+        # Update note for each wolf
         for name in active_wolves:
             wolf_obj: Wolf = player_objects.get(name)
-            target, log = wolf_obj.eliminate(state._alive_players, state._round_num)
-            final_votes[name] = target
-            raw_logs[name] = log  # Store the log (analysis, etc.)
-
-        # For tie breaker, to handle situation if there's two names
-        choices = list(set(final_votes.values()))
-
-        if len(choices) == 1:
-            chosen_target = choices[0]
-        else:
-            chosen_target = random.choice(choices)  # If there's 2 different name, pick 1 randomly
-
-        # Update state with the final result
-        state._eliminated = chosen_target
-
-        announcement = f"{chosen_target} is targeted by the wolves."
-        tqdm.tqdm.write(announcement)
-        state = log_game_summary(state, announcement)
-
+            wolf_obj.record_own_action(state._round_num, "Night", f"Final target: {state._eliminated}")
+            
+        state._wolf_target_log.append([state._round_num, state._eliminated]) # Log _wolf_target_log
+        
+        import tqdm
+        tqdm.tqdm.write(f"\n=> Wolves finalized elimination target: {state._eliminated}")
+        
         state._phase = Phase.PROTECT
+        state._step = 0
         return state
 
     def protect_node(self, state: GameState, config: RunnableConfig) -> GameState:
@@ -192,14 +180,16 @@ class GameState:
             state._phase = Phase.UNMASK
             return state
 
-        protect_target, log = guard_obj.protect(state._alive_players, state._round_num)
+        protect_target, analysis, _ = guard_obj.protect(
+            state._alive_players,
+            state._round_num
+        )
 
         if not protect_target:
             raise ValueError(f"{guard_name} failed to specify a protection target.")
 
-        announcement = f"{guard_name} protected {protect_target}"
-        tqdm.tqdm.write(announcement)
-        state = log_game_summary(state, announcement)
+        tqdm.tqdm.write(f"{guard_name} protected {protect_target}")
+        state._guard_log.append([state._round_num, protect_target, analysis])
 
         state._protected = protect_target
         state._phase = Phase.UNMASK
@@ -223,7 +213,7 @@ class GameState:
             return state
 
         # Seer picks a target
-        target, log = seer_obj.unmask(state._alive_players, state._round_num)
+        target, analysis, _ = seer_obj.unmask(state._alive_players, state._round_num)
 
         # Guard against empty response (error case — e.g. only self alive)
         if not target:
@@ -236,11 +226,10 @@ class GameState:
         seer_obj.reveal_and_update(target, is_wolf, state._round_num)
 
         # Private terminal output (for debugging; never sent to players)
-        announcement = f"{seer_name} investigated {target} — result: {'WOLF' if is_wolf else 'not a wolf'}"
-        tqdm.tqdm.write(announcement)
+        tqdm.tqdm.write(f"{seer_name} investigated {target} — result: {'WOLF' if is_wolf else 'not a wolf'}")
 
         # Game-level summary log (visible to coach post-game, not to players)
-        state = log_game_summary(state, announcement)
+        state._seer_log.append([state._round_num, target, is_wolf, analysis])
 
         # Store moderator-side record
         state._unmasked = target
@@ -255,6 +244,10 @@ class GameState:
         player_objects = config.get("configurable", {}).get("player_objects", {})
         witch_name = state._witch
         witch_obj: Witch = player_objects.get(witch_name)
+        
+        # Careful setting for every time this node runs
+        state._saved = None
+        state._poisoned = None
 
         # Transition to the next phase if there is no witch or the witch is dead
         if not witch_name or witch_name not in state._alive_players:
@@ -264,32 +257,30 @@ class GameState:
         # Skip if the witch has already used both potions!
         if not witch_obj.has_any_potion():
             tqdm.tqdm.write(f"{witch_name} has no potions left. Skipping turn.")
-            state._saved = ""
-            state._poisoned = ""
+            witch_obj.record_own_action(state._round_num, "Night", "No potions left to perform actions.")
+            state._saved = None
+            state._poisoned = None
             state._phase = Phase.RESOLVE_NIGHT
             return state
 
-        # The wolves' target from the ELIMINATE phase is typically stored in state._eliminated
-        target_by_wolves = getattr(state, "_eliminated", None)
-
         # Call the Witch's action method
-        actions, log = witch_obj.save_or_poison(
-            targeted_player_by_wolves=target_by_wolves,
+        actions, analysis, _ = witch_obj.save_or_poison(
+            targeted_player_by_wolves=state._eliminated,
             alive_players=state._alive_players,
             round_num=state._round_num,
         )
 
         use_save = actions.get("use_save_potion", False)
-        poison_target = actions.get("poison_target")
+        poison_target = actions.get("poison_target", "")
 
         # Record the actions in the state so resolve_night_node can process them
-        state._saved = str(target_by_wolves) if (use_save and target_by_wolves) else ""
-        state._poisoned = str(poison_target) if poison_target else ""
+        state._saved = str(state._eliminated) if (use_save and state._eliminated) else None
+        state._poisoned = str(poison_target) if poison_target else None
 
         # Print the outcomes to the terminal
         action_parts = []
         if use_save:
-            action_parts.append(f"used SAVE potion on {target_by_wolves}")
+            action_parts.append(f"used SAVE potion on {state._eliminated}")
         if poison_target:
             action_parts.append(f"used POISON potion on {poison_target}")
         if action_parts:
@@ -298,7 +289,7 @@ class GameState:
             announcement = f"{witch_name} did not use any potions."
 
         tqdm.tqdm.write(announcement)
-        state = log_game_summary(state, announcement)
+        state._witch_log.append([state._round_num, state._saved, state._poisoned, analysis])
 
         # Advance the phase
         state._phase = Phase.RESOLVE_NIGHT
@@ -331,25 +322,39 @@ class GameState:
             announcement = f"{' and '.join(killed_players)} {verb} killed during the night."
         else:
             announcement = "No one was killed during the night."
-
+        
+        # Write announcement to terminal
         tqdm.tqdm.write(announcement)
-        state = log_game_summary(state, announcement)
+        
+        # Log dead players after night into _game_summary_log
+        state._game_summary_log[state._round_num]['night_eliminated'] = killed_players
 
-        # Broadcast to ALL alive players so their _note stays current
-        player_objects = config.get("configurable", {}).get("player_objects", {})
-        with ThreadPoolExecutor(max_workers=max(1, len(state._alive_players))) as executor:
-            threads = [
-                executor.submit(
-                    player_objects[name].receive_announcement,
-                    state._round_num,
-                    "Night",
-                    announcement,
-                )
-                for name in state._alive_players
-                if name in player_objects
-            ]
-            for thread in threads:
-                thread.result()
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        
+        # 1. Broadcast to ALL players (including the freshly dead, so they know how they died)
+        all_to_notify = state._alive_players + killed_players
+        for name in all_to_notify:
+            if name in player_objects:
+                player_objects[name].receive_announcement(state._round_num, "Night", announcement)
+
+        # 2. Have ALIVE players update their suspicions in parallel
+        if state._alive_players:
+            tqdm.tqdm.write("=> Players are analyzing the night's outcome...")
+            with ThreadPoolExecutor(max_workers=max(1, len(state._alive_players))) as executor:
+                threads = [
+                    executor.submit(player_objects[name].update_suspicion_after_night)
+                    for name in state._alive_players
+                    if name in player_objects
+                ]
+                
+                # Pause the game until everyone is done thinking
+                for thread in threads:
+                    thread.result()
+
+        # 3. Have the freshly killed players write their final notes to disk
+        for name in killed_players:
+            if name in player_objects:
+                player_objects[name].compile_note()
 
         # Advance State
         state._phase = Phase.CHECK_WINNER_NIGHT
@@ -365,14 +370,18 @@ class GameState:
         return state
 
     def debate_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
 
-        current_round_log = state._debate_log.get(state._round_num, [])
-        last_speaker = current_round_log[-1][0] if current_round_log else None
+        # Ensure the round dictionary exists
+        round_log = state._game_summary_log.setdefault(state._round_num, {})
+        # Ensure the day_debate list exists
+        debate_log: list[dict] = round_log.setdefault('day_debate', [])
+        
+        # Safely get the last speaker
+        last_speaker = debate_log[-1]["speaker"] if debate_log else None
 
         next_possible_speakers = [p for p in state._alive_players if p != last_speaker]
-        bid_logs = []
         bid_dict = {}
 
         # 1. Run bids in parallel
@@ -381,7 +390,6 @@ class GameState:
             for name, future in futures.items():
                 bid, raw_output = future.result()
                 bid_dict[name] = bid
-                bid_logs.append(f"{name} bid {bid} - {raw_output}")
 
         # 2. Pick the winner
         max_bid_value = max(bid_dict.values())
@@ -392,7 +400,7 @@ class GameState:
         statement = None
         retries = 0
         while not statement and retries < 3:
-            statement, log = player_objects[chosen_speaker].debate()
+            statement, log = player_objects[chosen_speaker].debate(debate_log)
             retries += 1
 
         # Fallback if the LLM completely fails
@@ -400,6 +408,9 @@ class GameState:
             statement = "I have nothing to add at this moment."
 
         tqdm.tqdm.write(f"{chosen_speaker}: {statement}")
+        
+        # Log the statement from the player
+        debate_log.append({"speaker": chosen_speaker, "statement": statement})
 
         # 4. Make the other players "listen" and update suspicions in parallel!
         listeners = [p for p in state._alive_players if p != chosen_speaker]
@@ -418,8 +429,6 @@ class GameState:
                 thread.result()
 
         # 5. Mutate State Manually
-        state._debate_log[state._round_num].append((chosen_speaker, statement))
-        state._current_speaker = chosen_speaker
         state._step += 1
 
         # 6. Advance phase
@@ -433,10 +442,9 @@ class GameState:
 
     def vote_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """All alive players cast a vote simultaneously to exile someone."""
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
 
-        vote_dict = {}
-        vote_logs = []
+        votes: list[dict] = []
 
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
@@ -446,16 +454,28 @@ class GameState:
 
             for name, future in futures.items():
                 target, raw_output = future.result()
-                vote_dict[name] = target
-
-                # Extract the public reasoning for the game history
+                
+                # Extract the public reasoning
                 reasoning = raw_output.get("reasoning", "No public reason provided.")
-                vote_logs.append(f"{name} voted to exile {target}. Reason: {reasoning}")
+                
+                # Create a dictionary for THIS specific vote, then append it to the list
+                vote_data = {
+                    "voter": name,
+                    "vote_for": target,
+                    "reasoning": f"{name} voted to exile {target}. Reason: {reasoning}"
+                }
+                votes.append(vote_data)
 
+        # Safely initialize the round log dictionary before adding votes
+        round_log = state._game_summary_log.setdefault(state._round_num, {})
+        round_log["votes"] = votes
+        
         # 2. Tally the votes
         vote_counts = defaultdict(int)
-        for target in vote_dict.values():
-            if target:
+        for vote in votes:
+            target = vote["vote_for"]
+            # Defensive check: ensure target isn't None, empty, or the literal string "None"
+            if target and (str(target).lower() not in ["none", ""]):
                 vote_counts[target] += 1
 
         # 3. Determine the outcome
@@ -469,30 +489,35 @@ class GameState:
             if max_votes >= threshold:
                 exiled_player = random.choice(tied_players)
             else:
-                exiled_player = ""
+                exiled_player = None
         else:
-            exiled_player = ""
+            exiled_player = None
             max_votes = 0
             tied_players = []
 
         # 4. Print the dramatic results to your terminal
         tqdm.tqdm.write("\n=== VOTING RESULTS ===")
-        for log in vote_logs:
-            tqdm.tqdm.write(log)
+        for vote in votes:
+            tqdm.tqdm.write(vote["reasoning"])
 
         if exiled_player:
-            tqdm.tqdm.write(f"\n=> {exiled_player} received {max_votes} votes. They will be exiled!")
+            announcement = f"=> {exiled_player} received {max_votes} votes. The player will be exiled!"
         else:
             if max_votes > 0:
-                tqdm.tqdm.write(
-                    f"\n=> The highest vote count was {max_votes} for {' and '.join(tied_players)} (Require at least {threshold} vote{'s' if threshold > 1 else ''}). Not enough consensus. No one is exiled."
-                )
+                announcement = f"=> The highest vote count was {max_votes} for {' and '.join(tied_players)} (Require at least {threshold} vote{'s' if threshold > 1 else ''}). Not enough consensus. No one is exiled."
             else:
-                tqdm.tqdm.write("\n=> No valid votes were cast. No one is exiled.")
+                announcement = "=> No valid votes were cast. No one is exiled."
+                
+        tqdm.tqdm.write(announcement)
+        
+        # Broadcast the announcement to ALL currently alive players including one who is going to be exiled
+        for name in state._alive_players:
+            if name in player_objects:
+                player_objects[name].receive_announcement(state._round_num, "Day", announcement)
 
         # 5. Mutate State manually
-        state._vote_logs.append(vote_logs)
         state._exiled = exiled_player
+        state._step = 0
 
         # Advance phase
         state._phase = Phase.EXILE
@@ -501,72 +526,52 @@ class GameState:
 
     def exile_node(self, state: GameState, config: RunnableConfig) -> GameState:
         """Apply the vote outcome, broadcast announcement, and flush notes to disk."""
-        player_objects = config.get("configurable", {}).get("player_objects", {})
-
-        exiled_player = state._exiled
-
-        # 1. Apply the elimination and format the announcement
-        if exiled_player:
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        
+        if state._exiled:
             # Safely remove the player from the alive list
-            state._alive_players = [p for p in state._alive_players if p != exiled_player]
-            announcement = f"{exiled_player} was exiled by the village."
-        else:
-            announcement = "The village could not reach a decision, and no one was exiled."
+            state._alive_players = [p for p in state._alive_players if p != state._exiled]
 
-        # Print to terminal and save to game history
-        tqdm.tqdm.write(f"\n=> {announcement}")
-        state = log_game_summary(state, announcement)
+        # We want the exiled player to write their final note before they "die"
+        if state._exiled and state._exiled in player_objects:
+            player_objects[state._exiled].compile_note()
 
-        # 2. Broadcast the announcement to ALL currently alive players
-        with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
-            threads = [
-                executor.submit(
-                    player_objects[name].receive_announcement,
-                    state._round_num,
-                    "Day",
-                    announcement,
-                )
-                for name in state._alive_players
-                if name in player_objects
-            ]
-            # Wait for all players to receive the message
-            for thread in threads:
-                thread.result()
-
-        # 3. We want the exiled player to write their final note before they "die"
-        if exiled_player and exiled_player in player_objects:
-            player_objects[exiled_player].compile_note()
-
-        # 4. Advance State
+        # Log the exiled player
+        state._game_summary_log[state._round_num]['day_exiled'] = state._exiled
+        
+        # Advance State
         state._phase = Phase.CHECK_WINNER_DAY
 
         return state
 
     def check_winner_day_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
 
         winner = self._compute_current_winner(state)
         if not winner:
-            state._phase = Phase.WOLF_DEBATE
-            state._round_num += 1
-            announcement = "After voting, the game continues."
+            state._phase = Phase.ELIMINATE
+            state._round_num += 1 # Advance to the next round (Night phase)
+            game_status = "After voting, the game continues."
         else:
             state._phase = Phase.END
-            announcement = "After voting, the game ends."
+            game_status = "After voting, the game ends."
 
         analyzers = state._alive_players.copy()
         if state._exiled and state._exiled not in analyzers:
             analyzers.append(state._exiled)
 
-        current_votes = state._vote_logs[-1] if state._vote_logs else []
+        current_vote_log: list = []
+        votes_data = state._game_summary_log.get(state._round_num, {}).get("votes", [])
+        for vote in votes_data:
+            current_vote_log.append(vote["reasoning"])
 
         with ThreadPoolExecutor(max_workers=len(analyzers)) as executor:
             threads = [
                 executor.submit(
                     player_objects[name].update_suspicion_from_vote,
-                    current_votes,
+                    current_vote_log,
                     state._exiled,
-                    announcement,
+                    game_status,
                 )
                 for name in analyzers
                 if name in player_objects
@@ -577,13 +582,12 @@ class GameState:
                 thread.result()  # We don't save the result, we just wait for it to finish.
 
         state._step = 0
-        state._round_num += 1
 
         return state
 
     def end_node(self, state: GameState, config: RunnableConfig) -> GameState:
-        player_objects = config.get("configurable", {}).get("player_objects", {})
-        coach_object: Coach | None = config.get("configurable", {}).get("coach", None)  # Passed in from your run.py!
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+        coach_object: Coach | None = config.get("configurable", {}).get("coach", None)
 
         scenario = config.get("configurable", {}).get("scenario", "baseline")
         scenario_config = SCENARIO_CONFIG[scenario]
@@ -591,40 +595,71 @@ class GameState:
         tqdm.tqdm.write(f"\n=== GAME OVER ===\nWinner: {state._winner}")
 
         # 1. Update surviving players' notes
-        # (The dead players already compiled their notes when they died!)
         with ThreadPoolExecutor(max_workers=len(state._alive_players)) as executor:
             threads = [
                 executor.submit(player_objects[name].compile_note)
                 for name in state._alive_players
                 if name in player_objects
             ]
-            # Pause the game until all files are safely written to disk
             for thread in threads:
                 thread.result()
+
+        # ==========================================
+        # FORMATTING LOGS TO MARKDOWN
+        # ==========================================
+        
+        # --- A. Format Game Summary ---
+        summary_lines = []
+        winner = state._game_summary_log.get('winner', 'Unknown')
+        summary_lines.append(f"# Game Summary\n**Winner:** {winner}\n")
+
+        for round_num, data in state._game_summary_log.items():
+            if str(round_num) == 'winner': 
+                continue
+            
+            summary_lines.append(f"## Round {round_num}")
+            
+            # Night Outcomes
+            night_kills = data.get('night_eliminated', [])
+            summary_lines.append(f"**Night Eliminations:** {', '.join(night_kills) if night_kills else 'None'}")
+            
+            # Day Debate
+            summary_lines.append("\n### Day Debate")
+            for debate_entry in data.get('day_debate', []):
+                speaker = debate_entry.get('speaker', 'Unknown')
+                statement = debate_entry.get('statement', '')
+                summary_lines.append(f"**{speaker}:** {statement}")
+            
+            # Votes
+            summary_lines.append("\n### Votes")
+            for vote in data.get('votes', []):
+                voter = vote.get('voter', 'Unknown')
+                vote_for = vote.get('vote_for', 'None')
+                reason = vote.get('reasoning', 'No reason provided.')
+                summary_lines.append(f"**{voter}** voted for **{vote_for}**\n> {reason}")
+            
+            # Day Exiled
+            summary_lines.append(f"\n**Day Exiled:** {data.get('day_exiled', 'None')}")
+            summary_lines.append("---\n")
+            
+        formatted_summary_md = "\n".join(summary_lines)
 
         # 2. Generate coach's feedback and update coach strategy
         if scenario_config.get("coaching"):
             if coach_object:
                 tqdm.tqdm.write("=> Coach is reviewing the game and writing feedback...")
-                # The coach needs the full public game record to analyze what happened
-                game_record = "\n".join(state._game_summary_logs) if state._game_summary_logs else "No events recorded."
-                coach_object.run(game_record)
+                # Pass the beautifully formatted markdown string to the coach!
+                coach_object.run(formatted_summary_md)
             else:
                 tqdm.tqdm.write("=> WARNING: Coaching is enabled, but no coach object was provided in config.")
 
-        # 3. Update and write out strategy for ALL players (alive and dead)
-        # We run this in parallel so you don't have to wait minutes for the game to close!
+        # 3. Update and write out strategy for ALL players
         tqdm.tqdm.write("=> Players are analyzing their performance and updating strategies...")
         with ThreadPoolExecutor(max_workers=len(player_objects)) as executor:
             threads = [
-                executor.submit(
-                    player.update_strategy,
-                    # self_analyze=scenario_config.get("self_analyze", False),
-                    # coaching=scenario_config.get("coaching", False),
-                )
+                executor.submit(player.update_strategy)
                 for player in player_objects.values()
             ]
-            # Wait for everyone to finish writing to disk
             for thread in threads:
                 thread.result()
 
@@ -638,43 +673,79 @@ class GameState:
             / scenario
             / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
         ).resolve()
+        
+        player_night_action_log_dir = (game_dir / "player_night_action_log").resolve()
+        player_note_dir = (game_dir / "player_note_dir").resolve()
+        
+        # Ensure the directories exist
+        game_dir.mkdir(parents=True, exist_ok=True)
+        player_night_action_log_dir.mkdir(parents=True, exist_ok=True)
+        player_note_dir.mkdir(parents=True, exist_ok=True)
 
-        # game_summary.txt — every public announcement in order
-        write_to_file(
-            game_dir / "game_summary.txt",
-            "\n".join(state._game_summary_logs) if state._game_summary_logs else "No events recorded.",
-        )
+        # Write Game Summary
+        write_to_file(game_dir / "game_summary.md", formatted_summary_md)
 
-        # debate_log.txt — all statements from all day rounds
-        debate_lines = []
-        for round_num in sorted(state._debate_log):
-            for speaker, text in state._debate_log[round_num]:
-                debate_lines.append(f"Round {round_num} | {speaker}: {text}")
-        write_to_file(
-            game_dir / "debate_log.txt",
-            "\n".join(debate_lines) if debate_lines else "No debate recorded.",
-        )
+        # Write Roles
+        role_lines = ["# Roles Assigned"]
+        for name, role in state._roles.items():
+            role_lines.append(f"**{name}:** {role.value}")
+        write_to_file(game_dir / "roles.md", "\n".join(role_lines))
 
-        # vote_log.txt — all vote entries across all rounds
-        vote_lines = []
-        for round_votes in state._vote_logs:
-            vote_lines.extend(round_votes)
-        write_to_file(
-            game_dir / "vote_log.txt",
-            "\n".join(vote_lines) if vote_lines else "No votes recorded.",
-        )
+        # --- B. Format Secret Action Logs ---
+        
+        # Wolf Debate Log
+        wolf_lines = ["# Wolf Debate and Eliminations"]
+        for entry in state._wolf_debate_log:
+            round_number, speaker_name, statement, target, analysis = entry
+            wolf_lines.append(f"### Round {round_number}")
+            wolf_lines.append(f"**Speaker:** {speaker_name}")
+            wolf_lines.append(f"**Statement:** {statement}")
+            wolf_lines.append(f"**Target Proposal:** {target}")
+            wolf_lines.append(f"**Private Analysis:** {analysis}")
+            wolf_lines.append("---")
+        write_to_file(player_night_action_log_dir / "wolf_debate_log.md", "\n".join(wolf_lines) if len(wolf_lines) > 1 else "No wolf debate recorded.")
+        
+        # Wolf Target Log
+        wolf_target_lines = ["# Wolf Targets"]
+        for entry in state._wolf_target_log:
+            round_number, target = entry
+            wolf_target_lines.append(f"**Round {round_number}:** Target **{target}**\n---")
+        write_to_file(player_night_action_log_dir / "wolf_target_log.md", "\n".join(wolf_target_lines) if len(wolf_target_lines) > 1 else "No wolf target log.")
 
-        # roles_this_game.txt — who played what role (useful for analysis)
-        role_lines = [f"{name}: {role.value}" for name, role in state._roles.items()]
-        write_to_file(game_dir / "roles_this_game.txt", "\n".join(role_lines))
+        # Guard Log
+        guard_lines = ["# Guard Actions"]
+        for entry in state._guard_log:
+            round_number, target, analysis = entry
+            guard_lines.append(f"**Round {round_number}:** Protected **{target}**\n> Analysis: {analysis}\n---")
+        write_to_file(player_night_action_log_dir / "guard_log.md", "\n".join(guard_lines) if len(guard_lines) > 1 else "No guard actions.")
 
-        tqdm.tqdm.write("=> Game successfully wrapped up. Ready for the next round!")
+        # Seer Log
+        seer_lines = ["# Seer Actions"]
+        for entry in state._seer_log:
+            round_number, target, is_wolf, analysis = entry
+            seer_lines.append(f"**Round {round_number}:** Investigated **{target}** (Result: {'WOLF' if is_wolf else 'Villager'})\n> Analysis: {analysis}\n---")
+        write_to_file(player_night_action_log_dir / "seer_log.md", "\n".join(seer_lines) if len(seer_lines) > 1 else "No seer actions.")
+
+        # Witch Log
+        witch_lines = ["# Witch Actions"]
+        for entry in state._witch_log:
+            round_number, saved, poisoned, analysis = entry
+            witch_lines.append(f"**Round {round_number}:** Saved **{saved}** | Poisoned **{poisoned}**\n> Analysis: {analysis}\n---")
+        write_to_file(player_night_action_log_dir / "witch_log.md", "\n".join(witch_lines) if len(witch_lines) > 1 else "No witch actions.")
+
+        # --- C. Format Player Notes ---
+        
+        for name, player in player_objects.items():
+            # Extract and write individual player note
+            note_content = getattr(player, "_note", "No note recorded.")
+            write_to_file(player_note_dir / f"{name}_note.md", str(note_content))
+
+        tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
         return state
 
     def build_graph(self):
         graph = StateGraph(GameState)
 
-        graph.add_node("wolf_debate", self.wolf_debate_node)
         graph.add_node("eliminate", self.eliminate_node)
         graph.add_node("protect", self.protect_node)
         graph.add_node("unmask", self.unmask_node)
@@ -685,7 +756,6 @@ class GameState:
         graph.add_node("vote", self.vote_node)
         graph.add_node("exile", self.exile_node)
         graph.add_node("check_winner_day", self.check_winner_day_node)
-        # graph.add_node("summarize", self.summarize_node)
         graph.add_node("end", self.end_node)
 
         graph.set_entry_point("wolf_debate")
@@ -701,7 +771,6 @@ class GameState:
         graph.add_conditional_edges("vote", lambda s: s._phase)
         graph.add_conditional_edges("exile", lambda s: s._phase)
         graph.add_conditional_edges("check_winner_day", lambda s: s._phase)
-        """ graph.add_conditional_edges("summarize", lambda s: s._phase) """
         graph.add_edge("end", END)
 
         return graph.compile()

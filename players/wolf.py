@@ -26,64 +26,60 @@ class Wolf(BasePlayer):
             system_prompt=WEREWOLF_PROMPT_TEMPLATE,
             personality=personality,
         )
-        self._teammates = []
 
-    # def wolf_debate(
-    #     self, alive_players: List[str], other_wolves: List[str], dialogue_history: List[dict], round_num: int
-    # ) -> tuple[str, dict]:
-    #     """Private conversation between wolves for picking a target to eliminate, similar to voting logic that picks a name to eliminate"""
-    #     self._teammates = other_wolves
-    #     target = [p for p in alive_players if p not in other_wolves and p != self._name]
-    #     history_conv = "\n".join([f"{s}: {t}" for s, t in dialogue_history])
-
-    #     prompt = WEREWOLF_DEBATE_PROMPT_TEMPLATE.format(
-    #         name=self._name,
-    #         teammates=", ".join(other_wolves),
-    #         target_pool=", ".join(target),
-    #         dialogue_history=history_conv if history_conv else "There's no discussion yet.",
-    #         note=self._note,
-    #     )
-    #     response = self.call_model(prompt)
-
-    #     if "statement" not in response:
-    #         match = re.search(r"\{.*\}", response.get("_raw_response", ""), re.DOTALL)
-    #         if match:
-    #             response.update(json.loads(match.group()))
-
-    #     message = response.get("statement", "")
-
-    #     if not message or message.strip() == "":
-    #         if "raw" in response and isinstance(response["raw"], str) and response["raw"].strip() != "":
-    #             raw = response["raw"].strip()
-    #             match = re.search(r"statement\s*:\s*(.+)", raw, re.IGNORECASE)
-    #             if match:
-    #                 message = match.group(1).strip()
-
-    #         if not message:
-    #             return "", {"error": "No valid message generated for wolf debate."}
-
-    # self.record_own_action(round_num, "Night", f"Wolf Chat: {message}")
-    # return message, response
-
-    def eliminate(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:  # FIXME:
+    def eliminate(self, alive_players: list[str], wolf_teammates: list[str], dialogue_history: list, round_num: int) -> tuple[str, dict]:
         """The final decision on who dies tonight."""
-        targets = [p for p in alive_players if p != self._name and p not in self._teammates]
-
+        
+        # 1. Filter teammates to see who is actually alive
+        alive_teammates = [p for p in wolf_teammates if p in alive_players and p != self._name]
+        
+        # 2. Determine available targets (anyone alive who isn't a wolf)
+        targets = [p for p in alive_players if p != self._name and p not in wolf_teammates]
+        
+        # 3. Format the teammates string dynamically
+        if not alive_teammates:
+            teammates_str = "None. You are the last wolf standing."
+        else:
+            teammates_str = ", ".join(alive_teammates)
+            
+        # 4. Format the dialogue history into "Speaker: Statement"
+        formatted_lines = []
+        for entry in dialogue_history:
+            # Assuming entry is [round_num, speaker_name, statement, target, analysis]
+            speaker_name = entry[1]
+            statement = entry[2]
+            formatted_lines.append(f"{speaker_name}: {statement}")
+                
+        formatted_dialogue = "\n".join(formatted_lines) if formatted_lines else "No debate occurred."
+            
+        # 5. Format the prompt
         prompt = WEREWOLF_ELIMINATE_PROMPT_TEMPLATE.format(
-            name=self._name, target_pool=", ".join(targets), note=self._note
+            name=self._name,
+            role=self._role.value,
+            teammates=teammates_str,
+            target_pool=", ".join(targets),
+            note=self._note,
+            dialogue_history=formatted_dialogue
         )
-        response = self.call_model(prompt)
-
-        if "target" not in response:
-            match = re.search(r"\{.*\}", response.get("_raw_response", ""), re.DOTALL)
-            if match:
-                response.update(json.loads(match.group()))
-
-        target_eliminate = response.get("target", "")
-
-        # In case if AI picks not existed name, proceed with picking the first valid one
-        if target_eliminate not in targets:
-            target_eliminate = targets[0] if targets else ""
-
-        self.record_own_action(round_num, "Night", f"Night Action: Eliminating {target_eliminate}.")
-        return target_eliminate, response
+        
+        # 6. Call the LLM
+        resp = self.call_model(prompt, max_tokens=200)
+        
+        # 7. Safely extract the target
+        target = resp.get("target")
+        statement = resp.get("statement")
+        analysis = resp.get("analysis")
+        
+        self.record_own_action(
+            round_num, "Night", f"Debate: Targeted {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
+        )
+        
+        # 8. Fallback logic: If the LLM hallucinates a dead player, a teammate, or returns nothing
+        if target not in targets:
+            import random
+            target = random.choice(targets) if targets else None
+            statement = "Failed to choose a target. Randomly select a target."
+            analysis = "Failed to choose a target. Randomly select a target."
+            resp["fallback_target"] = f"Forced random target: Invalid or missing target chosen by LLM."
+            
+        return target, statement, analysis, resp

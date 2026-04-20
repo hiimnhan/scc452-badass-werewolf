@@ -9,6 +9,8 @@ from constants import COACH_FEEDBACK_FILENAME
 from config import SCENARIO_CONFIG
 from utils import write_to_file
 from prompt import (
+    VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT,
+    WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT,
     VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
     VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
     WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
@@ -169,6 +171,7 @@ class BasePlayer(ABC):
             / "game_logs"
             / self._scenario
             / f"game_{self._game_id}"
+            / "player_note"
             / f"{self._name}_{self._role.value}_note.txt"
         ).resolve()
 
@@ -260,6 +263,36 @@ class BasePlayer(ABC):
 
     # ── Intra-game: suspicion ───────────────────────────────────────────
 
+    def update_suspicion_after_night(self) -> dict:
+        """Analyze the morning announcement to update suspicion scores."""
+        if self._role in VILLAGER_SIDE:
+            prompt_template = VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
+        elif self._role in WOLF_SIDE:
+            prompt_template = WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
+            
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            note=self._note
+        )
+
+        resp = self.call_model(prompt, max_tokens=800)
+
+        updates: dict = resp.get("updates", {})
+        
+        for player, data in updates.items():
+            if player in self._suspicion:
+                current = self._suspicion[player]
+                try:
+                    new_score = max(0.0, min(1.0, float(data.get("score", current["score"]))))
+                except (ValueError, TypeError):
+                    new_score = current["score"]
+                    
+                new_reason = data.get("reason", current["reason"])
+                self._suspicion[player] = {"score": new_score, "reason": new_reason}
+
+        return resp
+
     def update_suspicion_from_statement(self, speaker_name: str, statement: str) -> dict:
         """Update suspicion scores for ALL players after a statement is made.
 
@@ -302,9 +335,7 @@ class BasePlayer(ABC):
 
         return resp  # TODO: use updates in resp (log it!) for belief accuracy
 
-    def update_suspicion_from_vote(
-        self, current_round_vote_logs: list[str], exiled_player: str, game_status: str
-    ) -> dict:
+    def update_suspicion_from_vote(self, current_round_vote_logs: list[str], exiled_player: str, game_status: str) -> dict:
         """Analyze the results of the voting phase and update suspicion scores for all players."""
 
         # If no one voted, skip the analysis
@@ -313,9 +344,7 @@ class BasePlayer(ABC):
 
         # Format the voting results into a clean string
         voting_summary = "\n".join(current_round_vote_logs)
-        voting_summary += (
-            f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
-        )
+        voting_summary += f"\n\nVote outcome: {exiled_player} is exiled." if exiled_player else "\n\nVote outcome: No one is exiled."
         voting_summary += f"\n{game_status}"
 
         if self._role in VILLAGER_SIDE:
@@ -380,7 +409,7 @@ class BasePlayer(ABC):
         )
 
     def compile_note(self) -> None:
-        """Flush the current note to [name]_game_{id}_note.txt.
+        """Flush the current note to disk.
         Call at round end (after resolve_night_node and after exile_node).
         This is the ONLY disk write during a game.
         """
@@ -442,7 +471,6 @@ Available targets: {", ".join(available)}
 Respond with ONLY a JSON object:
 {{
   "vote": "name of one player to exile, or 'None' to skip",
-  "is_deceptive": true/false,
   "analysis": "private rationale (<=20 words)",
   "reasoning": "public explanation (<=20 words)"
 }}
@@ -463,23 +491,34 @@ No extra text, no markdown, no code fences.
         # 3. Otherwise, return the valid target!
         return target, resp
 
-    def debate(self) -> tuple[str, dict]:
+    def debate(self, debate_log: list) -> tuple[str, dict]:
         """Contribute a statement to the day debate.
         Returns (statement, log_dict).
         """
-
+        
+        formatted_current_debate = ""
+        if debate_log:
+            for speaker_statement in debate_log:
+                formatted_current_debate += f"\n{speaker_statement['speaker']}: {speaker_statement['statement']}"
+        else:
+            formatted_current_debate = "You speak first."
+            
+        
         prompt = f"""
 You are {self._name} ({self._role.value}).
 Win for your faction. Be assertive — avoid hedging.
 
+Here is your current knowledge:
 {self._note}
+
+Here is the current debate:
+{formatted_current_debate}
 
 Make a strong, decisive accusation or defence.
 
 Respond with ONLY a JSON object:
 {{
   "statement": "natural, decisive line (<=20 words)",
-  "is_deceptive": true/false,
   "analysis": "private reasoning (<=20 words)"
 }}
 No extra text, no markdown, no code fences.

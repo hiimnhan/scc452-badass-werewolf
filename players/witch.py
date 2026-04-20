@@ -49,22 +49,20 @@ class Witch(BasePlayer):
         """Returns True if the Witch has at least one potion left."""
         return self.has_save_potion() or self.has_poison_potion()
 
-    def save_or_poison(
-        self, targeted_player_by_wolves: Optional[str], alive_players: List[str], round_num: int
-    ) -> Tuple[dict, dict]:
+    def save_or_poison(self, targeted_player_by_wolves: Optional[str], alive_players: List[str], round_num: int) -> Tuple[dict, str, dict]:
         """Night action: decide whether to use the save and/or poison potion.
 
-        Returns (actions_dict, raw_response_dict).
+        Returns (actions_dict, log_string, raw_response_dict).
         actions_dict format: {"use_save_potion": bool, "poison_target": str | None}
         """
+        
         if not self._is_alive:
-            return {"use_save_potion": False, "poison_target": None}, {"error": "Witch is dead."}
+            return {"use_save_potion": False, "poison_target": None}, "Witch is dead.", {"error": "Witch is dead."}
 
         if not alive_players:
-            return {"use_save_potion": False, "poison_target": None}, {"error": "No alive players provided."}
+            return {"use_save_potion": False, "poison_target": None}, "No alive players.", {"error": "No alive players provided."}
 
         # The Witch only learns the wolf target while her Save potion is available.
-        # Once the Save potion is spent, the wolf target is hidden from her entirely.
         target_display = targeted_player_by_wolves if (self._save_available and targeted_player_by_wolves) else "None"
         alive_players_except_witch = [player for player in alive_players if player != self._name]
         alive_display = ", ".join(alive_players_except_witch) if self._poison_available else "None"
@@ -96,7 +94,7 @@ class Witch(BasePlayer):
             resp["fallback_save"] = "Forced False: Save potion unavailable or no active target."
 
         # 2. Validate Poison Potion
-        if isinstance(poison_target, str) and poison_target.lower() == "none":
+        if isinstance(poison_target, str) and ((poison_target.lower() == "none") or (poison_target == "")):
             poison_target = None
 
         if poison_target and (not self._poison_available or poison_target not in alive_players_except_witch):
@@ -106,8 +104,8 @@ class Witch(BasePlayer):
         # ------------------------------------------------------------------
         # State update & own-action logging
         # ------------------------------------------------------------------
-        save_reason = resp.get("save_analysis")
-        poison_reason = resp.get("poison_analysis")
+        save_reason = resp.get("save_analysis", "No reason provided")
+        poison_reason = resp.get("poison_analysis", "No reason provided")
 
         if use_save:
             self._save_available = False
@@ -124,4 +122,6 @@ class Witch(BasePlayer):
         if not use_save and not poison_target:
             self.record_own_action(round_num, "Night", "Used no potions tonight.")
 
-        return {"use_save_potion": use_save, "poison_target": poison_target}, resp
+        log_string = f"Save reason: {save_reason}\nPoison reason: {poison_reason}"
+
+        return {"use_save_potion": use_save, "poison_target": poison_target}, log_string, resp

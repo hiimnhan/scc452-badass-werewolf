@@ -39,11 +39,14 @@ class Guard(BasePlayer):
             return "", {"error": "No valid targets to protect."}
 
         prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
-            name=self._name, note=self._note, list_player=", ".join(available_targets)
+            name=self._name,
+            note=self._note,
+            list_player=", ".join(available_targets)
         )
         # print(prompt) # Debug only
         resp = self.call_model(prompt, max_tokens=300)
         target = resp.get("target", "")
+        analysis = resp.get("analysis", "")
 
         # Validate that the target is actually in the available targets
         if target not in available_targets:
@@ -62,10 +65,11 @@ class Guard(BasePlayer):
                 print(f"Invalid target '{target}' received. Available targets: {available_targets}.")  # Debug only
                 target = available_targets[0]
                 resp["target"] = target
+                resp["analysis"] = "Used first available target due to invalid response"
                 resp["fallback"] = "Used first available target due to invalid response"
 
         self.record_own_action(
             round_num, "Night", f"Protected {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
         )
         self.last_guarded_player = target
-        return target, resp
+        return target, analysis, resp
