@@ -20,7 +20,7 @@ def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> 
             base_url="https://api.deepseek.com",
         )
 
-    return provider(model_name=model_name, **{**LLM_BASE_CONFIG, **kwargs})
+    return provider(model_name=model_name, api_key=api_key, **{**LLM_BASE_CONFIG, **kwargs})
 
 
 def write_to_file(path: Path, content):

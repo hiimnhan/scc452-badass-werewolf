@@ -318,8 +318,12 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
     print(f"{'=' * 62}\n")
 
     # Build LLM instances once — reused across all games
-    villager_llm = get_llm(VILLAGER_MODEL)
-    wolf_llm = get_llm(WOLF_MODEL)
+    villager_llm = get_llm(
+        VILLAGER_MODEL, base_url="https://api.deepinfra.com/v1/openai", api_key=os.getenv("DEEPINFRA_API_KEY")
+    )
+    wolf_llm = get_llm(
+        WOLF_MODEL, base_url="https://api.deepinfra.com/v1/openai", api_key=os.getenv("DEEPINFRA_API_KEY")
+    )
 
     results: list[dict] = []
 
