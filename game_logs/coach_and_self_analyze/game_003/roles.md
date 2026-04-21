@@ -1,8 +1,0 @@
-# Roles Assigned
-**Nhan:** Guard
-**Cong:** Witch
-**Nam:** Villager
-**Jin:** Villager
-**Hoang:** Seer
-**Riley:** Werewolf
-**Meg:** Werewolf

@@ -1,5 +1,5 @@
 """
-run.py — Werewolf experiment runner
+run.py - Werewolf experiment runner
 
 Usage
 -----
@@ -50,6 +50,7 @@ from players.base_player import Role, WOLF_SIDE
 from utils import get_llm, write_to_file
 from dotenv import load_dotenv
 import os
+import pandas as pd
 
 load_dotenv()  # Load environment variables from .env
 
@@ -348,44 +349,58 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         print(f"    Winner: {winner}")
 
     # ── Final summary ──────────────────────────────────────────────────
-    print(f"\n{'=' * 62}")
-    print(f"  RESULTS — {scenario}  (games {start_from:03d}-{start_from + num_games - 1:03d})")
-    print(f"{'=' * 62}")
+    # print(f"\n{'=' * 62}")
+    # print(f"  RESULTS — {scenario}  (games {start_from:03d}-{start_from + num_games - 1:03d})")
+    # print(f"{'=' * 62}")
 
-    villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
-    wolf_wins = sum(1 for r in results if r["winner"] == "Werewolves")
+    # villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
+    # wolf_wins = sum(1 for r in results if r["winner"] == "Werewolves")
 
-    for r in results:
-        print(f"  {r['game_id']}: {r['winner']}")
+    # for r in results:
+    #     print(f"  {r['game_id']}: {r['winner']}")
 
-    print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)")
-    print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)")
+    # print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)")
+    # print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)")
 
-    # Append results to the summary file (so override and append both accumulate)
-    out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
+    # # Append results to the summary file (so override and append both accumulate)
+    # out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
 
-    # Read existing content if appending, so we don't lose prior games' records
-    existing = ""
-    if mode == "append" and out_path.exists():
-        existing = out_path.read_text().strip() + "\n\n"
+    # # Read existing content if appending, so we don't lose prior games' records
+    # existing = ""
+    # if mode == "append" and out_path.exists():
+    #     existing = out_path.read_text().strip() + "\n\n"
 
-    new_block = "\n".join(
-        [
-            f"Run: games {start_from:03d}-{start_from + num_games - 1:03d}  |  mode={mode}  |  scenario={scenario}",
-            f"Villager model : {VILLAGER_MODEL}",
-            f"Wolf model     : {WOLF_MODEL}",
-            f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",
-            f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins / games_to_run * 100:.1f}%)",
-            "",
-            "Per-game results:",
-        ]
-        + [
-            f"  {r['game_id']}: {r['winner']}  " + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
-            for r in results
-        ]
+    # new_block = "\n".join(
+    #     [
+    #         f"Run: games {start_from:03d}-{start_from + num_games - 1:03d}  |  mode={mode}  |  scenario={scenario}",
+    #         f"Villager model : {VILLAGER_MODEL}",
+    #         f"Wolf model     : {WOLF_MODEL}",
+    #         f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",
+    #         f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins / games_to_run * 100:.1f}%)",
+    #         "",
+    #         "Per-game results:",
+    #     ]
+    #     + [
+    #         f"  {r['game_id']}: {r['winner']}  " + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
+    #         for r in results
+    #     ]
+    # )
+
+    # write_to_file(out_path, existing + new_block)
+
+    out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    new_data_df = pd.DataFrame(results)
+    file_exists = out_path.is_file()
+
+    new_data_df.to_csv(
+        out_path,
+        mode="a",
+        index=False,
+        header=not file_exists,  # Only write header if it's a new file
     )
 
-    write_to_file(out_path, existing + new_block)
     print(f"\n  Results saved to: {out_path}")
 
 

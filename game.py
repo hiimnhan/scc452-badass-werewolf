@@ -13,7 +13,17 @@ from enum import Enum
 import random
 import math
 import json
-from constants import GAME_SUMMARY_FILENAME, ROLES_FILENAME, WOLF_DEBATE_LOG_FILENAME, WOLF_TARGET_LOG_FILENAME, GUARD_LOG_FILENAME, SEER_LOG_FILENAME, WITCH_LOG_FILENAME, SUSPICION_LOG_FILENAME, PLAYER_NOTE_FILENAME
+from constants import (
+    GAME_SUMMARY_FILENAME,
+    ROLES_FILENAME,
+    WOLF_DEBATE_LOG_FILENAME,
+    WOLF_TARGET_LOG_FILENAME,
+    GUARD_LOG_FILENAME,
+    SEER_LOG_FILENAME,
+    WITCH_LOG_FILENAME,
+    SUSPICION_LOG_FILENAME,
+    PLAYER_NOTE_FILENAME,
+)
 from pathlib import Path
 from utils import write_to_file
 
@@ -374,10 +384,10 @@ class GameState:
         gs = state["game"]
         winner = self._compute_current_winner(gs)
         gs._phase = Phase.DEBATE if not winner else Phase.END
-        
+
         if gs._phase == Phase.DEBATE:
             tqdm.tqdm.write("\n*** Day ***")
-        
+
         gs._step = 0
 
         return {"game": gs}
@@ -386,7 +396,7 @@ class GameState:
         gs = state["game"]
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
-        
+
         # Ensure the round dictionary exists
         round_log = gs._game_summary_log.setdefault(gs._round_num, {})
         # Ensure the day_debate list exists
@@ -458,7 +468,7 @@ class GameState:
         """All alive players cast a vote simultaneously to exile someone."""
         gs = state["game"]
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
-        
+
         round_log = gs._game_summary_log.setdefault(gs._round_num, {})
         debate_log: list[dict] = round_log.setdefault("day_debate", [])
         votes: list[dict] = []
@@ -466,7 +476,8 @@ class GameState:
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(gs._alive_players)) as executor:
             futures = {
-                name: executor.submit(player_objects[name].vote, gs._alive_players, debate_log) for name in gs._alive_players
+                name: executor.submit(player_objects[name].vote, gs._alive_players, debate_log)
+                for name in gs._alive_players
             }
 
             for name, future in futures.items():
@@ -515,7 +526,7 @@ class GameState:
         # 4. Print the dramatic results to your terminal
         tqdm.tqdm.write("\n=== VOTING RESULTS ===")
         for vote in votes:
-            tqdm.tqdm.write(f"• {vote["reasoning"]}")
+            tqdm.tqdm.write(f"• {vote['reasoning']}")
 
         if exiled_player:
             announcement = f"=> {exiled_player} received {max_votes} votes. The player will be exiled!"
@@ -615,10 +626,19 @@ class GameState:
         # ==========================================
 
         # --- A. Format Game Summary ---
-        
+
+        game_dir = (
+            Path(__file__).parent
+            / "game_logs"
+            / scenario
+            / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
+        ).resolve()
+
         json_string = json.dumps(gs._game_summary_log, indent=4)
-        write_to_file(game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string) # Store game_summary as json
-        
+        write_to_file(
+            game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string
+        )  # Store game_summary as json
+
         summary_lines = []
         winner = gs._game_summary_log.get("winner", "Unknown")
         summary_lines.append(f"# Game Summary\n**Winner:** {winner}\n")
@@ -671,13 +691,6 @@ class GameState:
                 thread.result()
 
         # 4. Write per-game log files to disk
-
-        game_dir = (
-            Path(__file__).parent
-            / "game_logs"
-            / scenario
-            / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
-        ).resolve()
 
         player_night_action_log_dir = (game_dir / "player_night_action_log").resolve()
         player_note_dir = (game_dir / "player_note").resolve()
@@ -793,6 +806,8 @@ class GameState:
 
         # Save to disk
         write_to_file(game_dir / SUSPICION_LOG_FILENAME, "\n".join(suspicion_lines))
+        json_string = json.dumps(gs._suspicion_log, indent=4)
+        write_to_file(game_dir / SUSPICION_LOG_FILENAME.replace(".md", ".json"), json_string)
 
         return {"game": gs}
 

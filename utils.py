@@ -1,6 +1,7 @@
 from __future__ import annotations  # MUST be the absolute first line!
 from langchain_core.language_models import BaseChatModel
 from pathlib import Path
+from langchain_openai import ChatOpenAI
 from config import LLM_BASE_CONFIG, MODEL_PROVIDERS
 from dotenv import load_dotenv
 import os
@@ -12,6 +13,12 @@ def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> 
     provider = MODEL_PROVIDERS.get(model_name)
     if not provider:
         raise ValueError(f"Model '{model_name}' is not supported. Choose from: {list(MODEL_PROVIDERS.keys())}")
+    if model_name.startswith("deepseek"):
+        return ChatOpenAI(
+            model=model_name,
+            api_key=os.getenv("DEEPSEEK_API_KEY"),
+            base_url="https://api.deepseek.com",
+        )
 
     return provider(model_name=model_name, **{**LLM_BASE_CONFIG, **kwargs})
 
