@@ -5,7 +5,7 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
 from abc import ABC
 from pathlib import Path
-from constants import COACH_FEEDBACK_FILENAME
+from constants import COACH_FEEDBACK_FILENAME, PLAYER_FINAL_STRATEGY_FILENAME
 from config import SCENARIO_CONFIG
 from utils import write_to_file
 from prompt import (
@@ -17,6 +17,8 @@ from prompt import (
     WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT,
     VILLAGER_DEBATE_PROMPT_TEMPLATE,
     WEREWOLF_DEBATE_PROMPT_TEMPLATE,
+    VILLAGER_VOTE_PROMPT_TEMPLATE,
+    WEREWOLF_VOTE_PROMPT_TEMPLATE,
 )
 
 
@@ -117,7 +119,7 @@ class BasePlayer(ABC):
       Game start  : init_suspicions(other_players)
       Each night  : receive_announcement() from game engine after resolve
       Each debate : _update_suspicion() after each statement
-      Round end   : _compile_note()  — only disk flush during a game
+      Round end   : 
       Game end    : _update_strategy(self_analyze, coaching)
       Next game   : reset_game_state(game_id, other_players)
     """
@@ -164,18 +166,7 @@ class BasePlayer(ABC):
 
     @property
     def _strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / self._scenario / f"{self._name}_strategy.txt").resolve()
-
-    @property
-    def _note_path(self) -> Path:
-        return (
-            self._base_dir()
-            / "game_logs"
-            / self._scenario
-            / f"game_{self._game_id}"
-            / "player_note"
-            / f"{self._name}_{self._role.value}_note.txt"
-        ).resolve()
+        return (self._base_dir() / "strategies" / self._scenario / PLAYER_FINAL_STRATEGY_FILENAME.format(name=self._name)).resolve()
 
     @property
     def _feedback_path(self) -> Path:
@@ -296,7 +287,6 @@ class BasePlayer(ABC):
 
         The LLM receives the speaker's statement AND the existing note, and is asked to
         EXTEND the reasons for any relevant players.
-        In-memory only; call _compile_note() at round end to flush to disk.
 
         Returns the raw LLM response dict.
         """
@@ -410,13 +400,6 @@ class BasePlayer(ABC):
             f"{self._format_suspicion_block()}"
         )
 
-    def compile_note(self) -> None:
-        """Flush the current note to disk.
-        Call at round end (after resolve_night_node and after exile_node).
-        This is the ONLY disk write during a game.
-        """
-        write_to_file(self._note_path, self._note)
-
     # ── Intra-game: decision actions ────────────────────────────────────
 
     def get_bid(self) -> tuple[int, dict]:
@@ -454,30 +437,38 @@ No extra text, no markdown, no code fences.
 
         return bid, resp
 
-    def vote(self, alive_players: List[str]) -> tuple[Optional[str], dict]:
-        """Vote to eliminate a player during the day phase, or abstain.
-        Returns (target_name or None, log_dict).
-        """
+    def vote(self, alive_players: list[str], debate_log: list[dict]) -> tuple[str | None, dict]:
+        """Vote to eliminate a player during the day phase, or abstain."""
+        
         available = [p for p in alive_players if p != self._name]
         if not available:
             return None, {"error": "No available targets to vote for."}
 
-        prompt = f"""
-You are {self._name} ({self._role.value}). Win for your faction.
-Cast a vote for who should be exiled. You may choose to skip voting if you are unsure.
+        available_str = ", ".join(available)
 
-{self._note}
+        # Format the debate log into a readable string
+        formatted_current_debate = ""
+        if debate_log:
+            for speaker_statement in debate_log:
+                formatted_current_debate += f"\n{speaker_statement['speaker']}: {speaker_statement['statement']}"
+        else:
+            formatted_current_debate = "No debate occurred today."
 
-Available targets: {", ".join(available)}
+        # Select the right psychology for the vote
+        if self._role in WOLF_SIDE:
+            prompt_template = WEREWOLF_VOTE_PROMPT_TEMPLATE
+        else:
+            prompt_template = VILLAGER_VOTE_PROMPT_TEMPLATE
 
-Respond with ONLY a JSON object:
-{{
-  "vote": "name of one player to exile, or 'None' to skip",
-  "analysis": "private rationale (<=20 words)",
-  "reasoning": "public explanation (<=20 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
+        # Format the selected prompt (Now including the debate!)
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            note=self._note,
+            formatted_current_debate=formatted_current_debate,
+            available=available_str
+        )
+
         resp = self.call_model(prompt, max_tokens=200)
         target = resp.get("vote", "None")
 

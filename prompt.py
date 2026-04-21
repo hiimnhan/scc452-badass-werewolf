@@ -389,11 +389,69 @@ CRITICAL RULES:
 1. Focus your attacks and manipulations ONLY on players in the "Players currently alive" list.
 2. Do NOT accuse or push to exile players who are already dead (though you may fake sadness over their deaths or blame others for killing them).
 3. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
+4. You MUST fake a Villager's perspective. Give a fake, logical-sounding statement for why you think your target is a Werewolf.
+5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
 
 Respond with ONLY a JSON object:
 {{
   "statement": "natural, decisive deceptive line (<=20 words)",
   "analysis": "private reasoning and manipulation strategy (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+
+# ============================================
+# Vote prompt
+# ============================================
+
+VILLAGER_VOTE_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction.
+Cast a vote for who should be exiled. You may choose to skip voting if you are unsure.
+
+Here is your current knowledge:
+{note}
+
+Here is the current day's debate so far:
+{formatted_current_debate}
+
+Available targets: {available}
+
+Base your vote on logic, debate behaviors, and your suspicion scores.
+
+Respond with ONLY a JSON object:
+{{
+  "vote": "name of one player to exile, or 'None' to skip",
+  "analysis": "private rationale for your vote (<=20 words)",
+  "reasoning": "public explanation to persuade the village (<=20 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_VOTE_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive and manipulate the village into exiling innocent players. Win for your faction.
+Cast a vote for who should be exiled. You may choose to skip voting if you are unsure.
+
+Here is your current knowledge:
+{note}
+
+Here is the current day's debate so far:
+{formatted_current_debate}
+
+Available targets: {available}
+
+CRITICAL RULES FOR VOTING:
+1. Your "analysis" is PRIVATE. Use it to plot how to eliminate threats or protect your wolf teammates.
+2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf (e.g., "Their debate statements were inconsistent").
+3. NEVER admit to targeting villagers, power roles, or being a wolf in your public reasoning.
+
+Respond with ONLY a JSON object:
+{{
+  "vote": "name of one player to exile, or 'None' to skip",
+  "analysis": "private malicious rationale (<=20 words)",
+  "reasoning": "PUBLIC DECEPTIVE EXPLANATION acting like an innocent villager hunting wolves (<=20 words)"
 }}
 No extra text, no markdown, no code fences.
 """

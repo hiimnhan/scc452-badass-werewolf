@@ -126,12 +126,12 @@ class Coach:
                            ...
         """
         # Step 1: Coach reviews the game and updates its own strategy first
-        self.update_coach_strategy(game_record)
+        self._update_coach_strategy(game_record)
 
         # Step 2: Coach uses its freshly updated strategy to write their feedback to the players
-        self.generate_coach_feedback(game_record)
+        self._generate_coach_feedback(game_record)
 
-    def update_coach_strategy(self, game_record: str) -> None:
+    def _update_coach_strategy(self, game_record: str) -> None:
         """Review whether prior coaching advice helped villagers this game.
         Update coach_strategy.txt with lessons about more effective coaching.
         """
@@ -167,7 +167,7 @@ No extra text, no markdown, no code fences.
         if new_strategy:
             self._write_coach_strategy(new_strategy)
 
-    def generate_coach_feedback(self, game_record: str) -> None:
+    def _generate_coach_feedback(self, game_record: str) -> None:
         """Write actionable feedback for villager-side players.
         This is the file BasePlayer._coach_feedback reads.
         Uses the freshly updated coaching strategy from Step 1.
