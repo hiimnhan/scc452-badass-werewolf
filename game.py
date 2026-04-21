@@ -14,6 +14,8 @@ import random
 import math
 import json
 from constants import GAME_SUMMARY_FILENAME, ROLES_FILENAME, WOLF_DEBATE_LOG_FILENAME, WOLF_TARGET_LOG_FILENAME, GUARD_LOG_FILENAME, SEER_LOG_FILENAME, WITCH_LOG_FILENAME, SUSPICION_LOG_FILENAME, PLAYER_NOTE_FILENAME
+from pathlib import Path
+from utils import write_to_file
 
 from langgraph.graph import StateGraph, END
 
@@ -667,8 +669,6 @@ class GameState:
                 thread.result()
 
         # 4. Write per-game log files to disk
-        from pathlib import Path
-        from utils import write_to_file
 
         game_dir = (
             Path(__file__).parent
