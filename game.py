@@ -107,8 +107,14 @@ class GameState:
 
     def eliminate_node(self, state: GraphState, config: RunnableConfig) -> GraphState:
         gs = state["game"]
+        player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
+
+        # Logging suspicion
+        round_log = gs._suspicion_log.setdefault(gs._round_num, {})
+        for name in gs._alive_players:
+            round_log[name] = player_objects[name]._suspicion
+
         tqdm.tqdm.write(f"\n\n=== Round {gs._round_num} ===")
-        player_objects = config.get("configurable", {}).get("player_objects", {})
         active_wolves = [w for w in gs._werewolves if w in gs._alive_players]
         gs._eliminated = None  # Crucial: Reset for the logic of wolf agreement of target
 
@@ -760,11 +766,40 @@ class GameState:
         # --- C. Format Player Notes ---
 
         for name, player in player_objects.items():
-            # Extract and write individual player note
-            note_content = getattr(player, "_note", "No note recorded.")
-            write_to_file(player_note_dir / f"{name}_note.md", str(note_content))
+            role_name = player._role.value
+            write_to_file(player_note_dir / f"{name}_{role_name}_note.md", str(player._note))
 
         tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
+
+        # --- D. Format Suspicion Log ---
+        suspicion_lines = ["# Game Suspicion Log\n"]
+
+        # Sort the rounds to guarantee chronological order
+        for round_num in sorted(gs._suspicion_log.keys()):
+            round_data = gs._suspicion_log[round_num]
+            suspicion_lines.append(f"## Round {round_num}")
+
+            for player_name, suspicions in round_data.items():
+                # If you want to include their role, you can pull it from gs._roles if available:
+                role_str = gs._roles[player_name].value if player_name in gs._roles else "Unknown"
+                suspicion_lines.append(f"### {player_name} ({role_str})'s Suspicions")
+
+                if not suspicions:
+                    suspicion_lines.append("No suspicions recorded.\n")
+                    continue
+
+                for target_name, data in suspicions.items():
+                    score = data.get("score", "N/A")
+                    reason = data.get("reason", "No reason provided.")
+                    suspicion_lines.append(f"- **{target_name}** (Score: {score}): {reason}")
+
+                suspicion_lines.append("")  # Adds a blank line for readability
+
+            suspicion_lines.append("---\n")  # Visual divider between rounds
+
+        # Save to disk
+        write_to_file(game_dir / "suspicion_log.md", "\n".join(suspicion_lines))
+
         return {"game": gs}
 
     def build_graph(self):

@@ -34,7 +34,9 @@ strategies/
 from __future__ import annotations
 from typing import TYPE_CHECKING, cast
 import argparse
+import shutil
 from pathlib import Path
+import random
 
 from game import GameState
 from config import SCENARIO_CONFIG, VILLAGER_MODEL, WOLF_MODEL
@@ -58,13 +60,14 @@ if TYPE_CHECKING:
 # Player roster & role pool
 # ============================================================
 
-VILLAGER_PLAYERS: list[str] = ["Alice", "Bob", "Selena", "Raj", "Frank"]
-WOLF_PLAYERS: list[str] = ["Joy", "Cyrus"]
+VILLAGER_PLAYERS: list[str] = ["Nhan", "Cong", "Nam", "Jin", "Hoang"]
+WOLF_PLAYERS: list[str] = ["Riley", "Meg"]
 PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 
 # Villager role pool — reshuffled randomly before every game.
 # Must equal len(VILLAGER_PLAYERS).
 VILLAGER_ROLE_POOL: list[Role] = [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
+random.shuffle(VILLAGER_ROLE_POOL)
 
 assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
     f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
@@ -140,7 +143,7 @@ def _last_completed_game(scenario: str) -> int:
         if not folder.is_dir():
             continue
         # Folder names: game_001, game_002, ...
-        if folder.name.startswith("game_") and (folder / "game_summary.txt").exists():
+        if folder.name.startswith("game_") and (folder / "game_summary.md").exists():
             try:
                 completed.append(int(folder.name.split("_")[1]))
             except (IndexError, ValueError):
@@ -276,7 +279,7 @@ def run_game(
 # ============================================================
 
 
-def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override") -> None:
+def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") -> None:
     """Run num_games games back-to-back under the given scenario.
 
     mode="override"  Start from game_001, overwriting any existing results.
@@ -289,24 +292,26 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
     if mode == "append":
         last_done = _last_completed_game(scenario)
         start_from = last_done + 1
-        if start_from > num_games:
-            print(
-                f"\nNothing to do: {last_done} games already completed for scenario '{scenario}' (target: {num_games})."
-            )
-            return
+        # if start_from > num_games:
+        #     print(
+        #         f"\nNothing to do: {last_done} games already completed for scenario '{scenario}' (target: {num_games})."
+        #     )
+        #     return
         if last_done > 0:
             print(f"\nAppend mode: resuming from game {start_from} ({last_done} games already completed).")
+
     elif mode == "override":
         start_from = 1
+
         print("\nOverride mode: starting fresh from game_001.")
     else:
         raise ValueError("Mode can only be either append or override.")
 
-    games_to_run = num_games - start_from + 1
+    games_to_run = num_games
 
     print(f"\n{'=' * 62}")
     print(f"  EXPERIMENT : {scenario}")
-    print(f"  Games      : {start_from:03d} → {num_games:03d}  ({games_to_run} to run)")
+    print(f"  Games      : {start_from:03d} → {start_from + num_games - 1:03d}  ({games_to_run} to run)")
     print(f"  Villager model : {VILLAGER_MODEL}")
     print(f"  Wolf model     : {WOLF_MODEL}")
     print(f"{'=' * 62}\n")
@@ -317,12 +322,21 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
 
     results: list[dict] = []
 
-    for i in range(start_from, num_games + 1):
+    for i in range(start_from, start_from + num_games):
         game_id = f"{i:03d}"
+        strategies_src = (Path(__file__).parent / "strategies" / scenario).resolve()
+        player_strategies_dst = (
+            Path(__file__).parent / "game_logs" / scenario / f"game_{game_id}" / "player_strategies"
+        ).resolve()
+        player_strategies_dst.mkdir(parents=True, exist_ok=True)
+        if strategies_src.exists():
+            for f in strategies_src.iterdir():
+                if f.is_file():
+                    shutil.copy2(f, player_strategies_dst / f.name)
 
         roles = assign_roles_round_robin()
         role_summary = ", ".join(f"{n}={r.value}" for n, r in roles.items())
-        print(f"\n--- Game {i:3d} / {num_games}  [{game_id}] ---")
+        print(f"\n--- Game {i:3d} / {start_from + num_games - 1}  [{game_id}] ---")
         print(f"    Roles: {role_summary}")
 
         # No try/except — any error stops the program immediately
@@ -335,7 +349,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
 
     # ── Final summary ──────────────────────────────────────────────────
     print(f"\n{'=' * 62}")
-    print(f"  RESULTS — {scenario}  (games {start_from:03d}-{num_games:03d})")
+    print(f"  RESULTS — {scenario}  (games {start_from:03d}-{start_from + num_games - 1:03d})")
     print(f"{'=' * 62}")
 
     villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
@@ -357,7 +371,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
 
     new_block = "\n".join(
         [
-            f"Run: games {start_from:03d}-{num_games:03d}  |  mode={mode}  |  scenario={scenario}",
+            f"Run: games {start_from:03d}-{start_from + num_games - 1:03d}  |  mode={mode}  |  scenario={scenario}",
             f"Villager model : {VILLAGER_MODEL}",
             f"Wolf model     : {WOLF_MODEL}",
             f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",
@@ -381,4 +395,5 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "override"
 
 if __name__ == "__main__":
     args = parse_args()
+    print(args)
     run(scenario=args.scenario, num_games=args.games, mode=args.mode)

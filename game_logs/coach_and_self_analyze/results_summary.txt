@@ -1,0 +1,46 @@
+Run: games 001-001  |  mode=override  |  scenario=coach_and_self_analyze
+Villager model : gpt-4o-mini
+Wolf model     : gpt-4o
+Villager wins  : 0 / 1  (0.0%)
+Wolf wins      : 1 / 1  (100.0%)
+
+Per-game results:
+  001: Werewolves  Nhan=Guard, Cong=Witch, Nam=Villager, Jin=Villager, Hoang=Seer, Riley=Werewolf, Meg=Werewolf
+
+Run: games 002-002  |  mode=append  |  scenario=coach_and_self_analyze
+Villager model : gpt-4o-mini
+Wolf model     : gpt-4o
+Villager wins  : 0 / 1  (0.0%)
+Wolf wins      : 1 / 1  (100.0%)
+
+Per-game results:
+  002: Werewolves  Nhan=Guard, Cong=Witch, Nam=Villager, Jin=Villager, Hoang=Seer, Riley=Werewolf, Meg=Werewolf
+
+Run: games 003-002  |  mode=append  |  scenario=coach_and_self_analyze
+Villager model : gpt-4o-mini
+Wolf model     : gpt-4o
+Villager wins  : 0 / 2  (0.0%)
+Wolf wins      : 0 / 2  (0.0%)
+
+Per-game results:
+
+Run: games 003-005  |  mode=append  |  scenario=coach_and_self_analyze
+Villager model : gpt-4o-mini
+Wolf model     : gpt-4o
+Villager wins  : 1 / 2  (50.0%)
+Wolf wins      : 2 / 2  (100.0%)
+
+Per-game results:
+  003: Werewolves  Nhan=Guard, Cong=Witch, Nam=Villager, Jin=Villager, Hoang=Seer, Riley=Werewolf, Meg=Werewolf
+  004: Werewolves  Nhan=Witch, Cong=Villager, Nam=Villager, Jin=Seer, Hoang=Guard, Riley=Werewolf, Meg=Werewolf
+  005: Villagers  Nhan=Villager, Cong=Villager, Nam=Seer, Jin=Guard, Hoang=Witch, Riley=Werewolf, Meg=Werewolf
+
+Run: games 006-007  |  mode=append  |  scenario=coach_and_self_analyze
+Villager model : gpt-4o-mini
+Wolf model     : gpt-4o
+Villager wins  : 0 / 2  (0.0%)
+Wolf wins      : 2 / 2  (100.0%)
+
+Per-game results:
+  006: Werewolves  Nhan=Guard, Cong=Seer, Nam=Villager, Jin=Witch, Hoang=Villager, Riley=Werewolf, Meg=Werewolf
+  007: Werewolves  Nhan=Witch, Cong=Seer, Nam=Villager, Jin=Villager, Hoang=Guard, Riley=Werewolf, Meg=Werewolf

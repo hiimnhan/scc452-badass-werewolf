@@ -18,4 +18,8 @@ def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> 
 
 def write_to_file(path: Path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
+    if isinstance(content, list):
+        content = "\n".join(str(item) for item in content)
+    elif not isinstance(content, str):
+        content = str(content)
     path.write_text(content)

@@ -183,7 +183,7 @@ No extra text, no markdown, no code fences.
         prompt = f"""
 {context}
 
-Write concise, actionable feedback for the villager-side players.
+Write concise, actionable feedback for the villager-side players using the roles of the players, NOT their names.
 
 Focus on:
 - Specific mistakes made that allowed wolves to survive or mislead
