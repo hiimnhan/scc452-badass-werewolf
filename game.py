@@ -12,6 +12,7 @@ from langchain_core.runnables import RunnableConfig
 from enum import Enum
 import random
 import math
+from constants import GAME_SUMMARY_FILENAME, ROLES_FILENAME, WOLF_DEBATE_LOG_FILENAME, WOLF_TARGET_LOG_FILENAME, GUARD_LOG_FILENAME, SEER_LOG_FILENAME, WITCH_LOG_FILENAME, SUSPICION_LOG_FILENAME, PLAYER_NOTE_FILENAME
 
 from langgraph.graph import StateGraph, END
 
@@ -115,6 +116,7 @@ class GameState:
             round_log[name] = player_objects[name]._suspicion
 
         tqdm.tqdm.write(f"\n\n=== Round {gs._round_num} ===")
+        tqdm.tqdm.write("*** Night ***")
         active_wolves = [w for w in gs._werewolves if w in gs._alive_players]
         gs._eliminated = None  # Crucial: Reset for the logic of wolf agreement of target
 
@@ -170,7 +172,7 @@ class GameState:
 
         gs._wolf_target_log.append([gs._round_num, gs._eliminated])  # Log _wolf_target_log
 
-        tqdm.tqdm.write(f"\n=> Wolves finalized elimination target: {gs._eliminated}")
+        tqdm.tqdm.write(f"\n• Wolves finalized elimination target: {gs._eliminated}")
 
         gs._phase = Phase.PROTECT
         gs._step = 0
@@ -192,7 +194,7 @@ class GameState:
         if not protect_target:
             raise ValueError(f"{guard_name} failed to specify a protection target.")
 
-        tqdm.tqdm.write(f"{guard_name} protected {protect_target}")
+        tqdm.tqdm.write(f"• {guard_name} protected {protect_target}")
         gs._guard_log.append([gs._round_num, protect_target, analysis])
 
         gs._protected = protect_target
@@ -231,7 +233,7 @@ class GameState:
         seer_obj.reveal_and_update(target, is_wolf, gs._round_num)
 
         # Private terminal output (for debugging; never sent to players)
-        tqdm.tqdm.write(f"{seer_name} investigated {target} — result: {'WOLF' if is_wolf else 'not a wolf'}")
+        tqdm.tqdm.write(f"• {seer_name} investigated {target} — Result: {'WOLF' if is_wolf else 'not a wolf'}")
 
         # Game-level summary log (visible to coach post-game, not to players)
         gs._seer_log.append([gs._round_num, target, is_wolf, analysis])
@@ -262,7 +264,7 @@ class GameState:
 
         # Skip if the witch has already used both potions!
         if not witch_obj.has_any_potion():
-            tqdm.tqdm.write(f"{witch_name} has no potions left. Skipping turn.")
+            tqdm.tqdm.write(f"• {witch_name} has no potions left. Skipping turn.")
             witch_obj.record_own_action(gs._round_num, "Night", "No potions left to perform actions.")
             gs._saved = None
             gs._poisoned = None
@@ -290,9 +292,9 @@ class GameState:
         if poison_target:
             action_parts.append(f"used POISON potion on {poison_target}")
         if action_parts:
-            announcement = f"{witch_name} {' and '.join(action_parts)}"
+            announcement = f"• {witch_name} {' and '.join(action_parts)}"
         else:
-            announcement = f"{witch_name} did not use any potions."
+            announcement = f"• {witch_name} did not use any potions."
 
         tqdm.tqdm.write(announcement)
         gs._witch_log.append([gs._round_num, gs._saved, gs._poisoned, analysis])
@@ -326,9 +328,9 @@ class GameState:
 
             # Safely format the announcement string
             verb = "was" if len(killed_players) == 1 else "were"
-            announcement = f"{' and '.join(killed_players)} {verb} killed during the night."
+            announcement = f"➜ {' and '.join(killed_players)} {verb} killed during the night."
         else:
-            announcement = "No one was killed during the night."
+            announcement = "➜ No one was killed during the night."
 
         # Write announcement to terminal
         tqdm.tqdm.write(announcement)
@@ -347,7 +349,7 @@ class GameState:
 
         # 2. Have ALIVE players update their suspicions in parallel
         if gs._alive_players:
-            tqdm.tqdm.write("=> Players are analyzing the night's outcome...")
+            # tqdm.tqdm.write("\n### Players are analyzing the night's outcome...")
             with ThreadPoolExecutor(max_workers=max(1, len(gs._alive_players))) as executor:
                 threads = [
                     executor.submit(player_objects[name].update_suspicion_after_night)
@@ -358,11 +360,6 @@ class GameState:
                 # Pause the game until everyone is done thinking
                 for thread in threads:
                     thread.result()
-
-        # 3. Have the freshly killed players write their final notes to disk
-        # for name in killed_players:
-        #     if name in player_objects:
-        #         player_objects[name].compile_note()
 
         # Advance State
         gs._phase = Phase.CHECK_WINNER_NIGHT
@@ -383,6 +380,8 @@ class GameState:
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
 
+        tqdm.tqdm.write("\n*** Day ***")
+        
         # Ensure the round dictionary exists
         round_log = gs._game_summary_log.setdefault(gs._round_num, {})
         # Ensure the day_debate list exists
@@ -415,9 +414,9 @@ class GameState:
 
         # Fallback if the LLM completely fails
         if not statement:
-            statement = "I have nothing to add at this moment."
+            statement = "• I have nothing to add at this moment."
 
-        tqdm.tqdm.write(f"{chosen_speaker}: {statement}")
+        tqdm.tqdm.write(f"• {chosen_speaker}: {statement}")
 
         # Log the statement from the player
         debate_log.append({"speaker": chosen_speaker, "statement": statement})
@@ -454,13 +453,15 @@ class GameState:
         """All alive players cast a vote simultaneously to exile someone."""
         gs = state["game"]
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
-
+        
+        round_log = gs._game_summary_log.setdefault(gs._round_num, {})
+        debate_log: list[dict] = round_log.setdefault("day_debate", [])
         votes: list[dict] = []
 
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(gs._alive_players)) as executor:
             futures = {
-                name: executor.submit(player_objects[name].vote, gs._alive_players) for name in gs._alive_players
+                name: executor.submit(player_objects[name].vote, gs._alive_players, debate_log) for name in gs._alive_players
             }
 
             for name, future in futures.items():
@@ -509,7 +510,7 @@ class GameState:
         # 4. Print the dramatic results to your terminal
         tqdm.tqdm.write("\n=== VOTING RESULTS ===")
         for vote in votes:
-            tqdm.tqdm.write(vote["reasoning"])
+            tqdm.tqdm.write(f"• {vote["reasoning"]}")
 
         if exiled_player:
             announcement = f"=> {exiled_player} received {max_votes} votes. The player will be exiled!"
@@ -543,10 +544,6 @@ class GameState:
         if gs._exiled:
             # Safely remove the player from the alive list
             gs._alive_players = [p for p in gs._alive_players if p != gs._exiled]
-
-        # We want the exiled player to write their final note before they "die"
-        # if gs._exiled and gs._exiled in player_objects:
-        #     player_objects[gs._exiled].compile_note()
 
         # Log the exiled player
         gs._game_summary_log[gs._round_num]["day_exiled"] = gs._exiled
@@ -607,16 +604,6 @@ class GameState:
         scenario_config = SCENARIO_CONFIG[scenario]
 
         tqdm.tqdm.write(f"\n=== GAME OVER ===\nWinner: {gs._winner}")
-
-        # 1. Update surviving players' notes
-        # with ThreadPoolExecutor(max_workers=len(gs._alive_players)) as executor:
-        #     threads = [
-        #         executor.submit(player_objects[name].compile_note)
-        #         for name in gs._alive_players
-        #         if name in player_objects
-        #     ]
-        #     for thread in threads:
-        #         thread.result()
 
         # ==========================================
         # FORMATTING LOGS TO MARKDOWN
@@ -694,13 +681,13 @@ class GameState:
         player_note_dir.mkdir(parents=True, exist_ok=True)
 
         # Write Game Summary
-        write_to_file(game_dir / "game_summary.md", formatted_summary_md)
+        write_to_file(game_dir / GAME_SUMMARY_FILENAME, formatted_summary_md)
 
         # Write Roles
         role_lines = ["# Roles Assigned"]
         for name, role in gs._roles.items():
             role_lines.append(f"**{name}:** {role.value}")
-        write_to_file(game_dir / "roles.md", "\n".join(role_lines))
+        write_to_file(game_dir / ROLES_FILENAME, "\n".join(role_lines))
 
         # --- B. Format Secret Action Logs ---
 
@@ -715,7 +702,7 @@ class GameState:
             wolf_lines.append(f"**Private Analysis:** {analysis}")
             wolf_lines.append("---")
         write_to_file(
-            player_night_action_log_dir / "wolf_debate_log.md",
+            player_night_action_log_dir / WOLF_DEBATE_LOG_FILENAME,
             "\n".join(wolf_lines) if len(wolf_lines) > 1 else "No wolf debate recorded.",
         )
 
@@ -725,7 +712,7 @@ class GameState:
             round_number, target = entry
             wolf_target_lines.append(f"**Round {round_number}:** Target **{target}**\n---")
         write_to_file(
-            player_night_action_log_dir / "wolf_target_log.md",
+            player_night_action_log_dir / WOLF_TARGET_LOG_FILENAME,
             "\n".join(wolf_target_lines) if len(wolf_target_lines) > 1 else "No wolf target log.",
         )
 
@@ -735,7 +722,7 @@ class GameState:
             round_number, target, analysis = entry
             guard_lines.append(f"**Round {round_number}:** Protected **{target}**\n> Analysis: {analysis}\n---")
         write_to_file(
-            player_night_action_log_dir / "guard_log.md",
+            player_night_action_log_dir / GUARD_LOG_FILENAME,
             "\n".join(guard_lines) if len(guard_lines) > 1 else "No guard actions.",
         )
 
@@ -747,7 +734,7 @@ class GameState:
                 f"**Round {round_number}:** Investigated **{target}** (Result: {'WOLF' if is_wolf else 'Villager'})\n> Analysis: {analysis}\n---"
             )
         write_to_file(
-            player_night_action_log_dir / "seer_log.md",
+            player_night_action_log_dir / SEER_LOG_FILENAME,
             "\n".join(seer_lines) if len(seer_lines) > 1 else "No seer actions.",
         )
 
@@ -759,7 +746,7 @@ class GameState:
                 f"**Round {round_number}:** Saved **{saved}** | Poisoned **{poisoned}**\n> Analysis: {analysis}\n---"
             )
         write_to_file(
-            player_night_action_log_dir / "witch_log.md",
+            player_night_action_log_dir / WITCH_LOG_FILENAME,
             "\n".join(witch_lines) if len(witch_lines) > 1 else "No witch actions.",
         )
 
@@ -767,7 +754,7 @@ class GameState:
 
         for name, player in player_objects.items():
             role_name = player._role.value
-            write_to_file(player_note_dir / f"{name}_{role_name}_note.md", str(player._note))
+            write_to_file(player_note_dir / PLAYER_NOTE_FILENAME.format(name=name, role=role_name), str(player._note))
 
         tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
 
@@ -798,7 +785,7 @@ class GameState:
             suspicion_lines.append("---\n")  # Visual divider between rounds
 
         # Save to disk
-        write_to_file(game_dir / "suspicion_log.md", "\n".join(suspicion_lines))
+        write_to_file(game_dir / SUSPICION_LOG_FILENAME, "\n".join(suspicion_lines))
 
         return {"game": gs}
 
