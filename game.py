@@ -12,6 +12,7 @@ from langchain_core.runnables import RunnableConfig
 from enum import Enum
 import random
 import math
+import json
 from constants import GAME_SUMMARY_FILENAME, ROLES_FILENAME, WOLF_DEBATE_LOG_FILENAME, WOLF_TARGET_LOG_FILENAME, GUARD_LOG_FILENAME, SEER_LOG_FILENAME, WITCH_LOG_FILENAME, SUSPICION_LOG_FILENAME, PLAYER_NOTE_FILENAME
 
 from langgraph.graph import StateGraph, END
@@ -610,6 +611,10 @@ class GameState:
         # ==========================================
 
         # --- A. Format Game Summary ---
+        
+        json_string = json.dumps(gs._game_summary_log, indent=4)
+        write_to_file(game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string) # Store game_summary as json
+        
         summary_lines = []
         winner = gs._game_summary_log.get("winner", "Unknown")
         summary_lines.append(f"# Game Summary\n**Winner:** {winner}\n")
