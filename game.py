@@ -331,9 +331,9 @@ class GameState:
 
             # Safely format the announcement string
             verb = "was" if len(killed_players) == 1 else "were"
-            announcement = f"➜ {' and '.join(killed_players)} {verb} killed during the night."
+            announcement = f"=> {' and '.join(killed_players)} {verb} killed during the night."
         else:
-            announcement = "➜ No one was killed during the night."
+            announcement = "=> No one was killed during the night."
 
         # Write announcement to terminal
         tqdm.tqdm.write(announcement)
@@ -374,6 +374,10 @@ class GameState:
         gs = state["game"]
         winner = self._compute_current_winner(gs)
         gs._phase = Phase.DEBATE if not winner else Phase.END
+        
+        if gs._phase == Phase.DEBATE:
+            tqdm.tqdm.write("\n*** Day ***")
+        
         gs._step = 0
 
         return {"game": gs}
@@ -382,8 +386,6 @@ class GameState:
         gs = state["game"]
         player_objects: dict[str, BasePlayer] = config.get("configurable", {}).get("player_objects", {})
         MAX_DEBATE_TURNS = config.get("configurable", {}).get("MAX_DEBATE_TURNS", 6)
-
-        tqdm.tqdm.write("\n*** Day ***")
         
         # Ensure the round dictionary exists
         round_log = gs._game_summary_log.setdefault(gs._round_num, {})
