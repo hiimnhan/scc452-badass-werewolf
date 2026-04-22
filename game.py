@@ -25,6 +25,7 @@ from constants import (
 )
 from pathlib import Path
 from utils import write_to_file
+import copy
 
 from langgraph.graph import StateGraph, END
 
@@ -54,7 +55,7 @@ class Phase(Enum):
 class GameState:
     def __init__(
         self,
-        round_num: int = 0,
+        round_num: int = 1,
         players: list[str] = [],
         alive_players: list[str] = [],
         villagers: list[str] = [],
@@ -125,7 +126,7 @@ class GameState:
         # Logging suspicion
         round_log = gs._suspicion_log.setdefault(gs._round_num, {})
         for name in gs._alive_players:
-            round_log[name] = player_objects[name]._suspicion
+            round_log[name] = copy.deepcopy(player_objects[name]._suspicion)
 
         tqdm.tqdm.write(f"\n\n=== Round {gs._round_num} ===")
         tqdm.tqdm.write("*** Night ***")
