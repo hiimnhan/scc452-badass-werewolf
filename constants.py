@@ -4,7 +4,6 @@ COACH_STRATEGY_FILENAME = "coach_strategy.txt"
 PLAYER_FINAL_STRATEGY_FILENAME = "{name}_strategy.txt"
 PLAYER_NOTE_FILENAME = "{name}_{role}_note.md"
 GAME_SUMMARY_FILENAME = "game_summary.md"
-ROLES_FILENAME = "roles.md"
 SUSPICION_LOG_FILENAME = "suspicion_log.md"
 
 WOLF_DEBATE_LOG_FILENAME = "wolf_debate_log.md"

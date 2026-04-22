@@ -355,7 +355,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
 
         # results.append({"game_id": game_id, "winner": winner, "roles": roles})
         print(f"    Winner: {winner}")
-        result = {"game_id": game_id, "winner": winner, "rounds": total_rounds, "roles": roles}
+        result = {"game_id": game_id, "winner": winner, "rounds": total_rounds, "roles": role_summary}
         out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
         out_path.parent.mkdir(parents=True, exist_ok=True)
 

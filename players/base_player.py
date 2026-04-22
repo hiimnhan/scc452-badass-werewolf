@@ -34,7 +34,7 @@ GAME_RULES = """
 === WEREWOLF — OFFICIAL GAME RULES ===
  
 FACTIONS
-  Villagers win if all Werewolves are eliminated.
+  Villagers win if all Werewolves are eliminated. Villagers, Seer, Guard, and Witch are on the villager side. Except their role, these players do not know who has what role.
   Werewolves win if they equal or outnumber Villagers.
  
 PHASES (repeated each round until a faction wins)
@@ -64,8 +64,7 @@ INFORMATION RULES
   • The eliminated player's role is NOT revealed publicly.
   • The Guard's protection target is never announced.
   • The Seer's results are private until the Seer chooses to reveal them.
-  • The Witch sees who the wolves targeted ONLY if her Save potion is still available.
-    Once the Save potion has been used, the Witch no longer learns the wolf target.
+  • The Witch sees who the wolves targeted ONLY if her Save potion is still available. Once the Save potion has been used, the Witch no longer learns the wolf target.
 === END OF RULES ===
 """
 
@@ -265,10 +264,13 @@ class BasePlayer(ABC):
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
 
-        prompt = prompt_template.format(name=self._name, role=self._role.value, note=self._note)
-
-        resp = self.call_model(prompt, max_tokens=800)
-
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            note=self._note
+        )
+        
+        resp = self.call_model(prompt, max_tokens=2000)
         updates: dict = resp.get("updates", {})
 
         for player, data in updates.items():
@@ -284,24 +286,42 @@ class BasePlayer(ABC):
 
         return resp
 
-    def update_suspicion_from_statement(self, speaker_name: str, statement: str) -> dict:
-        """Update suspicion scores for ALL players after a statement is made.
-
-        The LLM receives the speaker's statement AND the existing note, and is asked to
-        EXTEND the reasons for any relevant players.
-
-        Returns the raw LLM response dict.
-        """
+    def update_suspicion_from_statement(self, debate_log: list, latest_speaker_name: str, round_num: int) -> dict:
+        """Update suspicion scores for ALL players after a statement is made."""
+        
+        formatted_current_debate = ""
+        if debate_log:
+            for speaker_statement in debate_log:
+                formatted_current_debate += f"\n• {speaker_statement['speaker']}: {speaker_statement['statement']}"
+        else:
+            formatted_current_debate = "No statements yet in this round."
+            
+        early_round_warning = ""
+        if round_num == 1:
+            early_round_warning = (
+                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+                "There was NO 'yesterday' and NO previous discussion. "
+                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+            )
+        
         if self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
 
         prompt = prompt_template.format(
-            name=self._name, role=self._role.value, speaker_name=speaker_name, statement=statement, note=self._note
+            name=self._name,
+            role=self._role.value,
+            round_num=round_num,
+            formatted_current_debate=formatted_current_debate,
+            note=self._note,
+            speaker_name=latest_speaker_name,
+            early_round_warning=early_round_warning
         )
 
-        resp = self.call_model(prompt, max_tokens=800)
+        resp = self.call_model(prompt, max_tokens=2000)
 
         # Extract the updates dictionary from the AI's response
         updates = resp.get("updates", {})
@@ -323,7 +343,7 @@ class BasePlayer(ABC):
                 # Apply the update
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
-        return resp  # TODO: use updates in resp (log it!) for belief accuracy
+        return resp
 
     def update_suspicion_from_vote(
         self, current_round_vote_logs: list[str], exiled_player: str, game_status: str
@@ -347,11 +367,13 @@ class BasePlayer(ABC):
             prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
 
         prompt = prompt_template.format(
-            name=self._name, role=self._role.value, voting_summary=voting_summary, note=self._note
+            name=self._name,
+            role=self._role.value,
+            voting_summary=voting_summary,
+            note=self._note
         )
 
-        # Use 800 max_tokens since it outputs updates for all players
-        resp = self.call_model(prompt, max_tokens=800)
+        resp = self.call_model(prompt, max_tokens=2000)
 
         # Extract and apply the updates (using the plural _suspicions we fixed earlier!)
         updates: dict = resp.get("updates", {})
@@ -369,7 +391,7 @@ class BasePlayer(ABC):
 
                 self._suspicion[player] = {"score": new_score, "reason": new_reason}
 
-        return resp  # TODO: use updates in resp (log it!) for belief accuracy
+        return resp
 
     # ── Intra-game: note (the human-message context block) ──────────────
 
@@ -404,7 +426,7 @@ class BasePlayer(ABC):
 
     # ── Intra-game: decision actions ────────────────────────────────────
 
-    def get_bid(self) -> tuple[int, dict]:
+    def get_bid(self, debate_log: list, round_num: int) -> tuple[int, dict]:
         """Return a bid score 0-10: how urgently this player wants to speak next.
 
         High suspicion of a specific player → high urgency.
@@ -412,6 +434,13 @@ class BasePlayer(ABC):
 
         Returns (bid_score: int, log_dict: dict).
         """
+        formatted_current_debate = ""
+        if debate_log:
+            for speaker_statement in debate_log:
+                formatted_current_debate += f"\n{speaker_statement['speaker']}: {speaker_statement['statement']}"
+        else:
+            formatted_current_debate = "No statement yet has been made."
+            
         if self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_BID_PROMPT_TEMPLATE
         else:
@@ -420,7 +449,9 @@ class BasePlayer(ABC):
         prompt = prompt_template.format(
             name=self._name,
             role=self._role.value,
-            note=self._note
+            note=self._note,
+            round_num=round_num,
+            formatted_current_debate=formatted_current_debate
         )
         resp = self.call_model(prompt, max_tokens=100)
 
@@ -432,7 +463,7 @@ class BasePlayer(ABC):
 
         return bid, resp
 
-    def vote(self, alive_players: list[str], debate_log: list[dict]) -> tuple[str | None, dict]:
+    def vote(self, alive_players: list[str], debate_log: list[dict], round_num: int) -> tuple[str | None, dict]:
         """Vote to eliminate a player during the day phase, or abstain."""
         
         available = [p for p in alive_players if p != self._name]
@@ -461,7 +492,8 @@ class BasePlayer(ABC):
             role=self._role.value,
             note=self._note,
             formatted_current_debate=formatted_current_debate,
-            available=available_str
+            available=available_str,
+            round_num=round_num
         )
 
         resp = self.call_model(prompt, max_tokens=200)
@@ -479,7 +511,7 @@ class BasePlayer(ABC):
         # 3. Otherwise, return the valid target!
         return target, resp
 
-    def debate(self, debate_log: list, alive_players: list[str]) -> tuple[str, dict]:
+    def debate(self, debate_log: list, alive_players: list[str], round_num: int) -> tuple[str, dict]:
         """Contribute a statement to the day debate.
         Returns (statement, log_dict).
         """
@@ -491,10 +523,20 @@ class BasePlayer(ABC):
         else:
             formatted_current_debate = "You speak first."
 
+        early_round_warning = ""
+        if round_num == 1:
+            early_round_warning = (
+                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+                "There was NO 'yesterday' and NO previous discussion. "
+                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+            )
+            
         alive_players_str = ", ".join(alive_players)
 
         # Select the right psychology for the debate
-        if self._role in WOLF_SIDE:  # Assuming WOLF_SIDE is defined (e.g., [Role.WEREWOLF])
+        if self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_DEBATE_PROMPT_TEMPLATE
         elif self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_DEBATE_PROMPT_TEMPLATE
@@ -505,6 +547,8 @@ class BasePlayer(ABC):
             note=self._note,
             alive_players=alive_players_str,
             formatted_current_debate=formatted_current_debate,
+            round_num=round_num,
+            early_round_warning=early_round_warning
         )
 
         resp = self.call_model(prompt, max_tokens=200)
@@ -517,7 +561,7 @@ class BasePlayer(ABC):
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def call_model(self, prompt: str, max_tokens: int = 200, timeout: int = 100) -> dict:
+    def call_model(self, prompt: str, max_tokens: int = 200, timeout: int = 200) -> dict:
         """Send a two-message request to the LLM.
 
         SystemMessage : self._setup_prompt = role + personality + strategy + rules.

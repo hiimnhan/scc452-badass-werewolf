@@ -1,0 +1,344 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Neutral behavior continues, but now seems less relevant compared to Meg and Hoang's involvement."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No change, actions remain unknown."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unremarkable behavior continues, but now seems overshadowed by the developing drama between Meg, Hoang, and Nhan."
+            },
+            "Hoang": {
+                "score": 0.65,
+                "reason": "Initially neutral, but now aggressively accusing Nhan of being a Werewolf. Their concern for Nhan's behavior seems genuine, but it might be a strategic move to deflect suspicion."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Still a concern due to aggressive behavior, but not as directly implicated as Meg."
+            },
+            "Meg": {
+                "score": 0.85,
+                "reason": "Aggressive deflection, unfounded accusations, trying to shift focus to Nhan, and now seemingly supported by Hoang's accusations."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.95,
+                "reason": "Nhan's defensive behavior, aggressive accusations, and now being accused by Hoang increase their suspicion score. They are at the center of attention, and their behavior is becoming increasingly wolf-like."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Nam's argument with Jin remains a concern, but their behavior has not changed significantly since then."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Jin's confirmed non-wolf status and neutral behavior make them a relatively safe player."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Updated from previous notes"
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Riley still has no significant changes or notable behavior, making them an unknown quantity."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "CONFIRMED wolf via seer investigation."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.75,
+                "reason": "Genuine attempt to root out wolves, but previous nuanced perspective raises some concerns"
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Confirmed wolf through death"
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Insincere statement and attempt to shift focus, but may be trying to root out wolves"
+            },
+            "Hoang": {
+                "score": 0.98,
+                "reason": "Bandwagoning with wolves to target Riley, and defensive behavior trying to save themselves"
+            },
+            "Riley": {
+                "score": 0.99,
+                "reason": "Coordinated wolf effort to target them, and suspicious behavior throughout the game"
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Confirmed wolf through death"
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Exile doesn't impact my understanding, but their high suspicion score remains a concern."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Unexpected death raises questions about the Witch's involvement, but Cong's neutral behavior doesn't provide enough information."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Neutral behavior and lack of involvement in discussions remain unchanged."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Defensive vote against Riley, contradicting previous accusations, and aggressive behavior increases wolf-like traits."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Exile vote from Hoang and Jin raises concerns about their involvement, but their behavior seems wolf-like."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Eliminated due to high suspicion score and potential wolf target."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.98,
+                "reason": "Consistent wolf-like behavior, suspicious vote for Riley"
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No changes, still on the radar due to initial suspicious behavior"
+            },
+            "Nam": {
+                "score": 0.3,
+                "reason": "Voted to exile Riley, may be genuine villager trying to eliminate a wolf"
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Voted to exile Riley, may be genuine villager trying to eliminate a wolf"
+            },
+            "Riley": {
+                "score": 0.99,
+                "reason": "Exile confirms wolf-like behavior, aggressive deflection and counter-accusations"
+            },
+            "Meg": {
+                "score": 0.45,
+                "reason": "No changes, calm reaction still raises suspicions"
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Nhan's initial target status and survival still pose a threat, but the current voting pattern does not significantly impact their score."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Cong is deceased and no longer a threat."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Nam's direct accusation without hesitation suggests a lack of special knowledge, but their ability to coordinate with others makes them a potential threat."
+            },
+            "Jin": {
+                "score": 0.75,
+                "reason": "Jin's vote and statement imply they might be working with others or have some insight, but their lack of aggressive behavior keeps their threat level moderate."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Hoang's direct accusation and potential coordination with others increases their threat level, suggesting a possible power role or high village awareness."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Meg is deceased and no longer a factor, but was a fellow Werewolf."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.6,
+                "reason": "Initial target, but survival suggests possible Guard protection or Witch save. Accusation against me may indicate defensiveness or an attempt to shift attention. Increasing score due to direct confrontation."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Accusing Nhan may be a genuine attempt to uncover a wolf or a tactic to gain trust. Needs further observation to determine their alignment and potential threat."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Confirmed Werewolf ally, no threat to our faction."
+            }
+        }
+    },
+    "2": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.95,
+                "reason": "Nhan's defensive behavior, aggressive accusations, and now being accused by Hoang increase their suspicion score. They are at the center of attention, and their behavior is becoming increasingly wolf-like."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Nam's argument with Jin remains a concern, but their behavior has not changed significantly since then."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Jin's confirmed non-wolf status and neutral behavior make them a relatively safe player."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Updated from previous notes"
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Riley still has no significant changes or notable behavior, making them an unknown quantity."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "CONFIRMED wolf via seer investigation."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.75,
+                "reason": "Genuine attempt to root out wolves, but previous nuanced perspective raises some concerns"
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Confirmed wolf through death"
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Insincere statement and attempt to shift focus, but may be trying to root out wolves"
+            },
+            "Hoang": {
+                "score": 0.98,
+                "reason": "Bandwagoning with wolves to target Riley, and defensive behavior trying to save themselves"
+            },
+            "Riley": {
+                "score": 0.99,
+                "reason": "Coordinated wolf effort to target them, and suspicious behavior throughout the game"
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Confirmed wolf through death"
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Exile doesn't impact my understanding, but their high suspicion score remains a concern."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Unexpected death raises questions about the Witch's involvement, but Cong's neutral behavior doesn't provide enough information."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Neutral behavior and lack of involvement in discussions remain unchanged."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Defensive vote against Riley, contradicting previous accusations, and aggressive behavior increases wolf-like traits."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Exile vote from Hoang and Jin raises concerns about their involvement, but their behavior seems wolf-like."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Eliminated due to high suspicion score and potential wolf target."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.98,
+                "reason": "Consistent wolf-like behavior, suspicious vote for Riley"
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No changes, still on the radar due to initial suspicious behavior"
+            },
+            "Nam": {
+                "score": 0.3,
+                "reason": "Voted to exile Riley, may be genuine villager trying to eliminate a wolf"
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Voted to exile Riley, may be genuine villager trying to eliminate a wolf"
+            },
+            "Riley": {
+                "score": 0.99,
+                "reason": "Exile confirms wolf-like behavior, aggressive deflection and counter-accusations"
+            },
+            "Meg": {
+                "score": 0.45,
+                "reason": "No changes, calm reaction still raises suspicions"
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Nhan's initial target status and survival still pose a threat, but the current voting pattern does not significantly impact their score."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Cong is deceased and no longer a threat."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Nam's direct accusation without hesitation suggests a lack of special knowledge, but their ability to coordinate with others makes them a potential threat."
+            },
+            "Jin": {
+                "score": 0.75,
+                "reason": "Jin's vote and statement imply they might be working with others or have some insight, but their lack of aggressive behavior keeps their threat level moderate."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Hoang's direct accusation and potential coordination with others increases their threat level, suggesting a possible power role or high village awareness."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Meg is deceased and no longer a factor, but was a fellow Werewolf."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.6,
+                "reason": "Initial target, but survival suggests possible Guard protection or Witch save. Accusation against me may indicate defensiveness or an attempt to shift attention. Increasing score due to direct confrontation."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No new information, remains neutral threat."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Accusing Nhan may be a genuine attempt to uncover a wolf or a tactic to gain trust. Needs further observation to determine their alignment and potential threat."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Confirmed Werewolf ally, no threat to our faction."
+            }
+        }
+    }
+}

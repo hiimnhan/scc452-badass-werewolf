@@ -15,7 +15,6 @@ import math
 import json
 from constants import (
     GAME_SUMMARY_FILENAME,
-    ROLES_FILENAME,
     WOLF_DEBATE_LOG_FILENAME,
     WOLF_TARGET_LOG_FILENAME,
     GUARD_LOG_FILENAME,
@@ -184,8 +183,17 @@ class GameState:
             wolf_obj.record_own_action(gs._round_num, "Night", f"Final target: {gs._eliminated}")
 
         gs._wolf_target_log.append([gs._round_num, gs._eliminated])  # Log _wolf_target_log
+        
+        if len(active_wolves) >= 2:
+            wolf_action = f"{" and ".join(active_wolves)} (Wolves) targeted {gs._eliminated}."
+        else:
+            wolf_action = f"{active_wolves[0]} (Wolf) targeted {gs._eliminated}."
+        
+        round_log = gs._game_summary_log.setdefault(gs._round_num, {})
+        night_actions: list = round_log.setdefault("night_actions", [])
+        night_actions.append(wolf_action)
 
-        tqdm.tqdm.write(f"\n• Wolves finalized elimination target: {gs._eliminated}")
+        tqdm.tqdm.write(f"\n• {wolf_action}")
 
         gs._phase = Phase.PROTECT
         gs._step = 0
@@ -205,10 +213,15 @@ class GameState:
         protect_target, analysis, _ = guard_obj.protect(gs._alive_players, gs._round_num)
 
         if not protect_target:
-            raise ValueError(f"{guard_name} failed to specify a protection target.")
+            raise ValueError(f"{guard_name} (Guard) failed to specify a protection target.")
 
-        tqdm.tqdm.write(f"• {guard_name} protected {protect_target}")
+        guard_action = f"{guard_name} (Guard) chose to protect {protect_target}."
+        tqdm.tqdm.write(f"• {guard_action}")
         gs._guard_log.append([gs._round_num, protect_target, analysis])
+        
+        round_log = gs._game_summary_log.setdefault(gs._round_num, {})
+        night_actions: list = round_log.setdefault("night_actions", [])
+        night_actions.append(guard_action)
 
         gs._protected = protect_target
         gs._phase = Phase.UNMASK
@@ -237,7 +250,7 @@ class GameState:
 
         # Guard against empty response (error case — e.g. only self alive)
         if not target:
-            tqdm.tqdm.write(f"{seer_name} did not investigate this round.")
+            tqdm.tqdm.write(f"{seer_name} (Seer) did not investigate this round.")
             gs._phase = Phase.SAVE_OR_POISON
             return {"game": gs}
 
@@ -246,10 +259,15 @@ class GameState:
         seer_obj.reveal_and_update(target, is_wolf, gs._round_num)
 
         # Private terminal output (for debugging; never sent to players)
-        tqdm.tqdm.write(f"• {seer_name} investigated {target} — Result: {'WOLF' if is_wolf else 'not a wolf'}")
+        seer_action = f"{seer_name} (Seer) investigated {target} — Result: {'WOLF' if is_wolf else 'not a wolf'}."
+        tqdm.tqdm.write(f"• {seer_action}")
 
         # Game-level summary log (visible to coach post-game, not to players)
         gs._seer_log.append([gs._round_num, target, is_wolf, analysis])
+        
+        round_log = gs._game_summary_log.setdefault(gs._round_num, {})
+        night_actions: list = round_log.setdefault("night_actions", [])
+        night_actions.append(seer_action)
 
         # Store moderator-side record
         gs._unmasked = target
@@ -275,13 +293,19 @@ class GameState:
             gs._phase = Phase.RESOLVE_NIGHT
             return {"game": gs}
 
+        round_log = gs._game_summary_log.setdefault(gs._round_num, {})
+        night_actions: list = round_log.setdefault("night_actions", [])
+        
         # Skip if the witch has already used both potions!
         if not witch_obj.has_any_potion():
-            tqdm.tqdm.write(f"• {witch_name} has no potions left. Skipping turn.")
+            witch_action = f"{witch_name} (Witch) has no potions left. Skipping turn."
+            tqdm.tqdm.write(f"• {witch_action}")
             witch_obj.record_own_action(gs._round_num, "Night", "No potions left to perform actions.")
             gs._saved = None
             gs._poisoned = None
             gs._phase = Phase.RESOLVE_NIGHT
+            
+            night_actions.append(witch_action)
             return {"game": gs}
 
         # Call the Witch's action method
@@ -305,12 +329,13 @@ class GameState:
         if poison_target:
             action_parts.append(f"used POISON potion on {poison_target}")
         if action_parts:
-            announcement = f"• {witch_name} {' and '.join(action_parts)}"
+            announcement = f"• {witch_name} (Witch) {' and '.join(action_parts)}"
         else:
-            announcement = f"• {witch_name} did not use any potions."
+            announcement = f"• {witch_name} (Witch) did not use any potions."
 
         tqdm.tqdm.write(announcement)
         gs._witch_log.append([gs._round_num, gs._saved, gs._poisoned, analysis])
+        night_actions.append(announcement)
 
         # Advance the phase
         gs._phase = Phase.RESOLVE_NIGHT
@@ -383,10 +408,12 @@ class GameState:
         """Return to day phase or finish game if a faction wins."""
         gs = state["game"]
         winner = self._compute_current_winner(gs)
-        gs._phase = Phase.DEBATE if not winner else Phase.END
-
-        if gs._phase == Phase.DEBATE:
+        
+        if not winner:
+            gs._phase = Phase.DEBATE
             tqdm.tqdm.write("\n*** Day ***")
+        else:
+            gs._phase = Phase.END
 
         gs._step = 0
 
@@ -410,7 +437,7 @@ class GameState:
 
         # 1. Run bids in parallel
         with ThreadPoolExecutor(max_workers=len(next_possible_speakers)) as executor:
-            futures = {name: executor.submit(player_objects[name].get_bid) for name in next_possible_speakers}
+            futures = {name: executor.submit(player_objects[name].get_bid, debate_log, gs._round_num) for name in next_possible_speakers}
             for name, future in futures.items():
                 bid, raw_output = future.result()
                 bid_dict[name] = bid
@@ -424,7 +451,7 @@ class GameState:
         statement = None
         retries = 0
         while not statement and retries < 3:
-            statement, log = player_objects[chosen_speaker].debate(debate_log, gs._alive_players)
+            statement, log = player_objects[chosen_speaker].debate(debate_log, gs._alive_players, gs._round_num)
             retries += 1
 
         # Fallback if the LLM completely fails
@@ -441,9 +468,7 @@ class GameState:
         with ThreadPoolExecutor(max_workers=len(listeners)) as executor:
             threads = [
                 executor.submit(
-                    player_objects[name].update_suspicion_from_statement,
-                    chosen_speaker,
-                    statement,
+                    player_objects[name].update_suspicion_from_statement, debate_log, chosen_speaker, gs._round_num,
                 )
                 for name in listeners
             ]
@@ -476,7 +501,7 @@ class GameState:
         # 1. Run voting in parallel for all alive players
         with ThreadPoolExecutor(max_workers=len(gs._alive_players)) as executor:
             futures = {
-                name: executor.submit(player_objects[name].vote, gs._alive_players, debate_log)
+                name: executor.submit(player_objects[name].vote, gs._alive_players, debate_log, gs._round_num)
                 for name in gs._alive_players
             }
 
@@ -627,6 +652,11 @@ class GameState:
 
         # --- A. Format Game Summary ---
 
+        # Add roles to game summary
+        role_log = gs._game_summary_log.setdefault("roles", {})
+        for name, role in gs._roles.items():
+            role_log[name] = role.value
+        
         game_dir = (
             Path(__file__).parent
             / "game_logs"
@@ -642,12 +672,24 @@ class GameState:
         summary_lines = []
         winner = gs._game_summary_log.get("winner", "Unknown")
         summary_lines.append(f"# Game Summary\n**Winner:** {winner}\n")
+        
+        # Log roles
+        summary_lines.append("# Roles Assigned")
+        for name, role in gs._roles.items():
+            summary_lines.append(f"**{name}:** {role.value}")
+        summary_lines.append("\n")
 
         for round_num, data in gs._game_summary_log.items():
             if str(round_num) == "winner":
                 continue
 
             summary_lines.append(f"## Round {round_num}")
+            
+            # Night Actions
+            night_actions = data.get("night_actions", [])
+            summary_lines.append("**Night Actions:**")
+            for action in night_actions:
+                summary_lines.append(f"• {action}")
 
             # Night Outcomes
             night_kills = data.get("night_eliminated", [])
@@ -691,7 +733,6 @@ class GameState:
                 thread.result()
 
         # 4. Write per-game log files to disk
-
         player_night_action_log_dir = (game_dir / "player_night_action_log").resolve()
         player_note_dir = (game_dir / "player_note").resolve()
 
@@ -702,12 +743,6 @@ class GameState:
 
         # Write Game Summary
         write_to_file(game_dir / GAME_SUMMARY_FILENAME, formatted_summary_md)
-
-        # Write Roles
-        role_lines = ["# Roles Assigned"]
-        for name, role in gs._roles.items():
-            role_lines.append(f"**{name}:** {role.value}")
-        write_to_file(game_dir / ROLES_FILENAME, "\n".join(role_lines))
 
         # --- B. Format Secret Action Logs ---
 

@@ -80,7 +80,7 @@ class Coach:
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def _call_model(self, system: str, prompt: str, max_tokens: int = 500, timeout: int = 15) -> dict:
+    def _call_model(self, system: str, prompt: str, max_tokens: int = 500, timeout: int = 200) -> dict:
         """Send a two-message request to the LLM.
         Returns parsed JSON dict; falls back to {"raw": str} on parse failure.
         """
@@ -183,7 +183,7 @@ No extra text, no markdown, no code fences.
         prompt = f"""
 {context}
 
-Write concise, actionable feedback for the villager-side players using the roles of the players, NOT their names.
+Write concise, actionable feedback for the villager-side players USING THE ROLES of the players, NOT their names.
 
 Focus on:
 - Specific mistakes made that allowed wolves to survive or mislead
@@ -191,13 +191,12 @@ Focus on:
 - Voting errors and when to override gut feelings with evidence
 - Coordination failures between special roles (Seer, Guard, Witch)
 
-This feedback will be read by each villager-side player before their next game
-and will shape their strategy update. Make it direct and specific — not generic advice.
+This feedback will be read by each villager-side player before their next game and will shape their strategy update. Make it direct and specific — not generic advice.
 
 Respond with ONLY a JSON object:
 {{
   "feedback": "actionable feedback for villager players (<=300 words)",
-  "key_mistakes": "the 2-3 most critical errors made this game (<=150 words)"
+  "key_mistakes": "the critical errors made this game (<=150 words)"
 }}
 No extra text, no markdown, no code fences.
 """
