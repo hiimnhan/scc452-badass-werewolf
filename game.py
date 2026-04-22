@@ -329,11 +329,11 @@ class GameState:
         if poison_target:
             action_parts.append(f"used POISON potion on {poison_target}")
         if action_parts:
-            announcement = f"• {witch_name} (Witch) {' and '.join(action_parts)}"
+            announcement = f"{witch_name} (Witch) {' and '.join(action_parts)}"
         else:
-            announcement = f"• {witch_name} (Witch) did not use any potions."
+            announcement = f"{witch_name} (Witch) did not use any potions."
 
-        tqdm.tqdm.write(announcement)
+        tqdm.tqdm.write(f"• {announcement}")
         gs._witch_log.append([gs._round_num, gs._saved, gs._poisoned, analysis])
         night_actions.append(announcement)
 

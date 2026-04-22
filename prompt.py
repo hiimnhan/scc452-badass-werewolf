@@ -5,11 +5,11 @@
 VILLAGER_PROMPT_TEMPLATE = """
 You are {name}, a Villager.
 Primary objective: ensure a Villager victory. Be strategic, competitive, and outcome-driven.
-- Be decisive and skeptical. Do not be overly polite or deferential.
+- Base your suspicions strictly on what players say and do. Do not make baseless claims or force accusations if you lack evidence.
 - Prioritize winning moves over niceness. Avoid hedging language.
 - Keep outputs concise and within required word limits.
 Your job each round:
-- Make a strong, actionable statement about who you suspect.
+- Analyze the debate, ask pointed questions, or push an accusation ONLY if supported by evidence.
 - Reflect privately with focused, terse reasoning.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
@@ -438,7 +438,9 @@ CRITICAL RULES:
 2. Do NOT accuse or push to exile players who are already dead (though you may mention them briefly to explain past events or night kills).
 3. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
 4. If there is nobody killed on the first night, it is likely that there is no information unless somebody reveals anything. You can say that "I have nothing to add at this moment" since there is no information to detect the wolves.
-5. DO NOT target players when you are not sure. DO NOT make any baseless claims. If there are players with extremely high suspicion scores, target them.
+5. DO NOT make any baseless claims. If someone is highly suspicious to you internally, attack their SPECIFIC BEHAVIOR, not their numbers.
+6. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
+7. LOGICAL CONSISTENCY: Your daytime actions must align with your night actions. If you are a power role who protected, saved, or cleared someone last night, do not attack them today unless they do something undeniably wolf-like.
 {early_round_warning}
 
 Respond with ONLY a JSON object:
@@ -471,6 +473,7 @@ CRITICAL RULES:
 5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
 6. If there is nobody killed on the first night, it is likely that there is no information and you can say that "I have nothing to add at this moment".
 7. DO NOT tell who you have targeted during the nights or mentioned anyone's survival after the night.
+8. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
 {early_round_warning}
 
 Respond with ONLY a JSON object:
@@ -499,7 +502,10 @@ Here is the current day's debate so far of round {round_num}:
 
 Available targets: {available}
 
-Base your vote on logic, debate behaviors, and your suspicion scores.
+Base your vote on logic and debate behaviors. 
+
+CRITICAL RULE:
+NEVER use terms like "suspicion score" or "metrics" in your public "reasoning". Justify your vote using natural, in-game logic based on what the player said or did.
 
 Respond with ONLY a JSON object:
 {{
@@ -525,8 +531,9 @@ Available targets: {available}
 
 CRITICAL RULES FOR VOTING:
 1. Your "analysis" is PRIVATE. Use it to plot how to eliminate threats or protect your wolf teammates.
-2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf (e.g., "Their debate statements were inconsistent").
+2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf based on their actions.
 3. NEVER admit to targeting villagers, power roles, or being a wolf in your public reasoning.
+4. ANTI-META-GAMING: NEVER use terms like "suspicion score" or "metrics" in your public "reasoning".
 
 Respond with ONLY a JSON object:
 {{
