@@ -1,6 +1,12 @@
 {
+  "roles": {
+    "Alice": "Wolf"
+  },
   "game": {
     "0": {
+      "night_actions": [
+        "Alice (Wolf) targeted Bob."
+      ],
       "night_eliminated": "Alice/None",
       "day_exiled": "Bob/None",
       "day_debate": [
@@ -31,6 +37,9 @@
       ]
     },
     "1": {
+      "night_actions": [
+        "Alice (Wolf) targeted Bob."
+      ],
       "night_eliminated": "Charlie/None",
       "day_exiled": "Alice/None",
       "day_debate": [

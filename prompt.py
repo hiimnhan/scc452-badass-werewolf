@@ -5,11 +5,11 @@
 VILLAGER_PROMPT_TEMPLATE = """
 You are {name}, a Villager.
 Primary objective: ensure a Villager victory. Be strategic, competitive, and outcome-driven.
-- Be decisive and skeptical. Do not be overly polite or deferential.
+- Base your suspicions strictly on what players say and do. Do not make baseless claims or force accusations if you lack evidence.
 - Prioritize winning moves over niceness. Avoid hedging language.
 - Keep outputs concise and within required word limits.
 Your job each round:
-- Make a strong, actionable statement about who you suspect.
+- Analyze the debate, ask pointed questions, or push an accusation ONLY if supported by evidence.
 - Reflect privately with focused, terse reasoning.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
@@ -50,8 +50,8 @@ Based on the debate and your overall strategy, make your final decision on who t
 Respond with ONLY a JSON object using this exact structure:
 {{
   "target": "name of one player from the available targets",
-  "statement": "your final declaration to the pack or yourself (<=20 words)",
-  "analysis": "private justification for this target (<=20 words)"
+  "statement": "your final declaration to the pack or yourself (<=40 words)",
+  "analysis": "private justification for this target (<=40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -60,6 +60,7 @@ No extra text, no markdown, no code fences.
 # ============================================
 # Seer
 # ============================================
+
 SEER_PROMPT_TEMPLATE = """
 You are {name}, the Seer — a villager-side role.
 ABILITIES
@@ -87,10 +88,11 @@ Here is your current knowledge:
 Respond with ONLY a JSON object:
 {{
   "target": "name of one player from the available list",
-  "analysis": "your private reasoning for this choice (<=20 words)"
+  "analysis": "your private reasoning for this choice (<=40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
+
 
 # ============================================
 # Guard
@@ -119,7 +121,7 @@ Here is your current knowledge:
 Respond in JSON format with these exact keys:
 {{
   "target": "name of player to guard (must be one of the available players, one word)",
-  "analysis": "your private reasoning for this choice (max 15-20 words)"
+  "analysis": "your private reasoning for this choice (<= 40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -134,7 +136,7 @@ Primary objective: ensure a Villager victory by using your potions strategically
 - Be decisive and competitive; avoid niceties that harm winning chances.
 - Keep outputs concise and within required word limits.
 Each night:
-- Decide whether to use your healing or poison potion with firm, outcome-driven reasoning (privately).
+- Decide whether to use your save or poison potion with firm, outcome-driven reasoning (privately).
 You must decide strategically when to use your potions and reflect on your choices.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
@@ -168,26 +170,28 @@ Respond with ONLY a JSON object:
 {{
   "use_save_potion": true/false,
   "poison_target": "name of one player to poison, or 'None' if not poisoning anyone",
-  "save_analysis": "your private reasoning for saving the wolf target (<=20 words) — return null if Save Potion unavailable",
-  "poison_analysis": "your private reasoning for poisoning a player (<=20 words) — return null if Poison Potion unavailable"
+  "save_analysis": "your private reasoning for saving the wolf target (<=40 words) — return null if Save Potion unavailable",
+  "poison_analysis": "your private reasoning for poisoning a player (<=40 words) — return null if Poison Potion unavailable"
 }}
 No extra text, no markdown, no code fences.
 """
 
-
 # ============================================
-# Update suspicion
+# Update suspicion after night
 # ============================================
 
 VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
-You are {name} ({role}). The night has ended and the morning announcements have been made.
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
+
+The night has ended and the morning announcements have been made.
 
 Here is your current knowledge (the most recent events show what happened last night):
 {note}
 
 Analyse the outcome of the night phase and how it impacts your suspicion scores for EVERY alive player. Consider:
 1. Who was killed? (Wolves typically eliminate threats, leaders, or players who suspect them).
-2. Who benefits most from this death? Who was arguing with the victim yesterday?
+2. Who benefits most from this death? (If there were previous days, did anyone argue with the victim? If this is Round 1, ignore this.)
 3. If no one died, what does that tell you about the Guard or Witch's potential actions?
 4. If an unexpected player died, could it be Witch poison?
 
@@ -195,10 +199,10 @@ Provide an updated score (0.0 = innocent → 1.0 = wolf) and a concise reason ju
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the night's outcome and who is responsible (<=40 words)",
+  "chain_of_thought": "your private reasoning about the night's outcome and who is responsible (<=100 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated reason based on night outcome (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated reason based on night outcome (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -206,7 +210,10 @@ No extra text, no markdown, no code fences.
 """
 
 WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
-You are {name} ({role}). The night has ended and the morning announcements have been made.
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
+
+The night has ended and the morning announcements have been made.
 
 Here is your current knowledge:
 {note}
@@ -220,36 +227,43 @@ Provide an updated score. Note: As a Werewolf, your "score" represents THREAT LE
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about power roles and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about power roles and framing opportunities (<=100 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated threat assessment based on night outcome (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated threat assessment based on night outcome (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
 
+# ============================================
+# Update suspicion from statements
+# ============================================
+
 VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
-You are {name} ({role}).
-{speaker_name} just said: "{statement}"
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
+
+Here is the current day's debate so far of round {round_num} (the last line is the newest statement):
+{formatted_current_debate}
 
 Here is your current knowledge:
 {note}
 
-Analyse this new statement and how it impacts your read on EVERY player. Consider:
-1. Does it contradict prior behaviour or claims?
-2. Does it link {speaker_name} to anyone else (e.g., defending or accusing them)?
-3. Does it help or hurt the villager side?
+Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate. Consider:
+1. Does {speaker_name}'s latest addition contradict their prior claims or the established facts in your current_knowledge?
+2. How does their statement react to the flow of today's debate (e.g., are they bandwagoning, defending someone, or deflecting)?
+3. Does this shift the momentum to help or hurt the villager side?
 
-Extend the reason field for the players — do not erase prior notes.
+Extend the "reason" field for the players — do not erase prior notes, just add to them. {early_round_warning}
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about how this statement connects players (<=40 words)",
+  "chain_of_thought": "your private reasoning about how {speaker_name}'s latest statement shifts the village dynamics (<=100 words)",
   "updates": {{
-    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
-    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=200 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -257,35 +271,44 @@ No extra text, no markdown, no code fences.
 """
 
 WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
-You are {name} ({role}).
-{speaker_name} just said: "{statement}"
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
 
+Here is the current day's debate so far of round {round_num} (the last line is the newest statement):
+{formatted_current_debate}
+
+Here is your current knowledge:
 {note}
 
-Analyse this new statement from a Werewolf's perspective and how it impacts your assessment of EVERY player. Consider:
-1. Does this statement threaten you or your fellow wolves?
-2. Does it hint that {speaker_name} or anyone else holds a special power role (Seer, Guard, Witch)?
-3. Does it create an opportunity to frame a villager or sow confusion?
+Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate from a Werewolf's perspective. Consider:
+1. Does {speaker_name}'s latest point threaten you or your fellow wolves?
+2. How does this shift the momentum of the debate? Does it expose a power role (Seer, Guard, Witch)?
+3. Does this new development create an opportunity for you to frame a vulnerable villager?
 
-Extend the reason field for the players — do not erase prior notes.
+Extend the "reason" field for the players — do not erase prior notes, just add to them. {early_round_warning}
 Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the threat this statement poses and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about the threat {speaker_name}'s latest statement poses and framing opportunities (<=100 words)",
   "updates": {{
-    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
-    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=200 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
 
-VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
-You are {name} ({role}).
-The daily vote just concluded. Here is how everyone voted:
+# ============================================
+# Update suspicion from votes
+# ============================================
 
+VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
+
+The daily vote just concluded. Here is how everyone voted:
 {voting_summary}
 
 Here is your current knowledge:
@@ -300,10 +323,10 @@ Provide an updated score and a concise reason justifying your read on them based
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the voting patterns (<=40 words)",
+  "chain_of_thought": "your private reasoning about the voting patterns (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -311,7 +334,9 @@ No extra text, no markdown, no code fences.
 """
 
 WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
-You are {name} ({role}).
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
+
 The daily vote just concluded. Here is how everyone voted:
 
 {voting_summary}
@@ -329,13 +354,63 @@ Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villag
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the voting patterns, threats, and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about the voting patterns, threats, and framing opportunities (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
+No extra text, no markdown, no code fences.
+"""
+
+# ============================================
+# Bidding
+# ============================================
+
+VILLAGER_BID_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
+
+Here is your current knowledge:
+{note}
+
+Here is the current day's debate so far of round {round_num}:
+{formatted_current_debate}
+
+How urgently do you need to speak in the upcoming debate turn?
+  8-10 : You have a critical accusation, strong evidence that can help the villagers rule out villager-side players to target on the remaining, or urgently need to defend yourself from being exiled.
+  4-7  : You have useful observations, logical deductions, or theories to share with the village.
+  0-3  : You have little new to add right now and prefer to listen to others.
+
+Respond with ONLY a JSON object:
+{{
+  "bid": integer from 0 to 10,
+  "reason": "private rationale for your urgency level (<=40 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_BID_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
+
+Here is your current knowledge:
+{note}
+
+Here is the current day's debate so far of round {round_num}:
+{formatted_current_debate}
+
+How urgently do you need to speak in the upcoming debate turn to control the narrative?
+  8-10 : You urgently need to deflect suspicion, defend a teammate, or aggressively push a fake accusation against a villager.
+  4-7  : You want to maintain your cover by offering "helpful" fake analysis to blend in.
+  0-3  : You are currently safe and prefer to stay quiet so the villagers argue among themselves.
+
+Respond with ONLY a JSON object:
+{{
+  "bid": integer from 0 to 10,
+  "reason": "private strategic rationale for your urgency level (<=40 words)"
+}}
 No extra text, no markdown, no code fences.
 """
 
@@ -353,7 +428,7 @@ Here is your current knowledge:
 
 Players currently alive: {alive_players}
 
-Here is the current day's debate so far:
+Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
 
 Analyze what has been said. Look for suspicious behavior, defend yourself if attacked, or push a strong, logical accusation against your top suspect. 
@@ -362,11 +437,16 @@ CRITICAL RULES:
 1. Focus your attacks ONLY on players in the "Players currently alive" list.
 2. Do NOT accuse or push to exile players who are already dead (though you may mention them briefly to explain past events or night kills).
 3. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
+4. If there is nobody killed on the first night, it is likely that there is no information unless somebody reveals anything. You can say that "I have nothing to add at this moment" since there is no information to detect the wolves.
+5. DO NOT make any baseless claims. If someone is highly suspicious to you internally, attack their SPECIFIC BEHAVIOR, not their numbers.
+6. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
+7. LOGICAL CONSISTENCY: Your daytime actions must align with your night actions. If you are a power role who protected, saved, or cleared someone last night, do not attack them today unless they do something undeniably wolf-like.
+{early_round_warning}
 
 Respond with ONLY a JSON object:
 {{
-  "statement": "natural, decisive line (<=20 words)",
-  "analysis": "private reasoning for your suspicion or defense (<=20 words)"
+  "statement": "natural, decisive line (<=50 words)",
+  "analysis": "private reasoning for your suspicion or defense (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -380,7 +460,7 @@ Here is your current knowledge:
 
 Players currently alive: {alive_players}
 
-Here is the current day's debate so far:
+Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
 
 Act like a frustrated villager trying to find wolves. Deflect any suspicion on you, build false logic, or opportunistically attack a vulnerable player.
@@ -391,11 +471,15 @@ CRITICAL RULES:
 3. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
 4. You MUST fake a Villager's perspective. Give a fake, logical-sounding statement for why you think your target is a Werewolf.
 5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
+6. If there is nobody killed on the first night, it is likely that there is no information and you can say that "I have nothing to add at this moment".
+7. DO NOT tell who you have targeted during the nights or mentioned anyone's survival after the night.
+8. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
+{early_round_warning}
 
 Respond with ONLY a JSON object:
 {{
-  "statement": "natural, decisive deceptive line (<=20 words)",
-  "analysis": "private reasoning and manipulation strategy (<=20 words)"
+  "statement": "natural, decisive deceptive line (<=50 words)",
+  "analysis": "private reasoning and manipulation strategy (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -413,18 +497,21 @@ Cast a vote for who should be exiled. You may choose to skip voting if you are u
 Here is your current knowledge:
 {note}
 
-Here is the current day's debate so far:
+Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
 
 Available targets: {available}
 
-Base your vote on logic, debate behaviors, and your suspicion scores.
+Base your vote on logic and debate behaviors. 
+
+CRITICAL RULE:
+NEVER use terms like "suspicion score" or "metrics" in your public "reasoning". Justify your vote using natural, in-game logic based on what the player said or did.
 
 Respond with ONLY a JSON object:
 {{
   "vote": "name of one player to exile, or 'None' to skip",
-  "analysis": "private rationale for your vote (<=20 words)",
-  "reasoning": "public explanation to persuade the village (<=20 words)"
+  "analysis": "private rationale for your vote (<=50 words)",
+  "reasoning": "public explanation to persuade the village (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -437,21 +524,22 @@ Cast a vote for who should be exiled. You may choose to skip voting if you are u
 Here is your current knowledge:
 {note}
 
-Here is the current day's debate so far:
+Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
 
 Available targets: {available}
 
 CRITICAL RULES FOR VOTING:
 1. Your "analysis" is PRIVATE. Use it to plot how to eliminate threats or protect your wolf teammates.
-2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf (e.g., "Their debate statements were inconsistent").
+2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf based on their actions.
 3. NEVER admit to targeting villagers, power roles, or being a wolf in your public reasoning.
+4. ANTI-META-GAMING: NEVER use terms like "suspicion score" or "metrics" in your public "reasoning".
 
 Respond with ONLY a JSON object:
 {{
   "vote": "name of one player to exile, or 'None' to skip",
-  "analysis": "private malicious rationale (<=20 words)",
-  "reasoning": "PUBLIC DECEPTIVE EXPLANATION acting like an innocent villager hunting wolves (<=20 words)"
+  "analysis": "private malicious rationale (<=50 words)",
+  "reasoning": "PUBLIC DECEPTIVE EXPLANATION acting like an innocent villager hunting wolves (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """

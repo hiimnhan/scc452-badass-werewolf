@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_groq import ChatGroq
+# from langchain_groq import ChatGroq
 # ============================================================
 # Model registry
 # ============================================================
@@ -14,9 +14,8 @@ MODEL_PROVIDERS = {
     "deepseek-chat": ChatOpenAI,
     "meta-llama/Meta-Llama-3.1-8B-Instruct": ChatOpenAI,
     "meta-llama/Llama-3.3-70B-Instruct": ChatOpenAI,
-    "llama-3.1-8b-instant": ChatGroq,
-    # The LLM
-    "llama-3.3-70b-versatile": ChatGroq,
+    # "llama-3.1-8b-instant": ChatGroq,
+    # "llama-3.3-70b-versatile": ChatGroq,
     # Google
     "gemini-2.5-flash": ChatGoogleGenerativeAI,
     "gemini-1.5-pro": ChatGoogleGenerativeAI,
