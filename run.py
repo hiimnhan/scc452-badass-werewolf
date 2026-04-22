@@ -349,8 +349,23 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         winner = final_state._winner
         assert winner is not None
 
-        results.append({"game_id": game_id, "winner": winner, "roles": roles})
+        # results.append({"game_id": game_id, "winner": winner, "roles": roles})
         print(f"    Winner: {winner}")
+        result = {"game_id": game_id, "winner": winner, "roles": roles}
+        out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
+        new_data_df = pd.DataFrame([result])
+        file_exists = out_path.is_file()
+
+        new_data_df.to_csv(
+            out_path,
+            mode="a",
+            index=False,
+            header=not file_exists,  # Only write header if it's a new file
+        )
+
+        print(f"\n  Results saved to: {out_path}")
 
     # ── Final summary ──────────────────────────────────────────────────
     # print(f"\n{'=' * 62}")
@@ -391,21 +406,6 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
     # )
 
     # write_to_file(out_path, existing + new_block)
-
-    out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    new_data_df = pd.DataFrame(results)
-    file_exists = out_path.is_file()
-
-    new_data_df.to_csv(
-        out_path,
-        mode="a",
-        index=False,
-        header=not file_exists,  # Only write header if it's a new file
-    )
-
-    print(f"\n  Results saved to: {out_path}")
 
 
 # ============================================================
