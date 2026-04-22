@@ -19,14 +19,16 @@ MODEL_PROVIDERS = {
     # Google
     "gemini-2.5-flash": ChatGoogleGenerativeAI,
     "gemini-1.5-pro": ChatGoogleGenerativeAI,
+    "google/gemma-4-31B-it": ChatOpenAI,
+    "google/gemma-3-4b-it": ChatOpenAI,
 }
 
 LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-VILLAGER_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"  # small — villager side
-WOLF_MODEL = "meta-llama/Llama-3.3-70B-Instruct"  # large — wolf side
+VILLAGER_MODEL = "google/gemma-3-4b-it"  # small — villager side
+WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
 
 # ============================================================
 # Experiment scenarios

@@ -649,8 +649,6 @@ class BasePlayer(ABC):
                     game_record=game_record,
                 )
 
-            print(f"Wolf strat: {new_strategy}")
-
         self._write_strategy(new_strategy)
 
     def _update_strategy_villager(self, current_strategy: str, game_record: str) -> Optional[str]:
