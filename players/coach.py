@@ -156,8 +156,8 @@ Produce an updated coaching strategy — rules for how YOU should coach villager
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated coaching rules as bullet points (<=150 words)",
-  "reasoning": "what changed in your coaching approach and why (<=40 words)"
+  "strategy": "updated coaching rules as bullet points (<=300 words)",
+  "reasoning": "what changed in your coaching approach and why (<=100 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -196,8 +196,8 @@ and will shape their strategy update. Make it direct and specific — not generi
 
 Respond with ONLY a JSON object:
 {{
-  "feedback": "actionable feedback for villager players (<=150 words)",
-  "key_mistakes": "the 2-3 most critical errors made this game (<=50 words)"
+  "feedback": "actionable feedback for villager players (<=300 words)",
+  "key_mistakes": "the 2-3 most critical errors made this game (<=150 words)"
 }}
 No extra text, no markdown, no code fences.
 """
