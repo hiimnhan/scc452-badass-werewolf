@@ -11,6 +11,8 @@ Resume from where you left off:
 
 Override number of games:
     python run.py --scenario baseline --mode override --games 10
+    
+/opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_and_self_analyze --mode override --games 3
 
 File layout produced
 --------------------
@@ -68,7 +70,7 @@ PLAYERS: list[str] = VILLAGER_PLAYERS + WOLF_PLAYERS
 # Villager role pool — reshuffled randomly before every game.
 # Must equal len(VILLAGER_PLAYERS).
 VILLAGER_ROLE_POOL: list[Role] = [Role.SEER] * 1 + [Role.GUARD] * 1 + [Role.WITCH] * 1 + [Role.VILLAGER] * 2
-random.shuffle(VILLAGER_ROLE_POOL)
+# random.shuffle(VILLAGER_ROLE_POOL)
 
 assert len(VILLAGER_ROLE_POOL) == len(VILLAGER_PLAYERS), (
     f"VILLAGER_ROLE_POOL has {len(VILLAGER_ROLE_POOL)} entries but VILLAGER_PLAYERS has {len(VILLAGER_PLAYERS)}."
@@ -169,6 +171,7 @@ def assign_roles_round_robin() -> dict[str, Role]:
       ... and so on
     """
     global VILLAGER_ROLE_POOL
+    random.shuffle(VILLAGER_ROLE_POOL)
     VILLAGER_ROLE_POOL = VILLAGER_ROLE_POOL[1:] + VILLAGER_ROLE_POOL[:1]
     return dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
 
@@ -347,11 +350,12 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         # No try/except — any error stops the program immediately
         final_state = run_game(villager_llm, wolf_llm, roles, game_id, scenario)
         winner = final_state._winner
+        total_rounds = final_state._round_num
         assert winner is not None
 
         # results.append({"game_id": game_id, "winner": winner, "roles": roles})
         print(f"    Winner: {winner}")
-        result = {"game_id": game_id, "winner": winner, "roles": roles}
+        result = {"game_id": game_id, "winner": winner, "rounds": total_rounds, "roles": roles}
         out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
         out_path.parent.mkdir(parents=True, exist_ok=True)
 

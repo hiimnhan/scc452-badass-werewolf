@@ -50,8 +50,8 @@ Based on the debate and your overall strategy, make your final decision on who t
 Respond with ONLY a JSON object using this exact structure:
 {{
   "target": "name of one player from the available targets",
-  "statement": "your final declaration to the pack or yourself (<=20 words)",
-  "analysis": "private justification for this target (<=20 words)"
+  "statement": "your final declaration to the pack or yourself (<=40 words)",
+  "analysis": "private justification for this target (<=40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -87,7 +87,7 @@ Here is your current knowledge:
 Respond with ONLY a JSON object:
 {{
   "target": "name of one player from the available list",
-  "analysis": "your private reasoning for this choice (<=20 words)"
+  "analysis": "your private reasoning for this choice (<=40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -119,7 +119,7 @@ Here is your current knowledge:
 Respond in JSON format with these exact keys:
 {{
   "target": "name of player to guard (must be one of the available players, one word)",
-  "analysis": "your private reasoning for this choice (max 15-20 words)"
+  "analysis": "your private reasoning for this choice (<= 40 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -134,7 +134,7 @@ Primary objective: ensure a Villager victory by using your potions strategically
 - Be decisive and competitive; avoid niceties that harm winning chances.
 - Keep outputs concise and within required word limits.
 Each night:
-- Decide whether to use your healing or poison potion with firm, outcome-driven reasoning (privately).
+- Decide whether to use your save or poison potion with firm, outcome-driven reasoning (privately).
 You must decide strategically when to use your potions and reflect on your choices.
 Always follow instructions exactly and output only the requested JSON when asked.
 """
@@ -168,12 +168,55 @@ Respond with ONLY a JSON object:
 {{
   "use_save_potion": true/false,
   "poison_target": "name of one player to poison, or 'None' if not poisoning anyone",
-  "save_analysis": "your private reasoning for saving the wolf target (<=20 words) — return null if Save Potion unavailable",
-  "poison_analysis": "your private reasoning for poisoning a player (<=20 words) — return null if Poison Potion unavailable"
+  "save_analysis": "your private reasoning for saving the wolf target (<=40 words) — return null if Save Potion unavailable",
+  "poison_analysis": "your private reasoning for poisoning a player (<=40 words) — return null if Poison Potion unavailable"
 }}
 No extra text, no markdown, no code fences.
 """
 
+# ============================================
+# Get bid
+# ============================================
+
+VILLAGER_BID_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are on the Villager faction.
+Your goal is to find the Werewolves and protect the innocent.
+
+Here is your current knowledge:
+{note}
+
+How urgently do you need to speak in the upcoming debate turn?
+  8-10 : You have a critical accusation, strong evidence that can help the villagers rule out villager-side players to target on the remaining, or urgently need to defend yourself from being exiled.
+  4-7  : You have useful observations, logical deductions, or theories to share with the village.
+  0-3  : You have little new to add right now and prefer to listen to others.
+
+Respond with ONLY a JSON object:
+{{
+  "bid": integer from 0 to 10,
+  "reason": "private rationale for your urgency level (<=40 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
+
+WEREWOLF_BID_PROMPT_TEMPLATE = """
+You are {name} ({role}). You are secretly a Werewolf.
+Your goal is to survive, protect your pack, and manipulate the village into exiling innocent players.
+
+Here is your current knowledge:
+{note}
+
+How urgently do you need to speak in the upcoming debate turn to control the narrative?
+  8-10 : You urgently need to deflect suspicion, defend a teammate, or aggressively push a fake accusation against a villager.
+  4-7  : You want to maintain your cover by offering "helpful" fake analysis to blend in.
+  0-3  : You are currently safe and prefer to stay quiet so the villagers argue among themselves.
+
+Respond with ONLY a JSON object:
+{{
+  "bid": integer from 0 to 10,
+  "reason": "private strategic rationale for your urgency level (<=40 words)"
+}}
+No extra text, no markdown, no code fences.
+"""
 
 # ============================================
 # Update suspicion
@@ -195,10 +238,10 @@ Provide an updated score (0.0 = innocent → 1.0 = wolf) and a concise reason ju
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the night's outcome and who is responsible (<=40 words)",
+  "chain_of_thought": "your private reasoning about the night's outcome and who is responsible (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated reason based on night outcome (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated reason based on night outcome (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -220,10 +263,10 @@ Provide an updated score. Note: As a Werewolf, your "score" represents THREAT LE
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about power roles and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about power roles and framing opportunities (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated threat assessment based on night outcome (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "updated threat assessment based on night outcome (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "previous notes or updated if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -246,10 +289,10 @@ Extend the reason field for the players — do not erase prior notes.
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about how this statement connects players (<=40 words)",
+  "chain_of_thought": "your private reasoning about how this statement connects players (<=200 words)",
   "updates": {{
-    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
-    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=200 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -272,10 +315,10 @@ Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villag
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the threat this statement poses and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about the threat this statement poses and framing opportunities (<=200 words)",
   "updates": {{
-    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=40 words)"}},
-    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=40 words)"}}
+    "{speaker_name}": {{"score": 0.0 to 1.0, "reason": "cumulative behavioural notes (<=200 words)"}},
+    "AnotherPlayer": {{"score": 0.0 to 1.0, "reason": "updated notes if affected, or previous notes (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -300,10 +343,10 @@ Provide an updated score and a concise reason justifying your read on them based
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the voting patterns (<=40 words)",
+  "chain_of_thought": "your private reasoning about the voting patterns (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -329,10 +372,10 @@ Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villag
 
 Respond with ONLY a JSON object using this exact structure:
 {{
-  "chain_of_thought": "your private reasoning about the voting patterns, threats, and framing opportunities (<=40 words)",
+  "chain_of_thought": "your private reasoning about the voting patterns, threats, and framing opportunities (<=200 words)",
   "updates": {{
-    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=40 words)"}},
-    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=40 words)"}}
+    "PlayerA": {{"score": 0.0 to 1.0, "reason": "justification based on who they voted for (<=200 words)"}},
+    "PlayerB": {{"score": 0.0 to 1.0, "reason": "updated reason if affected (<=200 words)"}}
   }}
 }}
 Include ALL other players you are tracking in the "updates" dictionary.
@@ -362,11 +405,14 @@ CRITICAL RULES:
 1. Focus your attacks ONLY on players in the "Players currently alive" list.
 2. Do NOT accuse or push to exile players who are already dead (though you may mention them briefly to explain past events or night kills).
 3. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
+4. If you are in the first round and speak first, DO NOT attack anyone that they are silent, since they have not had a chance to speak since you speak first. You only attack silent players if your current knowledge of the game tells you certain players are silent/inactive after a few statements.
+5. If there is nobody killed on the first night, it is likely that there is no information unless somebody reveals anything. You can say that "I have nothing to add at this moment" since there is no information to detect the wolves.
+6. DO NOT target players when you are not sure. DO NOT make any baseless claims. If there are players with extremely high suspicion scores, target them. 
 
 Respond with ONLY a JSON object:
 {{
-  "statement": "natural, decisive line (<=20 words)",
-  "analysis": "private reasoning for your suspicion or defense (<=20 words)"
+  "statement": "natural, decisive line (<=50 words)",
+  "analysis": "private reasoning for your suspicion or defense (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -391,11 +437,14 @@ CRITICAL RULES:
 3. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
 4. You MUST fake a Villager's perspective. Give a fake, logical-sounding statement for why you think your target is a Werewolf.
 5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
+6. If you are in the first round and speak first, DO NOT attack anyone that they are silent, since they have not had a chance to speak since you speak first. You only attack silent players if your current knowledge of the game tells you certain players are silent/inactive after a few statements.
+7. If there is nobody killed on the first night, it is likely that there is no information and you can say that "I have nothing to add at this moment". If somebody reveals some critical information, choose to either stay silent, doubt that statement, or tell them they are lying.
+8. DO NOT tell who you have targeted during the nights or mentioned anyone's survival after the night.
 
 Respond with ONLY a JSON object:
 {{
-  "statement": "natural, decisive deceptive line (<=20 words)",
-  "analysis": "private reasoning and manipulation strategy (<=20 words)"
+  "statement": "natural, decisive deceptive line (<=50 words)",
+  "analysis": "private reasoning and manipulation strategy (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -423,8 +472,8 @@ Base your vote on logic, debate behaviors, and your suspicion scores.
 Respond with ONLY a JSON object:
 {{
   "vote": "name of one player to exile, or 'None' to skip",
-  "analysis": "private rationale for your vote (<=20 words)",
-  "reasoning": "public explanation to persuade the village (<=20 words)"
+  "analysis": "private rationale for your vote (<=50 words)",
+  "reasoning": "public explanation to persuade the village (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -450,8 +499,8 @@ CRITICAL RULES FOR VOTING:
 Respond with ONLY a JSON object:
 {{
   "vote": "name of one player to exile, or 'None' to skip",
-  "analysis": "private malicious rationale (<=20 words)",
-  "reasoning": "PUBLIC DECEPTIVE EXPLANATION acting like an innocent villager hunting wolves (<=20 words)"
+  "analysis": "private malicious rationale (<=50 words)",
+  "reasoning": "PUBLIC DECEPTIVE EXPLANATION acting like an innocent villager hunting wolves (<=50 words)"
 }}
 No extra text, no markdown, no code fences.
 """

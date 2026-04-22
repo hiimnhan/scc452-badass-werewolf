@@ -9,6 +9,8 @@ from constants import COACH_FEEDBACK_FILENAME, PLAYER_FINAL_STRATEGY_FILENAME
 from config import SCENARIO_CONFIG
 from utils import write_to_file
 from prompt import (
+    VILLAGER_BID_PROMPT_TEMPLATE,
+    WEREWOLF_BID_PROMPT_TEMPLATE,
     VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT,
     WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT,
     VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT,
@@ -410,23 +412,16 @@ class BasePlayer(ABC):
 
         Returns (bid_score: int, log_dict: dict).
         """
-        prompt = f"""
-You are {self._name} ({self._role.value}) in the Werewolf debate phase.
-
-{self._note}
-
-How urgently do you want to speak next?
-  8-10 : Strong, specific accusation you must voice immediately.
-  4-7  : Useful observations worth sharing, no immediate urgency.
-  0-3  : Little new to contribute right now.
-
-Respond with ONLY a JSON object:
-{{
-  "bid": integer from 0 to 10,
-  "reason": "one-line private rationale (<=15 words)"
-}}
-No extra text, no markdown, no code fences.
-"""
+        if self._role in WOLF_SIDE:
+            prompt_template = WEREWOLF_BID_PROMPT_TEMPLATE
+        else:
+            prompt_template = VILLAGER_BID_PROMPT_TEMPLATE
+            
+        prompt = prompt_template.format(
+            name=self._name,
+            role=self._role.value,
+            note=self._note
+        )
         resp = self.call_model(prompt, max_tokens=100)
 
         try:
@@ -522,7 +517,7 @@ No extra text, no markdown, no code fences.
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def call_model(self, prompt: str, max_tokens: int = 200, timeout: int = 15) -> dict:
+    def call_model(self, prompt: str, max_tokens: int = 200, timeout: int = 100) -> dict:
         """Send a two-message request to the LLM.
 
         SystemMessage : self._setup_prompt = role + personality + strategy + rules.
@@ -653,8 +648,8 @@ Cover early-game, mid-game, and late-game. Discard rules that failed; keep what 
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated rules as bullet points (<=120 words)",
-  "reasoning": "main changes and why (<=30 words)"
+  "strategy": "updated rules as bullet points (<=300 words)",
+  "reasoning": "main changes and why (<=100 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -686,8 +681,8 @@ Produce an updated strategy — clear, actionable behavioural rules for future g
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated rules as bullet points (<=120 words)",
-  "reasoning": "main changes and why (<=30 words)"
+  "strategy": "updated rules as bullet points (<=300 words)",
+  "reasoning": "main changes and why (<=100 words)"
 }}
 No extra text, no markdown, no code fences.
 """
