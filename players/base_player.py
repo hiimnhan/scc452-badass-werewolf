@@ -618,7 +618,7 @@ class BasePlayer(ABC):
 
     # ── Post-game: strategy update ───────────────────────────────────────
 
-    def update_strategy(self) -> None:
+    def update_strategy(self, game_record: str) -> None:
         """Update [name]_strategy.txt after a game ends.
 
         Villager-side  (Villager, Seer, Guard, Witch)
@@ -638,7 +638,6 @@ class BasePlayer(ABC):
         After writing, refreshes self._setup_prompt so the NEXT game immediately benefits from the updated strategy.
         """
         current_strategy = self._load_strategy()
-        game_record = self._game_summary
 
         if self._role in VILLAGER_SIDE:
             new_strategy = self._update_strategy_villager(

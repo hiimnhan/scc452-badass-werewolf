@@ -191,7 +191,7 @@ Here is your current knowledge (the most recent events show what happened last n
 
 Analyse the outcome of the night phase and how it impacts your suspicion scores for EVERY alive player. Consider:
 1. Who was killed? (Wolves typically eliminate threats, leaders, or players who suspect them).
-2. Who benefits most from this death? Who was arguing with the victim yesterday?
+2. Who benefits most from this death? (If there were previous days, did anyone argue with the victim? If this is Round 1, ignore this.)
 3. If no one died, what does that tell you about the Guard or Witch's potential actions?
 4. If an unexpected player died, could it be Witch poison?
 

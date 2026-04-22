@@ -728,7 +728,7 @@ class GameState:
         # 3. Update and write out strategy for ALL players
         tqdm.tqdm.write("=> Players are analyzing their performance and updating strategies...")
         with ThreadPoolExecutor(max_workers=len(player_objects)) as executor:
-            threads = [executor.submit(player.update_strategy) for player in player_objects.values()]
+            threads = [executor.submit(player.update_strategy, formatted_summary_md) for player in player_objects.values()]
             for thread in threads:
                 thread.result()
 
