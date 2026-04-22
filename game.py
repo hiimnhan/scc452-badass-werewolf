@@ -301,7 +301,7 @@ class GameState:
 
         # Skip if the witch has already used both potions!
         if not witch_obj.has_any_potion():
-            witch_action = f"{witch_name} (Witch) has no potions left. Skipping turn."
+            witch_action = f"{witch_name} (Witch) has no potions left."
             tqdm.tqdm.write(f"• {witch_action}")
             witch_obj.record_own_action(gs._round_num, "Night", "No potions left to perform actions.")
             gs._saved = None
