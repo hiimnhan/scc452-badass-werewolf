@@ -120,7 +120,7 @@ class BasePlayer(ABC):
       Game start  : init_suspicions(other_players)
       Each night  : receive_announcement() from game engine after resolve
       Each debate : _update_suspicion() after each statement
-      Round end   : 
+      Round end   :
       Game end    : _update_strategy(self_analyze, coaching)
       Next game   : reset_game_state(game_id, other_players)
     """
@@ -167,7 +167,9 @@ class BasePlayer(ABC):
 
     @property
     def _strategy_path(self) -> Path:
-        return (self._base_dir() / "strategies" / self._scenario / PLAYER_FINAL_STRATEGY_FILENAME.format(name=self._name)).resolve()
+        return (
+            self._base_dir() / "strategies" / self._scenario / PLAYER_FINAL_STRATEGY_FILENAME.format(name=self._name)
+        ).resolve()
 
     @property
     def _feedback_path(self) -> Path:
@@ -264,12 +266,8 @@ class BasePlayer(ABC):
         elif self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT
 
-        prompt = prompt_template.format(
-            name=self._name,
-            role=self._role.value,
-            note=self._note
-        )
-        
+        prompt = prompt_template.format(name=self._name, role=self._role.value, note=self._note)
+
         resp = self.call_model(prompt, max_tokens=2000)
         updates: dict = resp.get("updates", {})
 
@@ -288,14 +286,14 @@ class BasePlayer(ABC):
 
     def update_suspicion_from_statement(self, debate_log: list, latest_speaker_name: str, round_num: int) -> dict:
         """Update suspicion scores for ALL players after a statement is made."""
-        
+
         formatted_current_debate = ""
         if debate_log:
             for speaker_statement in debate_log:
                 formatted_current_debate += f"\n• {speaker_statement['speaker']}: {speaker_statement['statement']}"
         else:
             formatted_current_debate = "No statements yet in this round."
-            
+
         early_round_warning = ""
         if round_num == 1:
             early_round_warning = (
@@ -305,7 +303,7 @@ class BasePlayer(ABC):
                 "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
                 "Base your opening statements strictly on the night's events (who died) or general opening strategies."
             )
-        
+
         if self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
         elif self._role in WOLF_SIDE:
@@ -318,7 +316,7 @@ class BasePlayer(ABC):
             formatted_current_debate=formatted_current_debate,
             note=self._note,
             speaker_name=latest_speaker_name,
-            early_round_warning=early_round_warning
+            early_round_warning=early_round_warning,
         )
 
         resp = self.call_model(prompt, max_tokens=2000)
@@ -367,10 +365,7 @@ class BasePlayer(ABC):
             prompt_template = WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT
 
         prompt = prompt_template.format(
-            name=self._name,
-            role=self._role.value,
-            voting_summary=voting_summary,
-            note=self._note
+            name=self._name, role=self._role.value, voting_summary=voting_summary, note=self._note
         )
 
         resp = self.call_model(prompt, max_tokens=2000)
@@ -440,18 +435,18 @@ class BasePlayer(ABC):
                 formatted_current_debate += f"\n{speaker_statement['speaker']}: {speaker_statement['statement']}"
         else:
             formatted_current_debate = "No statement yet has been made."
-            
+
         if self._role in WOLF_SIDE:
             prompt_template = WEREWOLF_BID_PROMPT_TEMPLATE
         else:
             prompt_template = VILLAGER_BID_PROMPT_TEMPLATE
-            
+
         prompt = prompt_template.format(
             name=self._name,
             role=self._role.value,
             note=self._note,
             round_num=round_num,
-            formatted_current_debate=formatted_current_debate
+            formatted_current_debate=formatted_current_debate,
         )
         resp = self.call_model(prompt, max_tokens=100)
 
@@ -465,7 +460,7 @@ class BasePlayer(ABC):
 
     def vote(self, alive_players: list[str], debate_log: list[dict], round_num: int) -> tuple[str | None, dict]:
         """Vote to eliminate a player during the day phase, or abstain."""
-        
+
         available = [p for p in alive_players if p != self._name]
         if not available:
             return None, {"error": "No available targets to vote for."}
@@ -493,7 +488,7 @@ class BasePlayer(ABC):
             note=self._note,
             formatted_current_debate=formatted_current_debate,
             available=available_str,
-            round_num=round_num
+            round_num=round_num,
         )
 
         resp = self.call_model(prompt, max_tokens=200)
@@ -533,7 +528,7 @@ class BasePlayer(ABC):
                 "Base your opening statements strictly on the night's events (who died) or general opening strategies."
                 "If you are the first to speak on Day 1 and the dialogue history is empty, you have no prior daytime actions or conversations to observe. In this scenario, you must reason and debate intelligently based on this lack of information."
             )
-            
+
         alive_players_str = ", ".join(alive_players)
 
         # Select the right psychology for the debate
@@ -549,7 +544,7 @@ class BasePlayer(ABC):
             alive_players=alive_players_str,
             formatted_current_debate=formatted_current_debate,
             round_num=round_num,
-            early_round_warning=early_round_warning
+            early_round_warning=early_round_warning,
         )
 
         resp = self.call_model(prompt, max_tokens=200)
@@ -638,21 +633,25 @@ class BasePlayer(ABC):
         After writing, refreshes self._setup_prompt so the NEXT game immediately benefits from the updated strategy.
         """
         current_strategy = self._load_strategy()
+        new_strategy = None
 
         if self._role in VILLAGER_SIDE:
-            new_strategy = self._update_strategy_villager(
-                current_strategy=current_strategy,
-                game_record=game_record,
-            )
+            while not new_strategy:
+                new_strategy = self._update_strategy_villager(
+                    current_strategy=current_strategy,
+                    game_record=game_record,
+                )
         else:
             # Wolves: always self-analyze, never use coach
-            new_strategy = self._update_strategy_wolf(
-                current_strategy=current_strategy,
-                game_record=game_record,
-            )
+            while not new_strategy:
+                new_strategy = self._update_strategy_wolf(
+                    current_strategy=current_strategy,
+                    game_record=game_record,
+                )
 
-        if new_strategy:
-            self._write_strategy(new_strategy)
+            print(f"Wolf strat: {new_strategy}")
+
+        self._write_strategy(new_strategy)
 
     def _update_strategy_villager(self, current_strategy: str, game_record: str) -> Optional[str]:
         """Build and execute the LLM prompt for villager-side strategy update.
@@ -697,7 +696,7 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self.call_model(prompt, max_tokens=500)
+        resp = self.call_model(prompt, max_tokens=1000)
         return resp.get("strategy", "")
 
     def _update_strategy_wolf(self, current_strategy: str, game_record: str) -> Optional[str]:
@@ -730,7 +729,7 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self.call_model(prompt, max_tokens=500)
+        resp = self.call_model(prompt, max_tokens=1000)
         return resp.get("strategy", "")
 
     def _write_strategy(self, strategy: str) -> None:
