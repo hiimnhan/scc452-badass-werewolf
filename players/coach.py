@@ -4,6 +4,7 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
 from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME
 from utils import write_to_file
+import re
 
 
 class Coach:
@@ -97,12 +98,31 @@ class Coach:
             kwargs["max_tokens"] = max_tokens
 
         resp = self._model.invoke(messages, **kwargs).content
-        resp = resp.strip() if isinstance(resp, str) else resp
+        if isinstance(resp, list):
+            resp = " ".join(block.get("text", "") if isinstance(block, dict) else str(block) for block in resp).strip()
+        elif isinstance(resp, str):
+            resp = resp.strip()
 
+        result: dict = {}
+        # 1. Clean up the response to extract just the JSON block
+        clean_resp = resp.strip()
+        
+        # This regex looks for everything from the first '{' to the last '}'
+        # re.DOTALL allows it to match across multiple lines
+        match = re.search(r'(\{.*\})', clean_resp, re.DOTALL)
+        
+        if match:
+            clean_resp = match.group(1)
+
+        # 2. Attempt to parse the cleaned string
         try:
-            return json.loads(resp)
+            result = json.loads(clean_resp)
         except json.JSONDecodeError:
-            return {"raw": resp}
+            # Fallback if it is still irreparably broken
+            result = {"raw": resp}
+
+        result.setdefault("_prompt", prompt)
+        return result
 
     # ── Public API ──────────────────────────────────────────────────────
 
@@ -161,7 +181,7 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self._call_model(system, prompt, max_tokens=600)
+        resp = self._call_model(system, prompt, max_tokens=1000)
         new_strategy = resp.get("strategy", "")
 
         if new_strategy:
@@ -200,7 +220,7 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self._call_model(system, prompt, max_tokens=600)
+        resp = self._call_model(system, prompt, max_tokens=1000)
 
         # Combine both fields into one readable feedback file
         feedback_parts: list[str] = []

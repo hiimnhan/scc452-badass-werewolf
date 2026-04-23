@@ -598,7 +598,6 @@ class BasePlayer(ABC):
             # Fallback if it is still irreparably broken
             result = {"raw": resp}
 
-        result.setdefault("_raw_response", resp)
         result.setdefault("_prompt", prompt)
         return result
 
