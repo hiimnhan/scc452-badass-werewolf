@@ -89,9 +89,8 @@ class GameState:
         self._seer_log: list[list] = []
         self._witch_log: list[list] = []
         self._suspicion_log: dict[int, dict] = defaultdict(dict)
-        self._game_summary_log: dict[
-            int, dict
-        ] = {}  # Log all public game announcements here for the coach to analyze at the end of the game. Players don't use it as they have their own summary to analyze in their _note already.
+        self._game_summary_log: dict[int, dict] = {}  # Log all public game announcements here for the coach to analyze at the end of the game.
+        self._bid_log: dict[int, list] = defaultdict(list)
 
         self._winner: Literal["Villagers", "Werewolves"] | None = None
 
@@ -436,6 +435,7 @@ class GameState:
         last_speaker = debate_log[-1]["speaker"] if debate_log else None
 
         next_possible_speakers = [p for p in gs._alive_players if p != last_speaker]
+        current_bid_turn = []
         bid_dict = {}
 
         # 1. Run bids in parallel
@@ -445,9 +445,18 @@ class GameState:
                 for name in next_possible_speakers
             }
             for name, future in futures.items():
-                bid, raw_output = future.result()
-                bid_dict[name] = bid
-
+                bid, reason = future.result()
+                bid_dict[name] = bid # This is to pick winner more easily
+                
+                # This is for logging
+                current_bid_turn.append({
+                    name: bid,
+                    "reason": reason
+                })
+                
+        # Log bid
+        gs._bid_log[gs._round_num].append(current_bid_turn)
+        
         # 2. Pick the winner
         max_bid_value = max(bid_dict.values())
         top_bidders = [name for name, bid in bid_dict.items() if bid == max_bid_value]
@@ -673,10 +682,13 @@ class GameState:
             / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
         ).resolve()
 
+        # Store game_summary as json
         json_string = json.dumps(gs._game_summary_log, indent=4)
         write_to_file(
             game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string
-        )  # Store game_summary as json
+        )
+        
+        # Store bid_log as json
 
         summary_lines = []
         winner = gs._game_summary_log.get("winner", "Unknown")
@@ -822,38 +834,38 @@ class GameState:
             role_name = player._role.value
             write_to_file(player_note_dir / PLAYER_NOTE_FILENAME.format(name=name, role=role_name), str(player._note))
 
-        tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
-
         # --- D. Format Suspicion Log ---
-        suspicion_lines = ["# Game Suspicion Log\n"]
+        # suspicion_lines = ["# Game Suspicion Log\n"]
 
-        # Sort the rounds to guarantee chronological order
-        for round_num in sorted(gs._suspicion_log.keys()):
-            round_data = gs._suspicion_log[round_num]
-            suspicion_lines.append(f"## Round {round_num}")
+        # # Sort the rounds to guarantee chronological order
+        # for round_num in sorted(gs._suspicion_log.keys()):
+        #     round_data = gs._suspicion_log[round_num]
+        #     suspicion_lines.append(f"## Round {round_num}")
 
-            for player_name, suspicions in round_data.items():
-                # If you want to include their role, you can pull it from gs._roles if available:
-                role_str = gs._roles[player_name].value if player_name in gs._roles else "Unknown"
-                suspicion_lines.append(f"### {player_name} ({role_str})'s Suspicions")
+        #     for player_name, suspicions in round_data.items():
+        #         # If you want to include their role, you can pull it from gs._roles if available:
+        #         role_str = gs._roles[player_name].value if player_name in gs._roles else "Unknown"
+        #         suspicion_lines.append(f"### {player_name} ({role_str})'s Suspicions")
 
-                if not suspicions:
-                    suspicion_lines.append("No suspicions recorded.\n")
-                    continue
+        #         if not suspicions:
+        #             suspicion_lines.append("No suspicions recorded.\n")
+        #             continue
 
-                for target_name, data in suspicions.items():
-                    score = data.get("score", "N/A")
-                    reason = data.get("reason", "No reason provided.")
-                    suspicion_lines.append(f"- **{target_name}** (Score: {score}): {reason}")
+        #         for target_name, data in suspicions.items():
+        #             score = data.get("score", "N/A")
+        #             reason = data.get("reason", "No reason provided.")
+        #             suspicion_lines.append(f"- **{target_name}** (Score: {score}): {reason}")
 
-                suspicion_lines.append("")  # Adds a blank line for readability
+        #         suspicion_lines.append("")  # Adds a blank line for readability
 
-            suspicion_lines.append("---\n")  # Visual divider between rounds
+        #     suspicion_lines.append("---\n")  # Visual divider between rounds
 
-        # Save to disk
-        write_to_file(game_dir / SUSPICION_LOG_FILENAME, "\n".join(suspicion_lines))
+        # # Save to disk
+        # write_to_file(game_dir / SUSPICION_LOG_FILENAME, "\n".join(suspicion_lines))
         json_string = json.dumps(gs._suspicion_log, indent=4)
-        write_to_file(game_dir / SUSPICION_LOG_FILENAME.replace(".md", ".json"), json_string)
+        write_to_file(game_dir / SUSPICION_LOG_FILENAME, json_string)
+
+        tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
 
         return {"game": gs}
 

@@ -9,7 +9,7 @@ import os
 load_dotenv()  # Load environment variables from .env
 
 
-def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> BaseChatModel:
+def get_llm(model_name: str, api_key=os.environ["DEEPINFRA_API_KEY"], **kwargs) -> BaseChatModel:
     provider = MODEL_PROVIDERS.get(model_name)
     if not provider:
         raise ValueError(f"Model '{model_name}' is not supported. Choose from: {list(MODEL_PROVIDERS.keys())}")
@@ -18,6 +18,12 @@ def get_llm(model_name: str, api_key=os.environ["OPENAI_API_KEY"], **kwargs) -> 
             model=model_name,
             api_key=os.getenv("DEEPSEEK_API_KEY"),
             base_url="https://api.deepseek.com",
+        )
+    if api_key == os.environ["DEEPINFRA_API_KEY"]:
+        return ChatOpenAI(
+            model=model_name,
+            api_key=os.getenv("DEEPINFRA_API_KEY"),
+            base_url="https://api.deepinfra.com/v1/openai",
         )
 
     return provider(model_name=model_name, api_key=api_key, **{**LLM_BASE_CONFIG, **kwargs})

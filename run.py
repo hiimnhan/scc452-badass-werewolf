@@ -12,7 +12,7 @@ Resume from where you left off:
 Override number of games:
     python run.py --scenario baseline --mode override --games 10
     
-/opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_and_self_analyze --mode override --games 3
+/opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_and_self_analyze --mode append --games 3
 
 File layout produced
 --------------------
@@ -321,12 +321,8 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
     print(f"{'=' * 62}\n")
 
     # Build LLM instances once — reused across all games
-    villager_llm = get_llm(
-        VILLAGER_MODEL, base_url="https://api.deepinfra.com/v1/openai", api_key=os.getenv("DEEPINFRA_API_KEY")
-    )
-    wolf_llm = get_llm(
-        WOLF_MODEL, base_url="https://api.deepinfra.com/v1/openai", api_key=os.getenv("DEEPINFRA_API_KEY")
-    )
+    villager_llm = get_llm(VILLAGER_MODEL)
+    wolf_llm = get_llm(WOLF_MODEL)
 
     results: list[dict] = []
 
