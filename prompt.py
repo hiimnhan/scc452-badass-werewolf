@@ -76,6 +76,8 @@ CONDUCT
 SEER_UNMASK_PROMPT_TEMPLATE = """
 You are {name}, the Seer. It is night. Choose one player to secretly investigate.
 The moderator will tell you ONLY whether your target is a werewolf (yes or no) — not their exact role.
+DO NOT select the target you have already investigated in previous nights.
+PRIORITIZE the targets with high suspicion score.
 
 Players available to investigate tonight: {target_pool}
 
@@ -441,6 +443,7 @@ CRITICAL RULES:
 5. DO NOT make any baseless claims. If someone is highly suspicious to you internally, attack their SPECIFIC BEHAVIOR, not their numbers.
 6. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
 7. LOGICAL CONSISTENCY: Your daytime actions must align with your night actions. If you are a power role who protected, saved, or cleared someone last night, do not attack them today unless they do something undeniably wolf-like.
+8. DO NOT make repetitive statements to yourself or any other players.
 {early_round_warning}
 
 Respond with ONLY a JSON object:

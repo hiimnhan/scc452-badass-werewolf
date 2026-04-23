@@ -2,6 +2,7 @@ from typing import List, Optional, Tuple
 from langchain_core.language_models import BaseChatModel
 from players.base_player import BasePlayer, Role
 from prompt import WITCH_PROMPT_TEMPLATE, WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE
+from constants import MAX_RETRIES
 
 
 class Witch(BasePlayer):
@@ -76,13 +77,36 @@ class Witch(BasePlayer):
             note=self._note,
         )
 
-        resp = self.call_model(prompt, max_tokens=300)
+        # ---------------------------------------------------------
+        # Safely Call the LLM (Max Retries, NO Raw Text Parsing)
+        # ---------------------------------------------------------
+        use_save = False
+        poison_target = "None"
+        save_reason = "Default: LLM failed to provide save reasoning."
+        poison_reason = "Default: LLM failed to provide poison reasoning."
+        resp = {}
 
-        # ------------------------------------------------------------------
-        # Extract intents
-        # ------------------------------------------------------------------
-        use_save = resp.get("use_save_potion", False)
-        poison_target = resp.get("poison_target", "None")
+        for attempt in range(MAX_RETRIES):
+            resp = self.call_model(prompt, max_tokens=300)
+            
+            # Check if all 4 expected keys exist
+            expected_keys = ["use_save_potion", "poison_target", "save_analysis", "poison_analysis"]
+            if all(key in resp for key in expected_keys):
+                
+                # Safely parse the boolean (handles string "true" vs boolean True)
+                raw_save = resp["use_save_potion"]
+                if isinstance(raw_save, str):
+                    use_save = raw_save.strip().lower() == "true"
+                else:
+                    use_save = bool(raw_save)
+                    
+                # Extract the rest safely
+                poison_target = str(resp["poison_target"]).strip()
+                save_reason = resp["save_analysis"]
+                poison_reason = resp["poison_analysis"]
+                break # Success! Exit the loop.
+            else:
+                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid Witch JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 
         # ---------------------------------------------------------
         # Validation & Fallbacks
@@ -93,20 +117,18 @@ class Witch(BasePlayer):
             use_save = False
             resp["fallback_save"] = "Forced False: Save potion unavailable or no active target."
 
-        # 2. Validate Poison Potion
-        if isinstance(poison_target, str) and ((poison_target.lower() == "none") or (poison_target == "")):
+        # 2. Validate Poison Potion (Strict Validation)
+        if poison_target.lower() == "none" or poison_target == "":
             poison_target = None
 
         if poison_target and (not self._poison_available or poison_target not in alive_players_except_witch):
             poison_target = None
-            resp["fallback_poison"] = "Forced None: Poison unavailable or target is invalid/dead."
+            resp["fallback_poison"] = "Forced None: Poison unavailable, target is invalid/dead, or LLM failed formatting."
 
         # ------------------------------------------------------------------
         # State update & own-action logging
         # ------------------------------------------------------------------
-        save_reason = resp.get("save_analysis", "No reason provided")
-        poison_reason = resp.get("poison_analysis", "No reason provided")
-
+        
         if use_save:
             self._save_available = False
             self.record_own_action(

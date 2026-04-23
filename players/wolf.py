@@ -1,9 +1,6 @@
 from players.base_player import BasePlayer, Role
-from typing import List
 from prompt import WEREWOLF_PROMPT_TEMPLATE, WEREWOLF_ELIMINATE_PROMPT_TEMPLATE
-import json
-import re
-
+from constants import MAX_RETRIES
 
 class Wolf(BasePlayer):
     def __init__(
@@ -29,7 +26,7 @@ class Wolf(BasePlayer):
 
     def eliminate(
         self, alive_players: list[str], wolf_teammates: list[str], dialogue_history: list, round_num: int
-    ) -> tuple[str, dict]:
+    ) -> tuple[str, str, str, dict]:
         """The final decision on who dies tonight."""
 
         # 1. Filter teammates to see who is actually alive
@@ -64,25 +61,34 @@ class Wolf(BasePlayer):
             dialogue_history=formatted_dialogue,
         )
 
-        # 6. Call the LLM
-        resp = self.call_model(prompt, max_tokens=200)
+        # 6. Call the LLM safely with a retry loop
+        target = ""
+        statement = ""
+        analysis = "Default analysis: LLM failed to provide reasoning."
 
-        # 7. Safely extract the target
-        target = resp.get("target")
-        statement = resp.get("statement")
-        analysis = resp.get("analysis")
+        for attempt in range(MAX_RETRIES):
+            resp = self.call_model(prompt, max_tokens=200)
+            
+            # 7. Check if ALL required keys are in the response
+            if "target" in resp and "statement" in resp and "analysis" in resp:
+                target = resp["target"]
+                statement = resp["statement"]
+                analysis = resp["analysis"]
+                break # We got everything we need, exit the loop!
+            else:
+                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid elimination JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 
-        self.record_own_action(
-            round_num, "Night", f"Debate: Targeted {target}. Reason: {resp.get('analysis', 'No analysis provided.')}"
-        )
-
-        # 8. Fallback logic: If the LLM hallucinates a dead player, a teammate, or returns nothing
+        # 8. VALIDATION: Handle the case where the target is empty, None, or an invalid hallucinated name
         if target not in targets:
             import random
-
-            target = random.choice(targets) if targets else None
+            target = random.choice(targets) if targets else "None" # Fallback to a valid string
             statement = "Failed to choose a target. Randomly select a target."
             analysis = "Failed to choose a target. Randomly select a target."
-            resp["fallback_target"] = f"Forced random target: Invalid or missing target chosen by LLM."
-
+            resp["fallback_target"] = "Forced random target: Invalid or missing target chosen by LLM."
+            
+        # 9. RECORD: Log the final, validated action (moved below the validation!)
+        self.record_own_action(
+            round_num, "Night", f"Debate: Targeted {target}. Reason: {analysis}"
+        )
+            
         return target, statement, analysis, resp
