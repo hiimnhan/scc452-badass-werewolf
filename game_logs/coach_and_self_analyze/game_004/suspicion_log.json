@@ -1,0 +1,370 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "No night action. Remains a neutral suspect."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No night action. Remains a neutral suspect."
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Rapidly defended Nhan while simultaneously accusing Meg of antagonistic behavior. This coordinated defense indicates a potential partnership and a strategic effort to deflect scrutiny."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No night action. Remains a neutral suspect."
+            },
+            "Riley": {
+                "score": 0.85,
+                "reason": "Shifted from neutral to defensive, aligning with Meg and Jin\u2019s framing of Nhan. This suggests a strategic interest in controlling the narrative and potentially concealing their own actions."
+            },
+            "Meg": {
+                "score": 0.95,
+                "reason": "Immediately framed Nhan\u2019s attempt to initiate discussion as a manipulative 'wolf move.' This demonstrates a defensive posture and an attempt to discredit Nhan. Now actively participating in coordinated attacks."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Initiated discussion about questioning. Now potentially targeted by Meg\u2019s criticism. Maintaining a neutral position."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No action taken. Observing the unfolding debate."
+            },
+            "Jin": {
+                "score": 0.65,
+                "reason": "No action taken. Observing the unfolding debate. Now accusing Meg of manipulating the conversation; potentially aligned with Riley."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No action taken. Observing the unfolding debate."
+            },
+            "Riley": {
+                "score": 0.8,
+                "reason": "Initially neutral, now exhibiting defensive behavior, attempting to discredit Nhan\u2019s strategy. Accusations of coordinated effort with Meg. Increasingly suspicious due to strategic deflection and alliance building."
+            },
+            "Meg": {
+                "score": 0.65,
+                "reason": "Initially neutral, now exhibiting defensive behavior, attempting to discredit Nhan\u2019s strategy. Suggests a possible attempt to influence the debate's direction and coordinate with others. Accusations of manipulative behavior."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Reacting defensively to the accusations. While maintaining a neutral observation, the defensive tone suggests an attempt to establish a solid foundation for questioning, potentially attempting to counter the emerging narrative. Limited observable behavior."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Observing Meg\u2019s statement. Remains neutral, likely assessing the situation."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Increasingly defensive in response to accusations. Reacting to Meg\u2019s framing of his support for Nhan as a 'wolf partnership' suggests an attempt to redirect suspicion away from himself. Shows an early desire to influence the conversation's direction."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Observing Meg\u2019s statement. Remains neutral, likely assessing the situation."
+            },
+            "Riley": {
+                "score": 0.75,
+                "reason": "Increasingly aligning with Meg\u2019s framing of Nhan. Supporting her claim that Nhan\u2019s actions are designed to control the discussion, even if the evidence is weak. Strategic alliance with Meg, reinforcing the suspicion around Nhan."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Demonstrates an escalating pattern of suspicion directed at Nhan. Framing Nhan\u2019s attempts at organization as a 'wolf move' is a deliberate attempt to discredit and shift blame. The coordinated response with Riley and Jin suggests a wolf partnership focused on controlling the conversation. Shows a clear strategic desire to deflect attention from their own actions."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Remaining neutral, but demonstrating a slight vulnerability to deflection. Reacting defensively to Meg\u2019s criticism."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Observing, maintaining neutral stance."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Observing, maintaining neutral stance."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Observing, maintaining neutral stance."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Maintaining a critical stance, now targeting the Witch's decision-making process. Likely attempting to create division and uncertainty."
+            },
+            "Meg": {
+                "score": 0.65,
+                "reason": "Increasingly focused on discrediting other players, particularly the Witch. Demonstrates a pattern of deflection and attempts to control the narrative. The accusation against Jin highlights a strategic effort to create suspicion around the Witch\u2019s actions and expose her as potentially biased."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.55,
+                "reason": "Initiated first accusation. Proposed structured questioning. Now facing a challenge to their approach, suggesting a potential vulnerability to manipulation. Resistance to structured questioning."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed as not a werewolf. Remains neutral, as expected."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Maintained suspicion level. No observable behavior. Actively observing."
+            },
+            "Jin": {
+                "score": 0.72,
+                "reason": "Initially observed neutral suspicion. Now exhibiting active counter-narrative behavior, attempting to discredit Nhan\u2019s approach. Now accusing Meg of antagonistic behavior, attempting to deflect attention from the conversation's direction. Now accused by Riley of a coordinated effort to deflect attention, suggesting a potential wolf partnership. Resisting Nhan's attempt to structure the discussion."
+            },
+            "Riley": {
+                "score": 0.69,
+                "reason": "Initially observed neutral suspicion. Now exhibiting active counter-narrative behavior, attempting to discredit Nhan\u2019s approach. Now supporting Meg\u2019s criticism of Nhan and accusing Jin of a coordinated effort to deflect attention, suggesting a potential wolf partnership. Resisting Nhan's attempt to structure the discussion."
+            },
+            "Meg": {
+                "score": 0.77,
+                "reason": "Initially observed neutral suspicion. Now exhibiting active counter-narrative behavior, attempting to discredit Nhan\u2019s approach. Now actively defending against accusations of coordinating with others and attempting to deflect attention. Demonstrates a clear attempt to control the conversation's direction."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Survived a wolf attack. Highly likely to be the Guard or Witch, or at least the target of protection. Now attempting to steer the debate and establish a leadership role to deflect from their own survival. Meg has highlighted their approach as scripted, increasing their perceived threat."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "No info yet. Easy target for framing if they don't provide a strong defense."
+            },
+            "Nam": {
+                "score": 0.3,
+                "reason": "No info yet. Potentially a harmless villager."
+            },
+            "Jin": {
+                "score": 0.75,
+                "reason": "Standard suspect. Now actively defending Nhan and attacking Meg. This alignment suggests a potential wolf partnership or a desperate attempt to protect a perceived ally, creating an opening to frame them as a coordinated unit. Latest defense of Nhan confirms the perceived partnership."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "No info yet. Standard suspect."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow werewolf. Essential ally. Effectively using the 'coordinated scripting' strategy to frame Nhan and control the narrative."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Surviving the kill makes them likely the Guard or Witch. Attempting to dictate the structure of the debate via 'lines of questioning' is a textbook move to steer suspicion away from themselves. High threat; potential power role target. Now being successfully framed as 'controlling' by both me and Riley."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No information yet. Neutral threat."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information yet. Neutral threat."
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Neutral threat. Now actively defending Nhan by labeling my analysis as 'antagonistic'. This defense is suspicious and looks like an attempt to protect a wolf partner or a power role. By criticizing my logic rather than Nhan's behavior, Jin is now a viable secondary target for framing. Riley has now framed Jin as part of a 'wolf partnership' with Nhan."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No information yet. Neutral threat."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Ally Werewolf. Successfully mirroring my rhetoric to isolate Nhan and create a false consensus. Now expanding the frame to include Jin to create a 'wolf pair' narrative."
+            }
+        }
+    }
+}

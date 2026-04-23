@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Cong (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Jin (Witch) used SAVE potion on Nam"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I find Riley\u2019s insistence on focusing solely on my investigation unproductive. We need to establish a clear line of questioning, not deflect with irrelevant comments. Let's focus on identifying the target of the night\u2019s kill."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley\u2019s insistence on a rigid investigation is a distraction. Focusing on established procedures won\u2019t reveal the wolf. I\u2019ll observe Cong\u2019s attempts to impose order; his vigilance merits closer scrutiny."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley\u2019s insistence on procedural investigation is a distraction. Let\u2019s focus on the night\u2019s events \u2013 the lack of a kill suggests careful planning by the wolves. I have nothing to add at this moment."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Did anyone else notice that Nhan and Hoang are practically speaking in unison? The phrasing is almost identical. That is a textbook wolf move\u2014coordinated scripting to steer the conversation. It's too synchronized to be a coincidence. I'm looking at them very closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg's observation regarding Nhan and Hoang\u2019s synchronized phrasing is concerning. It warrants further scrutiny. Let\u2019s examine their conversation more closely for coordinated manipulation."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley\u2019s insistence on rigid procedures is a needless distraction. The absence of a kill on the first night suggests a deliberate strategy \u2013 coordinated silence. I\u2019ll be observing Nhan and Hoang\u2019s synchronization more closely."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg\u2019s claim of coordinated scripting is a strong indicator of wolf behavior. I\u2019m prioritizing eliminating potential manipulators to prevent future deception."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg\u2019s accusations are consistently framed as coordinated efforts. Her continued emphasis on Nhan and Hoang\u2019s synchronized speech suggests a deliberate attempt to steer the group\u2019s focus, potentially masking a wolf\u2019s actions."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s attempts to deflect and align with Hoang suggest a coordinated effort to obscure the truth. I believe he is attempting to manipulate the conversation and hide his true intentions."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: The coordinated speech between Nhan and Hoang is highly suspicious and requires immediate investigation. Their attempts to deflect scrutiny with procedural arguments are a tactic to avoid accountability. I vote to exile Nhan."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's deflection and synchronized phrasing with Hoang create a suspicious pattern. We need to examine their communication more closely to understand their intent and expose their potential wolf alliance."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Meg pointed out something blatant: Nhan and Hoang are practically mirroring each other's words. That kind of synchronization usually indicates a coordinated effort to manipulate the group. Nhan's mimicry is too suspicious to ignore."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's immediate pivot to agree with me after I called out his coordination with Nhan is a desperate attempt to blend in. It's a classic diversionary tactic to escape scrutiny. The synchronization was too obvious to be an accident."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Cong (Seer) investigated Hoang \u2014 Result: not a wolf.",
+            "Jin (Witch) used POISON potion on Hoang"
+        ],
+        "night_eliminated": [
+            "Nam",
+            "Hoang"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Seer",
+        "Nam": "Villager",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

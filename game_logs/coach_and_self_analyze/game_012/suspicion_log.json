@@ -1,0 +1,370 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.55,
+                "reason": "Maintains suspicion due to the lack of a kill. His focus on observing patterns aligns with Riley and Meg's concerns about coordinated behavior. Echoing previous statements suggests an attempt to blend in and avoid drawing immediate suspicion."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No action taken. Remains a low-priority suspect."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No action taken. Remains a low-priority suspect."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "His strategy of focusing on observable patterns is validated by the lack of action. However, the coordinated observation shared by others raises further questions about his motives."
+            },
+            "Riley": {
+                "score": 0.75,
+                "reason": "Suspicion remains high due to initiating the accusation of coordinated mirroring. Cong's alignment with this observation validates Riley\u2019s concerns."
+            },
+            "Meg": {
+                "score": 0.65,
+                "reason": "Suspicion remains high. Cong\u2019s statement corroborates her assessment of a potential coordinated strategy."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Reiterated the lack of deaths. Now faces an accusation of synchronizing with Hoang, increasing suspicion."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by the Seer. Remains silent and uninvolved."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Acknowledged the lack of deaths and Nhan\u2019s statement. Maintains a skeptical stance, but without immediate reaction to Riley's accusation."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Initially proposed a discussion process. Now emphasizes observable patterns, subtly aligning with Riley\u2019s suspicion of coordinated behavior. Demonstrates a potential defensive strategy by shifting focus to perceived patterns."
+            },
+            "Riley": {
+                "score": 0.75,
+                "reason": "Increased suspicion due to identifying coordinated behavior. Continues to proactively seek to expose potential wolf tactics. Remains a strong suspect."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Initially observed the initial statements neutrally. Now recognizes the potential for coordinated behavior, indicating a possible wolf strategy. Demonstrates an ability to adapt to new information and contribute to the investigation."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Repeated observation of no deaths. Neutral suspect."
+            },
+            "Cong": {
+                "score": 0.55,
+                "reason": "Initially neutral, now focusing on identifying patterns. Aligning with Riley and Meg\u2019s concerns about coordinated behavior."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No night action. Neutral suspect."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Proposed a structured discussion. Initially neutral."
+            },
+            "Riley": {
+                "score": 0.8,
+                "reason": "Increased suspicion due to observation of coordinated mirroring with Hoang and Nhan. Accusatory behavior intensifying."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Bandwagoning suspicion \u2013 echoing Riley's concerns and using dramatic phrasing. Demonstrates a willingness to participate in accusations."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Mirrored Hoang's observation, maintaining neutral stance. Continuing to avoid initiating discussion."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Observing the discussion, mirroring Riley's focus on patterns. No proactive statements or accusations."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No action taken. Observing the discussion."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Prioritizing process discussion. Remains neutral and observant. Now attempting to steer the conversation away from potentially uncomfortable observations about coordinated behavior."
+            },
+            "Riley": {
+                "score": 0.8,
+                "reason": "Increased suspicion due to observation of synchronized statements. Maintaining focus on identifying coordinated wolf behavior. Hoang\u2019s statement emphasizes patterns, validating Riley\u2019s concerns."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Initially neutral, now demonstrates an awareness of coordinated behavior and an inclination to flag potential wolf tactics. Actively participating in the accusation process. Hoang\u2019s statement reinforces the need to scrutinize coordinated behavior."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Repetition of the observation maintains neutrality. No immediate indication of suspicion."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Repeating the observation of no deaths last night. Maintains a neutral stance, focused on objective observation rather than speculation."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Repetition of the observation maintains neutrality. No immediate indication of suspicion."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Repetition of the observation maintains neutrality. No immediate indication of suspicion."
+            },
+            "Riley": {
+                "score": 0.65,
+                "reason": "Continued focus on coordinated mirroring with Hoang; suspicion remains high due to the synchronized statements."
+            },
+            "Meg": {
+                "score": 0.55,
+                "reason": "Reinforces Riley\u2019s suspicion, echoing the observation of coordinated behavior."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Targeted by wolves but survived; likely Guard or Witch. Used nearly identical phrasing to Hoang, suggesting alta coordination or accidental sync. Remains a high-value target for elimination."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Unknown role. Currently a baseline target for framing. Now mirroring Hoang's latest statement word-for-word, effectively joining the synchronization pattern. Appears to be coordinating with Hoang to deflect suspicion from the mirror-group."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Unknown role. Currently a baseline target for framing."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Unknown role. Currently a baseline target for framing."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Proposing formal process and staying passive. Mirroring Nhan's phrasing almost word-for-word. Now attempting to deflect suspicion by labeling the observation of this mirroring as 'speculation' and questioning my scrutiny."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Effectively supporting my lead and pivoting suspicion to ensure a villager target."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Failed kill target. Likely protected/saved. Now mirroring Hoang's statement almost exactly, suggesting a coordinated attempt to appear neutral and blend in."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Unknown alignment. Immediately mirrored Hoang's phrasing about 'deeper examination' and 'observable patterns,' mimicking the exact behavior Nhan used earlier. Likely part of a coordinated effort to appear analytical."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No current data to increase or decrease threat."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No current data to increase or decrease threat."
+            },
+            "Hoang": {
+                "score": 0.8,
+                "reason": "Positioned himself as process-oriented. Statements are nearly identical to Nhan's. Now attempting to deflect suspicion by questioning Riley's logic and pushing for 'observable patterns' to invalidate the mirroring observation. Now seeing Cong mirror him as well."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf ally. Successfully identified mirroring between Hoang and Nhan to create suspicion."
+            }
+        }
+    }
+}
