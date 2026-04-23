@@ -22,6 +22,7 @@ from constants import (
     WITCH_LOG_FILENAME,
     SUSPICION_LOG_FILENAME,
     PLAYER_NOTE_FILENAME,
+    BID_LOG_FILENAME
 )
 from pathlib import Path
 from utils import write_to_file
@@ -681,15 +682,20 @@ class GameState:
             / scenario
             / f"game_{config.get('configurable', {}).get('game_id', 'unknown')}"
         ).resolve()
+        
+        # Store bid_log as json
+        json_string = json.dumps(gs._bid_log, indent=4)
+        write_to_file(
+            game_dir / BID_LOG_FILENAME, json_string
+        )
 
         # Store game_summary as json
         json_string = json.dumps(gs._game_summary_log, indent=4)
         write_to_file(
             game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string
         )
-        
-        # Store bid_log as json
 
+        # Store game_summary as markdown
         summary_lines = []
         winner = gs._game_summary_log.get("winner", "Unknown")
         summary_lines.append(f"# Game Summary\n**Winner:** {winner}\n")
