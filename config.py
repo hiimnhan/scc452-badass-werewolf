@@ -20,6 +20,7 @@ MODEL_PROVIDERS = {
     "gemini-2.5-flash": ChatGoogleGenerativeAI,
     "gemini-1.5-pro": ChatGoogleGenerativeAI,
     "google/gemma-4-31B-it": ChatOpenAI,
+    "google/gemma-3-12b-it": ChatOpenAI,
     "google/gemma-3-4b-it": ChatOpenAI,
 }
 

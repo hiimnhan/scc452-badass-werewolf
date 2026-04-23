@@ -1,5 +1,6 @@
 from enum import Enum
 import json
+import re
 from typing import List, Optional
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -422,13 +423,7 @@ class BasePlayer(ABC):
     # ── Intra-game: decision actions ────────────────────────────────────
 
     def get_bid(self, debate_log: list, round_num: int) -> tuple[int, dict]:
-        """Return a bid score 0-10: how urgently this player wants to speak next.
-
-        High suspicion of a specific player → high urgency.
-        Low variance / no clear target → low urgency.
-
-        Returns (bid_score: int, log_dict: dict).
-        """
+        """Return a bid score 0-10: how urgently this player wants to speak next."""
         formatted_current_debate = ""
         if debate_log:
             for speaker_statement in debate_log:
@@ -451,12 +446,12 @@ class BasePlayer(ABC):
         resp = self.call_model(prompt, max_tokens=100)
 
         try:
-            bid = max(0, min(10, int(resp.get("bid", 5))))
+            bid = max(0, min(10, int(resp.get("bid"))))
         except (TypeError, ValueError):
             bid = 5
-            resp["fallback_bid"] = "Defaulted to 5 — invalid model response."
+            resp["reason"] = "Defaulted to 5 — invalid model response."
 
-        return bid, resp
+        return bid, resp["reason"]
 
     def vote(self, alive_players: list[str], debate_log: list[dict], round_num: int) -> tuple[str | None, dict]:
         """Vote to eliminate a player during the day phase, or abstain."""
@@ -586,9 +581,21 @@ class BasePlayer(ABC):
             resp = resp.strip()
 
         result: dict = {}
+        # 1. Clean up the response to extract just the JSON block
+        clean_resp = resp.strip()
+        
+        # This regex looks for everything from the first '{' to the last '}'
+        # re.DOTALL allows it to match across multiple lines
+        match = re.search(r'(\{.*\})', clean_resp, re.DOTALL)
+        
+        if match:
+            clean_resp = match.group(1)
+
+        # 2. Attempt to parse the cleaned string
         try:
-            result = json.loads(resp)
+            result = json.loads(clean_resp)
         except json.JSONDecodeError:
+            # Fallback if it is still irreparably broken
             result = {"raw": resp}
 
         result.setdefault("_raw_response", resp)
