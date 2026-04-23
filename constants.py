@@ -12,3 +12,5 @@ WOLF_TARGET_LOG_FILENAME = "wolf_target_log.md"
 GUARD_LOG_FILENAME = "guard_log.md"
 SEER_LOG_FILENAME = "seer_log.md"
 WITCH_LOG_FILENAME = "witch_log.md"
+
+MAX_RETRIES = 5

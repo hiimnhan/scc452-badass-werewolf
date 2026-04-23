@@ -525,10 +525,7 @@ class GameState:
             }
 
             for name, future in futures.items():
-                target, raw_output = future.result()
-
-                # Extract the public reasoning
-                reasoning = raw_output.get("reasoning", "No public reason provided.")
+                target, reasoning = future.result()
 
                 # Create a dictionary for THIS specific vote, then append it to the list
                 vote_data = {
@@ -671,11 +668,6 @@ class GameState:
 
         # --- A. Format Game Summary ---
 
-        # Add roles to game summary
-        role_log = gs._game_summary_log.setdefault("roles", {})
-        for name, role in gs._roles.items():
-            role_log[name] = role.value
-
         game_dir = (
             Path(__file__).parent
             / "game_logs"
@@ -688,6 +680,11 @@ class GameState:
         write_to_file(
             game_dir / BID_LOG_FILENAME, json_string
         )
+
+        # Add roles to game summary
+        role_log = gs._game_summary_log.setdefault("roles", {})
+        for name, role in gs._roles.items():
+            role_log[name] = role.value
 
         # Store game_summary as json
         json_string = json.dumps(gs._game_summary_log, indent=4)
@@ -707,7 +704,9 @@ class GameState:
         summary_lines.append("\n")
 
         for round_num, data in gs._game_summary_log.items():
-            if str(round_num) == "winner":
+            try:
+                round_num = int(round_num)
+            except (ValueError, TypeError):
                 continue
 
             summary_lines.append(f"## Round {round_num}")
@@ -723,22 +722,25 @@ class GameState:
             summary_lines.append(f"**Night Eliminations:** {', '.join(night_kills) if night_kills else 'None'}")
 
             # Day Debate
-            summary_lines.append("\n### Day Debate")
-            for debate_entry in data.get("day_debate", []):
-                speaker = debate_entry.get("speaker", "Unknown")
-                statement = debate_entry.get("statement", "")
-                summary_lines.append(f"**{speaker}:** {statement}")
+            day_debate = data.get("day_debate", [])
+            if day_debate:
+                summary_lines.append("\n### Day Debate")
+                for debate_entry in day_debate:
+                    speaker = debate_entry["speaker"]
+                    statement = debate_entry["statement"]
+                    summary_lines.append(f"**{speaker}:** {statement}")
 
-            # Votes
-            summary_lines.append("\n### Votes")
-            for vote in data.get("votes", []):
-                voter = vote.get("voter", "Unknown")
-                vote_for = vote.get("vote_for", "None")
-                reason = vote.get("reasoning", "No reason provided.")
-                summary_lines.append(f"**{voter}** voted for **{vote_for}**\n> {reason}")
+                # Votes
+                summary_lines.append("\n### Votes")
+                for vote in data.get("votes", []):
+                    voter = vote["voter"]
+                    vote_for = vote["vote_for"]
+                    reason = vote["reasoning"]
+                    summary_lines.append(f"**{voter}** voted for **{vote_for}**\n> {reason}")
 
-            # Day Exiled
-            summary_lines.append(f"\n**Day Exiled:** {data.get('day_exiled', 'None')}")
+                # Day Exiled
+                summary_lines.append(f"\n**Day Exiled:** {data['day_exiled']}")
+            
             summary_lines.append("---\n")
 
         formatted_summary_md = "\n".join(summary_lines)
@@ -841,33 +843,6 @@ class GameState:
             write_to_file(player_note_dir / PLAYER_NOTE_FILENAME.format(name=name, role=role_name), str(player._note))
 
         # --- D. Format Suspicion Log ---
-        # suspicion_lines = ["# Game Suspicion Log\n"]
-
-        # # Sort the rounds to guarantee chronological order
-        # for round_num in sorted(gs._suspicion_log.keys()):
-        #     round_data = gs._suspicion_log[round_num]
-        #     suspicion_lines.append(f"## Round {round_num}")
-
-        #     for player_name, suspicions in round_data.items():
-        #         # If you want to include their role, you can pull it from gs._roles if available:
-        #         role_str = gs._roles[player_name].value if player_name in gs._roles else "Unknown"
-        #         suspicion_lines.append(f"### {player_name} ({role_str})'s Suspicions")
-
-        #         if not suspicions:
-        #             suspicion_lines.append("No suspicions recorded.\n")
-        #             continue
-
-        #         for target_name, data in suspicions.items():
-        #             score = data.get("score", "N/A")
-        #             reason = data.get("reason", "No reason provided.")
-        #             suspicion_lines.append(f"- **{target_name}** (Score: {score}): {reason}")
-
-        #         suspicion_lines.append("")  # Adds a blank line for readability
-
-        #     suspicion_lines.append("---\n")  # Visual divider between rounds
-
-        # # Save to disk
-        # write_to_file(game_dir / SUSPICION_LOG_FILENAME, "\n".join(suspicion_lines))
         json_string = json.dumps(gs._suspicion_log, indent=4)
         write_to_file(game_dir / SUSPICION_LOG_FILENAME, json_string)
 

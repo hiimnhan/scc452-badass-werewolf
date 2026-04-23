@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
-from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME
+from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME, MAX_RETRIES
 from utils import write_to_file
 import re
 
@@ -181,11 +181,25 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self._call_model(system, prompt, max_tokens=1000)
-        new_strategy = resp.get("strategy", "")
+        
+        for attempt in range(MAX_RETRIES):
+            resp = self._call_model(system, prompt, max_tokens=1000)
+            
+            # Safely extract and clean the strategy string
+            extracted_strategy = resp.get("strategy", "").strip()
 
+            # Check if we actually got meaningful text back
+            if extracted_strategy:
+                new_strategy = extracted_strategy
+                break # We successfully got the strategy, exit the loop!
+            else:
+                print(f"Warning: Coach failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+
+        # Only overwrite the strategy file on the hard drive if we got a valid update
         if new_strategy:
             self._write_coach_strategy(new_strategy)
+        else:
+            raise ValueError("Error: Coach completely failed to update strategy. Keeping the previous strategy for the next game.")
 
     def _generate_coach_feedback(self, game_record: str) -> None:
         """Write actionable feedback for villager-side players.
@@ -220,18 +234,35 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
-        resp = self._call_model(system, prompt, max_tokens=1000)
+        key_mistakes = ""
+        feedback = ""
+
+        for attempt in range(MAX_RETRIES):
+            resp = self._call_model(system, prompt, max_tokens=1000)
+            
+            # Safely extract and clean the text
+            extracted_mistakes = resp.get("key_mistakes", "").strip()
+            extracted_feedback = resp.get("feedback", "").strip()
+
+            # We want the Coach to provide BOTH parts for a complete analysis
+            if extracted_mistakes and extracted_feedback:
+                key_mistakes = extracted_mistakes
+                feedback = extracted_feedback
+                break # We successfully got both fields, exit the loop!
+            else:
+                print(f"Warning: Coach failed to generate full feedback JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 
         # Combine both fields into one readable feedback file
         feedback_parts: list[str] = []
 
-        key_mistakes = resp.get("key_mistakes", "")
         if key_mistakes:
             feedback_parts.append(f"KEY MISTAKES THIS GAME:\n{key_mistakes}")
 
-        feedback = resp.get("feedback", "")
         if feedback:
             feedback_parts.append(f"COACHING ADVICE FOR NEXT GAME:\n{feedback}")
 
+        # Only write to the file if we actually have content
         if feedback_parts:
             self._write_coach_feedback("\n\n".join(feedback_parts))
+        else:
+            raise ValueError("Error: Coach completely failed to generate feedback.")

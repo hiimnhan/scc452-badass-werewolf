@@ -1,9 +1,8 @@
 from typing import List, Optional
-
 from langchain_core.language_models import BaseChatModel
-
 from players.base_player import BasePlayer, Role
 from prompt import SEER_PROMPT_TEMPLATE, SEER_UNMASK_PROMPT_TEMPLATE
+from constants import MAX_RETRIES
 
 
 class Seer(BasePlayer):
@@ -82,27 +81,17 @@ class Seer(BasePlayer):
 
     # Special night actions
 
-    def unmask(self, alive_players: List[str], round_num: int) -> tuple[str, dict]:
-        """Night action: choose one alive player to secretly investigate.
-
-        Returns (target_name, log_dict) for the moderator.
-        The moderator then calls reveal_and_update(target_name, is_wolf, round_num).
-
-        Guards:
-            — dead seer cannot act
-            — None or empty alive_players returns error (no crash)
-            — all alive players already investigated: falls back to full available pool
-        """
+    def unmask(self, alive_players: list[str], round_num: int) -> tuple[str, str, dict]:
         if not self._is_alive:
-            return "", {"error": "Seer is dead and cannot investigate."}
+            return "None", "Seer is dead.", {"error": "Seer is dead and cannot investigate."}
 
         if not alive_players:
-            return "", {"error": "No alive players provided."}
+            return "None", "No alive players provided.", {"error": "No alive players provided."}
 
         # Seer cannot investigate themselves
         available_targets = [p for p in alive_players if p != self._name]
         if not available_targets:
-            return "", {"error": "No valid targets to investigate (only self is alive)."}
+            return "None", "No valid targets.", {"error": "No valid targets to investigate (only self is alive)."}
 
         # Soft preference: show uninvestigated first. LLM may still pick any available target.
         already_investigated = {inv["player"] for inv in self._investigations}
@@ -116,27 +105,44 @@ class Seer(BasePlayer):
             note=self._note,
         )
 
-        resp = self.call_model(prompt, max_tokens=300)
-        target = resp.get("target", "")
-        analysis = resp.get("analysis", "")
+        target = "None"
+        analysis = "Default analysis: LLM failed to provide reasoning."
 
-        # Validation: must be in available_targets (uninvestigated preference is soft)
+        for attempt in range(MAX_RETRIES):
+            resp = self.call_model(prompt, max_tokens=300)
+            
+            if "target" in resp and "analysis" in resp:
+                target = resp["target"]
+                analysis = resp["analysis"]
+                break
+            else:
+                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid target JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+
+        # Validation: must be in available_targets
         if target not in available_targets:
+            # 1st Fallback: Raw text extraction
             if "raw" in resp:
                 for p in available_targets:
                     if p in resp["raw"]:
                         target = p
+                        analysis = "Extracted target from raw text due to JSON failure."
+                        resp["target"] = target
+                        resp["analysis"] = analysis
                         break
+            
+            # 2nd Fallback: Random selection
             if target not in available_targets:
-                target = target_pool[0]
+                import random
+                target = random.choice(target_pool)
+                analysis = "Forced random target due to invalid LLM response."
                 resp["target"] = target
-                resp["analysis"] = "Used first available target due to invalid response."
-                resp["fallback"] = "Used first available target due to invalid response."
+                resp["analysis"] = analysis
+                resp["fallback"] = analysis
 
         self.record_own_action(
             round_num,
             "Night",
-            f"Chose to investigate {target}. Reason: {resp.get('analysis', 'No analysis provided.')}",
+            f"Chose to investigate {target}. Reason: {analysis}",
         )
         return target, analysis, resp
 
