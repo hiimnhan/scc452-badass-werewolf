@@ -35,4 +35,4 @@ def write_to_file(path: Path, content):
         content = "\n".join(str(item) for item in content)
     elif not isinstance(content, str):
         content = str(content)
-    path.write_text(content)
+    path.write_text(content, encoding="utf-8")
