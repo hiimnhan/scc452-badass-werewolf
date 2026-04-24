@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "No one was killed during the night. Maintaining neutrality until more information is available is inefficient. I must begin probing to identify potential wolves."
+            },
+            {
+                "Cong": 8,
+                "reason": "Silence is unacceptable. Initial suspicion scores are equal. We need immediate, directed questioning to break the stalemate and expose wolf behavior. Prioritizing Nhan is crucial."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's protected status and evasiveness are concerning. I need to directly challenge their statements and probe for inconsistencies to expose their deception. Delaying risks losing valuable information."
+            },
+            {
+                "Jin": 8,
+                "reason": "Initial suspicion scores are uniform. No one has offered a compelling argument or deviation. I must establish a line of questioning to differentiate individuals."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong is confirmed innocent. Maintaining a strong narrative of innocence is crucial. I need to preemptively address any attempts to shift suspicion onto those who have been cleared."
+            },
+            {
+                "Riley": 5,
+                "reason": "The night kill failed, which creates confusion. I need to establish a presence as a logical villager and subtly steer the conversation before a Seer or the Witch takes control."
+            },
+            {
+                "Meg": 6,
+                "reason": "Since the night kill failed, the village will be suspicious. I need to shape the narrative early and suggest Nhan's survival is a sign of a power role or a lucky break to deflect focus."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Lack of reaction is a key indicator. Delaying action suggests coordinated deflection. Riley's perspective is vital to assessing this."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's silence is suspicious. Immediate questioning is required to establish a baseline and identify potential coordinated behavior."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's high suspicion score and evasiveness necessitate immediate scrutiny. Delaying questioning risks allowing them to solidify a deceptive narrative."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Confirming Cong's innocence is paramount. Jin\u2019s observation about the lack of action warrants immediate follow-up to solidify this fact and disrupt potential deflections. Delaying risks reinforcing a false narrative."
+            },
+            {
+                "Riley": 8,
+                "reason": "Jin is targeting me immediately to establish dominance. I must deflect this early lead and pivot the suspicion back toward Jin's aggressive questioning to appear as a defensive but honest villager."
+            },
+            {
+                "Meg": 7,
+                "reason": "Jin is attempting to lead and targeting Riley. I need to intervene to shift focus away from my ally and frame Jin's assertiveness as desperation."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's mirroring of Jin's statement strongly suggests a coordinated deflection. I need to directly challenge this tactic and establish my own observations immediately."
+            },
+            {
+                "Cong": 8,
+                "reason": "Hoang\u2019s mirroring of Jin\u2019s statement confirms coordinated framing attempts. I must directly challenge this repetition to expose the strategy and prevent further manipulation."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s high suspicion score and evasiveness, coupled with mirroring Jin's deflection, warrants immediate focused questioning. Delay risks reinforcing their deception."
+            },
+            {
+                "Jin": 8,
+                "reason": "The consistent avoidance of discussing the lack of eliminations indicates coordinated behavior. Riley\u2019s echo of my statement warrants immediate scrutiny."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin and Hoang are coordinating an attack on me. I must immediately strike back by highlighting their suspicious mirroring to flip the narrative and put them on the defensive."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin and Hoang are mirroring each other perfectly. I need to call this out immediately as coordinated wolf behavior to frame them and deflect any potential suspicion from Riley."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s accusation of a coordinated effort to frame Hoang is a deflection tactic. Mirroring Jin\u2019s observation significantly raises suspicion. Immediate action is required to expose this manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's accusation of coordinated framing is too pointed and lacks substance. It\u2019s a clear attempt to deflect suspicion. I must immediately challenge this, exposing the pattern of mirroring and highlighting the manipulative nature of this tactic."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's claim of coordinated deflection and mirroring of Jin/Hoang necessitates immediate investigation. Their behavior strongly suggests involvement in manipulating the narrative. Protecting Riley was a calculated risk; I need to understand their strategy now."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's accusation of coordinated behavior and reliance on 'gut feeling' warrants immediate scrutiny. Their attempt to shift suspicion onto Hoang, mirroring Jin's initial observation, represents a potentially manipulative strategy. I need to directly challenge this framing."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley's accusation of coordinated deflection, combined with my initial observation, indicates a strong possibility of a coordinated attempt to deflect suspicion. Mirroring Riley's accusation is crucial to expose this strategy and solidify innocence."
+            },
+            {
+                "Meg": 8,
+                "reason": "Riley has created a perfect opening. I need to amplify the 'coordinated script' narrative against Hoang and Jin to solidify their roles as wolves and remove them from the game."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's accusation of coordinated deflection, mirroring Jin, is a clear deflection tactic. Hoang\u2019s immediate denial and refocusing on Riley\u2019s framing suggests an attempt to control the narrative and deflect suspicion. This warrants immediate scrutiny."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s accusation of coordinated deflection is overly broad and lacks specific evidence. Hoang's mirroring is a tactic, not proof of guilt. I must directly challenge this framing attempt before it gains traction and obscures the truth."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's claim of coordinated deflection, combined with mirroring Jin\u2019s observation, indicates active deception. Prioritizing immediate investigation of Riley\u2019s story is crucial to disrupt the wolves\u2019 narrative."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s accusation of coordinated deflection is a deliberate attempt to shift blame. Mirroring my observations and immediately targeting me demonstrates manipulative behavior and a strategic attempt to control the discussion. I need to challenge this immediately."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang and Jin are coordinating an attack. I must break their momentum and pivot the village's suspicion toward Hoang's blatant echoing to avoid being the primary target for exile."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Jin are making themselves obvious targets. I need to amplify Riley's point about their 'scripted' behavior to ensure one of them is exiled, while framing my support as independent observation."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's accusations of coordinated deflection and scripting are strong indicators of manipulative behavior. I need to challenge this directly to expose the deflection tactic and establish a clear line of reasoning."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s aggressive framing and coordinated deflection attempt with Hoang necessitates immediate intervention. Their tactic aims to prematurely exile a villager and disrupt Villager strategy. I must directly counter this framing."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's deflection and mirroring are escalating. Their insistence on framing Hoang while simultaneously echoing Jin\u2019s observation suggests a core wolf coordination. Immediate scrutiny of Riley\u2019s claims is vital."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's aggressive framing and mirroring of Jin's initial observation constitute a significant escalation and attempt to prematurely control the discussion. Immediate intervention is needed to expose this tactic."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley's escalating accusations and framing of Hoang as a deflector demand immediate counterframing. Their 'classic wolf behavior' claim requires direct rebuttal to prevent premature exile and solidify the innocent narrative."
+            },
+            {
+                "Meg": 8,
+                "reason": "Riley has created a perfect opening. I need to jump in now to validate Riley's observation about Hoang and Jin's mirroring, cementing Hoang as the primary target and shielding Riley from further scrutiny."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's elimination and Riley's mirroring strongly suggest coordinated wolf activity. I need to immediately challenge Riley's deflection and expose the pattern."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's continued aggressive accusations and mirroring require immediate investigation. Their behavior post-Hoang's elimination demands a direct challenge to expose their strategy."
+            },
+            {
+                "Nam": 5,
+                "reason": "Defaulted to 5 \u2014 invalid model response."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang's death and Riley's high suspicion score necessitate immediate investigation. Riley's mirroring defense suggests coordinated wolf activity. Delay risks allowing the wolves to consolidate power."
+            },
+            {
+                "Riley": 7,
+                "reason": "Hoang's death removes my loudest critic. I must now frame his removal as a 'wolf kill' to clear my name and pivot suspicion toward Nhan's survival from Round 1."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang is dead. I need to immediately pivot the suspicion to Jin, framing them as the surviving half of a coordinated wolf duo before others can shift focus."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's elimination was orchestrated. Riley's mirroring of his defense and immediate shielding strongly suggest involvement. I must directly challenge her to expose her deception."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley's deflection and rapid shifts demand immediate scrutiny. Her behavior directly contradicts consistent villager strategy. Delaying investigation risks allowing her to manipulate the narrative further."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s deflection was coordinated. Hoang\u2019s death directly followed her defense. Immediate scrutiny is required to expose this deception and prevent further manipulation."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is aggressively targeting me and framing my behavior as 'shielding.' I must immediately counter-attack, paint Jin as desperate after Hoang's death, and shift the group's focus toward Nhan's suspicious survival."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is attacking my ally Riley. I must immediately frame Jin's accusation as a desperate deflection now that Hoang is dead, shifting the village's focus back onto Jin's suspicious behavior."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s deflection is too coordinated and lacks genuine emotion. Mirroring Hoang\u2019s defense immediately after her death strongly suggests deliberate manipulation. Shielding demands immediate investigation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and rapid shift in accusations demand immediate scrutiny. Her attempt to frame me as a wolf is a clear indicator of deception, and delaying action risks her manipulating the vote."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's deflection is highly coordinated. Her accusations against Jin are a deliberate attempt to shift blame. Immediate scrutiny is required to expose the manipulation."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's deflection and accusation against me are classic wolf tactics. Her shielding behavior during the night needs immediate verification. A delay risks her escape."
+            },
+            {
+                "Meg": 8,
+                "reason": "Riley is already pressuring Jin. I need to jump in now to validate Riley's claim and frame Jin's aggression as 'desperate wolf behavior,' effectively sealing Jin's fate before they can pivot."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's elimination and Riley\u2019s immediate defense, coupled with Riley\u2019s mirroring of Jin\u2019s accusations, strongly suggests coordinated deflection. I need to directly challenge Riley's shielding to expose the strategy."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley\u2019s deflection and insistence on Hoang\u2019s innocence strongly suggest a deliberate attempt to mislead. Demanding shield specifics is crucial to expose her true strategy and potential involvement."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's deflection and shifting blame require immediate verification. Her shield detail is crucial to expose potential deception; delaying action risks further manipulation."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is aggressively trying to force me into a role claim by asking who I protected. I must shut down this line of questioning and flip the suspicion back onto Jin's desperation immediately."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is aggressively pushing a role-claim on Riley. I must intervene to frame Jin's interrogation as a desperate wolf's attempt to force a claim and expose himself, while shielding my ally."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's elimination and Riley's immediate defense raise significant suspicion. Riley's shield activity is crucial. I need to establish if she was protecting a potential wolf."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and mirroring tactics require immediate challenge. Her shifting focus and attempts to discredit Jin demonstrate deceptive behavior. I must directly expose this framing to prevent further manipulation."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's deflection and coordinated mirroring with Hoang demonstrate strategic deception. Immediate questioning of her shield is vital to expose their plan."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's deflection and accusation of my 'desperate attempt' require immediate clarification. Her shield behavior is a key indicator and warrants immediate investigation."
+            },
+            {
+                "Riley": 8,
+                "reason": "Jin is attempting to force a role claim by asking about my 'shield'. I must aggressively shut down this line of questioning and pivot the suspicion back onto Jin's desperate behavior."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang\u2019s elimination and Riley\u2019s defensive behavior warrant immediate scrutiny. Her shield activity is a key indicator of potential involvement. Delaying investigation risks allowing a Werewolf to escape detection."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin is escalating his interrogation of Riley, attempting to trap her with questions. Her refusal to answer is highly suspicious. I must directly challenge his tactic and propose a more focused investigation to expose his deflection."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's evasiveness and deflection regarding her shield directly contradict her initial strategic positioning. Immediate clarification is crucial to expose potential deception and prevent further manipulation."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is attempting to trap me into a Guard claim. I must aggressively shut down his 'interrogation' and frame his persistence as wolf-like desperation before the village starts questioning my silence."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is aggressively pushing Riley for a role claim. I must intervene to frame his 'transparency' demand as a wolf tactic and shift the village's focus back to his mirroring with Hoang."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Cong": 8,
+                "reason": "Jin's escalating scrutiny of Riley and his increasingly defensive posture necessitate immediate intervention. His attempts to discredit her shield are highly suspect and demand immediate clarification."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's continued deflection and association with Jin necessitate immediate scrutiny. Failure to address this now risks a coordinated wolf attack and a lost game."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's continued deflection and protection of a dead target (Hoang) demand immediate scrutiny. His score remains high; further delay risks his survival."
+            },
+            {
+                "Meg": 8,
+                "reason": "I need to immediately frame Jin. With Nhan and Hoang gone, Jin's influence is the primary threat. I must lead the charge to isolate him before he can organize the others."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Nam\u2019s framing of Jin as mirroring is a clear attempt to shift suspicion. I need to directly challenge this accusation with specific examples to prevent further manipulation and solidify Jin's defense."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam\u2019s accusation is a direct attempt to shift blame and is mirroring Riley's deflection. I need to proactively expose this tactic and demonstrate independent reasoning to avoid being falsely accused of supporting a potential werewolf."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam is using 'mirroring' buzzwords to frame Riley. I must intervene immediately to pivot the narrative, gaslight Nam's logic as a script, and redirect suspicion toward Jin to protect my ally."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin\u2019s mirroring Riley is a key deflection tactic. I need to directly challenge this, exposing the coordinated effort to misdirect the village and prevent a focused investigation."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's continued deflection and shield pattern, combined with Nam and Cong\u2019s coordinated efforts to discredit me, require immediate rebuttal. Failure to address this will solidify their false narrative and increase my risk of exile."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam and Cong are using 'mirroring' buzzwords to trap Jin. I need to jump in and frame this coordinated phrasing as a wolf script to protect Riley and push the village toward chaos."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin\u2019s coordinated defense of Riley is a clear attempt to shift blame and obstruct the investigation. I need to expose this pattern immediately to prevent further manipulation and safeguard Nhan\u2019s legacy."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s deflection is escalating the narrative and actively discrediting reasoned discussion. I must directly challenge this to prevent further misinformation and refocus the debate on Riley\u2019s demonstrable deceptive behavior."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin is under pressure from Nam and Cong. I must enter now to amplify the accusations against Jin, framing his aggression as a desperate wolf's last stand while keeping the focus off myself and Riley."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Nam is actively framing me and consolidating Riley's position. I must directly challenge this coordinated effort to prevent further manipulation and expose their strategy before they solidify a false narrative."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s persistent attacks on my mirroring constitute a direct attempt to control the discussion and shift blame. Riley's accusations are baseless; I must immediately counter this narrative with a focused argument against their lack of evidence."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin is being squeezed by Nam and Cong. I need to jump in now to frame Jin's reactions as 'wolf panic' and solidify the narrative before he can effectively flip the script on Riley."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin is consistently deflecting and framing. His actions are directly obstructing a clear path to identifying the Werewolves. I must expose this tactic immediately to prevent further manipulation."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s deflection and attempts to discredit Nam directly support Riley\u2019s narrative. His behavior warrants immediate, focused scrutiny to expose his role in the deception. Delay risks further obfuscation."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin just accused me and Cong of deflecting. I must immediately pivot the conversation back to Jin's aggression and frame his attack on me as a desperate, cornered wolf tactic to save himself."
+            }
+        ]
+    ]
+}
