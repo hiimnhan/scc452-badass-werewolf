@@ -1,0 +1,424 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "No night action; remains neutral. Observing the conversation."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Proposing focus on deviations - standard villager approach."
+            },
+            "Jin": {
+                "score": 0.65,
+                "reason": "Started by observing deviations. Now responding defensively to Riley\u2019s accusation, shifting focus from neutral observation to protecting a perceived ally (Cong). Increased suspicion due to reactive behavior."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Repeating observation of no deaths and focusing on deviations - standard villager approach."
+            },
+            "Riley": {
+                "score": 0.85,
+                "reason": "Initially observed interrupting. Now directly questioning the Seer's early claim, exhibiting a proactive attempt to undermine the investigation. High suspicion due to aggressive questioning and deflection."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No night action; remains neutral. Observing the conversation."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "No action observed. Maintaining a neutral stance."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Initiated discussion regarding observable behavior. Maintaining a neutral stance is prudent at the start of the game."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Increased suspicion due to Riley\u2019s challenge. Focused on observing Riley\u2019s behavior after questioning Cong. Maintaining a neutral stance."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Echoing the lack of deaths, suggesting a focus on behavioral observation. I will be focusing on anyone attempting to disrupt the flow of conversation or deflect blame."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Initiated suspicion due to questioning Cong\u2019s investigation. Attempting to deflect attention and create doubt. Suspicions elevated due to confrontational behavior."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No action observed, suspicion remains unchanged."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.6,
+                "reason": "Guard protected someone last night \u2013 identity unknown. Remains a potential suspect due to the protection. Riley's actions could be intended to distract from the Guard's role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Maintaining focus on observing deviations. Riley\u2019s accusation now casts doubt on his previous investigation."
+            },
+            "Jin": {
+                "score": 0.7,
+                "reason": "Initially focused on observing deviations. Now being directly accused by Riley, shifting suspicion toward him. His previous confirmation of Cong\u2019s innocence is now potentially viewed with skepticism."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Continues to advocate for observing deviations. Riley\u2019s accusation introduces a more confrontational element to the discussion."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Initially observed for disruptive behavior. Now actively accusing Jin of a wolf tactic, suggesting a desire to frame him as suspicious. This indicates a move toward targeted suspicion and potential manipulation of the group dynamics."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Continuing to observe other players. Riley\u2019s actions increase overall tension and require heightened vigilance."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Maintained suspicion level. No evidence suggests wolf behavior."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf based on Seer investigation. No suspicion."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Maintained suspicion level. No evidence suggests wolf behavior. Proposed observation-based strategy for identifying deviations."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Initially focused on observing deviations from villager behavior. Proposed prioritizing watching for attempts to deflect suspicion or create unnecessary discord."
+            },
+            "Riley": {
+                "score": 0.75,
+                "reason": "Initially neutral, now exhibiting suspicion and attempting to undermine the Seer's authority. Accusations of a \u2018classic wolf move\u2019 are designed to create distrust and divert attention from objective observation. Increased vigilance required."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Maintained suspicion level. No evidence suggests wolf behavior."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Maintains a neutral stance. Continues to observe, but shows no proactive engagement."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Maintains a neutral stance. Continues to observe, but shows no proactive engagement."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Maintains a neutral stance. Continues to observe, but shows no proactive engagement."
+            },
+            "Jin": {
+                "score": 0.65,
+                "reason": "Initially presented as a neutral observer, now subtly attempts to shift blame onto Riley. Demonstrates a willingness to engage in accusations, moving beyond passive observation."
+            },
+            "Riley": {
+                "score": 0.85,
+                "reason": "Initially presented as a cautious observer. Now actively accusing Jin of misusing the Seer's information, demonstrating a willingness to engage in accusations and potentially deflect suspicion from themselves. The accusation suggests a proactive attempt to disrupt the discussion and create doubt."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Maintains a neutral stance. Continues to observe, but shows no proactive engagement."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "No information yet. Potential power role."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "No information yet. Potential power role. Now cleared by Jin's claim; less viable as an immediate target for exile."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "No information yet. Potential power role. Attempting to frame the debate's logic and monitor others; potential leader/organizer target."
+            },
+            "Jin": {
+                "score": 0.95,
+                "reason": "Potential power role. Claimed Seer and cleared Cong. High threat if real; high utility for disruption if fake. Now targeting ally Riley, making them a priority kill target. Claiming Seer on Day 1 is aggressive and now viewed as suspicious by Riley."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Targeted and survived. Likely protected by Guard or saved by Witch. Low immediate threat but high utility for framing. Repeatedly echoed Nam's opening statement almost word-for-word, demonstrating a lack of independent analysis and suspicious mimicry."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Ally. Coordination partner. Currently under fire from Jin's accusation. Effectively challenging the fake/real Seer claim to create doubt about Jin and Cong."
+            }
+        }
+    },
+    "3": {
+        "Nam": {
+            "Nhan": {
+                "score": 0.85,
+                "reason": "Consistent pattern of deflection and accusation against Hoang. Repeatedly emphasizing Hoang\u2019s silence regarding deaths is a calculated attempt to shift blame and maintain plausible deniability. Increasing suspicion due to mirroring Nam's accusations. Potential complicity remains high."
+            },
+            "Cong": {
+                "score": 0.55,
+                "reason": "Eliminated. Remains a significant point of suspicion."
+            },
+            "Jin": {
+                "score": 0.95,
+                "reason": "Eliminated. Directly targeted. High suspicion based on the elimination."
+            },
+            "Hoang": {
+                "score": 0.75,
+                "reason": "Increased defensiveness and deflection. Refusal to explain deaths of Cong and Jin is increasingly suspicious. Attempts to shift blame to Nam demonstrate an effort to control the narrative and manipulate the investigation."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Continued attempts to deflect blame. Maintaining a cautious, obstructive approach likely masking potential involvement."
+            },
+            "Meg": {
+                "score": 0.55,
+                "reason": "Maintaining vigilance due to heightened tensions and accusations. Increased focus on Hoang and Nhan."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.55,
+                "reason": "Continuing to aggressively target Hoang, attempting to paint him as deceptive and concealing information. Their focus on highlighting Hoang's silence aligns with Nam's broader strategy of sowing discord. Primarily a defensive player, attempting to build a case against Hoang rather than proactively investigating. Continuing to observe."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Suspicion remains high due to elimination via poison. Continuing to observe."
+            },
+            "Nam": {
+                "score": 0.78,
+                "reason": "Maintaining a high suspicion score through aggressive questioning and deflection. A clear wolf tactic focused on disrupting the investigation and shifting blame. Successfully leveraging Nhan's observations to reinforce his accusations against Hoang. Remains a prime suspect."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Eliminated. Previously neutral, now strongly suspected. Eliminating him was a tactical move to further solidify suspicion against Hoang."
+            },
+            "Riley": {
+                "score": 0.8,
+                "reason": "High suspicion remains due to aggressive accusation of Jin. Still a strong target. Continuing to monitor for any further attempts to deflect blame."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Maintaining neutral stance, continues to observe. Likely an observer trying to avoid being implicated."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.4,
+                "reason": "Unknown role. Moderate threat level until more information is revealed. Currently amplifying Nam's accusations against Hoang, effectively facilitating the framing of a villager. His latest statement further seals Hoang's fate by labeling his behavior as 'deeply troubling,' making him a useful asset for the pack's current goal."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "No information yet. Potential power role. Now cleared by Jin's claim; less viable as an immediate target for exile. Deceased."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Still attempting to organize logic. Remains a high-threat target for night kill to degrade village coordination. Currently driving the suspicion toward Hoang, which serves my interests, but his ability to sway the group remains dangerous. Currently embroiled in a direct conflict with Hoang; his aggressive pursuit is effectively framing Hoang for us."
+            },
+            "Jin": {
+                "score": 0.95,
+                "reason": "Potential power role. Claimed Seer and cleared Cong. High threat if real; high utility for disruption if fake. Claiming Seer on Day 1 is aggressive and now viewed as suspicious by Riley. Deceased."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Survived two potential death events. Likely Guard or lucky villager. Currently being framed by Nam and Nhan for 'evasiveness'; becoming the primary candidate for a calculated exile push. Defensive response to Nam reinforces the image of an unstable or guilty player to the group. Latest statement doubles down on deflection, making him an easy target for exile. Now facing a consolidated front from Nam and Nhan."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Ally. Essential for pack coordination and creating noise in the debate."
+            }
+        }
+    }
+}

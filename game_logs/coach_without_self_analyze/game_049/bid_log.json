@@ -1,0 +1,344 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Cong is confirmed not a werewolf. Maintaining this information is crucial to avoid unnecessary accusations and wasted votes. Establishing this early provides a firm foundation for the rest of the game."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nhan remains a moderate threat. Continued inaction risks an early wolf attack. I need to establish a stronger line of questioning regarding Nhan's behavior and potential connections."
+            },
+            {
+                "Nam": 8,
+                "reason": "No statements have been made. Immediate questioning is required to establish a baseline of information and identify potential inconsistencies or evasiveness."
+            },
+            {
+                "Jin": 8,
+                "reason": "Initial suspicion is evenly distributed. We must quickly establish a clear target based on observable patterns and contradictions to avoid wasting time."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is confirmed. His survival is unacceptable. I must immediately establish a clear line of suspicion toward those exhibiting undue interest in him or challenging my actions."
+            },
+            {
+                "Riley": 4,
+                "reason": "Jin survived, suggesting a Save or Guard. I need to establish a baseline presence and subtly guide the narrative without drawing early heat. I'll frame the survival as suspicious if others don't."
+            },
+            {
+                "Meg": 3,
+                "reason": "Too early to lead. I'll let villagers speculate first, then apply the 'Rational Moderate' persona to guide the consensus. No immediate threats to deflect."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Cong is confirmed clear. Focusing on remaining high-suspicion individuals (Nam, Jin, Hoang) is paramount. Delay risks losing crucial information."
+            },
+            {
+                "Cong": 8,
+                "reason": "Jin's protection and Hoang's framing demand immediate investigation. A coordinated effort to mislead is likely underway. We must preemptively expose this."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang's assessment of the Guard\u2019s action is highly suspicious. Protecting Jin directly contradicts a neutral strategy and warrants immediate scrutiny."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang's statement directly accuses me of protecting a werewolf. This requires immediate response to counter the implication and solidify my position as a trustworthy villager."
+            },
+            {
+                "Riley": 6,
+                "reason": "Hoang is aggressively pushing a narrative. I need to enter now to pivot the focus toward Nhan or Cong, using the 'too hurried' frame on Hoang to steer the vote while appearing helpful."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang is pushing a baseless narrative that Jin is a 'confirmed werewolf.' I need to intervene to frame Hoang's aggression as desperation and sow doubt about his logic, positioning myself as the rational moderate."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Confirmed Cong is not a werewolf. Establishing a baseline is crucial. Prioritize investigating other potential wolves to reduce uncertainty and solidify our defense."
+            },
+            {
+                "Cong": 8,
+                "reason": "Jin\u2019s protection was a deliberate act. Wolves will attempt to justify this as strategic, requiring immediate challenge and verification."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang\u2019s statement about Jin\u2019s protection is a direct challenge to the Seer\u2019s authority. I must immediately address this to establish the Seer\u2019s reliability and prevent wolves from exploiting this doubt. Delay risks allowing them to further manipulate the discussion."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is confirmed. Eliminating him is paramount. Riley's shifting focus is a distraction; I must solidify the focus on Nhan, who is currently displaying minimal suspicion."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is targeting me. I must immediately pivot the conversation back to Jin's 'calculated' survival using Hoang's momentum, effectively deflecting attention and framing Jin as the wolf to save myself."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is pushing a baseless narrative. I need to intervene as the 'Rational Moderate' to frame his aggression as desperation and shift focus, preventing a chaotic start that might accidentally target Riley."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Confirmed Cong is not a werewolf. Need to establish a clear target for the next investigation and prevent further manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's consistent deflection and neutrality are concerning. I need to directly challenge this to establish a clear narrative against him."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s deflection and consistent neutrality warrant immediate scrutiny. His behavior is actively hindering the investigation and requires direct questioning."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang's assessment of Jin\u2019s protection is a direct challenge. Riley\u2019s deflection and Nhan\u2019s attempts to shift blame demand immediate response. Delaying risks allowing the wolves to consolidate suspicion."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang is aggressively targeting me and Jin. I must immediately flip the narrative, frame Hoang's intensity as 'too hurried' or 'robotic,' and deflect suspicion before a consensus forms against me."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is aggressively targeting my partner, Riley. I need to intervene by questioning Hoang's logic and framing his certainty as 'manufacturing a narrative' to sew doubt and protect Riley without looking like a teammate."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's deflection and accusations against Hoang are designed to control the narrative. I must address this immediately to prevent a misdirected vote."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s deflection is a key indicator of potential deception. Their attempts to shift blame and create doubt require immediate scrutiny. Protecting Riley is no longer a priority; revealing their strategy is."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's deflection and insistence on a 'real conversation' are evasive. His attempts to shift blame to Hoang while simultaneously avoiding direct scrutiny are highly suspicious. Immediate scrutiny is required."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s deflection and targeting of Jin, combined with Hoang\u2019s observations, demand immediate scrutiny. Delaying risks allowing a wolf to remain undetected."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley\u2019s deflection and accusations against me are a clear attempt to avoid scrutiny. I must proactively expose their deceptive behavior to prevent them from escaping suspicion and potentially becoming a wolf."
+            },
+            {
+                "Meg": 6,
+                "reason": "Riley has successfully put Hoang on the defensive. I need to enter now to validate Riley's logic and frame Hoang's aggression as a desperate wolf narrative, cementing Hoang as the primary target."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s deflection and accusations are deliberately misleading. They are attempting to obfuscate suspicion and shift blame. This warrants immediate, focused scrutiny."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s deflection and attempts to shift blame require immediate scrutiny. Their inconsistent responses are a high-priority indicator of wolf behavior, necessitating an urgent challenge."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s deflection and blaming Hoang directly contradict their neutral stance. It\u2019s a high-stakes attempt to control the narrative. Immediate action is required to expose this tactic."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang\u2019s focus on Jin\u2019s protection and Riley\u2019s deflection are strong indicators of wolf strategy. Riley is actively attempting to discredit Hoang and me. Immediate action is needed to expose this deception."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang is aggressively targeting me with 'classic wolf tactics.' I must shut down this narrative immediately by framing Hoang's repetitive accusations as robotic and scripted to pivot the village's distrust toward them."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is targeting Riley too aggressively. I need to intervene to frame Hoang's behavior as erratic and illogical, supporting Riley's narrative while maintaining my persona as the rational moderate observer."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's elimination suggests a targeted attack. Riley\u2019s deflection raises suspicion. I need to establish a clear line of reasoning to prevent further manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and coordinated attacks on Nam necessitate immediate scrutiny. His rising suspicion warrants a forceful challenge to expose his manipulative behavior."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang's continued deflection and Riley's defensive posture strongly suggest coordinated wolf activity. Immediate action is needed to expose this."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to proactively steer the conversation away from my role in the Nam kill. I'll use the 'scripted' frame to cast doubt on Nhan or Cong to establish my 'villager' intuition early."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my 'Rational Moderate' persona early. I'll frame the night's death as a pattern to subtly steer suspicion toward Hoang or Jin without being the primary instigator."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin's deflection and attempts to discredit Hoang are hallmarks of a wolf attempting to control the narrative and shift blame. This warrants immediate scrutiny and a direct challenge."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin\u2019s evasiveness and deflection demand immediate scrutiny. His shifting accusations constitute a coordinated effort to mislead and conceal his true role. Prioritizing this line of inquiry is crucial to identifying the wolves."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is targeting me directly with a logical argument. I must immediately deploy the 'scripted' frame to make his behavior seem unnatural and robotic, shifting the village's focus from my actions to his demeanor."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin is directly targeting Riley. I must intervene to frame Jin's certainty as 'manufacturing a narrative' and paint his aggression as a desperate attempt to deflect suspicion."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin's evasiveness and deflection warrant immediate scrutiny. His attempts to shift blame are consistent with wolf strategy. We need to establish his role definitively."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley\u2019s obstructive tactics and deflection of blame are a strong indicator of wolf behavior. I need to directly challenge his narrative before he can manipulate the discussion further."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin and Nhan are coordinating a focused attack on me. I must immediately pivot the narrative, labeling their synchronized behavior as 'scripted' and 'forced' to sow distrust between them."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin and Nhan are coordinating a direct attack on Riley. I must intervene immediately to frame their synergy as 'wolf coordination' and discredit their narrative as a scripted attempt to exile a villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley\u2019s direct accusation against me, coupled with his coordinated deflection tactics, indicates a wolf attempting to manipulate the narrative and create a false flag. This requires immediate response to prevent a misdirected vote."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley\u2019s coordinated deflection and repetition of accusations against Nhan constitute a classic wolf strategy. Immediate intervention is needed to prevent a misdirection of suspicion and potentially allow a wolf to escape scrutiny."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's claim of coordinated effort is a wolf tactic. His accusation against Nhan, mirroring my earlier assessment, warrants immediate scrutiny. I need to solidify the suspicion around Nhan before he attempts to deflect further."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin and Nhan are coordinating against Riley. I must intervene using my 'Rational Moderate' persona to frame their coordination as 'scripted behavior' and shift the focus toward Nhan to protect my partner."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s direct accusation against Nhan, coupled with his claims of a coordinated effort, demands immediate response. His shifting accusations and deflection tactics are consistent with wolf behavior and require immediate clarification."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s accusations against Nhan are a blatant attempt to deflect suspicion. His coordinated script with Jin is highly indicative of wolf activity. I must directly challenge this tactic."
+            },
+            {
+                "Riley": 9,
+                "reason": "I am currently the primary target. I must aggressively push the 'scripted' frame onto Nhan and Cong to break the consensus and turn the group against them before a vote is called."
+            },
+            {
+                "Meg": 8,
+                "reason": "Riley is under heavy fire from a coordinated bloc (Jin, Nhan, Cong). I must intervene to frame their synchronization as wolf coordination and pivot the target toward Nhan to save my partner."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s repeated accusations and deflection, combined with Cong\u2019s mirroring, demonstrate coordinated manipulation. Immediate action is needed to expose this pattern and prevent further misdirection."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s escalating accusations and deflection tactics are a clear indicator of wolf behavior. His attempts to frame Nhan as the wolf are a deliberate distraction from his own potential involvement. Immediate challenge required."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley\u2019s escalating accusations and coordinated attempts to frame Nhan demand immediate attention. His shifting blame and insistence on a 'robotic script' are classic wolf manipulation. I must counter his narrative before he solidifies suspicion against Nhan."
+            },
+            {
+                "Meg": 7,
+                "reason": "Riley is under heavy fire. I need to employ Tactical Abandonment by attacking the trio's 'mob mentality' rather than defending Riley directly, framing their coordinated pressure as a manufactured wolf narrative."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is confirmed werewolf. Riley is highly suspicious. Investigating remaining players is critical to identifying and eliminating the wolves before they outnumber the villagers."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley's escalating manipulation and alliance with Jin necessitate immediate action. His narrative is actively building a wolf facade. I must counter this before he consolidates support."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin's death creates a power vacuum. I need to frame Nhan's inevitable attempt to lead as desperate coordination or wolf-led manipulation before a new villager consensus forms."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nhan\u2019s escalating deflection and alignment with Riley create a dangerous alliance. Immediate action is needed to expose their strategy and prevent further manipulation."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan is claiming I am a 'confirmed' werewolf. I must immediately frame this as a desperate, scripted narrativa to incite a mob vote and flip the suspicion back onto him."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Meg's direct attack on my role and accusations are a clear attempt to derail the investigation and sow discord. Immediate rebuttal is crucial to prevent manipulation and solidify my findings."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg's accusation against me is a deliberate distraction. Her deflection tactics are designed to avoid scrutiny. I need to immediately expose her manipulative behavior and redirect suspicion back to her."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Meg\u2019s immediate and aggressive attack on my legitimacy is a clear indicator of wolf behavior. I need to directly counter her deflection and reaffirm the confirmed werewolf status of Meg before Cong is further manipulated."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan and Cong are coordinating a pincer attack. I must dismantle Nhan's 'confirmed' claim as a fabrication and frame Cong's agreement as desperate wolf-piggybacking to flip the vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Meg's aggressive deflection and coordinated behavior with Riley represent a significant threat to the village's safety. Immediate action is needed to expose their strategy and prevent further manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Meg's deflection and deflection of Cong's observations indicate active deception. Her refusal to provide evidence and shifting blame warrants immediate, focused scrutiny to expose her role."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg\u2019s aggressive deflection and Cong\u2019s alignment with her demand immediate scrutiny. They are actively attempting to discredit the Seer and manipulate the vote, posing a significant threat to the villagers' chances of survival."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan and Cong are coordinating a pincer attack to frame me. I must aggressively dismantle their 'confirmation' narrative and paint their sudden alignment as a wolf partnership to flip the vote."
+            }
+        ]
+    ]
+}

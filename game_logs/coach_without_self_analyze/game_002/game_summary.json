@@ -1,0 +1,161 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I used my potion last night to protect myself. Given no one was killed, I\u2019m focusing on establishing trust and observing patterns. I\u2019ll be quiet for now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan, your claim is a disaster. You said you used a 'potion' to protect yourself, but the Witch saves and the Guard protects. You're scrambling to fake a power-role because you're a wolf who survived the night. It's a sloppy lie."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Riley is spot on. Nhan, that 'potion' slip is a textbook wolf tactic. You're trying to fake a power role but you can't even get the mechanics right. It's an embarrassing attempt to deflect. We need to exile Nhan now before they cause more damage."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's attempt to fabricate a protective potion is a clear misdirection. It lacks coherence with established game mechanics and serves only to sow confusion. We must prioritize uncovering the truth."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan's claim is a complete fabrication. Using 'potion' to describe protection proves you don't even know how the roles work because you're pretending to be one. This isn't just a mistake; it's a failed wolf gambit. Let's stop wasting time and exile Nhan."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's fabricated 'potion' claim is a fundamental misunderstanding of how the game functions. Their attempt to create a false narrative exposes a deliberate deception. Let's focus on observing their actions today."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg\u2019s relentless and demonstrably false accusations against Nhan, coupled with her alliance with Riley, make her the most likely instigator of this conflict and a significant threat to the village. Exile her."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan\u2019s lie about using a potion is inconsistent with the game\u2019s rules and the Witch\u2019s actions. They are actively misleading the village, and immediate exile is necessary to prevent further disruption."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s false claim about using a potion is a clear indicator of deception. Their inability to grasp basic game mechanics strongly suggests they are not a villager and likely a werewolf attempting to mislead the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley\u2019s frantic accusations and deflection are designed to shift blame and create chaos. They\u2019re prioritizing immediate expulsion over uncovering the truth. I will vote to exile Riley."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's inconsistent story and inability to accurately describe how the game works strongly suggest they are a wolf. Continuing to allow them to speak is a risk to the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's misuse of game terminology regarding the 'potion' is a dead giveaway. They are pretending to be a power-role to dodge suspicion, but the slip-up proves it's a lie. We can't trust someone who fails at their own cover story."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan\u2019s claim about a 'protective potion' is a blatant lie. They're trying to fake a power role but failed the basic mechanics. This is a pathetic attempt to blend in. We can't trust someone who lies about their role this poorly."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Riley \u2014 Result: WOLF."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Riley",
+                "statement": "Two nights in a row with zero deaths is absurd. This smells like a Seer or Guard is playing too safely, or the wolves are stalling to blend in. Nam, your analysis has been way too convenient. I think you're orchestrating this silence to deflect. You're looking suspicious."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Riley is spot on. Nam, your 'analysis' is a textbook wolf tactic to control the flow of the game while we're all stuck in this stalemate. You're trying way too hard to look like a helpful villager. It's pathetic and transparent. Vote Nam."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Riley\u2019s insistence on a stall is a convenient distraction. Meg\u2019s eagerness to target Nam is a clear attempt to shift blame. I\u2019ll remain silent for now, observing their continued attempts to misdirect the group."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Look at Cong. He's mirroring Nam's passive energy and calling my observation 'misdirection' without providing any actual evidence. That's a classic wolf pack strategy\u2014deflecting and stalling to protect each other. Cong is definitely covering for Nam. This coordination is a massive red flag."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Cong's 'observation' is just a script for cowardice. He's not observing; he's calculating how to shield Nam without getting caught. That's not a villager's behavior\u2014it's a wolf's survival instinct. We can't let this duo stall us again. Vote Nam now, then we deal with Cong."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley\u2019s relentless focus on Nam is exhausting. He\u2019s prioritizing accusation over observation. I\u2019m concerned his drive to eliminate Nam is overshadowing genuine investigation."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam is the primary target and the accusations are increasingly aggressive and coordinated. Exile Nam to disrupt this manipulative strategy and force a shift in focus."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg\u2019s repeated attacks on the Seer and attempts to frame Cong as complicit reveal a deliberate strategy to deflect suspicion. Her behavior is a clear indicator of wolf activity."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg is actively obstructing genuine investigation and falsely accusing Nam. Her pattern of alignment with Riley and deflection tactics indicates wolf behavior. Exile her to disrupt their coordinated deception."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Riley\u2019s accusations are repetitive and lack genuine investigation. Nam\u2019s attempts to deflect and Cong\u2019s mirroring behavior demonstrate a clear pattern of deception. Eliminating Nam removes a key player in this coordinated effort."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's patterns are too calculated and his survival through two silent nights is a massive red flag. He's playing a dangerous game of deflection. We need to stop the stalling and remove the most suspicious link now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam\u2019s survival through two silent nights is too convenient, and his attempts to play the analytical observer are just a smokescreen. He's trying to manipulate the narrative to avoid scrutiny. We need to stop this stalling\u2014Nam is a wolf."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "3": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Jin (Guard) chose to protect Hoang."
+        ],
+        "night_eliminated": [
+            "Cong"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

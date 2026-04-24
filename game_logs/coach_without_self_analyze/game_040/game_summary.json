@@ -1,0 +1,205 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Nam.",
+            "Jin (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "The Seer\u2019s identification of Nhan as a werewolf is the only concrete fact we have. Nhan\u2019s survival after my intervention is noteworthy and warrants careful observation."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong's initial claim of the Seer's identification as the only concrete fact is a significant statement. I will observe his subsequent arguments closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "The Seer\u2019s identification of Nhan as a werewolf remains the only established fact. Jin\u2019s attempt to deflect attention is a standard wolf tactic. I will observe his continued attempts to mislead the group."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "The Seer's identification of Cong as clear is the only established fact. I will continue to observe Nhan\u2019s behavior closely, as his initial neutral suspicion remains a point of interest."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "The Seer\u2019s identification of Nhan as a werewolf is the only confirmed fact. Jin\u2019s repeated focus on Nhan suggests a deliberate attempt to deflect attention from the Seer\u2019s finding. I will continue to observe his reactions."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong\u2019s insistence on the Seer\u2019s identification as the only fact is a deliberate attempt to control the discussion. His repeated focus on Nhan\u2019s survival after intervention is a concerning tactic. I have nothing to add at this moment."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong\u2019s insistence on the Seer\u2019s identification as the *only* fact and his targeted observation of Nhan\u2019s survival strongly suggest deception. Exile him to disrupt his influence."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin\u2019s repeated attempts to shift the focus away from Nhan\u2019s werewolf status, combined with his defensive posture, warrants immediate scrutiny. He is a clear threat to the village\u2019s survival."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Cong\u2019s repeated focus on Nhan\u2019s survival after the Seer\u2019s claim is a clear attempt to mislead. I\u2019m voting to exile him to eliminate a potential wolf and disrupt Cong\u2019s control."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s persistent focus on the Seer\u2019s result, coupled with his survival after my investigation, warrants further scrutiny. I will remove him to prevent continued attempts to mislead the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Cong\u2019s repeated emphasis on Nhan's survival, coupled with his attempt to discredit Jin, indicates a coordinated effort to mislead the village. Nhan is the most likely wolf."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong is trying way too hard to control the narrative. His insistence that his information is the 'only fact' feels like a forced play to rush a vote. Real Seers usually provide more nuance; this feels like a wolf attempting to lead the village."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong is pushing a narrative far too aggressively. His obsession with 'concrete facts' and immediate labeling of Jin's skepticism as a 'wolf tactic' feels like a desperate attempt to force a vote and control the village. It's a classic projection move."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Nhan (Guard) chose to protect Jin.",
+            "Jin (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Cong (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Riley\u2019s consistent silence and avoidance of discussion raise concerns. I propose a vote to exile Riley."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Jin, your sudden urgency to exile me is a classic wolf diversion. You're trying to railroad the vote before we can actually analyze the night's deaths. Why are you so desperate to get rid of me specifically? It's too aggressive to be a villager's move."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley's deflection is a transparent attempt to distract from the fact that we\u2019re still missing key information. I propose a vote to exile Riley."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley\u2019s continued evasion and redirection of accusations are deeply concerning. I propose an immediate vote to exile Riley."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Jin and Nhan are coordinating perfectly to railroad me. That kind of synchronization is exactly how wolves clear the board. Jin, your phrasing is scripted. You're both so desperate to exile me that you're ignoring the obvious: the two of you are the only ones agreeing."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley\u2019s deflection is a predictable attempt to shift blame. His synchronized voting with Nhan suggests coordinated deception. I propose a vote to exile Riley."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley\u2019s attempts to discredit Nhan and deflect blame are designed to sow discord and shift suspicion. His coordinated voting suggests deception; I propose exile to eliminate a potential wolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley\u2019s persistent attempts to deflect, accuse others, and coordinate with Nhan demonstrate manipulative behavior consistent with a werewolf. I propose exile to eliminate a key threat."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is consistently avoiding genuine discussion and using deflection tactics. Nhan and Jin\u2019s agreement to vote him out raises red flags. Exile Riley to force further explanations and expose potential deception."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin is pushing way too hard to exile me without any evidence. This kind of aggressive railroading is a textbook werewolf strategy to eliminate a quiet player and seize control of the village. His tunnel vision on me is highly suspicious."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin's insistence on exiling Riley without any evidence is way too aggressive. The coordination between Jin and Nhan feels forced, like they're trying to railroad a target to avoid scrutiny. This level of desperation usually points to wolves trying to clear the board."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nhan.",
+            "Nhan (Guard) chose to protect Hoang.",
+            "Jin (Seer) investigated Hoang \u2014 Result: not a wolf."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Meg",
+                "statement": "This is getting ridiculous. Nhan is gone, and Jin has been oddly aligned with the victims this whole time. It looks like a calculated attempt to blend in by pretending to be a target. Jin, your logic is too convenient. I think you're the wolf."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Ms. Meg, your assertion of a calculated alignment is a deflection. I investigated a player with the highest suspicion score, and the result was clear. My actions are dictated by objective truth, not a desire to appear aligned with the deceased."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Objective truth? That's exactly what a wolf says when their bluff is called. You're claiming to be the Seer now just because you're the only one left to target. It's a desperate play, Jin. Hoang, we can't trust this sudden claim."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Ms. Meg, your accusations are a transparent attempt to deflect scrutiny. Your relentless questioning and coordinated attacks against established clarity are consistent with wolf behavior \u2013 sowing chaos and discrediting reliable information."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Jin is using a classic textbook play: wait until the end and then fake a Seer claim to force a win. 'Objective truth' is just a shield for a wolf with no real info. Hoang, if we trust this fake claim, we lose. We have to vote Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Ms. Meg, your relentless accusations and attempts to discredit my investigations are precisely the behavior of a wolf attempting to sow discord and obscure the truth. Your focus on me deflects from the fact that I\u2019ve consistently identified clear individuals, a task clearly disrupting your strategy."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg\u2019s constant questioning and coordinated efforts to undermine the established clarity of confirmed clear players demonstrate a wolf attempting to manipulate the group and obscure the truth. Exile her to remove the immediate threat."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Meg correctly identifies Jin's deflection tactics and coordinated attacks. His sudden claim of being the Seer is a clear attempt to manipulate the vote. We must prioritize immediate action to prevent a wolf win."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin's sudden transition into a Seer claim is far too convenient. It's a classic desperation play to avoid exile. Using vague terms like 'objective truth' without providing specific evidence is a clear sign of a wolf trying to bluff their way to a win."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
