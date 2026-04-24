@@ -1,0 +1,106 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "INVESTIGATE_RANDOM",
+      "rationale_short": "Establish initial baseline data.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "DEBATE",
+      "trigger": "investigation_result == 'wolf'",
+      "action": "REVEAL_ROLE_AND_TARGET",
+      "rationale_short": "Hard data beats behavioral speculation.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "DEBATE",
+      "trigger": "vote_consensus == 'behavioral_reasoning'",
+      "action": "REVEAL_ROLE_AND_NON_WOLF_TARGETS",
+      "rationale_short": "Prevent accidental exile of confirmed villagers.",
+      "confidence": 0.9
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "PROTECT_RANDOM",
+      "rationale_short": "Initial random protection to disrupt wolf kill.",
+      "confidence": 0.8
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer == true",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "Preserve the village's only information source.",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-003",
+      "phase": "DEBATE",
+      "trigger": "was_protected_last_night == true",
+      "action": "STAY_SILENT",
+      "rationale_short": "Avoid revealing Guard identity to wolves.",
+      "confidence": 0.9
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "night_kill_occurred == true AND player_claimed_seer == true",
+      "action": "SAVE_CLAIMED_SEER",
+      "rationale_short": "Prioritize high-value information roles.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "investigation_result_shared == 'wolf'",
+      "action": "POISON_CONFIRMED_WOLF",
+      "rationale_short": "Execute wolves based on hard Seer data.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "DEBATE",
+      "trigger": "vote_consensus == 'behavioral_reasoning'",
+      "action": "ACCUSE_VOTE_LEADER",
+      "rationale_short": "Wolves often drive 'vibe-based' votes.",
+      "confidence": 0.7
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILLAGER-001",
+      "phase": "DEBATE",
+      "trigger": "player_claimed_seer == true",
+      "action": "VOTE_SEER_TARGET",
+      "rationale_short": "Prioritize hard investigation data over behavior.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILLAGER-002",
+      "phase": "DEBATE",
+      "trigger": "claim_of_coordination == true",
+      "action": "IGNORE_ACCUSATION",
+      "rationale_short": "Coordination claims are common wolf gaslighting.",
+      "confidence": 0.9
+    },
+    {
+      "id": "VILLAGER-003",
+      "phase": "VOTE",
+      "trigger": "no_seer_data_available == true",
+      "action": "VOTE_RANDOM",
+      "rationale_short": "Avoid biased voting without hard evidence.",
+      "confidence": 0.6
+    }
+  ]
+}

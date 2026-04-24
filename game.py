@@ -22,7 +22,8 @@ from constants import (
     WITCH_LOG_FILENAME,
     SUSPICION_LOG_FILENAME,
     PLAYER_NOTE_FILENAME,
-    BID_LOG_FILENAME
+    BID_LOG_FILENAME,
+    METRIC_LOG_FILENAME,
 )
 from pathlib import Path
 from utils import write_to_file
@@ -845,6 +846,14 @@ class GameState:
         # --- D. Format Suspicion Log ---
         json_string = json.dumps(gs._suspicion_log, indent=4)
         write_to_file(game_dir / SUSPICION_LOG_FILENAME, json_string)
+        
+        # --- E. Format Metrics Log (DCR/IEI/DRR) ---
+        metrics_path = game_dir / METRIC_LOG_FILENAME
+        metrics_data = {
+            name: getattr(player, "_metric_events", [])
+            for name, player in player_objects.items()
+        }
+        write_to_file(metrics_path, json.dumps(metrics_data, indent=2))
 
         tqdm.tqdm.write("=> Game successfully wrapped up. Logs saved to disk. Ready for the next round!")
 

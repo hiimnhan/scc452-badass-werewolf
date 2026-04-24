@@ -41,6 +41,10 @@ class Guard(BasePlayer):
             list_player=", ".join(available_targets)
         )
         
+        directives_block = self._format_directives_block("NIGHT")
+        if directives_block:
+            prompt = f"{directives_block}\n\n{prompt}"
+
         target = "None"
         analysis = "Default analysis: LLM failed to provide reasoning."
 
@@ -86,5 +90,20 @@ class Guard(BasePlayer):
             round_num, "Night", f"Protected {target}. Reason: {analysis}"
         )
         self.last_guarded_player = target
+        
+        applicable = self._filter_directives_for_phase("NIGHT")
+        applied_id = applicable[0].get("id") if applicable else None
+        self._write_reflection(
+            action=f"protected {target}",
+            reasoning=analysis,
+            directive_id=applied_id,
+        )
+        self._metric_events.append({
+            "phase": "NIGHT",
+            "role": "Guard",
+            "had_applicable_directive": bool(applicable),
+            "directive_id": applied_id,
+            "action_summary": f"protected:{target}",
+        })
         
         return target, analysis, resp

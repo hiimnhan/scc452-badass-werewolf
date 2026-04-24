@@ -1,0 +1,148 @@
+{
+  "Nhan": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Jin\u2019s immediate targeting of me after observing my Witch sav"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Hoang\u2019s agreement with Jin\u2019s accusation of me is concerning."
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Hoang\u2019s rapid agreement with Jin\u2019s observation regarding my "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Nhan"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Cong"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I observed Nhan was saved by the Witch. This immediately ele"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nhan\u2019s immediate deflection after my observation of his Witc"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "poisoned Hoang",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "said: Nhan\u2019s Witch save warrants careful scrutiny. His attempts to"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "investigated:Jin",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Jin"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    }
+  ]
+}

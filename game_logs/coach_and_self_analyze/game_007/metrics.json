@@ -1,0 +1,148 @@
+{
+  "Nhan": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: I agree with Hoang and Nam. Nhan\u2019s survival after a potentia"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Nhan"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Riley"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Hoang\u2019s observation about Nhan\u2019s survival is astute. I, too,"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Nhan's continued presence after the wolves attacked is too c"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nhan\u2019s survival after being targeted by the wolves is concer"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nhan\u2019s insistence on highlighting their survival after being"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "investigated:Nam",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Nam"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: I observed Nhan\u2019s survival after being targeted by the wolve"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "poisoned Nam",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    }
+  ]
+}

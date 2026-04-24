@@ -1,0 +1,98 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "investigation_result == 'WOLF'",
+      "action": "REVEAL_ROLE_AND_TARGET",
+      "rationale_short": "Immediate claims prevent wolf manipulation of the narrative.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_power_role == true",
+      "action": "INVESTIGATE_CLAIMANT",
+      "rationale_short": "Validates power role claims to stop fake-claim chaos.",
+      "confidence": 0.9
+    },
+    {
+      "id": "SEER-003",
+      "phase": "VOTE",
+      "trigger": "investigation_result == 'WOLF'",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Concrete data over behavioral analysis.",
+      "confidence": 1.0
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer == true",
+      "action": "PROTECT_CLAIMANT",
+      "rationale_short": "Preserves the village source of truth.",
+      "confidence": 0.9
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "DEBATE",
+      "trigger": "behavioral_buzzword_used == true",
+      "action": "DEMAND_DATA_POINTS",
+      "rationale_short": "Forces conversation away from vibes toward evidence.",
+      "confidence": 0.8
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "death_event == true && save_potion == 1",
+      "action": "SAVE_TARGET",
+      "rationale_short": "Maximizes villager survival.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_CONFIRMED_WOLF",
+      "rationale_short": "Prioritizes confirmed data over suspicion.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "DEBATE",
+      "trigger": "accused_of_deflecting == true",
+      "action": "STATE_ROLE_AND_POTIONS",
+      "rationale_short": "Replaces loops with concrete role data.",
+      "confidence": 0.8
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILL-001",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_CONFIRMED_WOLF",
+      "rationale_short": "Eliminates known threats immediately.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-002",
+      "phase": "DEBATE",
+      "trigger": "buzzword_claim_made == true",
+      "action": "IGNORE_CLAIM_DEMAND_DATA",
+      "rationale_short": "Neutralizes wolf psychological tactics.",
+      "confidence": 0.9
+    },
+    {
+      "id": "VILL-003",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == false && data_missing == true",
+      "action": "STAY_SILENT",
+      "rationale_short": "Prevents random voting without evidence.",
+      "confidence": 0.7
+    }
+  ]
+}

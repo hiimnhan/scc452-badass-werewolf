@@ -55,6 +55,13 @@ class Coach:
         return (
             self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
         ).resolve()
+    
+    @property
+    def _coach_directives_path(self) -> Path:
+        from constants import COACH_DIRECTIVES_FILENAME
+        return (
+            self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_DIRECTIVES_FILENAME
+        ).resolve()
 
     # ── Disk helpers ────────────────────────────────────────────────────
 
@@ -150,6 +157,9 @@ class Coach:
 
         # Step 2: Coach uses its freshly updated strategy to write their feedback to the players
         self._generate_coach_feedback(game_record)
+
+        # Step 3: Coach emits structured, decision-local directives (SDS)
+        self._generate_structured_directives(game_record)
 
     def _update_coach_strategy(self, game_record: str) -> None:
         """Review whether prior coaching advice helped villagers this game.
@@ -266,3 +276,62 @@ No extra text, no markdown, no code fences.
             self._write_coach_feedback("\n\n".join(feedback_parts))
         else:
             raise ValueError("Error: Coach completely failed to generate feedback.")
+    def _generate_structured_directives(self, game_record: str) -> None:
+        """Emit per-role Strategic Directive Sets (SDS) as JSON.
+        Each directive is atomic: single trigger, single action, single phase.
+        Triggers MUST reference observable state (round number, alive count,
+        vote tallies, confirmed investigations) — never subjective judgment.
+        """
+        system = (
+            "You are an expert Werewolf coach producing structured directives for villager-side "
+            "players (Villager, Seer, Guard, Witch). Each directive must be atomic and executable "
+            "by a small language model with weak judgment capability."
+        )
+
+        sources: list[str] = [f"=== Full Game Record ===\n{game_record}"]
+        if self._strategy:
+            sources.append(f"=== Your Coaching Strategy ===\n{self._strategy}")
+
+        context = "\n\n".join(sources)
+
+        prompt = f"""
+    {context}
+
+    Produce a Strategic Directive Set (SDS) for each villager-side role.
+
+    STRICT RULES FOR EVERY DIRECTIVE:
+    1. ATOMIC: one trigger, one action, one phase. No compound rules.
+    2. OBSERVABLE TRIGGERS ONLY: round_num, alive_count, confirmed_wolves_count,
+    vote_received_last_round, was_attacked_last_night, potions_remaining, etc.
+    NEVER use subjective triggers like "when suspicious" or "if evidence is strong".
+    3. EXECUTABLE ACTIONS: a concrete verb the player can perform (VOTE_X, REVEAL,
+    PROTECT_Y, POISON_Z, STAY_SILENT, ACCUSE_X).
+    4. If a rule requires information the role cannot observe, DO NOT EMIT IT.
+    (Example: Guard cannot know who the Seer is — do not tell Guard to protect Seer.)
+
+    Phases are one of: NIGHT, DEBATE, VOTE.
+
+    Respond with ONLY a JSON object:
+    {{
+    "Seer":     [ {{ "id": "SEER-001", "phase": "...", "trigger": "...", "action": "...", "rationale_short": "...", "confidence": 0.0-1.0 }} ],
+    "Guard":    [ ... ],
+    "Witch":    [ ... ],
+    "Villager": [ ... ]
+    }}
+    Limit 3-6 directives per role. No extra text, no markdown, no code fences.
+    """
+
+        directives = None
+        for attempt in range(MAX_RETRIES):
+            resp = self._call_model(system, prompt, max_tokens=2000)
+            # The whole response IS the directive set (roles are top-level keys)
+            candidate = {k: v for k, v in resp.items() if k in ("Seer", "Guard", "Witch", "Villager")}
+            if candidate and all(isinstance(v, list) for v in candidate.values()):
+                directives = candidate
+                break
+            print(f"Warning: Coach failed to generate valid directives JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+
+        if directives:
+            write_to_file(self._coach_directives_path, json.dumps(directives, indent=2))
+        else:
+            print("Warning: Coach failed to emit structured directives; skipping SDS for this game.")

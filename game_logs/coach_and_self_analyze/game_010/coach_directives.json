@@ -1,0 +1,106 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "REVEAL_ROLE_AND_RESULT",
+      "rationale_short": "Establishes early trusted pool to prevent railroading.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "VOTE",
+      "trigger": "target_is_wolf_checked == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Exiles confirmed werewolf based on hard evidence.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "DEBATE",
+      "trigger": "target_is_not_wolf_checked == true",
+      "action": "REVEAL_TARGET_AS_SAFE",
+      "rationale_short": "Builds Trusted Circle to isolate suspects.",
+      "confidence": 1.0
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Forms Power Core for coordination.",
+      "confidence": 0.9
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "player_has_claimed_seer == true",
+      "action": "PROTECT_CLAIMANT",
+      "rationale_short": "Prioritizes the most critical information role.",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-003",
+      "phase": "VOTE",
+      "trigger": "target_voted_to_exile_seer == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Targets those attempting to eliminate the Seer.",
+      "confidence": 0.8
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Forms Power Core to coordinate potions.",
+      "confidence": 0.9
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "target_confirmed_wolf == true",
+      "action": "POISON_TARGET",
+      "rationale_short": "Uses poison only on confirmed wolf evidence.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "VOTE",
+      "trigger": "target_leading_vote_on_behavioral_grounds == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Eliminates players using 'vibes' to railroad.",
+      "confidence": 0.8
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILL-001",
+      "phase": "VOTE",
+      "trigger": "seer_identified_target_as_wolf == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Follows hard evidence from Seer.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-002",
+      "phase": "VOTE",
+      "trigger": "target_voted_to_exile_seer_cleared_player == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Identifies Wolf-Voters attacking the Trusted Circle.",
+      "confidence": 0.9
+    },
+    {
+      "id": "VILL-003",
+      "phase": "DEBATE",
+      "trigger": "player_uses_behavioral_analysis_terms == true",
+      "action": "ACCUSE_PLAYER_OF_RAILROADING",
+      "rationale_short": "Flags 'vibes' based accusations as suspicious.",
+      "confidence": 0.8
+    }
+  ]
+}

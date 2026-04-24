@@ -1,0 +1,277 @@
+{
+  "Nhan": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "said: Jin\u2019s persistent defense of Riley, coupled with his own risi"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "said: Jin\u2019s continued support of Riley, regardless of his own incr"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "said: Meg's observation regarding coordinated mirroring is astute."
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Jin"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "said: I see no immediate cause for alarm. The night passed without"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-002",
+      "action_summary": "voted:Riley"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-002",
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "said: Jin\u2019s persistent deflection of accusations, combined with hi"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "said: Jin\u2019s redirection of blame to me, mirroring my own questioni"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "said: Jin\u2019s deflection and mirroring are not defensive; they are c"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-002",
+      "action_summary": "voted:Jin"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: The night passed without casualties. Cong\u2019s initial claim of"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Riley\u2019s immediate, forceful accusation against Hoang regardi"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Nam",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: The coordinated mirroring between Nhan and Hoang following R"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Hoang",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nam\u2019s insistence on redirecting blame to me, while simultane"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nam\u2019s consistent deflection and mirroring of my questioning "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-001",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: The night concluded without loss of life. Nhan\u2019s survival af"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-001",
+      "action_summary": "poisoned Cong",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin\u2019s unwavering loyalty to Riley, despite his own increasin"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang, your comment about an 'intervention' is incredibly st"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin, calling my observation a 'tactic' instead of addressing"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nhan and Hoang are practically speaking in unison. This isn'"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: This circular arguing is exhausting. Jin, your responses are"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Jin"
+    }
+  ]
+}

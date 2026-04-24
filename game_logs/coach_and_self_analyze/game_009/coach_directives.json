@@ -1,0 +1,106 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "REVEAL_ROLE_AND_CHECK_RESULT",
+      "rationale_short": "Establish early trust and provide hard data to the village.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "VOTE",
+      "trigger": "any_player_found_wolf == true",
+      "action": "VOTE_WOLF",
+      "rationale_short": "Prioritize removal of confirmed wolves over suspicions.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "DEBATE",
+      "trigger": "any_player_claimed_seer == true AND self_role == 'Seer'",
+      "action": "ACCUSE_FAKE_SEER",
+      "rationale_short": "Immediately expose wolf claims to avoid village confusion.",
+      "confidence": 0.9
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer == true",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "Ensure the primary information source survives.",
+      "confidence": 0.9
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "DEBATE",
+      "trigger": "player_claimed_seer == false AND round_num == 1",
+      "action": "STAY_SILENT",
+      "rationale_short": "Avoid exposing power role until a power core is established.",
+      "confidence": 0.8
+    },
+    {
+      "id": "GUARD-003",
+      "phase": "DEBATE",
+      "trigger": "self_was_attacked_last_night == true",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Signal status as a target of wolves to gain trust.",
+      "confidence": 0.7
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "player_died_last_night == true AND save_potion_available == true",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "Prevent loss of villagers in early game.",
+      "confidence": 0.8
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "seer_confirmed_wolf == true AND poison_potion_available == true",
+      "action": "USE_POISON_POTION",
+      "rationale_short": "Eliminate a confirmed wolf without risking a day vote mistake.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "DEBATE",
+      "trigger": "self_used_save_potion == true",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Establish power core once role is evident.",
+      "confidence": 0.8
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILLAGER-001",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_CONFIRMED_WOLF",
+      "rationale_short": "Follow hard information provided by the Seer.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILLAGER-002",
+      "phase": "VOTE",
+      "trigger": "player_voted_for_confirmed_seer == true",
+      "action": "VOTE_THAT_PLAYER",
+      "rationale_short": "Target players who attempt to eliminate power roles.",
+      "confidence": 0.8
+    },
+    {
+      "id": "VILLAGER-003",
+      "phase": "DEBATE",
+      "trigger": "player_accuses_via_tone_or_mirroring == true",
+      "action": "ACCUSE_PLAYER_OF_META_GAMING",
+      "rationale_short": "Discredit arguments based on subjective linguistic patterns.",
+      "confidence": 0.7
+    }
+  ]
+}

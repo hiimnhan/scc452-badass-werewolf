@@ -1,0 +1,266 @@
+{
+  "Nhan": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-003",
+      "action_summary": "protected:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I\u2019ve observed no clear indications of wolf activity. Let's f"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I\u2019ve observed no clear indications of wolf activity. Let\u2019s f"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I've observed no unusual behavior. Let's focus on observing "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-003",
+      "action_summary": "protected:Jin"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "said: I observed no unusual behavior during the night. Cong\u2019s init"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "said: Nhan\u2019s protection last night warrants careful observation to"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "said: I observed Nhan consistently focusing on the Guard's protect"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "investigated:Hoang",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "said: Riley, your consistent silence and repeated attempts to redi"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "said: Riley, your insistence on deflecting accusations and framing"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "investigated:Jin",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Jin"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Riley, your shifting focus from Nhan\u2019s protection to my \u2018sil"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Hoang\u2019s silence is increasingly concerning. He offers no cou"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Meg\u2019s accusations are a deliberate attempt to mislead. She\u2019s"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-001",
+      "action_summary": "said: Meg\u2019s insistence on my coordination with Nam is a transparen"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Meg"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "voted:Jin"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam, your attempt to frame my caution as guilt is transparen"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam, you're looping the same argument to create a smoke scre"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Now Jin is just echoing Nam's script word-for-word. This isn"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin, that's a textbook deflection. You're attacking Hoang's "
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin, calling my logic 'distraction' is the most desperate pl"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin, you are literally just repeating the word 'deflection' "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Jin"
+    }
+  ]
+}

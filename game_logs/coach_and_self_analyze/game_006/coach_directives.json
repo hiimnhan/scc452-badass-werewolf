@@ -1,0 +1,98 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "night_eliminations_count == 0",
+      "action": "REVEAL_ROLE_AND_LAST_RESULT",
+      "rationale_short": "Prevent village chaos by providing early confirmed town members.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "DEBATE",
+      "trigger": "was_player_saved_last_night == true",
+      "action": "REVEAL_ROLE_AND_LAST_RESULT",
+      "rationale_short": "Use high-info events to establish trust immediately.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "NIGHT",
+      "trigger": "confirmed_villagers_count > 0",
+      "action": "INVESTIGATE_UNCONFIRMED_PLAYER",
+      "rationale_short": "Prioritize finding wolves over re-verifying known town.",
+      "confidence": 0.9
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer_last_debate == true",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "Ensure the primary information source survives.",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer_last_debate == false",
+      "action": "PROTECT_RANDOM_UNCONFIRMED_PLAYER",
+      "rationale_short": "Generic protection when no high-value target is identified.",
+      "confidence": 0.7
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == true AND player_attacked_last_night == true",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "Maximize village population during early game.",
+      "confidence": 0.9
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "poison_potion_available == true AND player_made_contradictory_claim == true",
+      "action": "USE_POISON_POTION",
+      "rationale_short": "Poison is a last resort for proven liars.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "DEBATE",
+      "trigger": "own_role_attacked == true",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Prevent waste of potions by identifying as Witch.",
+      "confidence": 0.8
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILL-001",
+      "phase": "DEBATE",
+      "trigger": "vote_received_last_round > 0",
+      "action": "REVEAL_ROLE_CLAIM",
+      "rationale_short": "Logical defense mandate to avoid being lynched based on vibes.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-002",
+      "phase": "VOTE",
+      "trigger": "seer_claimed_player_is_wolf == true",
+      "action": "VOTE_WOLF_TARGET",
+      "rationale_short": "Follow verified Seer intel over behavioral speculation.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-003",
+      "phase": "DEBATE",
+      "trigger": "player_uses_buzzword_deflecting_or_obfuscating == true",
+      "action": "ACCUSE_PLAYER_OF_LACK_OF_EVIDENCE",
+      "rationale_short": "Penalize narrative buzzwords to force concrete data.",
+      "confidence": 0.9
+    }
+  ]
+}

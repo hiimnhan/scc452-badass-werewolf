@@ -1,0 +1,218 @@
+{
+  "Nhan": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "investigated:Nam",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Nam"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "investigated:Riley",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Cong's mirroring of Riley\u2019s deflection is unsettlingly preci"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Cong's mirroring of Riley's deflection is unsettlingly preci"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Cong\u2019s insistence on Riley\u2019s disruptive tactics while simult"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "voted:Cong"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "investigated:Hoang",
+      "confirmed_wolves_alive": 1,
+      "investigated_target": "Hoang"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I observed no unusual activity during the night. Let\u2019s focus"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Meg\u2019s insistence on Cong\u2019s mirroring is a distraction. Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I observed no unusual activity during the night. Let\u2019s prior"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Riley\u2019s accusations of coordinated mirroring are a distracti"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-003",
+      "action_summary": "said: I've observed no unusual activity during the night. Let's fo"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-003",
+      "action_summary": "said: Cong\u2019s repeated deflection of Meg\u2019s observation, coupled wit"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-002",
+      "action_summary": "voted:Cong"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-002",
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAG-002",
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Are you three serious? Jin, Nam, and Cong are literally reci"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam, calling the obvious a 'distraction' is a classic wolf t"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Cong"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam's exile was the right call, but the mirroring doesn't st"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Cong"
+    }
+  ]
+}

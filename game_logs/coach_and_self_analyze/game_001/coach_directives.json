@@ -1,0 +1,114 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "INVESTIGATE_RANDOM_PLAYER",
+      "rationale_short": "Establish initial data point.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "DEBATE",
+      "trigger": "last_investigation_result == WOLF",
+      "action": "REVEAL_ROLE_AND_TARGET",
+      "rationale_short": "Immediate removal of confirmed wolf outweighs risk of death.",
+      "confidence": 0.9
+    },
+    {
+      "id": "SEER-003",
+      "phase": "VOTE",
+      "trigger": "last_investigation_result == WOLF",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Ensure confirmed wolf is exiled.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-004",
+      "phase": "DEBATE",
+      "trigger": "alive_count <= 4",
+      "action": "REVEAL_ROLE_AND_ALL_RESULTS",
+      "rationale_short": "Prevent wolf win by forcing data onto the table in endgame.",
+      "confidence": 0.8
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "PROTECT_RANDOM_PLAYER",
+      "rationale_short": "Baseline protection to prevent early power role loss.",
+      "confidence": 0.7
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "was_attacked_last_night == TRUE",
+      "action": "PROTECT_SELF",
+      "rationale_short": "Wolves likely to target the same person again.",
+      "confidence": 0.6
+    },
+    {
+      "id": "GUARD-003",
+      "phase": "NIGHT",
+      "trigger": "player_revealed_seer == TRUE",
+      "action": "PROTECT_REVEALED_SEER",
+      "rationale_short": "Protect the most valuable information source.",
+      "confidence": 1.0
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "night_elimination_occurred == TRUE AND potions_remaining == {SAVE: 1, POISON: 1}",
+      "action": "USE_SAVE",
+      "rationale_short": "Prioritize keeping players alive over guessing wolves.",
+      "confidence": 0.9
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "confirmed_wolf_count == 0",
+      "action": "STAY_SILENT_POISON",
+      "rationale_short": "Prevent killing innocent villagers with guess-poisoning.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "NIGHT",
+      "trigger": "confirmed_wolf_count >= 1",
+      "action": "POISON_CONFIRMED_WOLF",
+      "rationale_short": "Use potion on verified target only.",
+      "confidence": 1.0
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILL-001",
+      "phase": "DEBATE",
+      "trigger": "player_revealed_seer == TRUE AND result == WOLF",
+      "action": "ACCUSE_TARGET",
+      "rationale_short": "Follow hard data over behavioral intuition.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-002",
+      "phase": "VOTE",
+      "trigger": "player_revealed_seer == TRUE AND result == WOLF",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Execute confirmed wolf immediately.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-003",
+      "phase": "DEBATE",
+      "trigger": "confirmed_wolf_count == 0",
+      "action": "ASK_FOR_SEER_CLAIM",
+      "rationale_short": "Force power roles to provide data to the village.",
+      "confidence": 0.8
+    }
+  ]
+}

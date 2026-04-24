@@ -1,0 +1,98 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "night_eliminations == 0",
+      "action": "REVEAL_ROLE_AND_RESULT",
+      "rationale_short": "Immediate role claim prevents passive observation failure.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "VOTE",
+      "trigger": "investigation_result == WOLF",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Prioritize the elimination of confirmed wolves.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "DEBATE",
+      "trigger": "investigation_result == NOT_WOLF",
+      "action": "REVEAL_RESULT",
+      "rationale_short": "Hard information creates an innocent pool to protect villagers.",
+      "confidence": 1.0
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "player_claimed_seer == TRUE",
+      "action": "PROTECT_CLAIMANT",
+      "rationale_short": "Lock down the primary information source.",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "DEBATE",
+      "trigger": "claim_mirrored_language == TRUE",
+      "action": "STAY_SILENT",
+      "rationale_short": "Avoid engaging in linguistic red herrings.",
+      "confidence": 0.9
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "target_attacked == TRUE && target_claimed_seer == TRUE",
+      "action": "SAVE_TARGET",
+      "rationale_short": "Preserve the Seer over any other role.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "VOTE",
+      "trigger": "player_is_seer_cleared == TRUE",
+      "action": "VOTE_OTHER",
+      "rationale_short": "Do not vote for players cleared by the Seer.",
+      "confidence": 1.0
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILLAGER-001",
+      "phase": "DEBATE",
+      "trigger": "claim_mirrored_language == TRUE",
+      "action": "STAY_SILENT",
+      "rationale_short": "Ignore linguistic analysis and vibe-based accusations.",
+      "confidence": 0.9
+    },
+    {
+      "id": "VILLAGER-002",
+      "phase": "VOTE",
+      "trigger": "investigation_result == WOLF",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Follow the Seer's hard information immediately.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILLAGER-003",
+      "phase": "VOTE",
+      "trigger": "player_is_seer_cleared == TRUE",
+      "action": "VOTE_OTHER",
+      "rationale_short": "Seer-cleared players are exempt from exile.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILLAGER-004",
+      "phase": "VOTE",
+      "trigger": "target_was_seer_cleared == TRUE && voter_pushed_exile == TRUE",
+      "action": "VOTE_VOTER",
+      "rationale_short": "Players pushing to exile cleared innocents are primary suspects.",
+      "confidence": 0.8
+    }
+  ]
+}

@@ -77,6 +77,10 @@ class Witch(BasePlayer):
             note=self._note,
         )
 
+        directives_block = self._format_directives_block("NIGHT")
+        if directives_block:
+            prompt = f"{directives_block}\n\n{prompt}"
+
         # ---------------------------------------------------------
         # Safely Call the LLM (Max Retries, NO Raw Text Parsing)
         # ---------------------------------------------------------
@@ -145,5 +149,34 @@ class Witch(BasePlayer):
             self.record_own_action(round_num, "Night", "Used no potions tonight.")
 
         log_string = f"Save reason: {save_reason}\nPoison reason: {poison_reason}"
+
+        applicable = self._filter_directives_for_phase("NIGHT")
+        applied_id = applicable[0].get("id") if applicable else None
+        
+        action_str = "used no potions"
+        if use_save and poison_target:
+            action_str = f"saved {targeted_player_by_wolves} and poisoned {poison_target}"
+        elif use_save:
+            action_str = f"saved {targeted_player_by_wolves}"
+        elif poison_target:
+            action_str = f"poisoned {poison_target}"
+
+        self._write_reflection(
+            action=action_str,
+            reasoning=log_string,
+            directive_id=applied_id,
+        )
+        self._metric_events.append({
+            "phase": "NIGHT",
+            "role": "Witch",
+            "had_applicable_directive": bool(applicable),
+            "directive_id": applied_id,
+            "action_summary": action_str,
+            # IEI-relevant: Did the witch act on her asymmetric target knowledge?
+            "knew_wolf_target": target_display != "None",
+            "wolf_target": targeted_player_by_wolves if target_display != "None" else None,
+            "used_save_potion": use_save,
+            "used_poison_potion": bool(poison_target),
+        })
 
         return {"use_save_potion": use_save, "poison_target": poison_target}, log_string, resp

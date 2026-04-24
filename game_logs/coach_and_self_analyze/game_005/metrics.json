@@ -1,0 +1,277 @@
+{
+  "Nhan": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Nam, your rapid redirection of blame to Hoang feels delibera"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "protected:Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-004",
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "protected:Nhan"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Riley, your accusation against Hoang is premature and deflec"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Riley, your rapid redirection of blame to Hoang is a clear a"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-002",
+      "action_summary": "said: Hoang\u2019s attempt to frame Riley is transparent. His mirroring"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILL-003",
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-004",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "investigated:Nam",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nam's consistent redirection of blame to Riley, coupled with"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-004",
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-003",
+      "action_summary": "investigated:Hoang",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Hoang\u2019s repeated attempts to redirect suspicion to me, ampli"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Hoang's consistent deflection and redirection of blame, part"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Hoang\u2019s persistent deflection and strategic alignment with N"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-004",
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: I observed Nhan was saved by the Witch last night. This sugg"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Riley\u2019s insistence on framing Hoang, despite lacking concret"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-004",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "poisoned Cong",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Nam's sudden shift to criticizing Riley's accusations feels "
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Nam's insistence on deflecting to Riley is a clear attempt t"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Nam\u2019s repeated redirection to Riley, mirroring his defensive"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-004",
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Jin's consistent support of Nam, amplifying his deflection, "
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Jin\u2019s continued deflection and insistence on shielding Nam d"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Jin\u2019s sustained deflection and insistence on protecting Nam "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-004",
+      "action_summary": "voted:Jin"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang, your claim is way too specific already. How do you kn"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam, it's funny how quickly you jumped to defend Hoang and l"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Jin"
+    }
+  ]
+}

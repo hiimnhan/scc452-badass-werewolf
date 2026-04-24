@@ -1,6 +1,13 @@
 COACH_FEEDBACK_FILENAME = "coach_feedback.txt"
 COACH_STRATEGY_FILENAME = "coach_strategy.txt"
 
+# Structured directives emitted by the coach (JSON)
+COACH_DIRECTIVES_FILENAME = "coach_directives.json"
+PLAYER_DIRECTIVES_FILENAME = "{name}_directives.json"
+
+# Metric logs (for DCR/IEI/DRR analysis)
+METRIC_LOG_FILENAME = "metrics.json"
+
 PLAYER_FINAL_STRATEGY_FILENAME = "{name}_strategy.txt"
 PLAYER_NOTE_FILENAME = "{name}_{role}_note.md"
 GAME_SUMMARY_FILENAME = "game_summary.md"

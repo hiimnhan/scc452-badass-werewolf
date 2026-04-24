@@ -1,0 +1,98 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "last_round_eliminations == 0",
+      "action": "REVEAL_ROLE_AND_CHECK",
+      "rationale_short": "Force information gain during no-death rounds",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "NIGHT",
+      "trigger": "confirmed_wolves_count == 0",
+      "action": "INVESTIGATE_UNCLAIMED_PLAYER",
+      "rationale_short": "Build confirmed innocent pool",
+      "confidence": 0.9
+    },
+    {
+      "id": "SEER-003",
+      "phase": "VOTE",
+      "trigger": "target_was_checked_as_wolf",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Eliminate known wolves",
+      "confidence": 1.0
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "seer_claimed_role == true",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "Protect primary information source",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "seer_claimed_role == false",
+      "action": "PROTECT_RANDOM_NON_CLAIMANT",
+      "rationale_short": "General village preservation",
+      "confidence": 0.7
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "target_died_last_night == false AND save_potion == 1",
+      "action": "SAVE_POTION_ON_NONE",
+      "rationale_short": "Save potion for actual deaths",
+      "confidence": 0.8
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "target_checked_by_seer == innocent",
+      "action": "POISON_POTION_ON_NONE",
+      "rationale_short": "Do not kill confirmed innocents",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "NIGHT",
+      "trigger": "target_checked_by_seer == wolf",
+      "action": "POISON_POTION_ON_TARGET",
+      "rationale_short": "Eliminate confirmed wolf",
+      "confidence": 1.0
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILLAG-001",
+      "phase": "VOTE",
+      "trigger": "confirmed_innocent_pool_count == 0",
+      "action": "STAY_SILENT",
+      "rationale_short": "Prevent blind guessing",
+      "confidence": 0.9
+    },
+    {
+      "id": "VILLAG-002",
+      "phase": "VOTE",
+      "trigger": "target_was_checked_as_wolf",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Follow Seer evidence",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILLAG-003",
+      "phase": "DEBATE",
+      "trigger": "player_uses_third_person_speech",
+      "action": "IGNORE_BEHAVIOR",
+      "rationale_short": "Filter linguistic red herrings",
+      "confidence": 0.8
+    }
+  ]
+}

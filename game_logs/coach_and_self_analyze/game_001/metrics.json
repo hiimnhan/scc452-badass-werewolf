@@ -1,0 +1,292 @@
+{
+  "Nhan": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I\u2019ve observed no actions during the night. Let\u2019s focus on ob"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam\u2019s insistence on \u2018waiting for evidence\u2019 after Riley\u2019s eli"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "protected:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "protected:Nhan"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang\u2019s assertion that my neutrality is a tactic is precisel"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang\u2019s insistence on interpreting my silence as deceptive i"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Hoang",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam\u2019s repeated attempts to redirect attention and his consis"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Nam",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Nam"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang\u2019s persistent attempts to deflect blame after Nhan\u2019s de"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang's deflection consistently avoids direct answers, prior"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Meg",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Meg"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "saved Nhan",
+      "knew_wolf_target": true,
+      "wolf_target": "Nhan",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Let\u2019s begin with a simple observation. Riley\u2019s consistent ne"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Riley\u2019s deflection feels forced. Their insistence on framing"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Riley\u2019s attempt to shift blame onto us for \u2018coordinated atta"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "poisoned Cong",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: I've observed Nam\u2019s persistent attempts to shift blame and h"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Nam\u2019s consistent deflection of accusations, coupled with his"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Jin's insistence on dissecting Hoang\u2019s deflection tactics fe"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Meg's insistence on immediate action, fueled by \u2018wolf panic,"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Meg"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: It's interesting how Nhan and Hoang are both suddenly focuse"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang, asking what I was 'doing' during the night is a meani"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang, your 'valid strategy' of silence is just a cover. You"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "said: Hoang, calling my logic 'predictable' is just another deflec"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ]
+}

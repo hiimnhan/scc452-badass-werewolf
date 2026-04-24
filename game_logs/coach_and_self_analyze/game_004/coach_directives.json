@@ -1,0 +1,138 @@
+{
+  "Seer": [
+    {
+      "id": "SEER-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Immediate claim prevents being exiled by wolf narratives.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-002",
+      "phase": "DEBATE",
+      "trigger": "last_night_result == 'WOLF'",
+      "action": "ACCUSE_TARGET",
+      "rationale_short": "Direct data hit must be shared immediately.",
+      "confidence": 1.0
+    },
+    {
+      "id": "SEER-003",
+      "phase": "NIGHT",
+      "trigger": "any_player_claimed_role == true",
+      "action": "INVESTIGATE_CLAIMANT",
+      "rationale_short": "Verify power role claims as priority.",
+      "confidence": 0.9
+    },
+    {
+      "id": "SEER-004",
+      "phase": "VOTE",
+      "trigger": "checked_player_is_wolf == true",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Vote based on confirmed data only.",
+      "confidence": 1.0
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "PROTECT_RANDOM_PLAYER",
+      "rationale_short": "Prevent early power role loss by sampling.",
+      "confidence": 0.7
+    },
+    {
+      "id": "GUARD-002",
+      "phase": "NIGHT",
+      "trigger": "identified_seer_exists == true",
+      "action": "PROTECT_SEER",
+      "rationale_short": "Preserve the village's only source of truth.",
+      "confidence": 1.0
+    },
+    {
+      "id": "GUARD-003",
+      "phase": "DEBATE",
+      "trigger": "vote_received_last_round > 0",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Force verification to stop wolf focus.",
+      "confidence": 0.8
+    },
+    {
+      "id": "GUARD-004",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_WOLF",
+      "rationale_short": "Follow confirmed Seer data.",
+      "confidence": 1.0
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-001",
+      "phase": "NIGHT",
+      "trigger": "night_kill_occurred == true && save_potion == 1",
+      "action": "SAVE_TARGET",
+      "rationale_short": "Prevent loss of players in early game.",
+      "confidence": 0.8
+    },
+    {
+      "id": "WITCH-002",
+      "phase": "NIGHT",
+      "trigger": "seer_confirmed_wolf == true && poison_potion == 1",
+      "action": "POISON_WOLF",
+      "rationale_short": "Use poison only on confirmed wolves.",
+      "confidence": 1.0
+    },
+    {
+      "id": "WITCH-003",
+      "phase": "DEBATE",
+      "trigger": "vote_received_last_round > 0",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Stop narrative-driven targeting with a claim.",
+      "confidence": 0.7
+    },
+    {
+      "id": "WITCH-004",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_WOLF",
+      "rationale_short": "Follow confirmed Seer data.",
+      "confidence": 1.0
+    }
+  ],
+  "Villager": [
+    {
+      "id": "VILL-001",
+      "phase": "DEBATE",
+      "trigger": "vote_received_last_round > 0",
+      "action": "REVEAL_ROLE",
+      "rationale_short": "Claiming villager forces Seer to check you.",
+      "confidence": 0.8
+    },
+    {
+      "id": "VILL-002",
+      "phase": "DEBATE",
+      "trigger": "player_claims_seer == true",
+      "action": "ASK_FOR_TARGETS",
+      "rationale_short": "Demand concrete data (Who was checked?) over behavior.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-003",
+      "phase": "VOTE",
+      "trigger": "seer_confirmed_wolf == true",
+      "action": "VOTE_WOLF",
+      "rationale_short": "Follow confirmed Seer data.",
+      "confidence": 1.0
+    },
+    {
+      "id": "VILL-004",
+      "phase": "DEBATE",
+      "trigger": "accused_by_others == true",
+      "action": "STAY_SILENT_EXCEPT_ROLE",
+      "rationale_short": "Avoid counter-accusation loops; state role only.",
+      "confidence": 0.9
+    }
+  ]
+}

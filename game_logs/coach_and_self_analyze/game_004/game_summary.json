@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "The lack of a night kill is concerning. My save on Nhan warrants careful observation. I will remain silent until more information emerges."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "The absence of a kill during the night is notable. I will observe Nhan closely. His save on him suggests a potential awareness of danger, which warrants further scrutiny."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang\u2019s persistent focus on Nhan\u2019s save is noteworthy. His attempts to draw attention to it feel strategically motivated. I will observe his future statements closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "The lack of a kill during the night is concerning. Nhan\u2019s save on himself, combined with his attempt to draw attention to my investigation, is a clear indicator of potential deception. I will continue to observe his actions closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "The lack of a kill is unusual. I will focus on observing Hoang\u2019s continued fixation on Nhan\u2019s save. His attempts to highlight this action seem deliberately manipulative."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "The night passed without a kill. Hoang\u2019s repeated focus on Nhan\u2019s save is a deliberate attempt to shift blame. I will observe his next statement carefully."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang\u2019s repeated focus on Nhan\u2019s save, coupled with his attempts to frame it as a sign of deception, indicates a deliberate effort to sow doubt and distract from his own lack of action. I will vote to exile him."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang\u2019s consistent accusations and attempts to shift blame towards Nhan are too deliberate to be innocent. I believe he is actively attempting to mislead the village and deserves further scrutiny."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang\u2019s persistent accusations and attempts to redirect attention create a pattern of behavior. I believe he is attempting to obscure his own true intentions. Exile him to disrupt this manipulation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s behavior \u2013 saving himself and then immediately accusing another \u2013 is highly suspect. It\u2019s a classic tactic to avoid scrutiny and shift blame. I\u2019m voting to remove him from the game."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's save and deflection create a clear pattern of deception. His focus on my investigation is a calculated attempt to divert attention. I will vote to exile him."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's fixation on Nhan is becoming obsessive. He is pushing a narrative very aggressively without any concrete evidence, which feels like an attempt to force a vote and lead the village toward an innocent player."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: The fact that Nhan was targeted for a kill is a major red flag. His defensive reaction to Hoang's observations feels like typical wolf panic. It's more likely he's trying to deflect suspicion than simply being lucky."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Cong (Witch) used POISON potion on Nhan"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Nhan"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Witch",
+        "Nam": "Guard",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

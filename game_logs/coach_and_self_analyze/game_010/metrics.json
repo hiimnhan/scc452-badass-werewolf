@@ -1,0 +1,268 @@
+{
+  "Nhan": [
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "saved Hoang",
+      "knew_wolf_target": true,
+      "wolf_target": "Hoang",
+      "used_save_potion": true,
+      "used_poison_potion": false
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: The night passed without loss. I observed no actions. Let\u2019s "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Witch",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-002",
+      "action_summary": "poisoned Cong",
+      "knew_wolf_target": false,
+      "wolf_target": null,
+      "used_save_potion": false,
+      "used_poison_potion": true
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Hoang\u2019s continued deflection and attempts to redirect blame "
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Hoang\u2019s insistence on framing my accusations as deflection r"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "WITCH-003",
+      "action_summary": "said: Hoang\u2019s relentless redirection and framing of my observation"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Cong": [
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Nhan"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "said: Given the absence of any night kills, I propose we prioritiz"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-002",
+      "action_summary": "said: I observed no eliminations during the night. Given the lack "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Guard",
+      "had_applicable_directive": true,
+      "directive_id": "GUARD-001",
+      "action_summary": "protected:Hoang"
+    }
+  ],
+  "Nam": [
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: I've observed no actions during the night. Given the lack of"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Hoang\u2019s repeated insistence that my observations are merely "
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Jin\u2019s observation about Riley\u2019s mirroring is astute. Riley c"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Jin's accusation that my redirection of suspicion mirrors Ho"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Jin's persistent mirroring and deflection are not genuine en"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Jin"
+    }
+  ],
+  "Jin": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: I observed Riley\u2019s persistent attempts to redirect suspicion"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Nam\u2019s consistent redirection of suspicion to me, mirroring H"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-003",
+      "action_summary": "said: Nam\u2019s repeated attempts to shift blame to me, mirroring Hoan"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "VILLAGER-001",
+      "action_summary": "voted:Nam"
+    }
+  ],
+  "Hoang": [
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Cong",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Cong"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: I observed no one killed during the night. Given this, I wil"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Given the lack of night kills and the consistent focus on es"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "voted:Riley"
+    },
+    {
+      "phase": "NIGHT",
+      "role": "Seer",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "investigated:Jin",
+      "confirmed_wolves_alive": 0,
+      "investigated_target": "Jin"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nhan\u2019s persistent redirection and attempts to frame my obser"
+    },
+    {
+      "phase": "DEBATE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-001",
+      "action_summary": "said: Nhan\u2019s relentless focus on my perceived deflection is a calc"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": true,
+      "directive_id": "SEER-002",
+      "action_summary": "voted:Nhan"
+    }
+  ],
+  "Riley": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    }
+  ],
+  "Meg": [
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Hoang"
+    },
+    {
+      "phase": "VOTE",
+      "had_applicable_directive": false,
+      "directive_id": null,
+      "action_summary": "voted:Nam"
+    }
+  ]
+}

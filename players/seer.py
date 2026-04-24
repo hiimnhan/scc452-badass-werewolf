@@ -105,6 +105,10 @@ class Seer(BasePlayer):
             note=self._note,
         )
 
+        directives_block = self._format_directives_block("NIGHT")
+        if directives_block:
+            prompt = f"{directives_block}\n\n{prompt}"
+
         target = "None"
         analysis = "Default analysis: LLM failed to provide reasoning."
 
@@ -144,6 +148,23 @@ class Seer(BasePlayer):
             "Night",
             f"Chose to investigate {target}. Reason: {analysis}",
         )
+        applicable = self._filter_directives_for_phase("NIGHT")
+        applied_id = applicable[0].get("id") if applicable else None
+        self._write_reflection(
+            action=f"investigated {target}",
+            reasoning=analysis,
+            directive_id=applied_id,
+        )
+        self._metric_events.append({
+            "phase": "NIGHT",
+            "role": "Seer",
+            "had_applicable_directive": bool(applicable),
+            "directive_id": applied_id,
+            "action_summary": f"investigated:{target}",
+            # IEI-relevant: did Seer have a confirmed wolf alive but not use it?
+            "confirmed_wolves_alive": len([p for p in self.get_confirmed_wolves() if p in alive_players]),
+            "investigated_target": target,
+        })
         return target, analysis, resp
 
     def reveal_and_update(self, player_name: str, is_wolf: bool, round_num: int) -> None:

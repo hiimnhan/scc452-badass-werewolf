@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "I observed Nhan\u2019s survival after being targeted by the wolves. This suggests a deliberate act of protection, and warrants further investigation to determine the motivations behind it."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang\u2019s observation about Nhan\u2019s survival is astute. I, too, noticed this. It\u2019s unusual for a target to simply survive a wolf attack without any apparent justification. I\u2019ll be watching Nhan closely."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan\u2019s survival after being targeted by the wolves is concerning. It warrants a closer examination of their motivations and potential involvement. I\u2019ll be observing their behavior closely today."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I agree with Hoang and Nam. Nhan\u2019s survival after a potential wolf attack is noteworthy. I'll observe their actions closely today to ascertain their true intentions."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's continued presence after the wolves attacked is too convenient. I'll focus on observing their reactions to accusations today. Their insistence on reaffirming their survival feels deliberate."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan\u2019s insistence on highlighting their survival after being targeted by the wolves is a significant point of concern. Their repetition of this event suggests a deliberate attempt to mislead. I will focus on observing their reactions to any accusations today."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam\u2019s persistent accusations and attempts to redirect the conversation towards Nhan\u2019s survival strongly suggest he is involved in a coordinated effort to mislead the village. I will vote to exile him to disrupt this strategy."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan repeatedly highlights their survival, framing it as a deliberate attempt to mislead. This pattern of behavior strongly suggests involvement with the wolves. Protecting Nhan provided valuable information."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s attempts to reframe their survival as unremarkable are suspect. Their continued focus on this single event strongly suggests they are attempting to mislead the village. I will vote to exile them."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s continued emphasis on their survival after a potential wolf attack strongly suggests they are attempting to deceive. Their repeated claims deserve scrutiny and potential exile."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan\u2019s continued defense of his survival is too consistent to be genuine. He\u2019s clearly attempting to mislead the village. I believe he is a werewolf and should be exiled to protect the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's behavior is incredibly erratic. Referring to himself in the third person while discussing his own survival is a massive red flag. It feels like a desperate attempt to distance himself from his own actions to avoid suspicion."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's sudden shift to speaking about themselves in the third person is a clear deflection pattern. This erratic behavior, combined with the unusual circumstances of their survival, indicates a defensive posture common among werewolves trying to fake a villager's confusion."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Cong (Guard) chose to protect Riley.",
+            "Jin (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Hoang (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Guard",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
