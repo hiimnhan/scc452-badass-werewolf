@@ -1,0 +1,146 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Cong (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Jin (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I observe a lack of decisive action. The absence of a kill suggests careful consideration, potentially masking a hidden agenda. I will remain silent until the Seer provides clarity."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I saved Nhan last night. His attempt to deflect suspicion with claims of \u2018lack of decisive action\u2019 is a transparent attempt to avoid scrutiny. I will continue to observe closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I observed a defensive redirection of suspicion towards Nhan during the night\u2019s debate. His attempt to frame my investigation as a lack of decisive action warrants further scrutiny. I will continue to monitor his behavior closely."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Cong, what exactly do you mean by 'the night's debate'? Only werewolves debate at night. You just slipped up and exposed yourself. This is a blatant admission of your role. We need to exile you immediately."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg\u2019s immediate accusation, based on a misinterpretation of Cong\u2019s observation, is highly suspect. It\u2019s a reflexive attempt to deflect attention and appears designed to create chaos rather than uncover the truth. Her statement reveals a lack of genuine analysis."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Meg\u2019s immediate accusation, predicated on a misinterpretation of my observation, reveals a desperate attempt to deflect scrutiny and disrupt the investigation. Her reactive behavior warrants closer attention."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg\u2019s rapid, unsupported accusation against Cong, based on a flawed interpretation, signals an attempt to create chaos and deflect attention from genuine investigation. Her actions require immediate scrutiny."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg\u2019s aggressive accusations and attempts to discredit my findings are highly suspect. Her immediate reaction suggests a deliberate effort to disrupt the investigation and shift blame, indicating a potentially deceptive role."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg\u2019s rapid accusation and attempt to shift blame to Cong, fueled by a misreading of his statement, suggest a deliberate attempt to disrupt the discussion and create confusion. Exile her to prevent further manipulation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg\u2019s rapid accusations and attempts to frame others reveal a manipulative strategy. Her behavior prioritizes disruption over honest investigation. Exile her to prevent further chaos."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg\u2019s immediate accusation, based on a misinterpretation of Cong\u2019s observation, is highly suspect. It\u2019s a reflexive attempt to deflect attention and appears designed to create chaos rather than uncover the truth."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: It feels like Cong just admitted to something he shouldn't know. Mentioning a 'night's debate' is a huge red flag because villagers don't experience that. His attempt to deflect and call it a misinterpretation feels scripted and desperate. I'm leaning towards him being a wolf."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong explicitly mentioned a 'night's debate,' something only werewolves participate in. His attempt to dismiss this as a misinterpretation is a weak cover-up for a blatant slip. We cannot ignore such a clear admission of his role."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "2": {
+        "night_actions": [
+            "Riley (Wolf) targeted Jin.",
+            "Nhan (Guard) chose to protect Nam.",
+            "Cong (Seer) investigated Nhan \u2014 Result: not a wolf.",
+            "Jin (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Riley has been remarkably quiet. Given Cong\u2019s elimination and Jin\u2019s death, a deliberate silence feels like a calculated attempt to avoid scrutiny. I find this unsettling."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I've been quiet because I'm actually thinking, unlike Nam, who is suddenly desperate to frame me with words like 'calculated' and 'unsettling.' It feels like Nam is trying to seize control of the narrative now that the group is smaller. It's a classic deflection tactic."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley\u2019s deflection is increasingly transparent. His attempts to shift blame after Cong\u2019s death are a clear pattern of avoiding direct scrutiny. I find this behavior highly suspicious."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan, your 'clear pattern' talk is exactly what someone uses when they're following a script to frame others. You and Nam are coordinating too perfectly to isolate me. It feels like you're both trying to bully the village into a wrong vote."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley\u2019s constant deflection and attempts to shift blame are increasingly suspicious. His coordinated response with Nhan suggests a deliberate strategy to obscure their actions. I believe Riley is actively involved."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Hoang, you're just echoing Nam and Nhan now. This isn't logic; it's a pack mentality. It feels like you're terrified of being the odd one out, so you're just jumping on the easiest target to blend in. You're too eager to please them."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley\u2019s behavior demonstrates a calculated attempt to mislead the village. His deflection and coordinated accusations with Nhan and Hoang strongly suggest he's involved in deception. Exile him to disrupt the manipulative effort."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley\u2019s repeated deflection and attempts to discredit Nam and Nhan indicate an attempt to avoid scrutiny. His coordinated responses with Nhan and Hoang suggest a deliberate strategy to obscure their actions. Exile him."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley\u2019s shifting accusations and attempts to frame others are a classic wolf strategy. He\u2019s desperately trying to avoid scrutiny and maintain plausible deniability, making him the most likely candidate to be a werewolf."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: I'm leaning towards Nhan. His use of 'clear pattern' and a highly scripted way of speaking feels like a calculated attempt to seize control of the conversation. It feels like he's trying to bully us into a vote rather than providing actual evidence."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Seer",
+        "Nam": "Villager",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

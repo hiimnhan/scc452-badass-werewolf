@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Jin (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I find Cong\u2019s insistence on observing everything unsettling. A true villager would be more focused on identifying a threat, not documenting every comment. His eagerness to detail is concerning."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam\u2019s assertion that my diligence is unsettling suggests a desire to deflect attention from his own lack of proactive investigation. It\u2019s a weak attempt to sow doubt."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong\u2019s redirection of suspicion to Nam after my investigation is a clear attempt to obfuscate his own actions. His insistence on detailed observation feels like a carefully constructed facade."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong\u2019s redirection of suspicion to Nam after my protection of Nhan is a transparent attempt to deflect from his own evasiveness. It\u2019s a calculated maneuver, not genuine observation."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong\u2019s persistent redirection of blame to Nam, despite my protection of Nhan, reveals a deliberate attempt to obscure his own actions. His detailed observations are a tactic, not genuine concern."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong\u2019s insistence on documenting every observation feels designed to distract from a lack of genuine investigation. His shifting of blame is a clear tactic."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong\u2019s redirection of blame and insistence on documenting everything strongly suggest he is attempting to conceal his true role. He is actively manipulating the conversation to avoid scrutiny."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam\u2019s repeated accusations and attempts to shift blame demonstrate a deliberate effort to mislead the village. He is actively obstructing our investigation."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong\u2019s persistent redirection of suspicion to Nam, combined with mirroring tactics, demonstrates a deliberate attempt to obscure his actions. He\u2019s prioritizing deflection over investigation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong\u2019s pattern of shifting blame to Nam after my protection of Nhan demonstrates a deliberate attempt to mislead and avoid scrutiny. He is prioritizing self-preservation over identifying the threat."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong\u2019s repeated attempts to shift attention away from himself and onto others, particularly Nam, strongly suggests he is attempting to hide something. Exile him to remove this obstruction."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's focus on documenting others rather than engaging in the actual search for the wolf is a classic diversion tactic. His defensive reactions to Nam and Jin's concerns make him look like he's trying too hard to appear innocent."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's reaction to Nam's concerns is overly defensive and feels scripted. Instead of providing clear evidence, he's focusing on attacking others' styles of investigation, which is a common tactic to distract from one's own guilt."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Nam (Guard) chose to protect Hoang.",
+            "Nhan (Seer) investigated Hoang \u2014 Result: not a wolf.",
+            "Jin (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Jin",
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Villager",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

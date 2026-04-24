@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I've observed that Nhan's initial suspicion score was high and the Guard chose to protect him. This suggests a deliberate attempt to mislead us. I'll focus my attention on identifying any inconsistencies in his arguments today."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I observed that Jin\u2019s suspicion remains the highest. His continued focus on Nhan's initial assessment suggests a possible attempt to deflect attention. I will focus on observing Jin\u2019s arguments today."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I observed Nam attempting to shift the focus away from Jin. This tactic is frequently employed by wolves to obscure their own intentions. I\u2019ll continue to monitor Nam\u2019s arguments closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin\u2019s persistent focus on Nhan\u2019s initial assessment raises concerns. Wolves often use deflection to mask their own actions. I\u2019ll observe his arguments closely for inconsistencies."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong\u2019s accusations regarding my Save potion use are designed to sow doubt. My priority last night was self-preservation, a standard Villager tactic. I will focus on observing how Cong attempts to deflect attention from his own actions."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's attempt to redirect the focus to Jin is a clear deflection tactic. Wolves frequently use this strategy to obscure their own actions. I will carefully observe Nam's arguments today."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong\u2019s accusations against my Save potion use are designed to sow doubt. His continued attempts to deflect and discredit are concerning and warrant immediate investigation."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam is actively attempting to obscure the wolves' intentions through deflection. His persistent redirection of focus warrants immediate investigation and potential exile."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s behavior suggests an attempt to mislead the village. His deflection and justification of self-preservation are inconsistent with a Villager's genuine desire for transparency. I\u2019m voting to exile him to prevent further deception."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong is actively attempting to shift blame and control the narrative. His deflection tactics warrant immediate scrutiny and potential exile."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam\u2019s repeated redirection of suspicion to Jin is a clear attempt to obscure his own intentions and create confusion. It\u2019s a manipulative strategy wolves often employ."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Hoang makes a valid point. Nam's immediate attempt to shift the focus onto Jin feels like a calculated move to redirect suspicion. This kind of aggressive deflection is a common red flag for wolves trying to protect themselves."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: I agree with Hoang. Nam's sudden urge to shift the focus toward Jin feels like a manufactured narrative to divert attention from himself. This kind of redirection is a classic sign of someone trying to hide their true identity."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Hoang.",
+            "Nhan (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Cong"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Guard",
+        "Nam": "Seer",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
