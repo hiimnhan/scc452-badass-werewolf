@@ -48,9 +48,9 @@ SCENARIO_CONFIG = {
         "deviation": False,
         "personality": False,
     },
-    "coach_and_self_analyze1": {
+    "coach_without_self_analyze": {
         "coaching": True,
-        "self_analyze": True,
+        "self_analyze": False,
         "deviation": False,
         "personality": False,
     },

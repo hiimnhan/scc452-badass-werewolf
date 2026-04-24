@@ -1,0 +1,254 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "No one has made a statement. We must quickly establish a direction for the discussion to identify potential targets."
+            },
+            {
+                "Cong": 8,
+                "reason": "No statements have been made. We need to establish a line of questioning to quickly assess potential targets based on the Seer's findings."
+            },
+            {
+                "Nam": 8,
+                "reason": "Immediate action required. Suspicion scores are uniform. Silence is enabling potential wolves. I must initiate a targeted line of questioning to break the stalemate."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong is confirmed clear. Focusing on remaining high suspicion players (Nhan, Nam, Hoang, Riley, Meg) is critical to preventing wolf framing. Immediate action needed."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nhan's initial high suspicion warrants continued observation. Riley, Nam, Cong, and Jin all have similar scores and haven't been targeted. A lack of immediate action doesn\u2019t exclude them, requiring further assessment."
+            },
+            {
+                "Riley": 3,
+                "reason": "No one has spoken yet. I will maintain the 'Quiet Observer' mask, letting others expose themselves or lead the conversation before I subtly steer suspicion toward Nam or Jin."
+            },
+            {
+                "Meg": 3,
+                "reason": "Round 1. Following 'Delayed Hostility' strategy. I will mirror the consensus and establish a reasonable observer persona rather than leading the accusations early."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s preemptive Save is a key indicator. It suggests an attempt to avoid being falsely accused. Prioritize immediate investigation of Nam's motives."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam's Save was proactive. Consistent behavior suggests caution, not deception. We need to quickly establish a baseline of normal behavior to identify deviations."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong is confirmed clear. Prioritize investigating Nhan, Hoang, Riley, and Meg. Immediate action is required to narrow down suspects."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nhan's protection is vital. Continuing to monitor his behavior and cross-referencing with other players' actions is crucial to identifying potential wolf strategies."
+            },
+            {
+                "Riley": 5,
+                "reason": "Nam's claim as Guard is a threat. I need to blend in by questioning the logic of his 'preemptive' save without being overly aggressive, planting a seed of doubt about his role."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam's claim is an immediate threat. I need to establish a presence and cast a subtle seed of doubt regarding the 'preemptive save' logic without coming across as overly aggressive in Round 1."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Nam and Jin both used preemptive Saves. This is a standard villager strategy. I need to understand the motivation behind these actions to assess their trustworthiness."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam's Save was proactive. This suggests awareness of potential threats, warranting closer scrutiny. Lack of observed deaths warrants further investigation."
+            },
+            {
+                "Nam": 7,
+                "reason": "Observing player interactions is crucial. Initial suspicion scores are too uniform; subtle deviations indicate potential wolves. I need to gather more data before making a decisive accusation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nhan is protected, but his suspicion remains high. Continued observation is crucial to confirm his innocence and prevent potential wolf manipulation."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam and Jin both claimed to see no deaths, implying they are power roles. I need to offer 'analysis' that validates their claims while subtly sowing doubt about who is actually telling the truth."
+            },
+            {
+                "Meg": 3,
+                "reason": "Nam's claim is already drawing attention. I'll let others react first to gauge the village consensus and avoid early suspicion, following my Delayed Hostility strategy."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Everyone saved preemptively. This is highly suspicious and warrants immediate investigation. It's a clear indicator of coordinated Wolf behavior."
+            },
+            {
+                "Cong": 7,
+                "reason": "Repeating observations of no deaths is unproductive. I need to introduce a new line of inquiry to move beyond passive reporting."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang's preemptive Save and repetition of 'no deaths' suggest deliberate deception. I need to establish a clear line of questioning to expose this behavior."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong is confirmed not a werewolf. Prioritize investigating remaining high-suspicion players to quickly eliminate potential wolves."
+            },
+            {
+                "Riley": 7,
+                "reason": "Nam and Hoang both claim Guard. I need to highlight this contradiction immediately to sow distrust and ensure one of them is exiled, blending in as a logical villager."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam and Hoang both claimed the Witch's Save potion. One is lying. I must step in now to frame the contradiction as wolf-like behavior before the village settles on a different target."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam and Hoang's identical Save claims, coupled with Meg's observation, strongly suggests coordinated deception. A Witch duplicate is highly suspicious. Immediate investigation is required."
+            },
+            {
+                "Cong": 8,
+                "reason": "Meg's suspicion of two players using Save potions simultaneously is highly concerning. It suggests coordinated deception, potentially involving the Witch and one of the accused. Immediate clarification is crucial to prevent a false accusation."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg\u2019s observation of identical Save claims warrants immediate attention. Nam's preemptive Save requires immediate defense. Failure to address this directly risks a false accusation and exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg's observation of coordinated Save claims warrants immediate attention. It suggests a deliberate strategy to mislead and frame. I need to directly challenge this assertion to prevent further manipulation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Meg's observation of Nam and Hoang's identical Save claims presents a significant, coordinated deception possibility. Immediate action is required to expose this frame."
+            },
+            {
+                "Riley": 6,
+                "reason": "Meg has created a perfect opening by pitting Nam and Hoang against each other. I need to enter the conversation to validate her observation and push the group toward exiling Hoang to appear helpful and observant."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Meg's observation about Nam and Hoang\u2019s identical Save claims is highly suspicious. Coordinated deception strongly indicates Werewolf involvement. Immediate action is required to expose their falsehood."
+            },
+            {
+                "Cong": 8,
+                "reason": "Meg's observation about Nam and Hoang\u2019s identical Save claims is highly suspicious. It requires immediate investigation and a forceful challenge to expose the deception."
+            },
+            {
+                "Nam": 8,
+                "reason": "Meg\u2019s observation of coordinated Save claims is highly suspicious. I must directly challenge Nam and Hoang to expose their deception and prevent a false accusation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Meg\u2019s observation regarding Nam and Hoang's Save claims requires immediate attention. Their coordinated phrasing strongly suggests deception and demands further investigation to prevent misdirection."
+            },
+            {
+                "Riley": 6,
+                "reason": "Meg has created a perfect conflict between Nam and Hoang. I need to enter now to validate her logic and push the suspicion toward Hoang to maintain the 'Quiet Observer' mask while steering the kill."
+            },
+            {
+                "Meg": 8,
+                "reason": "I've successfully created a contradiction between Nam and Hoang. Jin is already backing me. I need to press this advantage immediately to force an exile before they can coordinate a defense."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam's Save and alignment with Hoang suggest coordinated deception. I must immediately challenge this alliance and expose their strategy."
+            },
+            {
+                "Cong": 8,
+                "reason": "Meg and Nam were eliminated. Continued silence is suspicious. I need to understand the reasoning behind the lack of discussion to assess remaining suspects."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam and Hoang were confirmed as not werewolves. Nhan\u2019s suspicion remains high. Immediate action is needed to prevent a Wolf frame."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to shape the narrative regarding the double death. I'll suggest it was a Witch poison combined with our kill to frame Jin or cast doubt on the 'Guard' claims."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Riley's silence is suspicious. His inaction, combined with Nhan's observation, warrants immediate investigation and a potential accusation."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's silence is highly suspicious given Nhan\u2019s observation and his proximity to Nam. Immediate investigation is critical to prevent a Wolf frame."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nhan is actively targeting my silence. I must deflect this accusation immediately and pivot the suspicion back toward Nhan or the remaining power-role claimants to avoid becoming the primary target."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's silence coupled with Jin's observation creates a high-risk situation. His inaction demands immediate scrutiny to prevent further manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's silence is deeply suspicious. His lack of engagement directly contradicts observed coordinated behavior. I must address this immediately to prevent further obfuscation."
+            },
+            {
+                "Riley": 9,
+                "reason": "Both Nhan and Jin are targeting my passivity. If I don't pivot the conversation now, I will be the primary target for exile. I must aggressively deflect and frame them."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s deflection about coordinated framing is a clear wolf tactic. His insistence on the 'effort to isolate' demands immediate rebuttal to prevent his continued evasion."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s deflection and the synchronized attack by Nhan and Jin raise immediate concern. His attempt to frame the coordinated discussion as a werewolf tactic requires immediate investigation."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's coordinated deflection and synchronized accusations with Jin necessitate immediate clarification. His evasiveness is a key indicator of Wolf behavior."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and synchronized accusations with Jin require immediate scrutiny. His attempt to frame Nhan and Jin as coordinating is a clear attempt to divert attention from his own suspicious behavior."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s coordinated deflection and Nhan\u2019s eager alignment with my assessment strongly suggest a Wolf strategy. Immediate confirmation is crucial to prevent a premature exile."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin and Nhan have formed a dangerous consensus against me. I must aggressively dismantle their 'coordination' narrative and pivot the suspicion toward them before the vote locks in."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley\u2019s accusation of coordinated framing is a wolf tactic. His mirroring of Jin\u2019s logic and sudden alignment is highly suspicious and demands immediate rebuttal. Failing to address this directly risks an unnecessary exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley\u2019s deflection and coordinated behavior with Jin are escalating. His silence and mirroring Nhan\u2019s accusations require immediate investigation to prevent a premature, inaccurate exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley's coordinated deflection and mirroring of Jin's arguments strongly indicate Wolf behavior. Immediate action is required to prevent a false exile and protect the Seer's information."
+            }
+        ]
+    ]
+}

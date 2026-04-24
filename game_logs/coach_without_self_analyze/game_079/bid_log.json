@@ -1,0 +1,344 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "No activity overnight suggests no immediate threat. I need to establish a baseline and propose an initial observation to start the discussion."
+            },
+            {
+                "Cong": 8,
+                "reason": "All players have 0.6 suspicion. Immediate accusation is required to break the logjam and establish a clear target."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan was saved. Wolves likely targeted him. Observing Cong, Jin, and Hoang is crucial to identify the remaining wolves before they act."
+            },
+            {
+                "Jin": 8,
+                "reason": "Protecting the Seer is the priority. Nhan\u2019s low suspicion warrants immediate questioning to assess potential deception. Delay risks misdirection."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong is confirmed. Prioritize investigating remaining high-suspicion individuals to establish a strong Trusted Circle quickly."
+            },
+            {
+                "Riley": 3,
+                "reason": "Following Stealth Entry strategy. It's Round 1; being too aggressive now makes me a target. I'll let others speak first to establish logic threads I can later mirror."
+            },
+            {
+                "Meg": 4,
+                "reason": "No one is dead; the village will be confused. I need to establish a presence as a 'reasonable' villager without leading the charge, preparing to frame others' confusion as wolf behavior."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Cong's observation of no deaths is unremarkable. We need to shift from passive observation to active questioning of suspicious behavior to quickly identify potential wolves."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan was saved. Wolves likely targeted him. His neutral stance now makes him suspicious. I need to quickly establish his trustworthiness or expose a potential wolf connection."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nhan's low suspicion score warrants immediate, focused scrutiny. Protecting the Seer is my priority, but proactive investigation into potential wolves is crucial. Delay risks missed opportunities."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong's confirmation requires immediate solidification of the Trusted Circle. Further investigation is paramount to prevent confusion and wasted time."
+            },
+            {
+                "Riley": 3,
+                "reason": "No one is targeting me. Cong's statement is vague. I'll stay quiet to follow my Stealth Entry strategy and avoid becoming the early aggressor."
+            },
+            {
+                "Meg": 4,
+                "reason": "Cong is attempting to lead. I need to provide a 'reasonable' contribution to establish a villager persona without appearing too aggressive or desperate too early."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin's deflection is a key indicator of potential deception. His focus on 'evasive behavior' warrants immediate scrutiny and demands further investigation to understand his motives."
+            },
+            {
+                "Cong": 7,
+                "reason": "Observing evasive behavior is key. Jin's comment highlights a potential villager tactic. I need to assess everyone's reactions to accusations and observations."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan was saved. Wolves likely targeted him. I need to establish Nhan's innocence to maintain core stability and prevent a future wolf elimination."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong is confirmed not werewolf. Prioritize investigation of remaining players with high suspicion scores to quickly establish a Trusted Circle and avoid unproductive debate."
+            },
+            {
+                "Riley": 4,
+                "reason": "Following Stealth Entry strategy. I need to establish a presence without appearing aggressive. I'll offer a moderate analysis to blend in while the villagers try to decode the night's lack of deaths."
+            },
+            {
+                "Meg": 5,
+                "reason": "Cong and Jin are already attempting to frame the narrative. I need to insert myself as a 'reasonable third' to steer their logic toward a target and avoid looking suspiciously passive."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s suspicion of Riley\u2019s deflection is escalating. Riley\u2019s behavior is inconsistent with an innocent villager and warrants immediate, focused scrutiny."
+            },
+            {
+                "Cong": 7,
+                "reason": "Riley's vague 'observing' is a common deflection tactic. I need to understand their intent and explore this further before dismissing them."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s vague statement warrants immediate scrutiny. His insistence on \u2018observing\u2019 is a classic deflection tactic. I need to establish his suspicious behavior to prevent him from swaying the vote."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong is confirmed not werewolf. Prioritize observing those exhibiting evasive behavior \u2013 Riley\u2019s vague statement warrants immediate scrutiny and potential accusation."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is targeting me immediately. According to my strategy, I must deflect this early attack quickly but calmly to avoid becoming the primary target and trigger village unity against me."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is aggressively targeting Riley. I need to intervene to steer the village away from my teammate without being too obvious, framing Nam's aggression as a potential wolf tactic to railroad others."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's deflection and aggressive attack on Nam immediately raise suspicion. Attempting to shift blame and discredit others is a key wolf tactic. I need to challenge this behavior before it solidifies a false narrative."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s deflection immediately after Nam\u2019s observation is a high-priority indicator of potential deception. It warrants immediate scrutiny and a direct challenge."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s deflection is a key indicator of potential deception. His insistence on accusing me preemptively requires immediate challenge to expose his strategy."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s deflection is a key indicator of potential deception. His accusation against Nam is a clear attempt to shift blame and avoid scrutiny. Urgent action is needed to expose this tactic."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley\u2019s deflection is a key indicator of potential wolf behavior. It\u2019s an attempt to obscure their actions and shift blame. This warrants immediate investigation and a pointed question."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is aggressively targeting Riley. I need to intervene not by defending Riley directly, but by framing Nam's aggression as a desperate wolf tactic to ensure Riley survives without looking like a wolf ally."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s deflection and aggressive framing of Nam as evasive is highly suspicious. It\u2019s a direct attempt to control the narrative and deflect scrutiny. I must address this immediately to prevent further manipulation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and Nam's accusation of Riley are consistent tactics. I need to establish a clear line of observation to counter their attempts to shift blame and avoid scrutiny. Urgent to prevent being mischaracterized."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's deflection is a key indicator of guilt. Their aggressive response to a simple observation suggests a desire to avoid scrutiny. Immediate action is needed to expose this tactic."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s consistent deflection and aggressive accusations require immediate scrutiny. Their behavior strongly suggests they are attempting to avoid scrutiny and likely a werewolf. Protecting the Seer is paramount, but Riley's pattern warrants immediate attention."
+            },
+            {
+                "Riley": 3,
+                "reason": "Hoang has already pivoted suspicion toward Nam. I've defended myself and shifted the heat; now I'll let them clash to avoid looking like the instigator."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is aggressively targeting Riley. I need to intervene to protect my teammate and subtly pivot the suspicion toward Nam by framing his aggression as a wolf's attempt to railroad the village."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Cong": 8,
+                "reason": "Riley's deflection and Nhan's elimination create a strong pattern of avoidance and targeted observation. High suspicion demands immediate action to prevent further manipulation."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's immediate exile and Nhan's death strongly implicate coordinated wolf activity. I need to immediately highlight this pattern to avoid misdirection and ensure swift action."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nhan's elimination highlights deflection as a key tactic. Cong\u2019s suspicion increase necessitates immediate investigation to determine if he's employing similar strategies."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam is confirmed not a werewolf. Continuing to investigate the remaining players is paramount to eliminating the wolves before they overwhelm the villagers."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nhan's death confirms a power role was likely active. I need to shape the narrative early, potentially framing Nam's aggression as a wolf tactic to divert attention from Riley."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nam\u2019s claim of coordinated observation directly contradicts Riley\u2019s avoidance of accusation. This suggests a deliberate attempt to mislead. I must address this immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam's accusation of manufactured consensus directly challenges Cong\u2019s reliability. Immediate action is needed to assess Cong\u2019s behavior and determine if he\u2019s concealing information."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam is actively attempting to discredit the Seer and sow discord. His deflection tactics and accusations of manufactured consensus demand immediate scrutiny and clarification."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is already pushing Hoang. I need to enter the conversation to mirror Nam's logic and frame Hoang as a 'clumsy wolf,' securing a villager exit while appearing as a reasonable observer."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nam\u2019s accusation of coordinated detail aligns with Riley\u2019s deflection. Hoang's detailed observations require immediate contradiction to prevent further wolf manipulation. Riley must be targeted."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang\u2019s coordinated observations with Cong and Riley strongly suggest a wolf alliance. I must expose this collusion immediately to prevent further misdirection and ensure Riley\u2019s exile."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's escalating deflection tactics and accusations are a clear indicator of wolf influence. His attempt to discredit the Seer\u2019s methodology warrants immediate scrutiny to prevent further manipulation and protect the Trusted Circle."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam and Jin are already railroaded Hoang. I need to jump in now and frame Hoang's 'detail-oriented' approach as a wolf's attempt to over-explain, making the accusation seem logically sound and inevitable."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nam\u2019s assertion of coordinated effort is a direct attack on Hoang's observations, framing them as wolf strategy. This requires immediate rebuttal to prevent further manipulation and potential misdirection."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam\u2019s accusations of coordinated efforts are escalating. Hoang's behavior warrants immediate, direct scrutiny to prevent further manipulation and establish a clear target."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's escalating attacks on the Seer's credibility are highly suspicious. His attempts to manufacture consensus and deflect attention require immediate scrutiny and clarification. Delaying action risks allowing him to further sow discord and mislead the village."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam and Jin are already railroaded Hoang. I need to enter the conversation now to validate their logic as 'reasonable,' securing my position as a trusted third party while ensuring Hoang is exiled."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nam and Jin are reinforcing Riley\u2019s deflection as a coordinated wolf strategy. This requires immediate challenge to disrupt their manipulation and expose their true intentions."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang\u2019s relentless focus on Riley demands immediate scrutiny. His manipulation is a clear threat to the villagers' safety. I must expose this deception."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam and Jin are actively undermining the Seer and attempting to create doubt. Their accusations require immediate counter-narrative to prevent further manipulation and solidify the Trusted Circle."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam and Jin are already railroading Hoang. I need to enter now to validate their logic as 'objective' and 'decisive,' effectively sealing Hoang's fate without appearing to lead the charge."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nam\u2019s repeated accusations of \u2018manufactured consensus\u2019 directly target Riley and Hoang. This coordinated effort to deflect Riley\u2019s actions warrants immediate scrutiny. Riley's silence is now suspicious."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang's repeated deflection accusations, framed as observation, are a clear wolf tactic. Immediate challenge is required to expose the deception and prevent further manipulation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's repeated framing of Riley's deflection as 'manufactured consensus' and Jin's accusations of a 'carefully constructed facade' demonstrate a coordinated effort to discredit the Seer and shift blame. This requires immediate clarification."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam and Jin are already railroaded on Hoang. I need to jump in now to provide the 'reasonable third' vote, framing Hoang's behavior as desperate to secure his exile before the target shifts."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s consistent deflection and subsequent elimination, coupled with Cong\u2019s observation, necessitate immediate action to solidify the villagers\u2019 strategy and prevent further manipulation."
+            },
+            {
+                "Jin": 8,
+                "reason": "Meg's consistent neutrality poses a risk. Her lack of engagement increases the likelihood of hidden Werewolves. Immediate scrutiny is required to assess her potential deception."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to shape the narrative after Cong's death. I'll offer 'helpful' analysis to frame Jin's silence as suspicious without leading the charge, positioning myself as a reasonable observer."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin\u2019s accusation of redirection is accurate. Riley and Hoang\u2019s coordinated defense necessitates immediate exposure of their strategy to prevent further manipulation."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin is currently railroading Nam. I should enter the conversation to subtly reinforce Jin's narrative. This positions me as a 'reasonable' observer and makes Nam the perfect scapegoat for exile."
+            }
+        ],
+        [
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s deflection and alignment with Riley demonstrate coordinated deception. Immediate accusation is necessary to disrupt his narrative and expose his strategy."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin and Nam are locked in a conflict. I need to enter as the 'Reasonable Third' to frame Nam's aggression as wolf behavior, steering the vote toward him while securing my villager credibility."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s accusations against me are a direct attempt to deflect suspicion and shift blame. I must immediately counter this narrative to prevent further manipulation and solidify the village\u2019s trust."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin and Nam are locked in a circular argument. I will step in as the 'Reasonable Third' to frame Nam's desperation as wolf behavior, securing an easy exile while cementing my villager credibility."
+            }
+        ],
+        [
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s consistent deflection and redirection of blame after Nhan\u2019s elimination necessitates immediate, direct challenge. His behavior is a clear indicator of deception and requires immediate exposure."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam is repeating himself verbatim, making him an easy target. I need to step in as the 'Reasonable Third' to frame his circular logic as wolf desperation and secure his exile."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin's mirroring of my accusations and Riley's is a key indicator of coordinated deception. I must directly challenge his alignment to expose the wolves' strategy before he further muddies the waters."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is spiraling into repetitive arguments. Now is the perfect time for me to step in as the 'reasonable third' and frame his circular logic as a wolf tactic to secure his exile."
+            }
+        ]
+    ]
+}

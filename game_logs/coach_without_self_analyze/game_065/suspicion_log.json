@@ -1,0 +1,344 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "No action observed. Maintaining initial suspicion score."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Initially preemptive Save. Now attempting to discredit the observation of coordinated Save claims by aligning with Hoang, shifting blame and appearing defensive. This behavior warrants increased scrutiny."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Initially observed preemptive Save. Now aligning with Meg\u2019s observation of coordinated phrasing, suggesting an attempt to mislead. Increased suspicion due to echoing Nam and Hoang."
+            },
+            "Hoang": {
+                "score": 0.55,
+                "reason": "Initially preemptive Save. Now attempting to defend against accusations of coordination by aligning with Nam. This suggests a shared deception."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action observed. Maintaining initial suspicion score."
+            },
+            "Meg": {
+                "score": 0.75,
+                "reason": "Maintains high suspicion due to observation of coordinated Save claims by Nam and Hoang. Nam\u2019s response attempts to deflect, strengthening the suspicion."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "No action observed. Remains a neutral suspect."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Initial statement consistent with observing no deaths and using the Save proactively to safeguard themselves. No behavioral cues beyond standard survival strategy. Now, by agreeing with Meg\u2019s assessment of coordinated behavior, Nam is exhibiting a willingness to scrutinize others, increasing suspicion."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Initially presented as a passive observer, mirroring Nam and Hoang\u2019s claims of preemptive Saves. Now, by commenting on the coordinated phrasing, Jin subtly supports Meg's suspicion of deception, indicating a potential alignment with the village's efforts to identify a false role. Maintains a neutral stance."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Repeating statements of no deaths and preemptive Save usage. Demonstrates a cautious, non-participatory approach, consistent with a villager seeking to avoid suspicion. No new behavioral indicators."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action observed. Remains a neutral suspect."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Increased suspicion score due to identifying a potential deception. Demonstrates a proactive approach to uncovering falsehoods, potentially leading to the discovery of the Werewolves. Continuing to push for accountability."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "No observation of deaths, consistent with the general lack of activity. Maintaining a neutral stance."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No observation of deaths, consistent with the general lack of activity. Focusing on observations of player interactions."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Initially presented as focused on observing player interactions, mirroring a typical villager\u2019s approach. Now, actively responding to Meg\u2019s accusation of coordinated Save usage suggests an awareness of the growing suspicion and a desire to appear impartial. This defensive reaction, however, could be a calculated move to deflect attention."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Maintaining a neutral stance is consistent with a villager\u2019s initial strategy. Repeating the lack of deaths and preemptive Save suggests a desire to appear trustworthy and uninvolved."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No observation of deaths, consistent with the general lack of activity."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Increasing suspicion of false Save usage. Demonstrates an attempt to create doubt and disrupt the group\u2019s focus. Potentially attempting to divert attention from their own actions."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Maintained suspicion due to lack of information. Remains a potential target."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by the Seer."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Initially claimed preemptive Save usage. Now attempts to shift focus to observe others, exhibiting defensive behavior and potentially coordinating with Hoang. Reacted defensively to Meg\u2019s accusation."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Maintained suspicion due to lack of information. Claims preemptive Save usage to appear uninvolved. Reacted defensively to Meg\u2019s accusation."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Maintained suspicion due to lack of information. Remains a potential target."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Initiated accusation of false Save usage, demonstrating heightened suspicion and a proactive attempt to influence the debate. Focused on perceived inconsistencies in Nam and Hoang\u2019s statements."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Neutral status. No information yet."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Neutral status. No information yet."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Targeted and survived. Claims to be the Guard and used a self-save. High threat level as a power role or deceptive player. Now attempting to distance himself from Hoang by referring to himself in the third person, which is suspicious and potentially an attempt to shift the narrative lead."
+            },
+            "Jin": {
+                "score": 0.65,
+                "reason": "Potential Witch who used the Save potion. Latest statement is overly generic and mirrors Nam's observation of no deaths, suggesting she is hiding a power role (Witch) to avoid being targeted. Currently riding Meg's momentum to appear valid."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "Claims to be the Guard and used a self-save. This directly contradicts Nam's claim. Meg highlighted the mirroring of Nam's wording, making him an easy target for framing as a wolf attempting to mimic a power role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Ally. Effectively identified the contradiction between Nam and Hoang, shifting suspicion away from others."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Neutral. No information yet."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Neutral. No information yet."
+            },
+            "Nam": {
+                "score": 0.95,
+                "reason": "Targeted and survived. Claimed Witch by citing a preemptive Save. Now speaking about himself in the third person to deflect, which looks suspicious and desperate. High priority target."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Mirrored Nam's language regarding observing inconsistencies; currently non-threatening. Validated my accusation against Nam and Hoang."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "Claimed Save potion immediately after Nam did. Verbatim mirroring of Nam's language. Either a fake-claim wolf or a confused villager; highly volatile and easy to frame."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Ally. Key for coordination."
+            }
+        }
+    }
+}

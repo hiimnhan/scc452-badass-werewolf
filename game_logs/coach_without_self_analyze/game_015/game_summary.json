@@ -1,0 +1,151 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Hoang (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I see no immediate cause for action. The lack of a kill during the night suggests a deliberate attempt to avoid detection. I will continue to observe closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I observed no kills during the night. This suggests a deliberate avoidance of the task. I will continue to monitor behavior closely."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "The lack of a kill during the night suggests a careful strategy. I will continue to observe the group\u2019s reactions to any potential accusations."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I observed no kills during the night. This suggests a deliberate avoidance of the task. I will continue to monitor behavior closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I see no immediate cause for concern. The night was uneventful, with no killings. I will continue to observe and assess each player's behavior throughout the day."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "The lack of a kill during the night is concerning. It suggests a deliberate avoidance of the assigned task. I will continue to observe."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: The silence and repeated affirmation of 'no cause for concern' after the night is suspicious. I'm voting to remove him to force more discussion and expose any hidden information."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam\u2019s continued focus on the absence of a kill raises a red flag. His explanation is too deliberate and avoids directly addressing the core issue of potential wrongdoing."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang\u2019s unwavering focus on the absence of kills, coupled with his consistent assertion of cautious observation, raises a significant red flag. I believe he is deliberately avoiding engagement and attempting to mislead the group."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam\u2019s consistent focus on the absence of a kill and his claim of a \u2018careful strategy\u2019 raises a red flag. I\u2019m voting to exile him to eliminate a potential wolf."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam\u2019s repeated emphasis on the lack of a kill and his strategic observation suggest he is concealing something. I'm prioritizing a targeted exile to disrupt the wolves\u2019 plans."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's constant repetition of the same phrase is incredibly strange. It feels like he's reciting a script to blend in rather than actually participating in the discussion. This kind of robotic behavior often happens when someone is trying too hard to look innocent."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's repeated statements are highly unnatural. He is echoing the same phrases almost word-for-word, which suggests a pattern of obstruction and an attempt to blend in without providing actual analysis. This evasive behavior is a red flag."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Jin.",
+            "Hoang (Seer) investigated Nhan \u2014 Result: not a wolf.",
+            "Cong (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Riley\u2019s insistence on defending Cong, despite the fact that Cong hasn't offered a single reasoned argument, is concerning. It suggests he\u2019s attempting to shield someone he knows is dangerous."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin\u2019s defense of Riley, coupled with his redirection of suspicion, indicates a deliberate attempt to conceal information and protect a potential ally. I will focus my questioning on his motives."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang\u2019s persistent attempts to expose deception, particularly regarding Jin, are a clear pattern of strategic deflection. His focus on inconsistencies suggests he is attempting to obscure a critical piece of information."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang\u2019s consistent redirection of suspicion towards me, combined with his aggressive questioning of Cong\u2019s motives, suggests a concerted effort to deflect attention from his own actions. This is a classic wolf tactic."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin\u2019s repeated attempts to shift blame and deflect scrutiny, coupled with his defensive posture during Cong\u2019s supposed lack of reasoning, is deeply concerning. He\u2019s actively working to obscure his own actions."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "This circular arguing is exactly how wolves stall for time. Hoang, your logic is fundamentally flawed and your attempts to frame Jin are becoming a pattern of obstruction. You're creating noise to hide your own identity. I'm voting Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang\u2019s relentless focus on exposing deception, especially regarding Jin, is a clear pattern of strategic deflection. He\u2019s attempting to shift blame and create confusion to hide his true intentions."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang\u2019s accusations and shifting of suspicion are increasingly suspicious. He\u2019s actively trying to derail the investigation and obscure his own actions. I vote to exile him."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg\u2019s behavior is obstructive and designed to derail the investigation. Her focus on creating noise and attacking the Seer's credibility indicates a deliberate attempt to mislead the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Meg is right; this circular arguing is getting us nowhere. Hoang's constant redirection and attempts to frame others for 'deflecting' are becoming far too predictable. It feels like he's creating noise to confuse the village and stall for time."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang has spent the entire debate relying on flawed logic and circular accusations. This pattern of obstruction and noise is a textbook attempt to confuse the village. His inability to provide a concrete argument makes him highly suspicious."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Witch",
+        "Nam": "Guard",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

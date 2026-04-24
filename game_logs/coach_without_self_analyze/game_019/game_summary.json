@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Meg.",
+            "Cong (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "I observed Nhan's sudden and immediate protection last night. While the Guard\u2019s actions are always a mystery, it warrants closer scrutiny. I propose we discuss this unusual circumstance and assess its implications."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang\u2019s observation regarding Nhan\u2019s immediate protection is notable. I will monitor Nhan closely today, particularly their voting patterns."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's immediate protection by the Guard is concerning. It deviates from typical Guard behavior and warrants further investigation. I'll observe their voting today for any unusual patterns."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang\u2019s focus on my initial protection is noted. While appearing reactive, it was a calculated decision to establish a core defense. I will continue to observe Cong\u2019s persistent questioning."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I agree with Hoang\u2019s assessment. Nhan\u2019s immediate protection was a significant deviation. I will focus on observing Cong\u2019s voting today, seeking any inconsistencies that might align with a deliberate attempt to mislead."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan\u2019s immediate protection is a significant deviation. I will closely observe their voting today for any unusual patterns that might indicate deliberate deception."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong\u2019s constant questioning of the Guard\u2019s actions and coordinated attacks on my protection indicate potential involvement. I will exile him to disrupt the emerging patterns of opposition."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan\u2019s proactive defense and subsequent explanation raise concerns. Their attempt to justify the Guard\u2019s action is inconsistent with typical villager behavior and warrants further scrutiny."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s explanation of a \u2018calculated decision\u2019 feels evasive. Their immediate protection raised significant red flags during the night. I'll vote to exile them based on this initial observation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s initial protection was a significant deviation. Observing their voting today is crucial to determine if they are attempting to mislead the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan\u2019s behavior raises immediate concerns. Their immediate protection, combined with their defensive explanation, suggests a deliberate attempt to mislead the village. I vote to exile them."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's explanation for the protection feels overly rehearsed and calculated. When the rest of us are questioning the situation, Nhan's response seems more like a script than a natural reaction. The immediate protection is too convenient; it feels like a cover for something else."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's survival of the first night is a statistical anomaly that suggests a power role trying to hide. Their defense regarding a 'calculated decision' sounds like a scripted response to deflect attention. Following the group's pattern recognition, Nhan is the most logical suspect."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Hoang.",
+            "Cong (Seer) investigated Jin \u2014 Result: not a wolf.",
+            "Hoang (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Hoang",
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Seer",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

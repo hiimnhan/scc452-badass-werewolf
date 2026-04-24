@@ -1,0 +1,165 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Nam.",
+            "Cong (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Nam (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I confirm Nam is not a werewolf. This establishes a firm baseline. Let\u2019s focus on identifying the remaining threats."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I find Cong\u2019s insistence on Nam\u2019s innocence somewhat defensive. While I agree Nam appears neutral, a purely passive defense warrants scrutiny. Let\u2019s explore why he\u2019s so insistent."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong\u2019s insistence on Nam\u2019s innocence is overly emphatic. He\u2019s actively shielding her, and that warrants immediate examination. Let\u2019s establish a clear line of questioning."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam\u2019s attempt to deflect suspicion onto Cong, coupled with his overly emphatic defense of her, is concerning. I\u2019ll begin by asking Nam to detail precisely why he believes Cong is innocent, focusing on specific observations from the night."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam\u2019s insistence on my confirmation, coupled with his defensive posture, warrants further scrutiny. I will observe his continued behavior closely."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin\u2019s direct questioning of Nam\u2019s defense is appropriate. However, focusing solely on Nam\u2019s deflection without considering the broader context of Cong\u2019s insistent shielding is a narrow approach. I will seek clarification on Cong's motivations."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's strong, unwavering defense of Nam, combined with his redirection of suspicion, raises concerns. His behavior warrants further investigation and potential elimination."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan\u2019s constant questioning of Cong\u2019s confirmation and his attempt to highlight what he perceives as defensive behavior indicate a potential ulterior motive. I believe he warrants further scrutiny to determine if he is a threat."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin is aggressively probing Nam\u2019s justifications, prioritizing exposure over a general assessment. His targeted questioning points to a hidden agenda, making him a higher risk than the other suspects."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam consistently redirects attention and frames others as suspicious. His emphatic defense of Cong, combined with his attempt to shift blame, strongly suggests he is attempting to mislead the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam\u2019s actions demonstrate an attempt to deflect suspicion, particularly through his insistence on Cong\u2019s innocence. His defensive posture and questioning of Jin\u2019s approach warrant closer scrutiny before he can be fully trusted."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's behavior is highly erratic. First, an unprompted confirmation of Nam, then immediately turning on Nam when challenged. This kind of desperate pivot to deflect suspicion is a classic sign of a werewolf trying to blend in while panicking."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's behavior is erratic. He started by emphatically shielding Nam, but as soon as that failed, he immediately flipped to accuse Nam. This inconsistency is a classic werewolf tactic to blend in by pivoting when a narrative falls apart."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Nhan (Guard) chose to protect Jin.",
+            "Cong (Seer) investigated Hoang \u2014 Result: not a wolf.",
+            "Nam (Witch) used POISON potion on Jin"
+        ],
+        "night_eliminated": [
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "My Save last night was solely to protect the Seer's data. Targeting Nhan was a calculated risk to preserve the information flow. Cong's relentless questioning of my motives is a transparent attempt to deflect attention \u2013 he\u2019s clearly hiding something."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam\u2019s insistence on protecting the Seer\u2019s data feels\u2026 performative. His Save was a calculated move to control the narrative, not genuine concern. I find his continued deflection of scrutiny deeply suspect."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong\u2019s attempts to discredit my actions are a classic wolf tactic \u2013 deflect, deny, and sow doubt. His mirroring of my defensive posture suggests a coordinated strategy to mislead the discussion. I will not be swayed."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong\u2019s continued redirection of blame towards me, coupled with his insistence on highlighting my \u2018performative\u2019 Save, strongly suggests he\u2019s attempting to divert attention from his own actions. His defensive posture is a wolf hallmark."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong\u2019s insistence on dissecting my Save is a deliberate distraction. He's attempting to create an illusion of scrutiny while avoiding genuine investigation. His repeated framing of me as defensive is a classic wolf strategy."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong\u2019s persistent attempts to frame my actions as \u2018performative\u2019 and deflect attention are directly mirroring the wolves\u2019 established tactics. His focus on my Save is a deliberate attempt to create doubt and obscure his own inconsistencies."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong consistently redirects suspicion and frames my actions as performative. His strategic deflection and attempts to control the narrative strongly suggest wolf activity. He requires immediate scrutiny."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan\u2019s persistent attempts to shift blame and deflect scrutiny align with wolf behavior. I believe he is attempting to conceal his true allegiance."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan is reinforcing the narrative of deflection and suspicion. His mirroring of Nam\u2019s actions, combined with his support of Cong\u2019s redirection, makes him a high-priority target for removal to break this coordinated strategy."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong\u2019s persistent redirection of blame and his focus on my actions demonstrate a deliberate effort to obscure his own behavior. He\u2019s actively working to sow discord and control the narrative \u2013 a strong indicator of wolf influence."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong is spending all his energy trying to discredit Nam's save rather than providing any actual evidence. This constant deflection and attempt to sow doubt about our power roles is a textbook werewolf strategy to keep us blind."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's strategy of attacking the claims of others rather than providing his own evidence is a huge red flag. He is trying too hard to paint everyone else as 'performative' to distract us from his own lack of a clear role or logic."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "3": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nhan (Guard) chose to protect Hoang.",
+            "Nam (Witch) has no potions left."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Seer",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
