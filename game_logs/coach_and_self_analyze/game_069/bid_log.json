@@ -1,0 +1,254 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's persistent challenges to the Seer necessitate immediate scrutiny. His elevated suspicion score and protection by the Guard strongly suggest wolf activity. Addressing his behavior is crucial."
+            },
+            {
+                "Cong": 7,
+                "reason": "No statements have been made. We need to establish a baseline of observations and begin identifying potential patterns in player behavior."
+            },
+            {
+                "Nam": 8,
+                "reason": "Suspicion scores are all 0.50. No one has made an accusation. Immediate action is required to initiate discussion and reveal potential inconsistencies."
+            },
+            {
+                "Jin": 8,
+                "reason": "Initial suspicion scores are evenly distributed. Immediate discussion is needed to establish a baseline and identify potential patterns or inconsistencies in player behavior."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Confirmed Cong is safe. Must establish a clear priority for further investigations to minimize risk and maximize efficiency."
+            },
+            {
+                "Riley": 5,
+                "reason": "No one died, which suggests a Save or Guard action. I need to establish a presence and start guiding the logic toward 'suspicious' survivorship without overcommitting too early."
+            },
+            {
+                "Meg": 4,
+                "reason": "No one died, signaling a Guard or Witch intervention. I need to blend in with clinical analysis without appearing overly aggressive too early. I'll wait to see who claims a power role."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "No kills occurred. Silence is suspicious. We need to quickly establish a structured approach to avoid wasting time on baseless accusations."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan\u2019s proposed structure is a stalling tactic. Wolves will exploit this to sow confusion. I must immediately challenge this and force focused discussion to identify inconsistencies and expose potential lies."
+            },
+            {
+                "Jin": 8,
+                "reason": "The lack of night kills doesn't exonerate anyone. We need to aggressively probe for inconsistencies in statements and voting patterns. Delaying risks the wolves gaining an advantage."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Confirmed Cong is safe. Need to rapidly establish a clear investigative strategy to quickly eliminate remaining wolves."
+            },
+            {
+                "Riley": 7,
+                "reason": "Nhan is attempting to control the narrative and establish authority. I need to intervene now to frame this behavior as 'wolf-like blending' before the village accepts Nhan's leadership."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nhan is attempting to steer the village and likely holds a power role. I need to intervene early to frame their structured approach as a manipulation tactic, labeling it as a 'control mechanism' to sow doubt."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s persistent challenges to the Seer require immediate attention. Continued opposition risks undermining Seer confirmation and prolonging the game. Prioritize eliminating this disruptive element."
+            },
+            {
+                "Cong": 8,
+                "reason": "The Seer\u2019s initial finding wasn't challenged. We need to quickly establish a pattern of behavior to identify potential wolves before they can manipulate the discussion."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang's observation of player behavior is relevant. I need to quickly assess if anyone is demonstrating suspicious patterns that could indicate a wolf."
+            },
+            {
+                "Jin": 8,
+                "reason": "The Seer's initial finding was unchallenged. Observing player behavior during the debate is crucial to identify potential manipulators or those attempting to mislead the discussion. Immediate action is needed to assess influence."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang is blatantly mirroring Nhan. I must weaponize this mimicry immediately to frame them as a coordinated wolf pair before they establish control over the village's logic."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nhan and Hoang are dominating the structure. I need to insert myself as a 'logical observer' to avoid being sidelined and to start subtly framing Nhan for his over-assertiveness."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s observation about Hoang\u2019s mirroring requires immediate investigation. Wolves often employ deceptive tactics like coordinated speech patterns. Protecting Hoang is now strategically detrimental."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s observation about Hoang mirroring Nhan is concerning. Wolves often coordinate to create a false narrative. I need to address this directly to prevent further deceptive behavior."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s observation of mirroring behavior is highly suspicious. It directly implicates Hoang and warrants immediate, focused questioning to expose potential coordination among the wolves. Prioritize this line of inquiry."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s accusation of mimicry against Hoang is concerning. It suggests a coordinated effort to create a false narrative and deflect suspicion. I need to address this immediately to prevent it from influencing the group\u2019s thinking."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley's accusation of mirroring requires immediate investigation. It\u2019s a clear attempt to deflect suspicion and sow discord, a common tactic for wolves. I need to address this directly."
+            },
+            {
+                "Meg": 6,
+                "reason": "Riley has created a perfect opening. I will pivot from 'neutral observer' to 'clinical analyzer' to validate the mirroring accusation against Hoang, reinforcing Riley's lead while appearing objective."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's accusation of coordinated behavior warrants immediate investigation. Hoang's mirroring and Riley's deflection suggest a wolf strategy, and Nam's protection makes him a priority target."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley's accusation of mirroring is concerning. Hoang's defensive response suggests awareness. I need to probe this dynamic \u2013 coordinated wolf behavior is a high priority."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's accusation of mirroring is a significant red flag. Hoang\u2019s deflection and Riley\u2019s disruptive behavior require immediate scrutiny. I need to challenge this dynamic and expose potential coordination."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s accusation of mirroring is concerning. It\u2019s a classic wolf tactic to create a false consensus and deflect suspicion. I need to challenge this immediately to prevent it from influencing the group."
+            },
+            {
+                "Riley": 8,
+                "reason": "Hoang is actively calling my behavior a deflection. I must double down on the 'mimicry weaponization' strategy immediately to frame Hoang as the defensive wolf before he gains momentum."
+            },
+            {
+                "Meg": 6,
+                "reason": "Riley has successfully created a conflict. I need to enter as the 'Neutral Arbitrator' to validate Riley's observation of mirroring, framing Hoang as the manipulator to solidify a target for exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s coordinated attack on Hoang, coupled with their repeated accusation of coordination, indicates a wolf strategy. Protecting Riley is detrimental to Villager victory; immediate action is required."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley\u2019s persistent targeting of Hoang and the accusation of coordinated mirroring strongly suggest wolf behavior. Immediate action is needed to assess the validity of this claim and prevent further manipulation."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley\u2019s persistent mirroring and deflection tactics strongly suggest coordination with the wolves. His accusations are designed to derail the discussion, not uncover the truth. Immediate challenge is critical."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley\u2019s accusation of coordinated mirroring is highly concerning. Hoang\u2019s defensive response confirms potential deception. I need to directly challenge this behavior and push for specific examples to expose the wolves\u2019 strategy."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley\u2019s attempts to discredit the Seer and deflect criticism are indicative of a coordinated strategy. Their accusations lack substance and serve to sow distrust. Immediate attention is required to assess their potential involvement."
+            },
+            {
+                "Meg": 7,
+                "reason": "Riley has successfully created a conflict. I need to enter as the 'Neutral Arbitrator,' validate Riley's observation of Hoang's mirroring using clinical terms, and push the village toward exiling Hoang to protect the pack."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nam": 8,
+                "reason": "Hoang's defensive posturing and deflection suggest deliberate obfuscation. A focused accusation is needed to expose this strategy and prevent further manipulation."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley\u2019s elimination provides concrete evidence of wolf activity. Nam and Hoang\u2019s behavior warrants immediate scrutiny. We must quickly establish a clear line of defense against potential manipulation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's confirmation and Riley's continued deflection demand immediate scrutiny. Delaying risks misdirection and allows potential wolves to solidify their influence."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to frame the double kill. Nam's previous behavior offers a clinical opening to suggest wolf coordination or Witch poison, establishing me as a logical observer early in the round."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang's defensiveness and attempts to shift blame strongly suggest involvement. Prioritize immediate investigation to expose his manipulative tactics."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin's deflection and attempts to discredit the investigation require immediate scrutiny. His shifting focus suggests he is protecting someone and actively misleading the village."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin is already doing the work of framing Hoang. I will step in to provide a 'clinical' justification for Hoang's exile, framing it as a logical conclusion to solidify the consensus without appearing as the primary aggressor."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang's defensive tactics and attempts to redirect blame are highly suspicious. His reactive arguments indicate a calculated effort to mislead. Immediate scrutiny is necessary to expose his deception."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang's defensiveness and control of the narrative after Riley's elimination strongly suggest he's covering for something. His deflection requires immediate scrutiny and a direct challenge."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin and Hoang are locked in a dispute. I need to enter as the 'Neutral Arbitrator', using clinical analysis to frame Hoang as manipulative, thereby pushing the village toward his exile."
+            }
+        ],
+        [
+            {
+                "Jin": 9,
+                "reason": "Hoang\u2019s deflection and focus on process after Riley\u2019s elimination demonstrate a clear attempt to mislead. I need to directly challenge this tactic and expose his potential involvement before he further controls the narrative."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam\u2019s mirroring of Jin\u2019s deflection and consistent attempts to discredit the investigation are highly suspicious. Immediate investigation is required to prevent further manipulation."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin and Nam are already building a consensus against Hoang. I will intervene to provide the 'clinical' justification, framing Hoang's behavior as manipulative to seal his exile without appearing as the primary aggressor."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Hoang\u2019s deflection and attempts to control the narrative are increasingly suspect. His focus on process obscures potential involvement with the werewolves. Immediate action is required."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin\u2019s persistent attempts to discredit the investigation, coupled with his mirroring of Nam\u2019s deflection, strongly suggest he is actively involved in protecting potential werewolves. Immediate investigation is crucial."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin and Nam have already established a narrative against Hoang. I will enter as the 'Neutral Arbitrator', using clinical analysis to frame Hoang's defenses as 'manipulative' to solidify the consensus and ensure his exile."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Hoang\u2019s deflection and consistent misdirection are escalating. He\u2019s actively attempting to mislead the village. Immediate accusation is vital to prevent further obfuscation."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang's deflection and attacks on the Seer's methods are escalating. He\u2019s clearly trying to control the narrative and obscure his own involvement. Immediate scrutiny is required."
+            },
+            {
+                "Meg": 7,
+                "reason": "Jin and Nam have already established a narrative against Hoang. I will enter now as the 'Neutral Arbitrator' to validate their logic clinically, framing Hoang's defensive process-talk as a sign of manipulation to seal his exile."
+            }
+        ]
+    ]
+}

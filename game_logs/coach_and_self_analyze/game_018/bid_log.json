@@ -1,0 +1,368 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Initial silence is suspicious. Must establish a baseline for evaluation and begin identifying potential inconsistencies."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam is confirmed not a wolf. I need to immediately establish this as a key component of the Safe Circle and prevent any discussion that might erroneously target him."
+            },
+            {
+                "Nam": 8,
+                "reason": "Initial silence demands immediate action. The lack of accusations indicates either widespread cooperation or deliberate obfuscation. I must proactively challenge the status quo to force discussion and expose potential wolves."
+            },
+            {
+                "Jin": 8,
+                "reason": "Maintaining Cong's protection is paramount. A low suspicion score and initial protection necessitate continued vigilance against potential wolf manipulation. Delaying action risks losing him."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Initial suspicion scores are equal across the board. We need to start gathering information and identifying patterns in behavior to establish priorities."
+            },
+            {
+                "Riley": 2,
+                "reason": "First day. Following Passive Integration strategy. I will let others speak first to gauge the mood and mirror the majority consensus once a target emerges."
+            },
+            {
+                "Meg": 3,
+                "reason": "No one has spoken yet. I'll use Strategic Echoing to wait for a target to emerge, then validate the momentum. Staying quiet initially avoids early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley's silence is a significant deviation from expected villager behavior. I need to establish a clear line of questioning and assess their potential involvement."
+            },
+            {
+                "Cong": 9,
+                "reason": "Confirmed Nhan and Nam as not wolves. Riley\u2019s quietness warrants immediate scrutiny. Prioritize confirming Riley\u2019s alignment to prevent deception."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's silence warrants immediate investigation. Reduced participation is a key indicator of potential deception. Delay risks missed opportunity."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Initial observations warrant further discussion. Riley's silence is a potential indicator, but requires more context and corroboration."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is aggressively targeting my silence to frame me as a wolf. I must deflect immediately and flip the script by painting Nam's aggression as a desperate attempt to distract the group."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is targeting Riley. I must intervene to deflect suspicion from my ally using defensive neutrality, questioning Nam's logic without being overly aggressive."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Cong and Nam are focusing on silence, creating a potential coordinated effort. Riley's silence, combined with this observation, requires immediate attention to avoid being implicated in a false accusation."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's silence and Nhan's are significant. I need to quickly establish a line of questioning to expose potential wolves masking as villagers."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's silence and Nhan's complete lack of engagement are significant. Immediate questioning is required to establish a baseline and expose potential deception."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nhan and Riley\u2019s silence warrants further investigation. A consistent lack of engagement is a noteworthy observation, especially considering the potential danger."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is targeting my silence, which is a classic werewolf tell. I must deflect this immediately and pivot the conversation toward Nhan to leverage Cong's existing suspicion."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam is targeting my ally Riley. I need to intervene by using strategic echoing to support Cong's pressure on Nhan, diverting attention away from Riley without defending them directly."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's observation about Nhan's silence is mirrored by Cong. This coordinated attempt to highlight my silence is concerning. I must address this immediately."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nhan\u2019s complete silence is a significant anomaly. Combined with Riley\u2019s silence and my own investigation confirming Nhan as not a wolf, this warrants immediate attention. Further inaction risks allowing a potential wolf to blend in unnoticed."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong and Nam's silence warrants immediate scrutiny. Prolonged inaction is a key indicator of potential deception. I must establish this pattern publicly."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Initial observations show consistent quietness from several individuals. Further investigation is needed to determine if this is indicative of a deliberate attempt to conceal information or a genuine lack of insight."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is aggressively targeting my silence. I must deflect this immediately and pivot the focus toward Nam's fishing expedition or support Cong's pressure on Nhan to regain social standing."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is targeting my ally Riley. I need to intervene to deflect suspicion from Riley without being overly defensive, while potentially reinforcing Cong's push against Nhan to maintain momentum."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam and Cong are actively reinforcing my silence as a point of suspicion. I must counter this narrative immediately to prevent further misdirection and solidify my position as a vigilant observer."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley's sustained silence and Nhan's complete lack of engagement are concerning. I need to establish a clear line of questioning to expose potential wolves masking as villagers."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong and Nhan's consistent silence requires immediate scrutiny. A coordinated pattern of silence is a classic wolf tactic. Prioritize questioning their actions."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Initial observations require confirmation. Riley, Nhan, Cong, and Jin's silence is noteworthy, but lacks immediate justification for accusation."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is aggressively targeting my silence. I must deflect this immediately to avoid becoming the primary target and pivot the suspicion toward Nam's erratic accusations or support Cong's push against Nhan."
+            },
+            {
+                "Meg": 5,
+                "reason": "Cong is already pushing Nhan. I will use strategic echoing to support this momentum, validating Cong's suspicion to blend in without being the primary catalyst."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nhan's silence, coupled with Cong and Jin's mirroring observations, creates a concerning pattern of coordinated suspicion. Immediate action is needed to disrupt this strategy and prevent further targeting."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nhan's complete silence during the night, coupled with Riley's observed silence, requires immediate attention. A lack of engagement is a significant indicator of potential deception. I need to establish this pattern and solidify the 'not wolf' circle."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley\u2019s sustained silence is a key indicator. The pattern of quietness, coupled with their deliberate avoidance of discussion, suggests a calculated strategy to avoid suspicion. Immediate questioning is crucial to expose this tactic."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Observing a pattern of silence across multiple players warrants further investigation. Riley's silence, combined with Nhan and Cong's, suggests a coordinated effort to avoid scrutiny. I need to understand their nocturnal observations."
+            },
+            {
+                "Riley": 9,
+                "reason": "Nam and Jin are coordinating to paint me as the wolf. I must break their momentum immediately, deflect using Nam's own 'fishing' behavior, and pivot the focus toward Nhan to align with Cong."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam and Jin are coordinating on Riley. I must deflect this momentum immediately using Defensive Neutrality and redirect focus toward Nhan to align with Cong's push."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's mirroring of Cong's elimination and active attempts to silence me strongly suggest coordinated wolf activity. Immediate action is required."
+            },
+            {
+                "Nam": 8,
+                "reason": "Jin's silence mirrors Riley\u2019s. Both deflect suspicion aggressively. This coordinated behavior is a strong indicator of wolf activity. Immediate questioning is required."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's exile was demonstrably false. Nhan remains suspect. Immediate questioning is required to prevent further manipulation and ensure accurate assessment."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong's death and Riley's near-exile demand immediate scrutiny. Riley\u2019s defensive posture and Nam\u2019s support require urgent assessment. Silence is not an option."
+            },
+            {
+                "Meg": 5,
+                "reason": "I need to maintain moderate visibility. I'll wait for the initial discourse to pivot towards Nhan or Nam, then provide analytical support to solidify the momentum without appearing as the catalyst."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's observation of Jin mirroring Riley is a significant deviation. Riley's exile and Jin's mirroring demand immediate scrutiny. This coordinated attempt to obscure information needs to be exposed."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam\u2019s observation directly challenges my actions. Mirroring silence is a wolf tactic. Immediate response necessary to counter this accusation and demonstrate vigilance."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Riley's exile and Jin's silence coupled with Nam's deflection observation warrant immediate investigation. Riley's defense is insufficient. I need to understand the connection."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam is already creating a target in Jin. I will provide 'analytical support' to Nam's push to validate the momentum and blend in without appearing as the catalyst."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin\u2019s claim of strategic inaction is a wolf tactic. Mirroring Riley\u2019s silence is designed to deflect suspicion. This requires immediate rebuttal to expose the manipulation."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s calculated silence is a key indicator. His attempt to frame inaction as strategy directly contradicts observed behavior. Immediate questioning is required to expose his deception."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin\u2019s deflection and Riley\u2019s mirroring create a strong coordinated pattern. I need to establish a connection between their behavior and the wolves\u2019 strategy to expose the deception."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam and Jin are clashing. I will wait for a consensus to emerge, then provide analytical support to push the village toward Jin or Nam to remove a potential power role while staying neutral."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s escalating accusations and Jin\u2019s deflection constitute a coordinated attempt to shift blame. This requires immediate intervention to prevent a false accusation and protect potential innocents."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s persistent accusations and framing of my actions as deceptive require immediate rebuttal. His attempt to discredit my strategy directly threatens my ability to protect, necessitating a forceful defense."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin\u2019s deflection and mirroring of Riley are highly suspicious. Nam\u2019s observation confirms this pattern. I need to directly challenge Jin's claim of strategic silence and expose the deliberate deception."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is aggressively targeting Jin. I will use strategic echoing to validate Nam's momentum, framing Jin as a wolf to divert attention and eliminate a potential power role while maintaining a moderate profile."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam is aggressively mirroring Jin and Riley, escalating suspicion. This coordinated attempt to deflect blame warrants immediate scrutiny. Jin\u2019s \u2018avoiding premature revelation\u2019 is wolf-like behavior \u2013 a deliberate obfuscation tactic."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s repeated deflection and mirroring Riley\u2019s silence are highly suspect. I must directly challenge his narrative and expose the manipulative pattern before he further obscures the truth."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin's consistent deflection and mirroring of Riley's silence strongly suggest coordinated deception. This warrants immediate scrutiny and a direct challenge regarding his specific actions during the night."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is aggressively pushing Jin. I will use Strategic Echoing to validate Nam's momentum, framing Jin as a wolf to divert focus from myself and Nhan while maintaining a moderate profile."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam is escalating accusations and mirroring Riley. Jin's defense is evasive and reinforces the pattern of coordinated suspicion. Immediate action is needed to disrupt this focused attack on Jin."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s relentless focus on my silence, combined with his attempts to frame my actions, represents a coordinated effort to deflect suspicion and manipulate the villagers. Immediate rebuttal is crucial to prevent further misleading narratives."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin\u2019s repeated claims of \u2018avoiding premature revelation\u2019 are a transparent attempt to mask his inactivity. His mirroring of Riley\u2019s silence and deflection tactics strongly suggest wolf behavior. Immediate clarification is required."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is successfully driving the village toward Jin. I will provide analytical support for Nam's logic to lock in the momentum against Jin without appearing to lead the charge."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nam": 9,
+                "reason": "Jin's mirroring Riley's silence is escalating. His defensive posturing after Nhan\u2019s death requires immediate scrutiny. Delaying action risks him manipulating the remaining votes."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam's manipulative behavior and attempts to discredit the Guard pose an immediate threat. He must be investigated before he can further destabilize the village."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nhan's continued silence and recent death, coupled with Nam and Jin\u2019s coordinated defense, demand immediate scrutiny. Delaying action risks allowing wolves to remain undetected."
+            },
+            {
+                "Meg": 6,
+                "reason": "I need to steer the conversation toward Jin while Nam is already aggressive. Providing 'analytical support' for Nam's claims will validate the momentum against Jin without making me the primary accuser."
+            }
+        ],
+        [
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s mirroring of Riley\u2019s tactics reveals a coordinated effort. Immediate action is required to expose this deceptive strategy and prevent further manipulation of the vote."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam\u2019s observation about mirroring is significant. Riley and Jin\u2019s behavior is highly correlated. I must probe for specific instances of this mirroring and its purpose."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam has already established a narrative against Jin. I will use strategic echoing to validate Nam's suspicion, pushing the village toward exiling Jin without appearing as the primary instigator."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin's mirroring of Riley\u2019s tactics indicates a coordinated strategy. Immediate accusation is needed to disrupt this manipulation and solidify the villagers' focus on genuine threats."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam and Jin\u2019s mirroring of Riley\u2019s deflection is a clear coordinated strategy. Riley\u2019s silence is suspicious, and Nam/Jin\u2019s attempts to redirect attention require immediate scrutiny."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is already doing the work of framing Jin. I will provide analytical support to Nam's accusation, validating the momentum without appearing as the catalyst, to ensure Jin is exiled."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin\u2019s mirroring strategy is a deliberate attempt to mislead. I must directly challenge this tactic and expose his manipulative behavior before he further destabilizes the group."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam\u2019s mirroring of Riley is escalating. His attempts to discredit my investigation are a direct threat to Villager victory. Immediate action is required to expose his manipulation."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam and Hoang have already converged on Jin. I will provide analytical support to validate the momentum and secure the exile without catalyzing the accusation myself."
+            }
+        ],
+        [
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s consistent mirroring of Riley constitutes a coordinated effort to manipulate the investigation. Immediate action is required to prevent further deflection and maintain Villager control."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam and Jin's coordinated mirroring of Riley's defensive tactics is a strong indicator of a deliberate strategy to mislead. Their actions require immediate scrutiny to prevent further obfuscation."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam and Hoang have already converged on Jin. I will provide analytical support to validate the momentum and push Jin toward exile without appearing as the catalyst."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Jin's mirroring of Riley is a key indicator of coordinated wolf activity. I must directly challenge this tactic to expose their strategy and prevent further deception."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin's mirroring of Riley is a clear pattern of coordinated deception. It requires immediate clarification to determine if they are working together to mislead the village."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam and Hoang have established strong momentum against Jin. I will use strategic echoing to validate this consensus, ensuring Jin is exiled without appearing as the catalyst."
+            }
+        ]
+    ]
+}

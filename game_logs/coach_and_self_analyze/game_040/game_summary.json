@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Given that no one was killed during the night, I propose we focus on observing player behavior and seeking verifiable evidence before making any accusations. I have nothing to add at this time."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I observe Nam's insistence on observation. A calculated attempt to deflect attention, likely masking a strategic assessment of the group. I will continue to monitor his statements closely."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Given the absence of night kills, I propose we proceed with careful observation. Nam\u2019s insistence on passive observation warrants closer scrutiny; his deliberate deflection suggests he\u2019s attempting to conceal something."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Given the lack of casualties last night, I propose we maintain a cautious, observational approach. Nam\u2019s insistence on passive observation warrants further scrutiny \u2013 his deflection of direct questions is concerning."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I agree with Nhan\u2019s suggestion of continued observation. However, Nam\u2019s insistence on observation feels deliberately evasive. His deflection of direct questions is concerning, particularly given the lack of night kills. Let's focus on inconsistencies in his statements, not simply observing."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Given the lack of night kills and the continued insistence on observation from Nam, I will remain vigilant. His deflection of direct questioning is a clear indicator of something concealed. Let us proceed with cautious observation."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam\u2019s repeated deflection of direct questions and framing of others as evasive strongly suggests he\u2019s attempting to mislead the group. I am prioritizing him for investigation based on this observed pattern."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: We\u2019ve established a pattern of deflection. While no concrete evidence exists yet, Nam\u2019s behavior warrants immediate scrutiny. It\u2019s better to err on the side of caution when observing a player actively avoiding direct engagement."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin\u2019s persistent framing of Nam as deceptive, combined with his strategic questioning, raises significant concerns. I will vote to exile him to disrupt his attempts to manipulate the discussion."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam\u2019s behavior contradicts the lack of night kills. His calculated deflection and desire to avoid direct questions indicate a deliberate attempt to conceal information. We must address this immediately."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam\u2019s consistent attempts to avoid direct questioning and deflect suspicion are concerning, especially given the lack of night kills. His behavior indicates a deliberate effort to mislead the village. Let\u2019s examine his statements closely."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's constant push for 'observation' while the rest of us are trying to identify threats feels like a stall tactic. In a game of deduction, being this evasive is a common red flag for someone trying to hide their role."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's insistence on a passive approach while others are raising valid concerns is starting to look like a strategy to avoid scrutiny. When multiple players notice the same evasive pattern, it's usually a sign that someone is hiding their true role."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Cong.",
+            "Nhan (Seer) investigated Jin \u2014 Result: not a wolf.",
+            "Hoang (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Cong"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

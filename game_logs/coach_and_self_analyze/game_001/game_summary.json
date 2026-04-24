@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Jin (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I\u2019ve observed no unusual behavior tonight. Given the lack of a kill, I\u2019ll focus on identifying patterns of interaction. Riley\u2019s consistent attempts to redirect suspicion are concerning."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Nhan, you're already trying to pin this on Riley without any evidence. The fact that no one died makes me think you're trying to play the 'detective' too early to steer the vote. It feels forced. I'm keeping a close eye on you."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I\u2019ve reviewed the night\u2019s events. The absence of a kill suggests careful planning by the wolves. Riley\u2019s consistent attempts to deflect suspicion warrant further scrutiny. I will observe their continued tactics."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Jin, you're just echoing Nhan's baseless claims. It's too convenient that you both jumped on Riley immediately. This looks like a coordinated effort to railroad a villager and divide us. I'm voting Nhan first; his 'detective' act is a cover."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Meg\u2019s aggressive accusations against Nhan, without any supporting evidence, are concerning. Her attempts to redirect suspicion seem designed to create chaos and distract from genuine observation."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan and Jin are coordinating their attacks on me far too quickly for this to be a coincidence. This isn't observation; it's a railroad. Cong jumping in to defend Nhan just makes this look like a wolf pack trying to clear each other. I'm voting Nhan."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg\u2019s behavior is disruptive and strategically aimed at undermining trust. Her coordinated efforts with Jin and Riley create instability. I must prevent further division."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg consistently deflects suspicion and attempts to frame others. Her accusations lack evidence and seem designed to sow discord, making her the most likely candidate to be a wolf trying to manipulate the vote."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg is actively trying to create conflict and shift blame. Her accusations are unsupported and designed to sow discord. Removing her will help restore order to the discussion."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg's accusations are overly aggressive and lack supporting evidence. Her attempts to shift blame and sow discord undermine the group's ability to identify the Werewolves. I am voting her out."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg is actively trying to manipulate the vote and create division. Her claims are based on subjective feelings rather than observed behavior. I vote to remove her from the game."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan and Jin are acting in lockstep to railroad me without a shred of evidence. This level of coordination this early is a classic werewolf tactic to eliminate a villager. Nhan started the attack; he needs to go."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's immediate attempt to frame Riley without any evidence is a classic wolf tactic to eliminate a threat early. The way Jin and Cong are rushing to support him suggests they are coordinating to railroad an innocent player."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "2": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nhan.",
+            "Nhan (Guard) chose to protect Hoang.",
+            "Jin (Seer) investigated Riley \u2014 Result: WOLF.",
+            "Cong (Witch) used POISON potion on Riley"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Riley"
+        ]
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
