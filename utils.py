@@ -13,12 +13,12 @@ def get_llm(model_name: str, api_key=os.environ["DEEPINFRA_API_KEY"], **kwargs) 
     provider = MODEL_PROVIDERS.get(model_name)
     if not provider:
         raise ValueError(f"Model '{model_name}' is not supported. Choose from: {list(MODEL_PROVIDERS.keys())}")
-    if model_name.startswith("deepseek"):
-        return ChatOpenAI(
-            model=model_name,
-            api_key=os.getenv("DEEPSEEK_API_KEY"),
-            base_url="https://api.deepseek.com",
-        )
+    # if model_name.startswith("deepseek"):
+    #     return ChatOpenAI(
+    #         model=model_name,
+    #         api_key=os.getenv("DEEPSEEK_API_KEY"),
+    #         base_url="https://api.deepseek.com",
+    #     )
     if api_key == os.environ["DEEPINFRA_API_KEY"]:
         return ChatOpenAI(
             model=model_name,

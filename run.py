@@ -11,7 +11,7 @@ Resume from where you left off:
 
 Override number of games:
     python run.py --scenario baseline --mode override --games 10
-    
+
 /opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_and_self_analyze --mode append --games 3
 
 File layout produced
@@ -171,7 +171,7 @@ def assign_roles_round_robin() -> dict[str, Role]:
       ... and so on
     """
     global VILLAGER_ROLE_POOL
-    random.shuffle(VILLAGER_ROLE_POOL)
+    # random.shuffle(VILLAGER_ROLE_POOL)
     VILLAGER_ROLE_POOL = VILLAGER_ROLE_POOL[1:] + VILLAGER_ROLE_POOL[:1]
     return dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
 

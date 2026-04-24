@@ -274,22 +274,24 @@ class BasePlayer(ABC):
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=2000)
-            
+
             extracted_updates = resp.get("updates")
             extracted_cot = resp.get("chain_of_thought")
 
             # 1. Safely check that 'updates' is actually a dictionary before we accept it
             if isinstance(extracted_updates, dict) and extracted_cot is not None:
                 updates = extracted_updates
-                break # We got a valid structure, exit the loop!
+                break  # We got a valid structure, exit the loop!
             else:
-                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         # 2. Iterate safely through the updates
         for player, data in updates.items():
             if player in self._suspicion:
                 current = self._suspicion[player]
-                
+
                 # 3. Guard against nested structural hallucinations (e.g. "PlayerA": 0.8 instead of dict)
                 if not isinstance(data, dict):
                     print(f"Warning: Expected dict for {player}'s updates, got {type(data)}. Skipping update.")
@@ -345,16 +347,18 @@ class BasePlayer(ABC):
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=2000)
-            
+
             extracted_updates = resp.get("updates")
             extracted_cot = resp.get("chain_of_thought")
 
             # 1. Safely check that 'updates' is actually a dictionary before we accept it
             if isinstance(extracted_updates, dict) and extracted_cot is not None:
                 updates = extracted_updates
-                break # We got a valid structure, exit the loop!
+                break  # We got a valid structure, exit the loop!
             else:
-                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         # Loop through every player the AI returned
         for player, data in updates.items():
@@ -405,16 +409,18 @@ class BasePlayer(ABC):
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=2000)
-            
+
             extracted_updates = resp.get("updates")
             extracted_cot = resp.get("chain_of_thought")
 
             # 1. Safely check that 'updates' is actually a dictionary before we accept it
             if isinstance(extracted_updates, dict) and extracted_cot is not None:
                 updates = extracted_updates
-                break # We got a valid structure, exit the loop!
+                break  # We got a valid structure, exit the loop!
             else:
-                print(f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} ({self._role.value}) failed to generate valid suspicion JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         for player, data in updates.items():
             if player in self._suspicion:
@@ -485,26 +491,30 @@ class BasePlayer(ABC):
             round_num=round_num,
             formatted_current_debate=formatted_current_debate,
         )
-        
+
         bid = 5
         reason = ""
         resp = {}
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=100)
-            
+
             # 1. Safely check that BOTH keys exist to prevent KeyErrors
             if "bid" in resp and "reason" in resp:
                 try:
                     # 2. Try to cast the bid to an integer and clamp it between 0 and 10
                     bid = max(0, min(10, int(resp["bid"])))
                     reason = str(resp["reason"]).strip()
-                    break # Success! Exit the loop.
+                    break  # Success! Exit the loop.
                 except (ValueError, TypeError):
                     # Catch cases where the LLM outputs {"bid": "I want to bid 8"}
-                    print(f"Warning: {self._name} ({self._role.value}) failed to format bid as integer (Attempt {attempt + 1}/{MAX_RETRIES})")
+                    print(
+                        f"Warning: {self._name} ({self._role.value}) failed to format bid as integer (Attempt {attempt + 1}/{MAX_RETRIES})"
+                    )
             else:
-                print(f"Warning: {self._name} ({self._role.value}) missing 'bid' or 'reason' keys (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} ({self._role.value}) missing 'bid' or 'reason' keys (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         # Fallback handling if all 3 attempts fail
         if reason == "":
@@ -549,17 +559,19 @@ class BasePlayer(ABC):
 
         target = "None"
         reasoning = "No public reason provided."
-        
+
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=300)
-            
+
             # Safely check if BOTH required keys are in the dictionary
-            if 'vote' in resp and 'reasoning' in resp:
-                target = resp['vote']
-                reasoning = resp['reasoning']
-                break # We got what we need, exit the loop!
+            if "vote" in resp and "reasoning" in resp:
+                target = resp["vote"]
+                reasoning = resp["reasoning"]
+                break  # We got what we need, exit the loop!
             else:
-                print(f"Warning: {self._name} failed to generate a valid vote JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} failed to generate a valid vote JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         # Handle explicit abstention, but keep the LLM's reasoning if they provided it!
         if target == "None" or target is None or target == "":
@@ -614,9 +626,9 @@ class BasePlayer(ABC):
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=400)
             message = resp.get("statement", "").strip()
-            
+
             if message:
-                break # We got a valid message, exit the loop!
+                break  # We got a valid message, exit the loop!
             else:
                 print(f"Warning: {self._name} failed to generate a statement (Attempt {attempt + 1}/{MAX_RETRIES})")
 
@@ -660,11 +672,11 @@ class BasePlayer(ABC):
         result: dict = {}
         # 1. Clean up the response to extract just the JSON block
         clean_resp = resp.strip()
-        
+
         # This regex looks for everything from the first '{' to the last '}'
         # re.DOTALL allows it to match across multiple lines
-        match = re.search(r'(\{.*\})', clean_resp, re.DOTALL)
-        
+        match = re.search(r"(\{.*\})", clean_resp, re.DOTALL)
+
         if match:
             clean_resp = match.group(1)
 
@@ -782,16 +794,23 @@ No extra text, no markdown, no code fences.
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=1000)
-            
+
             # Safely extract and clean the strategy string
-            extracted_strategy = resp.get("strategy", "").strip()
+            extracted_strategy = resp.get("strategy", "")
+
+            if isinstance(extracted_strategy, str):
+                extracted_strategy = resp.get("strategy", "").strip()
+            elif isinstance(extracted_strategy, list):
+                extracted_strategy = "\n".join(extracted_strategy)
 
             # Check if we actually got meaningful text back (not just empty strings)
             if extracted_strategy:
                 new_strategy = extracted_strategy
-                break # We successfully got the strategy, exit the loop!
+                break  # We successfully got the strategy, exit the loop!
             else:
-                print(f"Warning: {self._name} failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         return new_strategy
 
@@ -830,16 +849,18 @@ No extra text, no markdown, no code fences.
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=1000)
-            
+
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "").strip()
 
             # Check if we actually got meaningful text back (not just empty strings)
             if extracted_strategy:
                 new_strategy = extracted_strategy
-                break # We successfully got the strategy, exit the loop!
+                break  # We successfully got the strategy, exit the loop!
             else:
-                print(f"Warning: {self._name} failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+                print(
+                    f"Warning: {self._name} failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})"
+                )
 
         return new_strategy
 
