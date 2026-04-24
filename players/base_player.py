@@ -318,14 +318,14 @@ class BasePlayer(ABC):
             formatted_current_debate = "No statements yet in this round."
 
         early_round_warning = ""
-        if round_num == 1:
-            early_round_warning = (
-                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
-                "There was NO 'yesterday' and NO previous discussion. "
-                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
-                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
-                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
-            )
+        # if round_num == 1:
+        #     early_round_warning = (
+        #         "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+        #         "There was NO 'yesterday' and NO previous discussion. "
+        #         "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+        #         "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+        #         "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+        #     )
 
         if self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
@@ -592,15 +592,15 @@ class BasePlayer(ABC):
             formatted_current_debate = "You speak first."
 
         early_round_warning = ""
-        if round_num == 1:
-            early_round_warning = (
-                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
-                "There was NO 'yesterday' and NO previous discussion. "
-                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
-                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
-                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
-                "If you are the first to speak on Day 1 and the dialogue history is empty, you have no prior daytime actions or conversations to observe. In this scenario, you must reason and debate intelligently based on this lack of information."
-            )
+        # if round_num == 1:
+        #     early_round_warning = (
+        #         "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+        #         "There was NO 'yesterday' and NO previous discussion. "
+        #         "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+        #         "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+        #         "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+        #         "If you are the first to speak on Day 1 and the dialogue history is empty, you have no prior daytime actions or conversations to observe. In this scenario, you must reason and debate intelligently based on this lack of information."
+        #     )
 
         alive_players_str = ", ".join(alive_players)
 

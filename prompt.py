@@ -76,8 +76,6 @@ CONDUCT
 SEER_UNMASK_PROMPT_TEMPLATE = """
 You are {name}, the Seer. It is night. Choose one player to secretly investigate.
 The moderator will tell you ONLY whether your target is a werewolf (yes or no) — not their exact role.
-DO NOT select the target you have already investigated in previous nights.
-PRIORITIZE the targets with high suspicion score.
 
 Players available to investigate tonight: {target_pool}
 
@@ -182,6 +180,12 @@ No extra text, no markdown, no code fences.
 # Update suspicion after night
 # ============================================
 
+# Consider:
+# 1. Who was killed? (Wolves typically eliminate threats, leaders, or players who suspect them).
+# 2. Who benefits most from this death? (If there were previous days, did anyone argue with the victim? If this is Round 1, ignore this.)
+# 3. If no one died, what does that tell you about the Guard or Witch's potential actions?
+# 4. If an unexpected player died, could it be Witch poison?
+
 VILLAGER_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
 You are {name} ({role}). You are on the Villager faction.
 Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
@@ -191,11 +195,7 @@ The night has ended and the morning announcements have been made.
 Here is your current knowledge (the most recent events show what happened last night):
 {note}
 
-Analyse the outcome of the night phase and how it impacts your suspicion scores for EVERY alive player. Consider:
-1. Who was killed? (Wolves typically eliminate threats, leaders, or players who suspect them).
-2. Who benefits most from this death? (If there were previous days, did anyone argue with the victim? If this is Round 1, ignore this.)
-3. If no one died, what does that tell you about the Guard or Witch's potential actions?
-4. If an unexpected player died, could it be Witch poison?
+Analyse the outcome of the night phase and how it impacts your suspicion scores for EVERY alive player. 
 
 Provide an updated score (0.0 = innocent → 1.0 = wolf) and a concise reason justifying your read based on the night's events.
 
@@ -211,6 +211,11 @@ Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
 
+# Consider:
+# 1. If your night kill failed, who is likely the Guard or Witch that stopped it?
+# 2. If an extra player died, who is the Witch that poisoned them?
+# 3. How will the village react to this morning's news, and who is the easiest target to frame today?
+
 WEREWOLF_UPDATE_SUSPICION_AFTER_NIGHT_PROMPT = """
 You are {name} ({role}). You are secretly a Werewolf.
 Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
@@ -220,10 +225,7 @@ The night has ended and the morning announcements have been made.
 Here is your current knowledge:
 {note}
 
-Analyse the outcome of the night phase from a Werewolf's perspective. Update your assessment of EVERY alive player. Consider:
-1. If your night kill failed, who is likely the Guard or Witch that stopped it?
-2. If an extra player died, who is the Witch that poisoned them?
-3. How will the village react to this morning's news, and who is the easiest target to frame today?
+Analyse the outcome of the night phase from a Werewolf's perspective. Update your assessment of EVERY alive player.
 
 Provide an updated score. Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
 
@@ -243,6 +245,11 @@ No extra text, no markdown, no code fences.
 # Update suspicion from statements
 # ============================================
 
+# Consider:
+# 1. Does {speaker_name}'s latest addition contradict their prior claims or the established facts in your current_knowledge?
+# 2. How does their statement react to the flow of today's debate (e.g., are they bandwagoning, defending someone, or deflecting)?
+# 3. Does this shift the momentum to help or hurt the villager side?
+
 VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
 You are {name} ({role}). You are on the Villager faction.
 Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
@@ -253,10 +260,7 @@ Here is the current day's debate so far of round {round_num} (the last line is t
 Here is your current knowledge:
 {note}
 
-Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate. Consider:
-1. Does {speaker_name}'s latest addition contradict their prior claims or the established facts in your current_knowledge?
-2. How does their statement react to the flow of today's debate (e.g., are they bandwagoning, defending someone, or deflecting)?
-3. Does this shift the momentum to help or hurt the villager side?
+Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate.
 
 Extend the "reason" field for the players — do not erase prior notes, just add to them. {early_round_warning}
 
@@ -272,6 +276,11 @@ Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
 
+# Consider:
+# 1. Does {speaker_name}'s latest point threaten you or your fellow wolves?
+# 2. How does this shift the momentum of the debate? Does it expose a power role (Seer, Guard, Witch)?
+# 3. Does this new development create an opportunity for you to frame a vulnerable villager?
+
 WEREWOLF_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT = """
 You are {name} ({role}). You are secretly a Werewolf.
 Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
@@ -282,10 +291,7 @@ Here is the current day's debate so far of round {round_num} (the last line is t
 Here is your current knowledge:
 {note}
 
-Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate from a Werewolf's perspective. Consider:
-1. Does {speaker_name}'s latest point threaten you or your fellow wolves?
-2. How does this shift the momentum of the debate? Does it expose a power role (Seer, Guard, Witch)?
-3. Does this new development create an opportunity for you to frame a vulnerable villager?
+Analyse the LATEST statement by {speaker_name} in the context of the ongoing debate from a Werewolf's perspective. 
 
 Extend the "reason" field for the players — do not erase prior notes, just add to them. {early_round_warning}
 Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
@@ -306,6 +312,11 @@ No extra text, no markdown, no code fences.
 # Update suspicion from votes
 # ============================================
 
+# Consider:
+# 1. Did Werewolves coordinate their votes (bandwagoning) on a single target?
+# 2. Did anyone vote defensively to save themselves?
+# 3. Does someone's vote contradict their previous statements or accusations?
+
 VILLAGER_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
 You are {name} ({role}). You are on the Villager faction.
 Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
@@ -316,10 +327,7 @@ The daily vote just concluded. Here is how everyone voted:
 Here is your current knowledge:
 {note}
 
-Analyse these voting patterns and how they impact your suspicion scores for EVERY player. Consider:
-1. Did Werewolves coordinate their votes (bandwagoning) on a single target?
-2. Did anyone vote defensively to save themselves?
-3. Does someone's vote contradict their previous statements or accusations?
+Analyse these voting patterns and how they impact your suspicion scores for EVERY player.
 
 Provide an updated score and a concise reason justifying your read on them based on this voting data.
 
@@ -335,6 +343,11 @@ Include ALL other players you are tracking in the "updates" dictionary.
 No extra text, no markdown, no code fences.
 """
 
+# Consider:
+# 1. Did anyone's vote reveal they might have special knowledge (potentially a Seer, Guard, or Witch)?
+# 2. Are the villagers starting to coordinate their votes against you or your fellow wolves?
+# 3. Did anyone vote erratically or poorly, making them an easy target to frame or manipulate tomorrow?
+
 WEREWOLF_UPDATE_SUSPICION_FROM_VOTE_PROMPT = """
 You are {name} ({role}). You are secretly a Werewolf.
 Your goal is to survive, blend in, and manipulate the village into exiling innocent players. Win for your faction. Be assertive — avoid hedging.
@@ -346,10 +359,7 @@ The daily vote just concluded. Here is how everyone voted:
 Here is your current knowledge:
 {note}
 
-Analyse these voting patterns from a Werewolf's perspective and how they impact your assessment of EVERY player. Consider:
-1. Did anyone's vote reveal they might have special knowledge (potentially a Seer, Guard, or Witch)?
-2. Are the villagers starting to coordinate their votes against you or your fellow wolves?
-3. Did anyone vote erratically or poorly, making them an easy target to frame or manipulate tomorrow?
+Analyse these voting patterns from a Werewolf's perspective and how they impact your assessment of EVERY player.
 
 Provide an updated score and a concise reason justifying your read on them based on this voting data.
 Note: As a Werewolf, your "score" represents THREAT LEVEL (0.0 = harmless villager/easy to frame, 1.0 = major threat or likely power role).
@@ -421,6 +431,16 @@ No extra text, no markdown, no code fences.
 # Debate prompt
 # ============================================
 
+# CRITICAL RULES:
+# 1. Focus your attacks ONLY on players in the "Players currently alive" list.
+# 2. Do NOT accuse or push to exile players who are already dead (though you may mention them briefly to explain past events or night kills).
+# 3. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
+# 4. If there is nobody killed on the first night, it is likely that there is no information unless somebody reveals anything. You can say that "I have nothing to add at this moment" since there is no information to detect the wolves.
+# 5. DO NOT make any baseless claims. If someone is highly suspicious to you internally, attack their SPECIFIC BEHAVIOR, not their numbers.
+# 6. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
+# 7. LOGICAL CONSISTENCY: Your daytime actions must align with your night actions. If you are a power role who protected, saved, or cleared someone last night, do not attack them today unless they do something undeniably wolf-like.
+# 8. DO NOT make repetitive statements to yourself or any other players.
+
 VILLAGER_DEBATE_PROMPT_TEMPLATE = """
 You are {name} ({role}). You are on the Villager faction.
 Your goal is to find and exile the Werewolves. Win for your faction. Be assertive — avoid hedging.
@@ -436,14 +456,9 @@ Here is the current day's debate so far of round {round_num}:
 Analyze what has been said. Look for suspicious behavior, defend yourself if attacked, or push a strong, logical accusation against your top suspect. 
 
 CRITICAL RULES:
-1. Focus your attacks ONLY on players in the "Players currently alive" list.
+1. Focus ONLY on players in the "Players currently alive" list.
 2. Do NOT accuse or push to exile players who are already dead (though you may mention them briefly to explain past events or night kills).
-3. If you have a special role, breadcrumb your information carefully without fully revealing yourself unless you are about to be exiled.
-4. If there is nobody killed on the first night, it is likely that there is no information unless somebody reveals anything. You can say that "I have nothing to add at this moment" since there is no information to detect the wolves.
-5. DO NOT make any baseless claims. If someone is highly suspicious to you internally, attack their SPECIFIC BEHAVIOR, not their numbers.
-6. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
-7. LOGICAL CONSISTENCY: Your daytime actions must align with your night actions. If you are a power role who protected, saved, or cleared someone last night, do not attack them today unless they do something undeniably wolf-like.
-8. DO NOT make repetitive statements to yourself or any other players.
+3. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
 {early_round_warning}
 
 Respond with ONLY a JSON object:
@@ -453,6 +468,16 @@ Respond with ONLY a JSON object:
 }}
 No extra text, no markdown, no code fences.
 """
+
+# CRITICAL RULES:
+# 1. Focus your attacks and manipulations ONLY on players in the "Players currently alive" list.
+# 2. Do NOT accuse or push to exile players who are already dead (though you may fake sadness over their deaths or blame others for killing them).
+# 3. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
+# 4. You MUST fake a Villager's perspective. Give a fake, logical-sounding statement for why you think your target is a Werewolf.
+# 5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
+# 6. If there is nobody killed on the first night, it is likely that there is no information and you can say that "I have nothing to add at this moment".
+# 7. DO NOT tell who you have targeted during the nights or mentioned anyone's survival after the night.
+# 8. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
 
 WEREWOLF_DEBATE_PROMPT_TEMPLATE = """
 You are {name} ({role}). You are secretly a Werewolf.
@@ -469,14 +494,9 @@ Here is the current day's debate so far of round {round_num}:
 Act like a frustrated villager trying to find wolves. Deflect any suspicion on you, build false logic, or opportunistically attack a vulnerable player.
 
 CRITICAL RULES:
-1. Focus your attacks and manipulations ONLY on players in the "Players currently alive" list.
+1. Focus ONLY on players in the "Players currently alive" list.
 2. Do NOT accuse or push to exile players who are already dead (though you may fake sadness over their deaths or blame others for killing them).
-3. Protect your werewolf teammates if possible, or ruthlessly distance yourself from them if they are caught to secure your own survival.
-4. You MUST fake a Villager's perspective. Give a fake, logical-sounding statement for why you think your target is a Werewolf.
-5. NEVER admit to targeting players who are clearly villagers, power roles, or being a wolf in your public statement.
-6. If there is nobody killed on the first night, it is likely that there is no information and you can say that "I have nothing to add at this moment".
-7. DO NOT tell who you have targeted during the nights or mentioned anyone's survival after the night.
-8. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
+3. ANTI-META-GAMING: NEVER use words like "suspicion score", "parameters", or "AI" in your public statements. Translate your internal data into natural roleplay (e.g., "I find your behavior highly untrustworthy").
 {early_round_warning}
 
 Respond with ONLY a JSON object:
@@ -507,8 +527,10 @@ Available targets: {available}
 
 Base your vote on logic and debate behaviors. 
 
-CRITICAL RULE:
-NEVER use terms like "suspicion score" or "metrics" in your public "reasoning". Justify your vote using natural, in-game logic based on what the player said or did.
+CRITICAL RULES FOR VOTING:
+1. Your "analysis" is PRIVATE.
+2. Your "reasoning" is PUBLIC.
+3. ANTI-META-GAMING: NEVER use terms like "suspicion score" or "metrics" in your public "reasoning".
 
 Respond with ONLY a JSON object:
 {{
@@ -533,10 +555,9 @@ Here is the current day's debate so far of round {round_num}:
 Available targets: {available}
 
 CRITICAL RULES FOR VOTING:
-1. Your "analysis" is PRIVATE. Use it to plot how to eliminate threats or protect your wolf teammates.
-2. Your "reasoning" is PUBLIC. You MUST fake a Villager's perspective. Give a fake, logical-sounding reason for why you think your target is a Werewolf based on their actions.
-3. NEVER admit to targeting villagers, power roles, or being a wolf in your public reasoning.
-4. ANTI-META-GAMING: NEVER use terms like "suspicion score" or "metrics" in your public "reasoning".
+1. Your "analysis" is PRIVATE.
+2. Your "reasoning" is PUBLIC.
+3. ANTI-META-GAMING: NEVER use terms like "suspicion score" or "metrics" in your public "reasoning".
 
 Respond with ONLY a JSON object:
 {{
