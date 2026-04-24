@@ -22,11 +22,13 @@ from constants import (
     WITCH_LOG_FILENAME,
     SUSPICION_LOG_FILENAME,
     PLAYER_NOTE_FILENAME,
-    BID_LOG_FILENAME
+    BID_LOG_FILENAME,
+    ROLES_FILENAME
 )
 from pathlib import Path
 from utils import write_to_file
 import copy
+import pandas as pd
 
 from langgraph.graph import StateGraph, END
 
@@ -685,12 +687,14 @@ class GameState:
         role_log = gs._game_summary_log.setdefault("roles", {})
         for name, role in gs._roles.items():
             role_log[name] = role.value
+            
+        # Store roles as json
+        json_string = json.dumps(role_log, indent=4)
+        write_to_file(game_dir / ROLES_FILENAME, json_string)
 
         # Store game_summary as json
         json_string = json.dumps(gs._game_summary_log, indent=4)
-        write_to_file(
-            game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string
-        )
+        write_to_file(game_dir / GAME_SUMMARY_FILENAME.replace(".md", ".json"), json_string)
 
         # Store game_summary as markdown
         summary_lines = []
@@ -776,65 +780,71 @@ class GameState:
         write_to_file(game_dir / GAME_SUMMARY_FILENAME, formatted_summary_md)
 
         # --- B. Format Secret Action Logs ---
+        
+        write_to_file(WOLF_DEBATE_LOG_FILENAME, pd.DataFrame(gs._wolf_debate_log, columns=["round_number", "speaker_name", "statement", "target", "analysis"]))
+        write_to_file(WOLF_TARGET_LOG_FILENAME, pd.DataFrame(gs._wolf_target_log, columns=["round_number", "target"]))
+        write_to_file(GUARD_LOG_FILENAME      , pd.DataFrame(gs._guard_log      , columns=["round_number", "target", "analysis"]))
+        write_to_file(SEER_LOG_FILENAME       , pd.DataFrame(gs._seer_log       , columns=["round_number", "target", "is_wolf", "analysis"]))
+        write_to_file(WITCH_LOG_FILENAME      , pd.DataFrame(gs._witch_log      , columns=["round_number", "saved", "poisoned", "analysis"]))
 
-        # Wolf Debate Log
-        wolf_lines = ["# Wolf Debate and Eliminations"]
-        for entry in gs._wolf_debate_log:
-            round_number, speaker_name, statement, target, analysis = entry
-            wolf_lines.append(f"### Round {round_number}")
-            wolf_lines.append(f"**Speaker:** {speaker_name}")
-            wolf_lines.append(f"**Statement:** {statement}")
-            wolf_lines.append(f"**Target Proposal:** {target}")
-            wolf_lines.append(f"**Private Analysis:** {analysis}")
-            wolf_lines.append("---")
-        write_to_file(
-            player_night_action_log_dir / WOLF_DEBATE_LOG_FILENAME,
-            "\n".join(wolf_lines) if len(wolf_lines) > 1 else "No wolf debate recorded.",
-        )
+        # # Wolf Debate Log
+        # wolf_lines = ["# Wolf Debate and Eliminations"]
+        # for entry in gs._wolf_debate_log:
+        #     round_number, speaker_name, statement, target, analysis = entry
+        #     wolf_lines.append(f"### Round {round_number}")
+        #     wolf_lines.append(f"**Speaker:** {speaker_name}")
+        #     wolf_lines.append(f"**Statement:** {statement}")
+        #     wolf_lines.append(f"**Target Proposal:** {target}")
+        #     wolf_lines.append(f"**Private Analysis:** {analysis}")
+        #     wolf_lines.append("---")
+        # write_to_file(
+        #     player_night_action_log_dir / WOLF_DEBATE_LOG_FILENAME,
+        #     "\n".join(wolf_lines) if len(wolf_lines) > 1 else "No wolf debate recorded.",
+        # )
 
-        # Wolf Target Log
-        wolf_target_lines = ["# Wolf Targets"]
-        for entry in gs._wolf_target_log:
-            round_number, target = entry
-            wolf_target_lines.append(f"**Round {round_number}:** Target **{target}**\n---")
-        write_to_file(
-            player_night_action_log_dir / WOLF_TARGET_LOG_FILENAME,
-            "\n".join(wolf_target_lines) if len(wolf_target_lines) > 1 else "No wolf target log.",
-        )
+        # # Wolf Target Log
+        # wolf_target_lines = ["# Wolf Targets"]
+        # for entry in gs._wolf_target_log:
+        #     round_number, target = entry
+        #     wolf_target_lines.append(f"**Round {round_number}:** Target **{target}**\n---")
+        # write_to_file(
+        #     player_night_action_log_dir / WOLF_TARGET_LOG_FILENAME,
+        #     "\n".join(wolf_target_lines) if len(wolf_target_lines) > 1 else "No wolf target log.",
+        # )
 
-        # Guard Log
-        guard_lines = ["# Guard Actions"]
-        for entry in gs._guard_log:
-            round_number, target, analysis = entry
-            guard_lines.append(f"**Round {round_number}:** Protected **{target}**\n> Analysis: {analysis}\n---")
-        write_to_file(
-            player_night_action_log_dir / GUARD_LOG_FILENAME,
-            "\n".join(guard_lines) if len(guard_lines) > 1 else "No guard actions.",
-        )
+        # # Guard Log
+        # guard_lines = ["# Guard Actions"]
+        # for entry in gs._guard_log:
+        #     round_number, target, analysis = entry
+        #     guard_lines.append(f"**Round {round_number}:** Protected **{target}**\n> Analysis: {analysis}\n---")
+        # write_to_file(
+        #     player_night_action_log_dir / GUARD_LOG_FILENAME,
+        #     "\n".join(guard_lines) if len(guard_lines) > 1 else "No guard actions.",
+        # )
 
-        # Seer Log
-        seer_lines = ["# Seer Actions"]
-        for entry in gs._seer_log:
-            round_number, target, is_wolf, analysis = entry
-            seer_lines.append(
-                f"**Round {round_number}:** Investigated **{target}** (Result: {'WOLF' if is_wolf else 'Villager'})\n> Analysis: {analysis}\n---"
-            )
-        write_to_file(
-            player_night_action_log_dir / SEER_LOG_FILENAME,
-            "\n".join(seer_lines) if len(seer_lines) > 1 else "No seer actions.",
-        )
+        # # Seer Log
+        # seer_lines = ["# Seer Actions"]
+        # for entry in gs._seer_log:
+        #     round_number, target, is_wolf, analysis = entry
+        #     seer_lines.append(
+        #         f"**Round {round_number}:** Investigated **{target}** (Result: {'WOLF' if is_wolf else 'Villager'})\n> Analysis: {analysis}\n---"
+        #     )
+        # write_to_file(
+        #     player_night_action_log_dir / SEER_LOG_FILENAME,
+        #     "\n".join(seer_lines) if len(seer_lines) > 1 else "No seer actions.",
+        # )
 
-        # Witch Log
-        witch_lines = ["# Witch Actions"]
-        for entry in gs._witch_log:
-            round_number, saved, poisoned, analysis = entry
-            witch_lines.append(
-                f"**Round {round_number}:** Saved **{saved}** | Poisoned **{poisoned}**\n> Analysis: {analysis}\n---"
-            )
-        write_to_file(
-            player_night_action_log_dir / WITCH_LOG_FILENAME,
-            "\n".join(witch_lines) if len(witch_lines) > 1 else "No witch actions.",
-        )
+        # # Witch Log
+        # witch_lines = ["# Witch Actions"]
+        # for entry in gs._witch_log:
+        #     round_number, saved, poisoned, analysis = entry
+        #     witch_lines.append(
+        #         f"**Round {round_number}:** Saved **{saved}** | Poisoned **{poisoned}**\n> Analysis: {analysis}\n---"
+        #     )
+        # write_to_file(
+        #     player_night_action_log_dir / WITCH_LOG_FILENAME,
+        #     "\n".join(witch_lines) if len(witch_lines) > 1 else "No witch actions.",
+        # )
 
         # --- C. Format Player Notes ---
 
