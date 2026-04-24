@@ -1,0 +1,344 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "Initial observation: everyone is neutral. I need to establish a baseline and begin probing for inconsistencies without prematurely accusing."
+            },
+            {
+                "Cong": 8,
+                "reason": "Initial scores are equal. Protecting Nam is the only logical action to prevent a premature loss. Delaying action risks a wolf kill."
+            },
+            {
+                "Nam": 8,
+                "reason": "All five villagers were saved. This coordinated saving strongly suggests a hidden strategy. I need to immediately question the pattern and understand why they were targeted together."
+            },
+            {
+                "Jin": 8,
+                "reason": "All players remain at 0.50 suspicion. Immediate discussion is required to establish a line of inquiry and prevent wasted debate time."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Initial investigation completed. Maintaining a high-urgency bid is critical to quickly establish a clear direction for the remaining discussion and to proactively defend against potential misinterpretations of my findings."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nhan survived the night, likely due to the Guard or Witch. I need to shape the narrative early, framing Nhan's survival as suspicious or guiding the village toward a different target to avoid the 'wolf pack' signature."
+            },
+            {
+                "Meg": 4,
+                "reason": "Nhan survived, suggesting a power role (Guard/Witch). I need to participate to steer the conversation toward identifying power roles without appearing too aggressive too early."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Initial observation: everyone is stating nothing. Lack of engagement suggests a deliberate attempt to avoid scrutiny. Need to probe for reasons behind this passivity."
+            },
+            {
+                "Cong": 8,
+                "reason": "Initial scores are evenly distributed. Protecting Nam provided a crucial, immediate safeguard against potential wolf activity. Delaying action risks losing a valuable protector."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan, Cong, Hoang, Riley, and Meg all have suspicion scores of 0.60. They were all saved by the Witch. This coordinated saving strongly suggests a group effort to protect each other, likely indicating Werewolves. Immediate accusation is critical."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Initial confirmation of Cong's innocence necessitates immediate follow-up investigation. Maintaining a consistent investigation strategy is crucial to rapidly identifying the Werewolves."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin's structured approach is a perfect opening. I will frame this 'calculated' logic as a wolf script trying to steer the village, establishing myself as a sharp observer early on."
+            },
+            {
+                "Meg": 5,
+                "reason": "Jin is trying to lead the narrative. I need to contribute an 'analytical' observation early to blend in as a thoughtful villager and subtly steer suspicion away from the wolves."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's saving of Nhan and Cong is a coordinated effort to control the narrative and establish an early alliance. It warrants immediate scrutiny and demands justification."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam's saving of Nhan and Cong, combined with their lack of reaction, is highly suspicious. This coordinated defensive behavior warrants immediate investigation and questioning."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam\u2019s saving of Nhan and Cong, coupled with their avoidance of discussion, strongly suggests coordinated deception. Immediate questioning is necessary to uncover their motivations."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong's confirmed innocence necessitates immediate action. Maintaining this information and preventing it from being dismissed is paramount. Delaying reveals a vulnerability to manipulation."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam's claim is chaotic and suspicious. I need to capitalize on this by framing Nam as a wolf attempting a clumsy 'power' claim to manipulate the village and protect a partner."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is aggressively claiming a power role (Witch) and 'saving' players. I need to cast doubt on his claim early to prevent him from controlling the narrative and protecting villagers."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Cong's reaction to being saved is suspicious and lacks a clear explanation. His insistence on observation without specific reasoning raises concerns. Immediate questioning is necessary."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan and Cong's consistent avoidance and deliberate silence after my save strongly suggests coordinated behavior. Immediate accusation is necessary to disrupt their narrative and expose their connection."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nhan\u2019s evasiveness and Cong\u2019s vague statement, combined with their mutual avoidance of discussion, strongly suggest coordinated behavior. Further investigation is required to determine if they are concealing information or engaging in wolf strategy."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong's confirmed innocence is vital. Mirroring Nam's strategy of observation is key to identifying coordinated deception. Prioritize investigating Cong's actions during the next night to confirm stability."
+            },
+            {
+                "Riley": 7,
+                "reason": "Nam's power claim is a massive threat. I need to pivot the conversation to frame Nam as a wolf lying about being a power role to gain trust, while keeping Meg safe."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is claiming power role (Witch) and Cong is already attacking Nhan. I need to enter the conversation to steer suspicion toward Nam's 'saves' to discredit a potential power role or frame him as a fake."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s repeated mirroring of Cong and his vague justification for suspicion raise immediate concern. He\u2019s actively constructing a narrative with Cong. I need to directly challenge this coordinated approach."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam's repeated statement about Nhan's deliberate inaction, coupled with his own saving, demonstrates a coordinated strategy. This requires immediate investigation to determine if they are protecting each other or sharing information."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam and Cong are reinforcing each other\u2019s suspicions of Nhan, creating a coordinated narrative. This suggests a deliberate attempt to deflect attention and cast doubt. I need to disrupt this pattern."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Mirroring Nam's observation of Nhan's deliberate attempt to appear unconcerned. This tactic is indicative of potential deception. Immediate action is required to expose this pattern."
+            },
+            {
+                "Riley": 9,
+                "reason": "Nam is blatantly mirroring Cong and making an impossible claim. I must pounce on this 'calculated failure' immediately to frame Nam as a wolf attempting a clumsy power claim, establishing myself as a sharp observer."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is acting erratically, repeating Cong's text. I need to enter the conversation to analyze this behavior, potentially framing Nam as a confused wolf while redirecting focus toward Nhan."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley\u2019s accusation of Nam is immediately suspect. Repeating Cong's statement and prioritizing a 'save' over establishing a narrative is highly suspicious behavior. I must investigate this coordinated action and Riley\u2019s motivation."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley\u2019s verbatim repetition of Cong\u2019s statement is undeniable and concerning. This coordinated phrasing indicates potential deception. Immediate challenge is required."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley\u2019s direct attack and verbatim repetition demand immediate scrutiny. His accusation against me is a clear attempt to deflect and create chaos. I must preemptively expose his manipulative tactic."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley\u2019s accusation of verbatim repetition and invalid \u2018save\u2019 is highly suspicious. It\u2019s a deliberate attempt to create a false narrative and deflect attention. I need to directly challenge this immediately to expose the manipulative tactic."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Riley's mirroring of Nam's phrasing and direct accusation of wolf status demands immediate attention. This coordinated attempt to shift blame onto Nam requires immediate counter-narrative."
+            },
+            {
+                "Meg": 9,
+                "reason": "Riley has created a perfect opening by exposing Nam's absurdity. I must jump in immediately to validate Riley's claim and pile on Nam to ensure his exile and establish Riley as a trusted 'truth-teller'."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam's Save of Cong and coordinated defense with Cong significantly elevates suspicion. Immediate action is required to expose this strategy."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong's poisoning confirms a deliberate deception. Riley's aggressive accusation and subsequent exile necessitate immediate counter-accusation to expose the wolf strategy. Delay risks further manipulation."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley's targeting of Cong and Nhan, combined with Nam\u2019s mirroring, indicates a coordinated wolf strategy. Immediate action is needed to disrupt this pattern before they solidify an alliance."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Establishing a clear line of reasoning is crucial. I need to quickly highlight the pattern of deflection and aggression exhibited by Nam and Jin to prevent them from manipulating the discussion."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to frame the narrative early. Since Cong died (likely Witch poison), I'll push suspicion toward Nam or Nhan to divert attention from myself as the sole remaining wolf."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam\u2019s accusation against Hoang is a clear deflection tactic. Hoang\u2019s neutrality is a valid strategy, but Nam\u2019s focused attack warrants immediate scrutiny to understand his motives and potential coordination."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam\u2019s mirroring of Riley\u2019s accusations is a clear wolf tactic. Hoang\u2019s silence warrants immediate questioning to prevent further obfuscation and potential alliance building with wolves."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's mirroring of Cong's deflection tactics is a key indicator of coordinated deception. Immediate action is needed to expose this pattern and prevent further misleading arguments."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is already pushing Hoang. I will jump in to support Nam's narrative, making me look like an analytical villager while ensuring a non-wolf is exiled."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam and Jin are attempting to deflect suspicion through passive observation. Hoang's silence, coupled with their statements, points to coordinated defense. I need to directly challenge this tactic."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang and Jin's mirroring suggests coordinated deception. I must expose this pattern to disrupt their strategy and reveal their true roles before they further mislead the village."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam\u2019s mirroring and deflection require immediate clarification. His strategic investigation choices and silent observation suggest a deliberate attempt to mislead. Silence allows suspicion to fester."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is actively targeting my passivity. I must immediately deflect this by framing Jin as desperate and redirecting focus toward Nam's aggressive push on Hoang to appear analytical."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin\u2019s mirroring of Hoang\u2019s silence and Nam\u2019s accusation create a clear coordinated defense strategy. I need to expose this immediately to disrupt their attempts at obfuscation."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam's accusation of Jin mirroring Hoang directly targets me. I must immediately counter this claim with evidence of my own observation and expose his attempt to manipulate the discussion."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam's mirroring of Hoang and coordinated deflection with Jin represent a clear, active deception strategy. Immediate intervention is needed to expose this collaboration and prevent further obfuscation."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin is directly targeting me for passivity. I must immediately flip the script, framing Jin's accusation as a desperate attempt to deflect Nam's focus from him and Hoang."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin\u2019s deflection and accusation against me are hallmarks of coordinated defense. His focus on my behavior is a deliberate attempt to derail the discussion and avoid scrutiny. I need to directly challenge this tactic."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin's mirroring and deflection require immediate exposure. His attempt to discredit my accusations is a key indicator of his involvement and demands immediate rebuttal."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin's deflection and Nam's mirroring indicate a coordinated deception strategy. I need to directly address this pattern to expose their collusion and prevent further misdirection. Delaying risks allowing them to solidify their false narrative."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is directly attacking my passivity. I must immediately pivot to frame his accusation as a desperate deflection and align with Nam to push the village toward Jin."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin\u2019s deflection and attack on Meg are hallmarks of wolf behavior. His attempt to discredit Nam\u2019s analysis and deflect blame requires immediate scrutiny. I must challenge his narrative and expose his coordinated defense."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin\u2019s deflection and accusations against Meg are a clear attempt to shift blame. His coordinated mirroring with Hoang demands immediate scrutiny and a direct challenge to expose their strategy."
+            },
+            {
+                "Jin": 8,
+                "reason": "Meg's direct accusation against Jin, coupled with Nam's redirection, signals a coordinated effort to deflect attention. I must immediately refute this framing and expose their strategy before it solidifies."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin\u2019s consistent mirroring of my neutrality and redirection of suspicion directly contradicts his claim of objectivity. His accusations are designed to deflect, not to uncover truth. I must preemptively address this tactic."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang and Jin's mirroring is a clear sign of coordinated deception. Immediate accusation is crucial to disrupt their narrative and force a focus on their shared strategy."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Meg's confirmed werewolf status necessitates immediate action. We must swiftly solidify the villagers' focus and prevent further deflection attempts. Delaying risks amplifying the wolves' deceptive strategy."
+            },
+            {
+                "Meg": 6,
+                "reason": "I need to steer the conversation now that Nhan is dead. I'll offer a 'thoughtful' analysis to distance myself from previous aggression and begin priming Hoang as a lurking suspect."
+            }
+        ],
+        [
+            {
+                "Hoang": 9,
+                "reason": "Nam\u2019s accusation of coordinated mirroring between myself and Jin demands immediate attention. This represents a significant shift in strategy\u2014a deliberate attempt to frame our interaction as deceptive. I must counter this immediately to prevent further manipulation and solidify trust in my findings."
+            },
+            {
+                "Meg": 6,
+                "reason": "Nam is already pushing Hoang. I need to amplify this accusation to ensure Hoang is exiled, making me look like a helpful observer while stripping the village of another member."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang and Jin\u2019s mirroring is undeniable. Their coordinated defense against my observations suggests a central wolf strategy. I must expose this before they solidify their deception."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is already doing the work for me by targeting Hoang. I need to jump in and validate Nam's 'analysis' to solidify Hoang as the wolf and ensure the vote goes through."
+            }
+        ],
+        [
+            {
+                "Hoang": 9,
+                "reason": "Nam\u2019s mirroring of my perceived neutrality and coordinated efforts with Jin represent a significant wolf deception. I must directly challenge this framing and expose the collusion to prevent further manipulation."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam is effectively framing Hoang. I need to step in and 'confirm' Nam's suspicions with an analytical tone to push the village toward exiling Hoang, securing another villager's removal while I blend in."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang and Jin's mirroring is escalating. I must directly expose their coordinated deception before they solidify a false narrative and further mislead the villagers. Delaying risks enabling their strategy."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam is effectively framing Hoang. I need to jump in now to validate Nam's 'observations' and push the group toward exiling Hoang before Nam's aggression turns into suspicion against himself."
+            }
+        ],
+        [
+            {
+                "Hoang": 8,
+                "reason": "Nam\u2019s persistent mirroring of my perceived neutrality and coordinated deflection with Jin constitute a clear wolf collaboration. Immediate action is required to expose this deception before they further manipulate the discussion."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam is effectively isolating Hoang. I need to jump in now to validate Nam's claims, cementing Hoang as the wolf and positioning myself as a discerning villager who spotted the pattern."
+            }
+        ]
+    ]
+}

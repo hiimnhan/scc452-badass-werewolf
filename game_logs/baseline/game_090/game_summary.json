@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Cong (Seer) investigated Nam \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "Given that no one was killed during the night, I propose we focus on observable behaviors during the debate. I\u2019ll be observing closely for any attempts to deflect attention or rapidly agree with others. Let\u2019s start with Cong."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Given the lack of nocturnal deaths, I propose we prioritize observing how players react to accusations and attempt to establish a baseline for typical behavior. I\u2019ll be watching for any attempts to quickly validate others\u2019 claims or deflect scrutiny."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan and Cong are practically reading from the same script. This clinical, matching tone is beyond weird\u2014it feels like a coordinated effort to control the room. It's way too robotic to be natural. I'm leaning toward Nhan being the one driving this weird vibe."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley's observation regarding Nhan's coordinated tone is concerning. The rapid agreement and robotic nature of their statements warrant further scrutiny. I propose we examine Nhan\u2019s responses more closely to identify any inconsistencies."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I agree with Riley. Nhan\u2019s insistence on observable behavior, coupled with Cong\u2019s mirroring response, presents a concerning pattern. It feels deliberately constructed, not organic. Let's examine Nhan\u2019s reactions to specific accusations more closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "The rapid agreement between Nhan and Cong is deeply concerning. Their mirroring of observations feels deliberately constructed, not a spontaneous reaction. I'll focus my observation on Nhan's responses to specific accusations."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": null,
+                "reasoning": "Nhan voted to exile None. Reason: Nhan initiated the focus on observable behavior and consistently framed the debate. The rapid agreement with Cong, coupled with their mirroring of observations, suggests a deliberate strategy to control the discussion. I vote to exile Nhan."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan\u2019s insistence on observable behavior and mirroring Cong\u2019s responses strongly suggests a coordinated effort to control the discussion and deflect suspicion. I am voting to remove this individual from the game."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s behavior feels deliberately constructed to deflect attention. Focusing on Nhan removes a key player in this coordinated strategy and offers a clear target for observation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s insistence on observable behavior, combined with Cong\u2019s mirroring, indicates a coordinated effort to mislead. I\u2019m prioritizing uncovering the source of this manipulation."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": null,
+                "reasoning": "Hoang voted to exile None. Reason: No public reason provided."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: The way Nhan is trying to treat this like a science experiment instead of a conversation is a huge red flag. That scripted, robotic approach feels like a calculated attempt to dominate the group and deflect actual suspicion."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: No public reason provided."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Jin (Guard) chose to protect Hoang.",
+            "Cong (Seer) investigated Riley \u2014 Result: WOLF.",
+            "Hoang (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nam",
+            "Cong"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Seer",
+        "Nam": "Villager",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
