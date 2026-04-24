@@ -1,0 +1,219 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nam.",
+            "Jin (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I observed no eliminations during the night. I will begin by requesting that everyone clearly state their reasoning for any accusations they intend to make today."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Let us proceed with clear communication. I propose we begin by establishing a standard: each person will directly state their observations from the night and their reasoning for any initial accusations."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I observed no eliminations during the night. I propose we prioritize establishing clear, direct statements of observation and reasoning to minimize ambiguity. Let\u2019s start with a simple recounting of what each of us witnessed."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I agree with Jin\u2019s suggestion. I will state my observations plainly. I saw no eliminations during the night. Let\u2019s focus on establishing a clear process for evaluating each other's statements."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I concur with Jin and Cong. Observing no eliminations during the night, my initial assessment is neutral. I will proceed by stating my observations: I saw no eliminations. Let\u2019s proceed with direct statements of what we witnessed."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I reiterate my observation: no eliminations occurred during the night. Let\u2019s maintain this focus on clear, direct statements of observation to proceed effectively."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong\u2019s detailed approach to establishing a \u2018standard\u2019 seems designed to stall and potentially obscure his true intentions. I\u2019ll target him for further scrutiny today."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: We need to move beyond simply stating \u2018no eliminations.\u2019 Let\u2019s establish a framework of direct observation and critical questioning to identify potential wolves. Nhan's repetitive statement is unproductive."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan\u2019s insistence on repeating \u2018no eliminations\u2019 is concerning. It\u2019s a deflective statement and warrants further scrutiny. Let\u2019s investigate this claim."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan\u2019s repeated assertions of \u2018no eliminations\u2019 without offering concrete observations or reasoning suggests a deliberate attempt to deflect attention. I will investigate him further."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Everyone stated no eliminations. Nhan's insistence on a clear process feels like a deliberate attempt to control the discussion and obscure potential observations. I\u2019ll vote to examine him more closely."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan is pushing an oddly rigid structure for the debate. Often, wolves try to control the conversation and dictate how others speak to hide their own tracks. This level of insistence on 'process' feels like a deflection tactic to avoid actual scrutiny."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin is pushing very hard for everyone to follow a specific script and reveal information. This feels like an attempt to control the flow of the conversation and steer the village toward a predetermined conclusion. It's a common tactic for wolves to dictate the process."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Cong (Guard) chose to protect Jin.",
+            "Jin (Seer) investigated Riley \u2014 Result: WOLF."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Riley\u2019s consistent silence is concerning. He offers no observations about the night, simply repeating others\u2019 claims. I\u2019ll ask him directly if he saw anything."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I've been quiet because I'm actually analyzing the pattern here. Nam, your sudden pivot to target me is way too convenient. It feels like a classic wolf tactic to deflect attention and herd the vote before we have actual evidence. Why the rush to exile me?"
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley\u2019s attempt to deflect by accusing me of a \u2018convenient\u2019 pivot is a standard wolf maneuver. His silence after the night is deeply concerning \u2013 a deliberate tactic to obscure his actions. I\u2019ll ask him point-blank if he observed anything."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Jin, your eagerness to jump on Nam's bandwagon is exactly what a wolf does to secure a kill. You're not analyzing; you're coordinating. If you're so sure about me, why aren't you providing any actual evidence beyond 'silence'?"
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Riley's deflection is increasingly transparent. His accusations are designed to shift blame, not uncover truth. His coordinated silence after the night is a clear attempt to obscure his actions."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley's deflection is exhausting. He\u2019s consistently shifting blame, mirroring accusations, and creating a smokescreen of coordinated silence. I\u2019ll ask him directly about his observations during the night."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley\u2019s pattern of shifting blame and avoiding direct answers during the discussion strongly suggests deception. He's actively attempting to control the narrative, and his silence after the night is highly suspicious."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley consistently deflects questions and accuses others of manipulation. His defensive behavior and lack of observation during the night strongly suggest he's hiding something. I'm voting to remove him from the game."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley\u2019s pattern of deflection and shifting blame is too consistent to ignore. He\u2019s actively attempting to control the narrative and redirect suspicion \u2013 a clear indicator of his role as a werewolf. Exile him to disrupt this manipulation."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley consistently deflects accusations and shifts blame. He offers no independent observations and actively creates a smokescreen of coordinated silence. His behavior is highly suspicious."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's sudden and aggressive push to target me without any evidence is a textbook deflection. He's trying to force a rush vote to eliminate a potential threat before we can actually discuss the night's events. It's too coordinated to be accidental."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin is pushing this vote against Riley way too aggressively. The way he and Nam are coordinating their attacks feels like a calculated effort to herd the village into a quick kill without actual evidence. I think Jin is the one steering us."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Jin.",
+            "Cong (Guard) chose to protect Meg.",
+            "Jin (Seer) investigated Meg \u2014 Result: WOLF."
+        ],
+        "night_eliminated": [
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, your consistent agreement with Riley\u2019s deflection is concerning. You\u2019ve mirrored their arguments without offering independent reasoning. This coordinated effort requires closer scrutiny."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang, your focus on \u2018coordinated effort\u2019 is a distraction. It\u2019s a tactic to obscure the fact that Cong and Riley are actively avoiding direct answers. I\u2019ve observed them both repeatedly dismissing legitimate questions as irrelevant."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang\u2019s accusation of coordinated deflection is a classic wolf tactic. Mirroring accusations is a deliberate attempt to sow discord. Riley and I are simply responding to questions, not colluding."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong, your insistence that Riley and I are merely 'responding to questions' is disingenuous. You\u2019ve repeatedly deflected direct inquiries about your actions during the night, claiming they are \u2018irrelevant.\u2019 This evasiveness strongly suggests you\u2019re concealing something."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam\u2019s insistence on Riley and my \u2018disingenuousness\u2019 is a transparent attempt to deflect scrutiny. His repeated framing of our responses as evasive while failing to offer independent observations is precisely the coordinated deflection he claims to detect."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong, your attempts to shift blame onto us for detecting a coordinated effort are a clear indicator of your own involvement. Riley\u2019s silence and your mirroring of his arguments demonstrate a deliberate strategy to obscure your actions. I\u2019m concerned about your consistent deflection."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam consistently deflects direct questions and attempts to shift blame. His behavior mirrors Riley\u2019s, indicating a coordinated effort to sow discord and obscure his own actions. Exile him to disrupt this tactic."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong\u2019s repeated deflection and mirroring of Riley\u2019s arguments, coupled with his insistence on labeling our observations as \u2018coordinated deflection,\u2019 strongly suggests he's involved in a deliberate cover-up. I vote to exile him."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong\u2019s pattern of deflection and redirection, specifically his attempts to discredit Hoang\u2019s observations and shift blame, warrants immediate scrutiny. His coordinated behavior with Riley is concerning."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's defense is becoming increasingly circular. Instead of providing clear answers, he is simply mirroring Nam's accusations back at him. This kind of reflexive deflection is typical of someone trying to hide their true role."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "4": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nam."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Guard",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

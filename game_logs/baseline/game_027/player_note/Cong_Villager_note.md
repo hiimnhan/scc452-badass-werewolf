@@ -1,0 +1,16 @@
+=== Game Summary (your observations so far) ===
+- Round 1 Night: => No one was killed during the night.
+- Round 1 Day: => Riley received 5 votes. The player will be exiled!
+- Round 2 Night: => Nhan was killed during the night.
+- Round 2 Day: => Jin received 3 votes. The player will be exiled!
+- Round 3 Night: => No one was killed during the night.
+- Round 3 Day: => Nam received 3 votes. The player will be exiled!
+- Round 4 Night: => Hoang was killed during the night.
+
+=== Suspicion Scores (0.0 = innocent → 1.0 = wolf) ===
+  Jin: 0.92 — Maintaining a high suspicion score due to consistent deflection. The mirroring of Hoang’s accusations suggests coordinated behavior. His claim of fabricated concerns is a calculated attempt to evade accountability. Increased scrutiny of his deflection is warranted. His mirroring of accusations significantly elevates his suspicion. Anticipates further attempts to discredit him. Now directly implicated in a coordinated deception scheme by Nam’s accusation.
+  Riley: 0.80 — Continuing to deflect accusations. Claiming framing is a standard defensive tactic, but the repeated accusations against others raises suspicion. Silence is strategic. Previous notes remain consistent. Nam’s focus on Riley’s silence is a calculated attempt to distract from the core issue – the suspected collusion. His deflection remains stubbornly consistent.
+  Hoang: 0.65 — Increasingly focused on identifying coordinated deception. Mirroring Jin’s accusations suggests a shared strategy for evading scrutiny. Deflection tactics are consistently employed; demonstrates awareness of wolf manipulation. Prioritizing detection of coordinated behavior over individual suspicion. Now implicated in a coordinated strategy with Jin – bolstering his suspicion score. Remains a key suspect in the coordinated deception network. The repetition of accusations with Jin is a clear attempt to solidify the narrative of coordinated deception and deflect attention from his own actions. Increased mirroring suggests a deeper, possibly coordinated strategy. His deflection is becoming more elaborate.
+  Nam: 0.55 — Increasingly focused on deflection and shifting blame. Explicitly accuses Jin of coordinated deflection, solidifying suspicions of wolf collaboration. The emphasis on Riley’s silence is a misdirection, likely to avoid scrutiny. Mirroring Jin’s accusations points to shared strategy. Prioritizes deflection over direct accusation. Now explicitly accuses Jin of coordinating with Hoang – a significant escalation suggesting deeper involvement. Continuing redirection suggests a calculated strategy to avoid direct examination. While accusing Jin, he continues to deflect, providing evidence of deflection rather than breaking through. Now actively constructing a coordinated wolf narrative, escalating suspicion of Jin and Hoang. The mirroring strategy is becoming more aggressive.
+  Meg: 0.50 — Remains a neutral suspect. Lack of night action and limited participation. Continuing to observe and gather information. Previous notes remain consistent. The increasing focus on coordinated deception may indirectly affect her, requiring continued vigilance.
+  Nhan: 0.00 — Deceased. Previously neutral. Eliminating the deceased player is a wolf strategy to divert suspicion. Previous notes remain consistent.

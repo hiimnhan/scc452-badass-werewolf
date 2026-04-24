@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Jin (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I\u2019m observing a pattern of hesitant responses, particularly from Riley. Their lack of proactive engagement feels deliberately cautious, a characteristic I\u2019ve noted in potentially deceptive individuals. I will investigate this further."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Nam, you're pushing a narrative against Riley with absolutely zero evidence. This kind of aggressive, baseless framing is a classic wolf tactic to isolate a target early. I find your 'pattern' analysis incredibly forced and suspicious."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg's accusation against Riley is overly aggressive and lacks substance. Her framing is a standard wolf tactic to deflect attention. I\u2019ll focus on observing Nam\u2019s consistent hesitancy."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley's hesitant responses are notable. Their lack of proactive engagement warrants further observation. I will continue to track their behavior."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Jin, you're just echoing Nam's baseless points to create a false consensus. This mirroring is a blatant attempt to railroad Riley without any evidence. It's a coordinated effort to isolate a target, which is exactly how wolves operate. I'm calling it now: Jin is a wolf."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg\u2019s rapid shift from criticizing Riley\u2019s hesitancy to accusing me of being a wolf demonstrates a clear attempt to redirect blame and consolidate power. Her accusations lack foundational evidence and rely on manufactured narratives."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg is aggressively pushing a baseless narrative against Riley and attempting to frame others. Her deflection tactics and manufactured consensus are concerning, indicating a potential wolf strategy."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg\u2019s accusations are shifting without justification. Her attempt to frame Jin as a wolf is a transparent deflection tactic designed to sow discord and shift blame. I believe she's actively manipulating the group."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg's accusations are unsubstantiated and designed to shift blame. She consistently attacks others while offering no concrete evidence, a hallmark of wolf manipulation. I\u2019m voting to remove her from the game."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": null,
+                "reasoning": "Jin voted to exile None. Reason: No public reason provided."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg\u2019s accusations against Jin are a deflection tactic designed to shift blame. Her behavior is inconsistent and suggests an attempt to control the narrative. I vote to exile her."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin is echoing Nam's vague accusations almost word-for-word. This kind of coordinated mirroring feels like a deliberate attempt to create a fake consensus and railroad me without any actual evidence. It's too robotic to be natural."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin is blatantly mirroring Nam's baseless accusations to railroad Riley. This coordinated effort to create a false consensus without any actual evidence is a classic wolf strategy to isolate an innocent player. I cannot ignore this pattern of manipulation."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "2": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nhan.",
+            "Nam (Guard) chose to protect Hoang.",
+            "Hoang (Seer) investigated Jin \u2014 Result: not a wolf.",
+            "Jin (Witch) used POISON potion on Riley"
+        ],
+        "night_eliminated": [
+            "Riley",
+            "Nhan"
+        ]
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

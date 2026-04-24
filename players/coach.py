@@ -106,11 +106,11 @@ class Coach:
         result: dict = {}
         # 1. Clean up the response to extract just the JSON block
         clean_resp = resp.strip()
-        
+
         # This regex looks for everything from the first '{' to the last '}'
         # re.DOTALL allows it to match across multiple lines
-        match = re.search(r'(\{.*\})', clean_resp, re.DOTALL)
-        
+        match = re.search(r"(\{.*\})", clean_resp, re.DOTALL)
+
         if match:
             clean_resp = match.group(1)
 
@@ -176,22 +176,22 @@ Produce an updated coaching strategy — rules for how YOU should coach villager
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated coaching rules as bullet points (<=300 words)",
-  "reasoning": "what changed in your coaching approach and why (<=100 words)"
+  "strategy": "updated coaching rules as bullet points (<=500 words)",
+  "reasoning": "what changed in your coaching approach and why (<=250 words)"
 }}
 No extra text, no markdown, no code fences.
 """
-        
+
         for attempt in range(MAX_RETRIES):
-            resp = self._call_model(system, prompt, max_tokens=1000)
-            
+            resp = self._call_model(system, prompt, max_tokens=2000)
+
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "").strip()
 
             # Check if we actually got meaningful text back
             if extracted_strategy:
                 new_strategy = extracted_strategy
-                break # We successfully got the strategy, exit the loop!
+                break  # We successfully got the strategy, exit the loop!
             else:
                 print(f"Warning: Coach failed to generate a valid strategy JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 
@@ -199,7 +199,9 @@ No extra text, no markdown, no code fences.
         if new_strategy:
             self._write_coach_strategy(new_strategy)
         else:
-            raise ValueError("Error: Coach completely failed to update strategy. Keeping the previous strategy for the next game.")
+            raise ValueError(
+                "Error: Coach completely failed to update strategy. Keeping the previous strategy for the next game."
+            )
 
     def _generate_coach_feedback(self, game_record: str) -> None:
         """Write actionable feedback for villager-side players.
@@ -229,8 +231,8 @@ This feedback will be read by each villager-side player before their next game a
 
 Respond with ONLY a JSON object:
 {{
-  "feedback": "actionable feedback for villager players (<=300 words)",
-  "key_mistakes": "the critical errors made this game (<=150 words)"
+  "feedback": "actionable feedback for villager players (<=500 words)",
+  "key_mistakes": "the critical errors made this game (<=250 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -238,8 +240,8 @@ No extra text, no markdown, no code fences.
         feedback = ""
 
         for attempt in range(MAX_RETRIES):
-            resp = self._call_model(system, prompt, max_tokens=1000)
-            
+            resp = self._call_model(system, prompt, max_tokens=2000)
+
             # Safely extract and clean the text
             extracted_mistakes = resp.get("key_mistakes", "").strip()
             extracted_feedback = resp.get("feedback", "").strip()
@@ -248,7 +250,7 @@ No extra text, no markdown, no code fences.
             if extracted_mistakes and extracted_feedback:
                 key_mistakes = extracted_mistakes
                 feedback = extracted_feedback
-                break # We successfully got both fields, exit the loop!
+                break  # We successfully got both fields, exit the loop!
             else:
                 print(f"Warning: Coach failed to generate full feedback JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 

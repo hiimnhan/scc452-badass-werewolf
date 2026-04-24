@@ -11,7 +11,7 @@ MODEL_PROVIDERS = {
     "gpt-4o-mini": ChatOpenAI,
     "gpt-4-turbo": ChatOpenAI,
     "gpt-5-nano": ChatOpenAI,
-    "deepseek-chat": ChatOpenAI,
+    "deepseek-ai/DeepSeek-V4-Flash": ChatOpenAI,
     "meta-llama/Meta-Llama-3.1-8B-Instruct": ChatOpenAI,
     "meta-llama/Llama-3.3-70B-Instruct": ChatOpenAI,
     # "llama-3.1-8b-instant": ChatGroq,
@@ -28,8 +28,8 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-VILLAGER_MODEL = "google/gemma-3-4b-it"  # small — villager side
-WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
+VILLAGER_MODEL = "google/gemma-4-31B-it"  # small — villager side
+WOLF_MODEL = "deepseek-ai/DeepSeek-V4-Flash"  # large — wolf side
 
 # ============================================================
 # Experiment scenarios
@@ -48,7 +48,7 @@ SCENARIO_CONFIG = {
         "deviation": False,
         "personality": False,
     },
-        "coach_without_self_analyze": {
+    "coach_without_self_analyze": {
         "coaching": True,
         "self_analyze": False,
         "deviation": False,

@@ -1,0 +1,97 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Riley.",
+            "Nam (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "Let\u2019s begin. I\u2019ve observed no action during the night. I will focus on establishing a clear line of questioning to determine who is genuinely concerned with the village\u2019s safety."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I observed no action during the night. Let's begin by directly questioning those who offered no defense or explanation for their inaction. Their silence warrants scrutiny."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I observed no action during the night. Cong\u2019s suggestion of structured questioning is reasonable, but premature. We lack any basis for suspicion. Let's focus on establishing clear communication protocols before attempting accusations."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I observed no one killed during the night. Cong\u2019s focus on structured questioning is appropriate, but let\u2019s prioritize identifying any deliberate inaction. Riley\u2019s lack of movement warrants further observation."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan, your attempt to target me immediately after a night where no one died is a blatant play for narrative control. You're trying to manufacture guilt where there is none to isolate a target. That kind of aggression this early is classic werewolf behavior."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Riley is right. Nhan, your sudden aggression toward Riley is a transparent attempt to deflect attention and manufacture a target. This kind of forced narrative is exactly how wolves try to steer the village when they have no real leads. It's way too calculated."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley\u2019s rapid, dismissive response and attempt to shift blame onto me reveal a deliberate effort to avoid direct questioning. I must prioritize uncovering his true intentions."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley\u2019s early, aggressive accusations and deflection indicate a manipulative strategy. His attempt to shift blame onto Nhan demonstrates a desire to control the narrative and isolate a target, which aligns with common werewolf tactics."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley\u2019s deflection and aggressive accusations suggest a deliberate attempt to manipulate the discussion. His defensive posture warrants immediate scrutiny and a vote to remove him from the game."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg\u2019s rapid shift from accusing Riley of manufactured guilt to questioning Nhan\u2019s inaction suggests a calculated effort to control the narrative and create a false target. I will vote to exile her to disrupt this pattern."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley's rapid accusation and deflection are designed to distract from his own lack of action. His attempt to frame Nhan is a clear attempt to manipulate the village and create a target. We must address this immediately."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's immediate aggression toward me without any evidence is a huge red flag. Trying to force an exile this early by attacking 'inaction' is a typical wolf tactic to manipulate the village and narrow the field. It's too desperate to be innocent."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan is pushing for an exile without any evidence, trying to force a target onto Riley just because of 'inaction'. This aggressive attempt to manufacture a culprit early on is a clear red flag for a wolf trying to control the game."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nhan.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Nam (Seer) investigated Nhan \u2014 Result: not a wolf.",
+            "Hoang (Witch) used POISON potion on Meg"
+        ],
+        "night_eliminated": [
+            "Meg",
+            "Nhan"
+        ]
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Villager",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
