@@ -1,0 +1,73 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player claims Seer and provides a clear non-wolf result for another player",
+      "action": "TRUST_RESULT",
+      "rationale_short": "prioritize technical role data over behavioral vibes",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "two players engage in mirroring accusations with identical phrasing",
+      "action": "VOTE_ACCUSER_WITHOUT_ROLE_DATA",
+      "rationale_short": "wolves often use reflexive mirroring to create noise",
+      "confidence": 0.6,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "claiming Seer role for the first time",
+      "action": "USE_NATURAL_LANGUAGE",
+      "rationale_short": "scripted repetition triggers wolf accusations of fake claims",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num > 1 and a player is suspected but not yet investigated",
+      "action": "INVESTIGATE_SUSPECT",
+      "rationale_short": "confirming suspicions reduces random villager deaths",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has claimed Seer and is currently alive",
+      "action": "PROTECT_SEER",
+      "rationale_short": "Seer is the highest value target for Wolves",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "poison_potion_available == True and confirmed_wolves_count == 0",
+      "action": "HOLD_POISON",
+      "rationale_short": "prevent accidentally killing innocent villagers",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == True and night_elimination_occurred == True",
+      "action": "USE_SAVE",
+      "rationale_short": "prevents immediate loss of numerical advantage",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ]
+}

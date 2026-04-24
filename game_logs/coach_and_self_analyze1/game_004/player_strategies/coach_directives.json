@@ -1,0 +1,91 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player repeats another player's claim or phrasing verbatim",
+      "action": "QUESTION_PLAYER",
+      "rationale_short": "mirroring is a common wolf strategy to blend in",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "player_is_confirmed_safe == true",
+      "action": "LEAD_INQUIRY",
+      "rationale_short": "confirmed safe players must act as social anchors to avoid echoing lead accusers",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a player uses meta-gaming terminology describing other players' tactics without citing specific game evidence",
+      "action": "VOTE_FOR_PLAYER",
+      "rationale_short": "over-reliance on 'textbook' behavior descriptions often masks a lack of real evidence",
+      "confidence": 0.6,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "confirmed_wolves_count == 0",
+      "action": "INVESTIGATE_UNCONFIRMED",
+      "rationale_short": "prioritize finding wolves over confirming safe players",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "PROVIDE_CLEAR_POSITIVE_INFO",
+      "rationale_short": "establishing a trusted pool early allows villagers to analyze the remaining suspects",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "seer_is_alive == true",
+      "action": "PROTECT_SEER",
+      "rationale_short": "protecting the info source is higher priority than protecting confirmed villagers",
+      "confidence": 0.95,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "seer_is_alive == false",
+      "action": "PROTECT_SUREST_VILLAGER",
+      "rationale_short": "protect the most analytical survivor to maintain village logic",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "poison_potion_available == true and evidence_of_wolf_claim == false",
+      "action": "HOLD_POISON",
+      "rationale_short": "poisoning based on behavior alone risks killing essential role players",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == true and target_is_high_value_role == true",
+      "action": "USE_SAVE",
+      "rationale_short": "priority should be preserving the Seer or Guard",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ]
+}

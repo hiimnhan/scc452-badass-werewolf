@@ -1,0 +1,82 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player has been confirmed as 'not a wolf' by a Seer",
+      "action": "TRUST_ANALYSIS",
+      "rationale_short": "confirmed innocents are the most reliable analysts",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "a player attacks a confirmed innocent player",
+      "action": "FLAG_AS_WOLF",
+      "rationale_short": "attacking confirmed innocents is a primary wolf indicator",
+      "confidence": 0.95,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a Seer has provided a 'wolf' result for a player",
+      "action": "VOTE_EXILE",
+      "rationale_short": "prioritize hard data over behavioral vibes",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "HARD_CLAIM_AND_RESULT",
+      "rationale_short": "delayed claims are perceived as fake-claims and lead to exile",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "alive_count > 3",
+      "action": "INVESTIGATE_UNCONFIRMED",
+      "rationale_short": "maximize data collection on unknown players",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has claimed Seer",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "the Seer is the most critical asset for village victory",
+      "confidence": 0.95,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has been confirmed innocent by Seer and is targeted",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "save potions must be reserved for confirmed assets",
+      "confidence": 0.85,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "a player is targeted but has not been confirmed innocent",
+      "action": "HOLD_SAVE_POTION",
+      "rationale_short": "early use on unconfirmed players is high risk",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ]
+}

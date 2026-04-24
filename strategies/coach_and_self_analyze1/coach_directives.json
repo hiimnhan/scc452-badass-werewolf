@@ -1,0 +1,91 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player claims Seer and provides a result for another player",
+      "action": "VOTE_ACCORDING_TO_RESULT",
+      "rationale_short": "concrete claims outweigh behavioral analysis",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a Seer-cleared player has designated a target",
+      "action": "VOTE_TARGET",
+      "rationale_short": "cleared players serve as the village logic anchor",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "a player is accused of being 'too fast' or 'too helpful' without a specific contradiction",
+      "action": "IGNORE_ACCUSATION",
+      "rationale_short": "these are common wolf gaslighting tactics",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "HARD_CLAIM_ROLE",
+      "rationale_short": "immediate claiming establishes early logic anchors",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num > 1 and no confirmed wolves",
+      "action": "INVESTIGATE_NEW_PLAYER",
+      "rationale_short": "maximize information gathering across the population",
+      "confidence": 0.9,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has claimed Seer",
+      "action": "PROTECT_CLAIMANT",
+      "rationale_short": "Seer is the most critical asset for village victory",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "no one has claimed Seer",
+      "action": "PROTECT_RANDOM_PLAYER",
+      "rationale_short": "minimal value in protecting non-power roles",
+      "confidence": 0.5,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "notification of player death and a Seer claim exists",
+      "action": "SAVE_SEER_CLAIMANT",
+      "rationale_short": "preserve the information source at all costs",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "potion_poison available and target is a Seer-cleared player",
+      "action": "DO_NOT_POISON",
+      "rationale_short": "poisoning cleared players eliminates village assets",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ]
+}

@@ -6,7 +6,7 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
 from abc import ABC
 from pathlib import Path
-from constants import COACH_FEEDBACK_FILENAME, PLAYER_FINAL_STRATEGY_FILENAME, MAX_RETRIES
+from constants import COACH_FEEDBACK_FILENAME, COACH_DIRECTIVES_FILENAME, PLAYER_FINAL_STRATEGY_FILENAME, MAX_RETRIES
 from config import SCENARIO_CONFIG
 from utils import write_to_file
 from prompt import (
@@ -151,10 +151,15 @@ class BasePlayer(ABC):
         # Intra-game state — reset by reset_game_state()
         self._game_summary_entries: List[str] = []
         self._suspicion: dict = {}  # {name: {"score": float, "reason": str}}
+        self._reflection_ledger: dict = {}  # single entry, overwritten each decision
+        self._dcr_events: List[dict] = []  # directive compliance tracking per decision
 
         # System prompt — built once, sent on every call
         strategy = self._load_strategy()
         self._setup_prompt = self._build_setup_prompt(strategy)
+
+        # Structured directives from coach (role-filtered, loaded from coach_directives.json)
+        self._directives: List[dict] = self._load_directives()
 
     # ── Dunder ──────────────────────────────────────────────────────────
 
@@ -177,6 +182,10 @@ class BasePlayer(ABC):
         return (
             self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
         ).resolve()
+
+    @property
+    def _coach_directives_path(self) -> Path:
+        return (self._base_dir() / "strategies" / self._scenario / COACH_DIRECTIVES_FILENAME).resolve()
 
     # ── Setup helpers ───────────────────────────────────────────────────
 
@@ -203,6 +212,71 @@ class BasePlayer(ABC):
             return path.read_text().strip()
         except Exception:
             return ""
+
+    def _load_directives(self) -> List[dict]:
+        """Load coach_directives.json and return directives for this player's role.
+        Returns empty list when file absent (first game or coaching disabled).
+        """
+        path = self._coach_directives_path
+        if not path.exists():
+            return []
+        try:
+            data = json.loads(path.read_text())
+            return data.get(self._role.value, [])
+        except Exception:
+            return []
+
+    def _format_directives_for_phase(self, phase: str) -> str:
+        """Format applicable directives for injection into a decision prompt.
+        Only villager-side roles receive directives; wolves return empty string.
+        Returns at most 6 directives sorted by confidence descending.
+        """
+        if self._role not in VILLAGER_SIDE or not self._directives:
+            return ""
+        applicable = [d for d in self._directives if d.get("phase") == phase]
+        if not applicable:
+            return ""
+        applicable = sorted(applicable, key=lambda d: d.get("confidence", 0), reverse=True)[:6]
+        lines = ["=== Active Directives for this decision ==="]
+        for d in applicable:
+            directive_id = d.get("id", "?")
+            trigger = d.get("trigger", "")
+            action = d.get("action", "?")
+            rationale = d.get("rationale_short", "")
+            confidence = d.get("confidence", 0)
+            supersedes = d.get("supersedes", [])
+            line = f"Directive {directive_id}: If {trigger} → {action}."
+            if rationale:
+                line += f" ({rationale})"
+            line += f" [Confidence: {confidence:.1f}]"
+            if supersedes:
+                line += f" [Supersedes: {', '.join(supersedes)}]"
+            lines.append(line)
+        return "\n".join(lines)
+
+    def _write_reflection(self, action: str, reasoning: str, directive_id: str = "") -> None:
+        """Store single-entry reflection ledger for the next decision prompt."""
+        self._reflection_ledger = {
+            "last_action": action,
+            "last_reasoning": reasoning[:150] if reasoning else "",
+            "directive_applied": directive_id,
+        }
+
+    def _format_reflection(self) -> str:
+        """Format reflection ledger for prepending to next decision prompt.
+        Returns empty string before first action this game.
+        """
+        if not self._reflection_ledger:
+            return ""
+        ledger = self._reflection_ledger
+        lines = [
+            "=== Your last action (reflect before deciding) ===",
+            f"Last action: {ledger.get('last_action', '')}",
+            f"Reasoning: {ledger.get('last_reasoning', '')}",
+        ]
+        if ledger.get("directive_applied"):
+            lines.append(f"Directive applied: {ledger['directive_applied']}")
+        return "\n".join(lines)
 
     # ── Intra-game: initialisation ──────────────────────────────────────
 
@@ -538,7 +612,7 @@ class BasePlayer(ABC):
             prompt_template = VILLAGER_VOTE_PROMPT_TEMPLATE
 
         # Format the selected prompt (Now including the debate!)
-        prompt = prompt_template.format(
+        base_prompt = prompt_template.format(
             name=self._name,
             role=self._role.value,
             note=self._note,
@@ -547,12 +621,25 @@ class BasePlayer(ABC):
             round_num=round_num,
         )
 
+        # Prepend reflection + directives so they sit adjacent to the decision question
+        prefix_parts = []
+        reflection = self._format_reflection()
+        if reflection:
+            prefix_parts.append(reflection)
+        directives = self._format_directives_for_phase("VOTE")
+        if directives:
+            prefix_parts.append(directives)
+        prompt = ("\n\n".join(prefix_parts) + "\n\n" + base_prompt) if prefix_parts else base_prompt
+
+        # Track which directive IDs were applicable for DCR
+        applicable_directive_ids = [d.get("id") for d in self._directives if d.get("phase") == "VOTE"]
+
         target = "None"
         reasoning = "No public reason provided."
-        
+
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=300)
-            
+
             # Safely check if BOTH required keys are in the dictionary
             if 'vote' in resp and 'reasoning' in resp:
                 target = resp['vote']
@@ -560,6 +647,21 @@ class BasePlayer(ABC):
                 break # We got what we need, exit the loop!
             else:
                 print(f"Warning: {self._name} failed to generate a valid vote JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+
+        # Record reflection for next decision
+        vote_target_str = target if (target and target != "None") else "no one (abstain)"
+        self._write_reflection(
+            action=f"voted for {vote_target_str}",
+            reasoning=reasoning if isinstance(reasoning, str) else "",
+        )
+
+        # Record DCR event
+        self._dcr_events.append({
+            "type": "vote",
+            "round": round_num,
+            "applicable_directive_ids": applicable_directive_ids,
+            "action": vote_target_str,
+        })
 
         # Handle explicit abstention, but keep the LLM's reasoning if they provided it!
         if target == "None" or target is None or target == "":
@@ -598,7 +700,7 @@ class BasePlayer(ABC):
         elif self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_DEBATE_PROMPT_TEMPLATE
 
-        prompt = prompt_template.format(
+        base_prompt = prompt_template.format(
             name=self._name,
             role=self._role.value,
             note=self._note,
@@ -608,13 +710,26 @@ class BasePlayer(ABC):
             early_round_warning=early_round_warning,
         )
 
+        # Prepend reflection + directives adjacent to the decision question
+        prefix_parts = []
+        reflection = self._format_reflection()
+        if reflection:
+            prefix_parts.append(reflection)
+        directives = self._format_directives_for_phase("DEBATE")
+        if directives:
+            prefix_parts.append(directives)
+        prompt = ("\n\n".join(prefix_parts) + "\n\n" + base_prompt) if prefix_parts else base_prompt
+
+        # Track which directive IDs were applicable for DCR
+        applicable_directive_ids = [d.get("id") for d in self._directives if d.get("phase") == "DEBATE"]
+
         message = ""
         resp = {}
 
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=400)
             message = resp.get("statement", "").strip()
-            
+
             if message:
                 break # We got a valid message, exit the loop!
             else:
@@ -624,6 +739,20 @@ class BasePlayer(ABC):
         if not message:
             message = "I have nothing to add at this moment."
             resp["analysis"] = "Failed to parse LLM output after 3 attempts."
+
+        # Record reflection for next decision
+        self._write_reflection(
+            action=f"debated (round {round_num})",
+            reasoning=message[:150],
+        )
+
+        # Record DCR event
+        self._dcr_events.append({
+            "type": "debate",
+            "round": round_num,
+            "applicable_directive_ids": applicable_directive_ids,
+            "statement_preview": message[:100],
+        })
 
         return message, resp
 
@@ -871,4 +1000,8 @@ No extra text, no markdown, no code fences.
             self._scenario = scenario
         self._game_summary_entries = []
         self._is_alive = True
+        self._reflection_ledger = {}
+        self._dcr_events = []
         self.init_suspicions(other_players)
+        # Reload directives — coach may have updated them at end of previous game
+        self._directives = self._load_directives()

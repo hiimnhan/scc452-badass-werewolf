@@ -68,7 +68,7 @@ class Witch(BasePlayer):
         alive_players_except_witch = [player for player in alive_players if player != self._name]
         alive_display = ", ".join(alive_players_except_witch) if self._poison_available else "None"
 
-        prompt = WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE.format(
+        base_prompt = WITCH_SAVE_OR_POISON_PROMPT_TEMPLATE.format(
             name=self._name,
             save_available=self._save_available,
             poison_available=self._poison_available,
@@ -76,6 +76,14 @@ class Witch(BasePlayer):
             alive_players=alive_display,
             note=self._note,
         )
+        prefix_parts = []
+        reflection = self._format_reflection()
+        if reflection:
+            prefix_parts.append(reflection)
+        directives = self._format_directives_for_phase("NIGHT")
+        if directives:
+            prefix_parts.append(directives)
+        prompt = ("\n\n".join(prefix_parts) + "\n\n" + base_prompt) if prefix_parts else base_prompt
 
         # ---------------------------------------------------------
         # Safely Call the LLM (Max Retries, NO Raw Text Parsing)
@@ -145,5 +153,14 @@ class Witch(BasePlayer):
             self.record_own_action(round_num, "Night", "Used no potions tonight.")
 
         log_string = f"Save reason: {save_reason}\nPoison reason: {poison_reason}"
+
+        action_summary = f"save={use_save}, poison={poison_target}"
+        self._write_reflection(action=f"witch acted: {action_summary}", reasoning=f"{save_reason} | {poison_reason}")
+        self._dcr_events.append({
+            "type": "night_witch",
+            "round": round_num,
+            "applicable_directive_ids": [d.get("id") for d in self._directives if d.get("phase") == "NIGHT"],
+            "action": action_summary,
+        })
 
         return {"use_save_potion": use_save, "poison_target": poison_target}, log_string, resp

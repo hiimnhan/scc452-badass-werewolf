@@ -1,0 +1,155 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Cong \u2014 Result: not a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I investigated Cong last night and confirmed he is not a werewolf. His suspicion score remains unchanged, indicating no new information has surfaced. I see no reason to deviate from this established fact."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I observed Nam\u2019s insistence on Cong\u2019s innocence. His repeated defense feels deliberately obstructive, attempting to derail any genuine investigation. I will question his motives further."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I investigated Cong last night and confirmed he is not a werewolf. His suspicion score remains unchanged, indicating no new information has surfaced. I see no reason to deviate from this established fact."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam, repeating yourself word-for-word isn't evidence; it's a script. This 'Seer' claim feels like a manufactured narrative to hard-clear Cong and protect a pack mate. It's too convenient. I don't trust this forced certainty one bit."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley\u2019s insistence on a manufactured narrative surrounding Nam\u2019s investigation is concerning. His accusations lack concrete evidence, relying solely on perceived obstruction."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Hoang, your immediate rush to defend Nam is a massive red flag. You're not analyzing the situation; you're providing cover. This looks like a coordinated effort to force a fake Seer claim through. Why are you so eager to protect him?"
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley\u2019s behavior \u2013 rapid accusations, defensive support of Nam, and dismissal of established facts \u2013 indicates deception. They are actively disrupting the process and should be investigated."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley\u2019s behavior is highly suspicious. His accusations lack evidence and seem designed to manipulate the narrative. I'm voting to remove him from the game to disrupt the spreading of misinformation."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is actively undermining the Seer\u2019s findings and shielding Nam. His claims lack evidence and appear designed to manipulate the discussion. He poses the greatest immediate threat to the investigation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley\u2019s rapid, unsupported accusations against Nam represent a coordinated attempt to derail genuine investigation. They\u2019re prioritizing a false narrative over established facts. I vote to exile them."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley\u2019s accusations lack substance and are designed to sow discord. His forceful insistence on a fabricated narrative indicates an attempt to control the flow of information and shift blame. He is disrupting the process."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's repetitive claims are a clear attempt to script the game's direction. He's trying to force a narrative of trust without any real proof. This behavior is typical of a wolf trying to secure an early ally."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's repetition is incredibly strange. It feels like he is reading from a script rather than actually interacting with us. Combined with Riley's point about the forced clearing of Cong, this looks like a textbook attempt to manufacture trust."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nhan.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Jin \u2014 Result: not a wolf.",
+            "Hoang (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Hoang's attempts to deflect accusations and consistently challenge my methods are concerning. His reactive behavior suggests he is attempting to obscure his true intentions."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam\u2019s persistent questioning of my methods and deflection of accusations is a clear attempt to control the narrative and obscure his own actions. His reactive defense indicates a hidden motive."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang\u2019s persistent attempts to reframe my investigation as a manipulative tactic are designed to distract from his own evasiveness. His reactive defense suggests awareness of scrutiny."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam\u2019s repeated attempts to discredit my investigation, specifically his deflection of accusations and reactive defense, demonstrate a clear effort to conceal his true intentions. His consistent narrative control is deeply concerning."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I have nothing to add at this moment."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang\u2019s consistent deflection of my investigation and reactive defense demonstrate a deliberate attempt to mislead. His continued narrative control is deeply concerning."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang\u2019s persistent deflection of my investigation and reactive defense demonstrate a deliberate attempt to mislead. His continued narrative control is deeply concerning. I must remove his ability to disrupt the investigation."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam\u2019s repeated attempts to discredit my investigation and deflect my questions demonstrate a clear effort to conceal his true intentions. His coordinated behavior with Hoang demands immediate scrutiny and exile."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam\u2019s consistent deflection of accusations and reactive defense are designed to obscure his own actions and create doubt. He\u2019s actively working to shift blame, and his continued attempts to control the narrative warrant immediate exile."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam is just repeating the same script over and over. It feels like he's trying to force a consensus through sheer repetition rather than actual evidence. This kind of narrative control is a textbook distraction tactic to hide his true role."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Jin.",
+            "Hoang (Witch) has no potions left."
+        ],
+        "night_eliminated": [
+            "Jin"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Guard",
+        "Nam": "Seer",
+        "Jin": "Villager",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

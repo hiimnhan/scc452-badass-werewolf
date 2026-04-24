@@ -1,0 +1,91 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player explicitly claims the Seer role and identifies a wolf",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Role information takes priority over behavioral analysis",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "a player uses phrases like 'textbook behavior' or 'classic wolf move'",
+      "action": "INCREASE_SUSPICION",
+      "rationale_short": "Attacking argument style instead of facts is a gaslighting red flag",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a Seer-claimed player is being counter-accused by a non-claiming player",
+      "action": "VOTE_NON_CLAIMANT",
+      "rationale_short": "Protects the Seer from being railroaded by behavioral arguments",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "investigated_result == WOLF",
+      "action": "EXPLICIT_CLAIM_ROLE",
+      "rationale_short": "Vague terms like 'confirmation' allow wolves to label you a manipulator",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "investigated_result == WOLF",
+      "action": "VOTE_TARGET",
+      "rationale_short": "Ensure target removal before the Seer is eliminated",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has explicitly claimed Seer",
+      "action": "PROTECT_SEER",
+      "rationale_short": "The Seer is the most valuable information source; prioritize their survival",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "no player has claimed Seer",
+      "action": "PROTECT_RANDOM_VILLAGER",
+      "rationale_short": "Maximize chance of survival when no known power role exists",
+      "confidence": 0.6,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == true AND target == SEER",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "Saving the Seer is the highest priority for villager victory",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == true AND target == BASELINE_VILLAGER",
+      "action": "HOLD_POTION",
+      "rationale_short": "Saving baseline villagers is inefficient during high-information phases",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ]
+}

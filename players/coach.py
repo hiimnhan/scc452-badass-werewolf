@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage
-from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME, MAX_RETRIES
+from constants import COACH_FEEDBACK_FILENAME, COACH_STRATEGY_FILENAME, COACH_DIRECTIVES_FILENAME, MAX_RETRIES
 from utils import write_to_file
 import re
 
@@ -56,6 +56,10 @@ class Coach:
             self._base_dir() / "game_logs" / self._scenario / f"game_{self._game_id}" / COACH_FEEDBACK_FILENAME
         ).resolve()
 
+    @property
+    def _coach_directives_path(self) -> Path:
+        return (self._base_dir() / "strategies" / self._scenario / COACH_DIRECTIVES_FILENAME).resolve()
+
     # ── Disk helpers ────────────────────────────────────────────────────
 
     def _load_coach_strategy(self) -> str:
@@ -78,6 +82,10 @@ class Coach:
     def _write_coach_feedback(self, feedback: str) -> None:
         """Write coach feedback to the file BasePlayer._coach_feedback reads."""
         write_to_file(self._coach_feedback_path, feedback)
+
+    def _write_coach_directives(self, directives: dict) -> None:
+        """Persist role-keyed directive set to strategies/{scenario}/coach_directives.json."""
+        write_to_file(self._coach_directives_path, json.dumps(directives, indent=2))
 
     # ── LLM call ────────────────────────────────────────────────────────
 
@@ -150,6 +158,9 @@ class Coach:
 
         # Step 2: Coach uses its freshly updated strategy to write their feedback to the players
         self._generate_coach_feedback(game_record)
+
+        # Step 3: Generate structured strategic directives for next game
+        self._generate_coach_directives(game_record)
 
     def _update_coach_strategy(self, game_record: str) -> None:
         """Review whether prior coaching advice helped villagers this game.
@@ -266,3 +277,73 @@ No extra text, no markdown, no code fences.
             self._write_coach_feedback("\n\n".join(feedback_parts))
         else:
             raise ValueError("Error: Coach completely failed to generate feedback.")
+
+    def _generate_coach_directives(self, game_record: str) -> None:
+        """Generate structured atomic directives per villager-side role.
+        Written to strategies/{scenario}/coach_directives.json.
+        BasePlayer loads and filters these by role+phase at decision time.
+        """
+        system = "You are an expert Werewolf game coach generating structured behavioral directives for villager-side players."
+
+        sources: list[str] = [f"=== Full Game Record ===\n{game_record}"]
+        if self._strategy:
+            sources.append(f"=== Your Coaching Strategy ===\n{self._strategy}")
+
+        context = "\n\n".join(sources)
+
+        prompt = f"""
+{context}
+
+Generate structured strategic directives for each villager-side role (Villager, Seer, Guard, Witch).
+
+Directive rules (STRICTLY ENFORCE):
+- Each directive MUST be ATOMIC: exactly one trigger, one action, one phase.
+- Trigger MUST reference only OBSERVABLE game state: round_num, alive_count, vote counts, confirmed_wolves_count, potion availability. NO subjective judgments.
+- phase MUST be one of: DEBATE, VOTE, NIGHT.
+- confidence is a float 0.0-1.0 based on how consistently this rule holds.
+- Generate at most 5 directives per role.
+- supersedes lists directive IDs this directive overrides.
+
+Respond with ONLY a JSON object:
+{{
+  "Villager": [
+    {{
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player has received 2+ accusations with no rebuttal this round",
+      "action": "SUPPORT_ACCUSATION",
+      "rationale_short": "undefended accusations signal guilt",
+      "confidence": 0.7,
+      "supersedes": []
+    }}
+  ],
+  "Seer": [
+    {{
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num <= 2 and considering revealing role",
+      "action": "DO_NOT_REVEAL",
+      "rationale_short": "early reveals die 80%+ of observed games",
+      "confidence": 0.9,
+      "supersedes": []
+    }}
+  ],
+  "Guard": [...],
+  "Witch": [...]
+}}
+No extra text, no markdown, no code fences.
+"""
+        directives: dict = {}
+
+        for attempt in range(MAX_RETRIES):
+            resp = self._call_model(system, prompt, max_tokens=2000)
+            if all(role in resp for role in ["Villager", "Seer", "Guard", "Witch"]):
+                directives = {role: resp[role] for role in ["Villager", "Seer", "Guard", "Witch"]}
+                break
+            else:
+                print(f"Warning: Coach failed to generate valid directives JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
+
+        if directives:
+            self._write_coach_directives(directives)
+        else:
+            print("Warning: Coach failed to generate directives after all retries. Keeping previous directives.")

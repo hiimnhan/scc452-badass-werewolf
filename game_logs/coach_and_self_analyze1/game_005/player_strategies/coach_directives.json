@@ -1,0 +1,91 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player claims a power role (Seer/Guard/Witch) and identifies a wolf",
+      "action": "VOTE_FOR_TARGET",
+      "rationale_short": "trust explicit role claims over behavioral analysis to remove wolves",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "a player uses phrases like 'textbook' or 'calculated maneuver' without presenting role info",
+      "action": "IGNORE_ARGUMENT",
+      "rationale_short": "meta-language is often used by wolves to mask lack of information",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "vote_count for a target exceeds 50% of alive_count based on behavior arguments only",
+      "action": "VOTE_ABSTAIN_OR_OPPOSE",
+      "rationale_short": "prevent wolf-led bandwagoning based on subjective behavioral cues",
+      "confidence": 0.6,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "result of last NIGHT investigation was WOLF",
+      "action": "PUBLICLY_CLAIM_ROLE_AND_TARGET",
+      "rationale_short": "explicit claims secure votes better than vague accusations",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "INVESTIGATE_HIGHEST_SUSPICION_PLAYER",
+      "rationale_short": "early data helps narrow down the wolf pool immediately",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has publicly claimed Seer",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "Seer is the highest priority target for wolves",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "no player has claimed Seer and round_num == 1",
+      "action": "PROTECT_RANDOM_VILLAGER",
+      "rationale_short": "prevents early elimination while waiting for Seer to emerge",
+      "confidence": 0.5,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has publicly claimed Seer and save_potion_available == true",
+      "action": "SAVE_CLAIMED_SEER",
+      "rationale_short": "ensures survival of the primary information source",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1 and save_potion_available == true",
+      "action": "SAVE_TARGETED_PLAYER",
+      "rationale_short": "preserves player count in the crucial early game",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ]
+}
