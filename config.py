@@ -28,7 +28,7 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-VILLAGER_MODEL = "google/gemma-3-4b-it"  # small — villager side
+VILLAGER_MODEL = "google/gemma-3-12b-it"  # small — villager side
 WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
 
 # ============================================================

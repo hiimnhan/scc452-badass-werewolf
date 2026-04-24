@@ -171,7 +171,7 @@ def assign_roles_round_robin() -> dict[str, Role]:
       ... and so on
     """
     global VILLAGER_ROLE_POOL
-    random.shuffle(VILLAGER_ROLE_POOL)
+    # random.shuffle(VILLAGER_ROLE_POOL)
     VILLAGER_ROLE_POOL = VILLAGER_ROLE_POOL[1:] + VILLAGER_ROLE_POOL[:1]
     return dict(zip(PLAYERS, VILLAGER_ROLE_POOL + ([Role.WEREWOLF] * len(WOLF_PLAYERS))))
 
