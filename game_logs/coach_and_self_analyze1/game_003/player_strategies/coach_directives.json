@@ -1,0 +1,82 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player has not spoken in the current round debate",
+      "action": "ASK_DIRECT_QUESTION",
+      "rationale_short": "Forces wolf to commit to a narrative instead of remaining a wildcard",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "one player has 3+ votes and 2+ other players are using identical wording in their reasoning",
+      "action": "VOTE_AGAINST_COORDINATED_BLOCK",
+      "rationale_short": "Prevents wolves from railroad-voting a villager using mirrored narratives",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1 and found a non-wolf",
+      "action": "PUBLICLY_CLEAR_TARGET",
+      "rationale_short": "Creates a verified pool of trusted players to prevent friendly fire",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num > 1 and a player has made a role claim that conflicts with previous results",
+      "action": "INVESTIGATE_CLAIMANT",
+      "rationale_short": "Prioritizes confirming contradictory claims to expose wolves",
+      "confidence": 0.9,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "PROTECT_RANDOM_VILLAGER",
+      "rationale_short": "Avoids wasting protection on wolves by not guessing early targets",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "a player has publicly claimed Seer or Witch",
+      "action": "PROTECT_CLAIMANT",
+      "rationale_short": "Ensures high-value utility roles survive to provide information",
+      "confidence": 0.9,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "potion_poison == 1 and no player has made a contradictory role claim",
+      "action": "HOLD_POISON",
+      "rationale_short": "Prevents catastrophic friendly fire caused by behavioral suspicion",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "potion_save == 1 and round_num == 1",
+      "action": "USE_SAVE",
+      "rationale_short": "Maximizes early game player count to maintain villager majority",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ]
+}

@@ -98,12 +98,20 @@ class Seer(BasePlayer):
         uninvestigated = [p for p in available_targets if p not in already_investigated]
         target_pool = uninvestigated if uninvestigated else available_targets
 
-        prompt = SEER_UNMASK_PROMPT_TEMPLATE.format(
+        base_prompt = SEER_UNMASK_PROMPT_TEMPLATE.format(
             name=self._name,
             target_pool=", ".join(target_pool),
             investigation_results=self._format_investigation_results(),
             note=self._note,
         )
+        prefix_parts = []
+        reflection = self._format_reflection()
+        if reflection:
+            prefix_parts.append(reflection)
+        directives = self._format_directives_for_phase("NIGHT")
+        if directives:
+            prefix_parts.append(directives)
+        prompt = ("\n\n".join(prefix_parts) + "\n\n" + base_prompt) if prefix_parts else base_prompt
 
         target = "None"
         analysis = "Default analysis: LLM failed to provide reasoning."
@@ -144,6 +152,13 @@ class Seer(BasePlayer):
             "Night",
             f"Chose to investigate {target}. Reason: {analysis}",
         )
+        self._write_reflection(action=f"investigated {target}", reasoning=analysis)
+        self._dcr_events.append({
+            "type": "night_seer",
+            "round": round_num,
+            "applicable_directive_ids": [d.get("id") for d in self._directives if d.get("phase") == "NIGHT"],
+            "action": f"investigated {target}",
+        })
         return target, analysis, resp
 
     def reveal_and_update(self, player_name: str, is_wolf: bool, round_num: int) -> None:

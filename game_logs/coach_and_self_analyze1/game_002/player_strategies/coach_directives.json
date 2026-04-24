@@ -1,0 +1,91 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "two players are mutually validating each other's claims with no other witnesses",
+      "action": "SKEPTICISM_VOTE",
+      "rationale_short": "mutual validation often mimics wolf pacts",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "another player makes an aggressive accusation against a role-claimer without evidence",
+      "action": "VOTE_ACCUSER",
+      "rationale_short": "unsubstantiated aggression often signals wolf framing",
+      "confidence": 0.6,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "INVESTIGATE_HIGHTEST_VOTE_GETTER",
+      "rationale_short": "clearing or convicting the primary target early maximizes info",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num <= 2 and no confirmed_wolves_count",
+      "action": "SOFT_CLAIM_INFO",
+      "rationale_short": "direct reveal leads to immediate wolf target",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1",
+      "action": "PROTECT_WITCH",
+      "rationale_short": "Witch is the most versatile asset to preserve early",
+      "confidence": 0.7,
+      "supersedes": []
+    },
+    {
+      "id": "GUARD-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "round_num > 1 and player_A was targeted in previous day debate",
+      "action": "PROTECT_PLAYER_A",
+      "rationale_short": "Day targets are high-probability Night targets",
+      "confidence": 0.9,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "round_num == 1 and elimination_count == 0",
+      "action": "SAVE_TARGET",
+      "rationale_short": "prevents early critical role loss",
+      "confidence": 0.8,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "potion_poison == available and no confirmed_wolves_count",
+      "action": "HOLD_POISON",
+      "rationale_short": "prevents friendly fire during high uncertainty",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1 and player has saved someone",
+      "action": "KEEP_ROLE_SECRET",
+      "rationale_short": "early Witch reveal invites target prioritization",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ]
+}

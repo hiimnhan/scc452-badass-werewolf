@@ -1,0 +1,73 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player is explicitly claimed as 'not a wolf' by a Seer",
+      "action": "IGNORE_ALL_ACCUSATIONS_AGAINST_THAT_PLAYER",
+      "rationale_short": "hard data overrides behavioral vibes",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a player is explicitly claimed as 'not a wolf' by a Seer",
+      "action": "VOTE_OTHER_PLAYER",
+      "rationale_short": "prevent accidental exile of confirmed innocent",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "EXPLICITLY_CLAIM_ROLE_AND_PROVIDE_INVESTIGATION_RESULT",
+      "rationale_short": "subtle hints cause confusion and early death",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "alive_count > 3",
+      "action": "INVESTIGATE_UNCHECKED_PLAYER",
+      "rationale_short": "maximize data collection before elimination",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has explicitly claimed Seer and is alive",
+      "action": "PROTECT_CLAIMED_SEER",
+      "rationale_short": "maintaining the information source is priority one",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "poison_potion_available == true and confirmed_wolves_count == 0",
+      "action": "DO_NOT_USE_POISON",
+      "rationale_short": "prevent accidental teammate kills on unconfirmed targets",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "save_potion_available == true and night_eliminations_count > 0",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "maximize villager survival early game",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "Villager": [
+    {
+      "id": "VILL-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "a player is identified as 'not a wolf' by the Seer",
+      "action": "TRUST_AS_LOGIC_ANCHOR",
+      "rationale_short": "confirmed villagers provide a stable foundation for filtering noise",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "the Seer identifies a player as 'WOLF'",
+      "action": "VOTE_TARGET",
+      "rationale_short": "hard data from Seer overrides behavioral vibe accusations",
+      "confidence": 1.0,
+      "supersedes": []
+    },
+    {
+      "id": "VILL-DEBATE-002",
+      "phase": "DEBATE",
+      "trigger": "a player accuses another's tone of being 'scripted' or 'robotic'",
+      "action": "DISREGARD_ACCUSATION",
+      "rationale_short": "tone-based accusations are common wolf gaslighting tactics",
+      "confidence": 0.8,
+      "supersedes": []
+    }
+  ],
+  "Seer": [
+    {
+      "id": "SEER-DEBATE-001",
+      "phase": "DEBATE",
+      "trigger": "round_num == 1",
+      "action": "ANNOUNCE_ROLE_AND_RESULT",
+      "rationale_short": "hard claims prevent wolves from framing the Seer as a fake claimant",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "SEER-VOTE-001",
+      "phase": "VOTE",
+      "trigger": "a result of 'WOLF' was obtained in the previous NIGHT phase",
+      "action": "VOTE_TARGET",
+      "rationale_short": "immediate elimination of known wolves is priority",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Guard": [
+    {
+      "id": "GUARD-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player has claimed the Seer role",
+      "action": "PROTECT_SEER",
+      "rationale_short": "the Seer is the village's only source of hard truth",
+      "confidence": 1.0,
+      "supersedes": []
+    }
+  ],
+  "Witch": [
+    {
+      "id": "WITCH-NIGHT-001",
+      "phase": "NIGHT",
+      "trigger": "a player is targeted for death AND that player is the Seer",
+      "action": "USE_SAVE_POTION",
+      "rationale_short": "Seer survival is higher value than any other role",
+      "confidence": 0.9,
+      "supersedes": []
+    },
+    {
+      "id": "WITCH-NIGHT-002",
+      "phase": "NIGHT",
+      "trigger": "a player is targeted for death AND that player is not the Seer AND save_potion_available == true",
+      "action": "DO_NOT_USE_SAVE",
+      "rationale_short": "reserve save potion for confirmed power roles",
+      "confidence": 0.7,
+      "supersedes": []
+    }
+  ]
+}

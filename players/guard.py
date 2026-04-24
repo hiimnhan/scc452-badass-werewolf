@@ -35,11 +35,19 @@ class Guard(BasePlayer):
         if not available_targets:
             return "None", "No valid targets to protect.", {"error": "No valid targets to protect."}
 
-        prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
+        base_prompt = GUARD_PROTECT_PROMPT_TEMPLATE.format(
             name=self._name,
             note=self._note,
             list_player=", ".join(available_targets)
         )
+        prefix_parts = []
+        reflection = self._format_reflection()
+        if reflection:
+            prefix_parts.append(reflection)
+        directives = self._format_directives_for_phase("NIGHT")
+        if directives:
+            prefix_parts.append(directives)
+        prompt = ("\n\n".join(prefix_parts) + "\n\n" + base_prompt) if prefix_parts else base_prompt
         
         target = "None"
         analysis = "Default analysis: LLM failed to provide reasoning."
@@ -86,5 +94,11 @@ class Guard(BasePlayer):
             round_num, "Night", f"Protected {target}. Reason: {analysis}"
         )
         self.last_guarded_player = target
-        
+        self._write_reflection(action=f"protected {target}", reasoning=analysis)
+        self._dcr_events.append({
+            "type": "night_guard",
+            "round": round_num,
+            "applicable_directive_ids": [d.get("id") for d in self._directives if d.get("phase") == "NIGHT"],
+            "action": f"protected {target}",
+        })
         return target, analysis, resp
