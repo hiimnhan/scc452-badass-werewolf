@@ -1,5 +1,7 @@
 COACH_FEEDBACK_FILENAME = "coach_feedback.txt"
 COACH_STRATEGY_FILENAME = "coach_strategy.txt"
+COACH_DIRECTIVES_FILENAME = "coach_directives.json"
+DIRECTIVES_UPTAKE_FILENAME = "directives_uptake.json"
 
 PLAYER_FINAL_STRATEGY_FILENAME = "{name}_strategy.txt"
 PLAYER_NOTE_FILENAME = "{name}_{role}_note.md"
