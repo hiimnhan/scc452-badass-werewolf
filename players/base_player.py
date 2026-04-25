@@ -654,22 +654,30 @@ class BasePlayer(ABC):
             SystemMessage(content=self._setup_prompt),
             HumanMessage(content=prompt),
         ]
+        
         # Create a dictionary of kwargs so we can dynamically adjust for Google vs OpenAI
         kwargs = {"timeout": timeout}
+        model_class_name = type(self._model).__name__
 
         # Fix for the LangChain/Google kwarg bug
-        if "GoogleGenerativeAI" not in type(self._model).__name__:
+        if "GoogleGenerativeAI" not in model_class_name:
             # Only enforce max_tokens at the invoke level for OpenAI/Anthropic.
             # Gemini will naturally stop based on the prompt's word limits!
             kwargs["max_tokens"] = max_tokens
 
-        resp = self._model.invoke(messages, **kwargs).content
+        # Ensure LangChain's local cache is bypassed for this specific call
+        run_config = {"cache": False}
+
+        # Pass the config explicitly to the invoke method
+        resp = self._model.invoke(messages, config=run_config, **kwargs).content
+        
         if isinstance(resp, list):
             resp = " ".join(block.get("text", "") if isinstance(block, dict) else str(block) for block in resp).strip()
         elif isinstance(resp, str):
             resp = resp.strip()
 
         result: dict = {}
+        
         # 1. Clean up the response to extract just the JSON block
         clean_resp = resp.strip()
 

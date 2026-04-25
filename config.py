@@ -12,6 +12,7 @@ MODEL_PROVIDERS = {
     "gpt-4-turbo": ChatOpenAI,
     "gpt-5-nano": ChatOpenAI,
     "deepseek-ai/DeepSeek-V4-Flash": ChatOpenAI,
+    "deepseek-ai/DeepSeek-V3.2": ChatOpenAI,
     "meta-llama/Meta-Llama-3.1-8B-Instruct": ChatOpenAI,
     "meta-llama/Llama-3.3-70B-Instruct": ChatOpenAI,
     # "llama-3.1-8b-instant": ChatGroq,
