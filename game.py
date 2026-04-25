@@ -781,11 +781,11 @@ class GameState:
 
         # --- B. Format Secret Action Logs ---
         
-        write_to_file(WOLF_DEBATE_LOG_FILENAME, pd.DataFrame(gs._wolf_debate_log, columns=["round_number", "speaker_name", "statement", "target", "analysis"]))
-        write_to_file(WOLF_TARGET_LOG_FILENAME, pd.DataFrame(gs._wolf_target_log, columns=["round_number", "target"]))
-        write_to_file(GUARD_LOG_FILENAME      , pd.DataFrame(gs._guard_log      , columns=["round_number", "target", "analysis"]))
-        write_to_file(SEER_LOG_FILENAME       , pd.DataFrame(gs._seer_log       , columns=["round_number", "target", "is_wolf", "analysis"]))
-        write_to_file(WITCH_LOG_FILENAME      , pd.DataFrame(gs._witch_log      , columns=["round_number", "saved", "poisoned", "analysis"]))
+        write_to_file(player_night_action_log_dir / WOLF_DEBATE_LOG_FILENAME, pd.DataFrame(gs._wolf_debate_log, columns=["round_number", "speaker_name", "statement", "target", "analysis"]))
+        write_to_file(player_night_action_log_dir / WOLF_TARGET_LOG_FILENAME, pd.DataFrame(gs._wolf_target_log, columns=["round_number", "target"]))
+        write_to_file(player_night_action_log_dir / GUARD_LOG_FILENAME      , pd.DataFrame(gs._guard_log      , columns=["round_number", "target", "analysis"]))
+        write_to_file(player_night_action_log_dir / SEER_LOG_FILENAME       , pd.DataFrame(gs._seer_log       , columns=["round_number", "target", "is_wolf", "analysis"]))
+        write_to_file(player_night_action_log_dir / WITCH_LOG_FILENAME      , pd.DataFrame(gs._witch_log      , columns=["round_number", "saved", "poisoned", "analysis"]))
 
         # # Wolf Debate Log
         # wolf_lines = ["# Wolf Debate and Eliminations"]
