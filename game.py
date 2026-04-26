@@ -647,7 +647,7 @@ class GameState:
             gs._phase = Phase.END
             game_status = "After voting, the game ends."
             
-            round_log = gs._suspicion_log.setdefault(["end_game"], {}) # Log the end game suspicion score of each player. We don't log if the game ends at night.
+            round_log = gs._suspicion_log.setdefault("end_game", {}) # Log the end game suspicion score of each player. We don't log if the game ends at night.
             for name in gs._alive_players:
                 round_log[name] = copy.deepcopy(player_objects[name]._suspicion)
 
