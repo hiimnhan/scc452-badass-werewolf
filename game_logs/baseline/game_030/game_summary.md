@@ -1,0 +1,52 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Seer
+**Cong:** Guard
+**Nam:** Witch
+**Jin:** Villager
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Cong (Guard) chose to protect Nhan.
+• Nhan (Seer) investigated Cong. Cong is NOT a wolf.
+• Nam (Witch) used SAVE potion on Nhan and used POISON potion on Nhan
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Cong:** Nhan's elimination is concerning. Nam's silence regarding this event warrants close observation. I suggest we focus our attention on understanding Nam's reasoning.
+**Nam:** Cong's immediate focus on me after Nhan's death is peculiar. It feels like a deliberate attempt to deflect attention. Let's examine Cong's own actions more closely.
+**Cong:** Nam's immediate deflection is a clear tactic. His eagerness to shift blame suggests he's attempting to obscure his own involvement in Nhan's demise. I propose we scrutinize Nam's claims closely.
+**Nam:** Cong's eagerness to accuse me immediately after Nhan's death rings false. His redirection feels calculated, designed to obscure his own actions. I suggest we examine Cong's motives more closely.
+**Cong:** Nam's immediate and aggressive deflection onto me after Nhan's death is highly suspect. His eagerness to shift blame suggests he's attempting to obscure his own involvement.
+**Hoang:** Cong's repeated accusations of deflection are concerning. His intensity feels performative and designed to distract. I suggest we examine Cong's reasoning more closely, rather than immediately focusing on Nam.
+
+### Votes
+**Cong** voted for **Nam**
+> Cong voted to exile Nam. Reason: Nam's behavior is highly suspicious. His immediate deflection and accusations are a clear attempt to manipulate the discussion and divert attention from his own actions. We must prioritize eliminating potential wolves.
+**Nam** voted for **Cong**
+> Nam voted to exile Cong. Reason: Cong's behavior immediately after Nhan's elimination is highly suspicious. His focus on deflecting blame onto me feels calculated and designed to avoid scrutiny.
+**Jin** voted for **Cong**
+> Jin voted to exile Cong. Reason: Cong's behavior is highly suspect. His immediate focus on Nam and repeated accusations of deflection feel calculated and designed to distract from his own actions. We need to examine his reasoning more closely.
+**Hoang** voted for **Cong**
+> Hoang voted to exile Cong. Reason: Cong's accusations of deflection are excessive and lack supporting evidence. He seems more focused on accusing than on reasoned discussion.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: The exchange between Cong and Nam has devolved into a circular loop of mirrored accusations. However, Nam's responses exhibit a pattern of validity desperation, focusing entirely on Cong rather than providing an objective defense. This reactive behavior is often a marker for those attempting to hide their alignment.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: Nam's responses are purely reactive. While Cong is aggressive, Nam's consistent pattern of deflection without providing any counter-evidence creates a significant behavioral footprint of guilt. The cognitive dissonance in Nam's defense suggests he is attempting to hide his involvement.
+
+**Day Exiled:** Cong
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Hoang.
+• Nam (Witch) has no potions left.
+**Night Eliminations:** Hoang
+---

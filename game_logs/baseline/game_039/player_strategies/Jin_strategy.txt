@@ -1,0 +1,45 @@
+{
+  "Night Phase": [
+    "Prioritize Seer protection above all else. Losing the Seer dramatically reduces information gathering.",
+    "IF Save potion available and wolves target a player actively reasoning and attempting to identify wolves: SAVE the player. Disrupting their strategy is paramount.",
+    "IF no strong protection candidates and Guard protection is available: Protect a player consistently exhibiting logical, evidence-based reasoning, avoiding consecutive protection. Prioritize Seer if alive.",
+    "Continuously monitor wolf targets for patterns. Prioritize protection based on observed threats, particularly those targeting logical thinkers.",
+    "Once Save potion is used, focus solely on Guard protection, prioritizing the Seer and logical thinkers.",
+    "If Seer is alive, and the wolves target a player who is actively accusing others, consider protecting the accused. Wolves often target vocal accusers to silence them."
+  ],
+  "Day Discussion": [
+    "Immediately identify players attempting to control the narrative or redirect blame without reasoning. Flag these players for scrutiny.",
+    "Be highly suspicious of rapid, evidence-free accusations and aggressive defensiveness. Question the accuser's motives.",
+    "IF multiple people claim Seer: Remain largely silent and observe interactions. Focus on inconsistencies in their claims and arguments. Avoid early opinions. Gauge the validity of each claim by analyzing how others react to their statements. Do not reveal Seer status.",
+    "Frame observations as objective analysis, not accusations. Release information gradually, focusing on behavioral patterns and inconsistencies.",
+    "Exercise extreme caution with mirroring accusations. Prioritize observing synchronized actions and consider motivations. Look for subtle cues like timing and phrasing. Is it genuine agreement or coordinated tactic?",
+    "IF falsely accused: Immediately vote for the most suspicious player, articulating reasoning and highlighting the accuser's flawed logic. Demonstrate rational thinking and avoid defensiveness.",
+    "Observe who defends the accuser – potential wolf pack behavior. Prioritize observing those consistently supporting aggressive accusers.",
+    "Analyze the speed and intensity of accusations. Wolves often rush to eliminate suspects to control the flow of information. Be wary of fast votes.",
+    "IF a player consistently uses deflection tactics (redirecting blame, questioning accusers’ motives instead of addressing the core issue): Mark them as highly suspicious.",
+    "IF a player consistently asks leading questions designed to misdirect the conversation: Note their intent and evaluate their credibility.",
+    "If a player's arguments consistently rely on attacking others rather than presenting evidence, view them with high suspicion."
+  ],
+  "Voting Phase": [
+    "Prioritize eliminating the most likely werewolf based on accumulated information and observed behavioral patterns. Focus on those demonstrating deflection or coordinated defense.",
+    "IF accused: Vote for a known/highly suspected werewolf, clearly stating reasoning. Solidify my position as a logical villager.",
+    "Exercise caution before bandwagoning; analyze if wolf-orchestrated. Look for coordinated voting patterns and assess the motivations behind the initial accusation.",
+    "In ties: Vote for the most immediate threat (likely werewolf).",
+    "IF previous exile flimsy: Vote for the accuser to disrupt strategy and prevent further manipulation.",
+    "IF player consistently defends baseless accusations: Vote for them to dismantle alliances.",
+    "If uncertain, abstain – demonstrating careful consideration rather than impulsive action.",
+    "IF multiple players exhibit deflection tactics: Prioritize voting out the one most consistently using it and/or most effectively diverting suspicion.",
+    "If a player consistently attempts to shift blame without providing evidence, vote against them."
+  ],
+  "General Strategy": [
+    "Maintain ambiguity about my role until strategically advantageous. Observe and gather information.",
+    "Adapt strategy based on game dynamics and observed player behaviors. Be flexible and responsive.",
+    "Continuously observe and question subtle cues. Pay attention to word choice and behavior.",
+    "Avoid premature trust. Werewolves are deceptive; look for contradictions between words and actions.",
+    "Disrupt wolf pack behavior by strategically voting and exposing coordinated actions.",
+    "Prioritize dismantling wolf alliances. Target those who consistently defend each other.",
+    "Be prepared to sacrifice a potentially innocent villager to prevent a wolf victory, but only as a last resort and with clear, logical reasoning.",
+    "Focus on identifying patterns of deflection and redirection as strong indicators of potential werewolf activity.",
+    "Pay close attention to players who consistently attack others’ reasoning without offering their own. These players are often wolves attempting to derail the discussion."
+  ]
+}

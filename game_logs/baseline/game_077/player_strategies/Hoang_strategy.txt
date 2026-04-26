@@ -1,0 +1,43 @@
+{
+  "Night Phase": [
+    "Prioritize Seer Protection: ALWAYS protect the Seer unless a confirmed werewolf directly targets a critical villager.",
+    "Early Investigation (Seer Alive): Investigate players exhibiting unusual silence or sudden accusation shifts, especially those aggressively defending others.",
+    "Witch Potion Usage (Seer Alive, Wolf Target Identified): SAVE confirmed wolf target, then POISON aggressive deflector.",
+    "Witch Potion Usage (Seer Eliminated, Clear Deflector): POISON consistent deflector. Prioritize deflectors who rapidly change accusations.",
+    "Witch Potion Usage (Seer Eliminated, No Clear Target): Rotate protection between analytical players. If absent, protect the most vocal player while monitoring for deflection. Favor players who ask questions.",
+    "Guard Protection Adjustment: IF Guard protects a wolf, prioritize Seer next night; scrutinize consistent protection of single player without justification. Immediately suspect the Guard."
+  ],
+  "Day Discussion": [
+    "Immediate Accusation Scrutiny: Demand reasoning and evidence for swift accusations. Redirect focus to accuser's motives if lacking. Question their initial reaction.",
+    "Seer Claim Verification (Multiple Claimants): Demand verifiable evidence. Challenge inconsistencies. Abstain if ambiguous.",
+    "Defense Pattern Analysis: Identify and scrutinize defenders shielding suspicious individuals. Prioritize consistent defenders lacking justification. Note which defenders consistently support each other.",
+    "Mirroring Detection: Immediately call out mirroring accusations. Analyze accuser’s motive – is it deflection?",
+    "Aggressive Accusation Response (Targeted): Highlight accuser’s lack of evidence and frame it as deflection. Ask for specific evidence, not just feelings.",
+    "Rapid Redirection Assessment: Question motives and track redirection frequency. Prioritize identifying consistent deflectors avoiding direct questions.",
+    "Targeted Questioning: Probe claims lacking evidence with pointed questions, focusing on inconsistencies. Ask 'Why?' repeatedly.",
+    "Control Narrative: Steer discussion towards logical deduction; avoid emotional appeals. Focus on observable behavior.",
+    "Early Game Observation: Focus on observing behavior and reasoning patterns before accusations. Identify players who are hesitant to speak.",
+    "Pattern Recognition: Prioritize observing recurring patterns of behavior. Note players who consistently agree with others."
+  ],
+  "Voting Phase": [
+    "Confirmed Wolf Vote: Immediate exile.",
+    "Consensus-Based Voting (Unsure): Prioritize disruptive players shielding suspicious individuals. Prioritize players exhibiting deflection. Assess who is most actively trying to control the narrative.",
+    "Wolf Protector Targeting: Vote for players consistently shielding suspicious individuals, especially if they lack justification.",
+    "Strategic Abstention (Fracture Risk): Abstain ONLY if a vote will fracture the village and benefit wolves. Be wary of manufactured ties.",
+    "Logical Alignment: Align votes with the group demonstrating the most logical reasoning. Evaluate who is asking the best questions.",
+    "Deflection Targeting: Prioritize voting out consistent deflectors, even if other suspects are present.",
+    "Tie-Breaking Strategy: Abstain if a tie benefits wolves; prioritize information gathering. If forced to break a tie, vote based on who seems most likely to be a wolf based on accumulated evidence.",
+    "Initial Vote: Abstain unless a very clear suspect emerges.",
+    "Deflector Confirmation: Prioritize exile of consistent deflectors, even if other suspects are present."
+  ],
+  "Post-Exile Analysis": [
+    "Review Exiled Player’s Arguments: Analyze reasoning and statements for wolf tactics or deflection. Look for inconsistencies or shifts in strategy.",
+    "Identify Remaining Defenders: Scrutinize players who consistently defended the exiled player. They are likely complicit.",
+    "Adjust Suspicions: Revise suspicions based on the exiled player’s role and behavior. Consider how their elimination impacts the remaining players."
+  ],
+  "Information Sharing": [
+    "Strategic Seer Revelation: Reveal findings strategically, prioritizing clarity and minimizing manipulation. Don’t reveal findings that could benefit wolves.",
+    "Targeted Information Dissemination: Share specific information with logical players. Avoid sharing with those who are easily manipulated.",
+    "Withhold Sensitive Information: Avoid revealing information benefiting werewolves. Be cautious about revealing suspicions."
+  ]
+}

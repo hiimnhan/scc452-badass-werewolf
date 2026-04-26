@@ -1,0 +1,75 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Seer
+**Nam:** Guard
+**Jin:** Witch
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Nhan.
+• Cong (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Jin (Witch) used SAVE potion on Nhan and used POISON potion on Nhan
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Jin:** Nhan's death reveals the wolves are actively hunting. I strongly suggest we observe Cong and Nam closely; they were both potential targets last night.
+**Riley:** Jin, this is a blatant power grab. You're attempting to dictate the narrative and isolate Cong and Nam immediately to deflect attention from yourself. This kind of coordinated deflection is a classic wolf move to control the village's focus from the start.
+**Meg:** Riley is spot on. Jin, you're trying way too hard to lead us toward Cong and Nam the second we wake up. That kind of calculated direction is exactly how wolves manufacture a target to look like a helpful villager. It's too forced.
+**Jin:** Nhan's death proves the wolves are actively targeting individuals. Riley's accusation is a distraction. I suggest we focus on Cong and Nam, who were both potential targets last night and deserve close scrutiny.
+**Riley:** Jin, the fact that you're ignoring our concerns and just repeating your script is a massive red flag. You're gaslighting the entire group to maintain your narrative control. This isn't leadership; it's a desperate attempt to frame others. We need to exile Jin now.
+**Meg:** Jin, it's honestly pathetic. You're just looping the same argument while ignoring everyone else. This isn't logic; it's a script. You're so desperate to frame Cong and Nam that you've completely stopped listening to the village. We can't trust someone this manipulative. Vote Jin.
+
+### Votes
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin's insistence on directing suspicion elsewhere, ignoring valid concerns, is highly suspicious. We need to exile him before he manipulates us further.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin's behavior is manipulative and controlling. He's repeatedly tried to steer suspicion towards others while ignoring legitimate concerns. We need to exile him to protect the village.
+**Jin** voted for **Riley**
+> Jin voted to exile Riley. Reason: Riley's constant accusations of deflection are a classic wolf tactic. Their behavior with Meg is suspicious and aims to manipulate the village. We must eliminate this threat.
+**Hoang** voted for **Jin**
+> Hoang voted to exile Jin. Reason: Jin's defensiveness and repetitive arguments suggest a deliberate attempt to manipulate us. We must prioritize eliminating those who try to control the discussion, and Jin fits that description.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Jin is completely ignoring the group's concerns and repeating a script to frame Cong and Nam. This blatant attempt at narrative control and gaslighting is a classic wolf strategy to isolate innocents. We cannot let this manipulation continue. Jin must be exiled.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: Jin is completely ignoring the group and just repeating the same lines. This isn't how a villager acts; it's a scripted attempt to manipulate us into attacking Cong and Nam. We can't let this kind of control slide. Jin has to go.
+
+**Day Exiled:** Jin
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Cong.
+• Nam (Guard) chose to protect Cong.
+• Cong (Seer) investigated Riley. Riley is a wolf.
+**Night Eliminations:** None
+
+### Day Debate
+**Riley:** Nobody died last night. That's a classic wolf move—coordinated deflection to make us feel safe while they identify the power roles. Nam, you've been way too quiet. This feels like a calculated power grab to avoid scrutiny. Explain yourself.
+**Cong:** Riley's deflection tactics are transparent. His insistence on Nam's 'power grab' is a classic wolf strategy to divert attention. I believe Riley is the primary threat.
+**Riley:** Cong, your attempt to mirror my logic is a textbook wolf move. You're using coordinated deflection to isolate me because you survived the night. It's a blatant power grab to control the narrative. The village can't trust someone this desperate to flip the script.
+**Cong:** Riley's behavior is increasingly erratic and defensive. His accusations against Nam and my mirroring of his tactics are transparent attempts to deflect. Riley is the most dangerous player alive.
+**Riley:** Cong is practically begging us to ignore him. This 'erratic' label is a desperate attempt at narrative control to gaslight the village into trusting a survivor. He's mirroring my logic to hide his own guilt. We exile Cong now or we lose.
+**Meg:** Riley is right. Cong, your constant 'mirroring' and desperate attempts to label Riley as 'erratic' are too calculated. It sounds like a script. You're trying to gaslight us into ignoring the fact that you're the only one acting this defensive. We need to exile Cong.
+
+### Votes
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: Riley's behavior is increasingly erratic and manipulative. He's attempting to deflect blame and control the narrative. Riley must be exiled to protect the village.
+**Nam** voted for **Riley**
+> Nam voted to exile Riley. Reason: Riley's behavior is increasingly erratic and defensive. His coordinated attacks with Meg are a clear attempt to deflect suspicion and control the narrative. Exile Riley to protect the village.
+**Hoang** voted for **Cong**
+> Hoang voted to exile Cong. Reason: Cong's defensive mirroring of Riley's accusations is too calculated. It's a classic deflection tactic, and I believe he's working with Riley and Meg.
+**Riley** voted for **Cong**
+> Riley voted to exile Cong. Reason: Cong's desperate attempts to label my logic as 'erratic' are a clear sign of narrative control. He's using coordinated deflection to hide the fact that he survived the night. For the safety of the village, we must exile him now.
+**Meg** voted for **Cong**
+> Meg voted to exile Cong. Reason: Cong's responses feel manufactured. He's just repeating Riley's accusations back at him instead of providing actual evidence. This kind of calculated deflection is exactly how a wolf tries to survive when they're cornered. We can't risk keeping him.
+
+**Day Exiled:** Cong
+---

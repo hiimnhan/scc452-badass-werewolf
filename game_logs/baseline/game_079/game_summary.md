@@ -1,0 +1,101 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Villager
+**Nam:** Seer
+**Jin:** Guard
+**Hoang:** Witch
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Jin (Guard) chose to protect Nhan.
+• Nam (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Hoang (Witch) used SAVE potion on Nhan and used POISON potion on Nhan
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Nam:** Nhan's death is concerning. Hoang's aggressive defense of him before his elimination raises significant questions. I request Hoang explain his reasoning for such staunch support.
+**Hoang:** Nam's immediate questioning of my actions regarding Nhan feels rushed and performative. His eagerness to shift blame suggests deflection. I propose we scrutinize Nam's reasoning.
+**Cong:** Hoang's immediate redirection and accusations of 'performative' behavior after Nam's reasonable inquiry into his defense of Nhan is highly suspect. His response lacks substance and avoids addressing the original question.
+**Hoang:** Nam's immediate and forceful questioning of my actions, especially so soon after Nhan's death, rings false. His defensiveness is a clear attempt at deflection. I nominate Nam for exile.
+**Nam:** Hoang's immediate redirection and accusations of 'performative' behavior are a blatant attempt to deflect scrutiny. He refuses to answer the simple question of why he defended Nhan so strongly. I believe Hoang is a werewolf.
+**Cong:** Hoang's immediate and aggressive deflection, coupled with his refusal to address Nam's inquiry, is deeply concerning. I second Nam's nomination.
+
+### Votes
+**Cong** voted for **Hoang**
+> Cong voted to exile Hoang. Reason: Hoang's behavior is evasive and manipulative. He deflects scrutiny instead of addressing legitimate concerns about his defense of Nhan. His actions warrant immediate investigation.
+**Nam** voted for **Hoang**
+> Nam voted to exile Hoang. Reason: Hoang's behavior after Nhan's death is deeply concerning. His redirection and refusal to explain his defense are classic deflection tactics. I believe he is a werewolf.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Hoang's behavior is highly suspicious. His immediate redirection of blame and refusal to address legitimate questions indicate he is attempting to hide something. I believe he is a werewolf.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam's behavior is consistently evasive and accusatory, lacking logical substance. He attempts to deflect scrutiny instead of addressing legitimate concerns. I believe he is a threat to the village.
+**Riley** voted for **Hoang**
+> Riley voted to exile Hoang. Reason: Hoang's refusal to answer Nam's question and his immediate pivot to aggression are classic deflection tactics. The lack of substantive evidence in his counter-accusations suggests he is trying to manipulate the narrative to avoid scrutiny.
+**Meg** voted for **Hoang**
+> Meg voted to exile Hoang. Reason: Hoang's responses show significant cognitive friction. Rather than addressing Nam's specific question about Nhan, he relies on circular accusations of 'deflection'. This behavioral pattern suggests he is attempting to manipulate the conversation to avoid scrutiny.
+
+**Day Exiled:** Hoang
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nam.
+• Jin (Guard) chose to protect Nam.
+• Nam (Seer) investigated Cong. Cong is NOT a wolf.
+**Night Eliminations:** None
+
+### Day Debate
+**Nam:** Riley's immediate defense of Hoang, despite my clear questioning of his deflection, raises serious concerns. Their quick alliance with someone exhibiting such suspicious behavior demands scrutiny.
+**Cong:** Riley's unwavering defense of Hoang, despite Nam's valid concerns, is deeply unsettling. Their quick alliance points to coordinated deflection. I believe Riley is working with Hoang.
+**Nam:** Riley's unwavering defense of Hoang, coupled with Cong's sudden agreement, is highly suspicious. Their coordinated support, despite clear evidence of deflection, suggests a deliberate attempt to shield a werewolf.
+**Cong:** Riley's defense of Hoang is too immediate and unwavering. Their insistence on shielding Hoang, despite clear deflection, indicates coordination. I vote Riley.
+**Riley:** Nam and Cong are operating in a feedback loop, mirroring each other's language to manufacture a narrative against me. This isn't logic; it's a coordinated attempt to hijack the vote. Nam's aggressive leadership is a classic cover for a wolf trying to control the town.
+**Cong:** Riley's accusation of manufactured narrative is a blatant deflection. Their quick defense of Hoang and now this accusation are transparent attempts to redirect blame. I vote Riley.
+
+### Votes
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: Riley's attempts to redirect blame and accuse others of manipulation are transparent deflection. Their unwavering defense of Hoang, despite clear concerns, confirms their complicity.
+**Nam** voted for **Riley**
+> Nam voted to exile Riley. Reason: Riley's defense of Hoang is too immediate and their accusations against Nam and Cong are transparent deflection. Their behavior patterns suggest they are actively shielding a wolf.
+**Jin** voted for **Riley**
+> Jin voted to exile Riley. Reason: Riley's unwavering defense of Hoang and current deflection tactics, mirroring Cong's arguments, suggest a coordinated effort to shield a wolf. Their narrative lacks substance and relies on manufactured accusations.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: Nam is pushing this narrative far too aggressively. The way he and Cong are echoing each other feels like a coordinated effort to force an exile without actual evidence. This kind of tunnel vision is exactly how wolves isolate and remove innocent villagers.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: Nam's insistence on driving this narrative feels like an information monopoly. He is pushing for an exile based on a feedback loop with Cong, which creates too much cognitive friction to be genuine villager logic.
+
+**Day Exiled:** Riley
+---
+
+## Round 3
+**Night Actions:**
+• Meg (Wolf) targeted Nam.
+• Jin (Guard) chose to protect Cong.
+• Nam (Seer) investigated Jin. Jin is NOT a wolf.
+**Night Eliminations:** Nam
+
+### Day Debate
+**Jin:** Cong's unwavering support for Riley, despite Riley's blatant deflection, is deeply concerning. His silence now is even more telling. I believe Cong is working with Riley to mislead us.
+**Cong:** Jin's accusation is a deflection. My questioning of Riley's defenses of Hoang was logical. Jin's sudden attack without evidence suggests he's protecting someone.
+**Jin:** Cong's defense of Riley was not logical; it was a coordinated effort to shield a blatant deflector. His attempts to now shift blame onto me are further evidence of his deceit. I vote Cong.
+**Cong:** Jin's accusation is a blatant deflection. He offers no concrete evidence, only accusations of coordinated effort. His sudden aggression points to protecting someone else.
+**Jin:** Cong's continued deflection and attempts to paint me as deceptive are blatant. His mirroring of Riley's tactics confirms my suspicions. I maintain my vote: Cong.
+**Cong:** Jin's accusations are baseless and serve only to deflect from his own inconsistencies. He mirrors Riley's tactics, attempting to control the narrative. I vote Jin.
+
+### Votes
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin's accusations are baseless deflections. His mirroring of Riley's tactics shows a coordinated effort to mislead. He offers no substance, only aggression.
+**Jin** voted for **Cong**
+> Jin voted to exile Cong. Reason: Cong's unwavering support for Riley and his attempts to shift blame demonstrate a clear pattern of deception. He is actively working to mislead us and protect a fellow werewolf.
+**Meg** voted for **Cong**
+> Meg voted to exile Cong. Reason: Cong's responses have become repetitive, mirroring the same defensive patterns we've seen before. This circular logic creates too much cognitive friction to be a genuine defense. Jin's analysis of the coordination patterns is more consistent with the available data.
+
+**Day Exiled:** Cong
+---

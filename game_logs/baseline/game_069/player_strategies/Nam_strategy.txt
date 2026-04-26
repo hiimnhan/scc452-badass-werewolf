@@ -1,0 +1,39 @@
+{
+  "Night Phase": [
+    "Prioritize protecting the Seer if identified. Their information is paramount.",
+    "If no Seer is apparent, protect the player demonstrating the most consistent and logical reasoning during the day phase. Focus on those directly addressing accusations with evidence.",
+    "Rotate protection to gather information, avoiding consecutive protection unless a clear threat or Seer exists.",
+    "IF the Witch uses the Save potion on my protected player, immediately suspect the Wolves targeted that player. Assess their day behavior – look for relief or unexpected support.",
+    "IF the Witch uses the Poison potion on my protected player, it is a critical indicator of Wolf strategy. Reassess all players, prioritizing those who seemed relieved or benefited.",
+    "If the Save potion is depleted, prioritize protecting players who consistently demonstrate logical reasoning and actively contribute to discussion."
+  ],
+  "Day Discussion": [
+    "Observe silently for 5-7 minutes to establish baseline behavior and identify initial alliances.",
+    "Immediately challenge claims of Seer or Witchhood with direct, evidence-based questions. Demand specific justifications.",
+    "Focus on identifying deflection attempts after a kill/exile. Note relieved players and redirection tactics.",
+    "IF multiple players claim Seer, scrutinize the *most aggressive* claimant; question their certainty and evidence.",
+    "IF a player quickly involves others without evidence, challenge their claims and avoid mirroring their behavior. Demand justification.",
+    "Document inconsistent claims and present them as questions to the group. Highlight contradictions.",
+    "IF a player changes votes without explanation, strongly suspect them and question their reasoning. Demand a rationale.",
+    "Be wary of defenders lacking logical reasoning; challenge their motives and demand explicit reasoning.",
+    "Pay attention to emotional volatility and defensive reactions, but consider context.",
+    "IF a player repeatedly frames arguments as 'deflection,' suspect manipulation and probe their reasoning intensely. Look for concrete accusations.",
+    "IF a player makes claims about others' behavior (e.g., 'deflection'), ask *why* they believe this. Demand specific examples."
+  ],
+  "Voting Phase": [
+    "Exile verified wolves immediately, prioritizing concrete evidence over speculation.",
+    "Vote out consistent deflectors benefiting the wolves. Prioritize players who repeatedly steer suspicion away from themselves.",
+    "Vote against defenders of suspicious players lacking logical reasoning. Challenge their defenses.",
+    "IF multiple players push for the same exile with weak reasoning, vote against the majority to disrupt coordination.",
+    "IF a vote is tied, assess who benefits most and vote strategically to disrupt their plans.",
+    "When in doubt, vote for the player most aggressively defending another without justification.",
+    "IF a player makes vague or non-committal statements, vote against them to discourage ambiguity."
+  ],
+  "Post-Exile Analysis": [
+    "Thoroughly analyze exile justifications for deception patterns. Look for attempts to frame others.",
+    "Note relief/deflection attempts following the exile. Identify beneficiaries and their motivations.",
+    "Re-evaluate suspicions based on new information and shifting alliances.",
+    "After potion depletion (if Witch), subtly manipulate voting by sowing doubt about suspicious players, focusing on inconsistencies.",
+    "Immediately re-assess players who seemed relieved by the exile; they likely benefited from it."
+  ]
+}

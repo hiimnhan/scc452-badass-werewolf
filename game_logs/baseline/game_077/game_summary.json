@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Cong (Witch) used SAVE potion on Jin"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan has been cleared. Let's focus on establishing a baseline of behavior. I'll be observing each of you closely to identify any inconsistencies or patterns that warrant further scrutiny."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's sudden declaration of my clearance feels\u2026 convenient. Let's establish a baseline, yes, but I suggest we examine Hoang's motivations for this hasty judgment."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's immediate questioning of Hoang's judgment is unusual. Why so quick to deflect attention? Let's examine Nhan's behavior closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's immediate questioning of my clearance raises concerns. While establishing a baseline is important, his swift deflection suggests a possible attempt to redirect suspicion. I propose we observe Nhan's reactions carefully."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's eagerness to clear me, followed by immediate scrutiny of my response, is suspicious. His actions appear designed to deflect attention. I propose we examine Hoang's motivations more closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan's immediate and aggressive questioning of Hoang's clearance, followed by mirroring defensive tactics, is a concerning pattern. Let's examine Nhan's behavior more closely; it feels deliberately disruptive."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's actions appear designed to shift blame and control the discussion. His eagerness to clear me then scrutinize my response is a classic deflection tactic."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's rapid deflection and mirroring accusations lack logical grounding. His behavior is disruptive and indicative of someone attempting to control the narrative and shift suspicion."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's defensive reactions and mirroring of others' accusations suggest an attempt to deflect. We need to prioritize logical observation, and Nhan's behavior falls short."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's immediate deflection and mirroring defensive tactics raise significant concerns. His behavior suggests an attempt to sow discord and conceal his alignment."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's defensive questioning and immediate accusation following my clearance are concerning. His behavior exhibits a pattern of deflection, warranting closer scrutiny and potential exile."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's reactions are exhibiting a pattern of defensive instability. The immediate shift from being cleared to aggressively questioning the logic of others suggests a strategic attempt to disrupt the village's consensus. This level of volatility is a common indicator of a wolf trying to deflect."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's reactions are creating significant cognitive friction. The cycle of aggressive deflection and mirroring seen here suggests a pattern of disruption intended to destabilize the group's focus. It is logically consistent to prioritize the removal of such volatility."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Hoang (Seer) investigated Jin. Jin is NOT a wolf.",
+            "Cong (Witch) used POISON potion on Hoang"
+        ],
+        "night_eliminated": [
+            "Jin",
+            "Hoang"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
