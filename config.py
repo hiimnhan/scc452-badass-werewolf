@@ -18,6 +18,9 @@ MODEL_PROVIDERS = {
     "google/gemma-3-27b-it": ChatOpenAI,
     "google/gemma-3-12b-it": ChatOpenAI,
     "google/gemma-3-4b-it": ChatOpenAI,
+    "liquid/lfm-2-24b-a2b": ChatOpenAI,
+    "zai-org/GLM-4.7-Flash": ChatOpenAI,
+    "nvidia/nemotron-3-super-120b-a12b:free": ChatOpenAI,
 }
 
 LLM_BASE_CONFIG = {
@@ -27,6 +30,10 @@ LLM_BASE_CONFIG = {
 # Models
 VILLAGER_MODEL = "google/gemma-3-12b-it"  # small — villager side
 WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
+
+# "google/gemma-3-12b-it"
+# VILLAGER_MODEL = "liquid/lfm-2-24b-a2b"  # small — villager side
+# WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
 
 # ============================================================
 # Experiment scenarios

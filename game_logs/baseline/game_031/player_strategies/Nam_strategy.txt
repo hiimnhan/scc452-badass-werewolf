@@ -1,0 +1,34 @@
+{
+  "Night Phase": [
+    "If Save potion available: Prioritize confirmed Seers or Guards. If no confirmed roles, save the player receiving the most aggressive accusations *after* a kill, but be wary of players consistently protected by the Guard.",
+    "If Poison potion available: Target players exhibiting extreme deflection *after* a kill, especially those immediately accusing others without evidence. Prioritize attacking players protecting suspected wolves. If no clear deflection, target the most aggressive accuser.",
+    "If both potions unavailable: Observe wolf target if visible, but no action possible."
+  ],
+  "Day Discussion": [
+    "Initial Observation: Remain silent for 2-3 minutes, observing accusation speed and defender patterns. Note who is aggressively attacking whom.",
+    "Seer Verification: IF multiple claim Seer, THEN demand specific investigation targets and results. Challenge inconsistencies. Treat claims skeptically. Look for patterns of defense from others.",
+    "Deflection Identification: Aggressively call out redirection attempts after a kill or exile. Note who benefits from the deflection and who is attempting to shift blame.",
+    "Narrative Control Disruption: Challenge dominant speakers avoiding direct questions. Redirect focus to facts. Question reasoning behind accusations, particularly if it lacks substance.",
+    "Early Targeting Analysis: Investigate *why* a player is targeted early - wolves protecting allies or sowing discord?",
+    "Role Claim Assessment: Treat claims skeptically. Demand supporting evidence and cross-reference with behavior. Observe who is defending role claims.",
+    "Suspicious Alliances: Investigate motives of aggressive defenders. Look for patterns of defending specific players.",
+    "Mirroring Detection: Flag players using similar phrasing, especially in defensive arguments. Evaluate in conjunction with other suspicious behaviors.",
+    "Post-Kill Analysis: Immediately assess who benefits from the exile and why. Observe relief or deflection attempts. Note any unusual silence."
+  ],
+  "Voting Phase": [
+    "Verified Wolf: Exile immediately.",
+    "Consistent Deflection: Vote out, especially if coordinated with other players.",
+    "Narrative Control: Vote out players manipulating discussion and avoiding direct answers.",
+    "Suspicious Alliances: Vote for the defender, especially if defending scrutiny and exhibiting unusual behavior.",
+    "Coordinated Voting: Investigate *why* multiple players push for the same exile. Vote against the majority if reasoning is weak or feels manufactured.",
+    "Multiple Defenders: Investigate defenders – likely wolves or accomplices. Prioritize the most vocal.",
+    "Guard Protection Consideration: Cautiously investigate consistently protected players before voting. Assess if protection is a deliberate tactic or a genuine need."
+  ],
+  "Post-Exile Analysis": [
+    "Analyze exile justification logic for deception patterns. Look for inconsistencies and shifts in reasoning.",
+    "Note relief or deflection attempts after exile. Prioritize relieved/redirecting players.",
+    "Re-evaluate suspicions based on new information. Adjust priorities accordingly.",
+    "Assess exile’s impact on alliances – strengthened/weakened groups?",
+    "Assess if the exile benefited wolves or villagers. Adjust strategy to counter any wolf advantage."
+  ]
+}

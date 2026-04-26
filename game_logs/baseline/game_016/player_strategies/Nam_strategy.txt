@@ -1,0 +1,33 @@
+{
+  "Night Phase": [
+    "Save Potion Priority: 1. Seer-confirmed Wolf target. 2. Guard target under immediate, unjustified attack, especially early game. 3. Active information gatherers (Seer/Guard) if wolf targeting is unknown and no immediate threat. 4. If Save potion remains, prioritize protecting players who are consistently targeted and defended by others, to disrupt wolf strategy.",
+    "Poison Potion Priority: 1. Players exhibiting extreme deflection and narrative control, especially immediately attacking Seers. 2. Players forming suspicious, unwavering alliances. 3. Players aggressively attacking reasoning without factual basis. 4. Prioritize poisoning players who consistently deflect blame after an exile, indicating potential wolf involvement.",
+    "Guard Protection: 1. Rotate protection targets to avoid predictability. 2. Prioritize Seers or players facing unjustified aggression. 3. Avoid protecting players consistently defended by others unless a clear strategic advantage exists. 4. Consider protecting players being unfairly targeted to disrupt wolf strategy. 5. If Save potion is used, prioritize protecting players who have provided valuable information or are critical to investigation."
+  ],
+  "Day Discussion": [
+    "Initial Observation: Remain quiet and observe initial statements for deflection/accusation patterns. Note who defends whom.  Look for immediate, aggressive attacks without supporting evidence.",
+    "Seer Verification: IF multiple Seers, demand specific investigation methodologies and compare results. Publicly challenge inconsistencies. Note who defends the Seers. IF a Seer's claim is challenged, assess the challenger's motives – wolves often discredit Seers to sow doubt.",
+    "Deflection Identification: Aggressively call out redirection attempts. Wolves avoid direct answers; note immediate accusations after Seer revelations. Point out inconsistencies in players' statements.",
+    "Narrative Control Disruption: Challenge players dominating the conversation, redirect focus to factual observations. Question unsupported assertions.  Specifically target players who consistently steer the discussion away from facts.",
+    "Early Targeting Analysis: Investigate *why* a player is targeted early – wolves protect allies or sow discord.  Assess if the targeting is based on evidence or manufactured suspicion.",
+    "Role Claim Assessment: Treat claims skeptically; wolves falsely claim powerful roles.  Challenge players claiming Seer with specific questions about their investigation methods.",
+    "IF a player aggressively defends another: Investigate the defender’s motives and connections. Question their loyalty. Look for signs of coordinated defense.",
+    "IF a player is consistently defended: Investigate the defender’s motives – likely a wolf or accomplice. Assess if the defended player is drawing undue attention. Prioritize investigating the defender."
+  ],
+  "Voting Phase": [
+    "Verified Wolf: Exile immediately.",
+    "Consistent Deflection: Vote out. Deflection is a primary wolf tactic.",
+    "Narrative Control: Vote out. Controlling the narrative prevents clear analysis.",
+    "Suspicious Alliances: Vote for the defender. Wolves protect each other.",
+    "Guard Protection: Be cautious about voting out consistently protected players; assess Guard's pattern.  Consider the potential for a coordinated wolf-Guard strategy.",
+    "IF multiple players push for the same exile: Investigate *why*. Prioritize those benefiting most.  Look for coordinated voting patterns.",
+    "IF a player is consistently defended by multiple others: Investigate defenders – likely wolves or accomplices. Prioritize the defender."
+  ],
+  "Post-Exile Analysis": [
+    "Analyze the logic used to justify the exile; look for patterns of deception. Was it sound or manufactured?",
+    "Note relief or deflection attempts after the exile. A sudden shift is telling. Watch for players who immediately redirect suspicion.",
+    "Re-evaluate suspicions based on new information. Prioritize relieved players or those redirecting suspicion.",
+    "Assess how the exile impacted alliances – strengthened/weakened any groups? Exposed wolf coordination?",
+    "Assess if the exile benefited the wolves or villagers. Did they eliminate a key villager or disrupt the investigation?"
+  ]
+}

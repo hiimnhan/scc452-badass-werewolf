@@ -1,0 +1,43 @@
+{
+  "Night Phase": [
+    "Prioritize Seer Protection: ALWAYS protect the Seer unless a confirmed werewolf directly targets a critical villager (e.g., a player with strong analytical skills).",
+    "Early Investigation (Seer Alive): If the Seer survives night one, prioritize protecting them.",
+    "Witch Potion Usage (Seer Alive, Wolf Target Identified): If a confirmed werewolf is identified AND the Seer is alive, use SAVE on the confirmed wolf target, then POISON a player exhibiting aggressive deflection or false claims.",
+    "Witch Potion Usage (Seer Eliminated, Clear Deflector): IF the Seer is eliminated AND a player consistently exhibits aggressive deflection and redirection, poison them. This is the highest priority.",
+    "Witch Potion Usage (Seer Eliminated, No Clear Target): IF the Seer is eliminated AND no clear wolf targets or deflector are identified, rotate protection between players demonstrating analytical reasoning. Focus on players who ask probing questions and avoid emotional responses.",
+    "Initial Protection Focus (No Seer): If no Seer, initially protect the player most vocal about logical analysis and least prone to emotional arguments.",
+    "Guard Protection Adjustment: If the Guard protects a player who is immediately targeted by the wolves, prioritize protecting the Seer (if alive) or a player demonstrating strong analytical skills."
+  ],
+  "Day Discussion": [
+    "Immediate Accusation Scrutiny: Question swift, unsubstantiated accusations. Demand specific reasoning and evidence. If lacking, redirect focus to the accuser’s motives.",
+    "Seer Claim Verification (Multiple Claimants): IF multiple people claim Seer, demand verifiable evidence. Challenge inconsistencies. Abstain if ambiguous.",
+    "Defense Pattern Analysis: Identify and scrutinize defenders shielding suspicious individuals. Note consistent defenders lacking logical justification.",
+    "Mirroring Detection: Immediately call out mirroring accusations. Analyze the accuser’s motive. Focus on patterns of mirroring, not isolated instances.",
+    "Aggressive Accusation Response (Targeted): IF aggressively targeted without evidence, highlight the accuser’s lack of evidence and frame it as deflection. Ask for evidence.",
+    "Rapid Redirection Assessment: Question motives and track redirection frequency. Note who they consistently redirect suspicion from. Prioritize identifying consistent deflectors.",
+    "Targeted Questioning: Probe claims lacking evidence with pointed questions. Focus on inconsistencies and logical gaps.",
+    "Control Narrative: Steer the discussion towards logical deduction, avoiding emotional appeals. Reframe arguments with clear, logical points.",
+    "Early Game Observation: Focus on observing player behavior and reasoning patterns before making accusations. Avoid premature accusations.",
+    "Pattern Recognition: Prioritize observing recurring patterns of behavior, such as consistent defense of specific players or rapid shifts in accusation targets."
+  ],
+  "Voting Phase": [
+    "Confirmed Wolf Vote: Immediate exile of confirmed werewolves.",
+    "Consensus-Based Voting (Unsure): IF unsure, vote based on consensus, prioritizing disruptive players shielding suspicious individuals.",
+    "Wolf Protector Targeting: Vote for players consistently shielding suspicious individuals. Prioritize those obstructing investigation.",
+    "Strategic Abstention (Fracture Risk): Abstain ONLY if a vote will fracture the village and benefit the wolves. Prioritize information gathering over immediate exile.",
+    "Logical Alignment: Align votes with the group demonstrating the most logical reasoning.",
+    "Deflection Targeting: Prioritize voting out players consistently using deflection.",
+    "Tie-Breaking Strategy: Abstain if a tie benefits the wolves; prioritize information gathering.",
+    "Initial Vote: Abstain unless a very clear suspect emerges. Use initial rounds to gather information.",
+    "Deflector Confirmation: If a player is consistently identified as a deflector, prioritize their exile, even if other suspects are present."
+  ],
+  "General Notes": [
+    "Detailed Observation Documentation: Maintain a running log of player behavior, alliances, and deflection patterns.",
+    "Wolf Pair Identification: Recognize wolves often work in pairs; focus on coordinated defenses and deflection.",
+    "Maintain Neutrality: Avoid becoming a primary target. Don’t aggressively accuse unless you have strong evidence.",
+    "Information Prioritization: Seer information is paramount. Analyze and disseminate Seer findings strategically.",
+    "Proactive Information Sharing: Share Seer findings strategically, but be wary of revealing too much too soon.",
+    "Early Game Patience: Resist the urge to act decisively early on. Patience is key to identifying patterns.",
+    "Adaptability: Be prepared to adjust strategy based on evolving game dynamics and new information."
+  ]
+}

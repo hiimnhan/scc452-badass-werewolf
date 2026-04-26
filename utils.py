@@ -45,6 +45,13 @@ def get_llm(model_name: str, api_key=os.environ.get("DEEPINFRA_API_KEY"), **kwar
             base_url="https://api.deepinfra.com/v1/openai",
             **config # Make sure config is passed here too!
         )
+    
+    if api_key == os.environ["OPENROUTER_API_KEY"]:
+        return ChatOpenAI(
+            model=model_name,
+            api_key=os.getenv("OPENROUTER_API_KEY"),
+            base_url="https://openrouter.ai/api/v1",
+        )
 
     # 4. Catch-all for any other provider
     return provider(model_name=model_name, api_key=api_key, **config)
