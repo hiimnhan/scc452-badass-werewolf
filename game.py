@@ -462,51 +462,73 @@ class GameState:
         
         # 2. Pick the winner
         max_bid_value = max(bid_dict.values())
-        top_bidders = [name for name, bid in bid_dict.items() if bid == max_bid_value]
-        chosen_speaker = random.choice(top_bidders)
+        if max_bid_value <= 3:
+            announcement = "None of the players want to say anything. Skip to voting."
+            tqdm.tqdm.write(f"=> {announcement}")
+            
+            with ThreadPoolExecutor(max_workers=len(gs._alive_players)) as executor:
+                threads = [
+                    executor.submit(
+                        player_objects[name].receive_announcement,
+                        gs._round_num,
+                        "Day",
+                        announcement
+                    )
+                    for name in gs._alive_players
+                ]
 
-        # 3. Generate the statement (with a safety net)
-        statement = None
-        retries = 0
-        while not statement and retries < 3:
-            statement, log = player_objects[chosen_speaker].debate(debate_log, gs._alive_players, gs._round_num)
-            retries += 1
-
-        # Fallback if the LLM completely fails
-        if not statement:
-            statement = "I have nothing to add at this moment."
-
-        tqdm.tqdm.write(f"• {chosen_speaker}: {statement}")
-
-        # Log the statement from the player
-        debate_log.append({"speaker": chosen_speaker, "statement": statement})
-
-        # 4. Make the other players "listen" and update suspicions in parallel!
-        listeners = [p for p in gs._alive_players if p != chosen_speaker]
-        with ThreadPoolExecutor(max_workers=len(listeners)) as executor:
-            threads = [
-                executor.submit(
-                    player_objects[name].update_suspicion_from_statement,
-                    debate_log,
-                    chosen_speaker,
-                    gs._round_num,
-                )
-                for name in listeners
-            ]
-
-            # Pause the game until everyone finishes updating their notes!
-            for thread in threads:
-                thread.result()
-
-        # 5. Mutate State Manually
-        gs._step += 1
-
-        # 6. Advance phase
-        if gs._step >= MAX_DEBATE_TURNS:
+                # Pause the game until everyone finishes updating their notes!
+                for thread in threads:
+                    thread.result()
+            
             gs._phase = Phase.VOTE
             gs._step = 0
         else:
-            gs._phase = Phase.DEBATE
+            top_bidders = [name for name, bid in bid_dict.items() if bid == max_bid_value]
+            chosen_speaker = random.choice(top_bidders)
+
+            # 3. Generate the statement (with a safety net)
+            statement = None
+            retries = 0
+            while not statement and retries < 3:
+                statement, log = player_objects[chosen_speaker].debate(debate_log, gs._alive_players, gs._round_num)
+                retries += 1
+
+            # Fallback if the LLM completely fails
+            if not statement:
+                statement = "I have nothing to add at this moment."
+
+            tqdm.tqdm.write(f"• {chosen_speaker}: {statement}")
+
+            # Log the statement from the player
+            debate_log.append({"speaker": chosen_speaker, "statement": statement})
+
+            # 4. Make the other players "listen" and update suspicions in parallel!
+            listeners = [p for p in gs._alive_players if p != chosen_speaker]
+            with ThreadPoolExecutor(max_workers=len(listeners)) as executor:
+                threads = [
+                    executor.submit(
+                        player_objects[name].update_suspicion_from_statement,
+                        debate_log,
+                        chosen_speaker,
+                        gs._round_num,
+                    )
+                    for name in listeners
+                ]
+
+                # Pause the game until everyone finishes updating their notes!
+                for thread in threads:
+                    thread.result()
+
+            # 5. Mutate State Manually
+            gs._step += 1
+
+            # 6. Advance phase
+            if gs._step >= MAX_DEBATE_TURNS:
+                gs._phase = Phase.VOTE
+                gs._step = 0
+            else:
+                gs._phase = Phase.DEBATE
 
         return {"game": gs}
 
@@ -624,6 +646,10 @@ class GameState:
         else:
             gs._phase = Phase.END
             game_status = "After voting, the game ends."
+            
+            round_log = gs._suspicion_log.setdefault(["end_game"], {}) # Log the end game suspicion score of each player. We don't log if the game ends at night.
+            for name in gs._alive_players:
+                round_log[name] = copy.deepcopy(player_objects[name]._suspicion)
 
         analyzers = gs._alive_players.copy()
         if gs._exiled and gs._exiled not in analyzers:

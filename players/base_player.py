@@ -43,7 +43,7 @@ PHASES (repeated each round until a faction wins)
        a. Werewolf Debate    — wolves privately agree on a target.
        b. Werewolf Eliminate — wolves kill their chosen target.
        c. Guard Protect      — Guard secretly shields one player.
-       d. Seer Investigate   — Seer learns if one player is a Werewolf.
+       d. Seer Investigate   — Seer learns if one player is a Werewolf or not.
        e. Witch Act          — Witch may Save the wolf target and/or Poison any player.
        f. Resolve Night      — apply kills, saves, and poisons; announce the outcome.
   2. DAY — all alive players participate:
@@ -66,6 +66,8 @@ INFORMATION RULES
   • The Guard's protection target is never announced.
   • The Seer's results are private until the Seer chooses to reveal them.
   • The Witch sees who the wolves targeted ONLY if her Save potion is still available. Once the Save potion has been used, the Witch no longer learns the wolf target.
+  • The game ends when either the villagers exile/kill all the wolves (Villagers win) or the number of wolves is less than or equal to the number of Villagers.
+  • The villagers (Villagers, Seer, Guard, and Witch) have to work together to vote out or kill the Werewolves. The werewolves try to kill the villager-side players to win the game.
 === END OF RULES ===
 """
 
@@ -325,6 +327,7 @@ class BasePlayer(ABC):
                 "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
                 "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
                 "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+                "\nTake notes of the silence from players over the rounds. After round 1, try to notice the silence of other players."
             )
 
         if self._role in VILLAGER_SIDE:
@@ -641,7 +644,7 @@ class BasePlayer(ABC):
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def call_model(self, prompt: str, max_tokens: int = 800, timeout: int = 200) -> dict:
+    def call_model(self, prompt: str, max_tokens: int = 800, timeout: int = 200, prepend_strategy=True) -> dict:
         """Send a two-message request to the LLM.
 
         SystemMessage : self._setup_prompt = role + personality + strategy + rules.
@@ -650,9 +653,15 @@ class BasePlayer(ABC):
 
         Returns parsed JSON dict; falls back to {"raw": str} on parse failure.
         """
+        strategy = self._load_strategy()
+        if prepend_strategy:
+            strategy_prefix = f"Strictly follow your strategy:\n<strategy>\n{strategy}\n</strategy>\n\n" if strategy else ""
+        else:
+            strategy_prefix = ""
+            
         messages = [
             SystemMessage(content=self._setup_prompt),
-            HumanMessage(content=prompt),
+            HumanMessage(content=f"{strategy_prefix}{prompt}"),
         ]
         
         # 1. Initialize an empty dictionary FIRST
@@ -807,7 +816,7 @@ No extra text, no markdown, no code fences.
         resp = {}
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=3000)
+            resp = self.call_model(prompt, max_tokens=3000, prepend_strategy=False)
 
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "")
@@ -862,7 +871,7 @@ No extra text, no markdown, no code fences.
         resp = {}
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=3000)
+            resp = self.call_model(prompt, max_tokens=3000, prepend_strategy=False)
 
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "").strip()

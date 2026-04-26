@@ -12,7 +12,7 @@ Resume from where you left off:
 Override number of games:
     python run.py --scenario baseline --mode override --games 10
 
-/opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_and_self_analyze --mode append --games 3
+/opt/miniconda3/envs/scc452-badass-werewolf/bin/python run.py --scenario coach_31B_31B --mode append --games 100
 
 File layout produced
 --------------------
@@ -41,7 +41,7 @@ from pathlib import Path
 import random
 
 from game import GameState
-from config import SCENARIO_CONFIG, VILLAGER_MODEL, WOLF_MODEL
+from config import SCENARIO_CONFIG
 from players.guard import Guard
 from players.seer import Seer
 from players.witch import Witch
@@ -306,6 +306,9 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         print("\nOverride mode: starting fresh from game_001.")
     else:
         raise ValueError("Mode can only be either append or override.")
+
+    VILLAGER_MODEL = SCENARIO_CONFIG[scenario]["villager_model"]
+    WOLF_MODEL = SCENARIO_CONFIG[scenario]["wolf_model"]
 
     games_to_run = num_games
 
