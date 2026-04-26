@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "WITHHOLD_THEORY_ON_SAVE",
+        "rationale_short": "Your early mistake was speculating on a 'save' without confirmation.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "is_seer == true",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Stick to your investigation results; clearing a player is your strongest tool.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "theory_contradicts_night_results == true",
+        "action": "WITHHOLD_THEORY",
+        "rationale_short": "Do not offer theories that contradict the actual night results, as this makes you an easy target for exile.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "confirmed_power_role_partner == true",
+        "action": "CLEAR_PLAYERS",
+        "rationale_short": "Use your shared knowledge to clear players",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_passive_or_dissenting == true",
+        "action": "AVOID_LABELING_WOLF",
+        "rationale_short": "do not use it to bulldoze those who are simply cautious.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "confirmed_power_role_partner == true",
+        "action": "CLEAR_PLAYERS",
+        "rationale_short": "Use your shared knowledge to clear players",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_passive_or_dissenting == true",
+        "action": "AVOID_LABELING_WOLF",
+        "rationale_short": "do not use it to bulldoze those who are simply cautious.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_passive == true",
+        "action": "AVOID_ACCUSING_WOLF",
+        "rationale_short": "Being passive is not evidence of being a wolf.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "power_roles_rushing_vote == true",
+        "action": "REQUEST_SPECIFIC_EVIDENCE",
+        "rationale_short": "If the Witch and Guard are rushing a vote, ask for the specific evidence that proves the suspect is a wolf, rather than accepting 'behavioral' arguments.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "bidding_for_speech == true",
+        "action": "TEST_ALTERNATIVE_HYPOTHESES",
+        "rationale_short": "When bidding for speech, use your turn to test alternative hypotheses\u2014ask, 'If this person is a villager, why would they act this way?'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

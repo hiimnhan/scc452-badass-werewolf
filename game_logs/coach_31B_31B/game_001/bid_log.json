@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 1,
+                "reason": "No information has been revealed yet. I will listen to others to identify patterns or contradictions before intervening."
+            },
+            {
+                "Cong": 2,
+                "reason": "No one died tonight, meaning the Guard likely protected the target or the wolves failed. I have no specific leads yet and should listen to identify suspicious patterns."
+            },
+            {
+                "Nam": 2,
+                "reason": "No one died tonight, which could mean the Guard protected the target or the Witch saved them. I have no evidence yet and need to hear others' theories before acting."
+            },
+            {
+                "Jin": 2,
+                "reason": "First day, no deaths. No evidence yet. Better to listen and analyze others' opening claims to spot inconsistencies."
+            },
+            {
+                "Hoang": 6,
+                "reason": "I have confirmed Nhan is innocent. Sharing this early narrows the suspect pool and prevents the village from wasting a vote on a confirmed villager."
+            },
+            {
+                "Riley": 6,
+                "reason": "No one died, meaning Guard or Witch acted. I need to set the tone early and steer suspicion toward those who might be 'too quiet' or acting suspicious to avoid being the first target."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to establish a presence and steer the conversation. Since Nhan survived, I'll push the narrative that they are a power role to make them a target for the village."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang's claim to 'confirm' my role without being the Seer is a massive red flag. I must expose this contradiction immediately to pivot the village's suspicion toward Hoang."
+            },
+            {
+                "Cong": 10,
+                "reason": "Hoang is lying. I am the Witch and I did not save anyone. He is fabricating information to steer suspicion toward me and Nam while clearing Nhan. He must be exposed immediately."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is making an unsubstantiated power claim and immediately targeting me and Cong. I must challenge his lack of evidence and defend myself to prevent a wrongful exile."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang claimed Nhan is not a werewolf without a role claim. This is a classic wolf tactic to build trust. I must challenge his source of information immediately to expose him."
+            },
+            {
+                "Riley": 7,
+                "reason": "Hoang is claiming Seer and directing suspicion. I need to pivot the focus toward Cong or Nam to ensure a villager is exiled and prevent Hoang from consolidating power."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang is claiming knowledge about Nhan, likely posing as Seer. I need to pivot the conversation to Cong or Nam to align with Hoang's lead and ensure a villager is exiled."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Hoang claimed to 'confirm' my role without a valid role ability. This is a blatant lie and a wolf tactic. I must expose this to ensure Hoang is exiled immediately."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is pushing a baseless accusation against me and Cong while making an unverified claim about Nhan. I must expose this as a wolf tactic to prevent being exiled."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang's unsubstantiated clear of Nhan is a massive red flag. I need to amplify Cong's point and push for Hoang's exile to prevent the wolves from controlling the narrative."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong is aggressively attacking me and claimed insider knowledge about the Save potion, which only wolves or the Witch would know. I must defend myself and expose his slip-up to lead the vote against him."
+            },
+            {
+                "Riley": 6,
+                "reason": "Cong is already attacking Hoang, which is perfect. I'll step in to 'analyze' the conflict, subtly backing Cong to push Hoang out while appearing as a rational observer."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang and Cong are fighting. I need to enter the conversation to steer the vote toward one of them or Nam, ensuring I don't look like a passive observer while keeping Riley safe."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Hoang is claiming to be the Seer and cleared me. I know I protected myself, meaning no one needed saving. Hoang's 'Seer' claim is likely a lie to frame Cong."
+            },
+            {
+                "Cong": 10,
+                "reason": "Hoang is fake-claiming Seer to frame me. I must expose his lie about the save potion immediately to prevent my own exile and secure his elimination."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is using a classic wolf strategy: fake-claiming Seer and framing Cong for a 'slip' to force a vote. I must expose this manipulation to prevent an innocent exile and target Hoang."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang's Seer claim is a reactive cover for his initial baseless clear of Nhan. Cong's 'slip' is a logical inference, not a role reveal. Hoang is aggressively pushing a narrative to eliminate a detractor. I must expose this."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang has trapped Cong in a logic slip. I must jump on this immediately to validate Hoang's 'Seer' claim, ensuring Cong is exiled and Hoang becomes a trusted asset for us."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang is creating chaos. I need to jump in and support his claim against Cong, effectively framing a villager and making myself look like a helpful, observant villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong's Witch claim is verified by my Guard action. Hoang is lying about the Seer role and the save. I must confirm Cong's truth to ensure Hoang is exiled immediately."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang is trying to frame me and Cong. Cong's Witch claim explains the night's outcome and exposes Hoang's fake Seer claim. I must push for Hoang's exile to prevent a wolf victory."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang's behavior is a textbook wolf play: clearing a teammate without evidence, then fake-claiming Seer only after being challenged. Cong's Witch claim is logically consistent with the night's outcome. I must push for Hoang's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong is counter-claiming Witch to cover a slip. I must convince the village that his knowledge of the save potion proves he is a wolf, or I will be exiled."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang and Cong are in a claim war. I must intervene to push the village toward exiling Cong by highlighting his 'slip' about the save, ensuring a villager dies while I remain undetected."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Cong are in a claim war. Cong claimed Witch and said no one was saved, which is a lie since Nhan survived. I must push the village to exile Cong for this contradiction."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Hoang is fake-claiming Seer to frame me. Nhan has already backed my claim. I must maintain aggressive pressure on Hoang to ensure the village exiles him immediately before he can manipulate others."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang fake-claimed Seer and tried to frame me and Cong. Cong (Witch) and Nhan (Guard) have contradicted Hoang's logic. Hoang is almost certainly a wolf; I must push the vote to exile him now."
+            },
+            {
+                "Jin": 10,
+                "reason": "Three players have claimed roles. Hoang's Seer claim is contradicted by both the Witch and Guard regarding the save potion. Hoang is almost certainly a wolf. I must push for his immediate exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong and Nhan are coordinating to frame me. I must assert my Seer status and point out that Nhan's 'Guard' claim is irrelevant since I already confirmed he is not a wolf."
+            },
+            {
+                "Riley": 7,
+                "reason": "Hoang is failing miserably, but Nhan and Cong have claimed power roles. I need to align with the winning side (Nhan/Cong) to blend in and ensure Hoang is exiled, while positioning myself as a reliable villager."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang is being framed by three players. While he's a villager, his fake Seer claim is a perfect distraction. I need to push the vote toward Hoang to eliminate a potential Seer/villager and blend in."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "I know Cong was targeted because no one died while I protected him. This confirms the wolves are targeting the claimed Witch, reinforcing Cong's legitimacy and pointing toward those attacking him."
+            },
+            {
+                "Cong": 9,
+                "reason": "I know Nhan was targeted by wolves because I used my save potion. This confirms Nhan is likely a villager/Guard and provides critical evidence to narrow down the wolf suspects."
+            },
+            {
+                "Nam": 7,
+                "reason": "Two nights with no deaths suggest coordination between Guard and Witch. I need to verify if Cong and Nhan's claims are consistent or if one is a wolf posing as a power role."
+            },
+            {
+                "Jin": 6,
+                "reason": "Two nights with no deaths suggest a Save or Guard protect. Nhan and Cong have claimed these roles. I need to cross-reference their claims to verify consistency and isolate the wolves."
+            },
+            {
+                "Riley": 7,
+                "reason": "Two nights of no kills suggest a Guard or Witch is active. I need to steer the narrative toward Nhan or Cong to dismantle their alliance and frame them as wolves pretending to be power roles."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nhan survived two nights, likely Guard. I need to push the narrative that his survival is suspicious or support the push against Cong to sow chaos and protect Riley."
+            }
+        ],
+        [
+            {
+                "Nhan": 5,
+                "reason": "I can reinforce Cong's leadership and confirm the logic behind the current suspect list, ensuring the village focuses on Jin, Riley, and Meg rather than wasting votes on confirmed innocents."
+            },
+            {
+                "Nam": 2,
+                "reason": "Cong has already narrowed the suspect pool to Jin, Riley, and Meg. I am currently cleared and have no evidence to contradict Cong's logic. I will listen to the suspects' defenses first."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong is targeting me. I must defend myself and shift focus to Riley and Meg, who have no claims and are the most likely remaining wolves."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong is aggressively targeting me and Meg. I must immediately deflect suspicion, attack Cong's claim as a wolf's bluff, and shift the focus toward Jin to protect my ally."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong is aggressively targeting me and Riley. I must immediately deflect, challenge his 'confirmed' logic, and pivot suspicion toward him to break the Nhan/Cong power bloc."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is attacking Cong, whom I protected. This confirms Meg is likely a wolf attempting to deflect. I must intervene to validate Cong and pivot the village to target Meg."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is using aggressive deflection to cast doubt on my confirmation of Nhan and is attempting to frame me as a wolf. I must shut down her narrative immediately to prevent my own exile."
+            },
+            {
+                "Nam": 8,
+                "reason": "Meg is using typical wolf deflection, attacking Cong's leadership to distract from her lack of utility. I must shut down her attempt to frame Cong and Nhan to keep the focus on the suspects."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong (Witch) has provided critical info clearing Nhan. Meg is attacking the only person providing utility data without offering any role herself. I must support Cong's logic to isolate the wolves among the non-claimants."
+            },
+            {
+                "Riley": 8,
+                "reason": "Cong is aggressively targeting me. I must capitalize on Meg's defense to pivot the suspicion back onto Cong, framing his pressure as a wolf tactic to eliminate the remaining threats."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong is claiming he saved Nhan, but I actually protected Cong. This discrepancy is critical. I must clarify the protection to ensure Cong isn't misidentified as a wolf and to solidify the case against Meg."
+            },
+            {
+                "Nam": 8,
+                "reason": "Cong's Witch claim explains the night and clears Nhan. Meg's response is pure deflection without a counter-claim, which is a strong wolf tell. I must push for Meg's exile to secure a villager win."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong has provided concrete evidence clearing Nhan. Meg is attacking the only person providing utility without offering a claim herself. I must support Cong's logic to ensure Meg is exiled before the wolves outnumber us."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong is aggressively targeting me and Meg. I must pivot the narrative to paint Cong's 'Witch' claim as a fake cover for a wolf trying to force a win."
+            },
+            {
+                "Meg": 10,
+                "reason": "Cong has claimed Witch and is actively leading a rush-vote against me. I must immediately discredit his claim and pivot the suspicion back to him to avoid exile."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Meg is desperately deflecting. Nhan and I have a locked alliance. I must maintain pressure to ensure Meg is exiled before she can sway Jin or Riley."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong and Nhan have provided a consistent narrative explaining the night. Meg's response is pure deflection and gaslighting with no role claim. I must solidify the vote on Meg to eliminate a highly likely wolf."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong and Nhan are coordinating a push on Meg. If Meg is a wolf, we win. If she's a villager, we're being led by wolves. I must intervene to validate the claims before a vote."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Nhan are coordinating to exile Meg. I must intervene immediately to deflect the vote and paint Cong's aggression as a wolf attempt to eliminate a villager."
+            },
+            {
+                "Meg": 10,
+                "reason": "Cong and Nhan have formed a lethal bloc and are calling for my immediate exile. I must aggressively counter-attack and frame them as a wolf pair to survive this vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is desperately pivoting her target to Nam to create chaos. I must shut down her diversions and solidify the vote on her to ensure we eliminate a wolf now."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is actively trying to pivot suspicion to Nam and frame Nhan and me as a wolf pack. I must shut down her narrative immediately to secure her exile before she sways others."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg is attempting to shift suspicion onto me to deflect from her own baseless attacks on Cong and Nhan. I must shut down her narrative and solidify the vote against her immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong and Nhan have established utility claims that align. Meg is offering zero utility while attacking the only players providing evidence. I need to push the vote on Meg to secure a villager win."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Nhan are coordinating a hard push on Meg. I must intervene immediately to support Meg's narrative, frame their alliance as wolf-behavior, and deflect the vote away from her."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Cong": 9,
+                "reason": "Nhan, whom I saved and trusted, was killed. This proves the wolves are targeting confirmed assets. I must drive the vote toward Jin or Riley to prevent a wolf victory."
+            },
+            {
+                "Nam": 8,
+                "reason": "Jin and Riley are the only remaining players without claims or utility. With Nhan (Guard) dead, we must pressure them immediately to reveal roles or be exiled. I will push for a target."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley has not claimed a role while others have. With Nhan dead and the player pool shrinking, Riley's silence is highly suspicious. I need to pressure Riley for a claim immediately."
+            },
+            {
+                "Riley": 9,
+                "reason": "Nhan's death is the perfect catalyst. I must immediately frame Cong's alliance with Nhan as a wolf pack strategy and push for Cong's exile before he can claim Nhan was protected."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Cong has pinpointed the passive players. Since Nhan (Guard) is dead, the village is vulnerable. I must push the accusation against Jin or Riley to force a reveal or exile a wolf immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong is aggressively targeting me to deflect suspicion. I must defend myself and shift the focus back to Riley's lack of a claim to avoid being exiled."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong is aggressively targeting me and Jin. I must immediately counter-attack, frame his urgency as a wolf's desperation, and deflect suspicion toward him to protect myself and my teammate."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin is attempting to flip the narrative and deflect suspicion onto me and Riley. I must shut down this deflection and force the focus back onto Jin's suspicious behavior before the village wavers."
+            },
+            {
+                "Nam": 8,
+                "reason": "Jin is using a classic wolf tactic: mirroring Cong's accusation to deflect and shift suspicion to Riley. I need to break this cycle and push for Jin's exile based on his lack of utility."
+            },
+            {
+                "Riley": 9,
+                "reason": "Both Cong and Jin are targeting me. I must immediately deflect suspicion, attack Cong's aggressive behavior as a wolf tactic, and avoid claiming a role that can be debunked."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Cong is providing a strong lead on Jin. I need to reinforce the accusation against Jin to ensure the vote coalesces and we eliminate a likely wolf before the next night."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong has explicitly stated he is voting for me. I must aggressively counter his narrative and shift the focus back to Riley's lack of a claim to avoid being exiled."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is demanding my role claim and Cong is aggressively targeting him. I must intervene now to deflect Jin's pressure and pivot the suspicion toward Cong's 'desperate' push to exile players."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin is using classic wolf manipulation by pressuring Riley to deflect from his own suspicious behavior. I must shut down his gaslighting and solidify the vote against him before he flips the town."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin is using a blatant deflection strategy, attempting to frame Cong and pressure Riley to hide his own lack of a role claim. I must consolidate the vote against Jin to secure a wolf exile."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is demanding my role claim and Cong is pushing for a rush vote. I must intervene now to deflect suspicion and pivot the target toward Cong's aggressive behavior."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin is cornered and attempting to gaslight the village. I must maintain the pressure with Nam to secure the vote and exile Jin before he can successfully deflect onto Riley."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong and Nam have coordinated to target me. I must dismantle their 'textbook' narrative and force Riley to claim or be exposed, otherwise, I will be exiled by a wolf pack."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is demanding my role claim and Nam is siding with Cong. If I stay silent, I'm the next target. I must intervene to deflect Jin's pressure and pivot the suspicion back to Cong."
+            }
+        ]
+    ]
+}
