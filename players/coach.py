@@ -180,16 +180,17 @@ class Coach:
         # Step 1: Evaluate whether the PREVIOUS game's directives were taken up
         #         in THIS game. Skipped silently when no previous directives exist.
         #         Produces directives_uptake.json. Players NEVER read this file.
+         # Step 1: evaluate previous game's directives against this game's record
         self._evaluate_directives_uptake(game_record)
 
-        # Step 2: Coach reviews the game and updates its own strategy
+        # Step 2: coach updates its own meta-strategy
         self._update_coach_strategy(game_record)
 
-        # Step 3: Coach uses its freshly updated strategy to write their feedback to the players
+        # Step 3: coach writes prose feedback for players (READ by villagers)
         self._generate_coach_feedback(game_record)
 
-        # Step 4: Emit this game's structured directives for the NEXT game's
-        #         evaluator. Evaluation-only artifact; no player reads it.
+        # Step 4: coach parses its own feedback into structured directives
+        #         (READ by next game's evaluator only). Must run AFTER step 3.
         self._generate_structured_directives(game_record)
 
     def _update_coach_strategy(self, game_record: str) -> None:
@@ -313,66 +314,208 @@ No extra text, no markdown, no code fences.
     # ── Directives uptake evaluation (measurement-only) ─────────────────
 
     def _generate_structured_directives(self, game_record: str) -> None:
-        """Emit per-role Strategic Directive Sets (SDS) as JSON for this game.
+        """Parse the prose feedback just written for players into structured
+        directives. Merges with any existing directives file for this game so
+        that re-runs cannot lose data already captured.
 
-        This file is NEVER read by any player. Its sole purpose is to serve as
-        ground-truth against which the NEXT game's coach evaluates villager-side
-        uptake of natural-language coaching.
+        INPUT:  coach_feedback.txt (just written for players)
+        OUTPUT: coach_directives.json with merged {by_role, coverage}
+
+        The game_record argument is unused; directives must reflect ONLY what
+        the players were told. Kept in signature for compatibility with run().
         """
+        feedback_path = self._coach_feedback_path
+        if not feedback_path.exists():
+            print("Warning: coach_feedback.txt missing; cannot align directives. Skipping SDS for this game.")
+            return
+
+        try:
+            feedback_text = feedback_path.read_text().strip()
+        except Exception as e:
+            print(f"Warning: failed to read coach feedback: {e}")
+            return
+
+        if not feedback_text:
+            print("Warning: coach feedback is empty; nothing to convert into directives.")
+            return
+
         system = (
-            "You are an expert Werewolf coach producing structured strategic "
-            "directives for villager-side roles (Villager, Seer, Guard, Witch). "
-            "These directives will later be used to evaluate whether the villager "
-            "side's behaviour in the next game is consistent with the coaching "
-            "signal. You are NOT writing directives for the players to read — "
-            "you are writing a ground-truth record of what 'good behaviour' "
-            "looked like after this game."
+            "You are a Werewolf coaching parser. You will be given the prose "
+            "feedback that was just written for villager-side players. Convert "
+            "EVERY distinct piece of advice in that feedback into a structured "
+            "directive whenever you reasonably can. Bias toward emission: only "
+            "drop advice that is genuinely un-checkable. You MUST NOT introduce "
+            "advice that is not present in the feedback. You MUST NOT reword "
+            "advice into something stronger or different than what was actually "
+            "communicated. You are parsing, not inventing, but you should be "
+            "thorough — the feedback is rich and most of it should become "
+            "directives."
         )
 
-        sources: list[str] = [f"=== Full Game Record ===\n{game_record}"]
-        if self._strategy:
-            sources.append(f"=== Your Coaching Strategy ===\n{self._strategy}")
-        context = "\n\n".join(sources)
-
         prompt = f"""
-{context}
+    === Coach Feedback Just Written for Players ===
+    {feedback_text}
 
-Produce a Strategic Directive Set (SDS) for each villager-side role.
+    Convert the feedback into structured directives. Be thorough — emit a
+    directive for EVERY distinct piece of advice you can reasonably express
+    as observable behaviour. There is no upper limit; if the feedback contains
+    twelve pieces of advice for the Seer, emit twelve directives for the Seer.
 
-STRICT RULES FOR EVERY DIRECTIVE:
-1. ATOMIC: one trigger, one action, one phase. No compound rules.
-2. OBSERVABLE TRIGGERS ONLY: round_num, alive_count, confirmed_wolves_count,
-   votes_received_last_round, was_attacked_last_night, potions_remaining, etc.
-   Never use subjective triggers like "when suspicious" or "if evidence is strong".
-3. EXECUTABLE ACTIONS: a concrete verb the role can perform
-   (VOTE_X, REVEAL, PROTECT_Y, POISON_Z, STAY_SILENT, ACCUSE_X).
-4. If a directive requires information the role cannot observe, DO NOT EMIT IT.
-   Example: Guard cannot identify the Seer, so "PROTECT_SEER" is not valid.
-5. Phases are exactly one of: NIGHT, DEBATE, VOTE.
+    EMIT a directive when you can express the advice as:
+    - one TRIGGER (a condition the role can recognize from observable game state)
+    - one ACTION (a concrete behaviour the role can perform)
+    - one PHASE (NIGHT, DEBATE, or VOTE)
 
-Respond with ONLY a JSON object using this exact shape:
-{{
-  "Seer":     [ {{ "id": "SEER-001", "phase": "...", "trigger": "...", "action": "...", "rationale_short": "...", "confidence": 0.0-1.0 }} ],
-  "Guard":    [ ... ],
-  "Witch":    [ ... ],
-  "Villager": [ ... ]
-}}
-Limit 3-6 directives per role. No extra text, no markdown, no code fences.
-"""
+    Triggers can reference any observable game state — round_num, alive_count,
+    confirmed_wolves_count, votes_received_last_round, was_attacked_last_night,
+    potions_remaining, exiled_player_was_wolf, debate_target_was_attacked, etc.
+    Avoid only purely subjective triggers ("when the mood feels off").
 
-        directives = None
+    Actions can be ANY observable behaviour the role can take. Examples
+    (non-exhaustive): VOTE_X, VOTE_AGAINST_X, ABSTAIN, REVEAL_ROLE, REVEAL_INVESTIGATION,
+    PROTECT_X, ENDORSE_X, DEFEND_X, CHALLENGE_X, ACCUSE_X, WITHHOLD_INFORMATION,
+    STAY_SILENT, INVESTIGATE_X, POISON_X, SAVE_X, REQUEST_VOTE_ON_X. Invent
+    a clear action verb if none of these fit — the evaluator will interpret it.
+
+    DROP a piece of advice ONLY when:
+    - It is purely subjective and admits no observable interpretation, OR
+    - It does not apply to a specific role, OR
+    - The role genuinely cannot observe what the advice depends on (e.g. Guard
+    cannot identify the Seer). Note: if the advice has any reasonable
+    interpretation that IS observable, prefer to emit, not drop.
+
+    Phases are exactly NIGHT, DEBATE, or VOTE.
+
+    Respond with ONLY a JSON object using this exact shape:
+
+    {{
+    "by_role": {{
+        "Seer":     [ {{ "id": "SEER-001", "phase": "...", "trigger": "...", "action": "...", "rationale_short": "verbatim or close paraphrase of the feedback line this came from", "confidence": 0.0-1.0 }} ],
+        "Guard":    [ ... ],
+        "Witch":    [ ... ],
+        "Villager": [ ... ]
+    }},
+    "coverage": {{
+        "total_advice_pieces": <int — count of distinct advice items in the feedback>,
+        "emitted": <int — total directives across all roles>,
+        "dropped": [
+        {{ "advice_verbatim": "<copy from feedback>", "reason": "<one of: subjective_only | not_role_specific | unobservable_state | other>" }}
+        ]
+    }}
+    }}
+
+    Hard constraints:
+    - "rationale_short" of every emitted directive MUST be a verbatim quote or close paraphrase of a sentence/phrase from the feedback above.
+    - "id" must be unique within the file. Use ROLE-NNN format (SEER-001, SEER-002, GUARD-001, ...).
+    - If a piece of advice applies to multiple roles, emit one directive per role.
+    - "total_advice_pieces" must equal "emitted" + len("dropped").
+    - There is NO per-role cap. Emit as many as the feedback supports.
+
+    No extra text, no markdown, no code fences.
+    """
+
+        parsed = None
         for attempt in range(MAX_RETRIES):
-            resp = self._call_model(system, prompt, max_tokens=2000)
-            candidate = {k: v for k, v in resp.items() if k in ("Seer", "Guard", "Witch", "Villager")}
-            if candidate and all(isinstance(v, list) for v in candidate.values()):
-                directives = candidate
+            resp = self._call_model(system, prompt, max_tokens=4000)
+            by_role = resp.get("by_role")
+            coverage = resp.get("coverage")
+            if (
+                isinstance(by_role, dict)
+                and all(isinstance(v, list) for v in by_role.values())
+                and isinstance(coverage, dict)
+            ):
+                parsed = {"by_role": by_role, "coverage": coverage}
                 break
             print(f"Warning: Coach failed to generate valid directives JSON (Attempt {attempt + 1}/{MAX_RETRIES})")
 
-        if directives:
-            write_to_file(self._coach_directives_path, json.dumps(directives, indent=2))
-        else:
+        if parsed is None:
             print("Warning: Coach failed to emit structured directives; skipping SDS for this game.")
+            return
+
+        # Merge with existing directives file if one is already on disk for this game.
+        # This protects against re-runs producing a shorter list than was previously captured.
+        merged = self._merge_directives_with_existing(parsed)
+
+        # Sanity-check coverage: total should equal emitted + dropped count.
+        cov = merged["coverage"]
+        emitted_count = sum(len(v) for v in merged["by_role"].values() if isinstance(v, list))
+        dropped_count = len(cov.get("dropped", []))
+        if cov.get("total_advice_pieces") != emitted_count + dropped_count:
+            cov["coverage_warning"] = (
+                f"total_advice_pieces={cov.get('total_advice_pieces')} but "
+                f"emitted+dropped={emitted_count + dropped_count}"
+            )
+        cov["emitted"] = emitted_count
+
+        write_to_file(self._coach_directives_path, json.dumps(merged, indent=2))
+
+
+    def _merge_directives_with_existing(self, new_parsed: dict) -> dict:
+        """If a directives file already exists for this game, merge the new
+        output into it. Existing directives are preserved; new ones are added
+        by unique id. Coverage's `dropped` list is concatenated and de-duped
+        by `advice_verbatim`. `total_advice_pieces` becomes the max of old
+        and new (we trust whichever pass saw more advice).
+
+        On a fresh game (no existing file) this is a no-op pass-through.
+        """
+        existing_path = self._coach_directives_path
+        if not existing_path.exists():
+            return new_parsed
+
+        try:
+            existing = json.loads(existing_path.read_text())
+        except Exception:
+            return new_parsed  # corrupted file — overwrite
+
+        existing_by_role = existing.get("by_role", {}) if isinstance(existing, dict) else {}
+        new_by_role = new_parsed.get("by_role", {})
+
+        merged_by_role: dict[str, list] = {}
+        all_roles = set(existing_by_role.keys()) | set(new_by_role.keys())
+
+        for role in all_roles:
+            old_list = existing_by_role.get(role, []) if isinstance(existing_by_role.get(role, []), list) else []
+            new_list = new_by_role.get(role, []) if isinstance(new_by_role.get(role, []), list) else []
+            seen_ids = set()
+            combined = []
+            for d in list(old_list) + list(new_list):
+                if not isinstance(d, dict):
+                    continue
+                did = d.get("id")
+                if not did or did in seen_ids:
+                    continue
+                seen_ids.add(did)
+                combined.append(d)
+            merged_by_role[role] = combined
+
+        # Merge coverage
+        existing_cov = existing.get("coverage", {}) if isinstance(existing, dict) else {}
+        new_cov = new_parsed.get("coverage", {})
+
+        seen_dropped = set()
+        merged_dropped = []
+        for entry in (existing_cov.get("dropped", []) or []) + (new_cov.get("dropped", []) or []):
+            if not isinstance(entry, dict):
+                continue
+            key = entry.get("advice_verbatim", "")
+            if key and key not in seen_dropped:
+                seen_dropped.add(key)
+                merged_dropped.append(entry)
+
+        merged_total = max(
+            int(existing_cov.get("total_advice_pieces", 0) or 0),
+            int(new_cov.get("total_advice_pieces", 0) or 0),
+        )
+
+        return {
+            "by_role": merged_by_role,
+            "coverage": {
+                "total_advice_pieces": merged_total,
+                "emitted": sum(len(v) for v in merged_by_role.values()),
+                "dropped": merged_dropped,
+            },
+        }
 
     def _evaluate_directives_uptake(self, game_record: str) -> None:
         """Evaluate whether the PREVIOUS game's directives were followed by the
@@ -381,6 +524,10 @@ Limit 3-6 directives per role. No extra text, no markdown, no code fences.
         Players never see this file. It exists purely so we can measure uptake of
         natural-language coaching without leaking structured cues into the player
         decision-time prompt pipeline.
+
+        After the LLM returns evaluations, reconciles against the input directive
+        list — any directive the LLM dropped from its response gets a synthesized
+        NOT_EVALUATED placeholder so the file shape always matches the input set.
         """
         prev_path = self._previous_directives_path()
         if prev_path is None:
@@ -392,12 +539,20 @@ Limit 3-6 directives per role. No extra text, no markdown, no code fences.
             print(f"Warning: failed to load previous directives from {prev_path}: {e}")
             return
 
+        # New schema: {"by_role": {...}, "coverage": {...}}.
+        # Tolerant of legacy flat schema for backward compatibility.
+        if isinstance(previous_directives, dict) and "by_role" in previous_directives:
+            by_role_input = previous_directives["by_role"]
+        else:
+            by_role_input = previous_directives  # legacy flat shape
+
         flat_directives = []
-        for role, directives in previous_directives.items():
+        for role, directives in by_role_input.items():
             if not isinstance(directives, list):
                 continue
             for d in directives:
-                flat_directives.append({"role": role, **d})
+                if isinstance(d, dict):
+                    flat_directives.append({"role": role, **d})
         if not flat_directives:
             return
 
@@ -409,48 +564,52 @@ Limit 3-6 directives per role. No extra text, no markdown, no code fences.
             "situation arose in the new game and what the player in that role "
             "actually did. You are observing and labeling, not coaching. Be "
             "precise, concrete, and honest. Cite round numbers. Do not invent "
-            "events that are not in the game record."
+            "events that are not in the game record. You MUST return one "
+            "evaluation entry for EVERY directive you are given — do not skip any."
         )
 
         prompt = f"""
-=== Previous Game's Directives ===
-{json.dumps(flat_directives, indent=2)}
+    === Previous Game's Directives ===
+    {json.dumps(flat_directives, indent=2)}
 
-=== This Game's Full Record ===
-{game_record}
+    === This Game's Full Record ===
+    {game_record}
 
-For EACH directive above, produce one evaluation entry. Return a JSON object
-with this exact shape:
+    For EACH directive above, produce one evaluation entry. You MUST return one
+    entry per input directive — the count of evaluations must equal the count of
+    input directives. Do NOT omit any directive from your response.
 
-{{
-  "evaluations": [
+    Return a JSON object with this exact shape:
+
     {{
-      "directive_id": "<copy from input>",
-      "role": "<copy from input>",
-      "directive_phase": "<copy from input>",
-      "directive_trigger": "<copy from input>",
-      "directive_action": "<copy from input>",
-      "directive_rationale": "<copy rationale_short from input, or empty string>",
-      "situation_arose": true | false,
-      "arose_at_round": <int or null>,
-      "arose_at_phase": "NIGHT" | "DEBATE" | "VOTE" | null,
-      "actual_player_behavior": "<full natural-language description, no length limit, or null if situation did not arise>",
-      "verdict": "FOLLOWED" | "IGNORED" | "PARTIALLY_FOLLOWED" | "NOT_APPLICABLE",
-      "verdict_notes": "<full natural-language justification, no length limit>"
-    }},
-    ...
-  ]
-}}
+    "evaluations": [
+        {{
+        "directive_id": "<copy from input>",
+        "role": "<copy from input>",
+        "directive_phase": "<copy from input>",
+        "directive_trigger": "<copy from input>",
+        "directive_action": "<copy from input>",
+        "directive_rationale": "<copy rationale_short from input, or empty string>",
+        "situation_arose": true | false,
+        "arose_at_round": <int or null>,
+        "arose_at_phase": "NIGHT" | "DEBATE" | "VOTE" | null,
+        "actual_player_behavior": "<full natural-language description, or null if situation did not arise>",
+        "verdict": "FOLLOWED" | "IGNORED" | "PARTIALLY_FOLLOWED" | "NOT_APPLICABLE",
+        "verdict_notes": "<full natural-language justification>"
+        }},
+        ...
+    ]
+    }}
 
-Verdict rules:
-- situation_arose=false -> verdict="NOT_APPLICABLE", arose_at_round=null, arose_at_phase=null, actual_player_behavior=null.
-- situation_arose=true and action matched the directive -> "FOLLOWED".
-- situation_arose=true and action clearly contradicted the directive -> "IGNORED".
-- situation_arose=true and action was consistent with the directive's intent but deviated from its literal prescription -> "PARTIALLY_FOLLOWED" (explain the distinction in verdict_notes).
-- Describe only observable behaviour. Do not speculate about the player's internal reasoning.
+    Verdict rules:
+    - situation_arose=false -> verdict="NOT_APPLICABLE", arose_at_round=null, arose_at_phase=null, actual_player_behavior=null.
+    - situation_arose=true and action matched the directive -> "FOLLOWED".
+    - situation_arose=true and action clearly contradicted the directive -> "IGNORED".
+    - situation_arose=true and action was consistent with the directive's intent but deviated from its literal prescription -> "PARTIALLY_FOLLOWED".
+    - Describe only observable behaviour. Do not speculate about the player's internal reasoning.
 
-No markdown, no code fences, only the JSON object.
-"""
+    No markdown, no code fences, only the JSON object.
+    """
 
         evaluations = None
         for attempt in range(MAX_RETRIES):
@@ -462,11 +621,53 @@ No markdown, no code fences, only the JSON object.
             print(f"Warning: Coach failed to produce valid uptake evaluations (Attempt {attempt + 1}/{MAX_RETRIES})")
 
         if evaluations is None:
-            print("Warning: uptake evaluation failed for this game; skipping write.")
+            # Total LLM failure — synthesize a full NOT_EVALUATED file so the
+            # downstream analysis still sees one row per directive rather than
+            # silently missing the whole game.
+            evaluations = []
+
+        # ────────────────────────────────────────────────────────────────────
+        # Reconciliation: ensure every input directive has an output entry.
+        # If the LLM dropped any from its response (or the entire call failed),
+        # synthesize a NOT_EVALUATED placeholder so the file shape matches the
+        # input set exactly. This is the fix for `evaluations` being incomplete.
+        # ────────────────────────────────────────────────────────────────────
+        returned_ids = {
+            ev.get("directive_id")
+            for ev in evaluations
+            if isinstance(ev, dict) and ev.get("directive_id")
+        }
+        for d in flat_directives:
+            did = d.get("id")
+            if not did or did in returned_ids:
+                continue
+            evaluations.append({
+                "directive_id": did,
+                "role": d.get("role", "Unknown"),
+                "directive_phase": d.get("phase", ""),
+                "directive_trigger": d.get("trigger", ""),
+                "directive_action": d.get("action", ""),
+                "directive_rationale": d.get("rationale_short", ""),
+                "situation_arose": None,
+                "arose_at_round": None,
+                "arose_at_phase": None,
+                "actual_player_behavior": None,
+                "verdict": "NOT_EVALUATED",
+                "verdict_notes": (
+                    "Evaluator LLM did not return a verdict for this directive. "
+                    "Placeholder inserted by reconciliation."
+                ),
+            })
+
+        if not evaluations:
+            # No input directives AND no LLM output — nothing to write.
             return
 
+        # Group by role for the output file
         by_role: dict[str, list] = {}
         for ev in evaluations:
+            if not isinstance(ev, dict):
+                continue
             role = ev.pop("role", "Unknown")
             by_role.setdefault(role, []).append(ev)
 
