@@ -268,6 +268,7 @@ Focus on:
 - Deception signals that were present but missed
 - Voting errors and when to override gut feelings with evidence
 - Coordination failures between special roles (Seer, Guard, Witch)
+- When to speak: During the day debate, the debate operates on bidding, where the player who bid the highest will speak.
 
 This feedback will be read by each villager-side player before their next game and will shape their strategy update. Make it direct and specific — not generic advice.
 

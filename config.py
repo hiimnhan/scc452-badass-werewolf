@@ -27,35 +27,33 @@ LLM_BASE_CONFIG = {
     "temperature": 0.7,
 }
 
-# Models
-VILLAGER_MODEL = "google/gemma-3-12b-it"  # small — villager side
-WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
-
-# "google/gemma-3-12b-it"
-# VILLAGER_MODEL = "liquid/lfm-2-24b-a2b"  # small — villager side
-# WOLF_MODEL = "google/gemma-4-31B-it"  # large — wolf side
-
 # ============================================================
 # Experiment scenarios
 # ============================================================
 
 SCENARIO_CONFIG = {
-    "baseline": {
+    "baseline_12b_31B": {
+        "villager_model": "google/gemma-3-12b-it",
+        "wolf_model": "google/gemma-4-31B-it",
         "coaching": False,
         "self_analyze": True,
-        "deviation": False,
-        "personality": False,
     },
-    "coach_and_self_analyze": {
+    "coach_12b_31B": {
+        "villager_model": "google/gemma-3-12b-it",
+        "wolf_model": "google/gemma-4-31B-it",
         "coaching": True,
         "self_analyze": True,
-        "deviation": False,
-        "personality": False,
     },
-    "coach_without_self_analyze": {
+    "baseline_31B_31B": {
+        "villager_model": "google/gemma-4-31B-it",
+        "wolf_model": "google/gemma-4-31B-it",
+        "coaching": False,
+        "self_analyze": True,
+    },
+    "coach_31B_31B": {
+        "villager_model": "google/gemma-4-31B-it",
+        "wolf_model": "google/gemma-4-31B-it",
         "coaching": True,
-        "self_analyze": False,
-        "deviation": False,
-        "personality": False,
+        "self_analyze": True,
     },
 }

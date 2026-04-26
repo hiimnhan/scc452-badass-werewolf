@@ -448,12 +448,12 @@ Your goal is to find and exile the Werewolves. Win for your faction. Be assertiv
 Here is your current knowledge:
 {note}
 
-Players currently alive: {alive_players}
+Players currently alive, meaning they can participate in the debate and vote: {alive_players}
 
 Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
 
-Analyze what has been said. Look for suspicious behavior, defend yourself if attacked, or push a strong, logical accusation against your top suspect. 
+Analyze what has been said. Look for suspicious behavior, defend yourself if attacked, or push a strong, logical accusation against your top suspect. Before responding, check your strategy rules. Does any rule apply to what was just said? If yes, state which rule applies in the analysis and follow it.
 
 CRITICAL RULES:
 1. Focus ONLY on players in the "Players currently alive" list.
@@ -464,7 +464,7 @@ CRITICAL RULES:
 Respond with ONLY a JSON object:
 {{
   "statement": "natural, decisive line (<=50 words)",
-  "analysis": "private reasoning for your suspicion or defense (<=50 words)"
+  "analysis": "private reasoning for your suspicion or defense (<=100 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -486,7 +486,7 @@ Your goal is to survive, blend in, and manipulate the village into exiling innoc
 Here is your current knowledge:
 {note}
 
-Players currently alive: {alive_players}
+Players currently alive, meaning they can participate in the debate and vote: {alive_players}
 
 Here is the current day's debate so far of round {round_num}:
 {formatted_current_debate}
