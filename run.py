@@ -296,11 +296,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
     if mode == "append":
         last_done = _last_completed_game(scenario)
         start_from = last_done + 1
-        # if start_from > num_games:
-        #     print(
-        #         f"\nNothing to do: {last_done} games already completed for scenario '{scenario}' (target: {num_games})."
-        #     )
-        #     return
+        
         if last_done > 0:
             print(f"\nAppend mode: resuming from game {start_from} ({last_done} games already completed).")
 
@@ -366,46 +362,6 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         )
 
         print(f"\n  Results saved to: {out_path}")
-
-    # ── Final summary ──────────────────────────────────────────────────
-    # print(f"\n{'=' * 62}")
-    # print(f"  RESULTS — {scenario}  (games {start_from:03d}-{start_from + num_games - 1:03d})")
-    # print(f"{'=' * 62}")
-
-    # villager_wins = sum(1 for r in results if r["winner"] == "Villagers")
-    # wolf_wins = sum(1 for r in results if r["winner"] == "Werewolves")
-
-    # for r in results:
-    #     print(f"  {r['game_id']}: {r['winner']}")
-
-    # print(f"\n  Villagers  : {villager_wins:3d} wins  ({villager_wins / games_to_run * 100:.1f}%)")
-    # print(f"  Werewolves : {wolf_wins:3d} wins  ({wolf_wins / games_to_run * 100:.1f}%)")
-
-    # # Append results to the summary file (so override and append both accumulate)
-    # out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.txt").resolve()
-
-    # # Read existing content if appending, so we don't lose prior games' records
-    # existing = ""
-    # if mode == "append" and out_path.exists():
-    #     existing = out_path.read_text().strip() + "\n\n"
-
-    # new_block = "\n".join(
-    #     [
-    #         f"Run: games {start_from:03d}-{start_from + num_games - 1:03d}  |  mode={mode}  |  scenario={scenario}",
-    #         f"Villager model : {VILLAGER_MODEL}",
-    #         f"Wolf model     : {WOLF_MODEL}",
-    #         f"Villager wins  : {villager_wins} / {games_to_run}  ({villager_wins / games_to_run * 100:.1f}%)",
-    #         f"Wolf wins      : {wolf_wins} / {games_to_run}  ({wolf_wins / games_to_run * 100:.1f}%)",
-    #         "",
-    #         "Per-game results:",
-    #     ]
-    #     + [
-    #         f"  {r['game_id']}: {r['winner']}  " + ", ".join(f"{n}={rv.value}" for n, rv in r["roles"].items())
-    #         for r in results
-    #     ]
-    # )
-
-    # write_to_file(out_path, existing + new_block)
 
 
 # ============================================================

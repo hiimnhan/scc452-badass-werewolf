@@ -264,7 +264,7 @@ class GameState:
         seer_obj.reveal_and_update(target, is_wolf, gs._round_num)
 
         # Private terminal output (for debugging; never sent to players)
-        seer_action = f"{seer_name} (Seer) investigated {target} — Result: {'WOLF' if is_wolf else 'not a wolf'}."
+        seer_action = f"{seer_name} (Seer) investigated {target}. {target} is{'' if is_wolf else ' NOT'} a wolf."
         tqdm.tqdm.write(f"• {seer_action}")
 
         # Game-level summary log (visible to coach post-game, not to players)
@@ -572,7 +572,7 @@ class GameState:
             tqdm.tqdm.write(f"• {vote['reasoning']}")
 
         if exiled_player:
-            announcement = f"=> {exiled_player} received {max_votes} votes. The player will be exiled!"
+            announcement = f"=> {exiled_player} received {max_votes} votes. {exiled_player} is exiled!"
         else:
             if max_votes > 0:
                 announcement = f"=> The highest vote count was {max_votes} for {' and '.join(tied_players)} (Require at least {threshold} vote{'s' if threshold > 1 else ''}). Not enough consensus. No one is exiled."

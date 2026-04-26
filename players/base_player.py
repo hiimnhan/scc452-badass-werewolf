@@ -187,8 +187,8 @@ class BasePlayer(ABC):
         parts = [
             self._role_definition.format(name=self._name) if self._role_definition else "",
             f"Your personality: {self._personality}" if self._personality else "",
-            f"Your strategy from previous games:\n{strategy}" if strategy else "",
             GAME_RULES,
+            f"Strictly follow your strategy:\n{strategy}" if strategy else "",
         ]
         return "\n\n".join(p.strip() for p in parts if p.strip())
 
@@ -318,14 +318,14 @@ class BasePlayer(ABC):
             formatted_current_debate = "No statements yet in this round."
 
         early_round_warning = ""
-        # if round_num == 1:
-        #     early_round_warning = (
-        #         "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
-        #         "There was NO 'yesterday' and NO previous discussion. "
-        #         "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
-        #         "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
-        #         "Base your opening statements strictly on the night's events (who died) or general opening strategies."
-        #     )
+        if round_num == 1:
+            early_round_warning = (
+                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+                "There was NO 'yesterday' and NO previous discussion. "
+                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+            )
 
         if self._role in VILLAGER_SIDE:
             prompt_template = VILLAGER_UPDATE_SUSPICION_FROM_STATEMENT_PROMPT
@@ -561,7 +561,7 @@ class BasePlayer(ABC):
         reasoning = "No public reason provided."
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=300)
+            resp = self.call_model(prompt, max_tokens=2000)
 
             # Safely check if BOTH required keys are in the dictionary
             if "vote" in resp and "reasoning" in resp:
@@ -592,15 +592,15 @@ class BasePlayer(ABC):
             formatted_current_debate = "You speak first."
 
         early_round_warning = ""
-        # if round_num == 1:
-        #     early_round_warning = (
-        #         "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
-        #         "There was NO 'yesterday' and NO previous discussion. "
-        #         "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
-        #         "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
-        #         "Base your opening statements strictly on the night's events (who died) or general opening strategies."
-        #         "If you are the first to speak on Day 1 and the dialogue history is empty, you have no prior daytime actions or conversations to observe. In this scenario, you must reason and debate intelligently based on this lack of information."
-        #     )
+        if round_num == 1:
+            early_round_warning = (
+                "CRITICAL ROUND 1 RULES: This is the very first day of the game. "
+                "There was NO 'yesterday' and NO previous discussion. "
+                "Do NOT invent or reference past interactions, arguments, or behaviors that did not happen in your notes. "
+                "Do NOT accuse players of being 'silent' or 'quiet', as the game just started. "
+                "Base your opening statements strictly on the night's events (who died) or general opening strategies."
+                "If you are the first to speak on Day 1 and the dialogue history is empty, you have no prior daytime actions or conversations to observe. In this scenario, you must reason and debate intelligently based on this lack of information."
+            )
 
         alive_players_str = ", ".join(alive_players)
 
@@ -624,7 +624,7 @@ class BasePlayer(ABC):
         resp = {}
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=400)
+            resp = self.call_model(prompt, max_tokens=2000)
             message = resp.get("statement", "").strip()
 
             if message:
@@ -641,7 +641,7 @@ class BasePlayer(ABC):
 
     # ── LLM call ────────────────────────────────────────────────────────
 
-    def call_model(self, prompt: str, max_tokens: int = 200, timeout: int = 200) -> dict:
+    def call_model(self, prompt: str, max_tokens: int = 800, timeout: int = 200) -> dict:
         """Send a two-message request to the LLM.
 
         SystemMessage : self._setup_prompt = role + personality + strategy + rules.
@@ -655,14 +655,16 @@ class BasePlayer(ABC):
             HumanMessage(content=prompt),
         ]
         
-        # Create a dictionary of kwargs so we can dynamically adjust for Google vs OpenAI
-        kwargs = {"timeout": timeout}
+        # 1. Initialize an empty dictionary FIRST
+        kwargs = {}
         model_class_name = type(self._model).__name__
 
-        # Fix for the LangChain/Google kwarg bug
+        # 2. Add timeout to everything EXCEPT Hugging Face
+        if "ChatHuggingFace" not in model_class_name:
+            kwargs["timeout"] = timeout
+
+        # 3. Add max_tokens to everything EXCEPT Google
         if "GoogleGenerativeAI" not in model_class_name:
-            # Only enforce max_tokens at the invoke level for OpenAI/Anthropic.
-            # Gemini will naturally stop based on the prompt's word limits!
             kwargs["max_tokens"] = max_tokens
 
         # Ensure LangChain's local cache is bypassed for this specific call
@@ -754,6 +756,8 @@ class BasePlayer(ABC):
 
         self._write_strategy(new_strategy)
 
+    from typing import List, Optional
+
     def _update_strategy_villager(self, current_strategy: str, game_record: str) -> Optional[str]:
         """Build and execute the LLM prompt for villager-side strategy update.
         Returns the new strategy string, or None when both flags are False.
@@ -767,13 +771,13 @@ class BasePlayer(ABC):
             sources.append(
                 "=== Your Own Game Analysis ===\n"
                 f"What happened this game from your point of view:\n{game_record}\n"
-                "Reflect: what worked, what failed, what you should do differently."
+                "You are now entering a critical self-reflection phase before the next game begins. Your primary objective is to review the events of the last match, analyze player behaviors, and strategically adapt to ensure victory next time."
             )
 
         if self._coaching:
             feedback = self._coach_feedback
             if feedback:
-                sources.append(f"=== Coach Feedback ===\n{feedback}")
+                sources.append(f"=== Coach Feedback ===\nAn expert coach has observed the entire game and provided feedback from an external perspective. You must synthesize your own reflections with this coach's guidance to optimize your new strategy.\n{feedback}")
 
         if current_strategy:
             sources.append(f"=== Your Current Strategy ===\n{current_strategy}")
@@ -787,13 +791,15 @@ You are {self._name}, a {self._role.value}. The game has ended.
 
 Win condition: ensure the Villagers eliminate all Werewolves.
 
-Produce an updated strategy — clear, actionable behavioural rules for future games based on the roles, not the players' names.
-Cover early-game, mid-game, and late-game. Discard rules that failed; keep what worked.
+- Produce an updated strategy structured strictly by GAME PHASE (e.g., Night Phase, Day Discussion, Voting Phase, etc.).
+- Within each phase, define clear, actionable rules for specific situations. Use conditional logic based on roles, not player names (e.g., "Day Discussion: IF multiple people claim Seer, THEN I should...").
+- Discard rules that failed; keep what worked.
+{"- Prioritize following the feedback from the coach." if self._coaching else ""}
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated rules as bullet points (<=300 words)",
-  "reasoning": "main changes and why (<=100 words)"
+  "strategy": "Updated situational rules grouped by game phase using bullet points (<=700 words)",
+  "reasoning": "Main changes from the previous strategy and why (<=150 words)"
 }}
 No extra text, no markdown, no code fences.
 """
@@ -801,7 +807,7 @@ No extra text, no markdown, no code fences.
         resp = {}
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=1000)
+            resp = self.call_model(prompt, max_tokens=3000)
 
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "")
@@ -847,7 +853,7 @@ Produce an updated strategy — clear, actionable behavioural rules for future g
 
 Respond with ONLY a JSON object:
 {{
-  "strategy": "updated rules as bullet points (<=300 words)",
+  "strategy": "updated rules as bullet points (<=500 words)",
   "reasoning": "main changes and why (<=100 words)"
 }}
 No extra text, no markdown, no code fences.
@@ -856,7 +862,7 @@ No extra text, no markdown, no code fences.
         resp = {}
 
         for attempt in range(MAX_RETRIES):
-            resp = self.call_model(prompt, max_tokens=1000)
+            resp = self.call_model(prompt, max_tokens=3000)
 
             # Safely extract and clean the strategy string
             extracted_strategy = resp.get("strategy", "").strip()
