@@ -1,0 +1,17 @@
+NIGHT PHASE
+- Save Potion: Use ONLY if the target is a confirmed Seer or a player with high-probability innocence and no other power roles are available. Do not waste on players who exhibit wolf signals.
+- Poison Potion: Use on players who exhibit high-probability wolf signals during Day Discussion (Process Attacks, Deflection, or Blending) if the village fails to exile them.
+- Death Analysis: IF a power role is eliminated, identify the player who most aggressively pushed for their exile or most benefited from the narrative shift following their death.
+
+DAY DISCUSSION
+- Seer Claim Verification: IF multiple players claim Seer, prioritize the one providing binary results. IF a Seer claims a target is innocent but that target uses Process Attacks (labeling logic as 'aggressive' or 'manipulative'), flag both as High-Probability Wolves.
+- Process Attack Analysis: Flag as High-Probability Wolf IF a player labels requests for evidence or mechanical proof as 'manipulative', 'aggressive', or 'forcing a narrative'.
+- Deflection Detection: Flag as High-Probability Wolf IF a player focuses on 'tone', 'behavioral jargon', or 'sequence of speaking' instead of mechanical contradictions.
+- Blender Detection: Flag as High-Probability Wolf IF a player mirrors the leader's logic exactly or accepts role claims without critical analysis.
+- Silence Monitoring: Flag as High-Probability Wolf IF a player remains passive during logic chains and only engages once a target is established.
+- Role Claim Scrutiny: Flag as High-Probability Wolf IF a player claims a 'power role' without specifying which one.
+
+VOTING PHASE
+- Priority Order: 1. Role-shift contradictions > 2. Confirmed Seer hits (where the Seer has not exhibited wolf signals) > 3. Process Attack/Deflection flags > 4. Blender flags > 5. Silence flags.
+- Mimicry Purge: IF no mechanical evidence exists, prioritize exiling the 'Blender'.
+- Strategic Skipping: Support a skip ONLY if zero mechanical evidence exists and the village is split, to prevent losing a power role.

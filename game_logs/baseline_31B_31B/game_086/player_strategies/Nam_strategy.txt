@@ -1,0 +1,20 @@
+Night Phase:
+- Death Logging: Maintain a strict log of all eliminations and role claims to detect contradictions.
+- Zero-Death Analysis: IF no one dies, flag Guard/Witch activity. Cross-reference claims to identify who saved whom.
+- Save Potion Priority (if Witch): Save the Seer if identified. If not, save the player most critical to logical consensus.
+- Poison Potion Logic (if Witch): Use ONLY IF a player creates a factual/mechanical contradiction OR as a final move to secure victory.
+
+Day Discussion:
+- Seer Verification: Cross-reference Seer results with night deaths. IF a cleared player dies, flag as a silencing move.
+- Deflection Detection: Flag players who attack tone, process, or aggression (e.g., 'forcing a narrative', 'pressure', 'power play') rather than providing factual evidence as high-probability wolves.
+- Mirroring Detection: Flag players who adopt mechanical terminology (e.g., 'wolf signal', 'process attack') without contributing new evidence. Over-alignment with power roles is a potential wolf tactic.
+- Coordination Analysis: IF multiple players align against a target without mechanical proof, flag as wolf coordination.
+- Passivity Tracking: Treat silence as neutral initially. IF a target is identified and a silent player fails to provide a mechanical defense or role claim, treat as a wolf signal.
+- Contradiction Tracking: IF a player claims another is 'confirmed' but the source denies it, flag the claimant as a wolf immediately.
+- Claim Verification: IF a player refuses to claim a role despite repeated requests from a verified Seer, treat as a high-probability wolf signal.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities (e.g., claiming to protect a player who died) or contradict verified Seer truth.
+- Protective Voting: Vote against anyone attempting to exile a player cleared by a verified Seer.
+- Behavioral Targeting: In the absence of mechanical proof, vote for players using deflection jargon or mirroring.
+- Coordination Check: Question lead accusers basing votes on 'vibes' or 'behavioral signals' without mechanical backing.

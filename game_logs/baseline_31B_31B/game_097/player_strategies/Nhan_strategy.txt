@@ -1,0 +1,24 @@
+NIGHT PHASE
+- TARGET TRACKING: Log all deaths and role claims. Cross-reference Guard protection claims with the 'no-consecutive-protection' rule.
+- ALIGNMENT LOGGING: Maintain a strict list of investigated players and their results (Wolf/Not Wolf) to prevent confusion during high-pressure debates.
+
+DAY DISCUSSION
+- POWER ROLE DEFENSE: IF a player discredits a Seer's specific clearance, flag as Priority 1.
+- PROCESS ATTACK DETECTION: IF a player labels requests for mechanical logic as 'manipulative', 'aggressive', 'reckless', 'pressure', 'coordination', or 'forcing a narrative', flag as Priority 2.
+- REDIRECTION DETECTION: IF a player shifts focus from game-state/mechanics to 'vibes', 'tone', 'behavior', or 'manner of questioning', flag as Priority 3.
+- BLENDER/MIRRORING DETECTION: IF a player mirrors a leader's terminology or claims the same result as another Seer to appear legitimate, flag as Priority 4.
+- FABRICATION DETECTION: IF a player claims a role after being accused (late claim) or claims an action contradicting the game state, flag as Priority 1.
+- WITCH VERIFICATION: IF a player claims knowledge of a wolf target on a zero-death night without claiming Witch, flag as Priority 1.
+- SILENCE PENALTY: IF a player refuses to claim a role or provide logic during their turn, flag as Priority 5.
+- ROLE VERIFICATION: IF multiple Seers claim, treat the first claimant as the baseline. Analyze the counter-claimer for mirroring or late-claim behavior.
+- ALLY PROTECTION: IF a player is cleared by my investigation, defend their legitimacy unless they exhibit confirmed wolf markers (Priority 1-3).
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Seer-identified wolves & Fabricators (including late-claimers).
+  2. Power Role Attackers.
+  3. Process Attackers.
+  4. Redirection specialists.
+  5. Mirroring/Blenders.
+  6. Silent players.
+- DECISIVENESS: Vote for the highest priority target. No abstaining.

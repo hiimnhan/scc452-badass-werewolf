@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No statements have been made and there is no one to accuse. I will listen first to identify patterns or Seer claims before intervening."
+            },
+            {
+                "Cong": 2,
+                "reason": "Round 1 Day start. No information available yet. I need to listen to others to identify patterns or power role claims before acting."
+            },
+            {
+                "Nam": 8,
+                "reason": "I have confirmed Nhan is not a werewolf. Clearing a player early narrows the suspect pool and allows the village to focus on the remaining five players."
+            },
+            {
+                "Jin": 2,
+                "reason": "No data available yet. I need to observe the debate to identify potential power roles or werewolf behavior before intervening."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No one died tonight, and no one has spoken. I have no specific evidence yet. I will listen to the initial claims to identify the Seer or spot wolf deflection tactics."
+            },
+            {
+                "Riley": 3,
+                "reason": "No one died, which creates natural confusion. I'll let villagers speculate first to identify potential power roles or targets before I step in to amplify their doubts."
+            },
+            {
+                "Meg": 3,
+                "reason": "Early game. No one is suspecting me yet. Better to let others speak first to gauge roles and suspicions before I commit to a narrative."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam claimed Seer and verified me. I must immediately defend Nam's claim to establish a trusted lead and frame any opposition as wolf behavior to secure the village's direction."
+            },
+            {
+                "Cong": 6,
+                "reason": "Nam claimed Seer and cleared Nhan. I need to support this trusted core and push others to explain the night's lack of deaths to identify deflection patterns."
+            },
+            {
+                "Jin": 5,
+                "reason": "Nam claimed Seer and cleared Nhan. Since I protected Nhan and no one died, Nam's claim is consistent with my actions. I need to support Nam to protect the Seer and consolidate a trusted core."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nam is likely the Seer and is organizing the village. I need to support this leadership and probe others for reactions to Nam's claim to identify wolf deflection tactics."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam claimed Seer and verified Nhan. I need to introduce a seed of doubt about this claim to prevent the village from trusting Nam's future 'investigations' without appearing too aggressive."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam's Seer claim is a threat. I need to blend in by offering analysis on the night's outcome without directly challenging Nam, positioning myself as a helpful villager."
+            }
+        ],
+        [
+            {
+                "Cong": 6,
+                "reason": "Nam claimed Seer and verified Nhan. According to strategy, I must aggressively defend Nhan to solidify a trusted core and push others to reveal their alignment or logic."
+            },
+            {
+                "Nam": 3,
+                "reason": "Nhan is confirmed innocent and is currently reinforcing my lead. I will now listen to the other players to identify aggressive pushes or silence based on my strategy."
+            },
+            {
+                "Jin": 3,
+                "reason": "Nam's claim and Nhan's logic align with my action. I don't need to reveal my role yet; listening to others' reactions to the 'no death' outcome will expose potential wolves."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nam has claimed Seer and verified Nhan. I need to reinforce Nam's leadership to solidify the villager core and push the remaining players to reveal their positions."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam claimed Seer and verified Nhan. I need to introduce skepticism about Nam's claim to prevent the village from trusting him blindly, framing it as a safety precaution for the village."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam claims Seer and Nhan is leveraging it. I need to offer 'helpful' analysis to blend in and avoid looking like I'm hiding, without attacking the Seer claim directly."
+            }
+        ],
+        [
+            {
+                "Nhan": 2,
+                "reason": "Nam has cleared me and Hoang is already reinforcing our position. I have established the 'no death' defense strategy; now I must wait for Cong, Jin, Riley, or Meg to reveal themselves."
+            },
+            {
+                "Cong": 6,
+                "reason": "Nam has claimed Seer and cleared Nhan. Hoang is specifically calling for my analysis. I need to engage to avoid being flagged as silent or uncooperative, which could make me a target."
+            },
+            {
+                "Nam": 3,
+                "reason": "Nhan is cleared. Hoang is facilitating. I need to wait for Cong, Jin, Riley, and Meg to respond to identify deflection, silence, or aggressive framing as per strategy."
+            },
+            {
+                "Jin": 3,
+                "reason": "Nam's Seer claim matches my protection of Nhan, validating Nam's role. I will remain quiet to avoid exposing my identity as Guard while observing how others respond to Nam's lead."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is claiming Seer and linking with Nhan. I need to establish a 'cautious skeptic' presence to subtly undermine Nam's authority and prevent the village from blindly following his 'confirmations'."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is explicitly calling me out for an analysis. I need to provide a plausible, helpful response to blend in and avoid looking like I'm stalling or hiding."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is actively attempting to discredit Nam's Seer claim and verification of me. This is a clear wolf signal to blind the village. I must aggressively defend Nam to protect the Seer's influence."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley is using deflection and framing Seer results as 'reckless' to discredit Nam. Per strategy, this flags Riley as a primary werewolf suspect. I must challenge this behavior immediately to protect the Seer's lead."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley is using a deflection tactic by framing my result as 'reckless' and attempting to undermine villager coordination. I must immediately label Riley as a primary suspect based on this behavioral pattern."
+            },
+            {
+                "Jin": 8,
+                "reason": "Riley is using textbook wolf deflection by attacking the Seer's validity without evidence. I must support Nam and Nhan to solidify the villager core and flag Riley's behavior as a wolf signal."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using a textbook wolf deflection tactic by labeling the Seer's confirmation as 'reckless.' I must immediately expose this as a manipulation attempt to discredit Nam and sow distrust."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to blend in by providing a 'helpful' analysis. I'll avoid attacking Nam directly but support Riley's caution to create doubt about the Seer claim without looking like a wolf."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is actively attempting to discredit Nam's Seer claim. I must aggressively defend Nam and frame Riley's skepticism as a wolf signal to secure a concentrated vote for exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is using classic wolf deflection by labeling the Seer's verification as 'reckless' to sow doubt. I must support Hoang's analysis to solidify the villager bloc and push for Riley's exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley is using a textbook deflection tactic by framing my factual verification as 'reckless.' I must reinforce Nhan's innocence and push for Riley's exile to prevent the wolves from sowing distrust."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is exhibiting textbook wolf deflection by attacking the Seer's validity without evidence. I must reinforce Hoang's accusation to secure Riley's exile and protect Nam, our critical asset."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang is aggressively pushing for my exile. I must immediately pivot to the 'confused villager' persona, challenge his logic, and frame my skepticism as a safety measure for the village to avoid being voted out."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is pushing Riley hard. I need to intervene to steer the focus away from my teammate without appearing too defensive, blending in as a cautious villager seeking more information."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "Two consecutive nights of no deaths suggest power-role coordination. I need to frame this as a success for the village and prevent wolves from using it to bait out the Guard or Witch."
+            },
+            {
+                "Cong": 6,
+                "reason": "Riley was exiled for wolf-like deflection. With no one killed two nights in a row, I need to push the village to evaluate Jin and Meg's silence and solidify the trust in Nam's Seer claim."
+            },
+            {
+                "Nam": 9,
+                "reason": "I have confirmed that Cong is not a werewolf. Revealing this now isolates the remaining suspects (Jin, Meg) and prevents the wolves from manipulating the vote against confirmed villagers."
+            },
+            {
+                "Jin": 4,
+                "reason": "I need to support Nam's Seer claim. Since no one died while I protected him, his role is likely genuine. Strengthening the trust in the Seer is vital for identifying the remaining wolves."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam was targeted by wolves, confirming his Seer role. I must assertively reinforce Nam's credibility and use this fact to narrow suspicion toward the remaining neutral players."
+            },
+            {
+                "Meg": 6,
+                "reason": "Two nights of no deaths suggest a Guard/Witch are active. I need to offer 'helpful' analysis to blend in and subtly steer suspicion toward the Nam/Nhan bloc without appearing overly aggressive."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam is the credible Seer. I must aggressively defend the Seer's framework and press Jin and Meg to answer, framing their silence as a wolf signal to ensure a decisive vote."
+            },
+            {
+                "Cong": 7,
+                "reason": "Nam has narrowed the suspect pool to Jin, Meg, and Hoang. I need to pressure Jin and Meg to respond to the silence flag, as their lack of contribution aligns with wolf behavior."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam (Seer) has flagged me as a primary target due to my silence. I must urgently defend myself to avoid being exiled and maintain my ability to protect the Seer."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nam has narrowed suspects to Jin, Meg, and me. I must actively support Nam's pressure on the silent players to prevent the wolves from shifting suspicion onto me."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam has narrowed the pool to me, Jin, and Hoang. I must act now to pivot the focus or express confusion to avoid being the immediate target of the vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is mirroring Riley's tactics by discrediting Nam's Seer claim and framing logical leads as 'forcing a vote.' I must aggressively defend Nam and flag Meg's behavior as a wolf signal."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using the exact same deflection tactics as exiled Riley, labeling logical frameworks as 'pushing a narrative.' This matches my strategy for flagging a primary werewolf suspect. I must push the accusation now."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is using textbook deflection tactics and mirroring Riley's rhetoric by framing logical deductions as a 'narrative' and 'forcing a vote.' I must immediately expose this pattern to secure her exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam flagged me as a target. I must defend myself and point out that Meg is using classic wolf deflection patterns\u2014attacking Nam's aggression rather than providing evidence\u2014to shift suspicion onto me."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is using a textbook wolf diversionary tactic by labeling Nam's logical alignment as 'pushing a narrative.' I must immediately expose this as a wolf deflection to secure her exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam has identified Meg's mirroring of Riley's deflection tactics. I must aggressively defend Nam's Seer claim and push for Meg's immediate exile to secure a concentrated vote."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using the exact deflection tactics Riley used, labeling logical leads as 'pushing a narrative.' I must support Nam's accusation and align the bloc to exile Meg immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam is targeting me for silence. I must speak to clarify my position, support Nam's Seer claim (validated by my protection success), and pivot the village's focus entirely onto Meg to avoid being exiled."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is using textbook wolf diversionary tactics by labeling Nam's logical alignment as 'pushing a narrative.' I must immediately expose this deflection to secure her exile and ensure a villager victory."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam has explicitly called for my exile and is linking me to Riley. I must pivot to a confused villager persona immediately to deflect and sow doubt about his 'confirmations' before the village coalesces."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Meg's defense mirrors Riley's deflection tactics. I must aggressively support Nam and Nhan to solidify the bloc and ensure Meg is exiled immediately."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is mirroring Riley's deflection tactics and framing logical deductions as 'pushing a narrative.' I have ground truth on others; I must decisively lead the vote to eliminate Meg immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam flagged me as a target due to silence. I must immediately align with Nam's findings and confirm Meg's wolf signals to avoid being exiled and secure Meg's removal."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is using textbook wolf deflection tactics by labeling logical alignment as 'pushing a narrative.' I must immediately expose this as a diversionary tactic to secure her exile and coordinate with the Seer."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nam and Nhan have isolated me and are leveraging Riley's exile to create a pattern. I must pivot to the 'confused villager' persona immediately to deflect this momentum before the vote is locked."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg is mirroring Riley's deflection and attacking the Seer's decisiveness. I must shut down her 'fake consensus' narrative and push for a concentrated vote to exile her immediately."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is using textbook wolf deflection, labeling logic as 'pushing a narrative' and 'fake consensus,' mirroring Riley. I must align with the Seer and Nhan to secure Meg's exile immediately."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is explicitly mirroring Riley's playbook by framing logical consensus as 'reckless' and 'fake.' I must shut down this deflection and secure the vote for her exile immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam has flagged me for silence. I must speak to avoid being targeted and to confirm Meg's wolf signals, specifically her attempt to frame the Seer and Nhan as a 'coordinated team'."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is using textbook wolf diversion tactics, framing villager coordination as a 'fake consensus.' I must decisively link this behavior to wolf patterns and coordinate with Nam and Nhan to secure her exile immediately."
+            }
+        ]
+    ]
+}

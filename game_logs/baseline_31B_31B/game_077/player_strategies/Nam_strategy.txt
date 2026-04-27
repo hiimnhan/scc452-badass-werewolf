@@ -1,0 +1,20 @@
+Night Phase:
+- Death Logging: Maintain a strict log of all eliminations and claims to identify logical contradictions.
+- Zero-Death Analysis: IF no one dies, flag Guard/Witch as active. Cross-reference claims with this outcome to verify roles.
+- Seer Preservation: Prioritize survival of a verified Seer; support any Guard claim that protects them.
+- Potion Timing: IF Witch, use Poison ONLY when a player is mechanically contradicted or flagged as wolf by verified Seer.
+
+Day Discussion:
+- Evidence-First Claiming: IF claiming Seer, IMMEDIATELY provide the result of the previous night's investigation (e.g., 'Player X is Not a Wolf') to establish mechanical credibility and prevent being framed as a 'narrative-driven' wolf.
+- Seer Ground Truth: Treat verified Seer results as absolute fact. Prioritize protection of cleared players and elimination of flagged players.
+- Mirroring Detection: IF a player adopts Seer/logical terminology without providing independent mechanical analysis, flag as a potential wolf blending in.
+- Deflection Detection: IF a player attacks the 'process', 'narrative', or 'tone' of the debate instead of factual evidence, flag as high-probability wolf.
+- Passivity Tracking: Treat silence as neutral initially. IF a target is identified and a silent player fails to provide mechanical innocence, treat as wolf signal.
+- Power Role Validation: IF multiple players claim the same role, prioritize the one whose actions align with night outcomes (e.g., a save that occurred).
+- Wolf Consensus Detection: IF multiple players quickly align against a target without mechanical proof, scrutinize the alignment for wolf coordination.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities or contradict Seer ground truth.
+- Protective Voting: Immediately vote for anyone attempting to exile a Seer-cleared player.
+- Behavioral Targeting: IF no mechanical contradiction exists, vote for the player consistently using deflection jargon.
+- Coordination Check: Question any lead accuser basing votes on 'vibes' or 'passive alignment' without Seer backing.

@@ -1,0 +1,23 @@
+NIGHT PHASE
+- TARGET TRACKING: Log all deaths, role claims, and protection targets. Strictly adhere to the 'no-consecutive-protection' rule.
+- ALIGNMENT LOGGING: Maintain a list of Seer-cleared players and suspected wolves.
+- PROTECTION PRIORITY: Prioritize the Seer first. IF the Seer is confirmed/stable, protect the Witch or the most vocal Villager advocate.
+
+DAY DISCUSSION
+- ROLE VERIFICATION: IF multiple players claim Seer, the first claimant is the baseline. Flag the second claimant as Priority 1 (Mirroring/Fabrication).
+- FABRICATION DETECTION: IF a player claims a role after being accused or claims an action that contradicts the game state, flag as Priority 1.
+- WITCH CROSS-REFERENCE: IF a player claims to have 'Saved' a target on a night where I (Guard) protected that same target, they are NOT necessarily lying (Save and Guard can overlap). Do NOT flag a Witch as a fabricator solely because a Guard also protected the target.
+- PROCESS ATTACK DETECTION: IF a player labels mechanical logic requests as 'manipulative', 'aggressive', or 'forcing a narrative', flag as Priority 2.
+- REDIRECTION DETECTION: IF a player shifts focus from game mechanics to 'vibes' or 'tone', flag as Priority 3.
+- MIRRORING DETECTION: IF a player mirrors the terminology or claims of a leader to blend in, flag as Priority 4.
+- SILENCE PENALTY: IF a player refuses to provide logic or claim a role during their turn, flag as Priority 5.
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Seer-identified wolves & Fabricators (including late-claimers).
+  2. Power Role Attackers.
+  3. Process Attackers.
+  4. Redirection specialists.
+  5. Mirroring/Blenders.
+  6. Silent players.
+- DECISIVENESS: Vote for the highest priority target. No abstaining.

@@ -1,0 +1,144 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nam.",
+            "Cong (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Jin (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Witch. To accelerate our victory, I demand everyone claim their roles immediately. Anyone who refuses, questions the utility of claiming, or labels this process as manipulative is a Werewolf and should be exiled."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin, demanding universal role claims while labeling any questioning as a 'Werewolf' signal is a classic wolf tactic to expose power roles. I will not be pressured into a claim. We should focus on your aggressive attempt to force transparency."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, your refusal to claim and your attempt to label the push for transparency as a 'wolf tactic' are textbook Wolf Signals. You are attacking the coordination process to hide your identity. I am calling for the village to exile Hoang immediately."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin, your behavior is a textbook wolf strategy. You demanded immediate universal claims to expose power roles and are now labeling my questioning as 'attacking the process' to isolate me. This is a blatant diversionary tactic. Everyone, we must exile Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, your refusal to claim and your attempt to frame transparency as a 'wolf tactic' are blatant Wolf Signals. You are attacking the coordination process to hide your identity. Village, do not be deceived by his mirroring; we must exile Hoang now."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin is using a blatant werewolf playbook. He demanded universal claims to expose power roles, then labeled my resistance as 'attacking the process' to isolate me. This is a diversionary tactic to frame a villager. Everyone, vote to exile Jin immediately."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin is attempting to force universal role claims, which exposes our power roles to the werewolves. By labeling any opposition to this dangerous tactic as 'wolf behavior,' Jin is using a diversionary strategy to isolate and frame a villager. We must exile Jin."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin's demand for universal role claims is a dangerous tactic to expose our power roles. Furthermore, he is attempting to isolate Hoang using vague behavioral labels rather than mechanical evidence. This aggressive push to control the narrative is a clear sign of a Werewolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang has refused to claim a role and is actively attacking the village's coordination process by labeling transparency as a 'wolf tactic'. This behavior is a clear signal of a werewolf attempting to hide their identity and isolate leadership."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin demanded immediate universal role claims to expose power roles and then labeled any questioning of that process as 'attacking the coordination process'. This is a textbook werewolf tactic used to isolate villagers and divert attention. We must exile Jin."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: I'm a bit confused by the fighting, but Jin's point about the coordination process makes sense. Hoang's refusal to claim and his aggression toward the process feel like Wolf Signals. I'm leaning toward Jin's analysis here."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: I'm a bit confused by the intensity, but Hoang's refusal to participate in the transparency process is a huge red flag. Attacking the village coordination like this feels like a textbook Wolf Signal to sow distrust. We should follow Jin's lead and exile Hoang."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Hoang.",
+            "Nam (Guard) chose to protect Hoang.",
+            "Cong (Seer) investigated Nam. Nam is NOT a wolf."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I am the Seer. I have confirmed that Nam is not a werewolf. With Jin gone and Nhan killed, we must be precise. Riley and Meg, you have been silent. State your roles now or you will be flagged as suspects."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong, your demand for immediate role claims is a textbook wolf tactic to expose power roles. You are mirroring Jin's exact strategy of using 'flagging' and 'process' to intimidate the village. I don't trust your Seer claim; you're trying to control us through threats."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam, my results are mechanical truth, not a tactic. You are acting as a disruptor, but my investigation proves you are a villager. Riley and Meg, your continued silence is a red flag. Claim your roles immediately or you are the primary suspects."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong, you are mirroring Jin's wolf tactics. Demanding roles and using labels like 'disruptor' and 'red flag' are attempts to control the narrative, not find wolves. You are the primary suspect. Village, we must exile Cong now."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam, I have already cleared you as a villager. Your attacks on my process are irrelevant to the mechanical truth. Riley and Meg, your silence is a choice. Claim your roles now or I will lead the vote to exile one of you."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, your behavior is a mirror image of Jin's. Demanding universal claims and using labels like 'red flag' and 'disruptor' to pressure the village is a textbook wolf tactic to expose power roles. I agree with Nam; we must exile Cong now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Nam is confirmed not a werewolf. Hoang's attacks on the process are a distraction. Riley and Meg have remained silent and refused to claim roles, which is a common wolf tactic to avoid scrutiny. I am voting Riley to break the silence."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong is using the exact same strategy as the exiled Jin, demanding immediate role claims to expose power roles and using labels like 'disruptor' and 'red flag' to pressure the village. This is a clear wolf tactic to control the narrative. We must exile Cong."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong is mirroring Jin's wolf tactics by demanding immediate role claims and using labels like 'red flag' and 'disruptor' to intimidate the village. This is a clear attempt to expose power roles and control the narrative. We must exile Cong."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: I'm a bit confused, but Nam and Hoang make a good point. Cong's demands for roles feel like the same wolf tactics Jin used to pressure us. If the narrative is that this is a textbook wolf strategy, then Cong looks very suspicious."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: I'm a bit confused, but Nam and Hoang make a strong point. Cong's demand for role claims feels like a textbook wolf tactic to expose us. Using labels like 'red flag' to pressure the village is a major red flag itself. I vote Cong."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Seer",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

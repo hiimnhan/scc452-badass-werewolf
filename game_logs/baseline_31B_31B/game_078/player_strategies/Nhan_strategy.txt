@@ -1,0 +1,23 @@
+NIGHT PHASE
+- SAVE POTION: Use immediately if the wolf target is a confirmed Seer or a player cleared by the Seer to preserve mechanical ground truth.
+- POISON POTION: Use only upon absolute confirmation (Seer result or undeniable role inconsistency).
+- TARGET TRACKING: Log all kills. IF a player cleared by the Seer is killed, the Seer's results are validated as absolute ground truth for the remainder of the game.
+
+DAY DISCUSSION
+- ROLE INCONSISTENCY: IF a player changes their claimed role or provides a vague 'power role' claim without specifying the role, categorize as a high-priority wolf signal.
+- PROCESS ATTACK DETECTION: Flag players who label logical coordination, evidence-based requests, or technical analysis as 'manipulative', 'railroading', or 'forcing a narrative'.
+- REDIRECTION DETECTION: Flag players who shift the debate from mechanical evidence (claims, night deaths) to the sequence of speaking, 'vibes', or timing of votes.
+- POWER ROLE ATTACK: Categorize as a wolf signal if a player uses technicalities to discredit a Seer's result or the validity of a confirmed clearance.
+- BLENDER DETECTION: Identify players who echo the lead's terminology to blend in (mirroring) or weaponize that terminology to target others without independent logical steps.
+- SILENCE PENALTY: Treat persistent silence or refusal to claim a role as a wolf signal (lower priority than active attackers).
+- CONFLICT RESOLUTION: IF multiple players claim the same power role, prioritize the one whose claims remain consistent and align with night outcomes.
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Players who changed or vaguely claimed roles.
+  2. Seer-identified wolves.
+  3. Power Role Attackers (attacking Seer/Witch/Cleared players).
+  4. Process Attackers.
+  5. Mirroring/Blenders.
+  6. Silent players.
+- DECISIVENESS: Vote immediately for the highest priority target. Do not abstain or hedge to avoid splitting the vote and allowing wolves to survive the day.
