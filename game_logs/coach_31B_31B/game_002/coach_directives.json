@@ -1,0 +1,73 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "presenting_findings",
+        "action": "WITHHOLD_DEMAND_FOR_IMMEDIATE_EXILE",
+        "rationale_short": "present your findings and allow the village to reach the conclusion; this reduces the 'wolf-like' appearance of controlling the narrative",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "forming_accusation",
+        "action": "AVOID_EMOTIONAL_NARRATIVES",
+        "rationale_short": "Avoid emotional narratives",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_death_occurred",
+        "action": "TRACK_WHO_BENEFITED_FROM_DEATH",
+        "rationale_short": "track who benefited from the Seer's death",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "wanting_to_validate_power_role_identity",
+        "action": "REVEAL_ROLE_BEFORE_VALIDATING",
+        "rationale_short": "Never validate a power role's identity using private knowledge unless you are ready to reveal your role to the village",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "conflict_between_phrasing_error_and_seer_clear",
+        "action": "PRIORITIZE_CONFIRMED_CLEARS",
+        "rationale_short": "Prioritize confirmed 'clears' over linguistic mistakes",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "forming_argument",
+        "action": "FOCUS_ON_LOGICAL_CONTRADICTIONS_IN_TIMELINES",
+        "rationale_short": "stop using 'behavioral tropes' (e.g., 'classic wolf move') to argue; focus on logical contradictions in timelines",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_silent_or_only_agreeing_with_majority",
+        "action": "CHALLENGE_SILENT_PLAYER",
+        "rationale_short": "Pay closer attention to the 'silent' players\u2014the surviving Wolf spent the game agreeing with the winning narrative without ever leading it, which is a major deception signal",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 7,
+    "dropped": []
+  }
+}

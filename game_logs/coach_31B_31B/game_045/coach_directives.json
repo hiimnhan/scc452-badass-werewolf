@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "village descends into 'meta-gaming' or circular arguments about 'logic styles'",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "reveal yourself the moment the village descends into 'meta-gaming' or circular arguments about 'logic styles' to ground the debate in facts",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "policing 'compliance simulation' and demanding accountability",
+        "action": "AVOID_AGGRESSIVE_ACCOUNTABILITY",
+        "rationale_short": "Avoid 'aggressive accountability'; it makes you look like a wolf trying to force a narrative",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "Guard uses pressure tactics or attacks others for silence",
+        "action": "AVOID_ECHOING_AGGRESSION",
+        "rationale_short": "By echoing the Guard's pressure tactics and attacking others for silence, you painted a target on your back",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "any state",
+        "action": "REMAIN_STEALTHY",
+        "rationale_short": "As a power role, remain stealthy.",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "group needs an enforcer",
+        "action": "AVOID_BECOMING_ENFORCER",
+        "rationale_short": "Do not become the 'enforcer' of the group, as wolves will use your aggression to frame you",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "evidence is based on 'behavioral patterns' or 'mirroring' alone",
+        "action": "ABSTAIN_FROM_EXILE",
+        "rationale_short": "Do not exile based on 'behavioral patterns' or 'mirroring' alone.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "observing 'compliance simulation' vs 'strategic alignment'",
+        "action": "DISTINGUISH_BEHAVIORS",
+        "rationale_short": "Distinguish between 'compliance simulation' and 'strategic alignment.'",
+        "confidence": 0.7
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player aligns with majority just enough to stay safe while steering vote toward aggressive villagers",
+        "action": "ACCUSE_X",
+        "rationale_short": "be wary of wolves who 'align' with the majority just enough to stay safe while steering the vote toward aggressive villagers",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "The village focused on how people were speaking (mirroring, echoing) rather than what was being said.",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Treating silence as a 'wolf signal' caused the village to panic and attack their own.",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "if you are eliminated early, your teammates must prioritize finding the wolves through behavior",
+        "reason": "not_role_specific"
+      }
+    ]
+  }
+}

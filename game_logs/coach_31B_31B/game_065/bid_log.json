@@ -1,0 +1,278 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 6,
+                "reason": "First day, no deaths. I need to initiate a role-call to identify power roles and establish a baseline for behavioral analysis to detect compliance simulation or quiet-player framing."
+            },
+            {
+                "Cong": 10,
+                "reason": "Following strategy: must claim identity immediately during first role-call to prevent Quiet-Player Framing and Urgency Bias."
+            },
+            {
+                "Nam": 9,
+                "reason": "I have a confirmed non-wolf result for Nhan. Establishing a Trust Anchor early prevents wasting votes and forces wolves to react to a known innocent."
+            },
+            {
+                "Jin": 10,
+                "reason": "I am a power role. Strategy dictates I claim immediately to establish my role and demand others do the same to identify wolves."
+            },
+            {
+                "Hoang": 6,
+                "reason": "I need to request role claims from power roles and establish a baseline for the debate to identify Compliance Simulators and Trust Anchors early."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish my 'Villager' claim early and pivot the conversation toward why Nhan survived, potentially framing them as a power role or a suspicious survivor to control the narrative."
+            },
+            {
+                "Meg": 2,
+                "reason": "Day 1. Zero early aggression strategy. No accusations yet. Staying quiet allows villagers to speculate while I blend in."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin is exhibiting 'Urgency Bias' and 'Quiet-Player Framing' by demanding immediate claims and equating silence with guilt. I must flag this behavior to prevent a rush vote based on false signals."
+            },
+            {
+                "Cong": 9,
+                "reason": "I must claim Villager immediately per strategy to avoid 'Quiet-Player Framing'. I also need to flag Jin's urgency bias and aggressive demands for claims as potential wolf tactics to deflect suspicion."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin is exhibiting Urgency Bias and aggressive policing of transparency. I must claim Seer immediately to stop his momentum, reveal Nhan as a Trust Anchor, and prevent him from manipulating the vote."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is exhibiting 'Compliance Simulation' by mirroring power-role urgency and labeling silence as guilt. I must flag this behavior immediately to prevent a rush vote on innocent players."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin is pushing for immediate claims, which is a high-risk environment. I must claim Villager now to avoid being flagged as a 'slow claimer' and blend in with the narrative."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin demanded immediate role claims. I must claim Villager now to follow strategy and avoid being framed as a wolf for delaying."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam is my Trust Anchor. Jin used 'Urgency Bias' and 'Quiet-Player Framing', which Nam identified. I must publicly validate Nam's clearance and pivot suspicion to Jin to secure the vote."
+            },
+            {
+                "Cong": 8,
+                "reason": "Must claim Villager immediately to avoid Quiet-Player Framing. Need to support Nam (Seer) and Nhan (Trust Anchor) while flagging Jin's urgency bias and aggressive pressure tactics as per strategy."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam is Tone Policing by attacking my style instead of providing logic. I must call out this wolf signal and demand claims from the remaining players to isolate suspects."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam (Seer) has identified Nhan as a Trust Anchor. Jin is exhibiting 'Compliance Simulation' and 'Urgency Bias'. I must intervene to validate Nam's logic and push the village toward targeting Jin."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to claim Villager immediately to avoid suspicion and align with Nam's trust in Nhan, using them as shields while blending into the conversation."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin demanded roles; I must claim Villager immediately to follow strategy and avoid being framed as a wolf for delaying."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "I must claim Villager immediately to avoid 'Quiet-Player Framing'. I also need to reinforce Nam as the Trust Anchor and explicitly flag Jin for urgency bias and pressure tactics to isolate the suspect."
+            },
+            {
+                "Nam": 8,
+                "reason": "Jin is exhibiting clear Urgency Bias and policing transparency to force a rush vote. I must solidify the case against Jin and protect the Trust Anchor, Nhan, from Jin's framing."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam and Nhan are coordinating to frame me. Nam is using Tone Policing and Nhan is using Compliance Simulation. I must defend myself and expose their behavior to avoid being exiled."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam is the Seer and Nhan is a Trust Anchor. Jin is exhibiting Compliance Simulation and Urgency Bias. I must align with the Seer and push for Jin's exile to eliminate a likely wolf."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to claim Villager immediately to avoid suspicion. Will align with Nam and Nhan to push Jin, using the Seer's clear as a shield while blending into the majority."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to claim Villager immediately per strategy and align with Nam and Nhan to push the consensus against Jin."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin is using 'Quiet-Player Framing' and attacking a Seer-cleared player's tone to deflect. This is a direct violation of Trust Anchor Integration. I must push the accusation against Jin to prevent a rush vote."
+            },
+            {
+                "Cong": 9,
+                "reason": "Must claim Villager immediately to avoid framing. Need to flag Jin's urgency bias and tone policing, and reinforce Nam as a Trust Anchor based on the Seer clearance of Nhan."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin is attacking me and my Trust Anchor (Nhan) while using tone policing to deflect logic. This is a definitive wolf signal. I must secure the vote against Jin immediately."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is exhibiting 'Compliance Simulation' and 'Tone Policing'. I can confirm Nhan was the wolf target, validating Nam's Seer claim and cementing Jin's status as a high-priority wolf target."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to claim Villager immediately to avoid suspicion. Will align with the Nam/Nhan bloc to isolate Jin, using the current momentum to blend in as a helpful villager."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my role as Villager and align with the Nam/Nhan consensus against Jin to blend in and secure an early exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Jin is using 'Quiet-Player Framing' and 'Wolf-Shielding' by attacking Nam (Seer) and me (Seer-cleared). This is a definitive wolf signal. I must push for Jin's immediate exile to secure the win."
+            },
+            {
+                "Cong": 9,
+                "reason": "Must claim Villager immediately to prevent framing. Need to support Nam (Seer) and Nhan (Trust Anchor) while flagging Jin's urgency bias and tone policing as wolf signals."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam is actively orchestrating a rush vote against me using tone policing and pseudo-psychological framing. I must defend my role and expose his behavioral signals to prevent my own exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin is exhibiting Compliance Simulation and Tone Policing. Nam is the Seer and Nhan is a Trust Anchor. I must align with Nam to secure Jin's exile based on clear wolf signals."
+            },
+            {
+                "Riley": 6,
+                "reason": "I need to claim Villager immediately to avoid suspicion. I will align with the majority against Jin to blend in while using Nam's claim as a shield."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to claim Villager as requested by Jin and align with the Nam/Nhan consensus against Jin to blend in and support the current distraction."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam (Seer) was killed, confirming his role and the wolves' target. I must immediately establish Nam as the trust anchor and analyze the remaining players for behavioral red flags based on his previous clearances."
+            },
+            {
+                "Cong": 8,
+                "reason": "Must immediately claim Villager to prevent framing and establish Nhan as a Trust Anchor following Nam's death. Need to analyze the 'no death' Night 1 to identify contradictions."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nam was likely the Seer and is now dead. I must establish Nhan as a Trust Anchor immediately and demand power role claims to prevent the wolves from controlling the narrative."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish my 'Villager' claim early and steer the conversation toward Cong's silence to frame them as a quiet wolf while utilizing Nhan as a shield."
+            },
+            {
+                "Meg": 5,
+                "reason": "Nam is dead. I need to blend in by analyzing the current game state and supporting the new consensus to avoid appearing too passive."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Hoang is reinforcing a sound strategy. I need to support the demand for claims from Cong, Riley, and Meg to identify contradictions and prevent 'Quiet-Player Framing' or 'Urgency Bias' from the remaining players."
+            },
+            {
+                "Cong": 10,
+                "reason": "Must claim role immediately per strategy to prevent quiet-player framing and urgency bias. Need to establish my identity as a Villager and reinforce Nhan as a trust anchor."
+            },
+            {
+                "Riley": 8,
+                "reason": "Hoang demanded role claims. I must claim Villager immediately to avoid appearing suspicious or 'slow,' while positioning Cong as the suspicious one for not claiming."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang demanded my role claim. I must immediately claim Villager to follow my strategy and avoid being framed as a wolf for delaying."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Nam was the Seer and was killed, confirming his alignment. I need to reinforce the Trust Anchor status and pressure Riley and Meg to claim roles to isolate the remaining wolves."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is exhibiting 'Compliance Simulation' by mirroring my vocabulary and demanding my claim to deflect pressure. I must flag this behavior and maintain focus on the suspects to prevent a wolf-led diversion."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang and Cong both demanded my role. I must claim Villager immediately to avoid being flagged as a 'slow claimer' or suspicious, then pivot the pressure back to Hoang to maintain balance."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Cong are demanding role claims. I must claim Villager immediately to avoid being framed as a wolf for delaying, as per my strategy."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley is using 'Compliance Simulation' logic to frame Cong without factual evidence, which is a red flag for wolf behavior. I must intervene to prevent an baseless exile and push for Hoang's claim."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is attempting to frame me based on 'mirroring' and 'vibes' rather than factual evidence. I must immediately shut down this behavioral attack and pivot the focus back to the remaining unclaimed roles."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong is exhibiting 'Compliance Simulation' by mirroring my vocabulary and demanding my claim to deflect. I must flag this wolf signal and protect Trust Anchor Nhan to prevent a misvote."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Cong both demanded claims. I must claim Villager immediately to avoid being framed as a wolf for delaying, and I need to align with Riley's push against Cong."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is using 'Quiet-Player Framing' and behavioral 'vibes' to attack Cong, a player pushing for factual transparency. This is a wolf signal. I must intervene to pivot suspicion to Riley and protect the village count."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is exhibiting clear 'Compliance Simulation' and 'Tone Policing' by mirroring my vocabulary and dismissing Riley's logical observation as 'vibes'. I must flag this wolf behavior and protect the Trust Anchor Nhan."
+            },
+            {
+                "Riley": 8,
+                "reason": "Cong is framing my suspicion as deflection. I must pivot quickly to demand Hoang's claim, shifting the focus from my 'vibes' to Hoang's lack of transparency to maintain my credibility."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang and Cong both demanded my role. I must claim Villager immediately to avoid being framed as a wolf for delaying. I will also align with Riley to pressure Cong."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Riley is using behavioral framing to target me, a known villager. Hoang is dodging his own transparency demand. I must expose Hoang's evasion and Riley's deflection to prevent a misguided vote."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong and Nhan are using 'Tone Policing' and 'Compliance Simulation' to force my claim. I must expose Cong's mirroring and Nhan's manipulation to pivot the vote toward Cong before they frame me."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nhan and Cong have teamed up to call out my 'vibes' attack as a deflection. I must pivot immediately to avoid becoming the primary target and shift focus back to Hoang's lack of a claim."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to claim Villager immediately as requested by Hoang and Cong to avoid being framed as a wolf for delaying. Will align with the push for Hoang to claim."
+            }
+        ]
+    ]
+}

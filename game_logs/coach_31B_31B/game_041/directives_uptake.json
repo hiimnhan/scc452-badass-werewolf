@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "041",
+  "directives_source_game_id": "040",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "ENFORCE_ROLE_CALL",
+        "directive_rationale": "Your aggressive role-call enforcement and immediate establishment of ground truth were excellent.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang immediately claimed Seer, stated Nhan was not a wolf, and demanded that everyone else reveal their roles immediately, threatening to flag hesitation as a Confusion Mask.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang aggressively enforced role calls from the start of the first debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_cleared_player",
+        "directive_action": "LABEL_FATAL_ERROR",
+        "directive_rationale": "You successfully isolated the wolves by treating attacks on cleared players as 'Fatal Errors.'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nam attacked Cong (who Hoang had cleared), Hoang stated that Nam committed a 'Fatal Error' by attacking a player he had confirmed as innocent.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang explicitly used the 'Fatal Error' label when a cleared player was attacked."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "MAINTAIN_HIGH_PRESSURE",
+        "directive_rationale": "Continue this high-pressure approach to prevent wolves from using Confusion Masks.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang maintained a high-pressure tone across Rounds 1 and 2, labeling silence as 'Confusion Masks' and 'stall tactics', and demanding immediate claims.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang consistently used aggressive terminology to pressure other players."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Always prioritize the Seer-Guard-Witch protection loop to ensure the village's information source survives.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 2, Nhan chose to protect Hoang (the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan protected the Seer in Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "PROTECT_WITCH",
+        "directive_rationale": "Always prioritize the Seer-Guard-Witch protection loop to ensure the village's information source survives.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 1, Nhan protected Nhan (himself) instead of Cong (the Witch). In Round 2, Nhan protected Hoang. In Round 3, Nhan protected Riley.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan never protected the Witch (Cong) during any night phase."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_attacked",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Using the SAVE potion in Round 2 to keep the Seer alive... secured the victory.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong used the SAVE potion on Hoang in Round 2 after Riley targeted him.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong successfully saved the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "confirmed_wolf_identified",
+        "directive_action": "POISON_WOLF",
+        "directive_rationale": "using the POISON potion in Round 3 to eliminate a confirmed wolf secured the victory.",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong used the POISON potion on Riley in Round 3 after the Seer investigated Riley as a wolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong poisoned the identified wolf."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "supporting_seer",
+        "directive_action": "PROVIDE_BEHAVIORAL_ANALYSIS",
+        "directive_rationale": "mimicking their terminology without adding independent logic makes you indistinguishable from a wolf... Provide specific behavioral analysis to prove your alignment.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin supported Hoang by analyzing Meg's behavior, specifically noting that Meg's attempt to discredit the Seer by mimicking terminology was a 'Fatal Error' and a 'False Logic Trap'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "While Jin provided analysis of Meg's behavior, he relied heavily on the Seer's specific terminology ('Fatal Error', 'False Logic Trap') rather than independent logic."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_attacks_seer_clear",
+        "directive_action": "REQUEST_VOTE_ON_ATTACKER",
+        "directive_rationale": "any player attacking that clear (like Jin did) should be exiled immediately regardless of their claims.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "When Nam attacked Cong (a Seer-clear), Jin voted for Nam, stating that Nam committed multiple Fatal Errors by attacking Seer-cleared players.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin voted for the player who attacked the Seer's clear."
+      }
+    ]
+  }
+}

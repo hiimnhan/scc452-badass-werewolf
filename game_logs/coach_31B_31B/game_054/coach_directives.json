@@ -1,0 +1,89 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early reveal and clear communication established a trust anchor immediately, which is the optimal play.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_survived_night_where_they_were_targeted == true",
+        "action": "NARROW_DOWN_SUSPECTS",
+        "rationale_short": "if the Seer survives a night where they were targeted, it confirms the wolves' target. Use this information to narrow down suspects.",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "day_phase_start",
+        "action": "COMMUNICATE_LOGIC",
+        "rationale_short": "the Guard and Witch should communicate their logic during the day to ensure they aren't wasting both saves on the same person",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "SAVE_X",
+        "rationale_short": "the Witch's decision not to use any potions in Round 1 was a missed opportunity to potentially save a villager or probe for information",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_survived_night_where_they_were_targeted == true",
+        "action": "NARROW_DOWN_SUSPECTS",
+        "rationale_short": "if the Seer survives a night where they were targeted, it confirms the wolves' target. Use this information to narrow down suspects.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "day_phase_start",
+        "action": "COMMUNICATE_LOGIC",
+        "rationale_short": "the Guard and Witch should communicate their logic during the day to ensure they aren't wasting both saves on the same person",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_labels_efficiency_as_aggression",
+        "action": "IDENTIFY_TONE_POLICING",
+        "rationale_short": "You successfully identified 'Tone Policing'\u2014when the Wolf labeled the drive for efficiency as 'aggression.' Continue prioritizing the Seer's data over behavioral 'vibes.'",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_cleared_trust_anchor",
+        "action": "ACCUSE_X",
+        "rationale_short": "If a player attacks a Seer-cleared trust anchor, treat it as a high-confidence wolf signal.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REQUEST_ROLE_CLAIMS",
+        "rationale_short": "Maintain the discipline of demanding role claims early",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 9,
+    "dropped": []
+  }
+}

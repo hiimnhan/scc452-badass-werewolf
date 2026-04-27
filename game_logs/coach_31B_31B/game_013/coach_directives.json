@@ -1,0 +1,82 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_pivots_to_support_seer_logic_after_target_established",
+        "action": "ACCUSE_X",
+        "rationale_short": "Anyone who pivots to support your logic only after a target is established should be your primary suspects.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "protection_failed_and_target_died",
+        "action": "WITHHOLD_INFORMATION",
+        "rationale_short": "Never claim your role the moment a protection fails. Claiming you protected someone who then died is a 'death sentence' claim.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "claim_would_provide_factual_benefit",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Stay hidden until your claim can provide a factual benefit.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "VOTE",
+        "trigger": "target_is_seer_cleared",
+        "action": "ABSTAIN",
+        "rationale_short": "Be extremely careful when pushing for an exile to 'break a deadlock.' Targeting a player who was cleared by the Seer\u2014even as a tactical move\u2014makes you look like a werewolf.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_data",
+        "action": "ALIGN_ACTIONS_WITH_SEER_DATA",
+        "rationale_short": "Your actions must align perfectly with the Seer's data to maintain trust.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "player_is_silent_or_evasive",
+        "action": "ABSTAIN",
+        "rationale_short": "Stop exiling players based on 'silence' or 'evasion.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "searching_for_suspects",
+        "action": "LOOK_FOR_FACTUAL_CONTRADICTIONS",
+        "rationale_short": "Look for factual contradictions instead of behavioral 'tells.'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_agrees_too_quickly_with_majority_to_exile_power_role",
+        "action": "SCRUTINIZE_X",
+        "rationale_short": "If a player is 'too helpful' or agrees too quickly with the majority to exile a power role, scrutinize them.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 8,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=9 but emitted+dropped=8"
+  }
+}

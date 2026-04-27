@@ -1,0 +1,27 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict, updated list of Seer-confirmed non-wolves (Trust Anchors).
+- SURVIVAL ANALYSIS: If no one dies, treat as a confirmed save. Use this to validate the Guard's legitimacy if they claim a specific target.
+- SEER ACTIONS: Prioritize investigating players who exhibit high-confidence wolf signals (stalling/deflection) or those who remain silent during role-reveal phases.
+
+DAY DISCUSSION
+- FACTUAL ANCHORING: Use Seer results as absolute ground truth. Lead the village by establishing Trust Anchors early.
+- ROLE REVEAL MANAGEMENT: 
+  - IF a player hesitates to claim a role, THEN demand clarity but avoid immediate voting. 
+  - PRIORITIZE dialogue over immediate exile to prevent 'tragic' exiles of power roles (e.g., Guard).
+- SUSPECT IDENTIFICATION:
+  - Behavioral Contradiction: Flag players attacking the Seer or Trust Anchors.
+  - Role Contradictions: Demand immediate resolution if multiple players claim the same unique role.
+  - Bus-Throwing Detection: Treat players who vote for known wolves with baseline suspicion; do not grant clearance based on voting patterns.
+  - Stalling/Deflection Detection: Flag players using 'processing information' or labeling efficiency/leadership as 'aggression' or 'desperation'.
+- TONE CONTROL: Remain neutral and objective to avoid counter-framing.
+
+VOTING PHASE
+- EVIDENCE THRESHOLD: Vote to exile ONLY IF:
+  - The Seer confirms 'wolf'.
+  - A factual role contradiction exists.
+  - A player attacks a Trust Anchor or the Seer.
+  - A player exhibits high-confidence wolf signals AND a reasonable window for role-claiming has passed without a valid explanation.
+- VOTE COORDINATION:
+  - Direct all votes away from Trust Anchors.
+  - Prioritize Seer results over social 'vibes'.
+  - Execute decisively once a wolf is confirmed to minimize the window for doubt.

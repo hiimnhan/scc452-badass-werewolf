@@ -1,0 +1,30 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict, updated list of Seer-confirmed non-wolves (Trust Anchors).
+- SURVIVAL ANALYSIS: If no one dies, treat as a confirmed save. Use this to validate the Guard/Seer's legitimacy during Day Discussion.
+- ROLE-SPECIFIC ACTIONS (If Power Role):
+  - GUARD: Priority 1: Protect the Seer. Priority 2: Protect the Witch. NEVER protect self in Round 1. Coordinate with Seer to ensure protection immediately follows a reveal.
+  - WITCH (Save): Priority 1: Use if target is Seer. Priority 2: Use if Seer is dead and target is a high-value Trust Anchor.
+  - WITCH (Poison): Use ONLY IF Seer confirms 'wolf' AND day vote is likely to fail, OR to stop extreme chaos. NEVER poison a Seer-cleared player.
+
+DAY DISCUSSION
+- Factual Anchoring: Base every argument on Seer results. Treat Seer results as absolute ground truth.
+- Guided Inquiry: Focus on objective contradictions. Ignore tone-policing to prevent wolves from framing the village as hostile.
+- Suspect Identification:
+  - Behavioral Contradiction: Flag players attacking the Seer or any Trust Anchor.
+  - Role Contradictions: Demand immediate resolution if multiple players claim the same unique role.
+  - Bus-Throwing Detection: Treat players who vote for known wolves with baseline suspicion; do NOT grant clearance based on voting patterns against wolves.
+  - Compliance Check: Flag 'simulated compliance' (echoing the majority without providing new logic).
+  - Stalling Detection: Flag players using 'processing information' or vague claims to delay role reveals.
+  - Deflection Detection: Flag players who attack the process of finding the truth or label efficiency/leadership as 'aggression'.
+- Tone Control: Remain neutral and objective to avoid counter-framing.
+
+VOTING PHASE
+- Evidence Threshold: Vote to exile ONLY IF:
+  - The Seer confirms 'wolf'.
+  - A factual role contradiction exists.
+  - A player attacks a Trust Anchor or the Seer.
+  - A player exhibits high-confidence wolf signals (stalling/deflection) and no other suspects exist.
+- Vote Coordination:
+  - Direct all votes away from Trust Anchors.
+  - Prioritize Seer results over social 'vibes'.
+  - Execute decisively once a wolf is identified to minimize the window for doubt.

@@ -1,0 +1,81 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "survive_night_1 == true",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "communicate your role immediately if you survive",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "survive_night_1 == true",
+        "action": "ENSURE_GUARD_KNOWS_PRIORITY",
+        "rationale_short": "ensure the Guard knows your priority",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Prioritize the Seer above all else",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num > 1",
+        "action": "COORDINATE_SAVE_RESOURCES_WITH_WITCH",
+        "rationale_short": "The Guard and Witch did not coordinate their save resources",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "round_num > 1",
+        "action": "COORDINATE_SAVE_RESOURCES_WITH_GUARD",
+        "rationale_short": "The Guard and Witch did not coordinate their save resources",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "fatal_error_identified == true",
+        "action": "POISON_X",
+        "rationale_short": "Use your poison more aggressively once a 'fatal error' (attacking a cleared player) is identified",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "player_is_silent == true && seer_data_available == false",
+        "action": "ABSTAIN",
+        "rationale_short": "the total absence of Seer data makes early rush-exiles risky",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_safe_echoing == true",
+        "action": "ACCUSE_X",
+        "rationale_short": "Focus on detecting 'safe-echoing'\u2014wolves who agree with the village process to blend in",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 8,
+    "dropped": []
+  }
+}

@@ -1,0 +1,153 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Hoang.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Seer. I investigated Nhan last night and confirmed they are NOT a werewolf. Nhan is a trust anchor for the village. Everyone else, claim your roles immediately so we can identify any contradictions."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am a Villager. Jin, I accept your result on Nhan as ground truth for now. Cong, Hoang, Riley, Meg\u2014claim your roles immediately. Any hesitation or delay will be flagged as a wolf signal."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I am a Villager. Nam, your demand for immediate claims is a bit aggressive; it feels like you're trying to force a narrative to hide your own lack of data. Since no one died last night, we need to be careful not to rush into a wrong exile."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley, your response is a textbook Confusion Mask. You're using emotional appeals and framing the request for transparency as 'aggression' to deflect from the role call. This is a clear wolf signal. Cong, Hoang, Meg\u2014claim your roles now or you'll be grouped with Riley."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley, your attempt to frame the demand for transparency as 'aggression' is a textbook Confusion Mask. You are deflecting from the role call to manipulate the village's perception. Cong, Hoang, Meg\u2014claim your roles now or you are grouped with Riley."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley, your attempt to label transparency as 'aggression' is a Fatal Error and a clear Confusion Mask. You are deflecting from the role call to manipulate the village. Cong, Hoang, Meg\u2014claim your roles now or you will be grouped with Riley."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley, your attempt to label the demand for transparency as 'aggression' is a clear Confusion Mask. You are deflecting from the role call to manipulate the village's perception. This behavior is a fatal error and a wolf signal. We must exile you now."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley's attempt to label the call for transparency as 'aggression' is a textbook Confusion Mask. This deflection and the request to slow down the process when roles are being called are clear indicators of a werewolf trying to manipulate the village."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley's attempt to label the demand for transparency as 'aggressive' is a textbook Confusion Mask. Instead of providing a clear role claim, Riley used emotional appeals to deflect scrutiny. This behavior is a strong indicator of a werewolf attempting to manipulate the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley's attempt to frame a demand for transparency as 'aggression' is a textbook Confusion Mask. This deflection from the role call is a Fatal Error used to manipulate the village. We must exile Riley to remove this wolf signal immediately."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is attempting to manipulate the village by framing the request for role transparency as 'aggression.' This is a classic deflection tactic designed to create paralysis and protect wolves. Riley's resistance to the role call is a clear wolf signal."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: I've claimed Villager, yet Nam is doubling down on psychological labeling to rush a vote. This level of aggression without empirical evidence is a logical inconsistency. We shouldn't exile based on 'signals' but on actual contradictions. Nam's pressure is too suspicious."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Riley",
+                "reasoning": "Meg voted to exile Riley. Reason: I am a Villager. I agree with Nam and Jin that avoiding the role call and framing transparency as aggression is a clear wolf signal. Riley's deflection from the ground truth established by the Seer makes them the most viable target for exile."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Jin.",
+            "Hoang (Guard) chose to protect Jin.",
+            "Jin (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nhan (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Seer. I have investigated Nhan and Cong; both are confirmed innocent. Hoang and Meg, your continued silence is a Confusion Mask. Claim your roles immediately or be exiled. I am pushing for Hoang first."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Guard. I have been protecting the Seer to ensure our information flow remains intact. Jin is established ground truth. Meg, your silence is a Confusion Mask. Reveal your role now or you are the next target for exile."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I am a Villager. I've been quiet because I'm trying to find the ground truth, not hiding. Hoang, you're claiming Guard and immediately attacking me to deflect. That's a classic wolf play. If Jin is the trust anchor, why are you so eager to exile me?"
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg, your claim is a textbook Confusion Mask. You frame your silence as 'finding ground truth' and characterize my transparency as a 'wolf play.' This is a Fatal Error. Your deflection confirms your alignment. Village, we vote Meg now."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am a Villager. Meg, your attempt to frame the demand for transparency as 'wolf play' is a textbook Confusion Mask. You are attacking the Seer's logic and the Guard's claim to deflect. We have the ground truth; we vote Meg now."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg, you have committed a Fatal Error. Framing the demand for transparency as a 'wolf play' is a textbook Confusion Mask. You are attacking the Seer's logic to deflect. The evidence is absolute. Village, we vote Meg now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg's attempt to frame the demand for transparency as a 'wolf play' is a textbook Confusion Mask. By attacking the Seer's logic and the Guard's claim to deflect, she has committed a Fatal Error. The evidence is absolute; we must exile Meg now."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg's attempt to frame the demand for role transparency as 'wolf play' is a textbook Confusion Mask. By attacking the Seer's logic to deflect suspicion, she has committed a fatal error. The evidence is absolute; we must exile her now."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg has committed a Fatal Error by using a Confusion Mask, framing the demand for transparency as 'wolf play' to deflect suspicion. With the Seer's results providing ground truth, Meg's attempts to attack the village's logic confirm her alignment. We must exile her now."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg has committed a Fatal Error by framing the demand for transparency as a 'wolf play.' This is a textbook Confusion Mask used to deflect logic. With Nhan and Cong confirmed innocent, Meg's deflection confirms her alignment. We must exile her now."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg's attempt to frame the demand for transparency as 'wolf play' is a Fatal Error. She is attacking the Seer's logic and my role claim to deflect from her own lack of transparency. This is a clear wolf signal. We must exile her now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Jin and Hoang have roles, but Nam is just a Villager pushing for my exile with extreme aggression. This feels like an attempt to manufacture a consensus and hide his own alignment. I'm voting Nam to see how he reacts to pressure."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

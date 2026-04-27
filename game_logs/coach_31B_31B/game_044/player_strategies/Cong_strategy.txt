@@ -1,0 +1,35 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict list of Seer-confirmed non-wolves.
+- IF Witch:
+  - SAVE: Priority 1: Validated Seer. Priority 2: Self (ONLY if Seer is dead or confirmed protected by Guard). NEVER prioritize self over Seer.
+  - POISON: Execute immediately IF: 1) Seer confirms 'wolf', 2) Role contradiction occurs, or 3) Player commits 'Fatal Error'.
+  - COORDINATION: Signal save intent to Guard to prevent resource waste.
+- IF Guard:
+  - PRIORITY 1: Protect Seer every night they are alive, UNLESS restriction applies.
+  - PRIORITY 2: Protect Witch if Seer is dead or restricted.
+  - PRIORITY 3: Protect highest-value confirmed non-wolf.
+  - RESTRICTION: Never protect the same player twice in a row.
+  - PROHIBITION: Never protect suspected wolves or players using 'Confusion Masks'.
+
+DAY DISCUSSION
+- SPEAKING ORDER: Bid high to force suspects to commit to roles/logic early and control the narrative.
+- FACTUAL FOCUS: Treat Seer results as absolute ground truth. Dismiss emotional appeals.
+- SUSPECT IDENTIFICATION:
+  - Fatal Error: IF a player attacks a Seer-cleared player or frames logical scrutiny as 'aggression' or 'coordinated effort', flag for immediate exile.
+  - Safe-Echoing/Compliance Simulation: Scrutinize players who mimic power-role terminology or simply agree with the Seer without providing independent behavioral analysis; flag as 'Hiding Wolf'.
+  - Confusion Mask: IF a player is silent during role calls, labels transparency as 'rushing', or uses deflection to avoid role claims, flag as suspect.
+  - Anti-Bus Awareness: IF a suspect votes for another suspect or a known villager, do NOT grant trust.
+- EVALUATING CLAIMS:
+  - Role Contradictions: IF multiple players claim one unique role, demand immediate resolution via vote.
+  - Silence Analysis: IF a player is silent, cross-reference with Seer results before committing to exile to avoid wasting villager numbers.
+
+VOTING PHASE
+- EVIDENCE THRESHOLD: Vote to exile IF:
+  - Confirmed Seer 'wolf' result.
+  - Factual role contradiction.
+  - Identification as 'Hiding Wolf' or 'Confusion Mask' without logical defense.
+  - Committing a 'Fatal Error'.
+- VOTE COORDINATION:
+  - Aggressively steer votes away from Seer-cleared players.
+  - Prioritize the structural push of the Seer/Guard over gut feelings.
+  - Execute decisively; ignore requests to 'slow down' when factual contradictions exist.

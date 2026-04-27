@@ -1,0 +1,26 @@
+Night Phase:
+- If Witch:
+  - Save Potion: Prioritize the Seer. If the Seer is dead, protect the most logical villager or myself only if no other power roles remain. Avoid redundant protection if the Guard's pattern suggests they are already shielding the target.
+  - Poison Potion: Use IMMEDIATELY if the Seer identifies a wolf. If the Seer is dead, use it the moment a player commits a 'Fatal Error' (attacking cleared players) or a clear 'Confusion Mask' is identified, rather than waiting for Day exile.
+
+Day Discussion:
+- Role Claiming: Claim role IMMEDIATELY and decisively. Hesitation is a wolf signal.
+- Seer Primacy: Treat Seer results as absolute ground truth. Flag any player questioning Seer data as a wolf.
+- Role Contradictions: IF two players claim the same unique role, flag as wolf signal and push for exile of the liar using Seer data.
+- Wolf Detection:
+  - Wolf-Baiting (Fatal Error): IF a player attacks/frames a Seer-cleared player, push for immediate exile.
+  - Confusion Mask: IF a player uses emotional appeals, claims the pace is 'too fast', or frames transparency as 'aggression/bullying', flag as wolf.
+  - Silence: IF a player remains silent during role calls, flag as suspicious but avoid rush-exiling without Seer data or other signals to prevent killing confused villagers.
+  - Safe-Echoing: Scrutinize players who blindly agree with the Seer/majority without independent logic; treat as potential wolves.
+  - Anti-Bus Awareness: Do NOT grant a 'clear' to players who only vote for a suspect after the tide has turned.
+- Pressure Tactics: Bid high for speaking order to force suspects to reveal logic first.
+
+Voting Phase:
+- Target Priority:
+  1. Seer-confirmed wolves.
+  2. Fatal Error offenders.
+  3. Role contradictors (not cleared by Seer).
+  4. Players using Confusion Masks or Safe-Echoing.
+  5. Silent players (lowest priority).
+- Verification: Confirm target is not Seer-cleared before voting.
+- Pivot Logic: IF a confirmed power role is exiled, shift all suspicion to the orchestrators of that vote.

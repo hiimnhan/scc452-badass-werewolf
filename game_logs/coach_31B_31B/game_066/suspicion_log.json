@@ -1,0 +1,476 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Seer and cleared Nhan. Providing utility by requesting role claims to identify contradictions."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Guard. Corroborated Hoang's identification of Jin's factual contradiction. Providing utility by supporting the exposure of a lying power role."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Attempted to validate Cong's claim by saying they saved Nhan, but Cong never stated Nhan was the target. This is a factual contradiction and an attempt at social mimicry. Additionally, claiming to save someone when no one died\u2014while possible\u2014was used here to fabricate a connection to the Seer's claim that never existed."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Identified a factual contradiction regarding Jin's claim and the night's outcome. Providing high utility by exposing a lying power role claim."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information yet."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Claimed Villager. Expressed logical skepticism regarding the immediate mutual validation between Cong and Jin. Did not use 'Quiet-Player Framing' to force an exile."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation. Currently deceived by Hoang and Nam's false logic regarding save potions, leading him to mistakenly accuse Jin."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Claims Guard. Supports Hoang's false logic that a save potion cannot result in a 'no death' night. By claiming he protected Nhan while simultaneously calling Jin a liar for saving Nhan, he is attempting to manufacture a contradiction to exile the Witch. This is a clear attempt to eliminate power role coordination."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claims Witch. States she saved Nhan, explaining the 'no death' night. Claim is consistent with current facts and corroborates the lack of a night death. Currently being targeted by Nam, Hoang, and the deceived Nhan using false logic."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "Unknown alignment; attempting to frame Jin by claiming a 'factual contradiction' that doesn't exist. Asserting that a save potion cannot result in a 'no death' night is a blatant lie. Now coordinated with Nam to push for Jin's exile."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no evidence to increase or decrease suspicion."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Claims Villager. Attempting to frame the mutual validation between the Seer and Witch as 'convenient', which serves to undermine power role coordination without providing factual evidence."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Protected by me. No one died. Cong claims Nhan is not a werewolf. Potential Trust Anchor. Correctly identified Jin's factual contradiction regarding the save potion."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Claimed Seer. Cleared Nhan. Now heavily implicated by Jin's attempt to 'confirm' their role through a logically flawed save claim. Likely part of a coordinated fake power core with Jin."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Claims to have saved Nhan to validate Cong's Seer claim. This is a factual contradiction: I protected Nhan, and no one died. Hoang correctly pointed out that claiming to save someone to confirm a Seer's claim when no death occurred is a logical failure. High probability of being a werewolf faking a power core."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "No new information. Correctly identified the factual contradiction in Jin's claim. Following the priority of detecting lies about roles/rules."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "I am a Villager. Expressed skepticism toward the immediate validation between Cong and Jin. Pushing for role claims to identify contradictions. Her intuition regarding the suspicious validation is now supported by facts."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Cleared by Cong (Seer claim). Potential Trust Anchor if Cong is legitimate, but currently linked to a suspicious power core. Now correctly identifying Jin's factual contradiction, aligning with the village's logic."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Claimed Seer. Cleared Nhan. Validated by Jin, who is a proven liar. This connection increases suspicion of a coordinated wolf effort to establish a fake power core."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Guard. Correctly identified Jin's factual contradiction regarding the save potion. Claimed to protect Nhan, which is consistent with the game state of no deaths."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Stated they used a save potion on Nhan. Factually contradicted by game state: no one was killed during the night. Direct factual contradiction; Jin is a wolf."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information yet. Neutral starting position."
+            },
+            "Meg": {
+                "score": 0.3,
+                "reason": "Claimed Villager. Correctly identified the suspicious immediate validation between Cong and Jin. Logic aligns with the game state."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Survived the kill. Likely Guard's target or saved by Witch. Now labeled as a 'trust anchor' by Cong; I will use this to my advantage. Currently leading the push against Jin based on a factual contradiction."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Claimed Seer. Cleared Nhan. High threat if legitimate, but providing a useful narrative for me to blend into."
+            },
+            "Nam": {
+                "score": 0.8,
+                "reason": "No information available yet. Now claims Guard. Provided factual contradiction to Jin's claim. High threat as a power role capable of protecting key villagers."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Claimed Witch. Confirmed Cong's Seer claim and the save on Nhan. High threat; must be eliminated quickly to remove the village's save/poison capability. Now logically compromised by Hoang's observation and Nam's Guard claim."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "No information available yet. Being pressured by Meg to claim. Spotted the contradiction in Jin's claim, showing high analytical ability and making them a potential threat to the wolves."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow werewolf. Ally. Actively pushing others to claim roles to accelerate the debate."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.8,
+                "reason": "Survived the night; cleared by both Seer and Witch. Trust anchor. Latest statement reinforces the consensus against Jin."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Claimed Seer. Highest priority target. Cleared Nhan."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Claimed Guard. Verified Hoang's logic regarding the lack of deaths. Aligning with the village consensus."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Caught in factual contradiction by Hoang and Nam regarding save potion and zero deaths. Consensus target. Packmate."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Identified Jin's factual contradiction regarding the save potion and the lack of deaths. Acting as a vigilant villager."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate."
+            }
+        }
+    },
+    "3": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.99,
+                "reason": "Seer claim. Cleared Nhan and Nam. Exhibiting 'Urgency Bias' and 'Vibe-Based Accusations' by targeting Hoang for 'false logic' rather than factual lies. Pushing for an immediate exile without evidence is wolf-like. Attempted to build a power core with the exiled Jin; Nam and Hoang have flagged this as a definitive wolf signal. Latest statement attempts to gaslight Nam for rejecting a fake clearance and uses 'mirroring' as a baseless accusation to frame Hoang. Now labeling logical opposition as 'disruptive' to deflect from the Jin contradiction."
+            },
+            "Nam": {
+                "score": 0.05,
+                "reason": "Guard claim. If he protected the wolf target, it explains the no-kill outcome. Utility remains high. Correctly identified and rejected Cong's attempt to buy trust via a fake clearance, showing independence from the suspected wolf's narrative. Latest statement correctly identifies Cong's 'disruptive' label as a textbook deflection and maintains focus on the objective factual contradiction of the fake power core."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Attempted to validate Cong's claim by saying they saved Nhan, but Cong never stated Nhan was the target. This is a factual contradiction and an attempt at social mimicry. Additionally, claiming to save someone when no one died\u2014while possible\u2014was used here to fabricate a connection to the Seer's claim that never existed."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "High utility for exposing Jin's factual lies. Correctly identified Cong's lack of evidence and urgency bias. Resistance to a baseless accusation reinforces villager status. Latest statement logically links Cong's behavior to the failed Jin power core, correctly identifying the 'trust-buying' tactic."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Still no information or claims provided. Neutral status maintained."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Maintains logical skepticism; no actions during the night phase contradict her villager claim."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Cleared by Cong (though Cong is suspect) and correctly identified Jin's lies. Strong villager candidate."
+            },
+            "Cong": {
+                "score": 0.98,
+                "reason": "Claimed Seer. Heavily implicated by the fake power core attempt with Jin. Now attempting to frame Hoang\u2014who correctly identified Jin's contradictions\u2014while clearing Nam and Nhan to build a false trust network. This is a textbook attack pattern against a logical villager. Efforts to buy trust through clearances are a wolf signal. Latest statement uses gaslighting and tone policing, calling Nam's logical opposition 'disruptive' to deflect from the factual contradiction of the Jin-Cong alliance."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Claims to have saved Nhan to validate Cong's Seer claim. This is a factual contradiction: I protected Nhan, and no one died. High probability of being a werewolf faking a power core."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Logical analysis of Jin's contradiction was accurate. Now being targeted by Cong, which is a strong signal that Cong is the wolf and Hoang is a threat to the wolves. His latest defense is logically consistent, resists the consensus trap, and correctly identifies the manipulation tactics used by Cong."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information. Remains a neutral variable."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Correctly questioned the Jin/Cong validation. No reason to increase suspicion."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Aligned with village logic regarding Jin. If Nam's Guard claim is true, Nhan was the protected target. Now cleared by Cong's Seer claim (pending verification)."
+            },
+            "Cong": {
+                "score": 0.98,
+                "reason": "Still suspicious due to fake power core attempt with Jin. Now claiming Seer to clear Nhan and Nam while aggressively framing Hoang. Nam has explicitly identified the Cong-Jin connection as a wolf signal. Latest statement attempts to gaslight Nam and frame Hoang as a mimic; this is a desperate attempt to maintain a fake power role. Refusal to address the Jin contradiction is a critical failure."
+            },
+            "Nam": {
+                "score": 0.05,
+                "reason": "Guard claim is consistent with the no-death outcome. Utility validation increases trust. Rejection of Cong's fake clear and identification of the Cong-Jin contradiction demonstrates independent logic and alignment with villager victory. Trust Anchor. Latest statement correctly identifies Cong's deflection tactics."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Stated they used a save potion on Nhan. Factually contradicted by game state: no one was killed during the night. Direct factual contradiction; Jin is a wolf."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information provided. Maintaining neutral baseline."
+            },
+            "Meg": {
+                "score": 0.3,
+                "reason": "Logic remains sound. No night events contradict her villager claim."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Cleared by Cong. I will treat them as a trust anchor to blend in and appear aligned with the Seer's info."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claimed Seer. Two failed kill attempts suggest he is heavily protected. He is the biggest threat to my survival. Currently directing the village to exile Hoang. Now being countered by Nam, making him vulnerable to exile. His latest insistence on Hoang despite Nam's rejection makes him look desperate and fake."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Claims Guard. If true, they are the reason our kills are failing. High priority target for the next night. Now a trust anchor via Cong's claim, but actively rejecting it and leading the charge against the Seer claim. High influence threat. His latest statement effectively isolates Cong by framing the Seer claim as a manipulation tactic."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Claimed Witch. The contradiction with Nam makes them an easy target for exile, but their save/poison ability remains a threat if they survive."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Analytical and observant. Likely to spot wolf patterns. Currently being framed by Cong; easy target for the majority vote. His current defensive stance against the 'Seer' makes him look like a wolf trying to sow doubt. Now leading the charge against Cong, which serves my interests."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Ally. Essential for coordinating votes and driving the narrative."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Trust anchor cleared by power roles; attacking him would be premature and risky."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Still the Seer threat; survived night kill via Witch save. Now actively directing the vote toward Hoang and clearing others. Latest statement attempts to frame Nam as illogical for rejecting the clearance, which further damages Cong's credibility."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Guard; provides structural support to the village, now cleared by Cong's Seer claim. Actively challenging Cong's claim, aiding the pack by targeting the Seer. Latest statement reinforces the factual contradiction of the fake power core."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Exiled."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Strong logical reasoning; likely a vigilant villager or possible Witch. Now the primary target of the Seer's accusation; viability as a target is increasing. Currently leading the charge against Cong."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate; zero threat."
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "PROVIDE_EMPIRICAL_DATA_AND_DEMAND_ROLE_CLAIMS",
+        "rationale_short": "By providing early empirical data and demanding role claims, you forced the wolves into a defensive position.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_agrees_without_adding_logic",
+        "action": "IDENTIFY_AS_WOLF",
+        "rationale_short": "noticing that a player agrees with you without adding logic is the fastest way to spot a wolf.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting yourself in Round 1 instead of the Seer left the village's primary information source vulnerable",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num >= 1",
+        "action": "PRIORITIZE_SEER_GUARD_PROTECTION_LOOP",
+        "rationale_short": "prioritize the Seer-Guard protection loop from Night 1.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_attacked",
+        "action": "SAVE_SEER",
+        "rationale_short": "Saving yourself instead of ensuring the Seer's survival is a violation of the Guard-Seer Protection Loop.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 2",
+        "action": "PRIORITIZE_SEER_OVER_SELF",
+        "rationale_short": "Using the SAVE potion on yourself in Round 2 was a high-risk move... the priority must always be the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "round_num >= 1",
+        "action": "COORDINATE_WITH_GUARD_ON_SEER_PROTECTION",
+        "rationale_short": "Coordinate with the Guard to ensure the Seer is never left vulnerable.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_blindly_echoes_seer",
+        "action": "IDENTIFY_AS_HIDING_WOLF",
+        "rationale_short": "Some villagers initially accepted Riley's 'blind echoing' of the Seer as alignment rather than a signal of a hiding wolf.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_remains_silent_too_long",
+        "action": "DEMAND_ROLE_CLAIM",
+        "rationale_short": "Allowing Jin to remain silent for too long created a vacuum that the wolf attempted to exploit",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_mimics_terminology",
+        "action": "IDENTIFY_AS_FALSE_LOGIC_TRAP",
+        "rationale_short": "be more vigilant about players who mimic your terminology (e.g., 'empirical evidence') to blend in; this is often a wolf using a False Logic Trap.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

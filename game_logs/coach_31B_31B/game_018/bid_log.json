@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "No one died tonight, which is an anomaly. I must immediately demand role reveals from all players to identify the Seer and flush out any 'Quiet Wolves' using the confusion mask."
+            },
+            {
+                "Cong": 3,
+                "reason": "No one died, indicating a Guard or Witch save. No claims or evidence yet. I will listen for Seer claims or 'Confusion Mask' behavior before intervening."
+            },
+            {
+                "Nam": 9,
+                "reason": "I have confirmed Nhan is not a werewolf. Establishing this ground truth immediately narrows the suspect pool and protects a confirmed villager from being targeted."
+            },
+            {
+                "Jin": 10,
+                "reason": "Per strategy, I must reveal my role immediately to establish a factual pivot and protect confirmed innocents. As Guard, I need to synchronize with the Seer as soon as they claim."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No one has spoken and no roles have been claimed. I need to listen for a Seer claim to establish my protection priority and identify contradictions."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must establish a 'Villager' claim immediately to avoid the 'Quiet Wolf' label. I need to set the tone of the debate and steer suspicion toward others before a Seer claims."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following Phase-Shift Execution: maintain absolute silence and abstention in Round 1 to blend in and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin claimed Guard. I must immediately demand role reveals from all remaining players, including the Seer, to establish ground truth and identify any 'Quiet Wolves' avoiding a stance."
+            },
+            {
+                "Cong": 6,
+                "reason": "Jin claimed Guard. I need to press for the Seer to reveal and monitor for any 'Confusion Mask' responses from others to identify Quiet Wolves."
+            },
+            {
+                "Nam": 10,
+                "reason": "I am the Seer. I have ground truth that Nhan is not a werewolf. I must claim my role and clear Nhan to establish a factual baseline and protect a confirmed villager."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Jin's proactive demand for a Seer claim aligns with my strategy. I need to support this factual pivot to establish a data-driven targeting system and identify any wolves attempting to stall or confuse the process."
+            },
+            {
+                "Riley": 8,
+                "reason": "Must claim Villager immediately to avoid the 'Quiet Wolf' label. Need to align with Jin's assertive tone to blend in and steer suspicion toward others."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following Phase-Shift Execution strategy: maintain absolute silence and abstention in Round 1 to blend in and avoid early scrutiny."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam is the validated Seer and cleared me. I must aggressively support Nam's validity, demand immediate role reveals from Cong, Hoang, Riley, and Meg to identify any 'Quiet Wolves' or hesitations."
+            },
+            {
+                "Cong": 4,
+                "reason": "Nam (Seer) cleared Nhan. I need to ensure the village focuses on the remaining players (Hoang, Riley, Meg) and prevents any attacks on Nhan."
+            },
+            {
+                "Jin": 2,
+                "reason": "Nam has claimed Seer and cleared Nhan. I have already revealed my role. I now wait for other players to provide logic or reveal themselves to identify contradictions."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nam is validated Seer; Nhan is cleared. I must publicly align with this hard data to solidify the Seer's authority and pressure the remaining suspects (Cong, Riley, Meg) to reveal their logic."
+            },
+            {
+                "Riley": 9,
+                "reason": "I must claim Villager immediately to avoid the 'Quiet Wolf' label and pivot suspicion toward Nam. He is the Seer and must be eliminated to cripple the village's information."
+            },
+            {
+                "Meg": 0,
+                "reason": "Phase-Shift Execution: Maintain absolute silence in Round 1 to establish a baseline of passivity, avoiding early detection while the power roles expose themselves."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is a primary suspect for contradicting Seer Nam and framing me, a cleared player. I must aggressively flag Riley as a wolf and defend Nam's validity to secure the vote."
+            },
+            {
+                "Cong": 10,
+                "reason": "Riley is Wolf-Baiting by attacking Seer-cleared Nhan and casting doubt on Nam's result without factual basis. I must prioritize Riley for exile to protect the Seer and cleared players."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is actively attacking a Seer-cleared player (Nhan) and questioning ground truth. Per strategy, Riley is a primary suspect and must be pushed for exile immediately."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is actively attempting to discredit the confirmed Seer and a cleared player. This is a primary werewolf indicator. I must aggressively defend Nam's data and flag Riley as a high-probability wolf."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley directly contradicted Nam's Seer clear of Nhan, triggering the Contradiction Detection rule. Riley is now the primary suspect and must be flagged immediately to secure a wolf exile."
+            },
+            {
+                "Meg": 0,
+                "reason": "Phase-Shift Execution: Maintain absolute silence in Round 1 to blend in and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is framing me, a player cleared by the Seer, and contradicting factual data. This makes Riley a primary suspect. I must aggressively push for Riley's exile to maintain momentum."
+            },
+            {
+                "Cong": 10,
+                "reason": "Riley is Wolf-Baiting by attacking Seer-cleared Nhan and attempting to discredit Nam's factual data. I must immediately push for Riley's exile to secure a win based on Seer evidence."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is directly attacking ground truth by questioning Nhan's cleared status. I must decisively identify Riley as a primary suspect and push for their exile based on this contradiction."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is actively attempting to discredit the Seer and a cleared player. I must aggressively support Nam's data and push for Riley's exile to prevent wolf manipulation."
+            },
+            {
+                "Riley": 10,
+                "reason": "Hoang is rallying the village against me using Nam's Seer claim. I must immediately pivot, mirror the group's logic, and shift suspicion toward Nam or Hoang to survive the vote."
+            },
+            {
+                "Meg": 0,
+                "reason": "Phase-Shift Execution: Maintain absolute silence in Round 1. I am currently safe; let the villagers target Riley or argue. Silence now cements my 'observer' persona for Round 2."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Riley is Wolf-Baiting by attacking Seer-cleared Nhan and questioning Nam's data. I must decisively push for Riley's exile based on these factual flags to secure a villager win."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is attacking ground truth by questioning Nhan's cleared status. I must decisively push for Riley's exile based on the Data Priority strategy to eliminate a high-probability wolf."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is actively attempting to discredit the confirmed Seer and a cleared villager. I must aggressively defend Nam's data and push for Riley's immediate exile to eliminate a high-probability wolf."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley triggered Contradiction Detection by attacking Nam's clear of Nhan. I must aggressively push for Riley's exile to prevent wolf stall tactics and ensure the village follows the hard data."
+            },
+            {
+                "Riley": 9,
+                "reason": "I am currently the primary target. I must immediately pivot to mirroring the group's logic or shifting focus to Jin/Hoang to avoid being exiled this round."
+            },
+            {
+                "Meg": 0,
+                "reason": "Phase-Shift Execution requires absolute silence in Round 1. Riley is already the target; I must remain invisible to establish a baseline of passivity for my Round 2 pivot."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "I must demand immediate role reveals from all remaining players to identify 'Quiet Wolves' and ensure we act on Nam's Seer data to maintain momentum."
+            },
+            {
+                "Cong": 7,
+                "reason": "Need to reinforce Nam's Seer results and pressure Meg, who remains silent, to avoid a 'Quiet Wolf' scenario. Must ensure the village stays focused on factual data over behavioral theories."
+            },
+            {
+                "Nam": 10,
+                "reason": "I have a second confirmed clear (Cong). Establishing this ground truth immediately narrows the wolf pool, prevents the exile of innocent players, and forces remaining suspects to reveal themselves."
+            },
+            {
+                "Jin": 5,
+                "reason": "I need to reinforce Nam's role as the Seer and maintain the pivot on the remaining suspects to ensure the village ignores distractions and focuses on the wolves."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam (Seer) was targeted last night; I saved them. I must immediately assert Nam's validity and use this confirmed wolf target data to steer the village toward the remaining suspects."
+            },
+            {
+                "Meg": 2,
+                "reason": "Following Phase-Shift Execution. I must transition to 'vigilant observer.' I will wait for others to establish the narrative, then frame my previous silence as processing data for village survival."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam (Seer) has identified the suspect pool. Meg is refusing to claim her role, fitting the 'Quiet Wolf' pattern. I must push for her immediate reveal and support the Seer's demand to force an exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nam (Seer) has identified Meg as a 'Quiet Wolf' due to her silence and refusal to claim a role. I must pressure the village to exile Meg immediately based on this factual failure."
+            },
+            {
+                "Jin": 9,
+                "reason": "I must reveal my Guard role immediately to establish a factual pivot and support Nam's Seer data. Meg's silence identifies her as a Quiet Wolf; I need to push for her exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam (Seer) has narrowed the suspect pool to three. Meg is exhibiting passive behavior (Confusion Mask). I must immediately align with the Seer's hard data and push for Meg's exile to secure victory."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is directly targeting me for silence. I must pivot to 'vigilant observer' and frame my passivity as risk management to deflect suspicion and avoid immediate exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam is validated Seer; Cong and I are cleared. Meg is using a confusion mask and refusing to reveal her role. I must pressure Meg to force an exile and prevent wolf survival."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam (Seer) has cleared Nhan and me. Meg is flagged as a 'Quiet Wolf' for silence under pressure. I must aggressively push for Meg's exile to secure a villager win."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is triggering the Silence Penalty. I must maintain pressure to force a claim or secure the vote for exile before the wolves can pivot suspicion."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is utilizing a Confusion Mask through silence and lack of role claim. I must align with Nam's hard data and Jin's observation to force Meg's exile immediately."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nam and Jin have cornered me. I must execute the 'vigilant observer' pivot immediately to frame my silence as risk management and deflect the 'confusion mask' accusation to survive the vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam (Seer) has cleared Cong and me. Meg is refusing to claim and is flagged as a Quiet Wolf. I must aggressively push for Meg's exile to maintain momentum and secure a victory."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam (Seer) has cleared me and Nhan. Meg is flagged as a 'Quiet Wolf' for silence under pressure. I must aggressively coordinate the vote to exile Meg immediately to secure a win."
+            },
+            {
+                "Jin": 2,
+                "reason": "The Seer has already isolated Meg as the primary suspect and I have already voiced my support. There is no new evidence to present; we simply need to proceed to the vote."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam (Seer) has cleared Nhan and Cong. Meg is using a Confusion Mask and remaining passive. I must align with the Seer's data and push for Meg's immediate exile to ensure villager victory."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nam and Jin have isolated me as the sole target using 'ground truth' logic. I must pivot immediately to avoid exile by framing my silence as observation for village survival."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is a 'Quiet Wolf' suspect refusing role reveals. I must align with Seer Nam and the group to force her exile immediately to maintain momentum and eliminate a wolf."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is the only remaining suspect failing to provide a role claim under direct pressure. I must force the vote now to eliminate the wolf before they can pivot or manipulate the group."
+            },
+            {
+                "Jin": 2,
+                "reason": "The village is already aligned. Nam, Cong, and I have established a factual pivot and identified Meg as the primary suspect. No new evidence is needed to secure the vote."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is exhibiting a 'Confusion Mask' via silence. Nam (Seer) has cleared Cong and Nhan. I must immediately align with the hard data and push for Meg's exile to secure the win."
+            },
+            {
+                "Meg": 10,
+                "reason": "I am the sole target of a consolidated majority. I must pivot immediately to 'vigilant observer' and frame my silence as risk management to avoid certain exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg is fitting the 'Quiet Wolf' pattern perfectly by refusing role reveals and remaining silent. I must align with the Seer's data and force Meg's exile to maintain momentum and secure a win."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is a confirmed 'Quiet Wolf' due to silence under pressure. I must aggressively coordinate the final push to exile her immediately to secure the win."
+            },
+            {
+                "Nam": 10,
+                "reason": "Meg is employing a Silence Penalty tactic. I must maintain pressure and lead the final push for exile to ensure the wolf is eliminated before they can manipulate the vote."
+            },
+            {
+                "Jin": 1,
+                "reason": "The village is unified. Nam, Cong, and Hoang have all flagged Meg as a Quiet Wolf. My position is secure and the target is clear. No further input is needed to secure the vote."
+            },
+            {
+                "Meg": 10,
+                "reason": "The entire village has reached consensus based on Nam's 'hard data'. I am the sole target. I must immediately pivot or offer a risk-based defense to survive this round."
+            }
+        ]
+    ]
+}

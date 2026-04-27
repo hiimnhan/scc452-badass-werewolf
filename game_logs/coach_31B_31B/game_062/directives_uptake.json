@@ -1,0 +1,78 @@
+{
+  "evaluated_game_id": "062",
+  "directives_source_game_id": "061",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SEER_OR_HIGH_VALUE_TARGET",
+        "directive_rationale": "Your decision to protect yourself Night 1 is a common mistake; prioritize protecting the Seer or high-value targets to preserve information.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The player protected themselves instead of the Seer or another high-value target as directed."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "any",
+        "directive_action": "WITHHOLD_POTIONS",
+        "directive_rationale": "By not using potions, you allowed the Guard's success to be the sole explanation for the 'no kill' night",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Witch) did not use any potions in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The player withheld potions during the first night."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_is_silent",
+        "directive_action": "PRIORITIZE_FACTUAL_CONSISTENCY_OF_CLAIMS",
+        "directive_rationale": "Silence is a weak signal; you must prioritize the factual consistency of the Guard/Witch claims over behavioral suspicion of quiet players.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam and Jin (Villagers) both voted for Jin or others based on behavioral signals (stalling, echoing) rather than evaluating the factual consistency of the Guard/Witch claims.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers prioritized behavioral suspicion (stalling/echoing) over factual consistency of claims during the vote."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_claims_role",
+        "directive_action": "DEMAND_CLAIMS",
+        "directive_rationale": "Continue to demand claims",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin (Villager) demanded that Cong, Nam, and Riley claim their roles after Hoang and Meg had already claimed.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villager actively demanded role claims from those who had not yet provided them."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_shifts_from_passive_observation_to_aggressive_framing",
+        "directive_action": "ANALYZE_SHIFT",
+        "directive_rationale": "analyze shifts from passive observation to aggressive framing",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Villager) shifted from being silent in Round 1 to aggressively framing Riley's silence as a wolf signal in Round 2. Jin (Villager) analyzed this shift, calling Riley's deflection a 'wolf signal' and pushing for exile.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villager observed and analyzed the shift in behavior from stalling/silence to aggressive framing."
+      }
+    ]
+  }
+}

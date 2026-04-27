@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Continue prioritizing early claims to flush out wolves.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_has_revealed == true",
+        "action": "PROTECT_SEER",
+        "rationale_short": "shielding the Seer after their reveal, which is the most critical survival strategy",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_is_seer == true",
+        "action": "SAVE_X",
+        "rationale_short": "The Witch should save the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_is_unreachable_by_guard == true",
+        "action": "SAVE_X",
+        "rationale_short": "targets the Guard cannot reach to maximize resource efficiency",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_frames_transparency_requests_as_aggression == true",
+        "action": "ACCUSE_X",
+        "rationale_short": "when a player frames requests for transparency as 'aggression.' This is a high-probability wolf signal.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_aligns_with_seer_without_independent_logic == true",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Always scrutinize those who align with the truth without providing independent logical contributions.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 6,
+    "emitted": 6,
+    "dropped": []
+  }
+}

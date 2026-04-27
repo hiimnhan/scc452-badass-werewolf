@@ -1,0 +1,278 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No one has spoken yet. I have no data to provide. I must wait for Seer or Witch claims to establish the Power Core before intervening."
+            },
+            {
+                "Cong": 9,
+                "reason": "I must establish the Power Core immediately. I need to identify the Seer and Guard to coordinate the remaining poison potion and protect the Seer based on my night 1 save data."
+            },
+            {
+                "Nam": 5,
+                "reason": "No one died night 1. This suggests a Guard protect or Witch save. I need to identify the Seer and power roles immediately to establish the Power Core and a Trust Anchor."
+            },
+            {
+                "Jin": 2,
+                "reason": "Day 1 start. I am a basic Villager with no power role to claim. I need to listen for Seer/Guard/Witch claims to identify the Power Core before intervening."
+            },
+            {
+                "Hoang": 10,
+                "reason": "As Seer, I must claim immediately and reveal Nhan as a Trust Anchor to establish the Power Core and guide the village."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish a neutral, analytical presence early. I'll offer a basic analysis of the night's survival to blend into the logic-core without drawing targeted heat."
+            },
+            {
+                "Meg": 2,
+                "reason": "Must claim Villager immediately but avoid leading Day 1 accusations. Low bid to maintain a passive profile while establishing role."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Hoang claimed Seer and cleared me. I must immediately validate Hoang as a Trust Anchor and call for other power roles to reveal themselves to form the Power Core."
+            },
+            {
+                "Cong": 9,
+                "reason": "Hoang claimed Seer and cleared Nhan, which aligns with my save. I must identify as Witch to establish the Power Core and coordinate further protection of the Seer."
+            },
+            {
+                "Nam": 6,
+                "reason": "Hoang claimed Seer and cleared Nhan. I need to validate the Power Core by demanding the Guard and Witch identify themselves to secure the factual baseline."
+            },
+            {
+                "Jin": 2,
+                "reason": "Hoang has already claimed Seer and cleared Nhan. As a basic Villager, I have no power role to claim and no evidence yet. I will listen for contradictions or mirroring."
+            },
+            {
+                "Riley": 6,
+                "reason": "Mirroring Hoang's 'Trust Anchor' terminology immediately to align with the perceived power core. I will validate his claim to blend in and position myself as a logical ally without leading the charge."
+            },
+            {
+                "Meg": 5,
+                "reason": "Must immediately claim Villager to avoid being flagged as a wolf for delaying role claims. Need to align with Hoang's Seer claim to establish a Power Core."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "I must claim Guard to establish the Power Core per strategy. Hoang (Seer) and Nhan (Trust Anchor) are already aligned; my claim completes the coordination hub to secure the village victory."
+            },
+            {
+                "Nam": 6,
+                "reason": "Hoang claimed Seer and cleared Nhan. As a Villager, I must validate the Power Core and demand role claims from others to identify wolves and secure the Trust Anchor."
+            },
+            {
+                "Jin": 2,
+                "reason": "Hoang has established a data stream and Nhan is a Trust Anchor. As a basic Villager, I have no power role to claim and must listen for contradictions from others first."
+            },
+            {
+                "Hoang": 3,
+                "reason": "Power Core established. Nhan is a Trust Anchor. I have provided the initial result; now I must listen for contradictory claims or behavioral signals from the others."
+            },
+            {
+                "Riley": 6,
+                "reason": "Must mirror Hoang's 'Trust Anchor' and 'Power Core' terminology immediately to blend into the perceived leadership. Establishing early alignment with the Seer-claimant prevents early suspicion and secures my position within the village's logic-center."
+            },
+            {
+                "Meg": 6,
+                "reason": "Must immediately claim Villager as per strategy. Hoang and Nhan are establishing a Power Core; I need to align with them quickly to avoid being flagged as a wolf for delaying my claim."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang and Cong have claimed Seer and Witch. I must validate the Power Core and pressure the remaining players to reveal roles to identify the 'Last Variable' and prevent wolf mimicry."
+            },
+            {
+                "Nam": 8,
+                "reason": "Cong demanded role revelation. I must claim Villager immediately to avoid being flagged as a suspect and to maintain alignment with the established Power Core (Hoang, Cong, Nhan)."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong claimed to save Nhan, but the game summary confirms no one was killed. This is a hard factual contradiction and a high-confidence wolf signal. I must expose this lie immediately to eliminate a wolf."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong claimed to save Nhan, but no one died last night. This is a fabrication of game outcomes, a primary wolf signal. I must expose this lie immediately to exile Cong."
+            },
+            {
+                "Riley": 6,
+                "reason": "Must mirror 'Power Core' terminology and align with Hoang/Cong immediately to avoid being flagged as a suspect. I will validate their roles to blend in while remaining a low-profile asset."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong demanded role claims immediately. I must declare 'Villager' now to avoid being flagged as a suspect and align with the established Power Core."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong is caught in a mechanical lie. As Guard, I know I protected myself, which explains the lack of deaths. Cong's claim of 'saving' Nhan is a factual impossibility and proves they are a wolf."
+            },
+            {
+                "Cong": 10,
+                "reason": "Jin is using a fabricated rule contradiction to frame me and discredit the Power Core. I must immediately expose his lie and flag him as a high-confidence wolf to prevent my own exile."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin is attempting to destabilize the Power Core using a factual error regarding the Witch's save. I must immediately correct this and push the accusation against Jin to protect the Seer and Witch."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong fabricated a game outcome by claiming a save when no one died. This is a primary wolf signal. I must use my authority as Seer to confirm the fabrication and push for Cong's immediate exile."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin has exposed Cong's logical error. I must execute a 'Sacrificial Pivot' by supporting Jin's analysis to cement my status as a 'Trust Anchor' and align with the new logic-leader."
+            },
+            {
+                "Meg": 6,
+                "reason": "I must claim Villager immediately per strategy. Jin has identified a factual contradiction in Cong's claim; I need to align with the narrative to avoid being flagged for silence."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Jin and Nhan are using a fabricated rule to frame me for exile. I must immediately correct the rule contradiction and flag them as high-confidence wolves for attempting to dismantle the Power Core."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin and Nhan are using false logic to attack the Power Core. A save results in no one dying. This is a primary wolf signal. I must correct the factual error and protect Cong and Hoang."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong provided a hard factual contradiction by claiming a save when no death occurred. This is a high-confidence wolf signal. I must push for an immediate exile to secure a win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong fabricated a game outcome by claiming a save when no one died. This is a primary wolf signal. I must use my authority as Seer to push for Cong's immediate exile."
+            },
+            {
+                "Riley": 7,
+                "reason": "Cong is a failed mimic and an easy sacrificial pivot. I need to mirror Jin and Nhan's logic to cement my status as a 'Trust Anchor' by providing the final data-driven push for Cong's exile."
+            },
+            {
+                "Meg": 8,
+                "reason": "I must claim Villager immediately per strategy. Cong is the consensus target due to a factual contradiction; I need to align with Jin and Nhan to blend in and secure my safety."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nam": 10,
+                "reason": "Hoang is the confirmed Seer. Nhan (Seer-cleared) was killed, confirming wolves are targeting Trust Anchors. Jin previously attacked the Power Core. I must immediately push to exile Jin based on these primary wolf signals."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam is a high-confidence wolf target due to prior hostility toward the now-killed Trust Anchor Nhan. I must push this accusation immediately to prevent the wolves from controlling the narrative."
+            },
+            {
+                "Hoang": 10,
+                "reason": "I must immediately confirm Nam as a Trust Anchor to prevent further villager losses and narrow the wolf search to Riley and Meg."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to mirror Jin's logic early to blend into the 'Power Core' and subtly pivot the focus toward Nam, leveraging his previous defense of Cong to establish a 'wolf-protecting-wolf' narrative."
+            },
+            {
+                "Meg": 2,
+                "reason": "I am currently safe. I will wait for others to propose targets and then align passively to maintain a low profile."
+            }
+        ],
+        [
+            {
+                "Jin": 10,
+                "reason": "Nam is using Narrative Framing and Tone Policing to exile me. I must immediately expose his wolf signals and defend my position to prevent my own exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "I must establish Nam as a Trust Anchor immediately. Nam is cleared by my investigation and is currently identifying Jin as a wolf for attacking the Power Core. This is a critical move toward victory."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is pushing Jin. I will mirror Jin's logic to blend into the Power Core, while framing Nam's aggression as a risk of 'False Positives' to create doubt about Nam's leadership."
+            },
+            {
+                "Meg": 3,
+                "reason": "Nam is already pushing Jin. I will wait for a second person to agree with Nam, then provide supportive alignment to blend in without leading."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang (Seer) has cleared me. Jin is the primary target based on behavior and the wolves killing a Seer-cleared player. I must enforce the vote for Jin to secure the win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam and Hoang are actively coordinating to exile me. I must expose Hoang's fake Seer claim and Nam's narrative framing to prevent my own exile and secure a wolf win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam and Hoang are consolidating power. I must mirror their terminology and support the push against Jin to blend into the 'Power Core' and establish myself as a reliable ally."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang and Nam have established a Power Core and targeted Jin. I must align immediately and support the push against Jin to blend in and secure a villager's exile."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Jin is directly attacking the Seer and a Trust Anchor, which is a primary wolf signal. I must shut down this distraction and force the vote on Jin immediately."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin is attacking me and a confirmed Trust Anchor (Nam), framing the Power Core as wolf coordination. This is a primary wolf signal. I must cement the vote on Jin immediately."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to mirror Jin's 'Narrative Framing' terminology to blend into the logic-leader's core. I will support the doubt against Nam/Hoang as a 'probabilistic safeguard' to cement my trust anchor status."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang (Seer) and Nam have created a Power Core and targeted Jin. I must immediately align with them to secure my safety and ensure Jin is exiled."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Jin is attacking the Seer and a Trust Anchor, which is a primary wolf signal. I must reinforce Hoang's clear and drive the vote to exile Jin immediately to secure the win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Both Hoang and Nam are pushing for my exile using Narrative Framing and Tone Policing. I must expose Hoang's fake Seer claim and Nam's collusion to prevent my own elimination."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is the current logic-leader. I must mirror his 'Narrative Framing' terminology to blend into his core and subtly introduce 'probabilistic safeguards' regarding Hoang's Seer claim to sow doubt without appearing aggressive."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Nam have established a Power Core and targeted Jin. I must align with them immediately to secure my survival and ensure Jin is exiled."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Jin is directly attacking the Seer and a Trust Anchor while dismissing factual data as 'fabrications'. This is a primary wolf signal. I must push for Jin's immediate exile to secure the win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin is directly attacking a confirmed Trust Anchor (Nam) and the Seer. I must decisively push for Jin's exile to protect the Power Core and eliminate a high-probability wolf."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is the current logic-leader. I need to mirror his 'Narrative Framing' terminology to blend into his core and subtly cast doubt on Hoang's Seer claim as a 'probabilistic safeguard' to weaken the Hoang-Nam alliance."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang and Nam have established a Power Core. I must align with them immediately to avoid suspicion and push the consensus toward exiling Jin."
+            }
+        ]
+    ]
+}

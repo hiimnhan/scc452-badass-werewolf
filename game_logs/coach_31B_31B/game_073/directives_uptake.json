@@ -1,0 +1,197 @@
+{
+  "evaluated_game_id": "073",
+  "directives_source_game_id": "072",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your immediate claim and establishment of a 'Trust Anchor' were critical.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Seer) was eliminated during the Night of Round 1 and did not participate in the Day Debate.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The player was eliminated before the trigger phase occurred."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num <= 2",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue to provide objective clearances early to narrow the suspect pool.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1 Night."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_speaking_time_available",
+        "directive_action": "PRESENT_DATA",
+        "directive_rationale": "the Power Core should prioritize the Seer first to present data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1 Night."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identity_known",
+        "directive_action": "REVEAL_ROLE_TO_SEER",
+        "directive_rationale": "Your rapid identification to the Seer created a 'Power Core'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated before any public identity was known or established."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identity_known",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The decision to protect... the Seer in Round 2 was the correct mechanical priority",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1; the Guard could not protect a dead player."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_speaking_time_available",
+        "directive_action": "VALIDATE_OUTCOMES",
+        "directive_rationale": "followed by the Guard/Witch to validate outcomes",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong claimed Guard and called for a Power Core and Seer revelation to establish a data baseline.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong acted as the primary coordinator to validate the game state and establish the Power Core."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "USE_POTIONS",
+        "directive_rationale": "Witch's initial hesitation to use potions in Round 1 [was a minor risk]",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use any potions in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The directive advised using potions in Round 1, but the player used none."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identity_known",
+        "directive_action": "REVEAL_ROLE_TO_SEER",
+        "directive_rationale": "Your rapid identification to the Seer created a 'Power Core'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated before an identity could be established."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identity_known",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "The decision to... save the Seer in Round 2 was the correct mechanical priority",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_speaking_time_available",
+        "directive_action": "VALIDATE_OUTCOMES",
+        "directive_rationale": "followed by the Guard/Witch to validate outcomes",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam claimed Witch and explicitly stated, 'Cong, I validate your claim as Guard.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam actively validated the Guard's claim to form the Power Core."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_target_is_based_on_seer_data",
+        "directive_action": "DISREGARD_RAILROADING_ACCUSATIONS",
+        "directive_rationale": "Always disregard accusations of 'railroading' when the push is based on Seer data.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated, so no debate targets were based on Seer data."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "confirmed_clear_count == alive_count - 1",
+        "directive_action": "REQUEST_VOTE_ON_LAST_VARIABLE",
+        "directive_rationale": "Once the Seer clears everyone but one player, that player is the wolf by default.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No Seer clearances were provided because the Seer was eliminated."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "confirmed_clear_count == alive_count - 1",
+        "directive_action": "DISREGARD_SETUP_CLAIMS",
+        "directive_rationale": "Do not be swayed by their attempts to frame the process as a 'setup.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No Seer clearances were provided."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_speaking_time_available",
+        "directive_action": "ENFORCE_LOGIC",
+        "directive_rationale": "and finally Villagers to enforce the logic.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang supported the Power Core's move and urged the Seer to claim to establish a Trust Anchor.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang enforced the logic of the Power Core established by Cong and Nam."
+      }
+    ]
+  }
+}

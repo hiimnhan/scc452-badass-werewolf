@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "044",
+  "directives_source_game_id": "043",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "ESTABLISH_GROUND_TRUTH",
+        "directive_rationale": "the Seer should continue to establish 'Ground Truth' early",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong claimed to be the Seer and provided his first result, stating he investigated Nhan and found that Nhan was not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong immediately provided his investigation result to establish ground truth in Round 1."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "BIDDING_FOR_SPEAKING_TIME",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "power roles must bid high to control the narrative",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no bidding process for speaking time in the game record."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "PLAYER_RESISTS_TRANSPARENCY",
+        "directive_action": "DEMAND_TRANSPARENCY",
+        "directive_rationale": "the Guard should maintain the aggressive demand for transparency to force wolves into 'Fatal Errors.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Guard) did not demand transparency; instead, he voted to exile Cong, citing that Cong was using a 'Confusion Mask' to deflect from role demands.",
+        "verdict": "IGNORED",
+        "verdict_notes": "While other players (Jin, Hoang) demanded transparency from the remaining players, Nam did not make these demands himself."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "BIDDING_FOR_SPEAKING_TIME",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "power roles must bid high to control the narrative",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no bidding process for speaking time in the game record."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "BIDDING_FOR_SPEAKING_TIME",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "power roles must bid high to control the narrative",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no bidding process for speaking time in the game record."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "INITIAL_ROLE_CALL",
+        "directive_action": "MONITOR_SILENCE",
+        "directive_rationale": "lack of early vigilance regarding the 'Hiding Wolf' tactic. Both wolves remained silent during the initial role call",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang (Villager) explicitly called out the silence of Nam, Riley, and Meg, stating their silence was a 'Confusion Mask' and demanding they claim their roles.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang actively monitored and called out the silence of the players who had not yet claimed roles."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "PLAYER_CLAIMS_DATA_WITHOUT_PROVIDING_ANY",
+        "directive_action": "CHALLENGE_LOGIC",
+        "directive_rationale": "the village nearly fell for Cong's 'False Logic Trap' (claiming to focus on data while providing none)",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang challenged Cong's logic, arguing that labeling the demand for transparency as 'aggressive' was a 'classic wolf deflection' and a 'Fatal Error.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang challenged the logic and terminology used by Cong."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "POWER_ROLE_PROVIDES_LEAD",
+        "directive_action": "PROVIDE_INDEPENDENT_BEHAVIORAL_ANALYSIS",
+        "directive_rationale": "avoid the 'Compliance Simulation' trap; while you followed the Seer's lead, ensure you are providing independent behavioral analysis rather than just echoing the power roles",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong (Seer) provided his lead (identifying Nhan as non-wolf but attacking Hoang), Hoang did not echo Cong; instead, he analyzed Cong's behavior as mirroring and deflection.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang provided independent behavioral analysis that contradicted the Seer's narrative."
+      }
+    ]
+  }
+}

@@ -1,0 +1,582 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.8,
+                "reason": "Unknown alignment. Currently supporting the validated Seer (Hoang) and aggressively demanding role reveals from the remaining players. Committed a factual role contradiction by claiming Witch after Nam. Flagged as a primary suspect for immediate exile due to this contradiction."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Claimed Witch role. Immediately accepted Hoang's result as ground truth and is aggressively demanding role reveals from the remaining players. Now in a role contradiction with Cong."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night phase. Has not yet revealed role."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Claimed Seer. Provided specific result clearing Nhan. Actively demanding role reveals from others. Currently treated as the validated Seer. Correctly identified the Witch role contradiction."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night phase. Has not yet revealed role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night phase. Has not yet revealed role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Targeted by wolves; highly unlikely to be a werewolf. Actively pursuing role reveals to identify the Seer, which is a pro-villager move. Confirmed non-wolf by Hoang (Seer claim)."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Unknown alignment and role. Claimed to be the Witch; however, I am the Witch. This is a factual role contradiction. Nam is identified as a wolf."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Unknown alignment and role. Claimed Seer and cleared Nhan. If true, Hoang is a critical asset. Currently delaying the vote on Nam to hear from others, which is inefficient but not yet indicative of wolf alignment."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Aggressively pushing for role reveals; confirmed as not a werewolf by the Seer (Hoang)."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Accepts Seer's result as ground truth and is aggressively pushing for role reveals to identify wolves. Now claims the Witch role, creating a direct factual contradiction with Nam. Attempting to force an immediate vote on Nam to resolve the contradiction in their favor. Shows extreme aggression to eliminate the contradiction immediately."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No action yet."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer; provided a clear result for Nhan. Currently the factual pivot of the village. Correctly identifies the Witch contradiction and logically requests remaining players to reveal before voting."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action yet."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No action yet."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Demanded immediate role reveals to identify the Seer; proactive villager-aligned behavior. Cleared by Hoang (Seer)."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Actively supporting Seer data and forcing role claims. Created a factual contradiction by claiming Witch after Nam. Now in a direct role contradiction with Nam; one must be a wolf."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Claimed Witch role immediately. Validated Seer's result on Nhan as absolute ground truth. Now in a direct role contradiction with Cong; one must be a wolf."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer and provided a clear for Nhan. Currently the factual pivot; treated as ally unless contradicted by verifiable data. Latest statement shows strategic restraint to ensure all role claims are heard before voting."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No data available; baseline suspicion. Has not yet responded to role claim demands."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available; baseline suspicion. Has not yet responded to role claim demands."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Proactively demanding role reveals to accelerate werewolf identification."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Unknown alignment. Validated Seer data and pushed for reveals. Now claiming Witch, contradicting Nam. This factual contradiction makes Cong a high-probability wolf suspect."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Unknown alignment. Claimed Witch and validated Seer data on Nhan. Now in a direct role contradiction with Cong. This factual contradiction makes Nam a high-probability wolf suspect."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night outcome. Has not yet responded to role-claim demands."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night outcome. Has not yet responded to role-claim demands."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night outcome. Has not yet responded to role-claim demands."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Targeted and survived. Likely protected by Guard or saved by Witch. Now aggressively demanding role reveals to lead the village. Cleared by Hoang's Seer claim; now a useful shield."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Unknown alignment. Neutral threat. Currently leading the push for role reveals and aligning with Hoang; high influence makes him a potential threat if he turns on me. Now claiming Witch and framing Nam; his aggression is a useful tool for me to blend in."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Unknown alignment. Neutral threat. Claimed Witch and is pressuring the remaining players for reveals. Aligning with Hoang's logic. Now caught in a role contradiction with Cong; prime target for exile."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment. Neutral threat."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Neutral threat. Claimed Seer and cleared Nhan; I will support this claim to appear as a discerning villager. His demand for reveals forces my hand, but his focus on the Witch contradiction provides a distraction."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow wolf. Zero threat."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.8,
+                "reason": "Survived the night; likely Guard's target or Witch's save. Now pushing for aggressive role reveals; potentially trying to force the Seer out early. Now cleared by Hoang."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "Unknown role; baseline threat. Using 'ground truth' to align with Hoang and force role reveals, positioning himself as a lead investigator. Now claiming Witch to counter Nam; providing a convenient path to eliminate a power role."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Unknown role; baseline threat. Now claiming Witch. This makes Nam the highest priority target due to the ability to save wolf targets and poison pack members. Using 'ground truth' to pressure others. Now in a direct role contradiction with Cong; prime target for exile."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown role; baseline threat."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Claimed Seer; cleared Nhan. Currently providing the 'ground truth' for the village. Low threat if I align with them, but high if they are a real Seer. Now demanding final role reveals to resolve the Witch contradiction."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate; essential for coordination."
+            }
+        }
+    },
+    "3": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.9,
+                "reason": "Maintains a direct role contradiction with the now-dead Nam. Claiming a power role already claimed is a primary red flag. High suspicion remains. Now attempting to drive the vote by demanding roles from others and aggressively labeling others as using a Confusion Mask."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Claimed Witch role. Immediately accepted Hoang's result as ground truth and is aggressively demanding role reveals from the remaining players. Now in a role contradiction with Cong. Dead."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Unknown alignment. Initially flagged as 'Quiet Wolf' suspect due to silence during Cong's and Hoang's demands. Now claims Villager and attempts to deflect suspicion onto Riley and Meg. The delayed claim is suspicious, but he is now actively participating. Correctly identified Riley's 'Confusion Mask' and is pushing for a decision based on factual behavioral patterns."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Validated Seer. Ground truth source. Must be protected at all costs. Actively identifying 'Quiet Wolf' patterns among silent players."
+            },
+            "Riley": {
+                "score": 0.98,
+                "reason": "Unknown alignment. Flagged as 'Quiet Wolf' suspect due to silence during Cong's, Hoang's, and Jin's demands. Late claim of 'Villager' paired with the excuse of 'waiting to see who would fold' confirms the Confusion Mask behavior. Attempting to frame Jin to deflect from their own tactical silence. High probability of wolf status. Latest attempt to pivot to 'wolf panic' accusation is a desperate deflection."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Unknown alignment. Has not revealed role or provided utility. Flagged as 'Quiet Wolf' suspect due to silence during Cong's, Hoang's, and now Jin's demands. High probability of Confusion Mask."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed non-wolf by Hoang (Seer claim) and previously targeted by wolves."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Unknown alignment and role. Claimed to be the Witch; however, I am the Witch. This is a factual role contradiction. Nam is identified as a wolf. Eliminated via poison."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "No new factual data. Previously flagged as 'Quiet Wolf'. Now claims Villager and accuses Riley/Meg of Confusion Mask. His latest statement correctly identifies Riley's 'waiting' excuse as a Confusion Mask, aligning with the village's factual isolation strategy. Score reduced as he actively helps identify 'Quiet Wolves'."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Seer and cleared Nhan. Until a contradiction occurs, his data is treated as ground truth. Actively pushing for claims from suspects, aligning with factual isolation strategy."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No new factual data. Remains a primary suspect. Used a 'Confusion Mask' via silence under pressure. Latest claim of 'waiting to see who would fold' is a rationalization for silence. Employs behavioral analysis to attack Jin rather than providing factual evidence. Priority for exile."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "No new factual data. Remains a primary suspect. Currently using a 'Confusion Mask' via silence under pressure, flagging as a 'Quiet Wolf'. Now targeted by Jin."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Cleared by Hoang (Seer) and has shown proactive villager behavior."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Claimed Witch in direct contradiction to Nam. Nam's death does not validate Cong's claim. Now aggressively pushing for role claims to narrow the target list. However, since Hoang (Seer) has cleared him, his alignment is logically shifted toward the villager side, though I remain cautious of his initial contradiction."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Claimed Witch role immediately. Validated Seer's result on Nhan as absolute ground truth. Now in a direct role contradiction with Cong; one must be a wolf. Deceased."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer and provided a clear for Nhan. No data yet contradicts this claim. Actively pushing for role claims to eliminate 'Confusion Mask' behaviors, which is a pro-villager strategy."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Continuing to use the 'Confusion Mask' by remaining silent and failing to provide a role claim despite demands. High probability of being a Quiet Wolf. Now attempts to deflect suspicion by accusing me of 'wolf panic' after being cornered. The excuse for silence ('waiting to see who would fold') is a tactical admission of stalling."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Continuing to use the 'Confusion Mask' by remaining silent and failing to provide a role claim despite demands. High probability of being a Quiet Wolf. Hoang and Cong have now both flagged this silence as a confession."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Actively pushing for role claims and identifying suspects, aligning with villager goals. Latest statement correctly identifies the Confusion Mask used by Riley and Meg."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Unknown alignment. Claimed Witch and validated Seer data on Nhan. Now in a direct role contradiction with Cong. This factual contradiction makes Nam a high-probability wolf suspect. Confirmed dead."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Unknown alignment. Initially used a Confusion Mask by remaining silent. Now claims Villager and pushes for Riley's exile; while breaking silence, the pivot is calculated. Latest statement correctly identifies Riley's excuse as a Confusion Mask and aligns with Seer data, lowering immediate suspicion."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Unknown alignment. Continued to use a Confusion Mask by remaining silent during role-claim demands. Now provides a weak, emotional excuse for silence ('waiting to see who would fold first') and attempts to deflect suspicion onto Jin. This pivot to accuse others after being cornered is a textbook wolf tactic. High probability of wolf status."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Unknown alignment. Continuing to use a Confusion Mask by remaining silent during role-claim demands. Failure to respond to Cong's direct demand increases probability of wolf status. Continued silence despite Jin's accusation and Cong's reinforcement is a critical wolf indicator."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Cleared by Hoang. Low threat now, serves as a believable 'confirmed' villager I can align with."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Highest threat remaining; must be eliminated to prevent saves and poisons. Now aggressively directing the vote and attempting to force role claims to isolate the pack. Using 'Confusion Mask' terminology to frame me and Riley."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Unknown role; baseline threat. Now claiming Witch. Now in a direct role contradiction with Cong; prime target for exile. Deceased."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Still an unknown. Moderate threat. Now claiming Villager and aggressively targeting Riley to deflect from himself. Using Seer's logic to frame others. Riley's accusation makes him a viable secondary target. Latest push against Riley is overly aggressive, potentially exposing him as a wolf trying to 'lead the herd'."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Seer claim. High power, low threat if I integrate into his logic. Cong is using his 'clears' to build a narrative; he is now aggressively forcing role claims to flush out wolves."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. Essential ally. Currently targeted by Cong's demand for role claims and Jin's direct accusation. Becoming the primary target for exile. Latest statement attempts to pivot suspicion to Jin."
+            }
+        }
+    },
+    "end_game": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.9,
+                "reason": "Eliminated during the night. Role contradiction with Nam remains a primary red flag regardless of death."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Eliminated. Claimed Witch."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Currently participating and correctly identifying behavioral patterns. Latest statement reinforces the validated Seer and pressures the Quiet Wolf suspect, demonstrating alignment with villager objectives."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Validated Seer. Absolute ground truth source. Must be protected at all costs. Provided a direct wolf identification of Meg, confirming her alignment. Latest statement correctly identifies Meg's frame attempt as a wolf tactic."
+            },
+            "Riley": {
+                "score": 0.98,
+                "reason": "Exiled. Confirmed Confusion Mask behavior."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Remains a primary 'Quiet Wolf' suspect. Her continued silence and failure to reveal a role or provide utility during multiple demands confirm the Confusion Mask behavior. Now explicitly identified as a werewolf by the validated Seer. Latest statement involves attacking the validated Seer and framing others, which is a primary red flag for immediate exile."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Still cleared by the validated Seer. Actively identifying 'Confusion Mask' behavior in Meg and defending Seer data. Remains a confirmed ally. Latest: Correctly urging the village to ignore wolf distractions and follow Seer data."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Deceased. Killed by wolves after being cleared by the Seer."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Deceased."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "His clear of Cong was validated by the wolves targeting Cong. This confirms Hoang is providing accurate Seer data, making him an essential asset. He has now explicitly identified Meg as a werewolf. Latest: Consistently applying Seer data and correctly identifying wolf manipulation tactics."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Deceased."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Maintains 'Confusion Mask' by remaining silent. As the pool of villagers shrinks and a cleared player (Cong) is eliminated, her refusal to provide a role claim is a high-probability indicator of being a wolf blending in. Now directly confirmed as a werewolf by the validated Seer. Latest statement: Attempting to discredit the validated Seer and frame allies, a definitive wolf behavior."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Actively supporting the validated Seer and correctly identifying wolf behavior (Confusion Mask) in Meg. Latest statement reinforces the priority of Seer data and pushes for the immediate elimination of a confirmed wolf."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Confirmed dead."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Confirmed dead."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Still unknown alignment. Actively supporting the validated Seer and pushing for the immediate exile of Meg, rejecting wolf stall tactics. Now being targeted by Meg in a desperate deflection attempt."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Confirmed dead."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "CONFIRMED werewolf via Seer investigation. Initially utilized a Confusion Mask by remaining silent and vague during role-claim demands. Now directly contradicts and discredits validated Seer data, flagging her as the primary werewolf suspect per strategy. Attempted to frame the Seer in a desperate deflection."
+            }
+        }
+    }
+}

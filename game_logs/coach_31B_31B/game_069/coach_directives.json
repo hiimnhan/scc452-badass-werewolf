@@ -1,0 +1,74 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "early_game",
+        "action": "USE_TRUST_ANCHORS",
+        "rationale_short": "Continue using Trust Anchors to create a factual baseline.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your protection of the Seer was flawless... This is the optimal strategy.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "no_one_died_last_night",
+        "action": "WITHHOLD_SAVE_CLAIM",
+        "rationale_short": "never fabricate rule-based outcomes to gain trust; claiming a 'save' when no one was targeted is a high-confidence wolf signal.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "player_is_silent",
+        "action": "ABSTAIN",
+        "rationale_short": "be cautious of 'consensus mimicry'\u2014voting for someone just because they are silent... can lead to exiling your own power roles.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "no_factual_contradiction_found",
+        "action": "WITHHOLD_VOTE",
+        "rationale_short": "Always wait for a factual contradiction before committing to an exile.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "debate_start",
+        "action": "BID_FOR_SPEAKING_ORDER",
+        "rationale_short": "remember that bidding for speaking order allows you to control the narrative",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "speaking_turn_active",
+        "action": "DEMAND_SPECIFIC_ROLE_CLAIMS",
+        "rationale_short": "use your turns to demand specific role claims rather than attacking 'silence.'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=8 but emitted+dropped=7"
+  }
+}

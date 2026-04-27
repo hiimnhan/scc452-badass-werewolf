@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "023",
+  "directives_source_game_id": "022",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "performed excellently by claiming early",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated, 'I am the Seer' at the start of the Round 1 Day Debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam revealed his role immediately in Round 1 as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "investigation_complete",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "providing immediate ground truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam revealed that he investigated Nhan and that Nhan is not a wolf during the Round 1 debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam shared the results of his investigation immediately after the investigation was complete."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Prioritize the Seer exclusively until they are eliminated or the game is won",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nhan instead of Nam (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was alive, but Jin protected Nhan instead of the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_confirmed_wolf",
+        "directive_action": "POISON_CONFIRMED_WOLF",
+        "directive_rationale": "Once the Seer identifies a wolf, use the Poison immediately",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer never confirmed a player as a wolf through investigation; he only cleared villagers."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent",
+        "directive_action": "CHALLENGE_SILENT_PLAYER",
+        "directive_rationale": "maintain the habit of aggressively questioning 'silent' players",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley (Wolf) and Nam (Seer) challenged Cong's silence; however, the Villagers Nhan and Cong did not initiate challenges against silent players.",
+        "verdict": "IGNORED",
+        "verdict_notes": "While other roles challenged silence, the players in the Villager role (Nhan, Cong) did not proactively challenge silent players."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_during_role_call",
+        "directive_action": "ACCUSE_PLAYER",
+        "directive_rationale": "continue to penalize players who hesitate during role calls",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) voted to exile Cong, citing Cong's silence and hesitation during the role call as a reason.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan penalized Cong for hesitating during the role call by voting for his exile."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_frames_seer_cleared_player",
+        "directive_action": "ACCUSE_PLAYER",
+        "directive_rationale": "continue to penalize players who... attempt to frame Seer-cleared players",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player attempted to frame a player that the Seer had explicitly cleared."
+      }
+    ]
+  }
+}

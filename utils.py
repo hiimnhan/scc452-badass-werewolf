@@ -13,6 +13,11 @@ load_dotenv()  # Load environment variables from .env
 
 def get_llm(model_name: str, api_key=os.environ.get("DEEPINFRA_API_KEY"), **kwargs) -> BaseChatModel:
     config = {**LLM_BASE_CONFIG, **kwargs}
+    
+    if model_name in ["o3-mini"]:
+        for param in ['temperature']:
+            config.pop(param, None)
+    
     provider = MODEL_PROVIDERS.get(model_name)
     
     if not provider:

@@ -1,6 +1,5 @@
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
-# from langchain_groq import ChatGroq
 
 # ============================================================
 # Model registry
@@ -21,6 +20,7 @@ MODEL_PROVIDERS = {
     "liquid/lfm-2-24b-a2b": ChatOpenAI,
     "zai-org/GLM-4.7-Flash": ChatOpenAI,
     "nvidia/nemotron-3-super-120b-a12b:free": ChatOpenAI,
+    "o3-mini": ChatOpenAI
 }
 
 LLM_BASE_CONFIG = {

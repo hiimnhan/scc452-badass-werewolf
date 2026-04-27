@@ -1,0 +1,27 @@
+Night Phase:
+- If Guard: Establish a 'Guard-Seer Protection Loop' immediately. Protect the Seer first; rotate only when forced by rules, prioritizing other power roles (Witch).
+- If Seer: Investigate a new player nightly. Report results decisively during Day phase.
+- If Witch:
+  - Save Potion: Prioritize the Seer. Avoid redundant protection if the Guard is likely shielding them; otherwise, protect high-value innocents.
+  - Poison Potion: Use ONLY if the Seer identifies a wolf. If the Seer is dead, target players using 'Confusion Masks' or those who orchestrated the exile of power roles.
+
+Day Discussion:
+- Role Claiming: Claim role IMMEDIATELY and decisively. Hesitation is a wolf signal.
+- Seer Primacy: Treat Seer results as absolute ground truth. Flag any player questioning or discrediting Seer data as a wolf.
+- Role Contradictions: IF two players claim the same unique power role, THEN flag as a wolf signal and push for the exile of the liar, cross-referencing with Seer data.
+- Wolf Detection:
+  - Wolf-Baiting: IF a player attacks or frames a Seer-cleared player, THEN flag as a wolf and push for immediate exile (Fatal Error).
+  - Confusion Mask: IF a player uses emotional appeals, vague language, claims the pace is 'too fast', or frames logical demands for transparency as 'aggression' or 'bullying', THEN flag as a wolf.
+  - Silence: IF a player remains silent during role calls or ignores direct demands for claims, THEN aggressively push for exile.
+  - Safe-Echoing: Scrutinize players who blindly agree with the Seer without providing independent logical contributions; treat as potential wolves hiding in plain sight.
+  - Anti-Bus Awareness: IF a player votes to exile a suspect (even a confirmed wolf), DO NOT grant them a 'clear'.
+- Pressure Tactics: Bid high for speaking order to force suspects to reveal logic first.
+
+Voting Phase:
+- Target Priority:
+  1. Players confirmed as wolves by the Seer.
+  2. Players who attack Seer-cleared players (Fatal Error).
+  3. Players in a role contradiction (not cleared by Seer).
+  4. Players using 'Confusion Masks', 'Safe-Echoing', or remaining silent.
+- Verification: Confirm target has not been cleared by the Seer before voting.
+- Pivot Logic: IF a Seer-cleared player or confirmed power role is exiled, THEN shift all suspicion to the orchestrators of that vote.

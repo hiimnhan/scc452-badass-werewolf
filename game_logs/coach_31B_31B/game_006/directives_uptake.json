@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "006",
+  "directives_source_game_id": "005",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num < 3",
+        "directive_action": "PROVIDE_SOFT_CLAIM",
+        "directive_rationale": "provide a 'soft claim' or a hint early to establish a baseline of trust",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang immediately made a hard claim, stating 'I am the Seer' and providing a specific investigation result for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The player provided a hard claim instead of the requested soft claim/hint."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_POWER_ROLE",
+        "directive_rationale": "You wasted your first night protecting yourself... Prioritize protecting the Seer or suspected power roles.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan chose to protect Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The player repeated the exact mistake the directive was intended to correct by protecting themselves instead of a power role."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num < 3",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "you waited too long to reveal your role, allowing the Witch to manufacture a conflict.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not reveal his role as Guard during the debate in Round 1 or Round 2; he acted as a supporter of the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan never revealed his role before Round 3."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "attempting_to_frame_player",
+        "directive_action": "WITHHOLD_FAKE_RULES",
+        "directive_rationale": "Never attempt to frame someone using fake game rules.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not attempt to frame any player using fake game rules."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demands_proof_of_innocence_based_on_silence",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player demands 'proof of innocence' based on silence, treat it as a red flag for aggressive narrative steering.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam demanded that Meg explain her logic because she had been silent. Nam was the one making the demand; the Villager role in this game (Nam or Jin) did not encounter another player making this demand. However, as a Villager, Nam was the one initiating the behavior the directive warns against.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The trigger requires a Villager to observe ANOTHER player demanding proof based on silence. Since the only player doing this was the Villager (Nam) himself, the trigger for a Villager to act against someone else did not occur."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "alive_count > 3",
+        "directive_action": "REQUEST_ROLE_DATA",
+        "directive_rationale": "failed to pressure the remaining players for specific role data until it was too late.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam did not request role data in Round 1. In Round 2 (alive count = 5), Nam pressured Meg to explain her logic/silence, but did not specifically request role data from the group.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villager (Nam) did not pressure players for specific role data while the alive count was above 3."
+      }
+    ]
+  }
+}

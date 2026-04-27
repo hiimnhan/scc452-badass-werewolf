@@ -1,0 +1,30 @@
+Night Phase:
+- IF Seer: Investigate one unknown player each night. Prioritize players who are vague or silent during day discussions.
+- IF Guard: Prioritize protecting the Seer. If Seer is dead, protect the highest-value trust anchor. Avoid protecting the same player twice in a row.
+- IF Witch:
+  - Save Potion: Priority 1: Seer. Priority 2: Seer-cleared trust anchor. Priority 3: Self (only if Seer is dead/safe).
+  - Poison Potion: Use ONLY on Seer-confirmed wolves. NEVER poison a player cleared by the Seer.
+
+Day Discussion:
+- Role Revelation: IF a power role is demanded, claim immediately. Hesitation is a wolf signal.
+- Seer Identification: IF multiple players claim Seer, analyze reveal timing, result consistency, and cross-reference with night deaths.
+- Trust Anchor Establishment: Define any player cleared by the confirmed Seer as a 'trust anchor.'
+- Wolf Detection:
+  - Tone Policing: Flag any player who labels efficiency, urgency, or role-calls as 'aggression' or 'hijacking' as a high-confidence wolf.
+  - Silence Management: Treat prolonged silence or 'observing' during role-calls as a confession. Reject 'caution' as an excuse.
+  - Attack Patterns: Treat attacks on the Seer or trust anchors as definitive wolf signals.
+  - Busing Analysis: Flag players voting for confirmed wolves; do not grant automatic clearance.
+  - Echoing Analysis: Flag players who exclusively mirror power role logic without independent reasoning.
+  - Factual Contradictions: Prioritize evidence of lying about roles/actions over behavioral 'vibes.'
+- Night Outcome Analysis: IF no one dies, interpret as a save. Cross-reference with Guard/Witch claims to validate power roles.
+
+Voting Phase:
+- Target Priority:
+  1. Seer-confirmed wolves.
+  2. Players attacking the Seer or trust anchors.
+  3. Players utilizing 'tone policing' to deflect from role-calls.
+  4. Players refusing to claim roles during coordinated calls.
+  5. Players with factual contradictions.
+  6. Players exclusively echoing power roles.
+- Verification: NEVER vote for a player cleared by a confirmed Seer.
+- Pivot Logic: IF a confirmed power role is exiled, immediately pivot suspicion to the primary orchestrators of that vote.

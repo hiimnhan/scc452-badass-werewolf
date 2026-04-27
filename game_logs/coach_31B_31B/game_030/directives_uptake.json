@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "030",
+  "directives_source_game_id": "029",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE AND ENDORSE_TRUST_ANCHOR",
+        "directive_rationale": "claiming and clearing a trust anchor immediately, you forced the wolves into a defensive position",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan immediately stated 'I am the Seer' and confirmed that Cong is NOT a werewolf, establishing him as a trust anchor.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan revealed their role and endorsed Cong as a trust anchor in the first round of debate as directed."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identity_known",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "prioritizing the Seer's safety, which neutralized the wolf attack",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan (the Seer) during the first night.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer, adhering to the directive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "witch_identity_known",
+        "directive_action": "COORDINATE_SAVE_STRATEGY",
+        "directive_rationale": "ensure the Witch and Guard coordinate to avoid redundant saves",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam claimed to be the Witch during the Round 1 debate, making the identity known. However, there is no record of Cong coordinating a save strategy with Nam during subsequent nights.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Although the Witch's identity became known in Round 1, Cong did not engage in any coordination with the Witch."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "POISON_WOLF",
+        "directive_rationale": "Using the poison potion on a wolf identified by the Seer ensured a swift victory",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer only identified non-wolves (Cong and Jin); no wolf was ever identified by the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "guard_identity_known",
+        "directive_action": "COORDINATE_SAVE_STRATEGY",
+        "directive_rationale": "ensure the Witch and Guard coordinate to avoid redundant saves",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "The Seer identified Cong as not a wolf, and Cong was generally accepted as the Guard/trust anchor. Nam (Witch) did not coordinate any save strategy with Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam did not attempt to coordinate save strategies despite the Guard's identity being effectively known."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_during_role_call",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "treat any hesitation as a wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Meg, Jin, and Hoang all accused Nam of being a wolf specifically because Nam hesitated during the role call.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Multiple villagers followed the directive by treating Nam's hesitation as a wolf signal and accusing them."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent_during_role_call",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "treating Riley's silence as a confession rather than 'processing time'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player was completely silent during the role calls in a way that triggered this specific action."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_votes_against_another_suspect",
+        "directive_action": "WITHHOLD_CLEAR",
+        "directive_rationale": "do not let a wolf's willingness to sacrifice their partner grant them a permanent clear",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Meg (a wolf) voted against Riley (a fellow wolf). The remaining villagers (Jin and Hoang) continued to treat Meg as a suspect in Round 3 rather than granting her a clear.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers did not grant Meg a permanent clear after she voted for Riley, eventually exiling her."
+      }
+    ]
+  }
+}

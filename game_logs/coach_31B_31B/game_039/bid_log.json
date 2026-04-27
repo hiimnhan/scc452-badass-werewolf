@@ -1,0 +1,254 @@
+{
+    "1": [
+        [
+            {
+                "Cong": 9,
+                "reason": "I have ground truth that Nhan was not a wolf. I must establish myself as the Seer early to guide the village and prevent the exile of confirmed non-wolves."
+            },
+            {
+                "Nam": 3,
+                "reason": "No data yet. I need to observe role claims and behavior to identify targets for protection and suspicion. Speaking first without evidence is counterproductive."
+            },
+            {
+                "Jin": 10,
+                "reason": "As a power role, I must claim immediately to anchor the village and force others to reveal their roles under pressure, preventing wolves from establishing a false narrative."
+            },
+            {
+                "Hoang": 8,
+                "reason": "First day is critical. I must immediately demand role reveals to identify the Seer and Guard, flagging any hesitation as a Confusion Mask to prevent wolf stall tactics."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish a baseline presence and claim Villager early to avoid appearing suspicious or too quiet. Will offer basic analysis to blend in."
+            },
+            {
+                "Meg": 3,
+                "reason": "Early game; no suspicion on me yet. Better to echo others and avoid leading the narrative to prevent 'Quiet Wolf' or 'Aggressive Wolf' flags. I will wait for others to establish a logic pattern."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Must claim Seer immediately to establish ground truth and prevent wolves from claiming the role. Jin's demand creates a prime opportunity to force role commitments and identify contradictions."
+            },
+            {
+                "Nam": 5,
+                "reason": "Jin is claiming Witch and demanding roles. I must claim my role or respond to this pressure to avoid being flagged as a wolf for hesitation."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin demanded immediate role reveals. As a Villager, I must comply instantly to avoid being flagged with a 'Confusion Mask' and to force others to reveal, exposing potential wolves."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin is forcing claims. I must claim Villager immediately to avoid being flagged for hesitation or deflection, blending in with the group to maintain credibility."
+            },
+            {
+                "Meg": 10,
+                "reason": "Jin is demanding roles. I must claim 'Villager' immediately to avoid 'Confusion Mask' flags and align with the current demand for transparency."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "I must claim Seer immediately to establish ground truth. Meg is already displaying 'False Logic Trap' and 'Safe-Echoing' behaviors; I need to control the narrative before she or a wolf frames the discussion."
+            },
+            {
+                "Nam": 6,
+                "reason": "Meg is exhibiting clear wolf signals: Confusion Mask (calling Jin aggressive) and False Logic Trap (mimicking 'ground truth'). I need to flag these behaviors to the village to prioritize her for exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg exhibited a 'Confusion Mask' by labeling my demand as 'aggressive'. I must immediately flag this behavioral signal to the village to prioritize her as a suspect and force others to claim."
+            },
+            {
+                "Hoang": 8,
+                "reason": "I must claim Villager immediately to avoid a 'Confusion Mask' flag. Additionally, Meg flagged Jin's transparency-seeking as 'aggressive,' which is a primary suspect signal according to my strategy. I need to push this accusation."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is forcing claims. I must claim Villager immediately to avoid being flagged for hesitation, blending in with Meg's cooperative approach to establish credibility."
+            }
+        ],
+        [
+            {
+                "Nam": 6,
+                "reason": "Cong's Seer claim is aligning with optimal villager strategy. I need to validate the claims, support the pressure on Meg for her Confusion Mask and False Logic Trap, and maintain my cover while the wolves are pressured."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg exhibited a 'Confusion Mask' by labeling my demands as 'aggressive' and is 'Safe-Echoing'. Cong (Seer) has already identified her as a wolf signal. I must push for her immediate exile to secure a win."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Must claim Villager immediately to avoid 'Confusion Mask' flag. Meg has already committed a primary suspect signal by framing Jin's transparency-seeking as 'aggressive'. Need to push for Nam and Riley's roles to isolate wolves."
+            },
+            {
+                "Riley": 7,
+                "reason": "Need to establish my role as a Villager immediately. Cong is targeting my teammate Meg; I will use this as an opportunity to align with the Seer's claim to build my own credibility."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong has explicitly flagged me as a wolf. I must immediately employ cooperative defense and request clarity on his 'signals' to avoid a consensus for my exile."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "I have already identified Meg as a 'Hiding Wolf' using 'False Logic' and 'Safe-Echoing'. I must secure an early slot to solidify the village's focus on Meg and prevent wolves from shifting the narrative."
+            },
+            {
+                "Nam": 8,
+                "reason": "I must claim Guard now to secure my position and align with Cong (Seer) and Jin (Witch). Establishing the power-role bloc is critical to isolating Meg and forcing Hoang/Riley to reveal themselves."
+            },
+            {
+                "Hoang": 9,
+                "reason": "I must claim my role and align with the Seer and Witch to consolidate the vote against Meg, who has already exhibited a primary wolf signal by framing Jin's transparency demands as 'aggressive'."
+            },
+            {
+                "Riley": 9,
+                "reason": "Meg is being heavily targeted by two power-role claims. I must claim Villager immediately and tactically betray Meg to solidify my own credibility as a trustable asset."
+            },
+            {
+                "Meg": 10,
+                "reason": "Cong and Jin have isolated me as a wolf. I must immediately execute Cooperative Defense, request clarity on their 'signals', and attempt to pivot the focus to Nam or Hoang to survive the vote."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Meg is employing a 'Confusion Mask' by framing my analysis as aggression and using 'False Logic Trap' terminology. I must secure the early slot to lock in her status as a wolf before she deflects."
+            },
+            {
+                "Nam": 8,
+                "reason": "I must claim Guard immediately to solidify the power-role block with Cong and Jin. Meg is exhibiting clear Confusion Mask and False Logic signals; I need to reinforce the push for her exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is repeatedly using Confusion Masks and framing the Seer's analysis as 'aggression'. This is a Fatal Error. I must force the remaining players to claim and push for Meg's immediate exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is using a 'Confusion Mask' and framing transparency-seekers as 'aggressive', a primary wolf signal. I must claim my role and push the village to exile Meg immediately based on this evidence."
+            },
+            {
+                "Riley": 8,
+                "reason": "I must claim Villager immediately to avoid Jin's target list and pivot to betray Meg. Supporting the Seer's lead against her now secures my credibility as a village asset."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Cong": 10,
+                "reason": "I must immediately validate Jin as a confirmed non-wolf to secure our power-role alliance and force Nam, Hoang, and Riley to commit to roles before they can coordinate a narrative."
+            },
+            {
+                "Nam": 7,
+                "reason": "I must reinforce Cong's Seer claim. Since no one died while I protected him, his role is likely validated. I need to pressure Hoang and Riley to claim roles immediately to expose potential wolves."
+            },
+            {
+                "Jin": 10,
+                "reason": "As a power role, I must claim immediately to anchor the village and demand immediate role reveals from Nam, Hoang, and Riley to identify contradictions or Confusion Masks."
+            },
+            {
+                "Hoang": 8,
+                "reason": "No one died last night. I must immediately demand role confirmations from Nam and Riley to identify 'Confusion Masks' and verify if Jin's Save potion or the Guard's protection was used."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish my role as a villager early and align myself with the current power role claims to avoid being the next target."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Cong is the Seer and I am the Guard. I must claim my role now to establish a power-role bloc and force Hoang and Riley to reveal themselves or be flagged as wolves."
+            },
+            {
+                "Jin": 9,
+                "reason": "I am a power role and must claim immediately to anchor the village. I need to reinforce Cong's Seer lead and pressure Nam, Hoang, and Riley to reveal their roles to identify Confusion Masks."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong demanded role reveals. I must immediately claim Villager to avoid being flagged for a 'Confusion Mask' and maintain my standing while pushing Nam and Riley to reveal."
+            },
+            {
+                "Riley": 8,
+                "reason": "Cong is pressuring for roles. I must claim Villager immediately and decisively to avoid being flagged as a wolf for hesitation, while accepting his clear of Jin to build trust."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "I must maintain dominance and force Nam, Hoang, and Riley to commit to roles immediately. Any deflection or 'Confusion Mask' behavior must be flagged and exiled to prevent wolves from crafting a narrative."
+            },
+            {
+                "Nam": 8,
+                "reason": "I must claim Guard immediately to solidify the power-role bloc. This forces Hoang and Riley into a corner; their continued silence becomes an undeniable wolf signal when all other power roles are accounted for."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong and Jin have demanded my role. To avoid being flagged with a 'Confusion Mask' or being seen as a wolf signal, I must immediately claim my role as Villager."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Jin are aggressively demanding roles. I must claim Villager immediately to avoid being flagged as a wolf for hesitation and maintain my cover while the heat is on."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Cong and Jin are demanding my role. If I don't claim immediately and decisively, I'll be flagged as a wolf. I must confirm my role to secure my position and maintain the power-role alliance."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam, Hoang, and Riley are refusing to claim roles. This is a textbook 'Confusion Mask'. I must bid high to maintain pressure and force the factual contradictions needed to identify the remaining wolves."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong and Jin have explicitly demanded my role. Failure to claim immediately will be flagged as a 'Confusion Mask,' making me a primary target for exile. I must claim Villager now to avoid suspicion."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Jin are aggressively demanding roles. I must claim Villager immediately to avoid being flagged as a wolf and start diverting suspicion toward Nam or Hoang."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Nam and Riley are employing 'Confusion Masks' through continued silence. I must force their claims immediately to identify role contradictions or confirm their wolf status before they can coordinate a narrative."
+            },
+            {
+                "Nam": 9,
+                "reason": "I must claim Guard immediately to avoid being flagged as a wolf for silence. I also need to flag Hoang for Safe-Echoing and False Logic Trap, as he is mimicking power-role terminology to deflect."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam and Riley are stalling despite direct pressure. This is a textbook 'Confusion Mask'. I must immediately flag their silence as wolf signals to force a claim or an exile."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Jin have established a power block. Hoang is mirroring them to blend in. I must claim Villager immediately to avoid being flagged as a wolf for stalling."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Riley committed a 'Confusion Mask' by framing my transparency as 'aggression' and is attempting an 'Anti-Bus' maneuver against Nam. I must flag Riley for immediate exile to prevent wolf deflection."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is using a Confusion Mask by labeling logic as 'aggression' and attempting to frame me. I must claim my role to secure my position and push for Riley's exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is using a 'Confusion Mask' by framing role demands as 'aggression' and attempting to deflect onto Nam. I must immediately flag this behavioral signal and pressure Nam for a claim to expose the wolves."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley committed a 'Fatal Error' by framing my transparency-seeking as 'jumping on the bandwagon' and labeling the process 'aggression'. This is a primary wolf signal. I must flag this immediately to secure Riley's exile."
+            }
+        ]
+    ]
+}

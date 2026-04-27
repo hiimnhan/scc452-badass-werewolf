@@ -1,0 +1,182 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Cong.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": null,
+                "reasoning": "Cong voted to exile None. Reason: Since no one has spoken or provided evidence, any vote now would be a blind guess. We cannot risk exiling a fellow villager without a lead. Let's move to the next night and gather more information."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": null,
+                "reasoning": "Nam voted to exile None. Reason: Since no one spoke or provided information during the debate, we have no basis for an accusation. Voting randomly is too risky for the village. I suggest we skip this vote and analyze behavior in the next round."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": null,
+                "reasoning": "Jin voted to exile None. Reason: Nobody has spoken or provided any evidence. Voting blindly would be a guess and could eliminate an innocent villager or a power role. We should skip this vote and demand claims and information in the next round."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": null,
+                "reasoning": "Hoang voted to exile None. Reason: Since no one has spoken or provided any information today, we have no evidence to base a vote on. Exiling someone randomly is too risky for the village. I suggest we skip and gather more information tomorrow."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": null,
+                "reasoning": "Riley voted to exile None. Reason: Since no one has presented any evidence or theories yet, I don't feel comfortable voting blindly. We should discuss more so we don't accidentally exile an innocent villager."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: No one has provided any information or claims yet. Voting without evidence is risky and could result in exiling a villager."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Cong"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "We wasted Round 1 with total silence, and now two people are dead. We cannot afford another stalemate. If any of you are the Seer, reveal your findings now. Otherwise, Nam, Hoang, Riley, and Meg\u2014explain why you were all silent while the village died."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Witch. Jin, your demand for role reveals is necessary to break this stalemate. If there is a Seer among us, reveal yourself immediately so we can establish a Power Core and stop the bleeding."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam, your claim is convenient. If you're the Witch, did you use a potion last night, or did you just watch Cong die? Hoang, Riley, Meg\u2014your continued silence is a wolf signal. Explain yourselves now or you are the primary targets for exile."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I was silent because there was no evidence to act on. Jin, you're pushing hard, but Riley and Meg are the ones refusing to speak. If they can't provide a reason for their silence, they are the most likely wolves. Riley, Meg, speak now."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, you are mirroring my logic while simultaneously pushing Riley and Meg to deflect from your own silence. This is classic Consensus Mimicry and Quiet-Player Framing. Riley and Meg, your silence is unacceptable. If you are not the Seer, you are wolves. Speak or be exiled."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm just a villager. I stayed quiet because there was no data, but Jin's aggressive push for role reveals is too convenient. If Nam is the Witch, why is Jin so eager to 'coordinate' the Power Core? It feels like a setup to control the vote."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley remained silent while the village suffered losses and is now attempting to dismiss logical coordination as a 'setup' based on feelings rather than facts. This deflection tactic is a common wolf signal to undermine the village's information state."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley's response is a deflection. Instead of explaining their silence or providing evidence, they are attacking the process of coordinating power roles. This attempt to frame logical organization as a 'setup' is a common wolf tactic to keep the village divided."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg has remained completely silent throughout both rounds, even when directly questioned. While others are debating and claiming roles to help the village, Meg's refusal to provide any information or reason for her silence is a clear sign of a wolf hiding in plain sight."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin is pushing way too hard to control the narrative. His demand for role reveals and insistence on a 'Power Core' looks like a strategy to manipulate the vote and identify power roles. It's too aggressive for a simple villager."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: I am a Villager. I was silent because there was no information. Nam's claim as Witch is a start, but we need more evidence before exiling anyone. I agree with Riley that we should be careful about who controls the vote."
+            }
+        ],
+        "day_exiled": null
+    },
+    "3": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nam (Witch) used SAVE potion on Nam"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Witch. No one died last night because I used my save potion on myself. Riley, your persistent silence and attempt to deflect logic are blatant wolf signals. We need to stop wasting time and exile Riley now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a Villager. Nam, claiming Witch to justify a night with no deaths is a classic wolf move to gain fake trust. The math doesn't add up; why risk the save potion on yourself instead of a confirmed lead? We're blindly following a claim."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley, attacking a revealed power role to sow doubt is a textbook wolf tactic. Your attempt to frame a save potion as 'wolf behavior' is a desperate deflection. Village, stop letting Riley's gaslighting stall us. Vote Riley out now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam is pushing way too hard. Claiming Witch just to shield yourself is convenient and creates a fake sense of security. Jin, you've been the most logical so far\u2014does Nam's timing actually make sense to you, or are we just being rushed into a mistake?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley, your attempt to manipulate Jin and dismiss my role as 'convenient' is a textbook deflection. You are attacking the only revealed power role to create chaos. Jin, Hoang, Meg\u2014do not fall for this. Riley is a wolf. Vote Riley now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam is practically screaming for us to vote blindly. If Nam is actually the Witch, why the desperate rush? It's too convenient. We can't let one claim dictate the game. Jin, does this aggression feel like a villager's urgency or a wolf's panic?"
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is using textbook wolf tactics by attacking my revealed role as the Witch to create confusion. Attempting to frame a save potion as 'wolf behavior' and dismissing logic as 'panic' are clear deflections. We must exile Riley to secure a villager victory."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley is attacking Nam's role claim without providing any evidence, focusing instead on Nam's tone and urgency. This deflection, combined with Riley's history of silence and manipulation, strongly suggests a wolf attempting to sow doubt about a power role. We must exile Riley."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam is relying on urgency and behavioral accusations rather than logic. Claiming the Witch role to explain a no-death night while aggressively pushing for an immediate exile without evidence is a common wolf tactic to seize control of the narrative."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's aggression is a red flag. Claiming a power role and then immediately demanding a rush vote on me is a classic wolf tactic to seize control. We can't risk exiling a villager based on an unverified claim."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: I agree with Riley. Nam is pushing for a vote too aggressively, which is unusual. Claiming a power role to force a quick exile of another player seems like a tactic to avoid scrutiny."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

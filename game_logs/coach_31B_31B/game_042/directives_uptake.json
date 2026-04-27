@@ -1,0 +1,78 @@
+{
+  "evaluated_game_id": "042",
+  "directives_source_game_id": "041",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_hesitate_to_confirm_roles",
+        "directive_action": "FRAME_HESITATION_AS_CONFUSION_MASK",
+        "directive_rationale": "By framing hesitation as a 'Confusion Mask,' you forced the wolves to react poorly.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that he would be monitoring responses for any 'hesitation or deflections' in Round 1. Later, in the voting phase of Round 1, Jin explicitly labeled Nam's silence as a 'textbook Confusion Mask'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin identified the hesitation of Nam and Riley and explicitly framed it as a 'Confusion Mask' both in his strategy and his final vote."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_start",
+        "directive_action": "ENFORCE_ROLE_CALL",
+        "directive_rationale": "Your aggressive role-call enforcement and rapid establishment of ground truth were excellent.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "At the start of the Round 1 debate, Jin immediately claimed the Seer role, provided a clear result for Nhan, and demanded that everyone else reveal their roles immediately.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin followed the directive by aggressively enforcing a role call and establishing ground truth at the very beginning of the debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_primary_target",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "you must maintain the Protection Loop on the Seer until they are no longer the primary target.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 2 Night, the wolves targeted Jin (the Seer), and Hoang (the Guard) chose to protect Jin.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang correctly identified the Seer as the target and protected him."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_start",
+        "directive_action": "PROVIDE_INDEPENDENT_ANALYSIS",
+        "directive_rationale": "ensure you are providing independent analysis rather than just echoing the Seer to avoid being flagged as a wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Villager) stated he accepted the Seer's result and then independently called for the remaining players (Nam, Hoang, Riley, Meg) to reveal their roles or be flagged as suspects.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong provided his own analysis and direction for the village rather than simply repeating Jin's words."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_empirical_data",
+        "directive_action": "ALIGN_WITH_SEER_DATA",
+        "directive_rationale": "By aligning with the Seer's empirical data over the wolves' emotional appeals, you minimized the risk of being misled.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "In Round 2, after Jin provided the empirical data that Riley was a werewolf, Cong stated that the evidence was absolute and that there was no further need for discussion, pushing for Riley's exile.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong aligned strictly with the Seer's data and dismissed Riley's attempt to simulate compliance."
+      }
+    ]
+  }
+}

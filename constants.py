@@ -1,3 +1,4 @@
+RESULTS_SUMMARY_FILENAME = "results_summary.csv"
 COACH_FEEDBACK_FILENAME = "coach_feedback.txt"
 COACH_STRATEGY_FILENAME = "coach_strategy.txt"
 COACH_DIRECTIVES_FILENAME = "coach_directives.json"
@@ -17,3 +18,7 @@ SEER_LOG_FILENAME = "seer_log.csv"
 WITCH_LOG_FILENAME = "witch_log.csv"
 
 MAX_RETRIES = 5
+
+# ----------------------------------------------------------------------------
+FIGURES_FOLDERNAME = "figures"
+BIN_SIZE = 25

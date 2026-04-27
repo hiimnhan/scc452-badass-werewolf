@@ -1,0 +1,344 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation. Trust Anchor. Claimed Guard and identified Jin as a fake; since Cong is a Trust Anchor, his claim is accepted as fact."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Claimed Witch. Validated the Seer and the Trust Anchor (Cong). Correctly flagged Jin's mechanical contradiction. Now actively applying Mimicry Detection against Hoang, aligning perfectly with Power Core strategy."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Guard. Identified as a werewolf due to a mechanical contradiction with Trust Anchor Cong. Attempted to hijack the Power Core."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Unknown alignment. Validated the Power Core's logic regarding Jin's contradiction, but exhibits Social Mimicry by echoing consensus without adding original data. High-risk variable. Now specifically flagged by Nam for lack of original logic."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night outcome. Currently silent in the opening debate."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data from night outcome. Currently silent in the opening debate."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Protected by me. Claimed Seer and cleared me. Alignment with my protection action makes this claim highly credible. Now the Power Core."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "No data available from the night outcome. Claimed Witch and correctly identified Jin's mechanical contradiction. Validating the Power Core. Actively identifying Social Mimicry in Hoang, demonstrating high-value logic and strategic alignment."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Claimed Guard role. I am the Guard. This is a mechanical contradiction and a high-confidence wolf signal."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "No data available from the night outcome. Validated the mechanical contradiction of Jin and supported the Power Core's data. Currently acting as a villager enforcer; flagged by Nam for Social Mimicry due to lack of original logic."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No data available from the night outcome. Currently silent."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available from the night outcome. Currently silent."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Targeted by werewolves; my Save potion prevented their death. Claimed Seer and provided a clear investigation result. High probability of being the genuine Seer."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "No new information available. Now cleared by Nhan (claimed Seer), designating him as the first Trust Anchor. Claimed Guard and exposed Jin's contradiction, aligning with the Seer's data."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Claimed Guard and immediately synchronized with Nhan's Seer claim to establish the Power Core. Proactively demanding logic from others to isolate variables. Now contradicted by Cong (who is Seer-cleared); likely a werewolf attempting to hijack the Power Core."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "No new information available. Latest statement exhibits Social Mimicry; he is echoing the Power Core's consensus without providing original logic. Treat this perfect agreement as a high-risk wolf signal."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information available."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No new information available."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.3,
+                "reason": "Claimed Seer. Provided a clear investigation result on Cong. Currently the lead for the Power Core."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Cleared by Nhan (Seer). Designated as the first Trust Anchor. Claimed Guard, exposing Jin's contradictory claim."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Claimed Witch. Validated Seer Nhan and Trust Anchor Cong. Correctly identified the mechanical contradiction regarding the Guard role and pushed for the exile of Jin based on Binary Hunt logic. Now utilizing Social Mimicry Detection to flag Hoang."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Claimed Guard. Validated Nhan's Seer claim and Cong's Trust Anchor status. However, Cong (cleared by Seer) also claims Guard. This creates a mechanical contradiction. Per Binary Hunt strategy, the uncleared claimant is the wolf."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available yet. Neutral suspicion."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No information available yet. Neutral suspicion."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Survived wolf attack. Claimed Seer; established Power Core logic. Major threat; primary target for elimination."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Unknown. Designated as a Trust Anchor by Nhan; currently safe to leave alone to maintain alignment with the Power Core. Now claiming Guard and aggressively targeting Jin."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Unknown. Now claims Witch. Actively reinforcing the Power Core and the contradiction against Jin. High threat due to Poison potion. Now acting as the primary coordinator by flagging Hoang as a secondary suspect."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Unknown. Claimed Guard; adopted Power Core terminology ('safety lock'). Now acts as a protector for the Seer, making them a high-value anchor and a major threat. Now accused by Cong and Nam of being a fake Guard."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Currently a variable. Latest statement shows full adherence to Power Core logic and the contradiction against Jin; acting as analytical reinforcement. Now flagged as a secondary suspect by Nam."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Essential ally."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.8,
+                "reason": "Survived the kill. High probability of being Guard's target or saved by Witch. Claiming Seer and creating a trust anchor."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Unknown alignment. Currently cleared by Nhan's Seer claim; avoid attacking. Now claiming Guard and accusing Jin of lying."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Unknown alignment. Potential target for future framing. Now claiming Witch and supporting Nhan and Cong's roles, solidifying the Power Core. Actively flagging Hoang as a secondary suspect."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Unknown alignment. Claimed Guard. Supporting Nhan's Seer claim. Now in a direct role conflict with Cong; high risk of being exiled. Consensus target."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Unknown alignment. Aligning with the Power Core to push Jin's exile. Now flagged by Nam for lacking original logic; threat level slightly increased as a potential target."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. No threat."
+            }
+        }
+    }
+}

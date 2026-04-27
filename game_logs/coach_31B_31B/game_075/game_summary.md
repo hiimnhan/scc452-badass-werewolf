@@ -1,0 +1,56 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Witch
+**Cong:** Villager
+**Nam:** Villager
+**Jin:** Seer
+**Hoang:** Guard
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Nhan.
+• Jin (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Nhan (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Seer. I investigated Nhan last night, and Nhan is confirmed not a werewolf. Nhan is a Trust Anchor. Guard and Witch, identify yourselves now so we can establish the Power Core and coordinate our defense.
+**Cong:** I am the Witch. Jin, I accept your claim as Seer since you've provided a clear target. Nhan is now a Trust Anchor. Guard, identify yourself immediately so the Power Core is complete and we can secure our victory.
+**Nhan:** Cong, you are lying. I am the Witch. It is mechanically impossible for there to be two Witches. Your attempt to fake the role and infiltrate the Power Core proves you are a Werewolf. Everyone, vote Cong out immediately.
+**Hoang:** I am the Guard. I validate Jin's Seer claim and Cong's Witch claim. Nhan, you are attempting to dismantle the Power Core by fabricating a role claim to frame Cong. This is a classic wolf signal. I trust Jin and Cong; Nhan is the target.
+**Jin:** Hoang, you are a Werewolf. I confirmed Nhan is innocent. By attacking a Seer-cleared Trust Anchor and validating Cong's fake Witch claim, you have exposed yourself. Cong and Hoang are both wolves. Everyone, vote Cong out first, then Hoang.
+**Hoang:** Jin, you are contradicting your own data. You cleared Nhan as a Trust Anchor, yet Nhan is the one attacking the Power Core and claiming Cong's role. I stand by my validation of Cong. Nhan's fake claim is the only objective wolf signal here.
+
+### Votes
+**Nhan** voted for **Cong**
+> Nhan voted to exile Cong. Reason: I am the actual Witch. Cong's claim is a mechanical impossibility. Since Jin has already cleared me as a Trust Anchor, Cong is lying to infiltrate the Power Core. We must exile the fake Witch immediately to secure the village.
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin has completely contradicted his own role. He established the Power Core, then suddenly pivoted to call the Guard and Witch wolves for supporting the very hub he created. This erratic shift to protect Nhan, who lied about being the Witch, is a clear wolf signal.
+**Nam** voted for **Nhan**
+> Nam voted to exile Nhan. Reason: Nhan claimed to be the Witch, but Cong already claimed that role. Only one Witch exists. Nhan is attempting to dismantle the Power Core by fabricating a role to frame Cong. This factual contradiction is a clear signal that Nhan is a werewolf.
+**Jin** voted for **Cong**
+> Jin voted to exile Cong. Reason: I have confirmed Nhan is not a werewolf. Cong claimed the Witch role, but Nhan is the actual Witch. Cong is lying about their role to infiltrate the Power Core. Vote Cong out now; Hoang is also suspicious for protecting a liar.
+**Hoang** voted for **Nhan**
+> Hoang voted to exile Nhan. Reason: Nhan is claiming to be the Witch to frame Cong. Since Cong and I have already established the Power Core with Jin, Nhan's fake claim is a clear attempt to deceive the village. Nhan must be exiled.
+**Riley** voted for **Cong**
+> Riley voted to exile Cong. Reason: We have two people claiming to be the Witch. Since Jin cleared Nhan, Nhan's claim carries more weight. Following the logic, Cong's claim is most likely the fake one. Let's exile Cong to resolve this contradiction.
+**Meg** voted for **Cong**
+> Meg voted to exile Cong. Reason: I am a Villager. I agree with Jin. Since there can only be one Witch, the contradiction between Nhan and Cong proves one is lying. Jin's logic holds, and Cong is the most plausible target for exile.
+
+**Day Exiled:** Cong
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Jin.
+• Jin (Seer) investigated Hoang. Hoang is NOT a wolf.
+• Nhan (Witch) used POISON potion on Hoang
+**Night Eliminations:** Hoang, Nhan
+---

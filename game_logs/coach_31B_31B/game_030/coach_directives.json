@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_exhibits_hesitation",
+        "action": "CONSIDER_POWER_ROLE_STRESS",
+        "rationale_short": "avoid treating the Witch's hesitation as a 'textbook' wolf signal without first considering the stress of power-role claims",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "witch_hesitates",
+        "action": "REDUCE_AGGRESSION",
+        "rationale_short": "Your aggression toward the Witch nearly cost the village its most versatile asset",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "target_is_primary_suspect",
+        "action": "DO_NOT_PROTECT_X",
+        "rationale_short": "never waste a protect on a primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "night_phase_start",
+        "action": "PROTECT_SEER_OR_INNOCENT",
+        "rationale_short": "Prioritize the Seer or suspected innocents",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "role_call_phase",
+        "action": "REVEAL_ROLE_DECISIVELY",
+        "rationale_short": "In future games, claim your role decisively",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_targeted",
+        "action": "SAVE_SEER",
+        "rationale_short": "use your healing potion to save the Seer if they are targeted",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "suspect_identified",
+        "action": "POISON_X",
+        "rationale_short": "eliminate a suspect via poison",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_uses_emotional_appeal",
+        "action": "DISTRUST_APPEAL",
+        "rationale_short": "distrust emotional appeals (like 'mourning') used to stall for time",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "debate_phase_start",
+        "action": "PRIORITIZE_TRANSPARENCY",
+        "rationale_short": "Continue to prioritize transparency",
+        "confidence": 0.7
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "bidding_phase_start",
+        "action": "BID_HIGH",
+        "rationale_short": "In the bidding phase, bid high to ensure you can challenge suspicious narratives immediately",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

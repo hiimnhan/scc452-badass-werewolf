@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "028",
+  "directives_source_game_id": "027",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "COMMUNICATE_IDENTITY_TO_GUARD",
+        "directive_rationale": "ensure your identity is communicated to the Guard immediately so you can be prioritized for protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam immediately claimed 'I am the Seer' at the start of the Round 1 Day Debate, making his identity public to all players, including the Guard (Jin).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam communicated his identity to the Guard (and the rest of the group) immediately in Round 1."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "you must prioritize their survival over your own",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 2 Night, Jin (Guard) chose to protect Nam (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer during the second night."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "DO_NOT_PROTECT_SELF",
+        "directive_rationale": "Protecting yourself is a strategic error that leaves the village blind",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 1 Night, Jin protected Nhan. In Round 2 Night, Jin protected Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard did not protect themselves in either night action."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_provided_verified_clears == True OR target_claimed_seer == True",
+        "directive_action": "DO_NOT_POISON_TARGET",
+        "directive_rationale": "Never poison a player who has provided verified clears or claimed the Seer role unless you have absolute evidence of a fake claim",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch (Hoang) poisoned Meg in Round 2. Meg had claimed to be a Villager and had not provided verified clears or claimed to be the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_stalling == True OR player_framing_transparency_as_aggressive == True",
+        "directive_action": "CHALLENGE_AS_CONFUSION_MASK",
+        "directive_rationale": "By treating stalling and the framing of transparency as 'aggressive' as a 'Confusion Mask,' you successfully pressured both wolves",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) challenged Riley, stating that Riley's deflections to avoid the role-call were a 'clear Confusion Mask.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan identified Riley's deflection/stalling as a Confusion Mask and challenged them accordingly."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "all_players",
+        "directive_action": "ENFORCE_ROLE_CALLS",
+        "directive_rationale": "Continue this high-pressure approach to force wolf contradictions early",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan voted for Cong, explicitly citing that Cong and Meg's silence during role calls was a 'classic Confusion Mask' and that hesitation should not be allowed to protect werewolves.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan actively enforced the requirement for role claims by voting against those who remained silent."
+      }
+    ]
+  }
+}
