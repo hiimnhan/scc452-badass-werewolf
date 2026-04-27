@@ -1,0 +1,107 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Seer
+**Nam:** Guard
+**Jin:** Witch
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Nhan.
+• Cong (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Jin (Witch) did not use any potions.
+**Night Eliminations:** None
+
+### Day Debate
+**Cong:** I am the Seer. I investigated Nhan last night and confirmed Nhan is not a werewolf. Nhan is a Trust Anchor. Everyone else, state your roles now. Any hesitation or vague responses will be flagged as suspicious.
+**Nam:** Cong, I acknowledge your claim. Nhan is now a trust anchor. Everyone else: claim your roles immediately. Any attempt to delay or deflect will be treated as a wolf signal.
+**Jin:** I am the Witch. Cong, I accept your Seer claim and will protect you. Nam, you are echoing Cong's words exactly to hide your own identity. This is compliance simulation. Claim your role immediately or you are our first target.
+**Nam:** I am the Guard. Jin, you are utilizing tone policing to deflect from the Seer's role-call. Labeling efficiency as 'compliance simulation' is a classic wolf tactic to sow distrust among power roles. You are the primary suspect. Everyone else, claim now.
+**Nhan:** Nam, you are tone policing Jin to deflect from your own echoing behavior. Echoing the Seer is a classic wolf tactic. Hoang, Riley, Meg—claim your roles immediately. We cannot wait. Nam is the primary suspect.
+**Jin:** Nam, your attempt to flip the script by calling my analysis 'tone policing' is a textbook wolf deflection. You echoed the Seer and then attacked my tone when caught. Nhan is a trust anchor and agrees. Hoang, Riley, Meg—claim now or you're with Nam.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam mirrored the Seer's words to blend in and then attacked Jin's tone rather than addressing the fact that he was echoing. This deflection is a clear wolf signal. We must exile Nam to maintain momentum.
+**Cong** voted for **Nam**
+> Cong voted to exile Nam. Reason: Nhan is a confirmed Trust Anchor. Nhan and Jin have both identified Nam's behavior as mirroring and deflection. Nam's attempt to frame critical analysis as tone policing is a wolf signal. We must exile Nam to secure the village.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin is utilizing tone policing to deflect from the Seer's urgent role-call. Labeling efficiency as 'compliance simulation' is a classic wolf tactic to sow distrust among power roles and isolate the Guard. Jin is the primary suspect.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nam echoed the Seer's logic to blend in and then attacked my tone to deflect suspicion. This is a textbook wolf strategy. Nhan, our trust anchor, agrees. Nam's behavior is a clear confession of wolf alignment.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam echoed the Seer's words exactly to simulate alignment and then attempted to deflect Jin's analysis by framing it as a wolf tactic. Nhan, our trust anchor, has confirmed this is a wolf signal. Nam must be exiled.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: I am a Villager. Since Cong has established Nhan as a trust anchor and both Nhan and Jin have pointed out Nam's echoing behavior, the logic path points toward Nam. It's safest to follow the current lead to root out the wolf.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: I am a Villager. Nhan is a trust anchor and agrees with Jin that Nam's behavior is suspicious. It makes sense to follow the lead of the Seer's confirmed ally. I vote Nam.
+
+**Day Exiled:** Nam
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Jin.
+• Cong (Seer) investigated Hoang. Hoang is NOT a wolf.
+• Jin (Witch) used SAVE potion on Jin
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Witch. Cong is the Seer and our trust anchor. Hoang, Riley, and Meg: claim your roles immediately. Any further hesitation or vague excuses will be treated as a confession of wolf alignment. No more stalling.
+**Meg:** I'm a Villager. Jin, I agree with Cong being the Seer, but your demands are intense. Hoang, you're the only one left who hasn't claimed. Why are you staying silent while we're trying to figure this out?
+**Hoang:** I am a Villager. Meg, your attempt to frame Jin's logical demands as 'intense' is classic tone policing to deflect from your own late claim. Riley, you are still using a confusion mask. I vote to exile Meg for her transparent deflection tactics.
+**Cong:** Nhan and Hoang are confirmed Trust Anchors. Meg, your attempt to label Jin's efficiency as 'intense' is clear tone policing. You are deflecting onto a confirmed non-wolf to hide your own alignment. I vote to exile Meg.
+**Jin:** Meg, your tone policing is a confession. You attacked my methods to deflect from your alignment, and the Seer has already flagged you. You are a wolf. I vote to exile Meg immediately.
+**Meg:** Cong, what specific evidence do you have that I am a wolf? I'm just a Villager trying to help. If you're certain, I'll follow the lead, but this feels rushed. Riley, what do you think about this?
+
+### Votes
+**Nhan** voted for **Meg**
+> Nhan voted to exile Meg. Reason: Meg is using classic deflection tactics. By labeling Jin's efficiency as 'intense' and calling the process 'rushed', she is prioritizing tone over content to avoid scrutiny. The Seer has already flagged this behavior as a wolf signal. We must exile her now.
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Meg attempted to deflect suspicion by labeling the drive for clarity as 'intense' and targeted Hoang, who is a confirmed non-wolf. This tone policing and behavioral contradiction are high-confidence indicators of wolf alignment. She must be exiled.
+**Jin** voted for **Meg**
+> Jin voted to exile Meg. Reason: Meg has consistently used tone policing to deflect from the role-call and is now attempting to stall by demanding 'specific evidence' from the Seer. This behavior is a confession of wolf alignment. We must exile Meg immediately to secure a villager victory.
+**Hoang** voted for **Meg**
+> Hoang voted to exile Meg. Reason: Meg's attempt to frame Jin's directness as 'intense' is a clear deflection tactic. She is using tone policing to distract us from her own alignment and is now attempting to stall the vote. Based on the Seer's findings and her behavior, Meg must be exiled.
+**Riley** voted for **Meg**
+> Riley voted to exile Meg. Reason: I'm a Villager. I trust Cong's lead as our trust anchor. Meg's questioning of the Seer's evidence at this stage feels like a stalling tactic. The logic path here points toward Meg, so I'm following the Seer's lead.
+**Meg** voted for **Meg**
+> Meg voted to exile Meg. Reason: Cong is the Seer and his word is absolute. Since the Seer and Jin both agree I am the wolf, I must trust the process for the good of the village. I vote for myself.
+
+**Day Exiled:** Meg
+---
+
+## Round 3
+**Night Actions:**
+• Riley (Wolf) targeted Jin.
+• Cong (Seer) investigated Riley. Riley is a wolf.
+• Jin (Witch) did not use any potions.
+**Night Eliminations:** Jin
+
+### Day Debate
+**Hoang:** Riley, your silence is a confession. Jin claimed Witch and was hunting you, and now Jin is dead. You've used a 'Confusion Mask' for three rounds. Cong is our Seer and Nhan is cleared. Riley, you are the wolf. We vote you out now.
+**Nhan:** Hoang is correct. Riley, you've remained silent while the Seer is active and the Witch was killed for targeting you. Your refusal to provide a proactive role claim is a wolf signal. We are voting you out now.
+**Hoang:** Riley, you have nothing left to hide. Your silence is a confession, and the wolf kill on Jin proves it. Nhan and Cong are confirmed. We are exiling you now to win this game.
+**Nhan:** Riley, this is your last chance to explain yourself, but your silence is a confession. The wolves killed Jin because she targeted you. We have our Seer and our trust anchor. We are voting you out now to end this.
+**Riley:** I'm a Villager. I've been observing to avoid making a mistake, but Hoang's tunnel vision on me is becoming a pattern. Why is he so desperate to force this vote? Nhan, you're just mirroring Hoang's logic path without questioning it.
+**Cong:** Riley, your claims are irrelevant. I am the Seer, and I have investigated you. You are a werewolf. Your attempt to label our efficiency as 'tunnel vision' is a classic wolf tactic. We are exiling you now.
+
+### Votes
+**Nhan** voted for **Riley**
+> Nhan voted to exile Riley. Reason: Cong is our Seer and has confirmed Riley is a werewolf. Riley's attempt to deflect by calling our logic 'tunnel vision' is a typical wolf tactic. We have direct evidence; we must exile Riley now to secure the victory.
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: I am the Seer. I have investigated Riley and confirmed they are a werewolf. Riley's attempt to label our decisive action as 'tunnel vision' is a deflection tactic. We must exile Riley immediately to secure the win.
+**Hoang** voted for **Riley**
+> Hoang voted to exile Riley. Reason: Cong is our Seer and has explicitly confirmed Riley is a werewolf. Riley's attempt to deflect by calling our logic 'tunnel vision' is a textbook wolf tactic. We have a confirmed target; we must exile Riley now to secure the win.
+**Riley** voted for **Hoang**
+> Riley voted to exile Hoang. Reason: Cong's result is devastating, but Hoang's eagerness to execute without a trial is suspicious. He's pushing this narrative far too hard. I'm a villager, and while Cong says otherwise, Hoang's behavior is the most wolf-like thing here.
+
+**Day Exiled:** Riley
+---

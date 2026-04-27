@@ -1,0 +1,89 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early claim was high-risk but high-reward",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue prioritizing mechanical data over behavioral tropes",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identified == true",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting the Seer in Night 2 was the correct mechanical play to preserve the village's only source of factual data",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "was_attacked_last_night == true",
+        "action": "SAVE_SELF",
+        "rationale_short": "You successfully utilized your SAVE potion on yourself in Night 1, which is a valid survival strategy",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "trust_chain_established == true",
+        "action": "REVEAL_ROLE_TO_SEER_OR_GUARD",
+        "rationale_short": "ensure you communicate your status to the Seer or Guard once a trust-chain is established to optimize protection",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "potions_remaining > 0",
+        "action": "SAVE_POWER_ROLE",
+        "rationale_short": "The Witch's decision to not use a potion in Night 2 was a missed opportunity to potentially save a power role",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "accusation_based_on_smells_or_patterns == true",
+        "action": "REJECT_ACCUSATION",
+        "rationale_short": "Keep rejecting accusations based on 'smells' or 'patterns' unless they are backed by a mechanical contradiction",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_shielding_seer == true",
+        "action": "VERIFY_RESULTS_AGAINST_NIGHT_DEATHS",
+        "rationale_short": "ensure you aren't blindly shielding a Seer without verifying their results against night deaths",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "CHALLENGE_SEER_CLAIM",
+        "rationale_short": "The primary risk in this game was a lack of initial skepticism toward the Seer's rapid claim",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 9,
+    "dropped": []
+  }
+}

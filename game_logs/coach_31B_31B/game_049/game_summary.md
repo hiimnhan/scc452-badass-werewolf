@@ -1,0 +1,80 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Villager
+**Nam:** Seer
+**Jin:** Guard
+**Hoang:** Witch
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Jin (Guard) chose to protect Nhan.
+• Nam (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Hoang (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Guard. To expedite our victory, I demand immediate role reveals from everyone. Seer, identify yourself now so I can protect you tonight and we can eliminate the wolves based on factual data.
+**Nam:** I am the Seer. I investigated Nhan last night and confirmed they are not a werewolf. Nhan is a trust anchor. Jin, your demand for immediate reveals is risky, but I will step forward to provide the village with factual data.
+**Riley:** I'm a Villager. Nam, thanks for stepping up; if you've cleared Nhan, we have a solid starting point. Jin, demanding reveals immediately is a behavioral contradiction—it's too aggressive and smells like a wolf trying to force the Seer into the open to kill them tonight.
+**Nhan:** Nam has cleared me, and Jin's push for efficiency is exactly what we need to win. Riley, labeling aggressive leadership as 'too aggressive' is a classic wolf deflection tactic to protect your own skin. Why are you attacking the person trying to organize us?
+**Riley:** Nhan, your sudden pivot to defend Jin is a huge red flag. You were just cleared by Nam, and now you're aggressively shielding the person trying to expose everyone? That's a classic wolf mirroring tactic to blend in. I'm sticking with Nam's intel, but Nhan's behavior is stalling.
+**Hoang:** Riley, your attempts to frame Jin's efficiency as 'aggressive' and Nhan's support as 'mirroring' are textbook wolf deflections. You are attacking a Seer-cleared player and the person organizing us. This is a clear signal. The village should vote Riley.
+
+### Votes
+**Nhan** voted for **Riley**
+> Nhan voted to exile Riley. Reason: Riley is attacking Nam's cleared asset and framing Jin's drive for efficiency as suspicious. This pattern of deflecting leadership and targeting cleared players is a clear signal of a werewolf attempting to sow discord. We must exile Riley.
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: Nam confirmed Nhan is not a werewolf. Riley is actively attacking a Seer-cleared player and attempting to deflect suspicion onto Jin. This behavioral contradiction is a clear indicator of a werewolf trying to sow discord. We must exile Riley.
+**Nam** voted for **Riley**
+> Nam voted to exile Riley. Reason: I confirmed Nhan is not a werewolf. Riley is now attacking a cleared player and attempting to frame Nhan's behavior as suspicious. Attacking a trust anchor is a clear signal of a werewolf trying to sow discord. We must exile Riley.
+**Jin** voted for **Riley**
+> Jin voted to exile Riley. Reason: Riley is repeatedly attacking both the Guard and a Seer-cleared player. Labeling efficiency as 'aggressive' and support as 'mirroring' are classic deflection tactics used by wolves to create confusion. The logic is clear: Riley is trying to destabilize the village's trust anchors.
+**Hoang** voted for **Riley**
+> Hoang voted to exile Riley. Reason: Riley is attacking both the person organizing us and a player cleared by the Seer. Labeling efficiency as 'too aggressive' and framing support as 'mirroring' are classic deflection tactics to shift suspicion. Riley's behavior is highly indicative of a werewolf.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Jin's demand for immediate reveals is a textbook wolf move to identify power roles for a night kill. Nhan and Hoang are simply mirroring this aggression to isolate me. We cannot trust this forced transparency.
+**Meg** voted for **Riley**
+> Meg voted to exile Riley. Reason: I am a Villager. Hoang is right; Riley is attacking Nhan, who was cleared by the Seer. Attacking a confirmed innocent is a massive red flag. I agree with the consensus to vote Riley.
+
+**Day Exiled:** Riley
+---
+
+## Round 2
+**Night Actions:**
+• Meg (Wolf) targeted Nam.
+• Jin (Guard) chose to protect Nam.
+• Nam (Seer) investigated Cong. Cong is NOT a wolf.
+• Hoang (Witch) did not use any potions.
+**Night Eliminations:** None
+
+### Day Debate
+**Nhan:** Nam is our confirmed Seer. Since no one died two nights in a row, we have a double-save or a failed attack. Nam, give us your latest result immediately. Everyone else, claim your roles now. No more vagueness.
+**Nam:** I investigated Cong last night, and Cong is NOT a werewolf. With Nhan and Cong both cleared, the circle of trust is growing. Meg, you have been silent for too long. Claim your role and explain your logic now, or you are the primary suspect.
+**Meg:** I'm a Villager. I was just processing the fact that Nam is actually getting results. Since Cong is cleared, Jin's claim as Guard is the only thing keeping the wolves from winning. Jin, why are you so quiet while Nam does all the work?
+**Jin:** Meg, your 'processing' excuse is a textbook stall tactic. You're attempting to deflect onto me to distract from your own silence. Nam is the factual anchor; I am the shield. We have a confirmed Seer and cleared players. You are the only remaining gap. Vote Meg.
+**Meg:** Jin, what specific evidence do you have against me other than my timing? You're pushing for a vote way too fast. If Nam is the anchor, why are you so desperate to act as the executioner? It feels like you're trying to force a mistake.
+**Nam:** Meg, your deflection is transparent. You ignore the demand for logic and instead attack Jin for supporting the Seer. This is a high-confidence wolf signal. You have no logical path for innocence. Village, vote Meg now.
+
+### Votes
+**Nhan** voted for **Meg**
+> Nhan voted to exile Meg. Reason: Meg's late claim and immediate attempt to frame Jin's leadership as 'desperate' are classic deflection tactics. She avoids providing logical defense and instead attacks those supporting the Seer. Nam has identified these signals; Meg is the only logical target remaining.
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Nam is our confirmed Seer and has cleared Nhan and me. Meg has repeatedly stalled and is now attacking Jin for aligning with the Seer's results. This deflection and lack of logic are clear wolf signals. We must exile Meg.
+**Nam** voted for **Meg**
+> Nam voted to exile Meg. Reason: Meg has remained silent for two rounds and now uses deflection to avoid explaining her lack of logic. Attacking Jin for supporting the confirmed Seer is a high-confidence wolf signal. She is the only remaining gap in our circle of trust.
+**Jin** voted for **Meg**
+> Jin voted to exile Meg. Reason: Meg is using transparent deflection and stall tactics to avoid providing logical evidence for her innocence. She is attacking those supporting our confirmed Seer instead of answering direct questions. This behavior is a clear wolf signal. We must exile Meg to secure the village.
+**Hoang** voted for **Meg**
+> Hoang voted to exile Meg. Reason: Meg's delay in claiming her role was a clear stall tactic. Now, she is attempting to deflect scrutiny by attacking Jin's urgency and labeling logical pressure as desperation. This pattern of avoidance and deflection is a classic werewolf signal. We must exile Meg.
+**Meg** voted for **None**
+> Meg voted to exile None. Reason: I am a Villager. Nam and Jin are pushing me too hard without real evidence. I can't bring myself to vote for anyone without more proof, as I don't want to accidentally exile an innocent villager.
+
+**Day Exiled:** Meg
+---

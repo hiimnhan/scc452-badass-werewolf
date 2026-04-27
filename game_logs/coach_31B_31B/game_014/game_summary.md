@@ -1,0 +1,76 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Seer
+**Nam:** Guard
+**Jin:** Witch
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Nam.
+• Cong (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Jin (Witch) did not use any potions.
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Cong:** I am the Seer. I investigated Nhan last night and confirmed they were not a werewolf. Nhan was killed, which means the wolves are targeting players to hide their identity. I will find them. Everyone, state your roles or your logic for the first vote.
+**Jin:** Cong, I accept your Seer claim for now. Since Nhan was cleared and still killed, the wolves are playing aggressively. Nam, Hoang, Riley, Meg—provide your logic immediately. Anyone hesitating or avoiding the question is a suspect.
+**Hoang:** Cong, I accept your Seer claim. Since Nhan was cleared and killed, we must rely on your future data. Jin, stop demanding immediate roles. Pressuring others to reveal power roles this early is a classic wolf tactic to identify and target them.
+**Jin:** Hoang, you are using a pseudo-intellectual shield to deflect. Calling my push for logic a 'wolf tactic' is a projection designed to shut down the investigation. I am not asking for roles, but for reasoning. Your attempt to frame the debate is a major red flag.
+**Hoang:** Jin, your focus has shifted from finding wolves to critiquing my reasoning. This is intellectual framing to distract the village. You are attacking me personally instead of providing evidence of anyone else's guilt. I find your behavior highly untrustworthy.
+**Cong:** Hoang, you are using Intellectual Framing to deflect. You are critiquing the process of the debate to avoid providing any actual suspects. Jin is pushing for logic to help the village; you are attacking Jin to hide your own lack of contribution. I find you untrustworthy.
+
+### Votes
+**Cong** voted for **Hoang**
+> Cong voted to exile Hoang. Reason: Hoang has consistently avoided providing any suspects or logic, instead choosing to critique the process and attack Jin. This deflection is a clear attempt to distract us from the investigation. I vote to exile Hoang.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin's aggressive demand for immediate roles is a tactic to expose power roles for the wolves. He is now using intellectual framing to attack Hoang's caution rather than providing a concrete hypothesis on who the wolf is. This behavior is highly suspicious.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Hoang is focusing entirely on critiquing the debate process and attacking those seeking logic rather than providing any actual suspects. This deflective behavior and attempt to frame the investigation as a 'wolf tactic' is a clear sign of a wolf trying to blend in.
+**Hoang** voted for **Jin**
+> Hoang voted to exile Jin. Reason: Jin is prioritizing the critique of my reasoning over providing actual evidence of wolf activity. Pressuring the village for immediate disclosures and using intellectual framing to deflect suspicion are classic wolf tactics to identify power roles and manipulate the vote.
+**Riley** voted for **Hoang**
+> Riley voted to exile Hoang. Reason: I'm a bit confused, but Cong is the Seer and Jin is just trying to get us to think logically. Hoang seems to be attacking the process instead of helping us find the wolves, which is what Cong pointed out. I'll trust Cong's lead here.
+**Meg** voted for **None**
+> Meg voted to exile None. Reason: 
+
+**Day Exiled:** Hoang
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Cong.
+• Nam (Guard) chose to protect Cong.
+• Cong (Seer) investigated Nam. Nam is NOT a wolf.
+• Jin (Witch) used SAVE potion on Cong
+**Night Eliminations:** None
+
+### Day Debate
+**Nam:** No one died last night, which means the Guard or Witch successfully blocked a kill. Jin, your constant attempts to steer the narrative with vague logic are transparent. If you're a villager, how does your current line of argument specifically help us find a wolf right now?
+**Cong:** Nam is correct about the night's outcome. Jin, stop the vague posturing. Nam is cleared. If you are a power role, name your targets now, or you are merely hiding behind rhetoric to manipulate the vote.
+**Jin:** Nam, your sudden shift to clearing Cong while pressuring me to reveal my role is a classic blending tactic. You are focusing on the 'process' of the debate to distract us. Cong, your sudden alignment with Nam's aggression is concerning. Nam is my primary suspect.
+**Nam:** Jin, you are using Intellectual Framing to deflect. Calling my logic a 'blending tactic' is a textbook attempt to avoid the hypothesis test. If you are a villager, name a specific wolf and provide a factual reason, or you are simply stalling to survive.
+**Cong:** Jin, your attempt to paint Nam as a 'blender' is a desperate pivot. You continue to use Intellectual Framing to avoid naming targets. I have confirmed Nam is not a wolf. Your aggression toward a confirmed villager proves you are the wolf. Vote Jin.
+**Jin:** Cong, you are being manipulated. Nam is using a 'blending' tactic to clear himself through you while using pseudo-intellectual jargon to shield his identity. I saved the Seer last night; I am the Witch. Nam, your obsession with 'hypothesis tests' is a shield. Vote Nam.
+
+### Votes
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin has claimed the Witch role to target Nam, but I know for a fact Nam is not a werewolf. Jin is lying about their role to eliminate a villager. This factual contradiction proves Jin is a werewolf.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin continues to use jargon to deflect rather than providing a factual hypothesis. The sudden claim of being the Witch is a desperate attempt to survive after failing to name a specific wolf. We must prioritize the Seer's data and exile the deflector.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nam is using pseudo-intellectual jargon to critique the debate process rather than identifying wolves. His aggressive pivot to clear himself while pressuring power roles to reveal themselves is a classic blending tactic. His behavior is consistent with a werewolf attempting to manipulate the Seer.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Cong seems very confident about Nam's status, and Jin's sudden claim to be the Witch feels like a desperate move to avoid exile. I'm inclined to trust Cong's lead on this one. Jin's behavior is becoming too erratic.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: I've been processing the claims, and Jin's sudden Witch claim feels like a transparent attempt to avoid exile. Nam and Cong have a clear, logical case here. For the village's survival, we can't risk ignoring these factual inconsistencies. I'm voting Jin.
+
+**Day Exiled:** Jin
+---

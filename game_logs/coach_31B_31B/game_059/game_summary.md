@@ -1,0 +1,84 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Villager
+**Nam:** Seer
+**Jin:** Guard
+**Hoang:** Witch
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Jin.
+• Jin (Guard) chose to protect Nhan.
+• Nam (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Hoang (Witch) used SAVE potion on Jin
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Guard. Since no one died last night, the Seer was likely targeted and saved. I demand immediate role claims from everyone now. Seer, reveal yourself so I can protect you tonight.
+**Nam:** I am the Seer. I investigated Nhan last night and confirmed they are not a werewolf. Jin, since you've claimed Guard, I will trust your protection for now. Everyone else, state your roles immediately.
+**Hoang:** Nam, I accept your Seer claim for now. Jin, your theory is wrong. The Seer wasn't saved. Since you claim Guard, you must explain why you're guessing the game state incorrectly. Meg, Riley, Cong—claim your roles immediately or you're masking.
+**Jin:** Hoang, you are tone policing and attacking my logic to deflect from your own refusal to claim. Nam is the Seer and Nhan is clear. Claim your role now or you are a wolf masking your identity through aggression.
+**Hoang:** Jin, your 'Tone Policing' is a transparent deflection. I know the Seer wasn't saved because I am the Witch and I saved you. You're lying about the game state and attacking me to hide it. You are a werewolf. I vote Jin.
+**Cong:** I am a Villager. Jin, you claimed the Seer was saved, but Hoang claims they saved you. Both cannot be true. Since you attempted to frame Hoang's logic as 'aggression' to deflect, I believe your Guard claim is a fabrication. I vote Jin.
+
+### Votes
+**Nhan** voted for **Jin**
+> Nhan voted to exile Jin. Reason: Jin's claim that the Seer was saved contradicts Hoang's claim of saving Jin. When challenged on this factual inconsistency, Jin shifted the focus to Hoang's tone rather than providing a logical explanation. This deflection suggests Jin is lying about being the Guard.
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin claimed the Seer was saved to explain why no one died. However, Hoang claims to be the Witch and saved Jin. These cannot both be true. Jin's attempt to label Hoang's factual challenge as 'aggression' suggests a fabrication to hide their identity.
+**Nam** voted for **Hoang**
+> Nam voted to exile Hoang. Reason: Hoang's immediate aggression toward Jin and the attempt to frame the Guard claim as a lie are red flags. Claiming to be the Witch to contradict game state theories is a common wolf tactic to sow confusion. I trust Nhan and Jin's proactivity over Hoang's hostility.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Hoang claims to be the Witch and says they saved me. This is a lie; I am the Guard and I know I was not targeted last night. A real Witch only knows the target if they use a potion. Hoang is fabricating a save to frame me.
+**Hoang** voted for **Jin**
+> Hoang voted to exile Jin. Reason: Jin's theory about the Seer being saved is a factual lie; I am the Witch and I saved Jin. His attempt to label my logical correction as 'aggression' is a classic deflection tactic used by werewolves. He must be exiled.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: I am a Villager. Jin's logic is completely contradicted by Hoang's Witch claim. If Hoang saved Jin, Jin's theory about the Seer being saved is a lie. I trust Nam and Hoang; Jin is clearly masking. I vote Jin.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: I am a Villager. I agree with Hoang and Cong. The contradiction between Jin's claim and Hoang's Witch save makes Jin's Guard claim unbelievable. This makes sense, so I vote Jin.
+
+**Day Exiled:** Jin
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nam.
+• Nam (Seer) investigated Hoang. Hoang is NOT a wolf.
+• Hoang (Witch) did not use any potions.
+**Night Eliminations:** Nam
+
+### Day Debate
+**Hoang:** Nam's death confirms he was the Seer, and he cleared Nhan. Now, Riley and Meg, claim your roles immediately. If you stall, you are masking your identity. We need a clear map of the remaining power roles to win this.
+**Riley:** I'm a Villager. Hoang, I completely agree—we can't waste time. Since Nam cleared Nhan, the wolves are definitely hiding among the rest of us. Cong, you've been way too quiet while we're losing power roles. What exactly is your deal?
+**Cong:** Riley, you're echoing Hoang's logic while simultaneously attacking me for being quiet. That is a classic deflection. Meg, claim your role now so we can identify the remaining power roles and stop the wolves from picking us off.
+**Meg:** I'm a Villager. I agree with Riley; Cong's silence is a red flag and now he's just trying to deflect. It makes sense that the wolf is trying to shift the focus away from themselves. Let's focus on Cong.
+**Hoang:** Riley and Meg, your coordination is a textbook wolf signal. You are both mirroring my logic and attacking Cong without providing any independent reasoning. This is Compliance Simulation. I trust Cong's logic. Riley, you are the primary target for exile today.
+**Cong:** Riley and Meg, your coordinated attempt to frame me for being 'quiet' is a desperate deflection. You both lack independent logic and are simply mirroring Hoang to blend in. This is a clear wolf signal. I vote to exile Riley.
+
+### Votes
+**Nhan** voted for **Riley**
+> Nhan voted to exile Riley. Reason: Riley and Meg are coordinating to frame Cong based on his silence rather than any factual contradiction. This mirroring of Hoang's logic combined with baseless attacks on Cong is a clear wolf signal. Riley's behavior is a textbook deflection tactic.
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: Riley and Meg are coordinating an attack based on 'silence' rather than factual evidence. Riley is mirroring Hoang's logic to blend in while attempting to frame me. This behavioral pattern is consistent with wolves attempting to deflect suspicion from themselves.
+**Hoang** voted for **Riley**
+> Hoang voted to exile Riley. Reason: Riley is mirroring my logic to blend in while using deflection to attack Cong. This coordinated behavior with Meg, lacking any independent reasoning, is a clear wolf signal. We must exile Riley to break their coordination.
+**Riley** voted for **Cong**
+> Riley voted to exile Cong. Reason: Hoang is overthinking this. Cong is the one who has been silent and is now suddenly aggressive toward me and Meg to save himself. His 'logic' is just a reaction to being caught. I'm sticking with my gut; Cong is the wolf.
+**Meg** voted for **Riley**
+> Meg voted to exile Riley. Reason: Hoang's point about the coordination is a valid observation. I want to make sure we aren't missing a pattern. Since both Hoang and Cong are now aligned on Riley, it makes sense to follow that lead.
+
+**Day Exiled:** Riley
+---
+
+## Round 3
+**Night Actions:**
+• Meg (Wolf) targeted Hoang.
+• Hoang (Witch) used POISON potion on Meg
+**Night Eliminations:** Hoang, Meg
+---

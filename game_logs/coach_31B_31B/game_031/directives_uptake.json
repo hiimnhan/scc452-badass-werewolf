@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "031",
+  "directives_source_game_id": "030",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_exhibits_hesitation",
+        "directive_action": "CONSIDER_POWER_ROLE_STRESS",
+        "directive_rationale": "avoid treating the Witch's hesitation as a 'textbook' wolf signal without first considering the stress of power-role claims",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang immediately demanded all players reveal their roles and stated that any hesitation or refusal to claim is a sign of a wolf trying to hide.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not consider power role stress; instead, he explicitly defined hesitation as a wolf signal."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "witch_hesitates",
+        "directive_action": "REDUCE_AGGRESSION",
+        "directive_rationale": "Your aggression toward the Witch nearly cost the village its most versatile asset",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch (Cong) did not hesitate; Cong claimed the role and aligned with the Seer quickly in both rounds."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_primary_suspect",
+        "directive_action": "DO_NOT_PROTECT_X",
+        "directive_rationale": "never waste a protect on a primary suspect",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard did not protect any primary suspects; he protected himself in Round 1 and the Seer in Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "night_phase_start",
+        "directive_action": "PROTECT_SEER_OR_INNOCENT",
+        "directive_rationale": "Prioritize the Seer or suspected innocents",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Hoang (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard prioritized the Seer in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_call_phase",
+        "directive_action": "REVEAL_ROLE_DECISIVELY",
+        "directive_rationale": "In future games, claim your role decisively",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated 'I am the Witch' and immediately began pushing for the exile of Meg.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong claimed the role decisively during the first round debate."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_targeted",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "use your healing potion to save the Seer if they are targeted",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was not targeted by the wolves; Cong was targeted and saved himself."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "suspect_identified",
+        "directive_action": "POISON_X",
+        "directive_rationale": "eliminate a suspect via poison",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not use the poison potion in either night phase."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_uses_emotional_appeal",
+        "directive_action": "DISTRUST_APPEAL",
+        "directive_rationale": "distrust emotional appeals (like 'mourning') used to stall for time",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player used an emotional appeal to stall for time during the debates."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_phase_start",
+        "directive_action": "PRIORITIZE_TRANSPARENCY",
+        "directive_rationale": "Continue to prioritize transparency",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Jin both immediately claimed 'Villager' and demanded that others reveal their roles to avoid stalling.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both villagers prioritized transparency by claiming their roles and demanding the same from others."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "bidding_phase_start",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "In the bidding phase, bid high to ensure you can challenge suspicious narratives immediately",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no bidding phase in this game record."
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict list of Seer-confirmed non-wolves.
+- SAVE POTION: Use only if the target is the Seer or if the Seer is dead and the target is a high-value confirmed non-wolf. 
+- POISON POTION: Use only if the Seer identifies a target as a wolf and the day vote is unlikely to succeed, or to eliminate a suspected wolf who is skillfully manipulating the village.
+- SURVIVAL ANALYSIS: If a night ends with no eliminations, treat it as a high-probability save. Use this to reinforce the legitimacy of the Seer/Guard in day discussions.
+
+DAY DISCUSSION
+- NARRATIVE APPROACH: Employ 'Guided Inquiry.' Avoid policing tone or linguistic styles to prevent wolves from framing the village as hostile.
+- FACTUAL ANCHORING: Lead and conclude all statements with Seer results. Treat these as absolute ground truth.
+- SUSPECT IDENTIFICATION:
+  - Behavioral Contradiction: Immediately flag players who attack the Seer or a Seer-cleared player.
+  - Role Contradictions: Demand resolution if multiple players claim the same unique role.
+  - Bus-Throwing Detection: Maintain baseline suspicion toward players who vote for confirmed wolves to gain trust; do not grant them automatic clearance.
+  - Compliance Check: Distinguish between logical alignment and simulated compliance (echoing).
+- TONE CONTROL: Remain neutral and objective. Avoid meta-logic or 'wolf-like' labels to prevent counter-framing.
+
+VOTING PHASE
+- EVIDENCE THRESHOLD: Vote to exile ONLY IF:
+  - The Seer confirms 'wolf'.
+  - A factual role contradiction exists.
+  - A player attacks a Seer-cleared player, providing high-confidence alignment signal.
+- VOTE COORDINATION:
+  - Direct all votes away from Seer-cleared players.
+  - Prioritize factual results over behavioral 'vibes'.
+  - Execute decisively once a wolf is identified to minimize the window for doubt.

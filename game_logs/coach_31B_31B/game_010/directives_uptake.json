@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "010",
+  "directives_source_game_id": "009",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_deaths_last_night",
+        "directive_action": "CONSIDER_WITCH_SAVE_OR_GUARD_PROTECT",
+        "directive_rationale": "recognize that a night with no deaths is a primary indicator of a Witch save or Guard protect",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated in Round 1, and there were deaths in every night phase recorded."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "game_state_seems_impossible",
+        "directive_action": "QUESTION_OWN_ASSUMPTIONS",
+        "directive_rationale": "When the game state seems impossible, question your own assumptions before accusing others of lying",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated in Round 1 before any debate occurred."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "alive_count_low AND seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority must be the Seer's survival above all else until the Wolves are identified",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "In Round 1, the Seer was alive, but the Guard (Cong) protected himself. In Round 2, the Seer was already dead."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "not_only_way_to_save_seer",
+        "directive_action": "WITHHOLD_ROLE_AND_NIGHT_ACTIONS",
+        "directive_rationale": "Never reveal your role or specific night actions through public claims unless it is the only way to save the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Witch) engaged in a heated debate with Jin, accusing others of being wolves based on their silence, but did not reveal their role as the Witch or mention any potion use.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch did not reveal their role or night actions during the debate."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "power_role_accused_of_mechanical_error",
+        "directive_action": "PLAY_DEVILS_ADVOCATE",
+        "directive_rationale": "Always play Devil's Advocate when a power role is being accused of a mechanical error",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No power role was accused of a mechanical error during the debate in Round 2."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "aggressive_accusation_by_seer",
+        "directive_action": "VERIFY_GAME_RULES",
+        "directive_rationale": "followed the Seer's aggressive accusation without verifying the game rules",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated in Round 1 and did not make any accusations during the debate."
+      }
+    ]
+  }
+}

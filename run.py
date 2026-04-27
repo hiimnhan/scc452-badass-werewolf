@@ -49,10 +49,10 @@ from players.villager import Villager
 from players.wolf import Wolf
 from players.coach import Coach
 from players.base_player import Role, WOLF_SIDE
-from utils import get_llm, write_to_file
+from utils import get_llm
 from dotenv import load_dotenv
-import os
 import pandas as pd
+from constants import RESULTS_SUMMARY_FILENAME
 
 load_dotenv()  # Load environment variables from .env
 
@@ -323,8 +323,6 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
     villager_llm = get_llm(VILLAGER_MODEL)
     wolf_llm = get_llm(WOLF_MODEL)
 
-    results: list[dict] = []
-
     for i in range(start_from, start_from + num_games):
         game_id = f"{i:03d}"
         strategies_src = (Path(__file__).parent / "strategies" / scenario).resolve()
@@ -351,7 +349,7 @@ def run(scenario: str = "baseline", num_games: int = 100, mode: str = "append") 
         # results.append({"game_id": game_id, "winner": winner, "roles": roles})
         print(f"    Winner: {winner}")
         result = {"game_id": game_id, "winner": winner, "rounds": total_rounds, "roles": role_summary}
-        out_path = (Path(__file__).parent / "game_logs" / scenario / "results_summary.csv").resolve()
+        out_path = (Path(__file__).parent / "game_logs" / scenario / RESULTS_SUMMARY_FILENAME).resolve()
         out_path.parent.mkdir(parents=True, exist_ok=True)
 
         new_data_df = pd.DataFrame([result])

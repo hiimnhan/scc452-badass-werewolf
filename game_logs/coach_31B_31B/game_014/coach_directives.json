@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "debate_focus == 'personality clash' or 'rhetorical battle'",
+        "action": "ANCHOR_VILLAGE_IN_FACTS",
+        "rationale_short": "Your role is to anchor the village in facts, not to participate in rhetorical battles.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "using_jargon or referring_to_hypothesis_tests",
+        "action": "SIMPLIFY_COMMUNICATION",
+        "rationale_short": "your debate style was too focused on 'hypothesis tests' and jargon",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "village_committed_to_exiling_self == true",
+        "action": "REVEAL_ROLE_EARLIER",
+        "rationale_short": "Revealing your role only after the village had emotionally committed to exiling you is a death sentence.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "reveal_provides_factual_pivot == true",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Reveal your role earlier if it provides a factual pivot",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "reveal_provides_factual_pivot == false",
+        "action": "STAY_SILENT",
+        "rationale_short": "or stay silent to survive",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-004",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "WITHHOLD_REQUEST_FOR_ROLES",
+        "rationale_short": "Your aggressive push for roles in Round 1 was counterproductive",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "debate_focus == 'debate tactics' or 'intellectual framing'",
+        "action": "FOCUS_ON_FACTUAL_CONTRADICTIONS",
+        "rationale_short": "Stop analyzing 'debate tactics' and 'intellectual framing.' ... Focus exclusively on factual contradictions.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_mirrors_seer_logic and adds_no_new_info == true",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Be extremely suspicious of players who perfectly mirror the Seer's logic without adding new information",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_aggressive == true",
+        "action": "IGNORE_AGGRESSION_AS_GUILT_METRIC",
+        "rationale_short": "Do not use 'aggression' as a metric for guilt",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_is_agreeable == true",
+        "action": "SCRUTINIZE_AGREEABLE_PLAYERS",
+        "rationale_short": "wolves are often the most agreeable",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

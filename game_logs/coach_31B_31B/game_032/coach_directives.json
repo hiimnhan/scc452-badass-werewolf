@@ -1,0 +1,105 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num >= 1",
+        "action": "DEMAND_ROLE_CLAIMS",
+        "rationale_short": "aggressive pursuit of role claims",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_during_response",
+        "action": "IDENTIFY_AS_CONFUSION_MASK",
+        "rationale_short": "immediate identification of 'Confusion Masks'",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "player_claims_role",
+        "action": "DEMAND_INDEPENDENT_LOGIC",
+        "rationale_short": "Continue to demand independent logic from others to expose 'safe-echoing' wolves",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "COORDINATE_WITH_WITCH",
+        "rationale_short": "lack of early coordination between the Guard and Witch in Round 1, resulting in a redundant save",
+        "confidence": 0.8
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Maintaining the Seer's survival is the highest priority for village victory",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "COORDINATE_WITH_GUARD",
+        "rationale_short": "lack of early coordination between the Guard and Witch in Round 1, resulting in a redundant save",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_is_self",
+        "action": "SAVE_SELF",
+        "rationale_short": "Using the save potion on yourself (the target)",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "player_is_seer_confirmed_wolf",
+        "action": "POISON_PLAYER",
+        "rationale_short": "poison potion on a Seer-confirmed wolf",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_during_response",
+        "action": "TREAT_AS_CONFUSION_MASK",
+        "rationale_short": "treating any hesitation as a 'Confusion Mask'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_silent_or_uses_emotional_appeals",
+        "action": "IDENTIFY_AS_WOLF_SIGNAL",
+        "rationale_short": "correctly identified that silence and emotional appeals (framing logic as 'bullying') are wolf signals",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_provides_no_independent_reasoning_and_echoes_seer",
+        "action": "ISOLATE_PLAYER",
+        "rationale_short": "continue to isolate players who provide no independent reasoning and only echo the Seer's findings",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 11,
+    "dropped": []
+  }
+}

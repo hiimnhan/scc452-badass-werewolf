@@ -1,0 +1,16 @@
+=== Game Summary (your observations so far) ===
+- Round 1 Night: => No one was killed during the night.
+- Round 1 Day: => Nam received 5 votes. Nam is exiled!
+- Round 2 Night: => Nhan was killed during the night.
+- Round 2 Day: => Riley received 4 votes. Riley is exiled!
+- Round 3 Night: => No one was killed during the night.
+- Round 3 Day: => Hoang received 3 votes. Hoang is exiled!
+- Round 4 Night: => Cong was killed during the night.
+
+=== Suspicion Scores (0.0 = innocent → 1.0 = wolf) ===
+  Nam: 0.95 — Correctly noted game mechanics regarding the night survival, but immediately attempted to steer the narrative by framing non-contributors as suspicious in the first statement of the game. Now attempting to invalidate Jin's push for factual evidence by labeling it 'meta-gaming' and mirroring Hoang's terminology to create a false equivalence. This pattern of narrative steering, deflection, and refusal to provide factual evidence despite multiple prompts is highly indicative of wolf behavior.
+  Riley: 0.95 — No evidence provided by night outcome; remains neutral. Now attacking Hoang using behavioral tropes ('too eager', 'desperate to lead') rather than logical evidence. This is Narrative Steering and an attempt to discredit a player who previously pushed for factual analysis. Latest statement attempts to frame the request for logic as a 'mechanical trap' and accuses Cong of being a 'mouthpiece,' further relying on social dynamics and 'vibes' to steer the narrative while providing zero evidence. Now identified by Jin as the primary suspect for these same reasons.
+  Hoang: 0.90 — Previously low score for logical framework. Now claiming Witch role. Jin exposed a contradiction: Hoang pressured Meg for silence, then accused Meg of 'narrative steering' for doing the same. Latest statement attempts to hide this hypocrisy through semantic gymnastics and accuses Jin of coordination without evidence. This is an attempt to deflect a factual contradiction by fabricating a conspiracy between Meg and Jin. The power claim is now highly suspect due to this logical inconsistency and shift toward narrative steering. His 'semantic dodge' confirms a failure to maintain a consistent logical front.
+  Meg: 0.85 — Remains neutral. No evidence from night outcome or previous discussions to shift score. Currently being prompted by Hoang to provide analysis; her response will be critical. Now attacking Hoang using behavioral tropes ('convenient') and accusing Cong of 'covering' for him without evidence. This is Narrative Steering and an attempt to deflect Hoang's request for mechanical analysis by using behavioral accusations. Continuing to attack based on 'vibes' and lack of contribution rather than logic.
+  Nhan: 0.50 — No evidence from night outcome.
+  Jin: 0.10 — Maintains low score for consistently pushing factual evidence and identifying narrative steering. Latest statement correctly identifies a factual contradiction in Hoang's logic, flagging the hypocrisy of Hoang's demands versus his accusations. Jin is successfully isolating the logical failures of the suspect's power claim.

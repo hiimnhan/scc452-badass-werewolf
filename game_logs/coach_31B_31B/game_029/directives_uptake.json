@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "029",
+  "directives_source_game_id": "028",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your immediate claim... established a strong baseline of ground truth. Continue this",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'I am the Seer' at the start of the Round 1 debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed their role immediately in Round 1 as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Your immediate claim and clear of a villager established a strong baseline of ground truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'I investigated Nhan last night, and Nhan is confirmed not a werewolf.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed the result of their Round 1 investigation immediately."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Always protect the Seer first, as they are the village's only source of objective data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Guard) chose to protect Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Guard protected Nhan (a Villager) instead of the Seer (Cong) during the first night."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "confirmed_wolves_count > 0",
+        "directive_action": "POISON_CONFIRMED_WOLF",
+        "directive_rationale": "successfully used the Poison potion on a confirmed wolf based on Seer data, which is the optimal use of the resource",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the POISON potion on Meg after Cong (Seer) investigated Meg and found her to be a wolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch used the poison potion on a confirmed wolf based on the Seer's data in Round 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "prioritize the Seer for the Save potion, as the Seer's survival is more valuable than any single villager's",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Witch) did not use any potions during the Round 1 night actions.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch did not use the save potion in Round 1."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_claims_process_is_forcing_a_narrative",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player... attempts to frame the process as 'forcing a narrative,' recognize this as a high-probability wolf signal and override emotional pleas with the process of elimination.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player claimed that the process was forcing a narrative."
+      }
+    ]
+  }
+}

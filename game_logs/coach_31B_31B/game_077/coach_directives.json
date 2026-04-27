@@ -1,0 +1,70 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_provides_no_original_logic_and_only_agrees_with_majority",
+        "action": "INVESTIGATE_X",
+        "rationale_short": "Continue prioritizing the investigation of those who are 'too' agreeable.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting yourself instead of the Seer is a failure in priority.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "always",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the Seer must be your absolute priority every single night.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identifies_wolf",
+        "action": "POISON_X",
+        "rationale_short": "Once the Seer identifies a wolf, use the poison immediately to eliminate the threat before they can kill the Seer.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_provides_no_original_logic_and_only_agrees_with_majority",
+        "action": "ACCUSE_X",
+        "rationale_short": "When a player provides no original logic and only agrees with the majority, treat them as a high-risk variable.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "wolf_attempts_to_shift_debate_from_data_to_tone",
+        "action": "PRIORITIZE_DATA",
+        "rationale_short": "Always prioritize data over social dynamics during the bidding phase of the debate.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 6,
+    "dropped": [
+      {
+        "advice_verbatim": "You successfully used the 'Power Core' strategy, but beware of 'Social Mimicry.'",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

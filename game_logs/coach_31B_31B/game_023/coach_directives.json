@@ -1,0 +1,107 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "early_game",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "providing early ground truth",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_displays_confusion_mask",
+        "action": "CHALLENGE_X",
+        "rationale_short": "aggressively penalizing 'Confusion Masks'",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "players_remain_uncleared",
+        "action": "ACCUSE_X",
+        "rationale_short": "Continue this high-pressure approach to isolate uncleared players",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1 && power_core_not_established",
+        "action": "PROTECT_SEER",
+        "rationale_short": "prioritize the Seer from Night 1 unless a Power Core is already established",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the Seer is the village's most valuable asset",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_attacked",
+        "action": "SAVE_SEER",
+        "rationale_short": "the priority must always be the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "seer_identifies_wolf",
+        "action": "POISON_X",
+        "rationale_short": "Once the Seer identifies a wolf... use the Poison potion",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "player_logic_becomes_absolute_confusion_mask",
+        "action": "POISON_X",
+        "rationale_short": "Once... a player's logic becomes an absolute 'Confusion Mask,' use the Poison potion",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "seer_provides_evidence",
+        "action": "VOTE_BASED_ON_SEER_EVIDENCE",
+        "rationale_short": "Always vote based on the Seer's evidence over gut feelings",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attempts_to_stall_deflect_or_question_seer_data",
+        "action": "ACCUSE_X",
+        "rationale_short": "any attempt to stall, deflect, or question the Seer's data... is a definitive wolf signal",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 13,
+    "emitted": 10,
+    "dropped": [
+      {
+        "advice_verbatim": "The Witch and Guard operated independently rather than establishing a communication loop",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "You correctly followed the Seer's lead",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=13 but emitted+dropped=12"
+  }
+}

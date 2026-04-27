@@ -1,0 +1,171 @@
+{
+  "evaluated_game_id": "009",
+  "directives_source_game_id": "008",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_being_attacked",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "failed to claim your role when attacked",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong asserted 'I am the Seer' while arguing against Jin's accusations.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong maintained his role claim while being attacked by Jin."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_being_attacked",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "prioritize role-based data over debate style when your life is at stake",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated 'Nam is confirmed innocent' to support his position while being attacked by Jin.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong provided his investigation data on Nam to defend his role."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "start_of_night",
+        "directive_action": "ESTABLISH_TRUST_NETWORK",
+        "directive_rationale": "The Guard, Seer, and Witch never established a private or public trust network",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong did not attempt to communicate or establish a network with other power roles during the night phases.",
+        "verdict": "IGNORED",
+        "verdict_notes": "No evidence of trust network establishment."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "start_of_night",
+        "directive_action": "CONSULT_POWER_ROLES",
+        "directive_rationale": "The Guard protected different people every night without consulting the Seer's data or the Witch's status",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam protected himself in Round 1, Cong in Round 2, and Hoang in Round 3 without any recorded consultation with power roles.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam acted independently each night without consulting the Seer or Witch."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_disagrees_with_mechanical_analysis",
+        "directive_action": "AVOID_SILENCING_PLAYER",
+        "directive_rationale": "Do not let the language of logic become a weapon to silence potential allies",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam told Jin, 'You just lied about the game state to fake-confirm a power role. That is a desperate wolf move,' and urged the village to exile Jin immediately.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam used mechanical analysis to actively silence and push for the exile of Jin."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "start_of_night",
+        "directive_action": "ESTABLISH_TRUST_NETWORK",
+        "directive_rationale": "The Guard, Seer, and Witch never established a private or public trust network",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not attempt to establish a trust network with the Seer or Witch.",
+        "verdict": "IGNORED",
+        "verdict_notes": "No trust network was established."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "REVEAL_ROLE",
+        "directive_action": "REVEAL_SAVE_TARGET",
+        "directive_rationale": "When claiming a role, provide evidence of your actions (who you saved)",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated, 'I saved you' in response to Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly stated who they saved when claiming the Witch role."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "REVEAL_ROLE",
+        "directive_action": "SEEK_CONFIRMATION_FROM_POWER_ROLES",
+        "directive_rationale": "seek confirmation from other power roles rather than attacking the 'logic' of skeptics",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin attacked Cong's understanding of mechanics, stating, 'Cong, your ignorance of Witch mechanics is a confession.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin attacked the logic/knowledge of the Seer instead of seeking confirmation."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "REVEAL_ROLE",
+        "directive_action": "COORDINATE_WITH_GUARD",
+        "directive_rationale": "your claim in Round 3 was a necessary move to survive, but you failed to coordinate with the Guard",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin accused Nam (the Guard) of 'blindly shielding a wolf based on a lie' and told the village to exile Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin actively attacked the Guard rather than coordinating with them."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "start_of_night",
+        "directive_action": "ESTABLISH_TRUST_NETWORK",
+        "directive_rationale": "The Guard, Seer, and Witch never established a private or public trust network",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin did not attempt to establish a trust network with the Seer or Guard.",
+        "verdict": "IGNORED",
+        "verdict_notes": "No trust network was established."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_is_looping_on_steering_and_deflecting",
+        "directive_action": "DEMAND_SPECIFIC_ROLE_DATA",
+        "directive_rationale": "When the debate becomes a loop of accusations about 'steering' and 'deflecting,' stop the conversation and demand specific role data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The debate did not loop on steering/deflecting; it focused on mechanical contradictions regarding the night's outcome."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_uses_high_level_terminology_to_label_others",
+        "directive_action": "PRIORITIZE_MECHANICAL_EVIDENCE",
+        "directive_rationale": "You exiled your Seer and Witch because you prioritized 'debate style' over mechanical evidence",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Jin, stating, 'Jin lied about the game state to fake-validate Cong... I trust Cong's Seer data.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang prioritized the mechanical contradiction of the game state and the Seer's data over the Witch's claim."
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict log of Seer-confirmed non-wolves. This pool is the only reliable basis for isolating suspects.
+- ROLE-SPECIFIC ACTIONS:
+  - IF Guard: Protect the Seer every single night. Never protect yourself or other villagers while the Seer is alive. If prohibited from protecting the same person twice, protect the Witch, then return to the Seer immediately.
+  - IF Seer: Investigate passive players to uncover wolves hiding in plain sight.
+  - IF Witch: Reserve the Save potion exclusively for the Seer. Use the Poison potion ONLY on players confirmed as wolves by the Seer.
+
+DAY DISCUSSION
+- FACTUAL FOCUS: Treat Seer results as absolute ground truth. Ignore behavioral analysis, tone, or communication styles.
+- SUSPECT IDENTIFICATION:
+  - IF a player attacks or attempts to exile a Seer-cleared player, THEN flag them as 'Wolf-Baiting' and prioritize them as a primary suspect.
+  - IF a player uses the 'Confusion Mask' (claiming to be 'confused', 'overwhelmed', or 'processing') or remains silent under direct pressure to reveal a role, THEN flag them as a 'Quiet Wolf' and prioritize them for exile.
+- EVALUATING CLAIMS:
+  - IF multiple players claim the same power role, demand specific targets/results to identify factual contradictions.
+  - IF no one dies at night, acknowledge it as a Guard/Witch save; do not use it as a basis for behavioral suspicion.
+
+VOTING PHASE
+- EVIDENCE THRESHOLD:
+  - VOTE IF there is a confirmed Seer 'wolf' result.
+  - VOTE IF a player has been caught in a factual lie or role contradiction.
+  - VOTE IF a player is identified as a 'Quiet Wolf' (via Confusion Mask or refusal to claim role under pressure). Do not hesitate or vote 'None' when a player is effectively hiding their alignment.
+- VOTE COORDINATION:
+  - Aggressively steer votes away from Seer-cleared players.
+  - Execute votes decisively based on Seer data; ignore requests to 'slow down' or 're-evaluate' once a wolf is identified.

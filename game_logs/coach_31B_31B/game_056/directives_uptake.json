@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "056",
+  "directives_source_game_id": "055",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "start_of_game",
+        "directive_action": "ESTABLISH_TRUST_ANCHOR",
+        "directive_rationale": "Your immediate establishment of a Trust Anchor (the Villager) provided the village with a logical foundation",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated during the first night and never participated in a debate phase."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "trust_anchor_established",
+        "directive_action": "USE_ANCHOR_TO_ISOLATE_SUSPECTS",
+        "directive_rationale": "Continue using this 'anchor' strategy to isolate suspects.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated during the first night."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "supporting_seer",
+        "directive_action": "AVOID_MIRRORING_PHRASING",
+        "directive_rationale": "You committed a critical strategic error by mirroring the Seer's phrasing too closely.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated immediately; the Guard (Cong) never had the opportunity to support the Seer's claims in debate."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "supporting_seer",
+        "directive_action": "PROVIDE_INDEPENDENT_REASONING_OR_GUARD_DATA",
+        "directive_rationale": "When supporting the Seer, provide independent reasoning or specific Guard-related data rather than duplicating the Seer's vocabulary.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated immediately; the Guard (Cong) never supported Seer data."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "PRIORITIZE_SAVE_SEER",
+        "directive_rationale": "ensure your potion priority is always: Seer > Self > Others.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Witch) did not use any potions during the first night, despite the Seer (Nhan) being targeted and eliminated.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch had the save potion available and the Seer was eliminated, but the Witch failed to use the potion to save the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_call_initiated",
+        "directive_action": "ENFORCE_ROLE_CALL",
+        "directive_rationale": "Your aggressive role-call enforcement was highly effective in flushing out the wolves.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated 'Jin is correct; hesitation is a wolf signal' and demanded that the Seer and Guard claim their roles immediately to establish a trust anchor.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam actively supported and enforced the role-call initiated by Jin in Round 1."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "suspect_frames_logical_pressure_as_intensity_or_tunnel_vision",
+        "directive_action": "IDENTIFY_CONFUSION_MASKING",
+        "directive_rationale": "By focusing on the wolves' attempts to frame logical pressure as 'intensity' or 'tunnel vision,' you maintained momentum.",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Meg claimed Jin was 'pushing way too hard' and 'trying to force a vote', Jin responded by calling this a 'textbook example of tone policing and confusion masking.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin correctly identified Meg's attempt to frame logical pressure as aggression as 'confusion masking' and 'tone policing' in Round 3."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conflict_between_seer_data_and_suspect_behavioral_vibes",
+        "directive_action": "PRIORITIZE_SEER_DATA",
+        "directive_rationale": "Continue to prioritize the Seer's data over any behavioral 'vibes' presented by suspects.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1, so no Seer data was available to prioritize over behavioral vibes in the debate phases."
+      }
+    ]
+  }
+}

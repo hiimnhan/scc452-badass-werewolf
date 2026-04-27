@@ -1,0 +1,114 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Witch
+**Cong:** Villager
+**Nam:** Villager
+**Jin:** Seer
+**Hoang:** Guard
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Nhan.
+• Jin (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Nhan (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Seer. I investigated Nhan last night, and Nhan is confirmed not a werewolf. We should treat Nhan as a trusted member of the village and look for the wolves among the remaining players.
+**Riley:** Jin, claiming Seer immediately is a classic wolf move to control the narrative. Why the rush to clear Nhan? If you're lying, you've just bought Nhan a free pass. I'm not buying this so easily; we need more proof before trusting a 'confirmed' member.
+**Nhan:** Riley, you are attacking a Seer claim based on 'classic moves' rather than evidence. If Jin is the Seer, his result is the only hard data we have. Why are you trying to discredit a clear result? Your push against Jin is more suspicious than the claim itself.
+**Jin:** Riley, you are attempting to invalidate a confirmed result using behavioral tropes rather than logic. This is a transparent attempt to keep the village blind. Nhan is clear; your refusal to accept hard evidence makes you the primary suspect. I move to exile Riley.
+**Riley:** Jin and Nhan are acting like a coordinated team, which is a huge red flag. Jin 'clears' Nhan, and Nhan immediately becomes his shield. This smells like a wolf pack trying to secure a trusted duo. Why is Nam staying out of this? Your silence is convenient.
+**Jin:** Riley, your insistence on 'red flags' and 'wolf moves' is a desperate attempt to substitute vibes for evidence. I have provided the only hard data in this game. Your aggressive effort to discredit a confirmed clear is the only actual evidence we have. Exile Riley.
+
+### Votes
+**Nhan** voted for **Riley**
+> Nhan voted to exile Riley. Reason: Jin has provided the only objective data we have. Riley is dismissing a confirmed result based on 'classic moves' and 'vibes' rather than logic. This aggressive attempt to blind the village by discrediting the Seer is the most suspicious behavior present.
+**Cong** voted for **None**
+> Cong voted to exile None. Reason: We have a Seer claim and a disagreement over how to interpret it. Neither side has provided a logical contradiction yet. Exiling someone based on behavior tropes or an unverified claim this early is too risky for the village. I'm skipping until more evidence emerges.
+**Nam** voted for **Riley**
+> Nam voted to exile Riley. Reason: Riley is attacking the Seer's claim using behavioral tropes and 'red flags' rather than providing any concrete evidence or logical contradictions. Discrediting the only available hard data with stylistic judgments is a common tactic to confuse the village. I vote to exile Riley.
+**Jin** voted for **Riley**
+> Jin voted to exile Riley. Reason: I have provided confirmed data that Nhan is not a werewolf. Riley is ignoring this evidence and instead using vague 'red flags' and 'behavioral tropes' to discredit us. This refusal to accept logic and evidence is a clear sign of a werewolf.
+**Hoang** voted for **Riley**
+> Hoang voted to exile Riley. Reason: Jin has provided a clear result on Nhan. Riley is attempting to invalidate this hard evidence using behavioral speculation and tropes rather than logical contradictions. This aggressive attempt to discredit the only available data makes Riley the most likely werewolf.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Jin's urgency to exile me for simply questioning his claim is a massive red flag. A real Seer would provide more nuance, not just demand an immediate execution. This coordinated push between Jin and Nhan looks like a wolf pack attempting to seize control.
+**Meg** voted for **Riley**
+> Meg voted to exile Riley. Reason: Jin's claim provides the only concrete lead we have. While Riley's caution is understandable, attacking the Seer so aggressively this early feels like an attempt to create chaos and ignore the only actual evidence available to us.
+
+**Day Exiled:** Riley
+---
+
+## Round 2
+**Night Actions:**
+• Meg (Wolf) targeted Jin.
+• Hoang (Guard) chose to protect Jin.
+• Jin (Seer) investigated Cong. Cong is NOT a wolf.
+• Nhan (Witch) did not use any potions.
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Seer. I have investigated both Nhan and Cong; neither is a werewolf. They are confirmed villagers. We must now focus our attention on Nam, Hoang, and Meg to find the remaining wolves.
+**Nam:** Jin, you've cleared two people very quickly to narrow the field. Hoang and Meg, what are your thoughts on Jin's claims? If you're villagers, now is the time to speak up before we're boxed into a corner.
+**Nhan:** Nam, your attempt to frame Jin's evidence as a 'tactic' is a blatant deflection. Jin is the Seer; I know this to be true. Stop trying to confuse Hoang and Meg and explain why you are fighting the only hard evidence we have.
+**Nam:** Nhan, you claim to 'know' Jin is the Seer, but you haven't claimed a role. How do you have this information? If you are a villager, you shouldn't have private knowledge. Your aggression is a shield for Jin's unverified claims.
+**Cong:** Nhan, you just admitted to having private knowledge you cannot possibly have as a villager. You claim to 'know' Jin is the Seer without a role. This is a direct contradiction of the rules and proves you and Jin are coordinating. I vote to exile Nhan.
+**Nam:** Nhan, you've trapped yourself. Cong is right—a villager cannot 'know' the Seer's identity. Your slip proves you and Jin are coordinating. We cannot trust Jin's 'clears' when his partner is this reckless. I vote to exile Nhan.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam is attempting to manipulate the village by framing my support for the Seer as 'illegal knowledge.' This is a deflection to avoid the Seer's narrowing list of suspects. Nam is fighting the only hard evidence we have. I vote Nam.
+**Cong** voted for **Nhan**
+> Cong voted to exile Nhan. Reason: Nhan claimed to know Jin is the Seer without claiming a role that would grant that knowledge. A villager cannot have this private information. This slip-up proves Nhan and Jin are coordinating as werewolves.
+**Nam** voted for **Nhan**
+> Nam voted to exile Nhan. Reason: Nhan explicitly claimed to know Jin is the Seer, which is impossible for a regular villager. This admission of private knowledge proves coordination between Nhan and Jin. We must exile Nhan for this blatant contradiction.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nhan and Cong are confirmed villagers. Nam is intentionally twisting Nhan's words to create a fake contradiction and push for the exile of an innocent player. This deflection is a clear attempt to hide his own identity and dismantle the village's only source of evidence.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Jin has provided clear evidence that Nhan is a villager. Nam and Cong are ignoring this hard information to focus on a phrasing error. This is a desperate attempt to distract us from the remaining suspects. I vote Nam for leading this deflection.
+**Meg** voted for **Nhan**
+> Meg voted to exile Nhan. Reason: I was hesitant, but Nhan's claim to 'know' Jin's role is a massive red flag. As Nam and Cong pointed out, a regular villager shouldn't have that information. It looks like a coordinated effort to mislead us. I have to vote Nhan.
+
+**Day Exiled:** Nhan
+---
+
+## Round 3
+**Night Actions:**
+• Meg (Wolf) targeted Jin.
+• Hoang (Guard) chose to protect Cong.
+• Jin (Seer) investigated Nam. Nam is NOT a wolf.
+**Night Eliminations:** Jin
+
+### Day Debate
+**Hoang:** Jin was our only source of truth and the wolves killed him for it. Nam, you spent the entire game trying to delegitimize Jin before he died. That is not a coincidence. Nam is a werewolf. We vote Nam now.
+**Nam:** Hoang, you are pushing a vote based on 'coincidence' and behavioral cues rather than evidence. If Jin was a 'source of truth,' where is the proof? You are rushing this vote to eliminate a villager. I find your sudden aggression highly untrustworthy.
+**Hoang:** Nam, your attempt to frame this as 'behavioral' is a transparent deflection. You spent two days attacking the Seer, and now that the Seer is dead, you're attacking me for pointing out the obvious. Your logic is a loop to avoid accountability. Nam is the wolf.
+**Nam:** Hoang, you are still providing zero evidence and relying on emotional narratives. Meg, you've been silent—what is your take on Hoang's sudden, aggressive push to exile me without a single concrete fact?
+**Hoang:** Nam, your obsession with 'concrete facts' is a smokescreen. You spent the game dismantling the Seer's credibility, and the wolves rewarded you by killing him. You are now trying to recruit Meg to validate your deflection. The logic is clear: Nam is the wolf.
+**Nam:** Hoang, you've spent three turns attacking me without a single piece of evidence. You're using Jin's death as a prop to create a narrative. Meg, Cong, don't let Hoang's aggression replace logic. If Hoang is a villager, why is he ignoring the lack of facts?
+
+### Votes
+**Cong** voted for **Hoang**
+> Cong voted to exile Hoang. Reason: Hoang is pushing for Nam's exile based on 'coincidence' and behavior rather than concrete evidence. Calling a request for facts a 'smokescreen' is a tactic to avoid logical scrutiny. We cannot exile players based on narratives; Hoang's aggression without evidence is highly suspicious.
+**Nam** voted for **Hoang**
+> Nam voted to exile Hoang. Reason: Hoang has provided zero evidence and is relying on an emotional narrative to rush my exile. He dismisses the need for facts as a 'smokescreen.' This aggressive push without evidence is a classic werewolf tactic to eliminate an observant villager.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam spent the entire game attacking Jin's credibility. Now that the Seer has been killed, Nam is trying to frame the truth as 'behavioral' to deflect. This pattern of delegitimizing the source of truth is a classic wolf strategy to isolate villagers.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: Nam, while you ask for facts, the timing of Jin's death and your previous opposition to him is very concerning. Hoang's logic about the pattern of behavior makes sense. I'm leaning toward Hoang's perspective here; it feels too convenient for you.
+
+**Day Exiled:** Hoang
+---
+
+## Round 4
+**Night Actions:**
+• Meg (Wolf) targeted Nam.
+**Night Eliminations:** Nam
+---

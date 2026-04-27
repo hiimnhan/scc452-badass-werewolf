@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "005",
+  "directives_source_game_id": "004",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing_investigation_data",
+        "directive_action": "AVOID_ULTIMATUMS",
+        "directive_rationale": "Issuing ultimatums ('explain your silence or you are the target') creates friction and makes you look like a wolf",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated on Night 1 and never participated in a Day Debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing_investigation_data",
+        "directive_action": "PROVIDE_DATA_WITHOUT_DIRECTIVE",
+        "directive_rationale": "Provide the data and let the village deduce the target.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated on Night 1 and never provided investigation data."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "selecting_protection_target",
+        "directive_action": "COMMUNICATE_TARGETS_EFFECTIVELY",
+        "directive_rationale": "You failed to communicate your protection targets effectively.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong protected himself in Night 1 and Riley in Night 2, but did not communicate these choices to the village during the debate phases before being eliminated in Round 2.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Guard did not communicate their targets to the group."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "attempting_to_claim_role",
+        "directive_action": "AVOID_FABRICATING_MECHANICS",
+        "directive_rationale": "Never lie about game mechanics to justify a hunch.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard (Cong) was eliminated at the start of Round 2 and never attempted to claim the role during a debate."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "mid_game",
+        "directive_action": "INCREASE_ACTIVITY",
+        "directive_rationale": "You were too passive in the mid-game.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam became highly active in Round 2, engaging in a direct argument with Riley and Jin and eventually leading the vote to exile Riley.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch increased activity significantly starting in the mid-game (Round 2)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_identifies_confirmed_core",
+        "directive_action": "COORDINATE_PROTECTION_WITH_SEER",
+        "directive_rationale": "failed to coordinate with the Seer to protect the confirmed core.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated on Night 1, so no confirmed core was ever identified."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "discrepancy_between_seer_data_and_villager_suspicion",
+        "directive_action": "BRIDGE_DATA_AND_SUSPICION",
+        "directive_rationale": "Use your voice to bridge the gap between the Seer's data and the Villagers' suspicions.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no Seer data available to bridge with suspicions because the Seer died immediately."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent_or_low_utility",
+        "directive_action": "AVOID_ACCUSING_BASED_ON_SILENCE",
+        "directive_rationale": "Stop treating 'silence' or 'lack of utility' as evidence of guilt.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin explicitly rejected Riley's attempt to accuse Nam based on silence, stating that targeting players for lack of contribution is a logical fallacy and a 'Utility Trap'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin adhered to the directive by refusing to accuse based on silence."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "comparing_behavioral_vibes_vs_mechanical_contradictions",
+        "directive_action": "PRIORITIZE_MECHANICAL_CONTRADICTIONS",
+        "directive_rationale": "Prioritize mechanical contradictions over behavioral vibes",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin demanded that Riley provide 'a fact-based reason' or 'mechanical contradictions' rather than 'behavioral tropes' or 'vibes'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly prioritized mechanical evidence over behavioral observations."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "confirmed_core_narrative_presented",
+        "directive_action": "QUESTION_BENEFICIARY_OF_NARROW_SUSPECT_POOL",
+        "directive_rationale": "The village accepted the 'confirmed core' narrative without questioning who benefited most from narrowing the suspect pool",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No 'confirmed core' narrative was presented in this game."
+      }
+    ]
+  }
+}

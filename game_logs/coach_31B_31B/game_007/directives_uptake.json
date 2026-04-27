@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "007",
+  "directives_source_game_id": "006",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "game_start",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your aggressive claim... provided the village with an essential 'ground truth.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin immediately announced 'I am the Seer' at the start of the Round 1 debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin revealed their role immediately upon the start of the first debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "GUARD_IS_ALIVE",
+        "directive_action": "ENDORSE_GUARD",
+        "directive_rationale": "Your... immediate clearing of the Guard provided the village with an essential 'ground truth.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin did not endorse or clear Hoang (the Guard) during the debates."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "PLAYER_QUESTIONS_SEER_LOGIC",
+        "directive_action": "AVOID_ACCUSING_WOLF_TACTIC",
+        "directive_rationale": "avoid framing logical questioning as a 'wolf tactic' to prevent genuine villagers from becoming paranoid",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Riley questioned the logic of claiming Seer instantly, Jin responded that Riley's argument was based on 'vibes' and 'behavioral tropes,' and called the attack on a confirmed villager a 'red flag.'",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin avoided using the specific phrase 'wolf tactic' in Round 1, though they labeled the behavior a 'red flag.' However, in Round 2, Jin explicitly called Meg's narrative steering a 'classic wolf tactic.'"
+      },
+      {
+        "directive_id": "SEER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "PLAYER_DISSENTS",
+        "directive_action": "AVOID_ATTACKING_DISSENTER",
+        "directive_rationale": "your tendency to attack dissenters (like the Villager) can accidentally mirror wolf behavior",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin directly countered Riley's dissent by calling Riley's arguments 'baseless narratives' and 'behavioral tropes.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin actively attacked the dissenters (Riley in Round 1 and Meg in Round 2) by labeling their arguments as baseless and characteristic of wolves."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SELF",
+        "directive_rationale": "Excellent initial self-protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Hoang during Night 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang protected themselves in the first round."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "SEER_IS_PUBLIC",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Continue prioritizing the Seer's survival over your own once the Seer is public",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Jin during Night 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Jin revealed as Seer in Round 1, Hoang protected Jin in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "SEER_IS_ATTACKED",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Using the Save potion on the Seer in Round 2 was a critical save",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) was not attacked in Night 1 or Night 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "CONFIRMED_WOLF_ALIVE",
+        "directive_action": "POISON_WOLF",
+        "directive_rationale": "Your decision to use the Poison potion on the confirmed wolf in Round 3 ensured the win",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The game ended after Round 2; no confirmed wolf was targeted with poison during the night phases."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "SEER_CLEAR_VS_WOLF_NARRATIVE",
+        "directive_action": "PRIORITIZE_SEER_CLEAR",
+        "directive_rationale": "valuing a Seer's clear over a wolf's narrative\u2014is exactly how you win",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Cong both explicitly argued that the village should prioritize Jin's clear of Nhan over Riley's behavioral 'vibes'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both villagers prioritized the Seer's factual clear over the werewolf's narrative arguments."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "WOLF_TARGETS_PASSIVE_PLAYER",
+        "directive_action": "DEFEND_PASSIVE_PLAYER",
+        "directive_rationale": "Be wary of the 'Utility Trap' where wolves target passive players to purge them",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam defended the consensus and the Seer against Meg's accusations, specifically referencing the 'Utility Trap' in his arguments to discredit Meg.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified and countered the werewolf's attempt to frame the village's coordination as a 'trap' or 'coordinated play'."
+      }
+    ]
+  }
+}

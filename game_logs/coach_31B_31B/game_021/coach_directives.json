@@ -1,0 +1,70 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "NIGHT",
+        "trigger": "player_claims_role == True",
+        "action": "INVESTIGATE_X",
+        "rationale_short": "Continue prioritizing the investigation of role-claimants to resolve contradictions quickly.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your sole priority must be the Seer. Establish a strict Seer-protection loop immediately.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_validated == True && save_potion_remaining == True",
+        "action": "SAVE_SEER",
+        "rationale_short": "once the Seer is validated, your Save potion should be reserved exclusively for them",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "two_players_claim_same_unique_power_role == True",
+        "action": "REQUEST_VOTE_ON_X",
+        "rationale_short": "When two players claim the same unique power role, one is objectively a wolf; the village should move to resolve this immediately",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_during_role_call == True || player_claims_observing == True",
+        "action": "ACCUSE_X",
+        "rationale_short": "if a player hesitates during role calls or claims to be 'observing,' treat this as a high-probability wolf signal",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "player_hesitates_during_role_call == True || player_claims_observing == True",
+        "action": "VOTE_AGAINST_X",
+        "rationale_short": "push for their exile regardless of their later deflections",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 6,
+    "dropped": [
+      {
+        "advice_verbatim": "Your play was excellent. By establishing 'ground truth' early and providing clear targets, you anchored the village.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "046",
+  "directives_source_game_id": "045",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village descends into 'meta-gaming' or circular arguments about 'logic styles'",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "reveal yourself the moment the village descends into 'meta-gaming' or circular arguments about 'logic styles' to ground the debate in facts",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The village did not descend into meta-gaming or circular arguments about logic styles; the debate focused on role claims and Seer results."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "policing 'compliance simulation' and demanding accountability",
+        "directive_action": "AVOID_AGGRESSIVE_ACCOUNTABILITY",
+        "directive_rationale": "Avoid 'aggressive accountability'; it makes you look like a wolf trying to force a narrative",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan demanded that everyone claim their roles immediately, stating, 'Claim your roles now or you'll be the primary targets for exile. No more hesitation.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan engaged in aggressive accountability by demanding claims and threatening those who hesitated, which is the exact behavior the directive advised avoiding."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Guard uses pressure tactics or attacks others for silence",
+        "directive_action": "AVOID_ECHOING_AGGRESSION",
+        "directive_rationale": "By echoing the Guard's pressure tactics and attacking others for silence, you painted a target on your back",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong remained silent during the initial aggressive push by Nhan and later voted for Meg based on the Seer's confirmation and Meg's contradictions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong did not echo Nhan's aggressive pressure tactics or attack others for their silence."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any state",
+        "directive_action": "REMAIN_STEALTHY",
+        "directive_rationale": "As a power role, remain stealthy.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong did not claim a role and did not lead the debate, only voting in alignment with the Seer's findings.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong remained stealthy throughout the game, never revealing their role as Witch."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "group needs an enforcer",
+        "directive_action": "AVOID_BECOMING_ENFORCER",
+        "directive_rationale": "Do not become the 'enforcer' of the group, as wolves will use your aggression to frame you",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The group already had an enforcer in Nhan; there was no vacuum for the Witch to fill as an enforcer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "evidence is based on 'behavioral patterns' or 'mirroring' alone",
+        "directive_action": "ABSTAIN_FROM_EXILE",
+        "directive_rationale": "Do not exile based on 'behavioral patterns' or 'mirroring' alone.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The votes cast by Nam and Jin were based on the Seer's factual confirmation of Nhan and the subsequent deflection by the targets, not 'behavioral patterns' or 'mirroring' alone."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "observing 'compliance simulation' vs 'strategic alignment'",
+        "directive_action": "DISTINGUISH_BEHAVIORS",
+        "directive_rationale": "Distinguish between 'compliance simulation' and 'strategic alignment.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No players engaged in a debate regarding compliance simulation versus strategic alignment."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player aligns with majority just enough to stay safe while steering vote toward aggressive villagers",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "be wary of wolves who 'align' with the majority just enough to stay safe while steering the vote toward aggressive villagers",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley claimed Villager and aligned with Nhan's push for claims ('it's the only way to find the wolves'), but Nam and Jin did not accuse Riley based on this alignment; they focused on Meg's deflection.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The trigger occurred (Riley aligning with the majority/aggressive player to stay safe), but the Villagers (Nam and Jin) did not accuse Riley."
+      }
+    ]
+  }
+}

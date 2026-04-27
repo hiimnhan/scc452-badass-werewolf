@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "being_challenged",
+        "action": "AVOID_MIRRORING_ATTACKER_LANGUAGE",
+        "rationale_short": "When challenged, avoid mirroring the attacker's language",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "being_challenged",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "double down on your factual information (Nhan's result) to anchor the village in truth",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "AVOID_LABELING_OTHERS_AS_AGGRESSIVE",
+        "rationale_short": "your defensive tone and labeling of others as 'aggressive' made you look like a wolf",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "any",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Prioritize the Seer above all else",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "AVOID_DEMANDING_IMMEDIATE_ROLE_REVEALS",
+        "rationale_short": "Your initial demand for immediate role reveals was too aggressive",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "ORGANIZE_VILLAGE",
+        "rationale_short": "Use your position to organize, not dictate",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "seer_attacked",
+        "action": "SAVE_SEER",
+        "rationale_short": "you failed to use your healing potion to save the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "AVOID_JARGON_LABELS",
+        "rationale_short": "Stop relying on jargon like 'Fatal Error' or 'Confusion Mask.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "FOCUS_ON_BEHAVIORAL_CONTRADICTIONS",
+        "rationale_short": "Instead of labels, focus on behavioral contradictions",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_echoes_majority",
+        "action": "CHALLENGE_INDEPENDENT_LOGIC",
+        "rationale_short": "Demand independent logic; 'I agree with X' is not a valid reason to vote",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}
