@@ -1,0 +1,164 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No statements have been made. I have no evidence yet and will wait to apply my detection strategy to others' arguments before intervening."
+            },
+            {
+                "Cong": 2,
+                "reason": "No one died last night and no one has spoken. There is currently zero mechanical evidence or behavioral flags to act upon. I will listen first to identify potential wolves."
+            },
+            {
+                "Nam": 2,
+                "reason": "First day, no deaths, and no statements made. I need to listen for Seer claims or contradictions before acting. No evidence currently exists to justify a high bid."
+            },
+            {
+                "Jin": 10,
+                "reason": "I must claim Seer immediately to coordinate the village and announce that Nhan is cleared, forcing werewolves to react and reveal themselves through mirroring or process attacks."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No one has spoken yet and no Seer has claimed. I will listen to identify wolf patterns or a Seer claim before acting."
+            },
+            {
+                "Riley": 2,
+                "reason": "No accusations have been made. No one is targeted. Staying quiet allows villagers to create their own friction and reveals potential power roles through their first statements."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish myself as a cooperative villager early. I will offer generic analysis and validate the group's logic to build trust credit before pivoting later."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Jin claimed Seer and correctly identified me. I must publicly endorse Jin's mechanical approach and confirm their result to establish a trusted information flow and isolate potential wolves."
+            },
+            {
+                "Cong": 5,
+                "reason": "Jin has claimed Seer and cleared Nhan. I need to verify if there are counter-claims and monitor for 'Blender' behavior or process attacks to identify wolves early."
+            },
+            {
+                "Nam": 2,
+                "reason": "Jin has claimed Seer and cleared Nhan. Per strategy, I accept this as mechanical truth. I will wait for counter-claims or behavioral signals from others before intervening."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin has claimed Seer and confirmed Nhan. I must immediately validate Jin's claim to establish ground truth and signal my support, ensuring the village coordinates around the Seer's data."
+            },
+            {
+                "Riley": 3,
+                "reason": "Jin's Seer claim is the only active narrative. I will remain silent to avoid early scrutiny, waiting for others to commit to positions before introducing mechanical contradictions."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to validate Jin's claim to build trust credit and establish my presence as a generic villager. I'll align with the current logic to avoid early friction."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "I must confirm Jin's Seer claim since I know I was targeted and saved, validating the 'no one died' outcome without revealing my identity yet. Hoang is flagged for mirroring; I need to probe for independent analysis."
+            },
+            {
+                "Cong": 8,
+                "reason": "Hoang is a textbook Blender. He mirrored Jin's logic and terminology ('ground truth', 'under scrutiny') without independent reasoning. I must flag this mimicry immediately to prioritize Hoang for exile."
+            },
+            {
+                "Nam": 6,
+                "reason": "Hoang is mirroring Jin's logic without adding analysis, which is a wolf signal. I need to flag this behavior to the village to prevent Hoang from blending in."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang exhibited a clear Wolf Signal (Over-alignment/Mirroring) by accepting my claim as ground truth without independent logic. I must flag this behavior immediately to prevent the village from trusting a potential wolf."
+            },
+            {
+                "Riley": 2,
+                "reason": "Hoang and Jin have established a narrative. I will remain passive to avoid early scrutiny and wait for a mechanical contradiction to exploit, as per strategic passivity."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish trust credit. I will validate Jin's claim and Hoang's coordination to blend in as a helpful villager while avoiding early friction."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin is the Seer and confirmed me. I must validate Jin's claim to cement their authority and amplify the flag on Hoang for mirroring, ensuring the village targets the highest priority suspect."
+            },
+            {
+                "Cong": 9,
+                "reason": "Hoang is a high-probability wolf based on Blender Detection. He mirrored Jin's logic to blend in and fast-track the narrative. I must push this accusation to secure a wolf exile."
+            },
+            {
+                "Nam": 8,
+                "reason": "Jin (Seer) asked me a direct question. Per Silence Policy, failure to respond is a wolf signal. I must confirm Hoang's mirroring behavior to support the Seer and avoid suspicion."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin has flagged my support as mirroring. I must immediately provide independent logical extension of the data to avoid being labeled a wolf and defend my alignment."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is creating a narrative of suspicion around Hoang. I must intervene to anchor a mechanical observation to blend in and avoid being tagged as passively suspicious."
+            },
+            {
+                "Meg": 7,
+                "reason": "Jin is calling out my silence. I need to claim Villager immediately and validate Jin's logic to build trust credit while subtly shifting focus toward Hoang."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Hoang is exhibiting high-priority wolf signals: mirroring Jin's data and attempting to control the group's response pattern. I must flag this mirroring and process attack to secure a vote against Hoang."
+            },
+            {
+                "Cong": 9,
+                "reason": "Hoang is exhibiting clear Blender behavior and is now attempting to force a binary consensus to lock in Jin's lead, effectively hiding in plain sight. I must flag this mimicry to the village immediately."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is exhibiting high-confidence wolf signals by mirroring Jin's claim and using 'organizing' as a narrative to fast-track the lead. I must push the accusation against Hoang to prevent them from blending in."
+            },
+            {
+                "Jin": 10,
+                "reason": "Hoang is exhibiting Narrative Framing and Process Attacks by labeling my suspicion as a need for 'optimization' and 'organizing'. He is attempting to control the narrative and force binary answers to mask his mirroring."
+            },
+            {
+                "Riley": 3,
+                "reason": "Jin and Hoang are in a direct conflict. Strategic passivity dictates staying silent during non-wolf disputes unless a mechanical contradiction arises. I will wait to see who gains traction before intervening."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin is calling out my silence. I must claim Villager, validate the current logical flow (Jin's lead), and provide a generic suspect to build trust credit and avoid being flagged as passive."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin's Seer claim is validated by my knowledge. Hoang is exhibiting clear mirroring and redirection behaviors. I must confirm Jin's result and push for Hoang's exile to secure the villager victory."
+            },
+            {
+                "Cong": 10,
+                "reason": "Hoang is exhibiting clear Blender and narrative control behaviors. I must support Jin's analysis and push for Hoang's exile to secure a win based on high-probability wolf flags."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin (Seer) has identified a high-confidence wolf signal in Hoang's mirroring and narrative control. I must support the Seer's finding with independent analysis to secure Hoang's exile and prevent a wolf-led narrative."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin is launching a process attack, labeling my organization as 'narrative control'. Per strategy, this is werewolf deflection. I must defend myself and expose Jin's behavior as a wolf signal to avoid exile."
+            },
+            {
+                "Riley": 2,
+                "reason": "Jin and Hoang are in a direct conflict. Strategic passivity is optimal here. I will remain silent while non-wolves dispute, intervening only if a mechanical contradiction arises or a majority forms."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin is calling me out for silence. I must claim Villager and validate the current logical flow (Jin's lead) to build trust credit while avoiding direct conflict with the leader."
+            }
+        ]
+    ]
+}

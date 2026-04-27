@@ -1,0 +1,424 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed NOT a werewolf via investigation; eliminated."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No behavioral data or mechanical evidence available."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claimed Witch. Encouraging Seer to provide mechanical evidence to coordinate votes and avoid guesswork. Behavior aligns with villager-side coordination. Latest statement correctly identifies Meg's process attack and supports the Seer's ground truth."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "No behavioral data available initially. Now actively supporting the coordination process and correctly flagging Meg's Process Attack as werewolf deflection. Alignment with Seer's ground truth suggests villager side."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No behavioral data or mechanical evidence available."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Exhibiting Process Attack behavior by labeling transparency and the pursuit of mechanical evidence as 'disruptive' and 'controlling.' Attempting to frame power role claims as a means of control to sow confusion. High-probability wolf indicator."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Eliminated Round 1 Night."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Claimed Seer; provided result for Nhan (Not Wolf) and committed to further investigation. Following mechanical verification strategy. Correctly flagged Meg's attempt to discredit mechanical evidence as a wolf tactic."
+            },
+            "Jin": {
+                "score": 0.45,
+                "reason": "Claimed Witch. Requested Seer to step forward to coordinate votes based on mechanical evidence. Latest statement supports Cong's Seer claim but introduces pseudo-technical terminology ('textbook werewolf signal'), which is a slight behavioral red flag despite the correct mechanical priority."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "No prior information. Actively supports the mechanical verification strategy by flagging Meg's behavioral deflection and prioritizing the Seer's ground truth."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information; baseline suspicion."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "High-suspect. Used behavioral interpretations ('feels like', 'disruptive') to discredit the pursuit of mechanical evidence and role claims by Jin and Cong. Attempting to pivot the conversation from verification to 'vibes' and control narratives."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by Cong (Seer)."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Seer immediately. Provided a result for Nhan (not a wolf). Supporting village coordination by committing to future investigations. Correctly identified Meg's wolf signals regarding 'rushing' and 'disruption'."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available; baseline suspicion."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Actively supports village coordination. Correctly identified Meg's deflection tactics as werewolf signals. Prioritizes the Seer's ground truth over behavioral disruption."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available; baseline suspicion."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Exhibited strong Wolf Signals: accused the village of 'rushing' and 'controlling' the group. Labeled the demand for mechanical evidence as 'disruptive'. Attacked the timing and tone of power role claims to undermine coordination."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated Night 1. Confirmed not wolf by Seer claim."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Claimed Seer. Provided result on Nhan (not wolf). Correctly identified Meg's use of behavioral diversion to avoid mechanical evidence. Treating as ground truth."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Claimed Witch. Pushing for Seer results to coordinate based on mechanical evidence. Correctly identified Meg's behavioral signals and supported the Seer's ground truth. Constructive opening."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Described the coordination process and the push for mechanical evidence as 'rushing' and 'disruptive'. This is a classic werewolf deflection tactic used to undermine power role claims and steer the village away from ground truth results."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Claimed Seer. Validated Nhan. Adopting Jin's 'mechanical evidence' framing. Aggressively targeting Meg; high threat if real, but creating a strong narrative for me to mimic."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown role; neutral threat currently."
+            },
+            "Jin": {
+                "score": 0.7,
+                "reason": "Claimed Witch immediately. Uses analytical terminology ('mechanical evidence'). High threat if true, but potentially a fake claim to lead the village. Now leading the charge against Meg."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown role; neutral threat currently. Adopting 'ground truth' and 'mechanical evidence' terminology to align with Cong and Jin. Actively pushing the vote against Meg."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow werewolf; no threat. Attempting to disrupt power role claims. Currently being targeted by Cong and Hoang."
+            }
+        }
+    },
+    "end_game": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed NOT a werewolf via investigation; eliminated."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Claimed Witch. Behavior remains consistent with villager-side coordination and support for mechanical evidence. Correctly identified Riley's silence as a blending tactic and later flagged Riley's Process Attack as a wolf signal, aligning with strategy to purge passive/disruptive wolves."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Supporting the coordination process and correctly identifying previous wolf-like behavior in Meg. Actively leveraging Seer results to pressure suspects and demanding accountability from Riley."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Still no behavioral data or mechanical clearance. Continued silence in the face of direct questioning and the Witch's accusation was a high-probability wolf signal. Now exhibiting a textbook Process Attack by labeling the Seer and Witch's coordination as 'too convenient' and a 'coordinated process attack.' Attacking the coordination process while ignoring mechanical evidence is a definitive wolf signal."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Exhibited Process Attack behavior by labeling transparency and the pursuit of mechanical evidence as 'disruptive' and 'controlling.' Attempting to frame power role claims as a means of control to sow confusion. High-probability wolf indicator. Exiled."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Eliminated Round 1 Night."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Survival likely indicates he was the wolf target. As the claimed Seer providing mechanical evidence, his value is critical. Score lowered due to being the likely target. Now actively narrowing the suspect pool using mechanical clearance. Latest statement correctly prioritizes mechanical evidence over Riley's behavioral narratives."
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Claimed Witch. Still flagged for using pseudo-technical terminology ('textbook signal'), but aligns with mechanical priority. Latest statement uses further pseudo-technical labels ('classic wolf signal', 'Passive Alignment') and 'textbook wolf signal' to drive the vote, which is a significant behavioral red flag. Using behavioral-labeling narratives to replace mechanical evidence is a high-probability wolf signal."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Continues to support mechanical verification over behavioral narratives, but has now started using pseudo-technical terminology ('wolf signal') to label players. This is a behavioral red flag."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "No new information; baseline suspicion remains. Now highlighted by the Seer as the primary suspect due to silence and lack of verification. Continued silence during active mechanical reveals increases wolf probability. Latest statement uses behavioral-labeling narratives ('coordinated process attack') to discredit mechanical evidence and role claims, a high-probability wolf signal."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "High-suspect. Used behavioral interpretations ('feels like', 'disruptive') to discredit the pursuit of mechanical evidence and role claims by Jin and Cong. Attempting to pivot the conversation from verification to 'vibes' and control narratives. Exiled."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by Cong (Seer)."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Confirmed Seer. Targeted by wolves last night, validating his role and importance to the village. Actively narrowing the suspect pool and coordinating the vote. Latest statement correctly identifies and shuts down Riley's wolf signals, maintaining village focus on mechanical evidence."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "No information available; baseline suspicion. Now cleared by Cong (Seer)."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Actively supports village coordination and correctly identified Meg's wolf signals. Now actively pressuring unverified players based on Seer evidence, demonstrating high alignment with village victory."
+            },
+            "Riley": {
+                "score": 0.98,
+                "reason": "Initially flagged for Passive Alignment and silence. Now exhibits high-confidence Wolf Signals by attacking the tone and timing of power role claims, labeling the coordination as a 'process attack', and accusing the village of 'rushing' the vote. This is a textbook attempt to undermine the Seer's ground truth and deflect from the lack of a valid defense."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Exhibited strong Wolf Signals: accused the village of 'rushing' and 'controlling' the group. Labeled the demand for mechanical evidence as 'disruptive'. Attacked the timing and tone of power role claims to undermine coordination."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated Night 1. Confirmed not wolf by Seer claim."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Claimed Seer. Provided ground truth on Nhan and Nam. Correctly identified Riley's 'process attack' as a wolf tactic. Treating as innocent until contradicted."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by Seer Cong. Now treated as ground truth innocent."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Claimed Witch. Pushing for mechanical evidence and supporting the Seer's ground truth. Actively coordinating to isolate the suspect Riley based on the Seer's lead. Latest statement correctly identifies Riley's 'process attack' as a wolf signal, reinforcing the Seer's lead."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Remained silent and unverified while power roles are active. Targeted by Seer Cong as a primary suspect. Continued silence despite direct questioning by Hoang and Jin is a definitive wolf signal of Passive Alignment. Now utilizing werewolf deflection by labeling the coordination of power roles as a 'process attack' and 'too convenient' to divert from the Seer's lead. This is a clear attempt to gaslight the village."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Described the coordination process and the push for mechanical evidence as 'rushing' and 'disruptive'. This is a classic werewolf deflection tactic used to undermine power role claims and steer the village away from ground truth results."
+            }
+        }
+    }
+}

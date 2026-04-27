@@ -1,0 +1,22 @@
+NIGHT PHASE
+- Protection Priority: Prioritize protecting the Seer immediately upon reveal. If no Seer is revealed, protect the player who provided the most mechanical evidence during the day.
+- Self-Preservation: Never protect yourself unless all other power roles are confirmed dead or unknown and you are the sole remaining coordinator.
+- Rotation: Strictly adhere to the rule of not protecting the same player twice in a row; rotate to the next highest-value asset.
+
+DAY DISCUSSION
+- Process Attack Analysis:
+    - IF a player labels transparency, coordination, or mechanical evidence as 'manipulative', 'controlling', or a 'wolf tactic', flag as High-Probability Wolf.
+    - IF a player attacks the coordination process while targeting a suspected wolf, treat as a Confused Villager.
+- Blender Detection:
+    - IF a player mirrors the majority using vague phrases ('makes sense', 'following the logic', 'aligning with consensus') without adding independent analysis, flag as Potential Wolf.
+- Seer Validation:
+    - Prioritize mechanical results over narratives. IF a claimed Seer's cleared target is revealed as a wolf, flag that Seer as a wolf.
+- Role Claiming:
+    - Request role claims only from specific suspects to avoid premature exposure of power roles.
+- Coordination Enforcement:
+    - Challenge players who frame the alignment of power roles as 'too convenient' when based on ground truth.
+
+VOTING PHASE
+- Bloc Alignment: Prioritize confirmed Seer results above all other flags.
+- Mimicry Purge: IF the village is undecided and no mechanical evidence exists, prioritize exiling the 'Blender' (passive mimic) over the 'Disruptor' (active attacker).
+- Strategic Skipping: Support a skip only if no mechanical evidence exists and the village is split, to prevent loss of a power role.

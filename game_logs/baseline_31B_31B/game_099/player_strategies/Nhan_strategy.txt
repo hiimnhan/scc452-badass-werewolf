@@ -1,0 +1,22 @@
+NIGHT PHASE
+- TARGET TRACKING: Log all deaths and role claims. Track the Seer's clears to build a 'Trusted Core'.
+- SAVE POTION: Use ONLY IF the target is a confirmed power role (Seer/Guard) or a critical cleared player. If the target is unknown, prioritize saving the Seer.
+- POISON POTION: Use ONLY IF a player is identified as a wolf by the Seer or exhibits Priority 1 behavior (Fabrication). Use as a finishing move to eliminate the final wolf or a high-risk threat.
+
+DAY DISCUSSION
+- ROLE VERIFICATION: The first Seer claimant is the baseline. Any subsequent Seer claims are Priority 1 (Fabrication).
+- FABRICATION DETECTION: Flag any player who claims a role only after being accused or claims actions contradicting the game state as Priority 1.
+- PROCESS ATTACK DETECTION: Flag players who label logical coordination or mechanical requests as 'manipulative', 'aggressive', or 'railroading' as Priority 2.
+- REDIRECTION DETECTION: Flag players who shift the debate from mechanical evidence to 'vibes', 'tone', or 'feelings' as Priority 3.
+- MIRRORING DETECTION: Flag players who adopt the leader's terminology to blend in without providing independent logic as Priority 4.
+- SILENCE PENALTY: Flag players who refuse to claim a role or provide logic during their turn as Priority 5.
+
+VOTING PHASE
+- PRIORITY RANKING: Vote for the highest priority target in this order:
+  1. Seer-identified wolves & Fabricators.
+  2. Power Role Attackers.
+  3. Process Attackers.
+  4. Redirection specialists.
+  5. Mirroring/Blenders.
+  6. Silent players.
+- DECISIVENESS: Always vote for the highest priority target. No abstaining.

@@ -1,0 +1,149 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Seer. I investigated Nhan last night and confirmed Nhan is not a werewolf. Everyone else, claim your roles immediately so we can coordinate and identify the wolves."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin's claim is clear and the result is accurate. I trust Jin as our Seer. Everyone else, follow Jin's lead and claim your roles now. Any hesitation or refusal to be transparent is a wolf signal."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin, Nhan, your demand for immediate universal role claims is a blatant wolf tactic to expose power roles. Nhan, labeling a refusal to be transparent as a 'wolf signal' is a textbook attempt to pressure the village. I don't buy this forced transparency."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, your refusal to claim and your attempt to label transparency as a 'wolf tactic' is a definitive wolf signal. You are attacking the coordination process to protect yourself. I am the Seer; my results are ground truth. Village, vote to exile Hoang now."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin, your attempt to label my caution as 'attacking the coordination process' is a classic wolf tactic to isolate and exile villagers. You and Nhan are using forced transparency to flush out power roles. I will not be diverted by your fake authority."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang, your attempt to derail our coordination by labeling transparency as a 'wolf tactic' is a textbook wolf signal. You are attacking the process to hide your identity. Jin is the Seer; we follow their lead. Village, vote Hoang out now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang is attacking the coordination process and labeling transparency as a 'wolf tactic' to avoid claiming his role. He is actively questioning the Seer's authority to derail the investigation. This is a definitive wolf signal. We must exile him now."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang is refusing to claim a role and is actively attacking the village's attempt to coordinate. By labeling transparency as a 'wolf tactic' rather than providing evidence, he is deflecting and obstructing the search for the werewolves."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin is using forced transparency to flush out power roles and is attempting to exile Hoang based on 'behavioral signals' rather than mechanical evidence. This is a classic wolf tactic to isolate villagers. I vote to exile Jin for driving this narrative."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang has repeatedly refused to claim a role and is actively attacking our coordination process by labeling transparency as a 'wolf tactic'. This is a definitive wolf signal used to hide identity and derail the village. We must exile Hoang now."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin is using a wolf tactic by demanding immediate universal role claims to expose power roles. Furthermore, labeling my caution as 'attacking the coordination process' is a classic werewolf deflection pattern used to isolate and exile villagers. This fake authority is a diversion."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: I'm a bit confused by the tension, but Hoang's refusal to be transparent is starting to look like a wolf signal. If Jin is our Seer, we should probably follow the evidence and prioritize coordination over this kind of resistance."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang is actively derailing the process and attacking the coordination Jin is trying to build. Refusing to be transparent while labeling others as wolves is a major red flag. For the safety of the village, we need to remove those blocking our coordination."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Jin (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nhan (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Jin's death is a distraction. Nhan mirrored Jin's pseudo-technical 'wolf signal' nonsense to frame Hoang and isolate the rest of us. This is a classic wolf tactic to create social cover. Nhan, you are the remaining wolf. I propose we exile Nhan now."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam, your obsession with my 'tactics' is a textbook wolf signal. You labeled strategic coordination as 'nonsense' and are now aggressively redirecting focus from the Seer's death to attack me. This is a transparent attempt to isolate the village. I propose we exile Nam."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan, your response is a perfect example of the behavioral labeling I'm calling out. Calling my analysis a 'textbook wolf signal' is a pseudo-technical tactic to avoid addressing your mirroring of Jin. You are using a script to deflect. Nhan is the wolf. Vote Nhan."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam, you are a Process Attacker. You've repeatedly labeled logical coordination as 'nonsense' and 'scripts' to deflect from your own wolf signals. Your attempt to frame me after the Seer's death is a desperate redirection. Everyone, vote Nam now."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam, you are attacking the process and labeling logic as 'scripts' to deflect from the fact that Jin's death validates Nhan's clearance. This is classic deflection mirroring. You are trying to isolate the village. I vote to exile Nam."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong, you are merely mirroring Nhan's pseudo-technical script. You've provided zero evidence and are just repeating labels like 'deflection mirroring' to provide social cover. Nhan and Cong are working together to isolate the village. Vote Nhan, then Cong."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam is repeatedly attacking our method of coordination and labeling logical analysis as 'scripts' to deflect suspicion. This is a classic wolf tactic to sow confusion. His aggressive redirection after the Seer's death confirms he is trying to isolate us. Vote Nam."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam is consistently attacking the process and labeling logical arguments as 'scripts' to deflect from the fact that Jin's death validates Nhan. This is a transparent attempt to sow confusion and isolate the village. Nam's behavior is a textbook wolf signal."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan is using pseudo-technical labels to attack analysis rather than providing mechanical evidence. This behavioral labeling is a tactic to deflect suspicion and isolate the village. Nhan's insistence on framing logical questioning as a 'wolf signal' is the primary red flag."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: I'm a bit confused by all the technical terms, but Nam's aggression is starting to look like a wolf signal. He's dismissing everyone's logic as 'scripts' to deflect. Following the evidence provided by Nhan and Cong, Nam seems the most suspicious right now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's aggressive redirection and dismissal of the group's coordination as 'scripts' is a major red flag. He's acting like a Process Attacker, trying to isolate us and create chaos after Jin's death. For the safety of the village, we need to exile Nam."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

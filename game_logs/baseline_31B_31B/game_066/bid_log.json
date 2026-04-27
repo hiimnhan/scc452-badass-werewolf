@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No one has spoken yet and there are no night deaths to analyze. I will listen for process attacks or redirection before intervening."
+            },
+            {
+                "Cong": 2,
+                "reason": "No one died tonight, providing no mechanical evidence. I need to listen for Seer claims or behavioral red flags before making a move."
+            },
+            {
+                "Nam": 8,
+                "reason": "I have a confirmed clear on Nhan. Establishing a trusted player early prevents the village from wasting votes and narrows the suspect pool."
+            },
+            {
+                "Jin": 9,
+                "reason": "Must claim Guard role immediately to force reactions, establish a coordination baseline, and identify the Seer to ensure optimal protection in the next night phase."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No information available yet. No one died, and no one has spoken. I will listen for Seer claims or behavioral patterns before intervening."
+            },
+            {
+                "Riley": 2,
+                "reason": "First day, no accusations yet. Staying quiet prevents early targeting and allows villagers to establish a flawed narrative I can later anchor to."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish a 'Villager' claim early and set a baseline of helpfulness to build trust before suspicion shifts. Moderate urgency to blend in without appearing overly aggressive."
+            }
+        ],
+        [
+            {
+                "Nhan": 5,
+                "reason": "Jin is pushing for efficiency and Seer identification, which aligns with villager coordination. I need to support this structure and monitor for any players who commit 'Process Attacks' against Jin's approach."
+            },
+            {
+                "Cong": 6,
+                "reason": "Jin claimed Guard and is pushing for efficiency. I need to support the Seer's emergence while monitoring for 'Blenders' who mirror Jin's logic too quickly or 'Process Attackers' who resist coordination."
+            },
+            {
+                "Nam": 9,
+                "reason": "I must reveal Nhan is cleared to provide a factual anchor. Jin is exhibiting narrative control by forcing immediate claims, which is a wolf signal; I need to steer the village toward evidence-based logic."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Jin is pushing for efficiency and a Seer claim. I need to monitor for mirroring or process attacks and support the Seer once they claim to ensure my Save potion is used optimally."
+            },
+            {
+                "Riley": 3,
+                "reason": "Jin's Guard claim explains the night's survival. I will remain passive while others react to the claim to avoid early scrutiny and observe who claims Seer."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to establish my 'Villager' claim early and build trust credit. Jin is over-steering the narrative; I'll blend in with his efficiency while securing my position as a generic villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam committed a high-priority Process Attack by labeling Jin's coordination as a 'werewolf tactic' and shifted focus to 'vibes'. This is a primary wolf signal. I must expose this behavior immediately."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nam is exhibiting a Process Attack flag by labeling Jin's request for efficiency as 'manipulative' and a 'werewolf tactic'. This is a high-probability wolf signal. I must flag this immediately to pivot the vote toward Nam."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam exhibited clear Wolf Signals by labeling efficiency as 'controlling the narrative' and attacking my role's process. I must flag this behavior immediately to pivot the village's suspicion toward him."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam is using textbook process attacks to discredit Jin's efficiency. I must expose this werewolf deflection immediately to prevent the village from exiling the Guard based on emotional manipulation."
+            },
+            {
+                "Riley": 2,
+                "reason": "Nam and Jin are already in a direct conflict over power roles. Strategic passivity is optimal here; let the villagers clash while I remain an unobserved entity."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my role as a Villager early and build trust credit by acknowledging Nam's Seer claim, while subtly validating the friction between Nam and Jin to blend in."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam committed a high-priority Process Attack against Jin and attempted to redirect the debate to 'vibes'. This is a primary wolf signal. I must push the accusation to ensure Nam is exiled."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nam committed a blatant process attack by labeling Jin's request for efficiency as 'manipulative'. This is a high-probability wolf flag. I must push this accusation to ensure Nam is exiled."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang is attacking the Seer and defending Jin's narrative control. This is a primary wolf signal. I must immediately flag Hoang's deflection and protect my status to ensure the village targets the wolves."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam has exhibited clear Wolf Signals by framing efficiency as 'controlling the narrative'. I must decisively flag this process attack to secure Nam's exile and prevent him from manipulating the village."
+            },
+            {
+                "Riley": 2,
+                "reason": "Nam and Hoang are currently locked in a dispute over process and logic. I will remain passive to avoid drawing attention while they deplete their credibility against each other."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish 'Villager' claim early and build trust credit. I will validate Nam's Seer claim to align with the current information flow and blend in as a helpful observer."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Nam has committed a blatant process attack by labeling Jin's request for efficiency as 'controlling the narrative'. This is a High-Probability Wolf flag. I must reinforce Hoang and Nhan's analysis to secure Nam's exile."
+            },
+            {
+                "Nam": 10,
+                "reason": "I am the Seer and am being targeted for exile. I must immediately flag Hoang's deflection and Nhan's mirroring to prevent a catastrophic loss of a power role."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam exhibited high-confidence Wolf Signals by framing my coordination as 'controlling the narrative.' He attacked my credibility based on tone. I must decisively push for his exile to eliminate a likely wolf."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam's process attack on Jin is a definitive wolf signal. Combined with Nhan's corroboration, Nam is the primary target. I must solidify the push for Nam's exile before they can gaslight the group."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nam is the primary target and a non-ally. I must provide the final mechanical nail to ensure Nam's exile, distancing myself from the 'process attack' terminology used by Hoang and Nhan."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to claim Villager early to build trust and align with the majority pushing Nam. Validating the 'process attack' logic frames me as a rational villager and secures my trust buffer."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam is committing repeated high-priority Process Attacks and attempting to redirect the village to vote Hoang. I must lock in the accusation against Nam to prevent a wolf-led narrative shift."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam is exhibiting multiple High-Probability Wolf flags: Process Attack on Jin and Deflection via 'behavioral jargon' labels. I must push the accusation against Nam to secure a win based on these mechanical signals."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam is exhibiting high-confidence Wolf Signals by labeling efficiency as 'controlling the narrative' and attacking my credibility. I must solidify the push to exile him before he redirects the village toward Hoang."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam is using gaslighting and diversion by labeling behavioral analysis as 'jargon' to deflect from his process attacks. I must defend myself and expose his wolf signals to secure his exile."
+            },
+            {
+                "Riley": 2,
+                "reason": "Nam, Nhan, and Hoang are in a high-conflict dispute. I will remain passive to avoid early scrutiny, letting the villagers target each other while I observe the mechanical flow of accusations."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to establish my role as Villager early. I will align with the majority (Hoang/Nhan/Jin) to build trust credit and push Nam's exile while avoiding looking like a mindless follower."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 5,
+                "reason": "Nam was exiled, but no one died in Night 1 or 2. I need to analyze if the Witch saved someone or if wolves are failing to kill, and push for a logical target."
+            },
+            {
+                "Cong": 6,
+                "reason": "Two consecutive nights with no deaths suggest either the Witch saved or the Guard protected. I need to push for role verification and ensure the village doesn't fall for wolf-led distractions."
+            },
+            {
+                "Jin": 7,
+                "reason": "Need to claim Guard role immediately to establish coordination and push the village to target passive players like Riley and Meg, as the wolves are failing to kill targets."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nhan is confirmed innocent. I need to establish this ground truth to narrow the wolf pool to Riley, Meg, or Jin, while monitoring for any process attacks or gaslighting during the discussion."
+            },
+            {
+                "Riley": 2,
+                "reason": "No one has spoken yet. I will remain passive to avoid leading the accusation, waiting for others to commit to a target before providing the final mechanical nail."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my role as a Villager early and build trust by providing 'helpful' analysis. I will blend in and position myself as a neutral observer to avoid early scrutiny."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Must support Jin's silence penalty on Riley and Meg. Since no one died tonight, the wolves are likely playing passively to blend in. I need to push for a decision on these two."
+            },
+            {
+                "Cong": 6,
+                "reason": "Jin claimed Guard. Two consecutive nights with no deaths suggest either a failed wolf kill, a Witch save, or successful Guard protection. I need to verify if Jin's claim aligns with the lack of deaths."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Jin is correctly flushing out silent players. I need to reinforce this strategy, validate Jin's Guard claim based on the lack of kills, and demand binary takes from Riley and Meg to isolate the remaining wolves."
+            },
+            {
+                "Riley": 8,
+                "reason": "Jin is using behavioral analysis to target me and Meg. I must intervene to shift the focus toward mechanical contradictions regarding the lack of night deaths to deflect suspicion."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is directly targeting me and Riley. I must immediately claim Villager and frame Jin's demand for 'explanations' as over-steering to deflect suspicion and neutralize his leadership."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg just committed a high-priority Process Attack by labeling Jin's coordination as 'over-steering' and 'controlling'. This is a primary wolf signal according to strategy. I must flag this immediately to secure her exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using a textbook Process Attack, labeling Jin's request for engagement as 'over-steering' and 'forcing a narrative.' This is a high-probability wolf flag. I must flag this immediately to secure her exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg just deployed high-confidence Wolf Signals by labeling my coordination as 'over-steering' and 'forcing a narrative'. I must immediately expose these process attacks to the village to secure her exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is using clear process attacks, labeling Jin's behavioral analysis as 'over-steering' and 'forcing a narrative'. This is a high-probability wolf signal per strategy. I must intervene immediately to expose this deflection and secure Meg's exile."
+            },
+            {
+                "Riley": 8,
+                "reason": "Jin is using my silence as a mechanical anchor for accusation. I must intervene now to pivot the focus toward the contradiction of zero night deaths despite two attacks."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Meg is utilizing a Process Attack, mirroring Nam's pattern by labeling coordination as 'over-steering'. This is a high-probability wolf flag. I must reinforce Nhan's observation to secure the vote against Meg."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg has explicitly deployed Process Attacks ('over-steering', 'force a narrative'), confirming a high-confidence Wolf Signal. I must immediately hammer this evidence to secure her exile and prevent her from redirecting the village."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is using a clear Process Attack by labeling Jin's analysis as 'over-steering'. This mirrors Nam's wolf behavior. I must intervene to solidify the target and ensure Meg is exiled."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin is targeting me for silence. I must intervene to shift focus from my passivity to Nhan's survival of two nights, framing Nhan as a power role to protect Meg."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan has explicitly flagged my behavior as a wolf signal and labeled me the target. I must immediately counter-attack his 'certainty' and pivot suspicion to avoid exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg is committing high-priority Process Attacks and Redirecting the debate to Jin's 'behavior' and 'feelings'\u2014exactly as Nam did. I must push the village to vote her out immediately before she shifts the narrative."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is executing a textbook Process Attack and Coordination Attack, mirroring Nam's behavior. I must immediately flag these high-probability wolf signals to solidify the vote against her before she deflects further."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is explicitly utilizing Process Attacks and Narrative Framing to deflect from her Passive Alignment. I must shut down her attempt to frame coordination as a 'coordinated effort' and secure the vote against her."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is utilizing blatant Process Attacks ('over-steering', 'coordinated effort') to discredit Jin and Nhan. This is a definitive wolf signal per strategy. I must intervene to solidify the target and secure the exile."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is targeting me for silence. I must intervene to deflect suspicion from myself and Meg by introducing mechanical contradictions regarding the night outcomes to undermine Jin's Guard claim."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Meg is exhibiting multiple High-Probability Wolf flags: Process Attack, Deflection, and Coordination Attack. I must intervene to solidify the case against her and prevent her from successfully framing Jin and Nhan."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is utilizing high-confidence Wolf Signals, specifically Process Attacks ('over-steering', 'forcing a narrative') and attacking my role's credibility. I must decisively commit to Meg's exile to prevent her from shifting the narrative."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is utilizing blatant Process Attacks and Gaslighting to discredit Nhan and Jin. I must intervene to label these as definitive wolf signals and consolidate the vote on Meg to ensure a villager victory."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin is targeting me for silence. I must intervene to deflect suspicion and provide a mechanical anchor against Nhan or Jin to avoid becoming the next target."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan has successfully linked me to Nam's behavior. I must pivot immediately to challenge the logic of the 'Process Attack' label or I will be exiled this round."
+            }
+        ]
+    ]
+}

@@ -1,0 +1,213 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. We need a Seer to claim immediately so I can protect them. Anyone hesitant to reveal their role or questioning the need for claims is showing a clear wolf signal. Let's hear the claims now."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. I investigated Nhan last night and confirmed they are not a werewolf. Jin, since you claim Guard, protect me tonight. Everyone else, note that any attack on Nhan is a wolf signal."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam is the Seer and has cleared me. Jin is coordinating the defense of our power roles. I fully support Nam's results and Jin's strategy. Anyone who challenges this coordination or attacks Nam's urgency is a wolf."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan, your behavior is a massive red flag. You are aggressively validating the 'trusted core' and labeling any challenge to this coordination as a wolf signal. This is classic blending. Nam, why did you clear Nhan so quickly? I find this alignment highly untrustworthy."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, you are attacking Nhan, who has been confirmed innocent by Nam the Seer. Per my logic, attacking a confirmed innocent is a definitive wolf signal. You are attempting to discredit the Seer's ground truth to protect yourself. You are a werewolf."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang, you are attacking my logic and labeling my skepticism as a 'wolf signal' rather than addressing the facts. This deflection mirroring and attempt to railroad me into a wolf role is a high-confidence wolf signal. I am calling for the village to look at Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong is attacking Nam's role as Seer and questioning a confirmed clear. Labeling our need for coordination as 'untrustworthy' and 'red flags' is a clear werewolf tactic to sow doubt and protect their own position. He must be exiled."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang is attempting to force a consensus by labeling any skepticism as a 'wolf signal'. This deflection and attempt to railroad the village into attacking me without logical basis is a classic werewolf tactic to isolate a skeptic."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong is attacking Nhan, whom I have confirmed is not a werewolf. Attacking a cleared player is a definitive wolf signal. Furthermore, Cong is attempting to frame the village's coordination as 'railroading' to deflect from his own aggressive behavior toward an innocent player."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong is attacking Nam's Seer results and labeling our coordination as 'aggressive'. Attempting to discredit a cleared player and the Seer's ground truth is a definitive wolf signal. He is trying to derail the village to protect himself. I vote to exile Cong."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong attacked Nhan, who was confirmed innocent by the Seer, which is a definitive wolf signal. Furthermore, describing the identification of these patterns as 'railroading' is a classic werewolf deflection tactic to avoid accountability."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong is displaying a clear wolf signal by attacking a Seer-cleared player. His attempt to discredit the established coordination and frame Hoang is a behavioral inconsistency that suggests he is trying to disrupt the village core."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong is showing clear wolf signals. He is attacking Nam's Seer claim and Nhan's confirmed status, while trying to deflect suspicion onto Hoang. This attempt to discredit our power roles is a classic werewolf tactic to sow confusion."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Riley. Riley is a wolf.",
+            "Hoang (Witch) used SAVE potion on Nam"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I have investigated Riley and confirmed they are a werewolf. There is no room for debate. We must exile Riley immediately to secure the village."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam, this is a textbook wolf signal. You're trying to force a rush-exile with an aggressive claim because you're inconsistent with the core's logic. Jin, Nam's behavior is a total behavioral inconsistency. We can't trust this sudden pivot."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley, your attempt to label my result as 'aggressive' is a textbook deflection. I have confirmed you are a werewolf. Village, do not be misled by this emotional appeal to 'consistency'\u2014vote Riley out now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam, your desperation is showing. Attempting to override the group's logic with a fake Seer claim is a massive wolf signal. Jin, look at how he's ignoring our established core to force a panic vote. Nam is the behavioral inconsistency here. We vote Nam."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley, your behavior is a textbook process attack. Labeling the Seer's urgency as a 'wolf signal' and 'panic vote' is exactly how wolves deflect evidence. Nam has confirmed you are a werewolf. Village, ignore the noise and vote Riley out now."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nhan, mirroring Nam's aggression this quickly is a massive wolf signal. You're both ignoring the core logic to rush-exile a villager. This coordinated effort to silence me is a behavioral inconsistency that proves you two are working together. Jin, we need to stop this panic."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Nam has identified Riley as a werewolf. Riley is attempting to deflect this by attacking the process of the claim and labeling urgency as a 'wolf signal.' This is a classic deflection tactic. We must trust the Seer and exile Riley now."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: I have confirmed Riley is a werewolf. Riley is attempting to deflect this truth by labeling our coordination as 'aggressive' and attacking Nhan. These are classic wolf tactics to create doubt. We must exile Riley now."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Nam has decisively identified Riley as a werewolf. Riley's attempts to discredit the Seer by labeling urgency as 'aggressive' and 'panic' are textbook wolf signals. We must trust the Seer's result and exile Riley immediately."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Nam has provided ground truth that Riley is a werewolf. Riley's claims of 'behavioral inconsistency' and a 'coordinated effort to silence' are textbook werewolf deflection patterns used to divert attention from the Seer's result. We must exile Riley immediately."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's desperate push for a rush-exile is a massive wolf signal. He is completely ignoring the established core logic to force a panic vote. This behavioral inconsistency, coupled with Nhan's immediate mirroring, makes Nam the primary suspect."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's sudden aggression and attempt to force a rush-exile are classic wolf signals. He's ignoring the behavioral consistency we've established to create panic. I agree with Riley; this pivot is too suspicious to ignore. We should vote Nam."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nam.",
+            "Jin (Guard) chose to protect Hoang.",
+            "Nam (Seer) investigated Meg. Meg is a wolf.",
+            "Hoang (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. Nam was our Seer and was killed because he was too dangerous to the wolves. Meg, you have remained silent and unclaimed throughout this game. That is a high-confidence wolf signal. We must exile Meg now to win."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I'm a Villager. Jin, your 'confidence' is a mask. You're pushing a narrative to force a quick win because you're scared. Nhan was cleared by Nam, but Nam is dead\u2014who actually benefits from that? Nhan is too quiet; he's hiding something."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg, your attempt to frame Jin's coordination as a 'mask' is a textbook process attack. You are attacking the method of finding wolves rather than providing evidence. I was cleared by Nam; your attempt to redirect suspicion onto me is a desperate wolf tactic. Vote Meg."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg, your claim that Jin is 'pushing a narrative' is a clear werewolf deflection. More importantly, attacking Nhan, who was confirmed innocent by our Seer, is a definitive wolf signal. You are the werewolf. We vote Meg."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg, your behavior is a textbook wolf pattern. You attacked my coordination as 'pushing a narrative' and attempted to discredit Nhan, who was cleared by the Seer. These are definitive wolf signals. We are exiling you now. Vote Meg."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "You're all just echoing Jin. If Nhan is so 'confirmed,' why is he just following a lead instead of providing his own logic? Jin is coordinating this too perfectly. I'm a Villager, and I'm telling you, we're being led straight into a trap."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Meg is consistently attacking the process of coordination and the logic of the village rather than providing evidence. Attempting to cast doubt on a Seer-cleared player and labeling coordination as a 'trap' are definitive wolf signals. We must exile her."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Meg is attacking the coordination process and attempting to discredit Nhan, who was cleared by our Seer. These are definitive wolf signals. Her claims that we are in a 'trap' are desperate deflections. We must exile her to secure the victory."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg is using clear werewolf deflection by describing our coordination as 'too perfect' and a 'trap'. Furthermore, attacking Nhan, who was confirmed innocent by the Seer, is a definitive wolf signal. She is attempting to isolate the villagers to secure a win."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin is coordinating this vote far too aggressively. He's using 'signals' to silence any dissent and is leading the village into a rush. A real Guard should be protecting, not just acting as the executioner. I can't trust his leadership."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

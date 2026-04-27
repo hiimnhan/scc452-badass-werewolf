@@ -1,0 +1,254 @@
+{
+    "1": [
+        [
+            {
+                "Cong": 9,
+                "reason": "I have ground truth evidence that Nhan was not a werewolf. Clearing an eliminated player narrows the suspect pool and establishes my credibility as Seer to guide the village."
+            },
+            {
+                "Nam": 1,
+                "reason": "No information available yet. I need to listen for behavioral red flags, mirroring, or Seer claims before intervening to avoid exposing my role prematurely."
+            },
+            {
+                "Jin": 10,
+                "reason": "Must claim Witch immediately to establish power role presence and coordinate with other power roles as per strategy."
+            },
+            {
+                "Hoang": 2,
+                "reason": "First day, no information available. I need to listen for Seer claims or behavioral patterns before making a move."
+            },
+            {
+                "Riley": 1,
+                "reason": "Applying Strategic Silence. I will let the villagers initiate the debate and establish a narrative first, allowing me to later validate the consensus and act as a tie-breaker."
+            },
+            {
+                "Meg": 2,
+                "reason": "First day with no accusations yet. I'll stay quiet to avoid early scrutiny and let others create the initial narrative, fitting my 'confused villager' persona."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Jin (Witch) requested Seer results. I must reveal Nhan was not a wolf to establish ground truth and coordinate the village immediately."
+            },
+            {
+                "Nam": 2,
+                "reason": "Jin's request for mechanical evidence aligns with my strategy. I have no evidence to contribute yet and must keep my Guard identity secret. Listening allows me to identify mirroring or behavioral red flags."
+            },
+            {
+                "Hoang": 2,
+                "reason": "Jin claimed Witch and requested Seer results. I have no evidence or counter-claims yet. I will wait for the Seer to emerge to establish ground truth as per strategy."
+            },
+            {
+                "Riley": 2,
+                "reason": "Strategic Silence. Jin is driving the narrative. I'll wait for others to react to the Witch claim before intervening to validate a consensus or mimic Jin's analytical tone."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin is pushing for 'mechanical evidence' and Seer reveals. I need to enter the conversation to label these demands as 'disruptive' and maintain the fog of war while mirroring Jin's terminology to blend in."
+            }
+        ],
+        [
+            {
+                "Nam": 2,
+                "reason": "Cong and Jin have established a mechanical verification process. I must keep my Guard identity secret. No one is currently attacking them or using behavioral red flags, so listening is the optimal strategy."
+            },
+            {
+                "Jin": 2,
+                "reason": "Both power roles have claimed. Cong is acting as a coordinating Seer, which aligns with my strategy. I will now listen for Wolf Signals or Passive Alignment from others."
+            },
+            {
+                "Hoang": 3,
+                "reason": "Cong (Seer) and Jin (Witch) have claimed roles. Cong's result on Nhan is ground truth. No counter-claims or wolf-like deflection patterns have emerged yet. I will listen for diversions."
+            },
+            {
+                "Riley": 2,
+                "reason": "Jin and Cong have established a power-role narrative. I will remain silent to appear as a passive observer while the village accepts their claims, avoiding early suspicion."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my 'confused villager' persona early. I'll mirror the 'mechanical evidence' terminology to blend in and subtly cast doubt on the aggressive role claims without leading the charge."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Meg is executing a Process Attack by labeling transparency as 'disruptive' and 'controlling.' I must immediately flag this behavior as a wolf indicator and enforce coordination based on my Seer results."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg is using behavioral-labeling narratives ('feels like', 'disruptive') to discredit mechanical evidence from Cong and Jin. This is a high-probability wolf signal per strategy. I must flag this behavior immediately to protect the power roles."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is exhibiting textbook Wolf Signals: accusing the village of 'rushing' and attacking the tone/timing of power role claims. I must flag her immediately to prevent her from framing Cong and myself."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is using textbook werewolf deflection by labeling the push for mechanical evidence as 'rushing' and 'disruptive'. I must expose this diversionary tactic immediately to protect Cong's Seer lead."
+            },
+            {
+                "Riley": 3,
+                "reason": "Meg is already initiating the 'Role Gaslighting' for me. I'll remain silent to avoid early scrutiny and wait for a majority to form before riding it."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Meg is using behavioral red flags ('feels like', 'disruptive') to discredit the Seer and Witch. I must intervene to validate the mechanical evidence strategy and push the village toward exiling Meg."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg exhibits multiple high-confidence Wolf Signals: accusing the village of 'rushing', labeling coordination as 'disruptive', and attacking power role claims. I must decisively flag this to secure Meg's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong claimed Seer and provided a result. Meg labeled the pursuit of mechanical evidence as 'disruptive', which is a definitive werewolf deflection tactic. I must immediately back Cong's ground truth and push for Meg's exile."
+            },
+            {
+                "Riley": 3,
+                "reason": "Cong is already aggressively targeting Meg. I should stay silent to avoid drawing attention and wait for a clear majority to form before riding the narrative."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong is aggressively targeting me and using 'mechanical evidence' to build a case. I must immediately frame his aggression as panic to discredit his Seer claim and deflect suspicion."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Meg is executing a Process Attack by framing transparency as control. I must reinforce the accusation and drive the village to exile her before she can pivot or sow further confusion."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg is using behavioral labeling ('disruptive', 'control') to discredit mechanical evidence. This is a high-probability wolf signal. I must decisively support Cong and Hoang to ensure Meg is exiled."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg is exhibiting textbook Wolf Signals by attacking the process of coordination and labeling transparency as control. I must reinforce Cong's Seer claim and Hoang's analysis to secure Meg's exile."
+            },
+            {
+                "Riley": 6,
+                "reason": "Meg is being targeted by a 3-vs-1 split. I need to apply 'Majority Riding' and 'Tactical Mimicry' using 'ground truth' to validate the consensus, making my vote the deciding factor while appearing passive."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong and Hoang are aggressively targeting me. I must immediately frame their intensity as panic and stress to discredit them and deflect the vote before a consensus forms."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Cong": 10,
+                "reason": "I have confirmed mechanical ground truth that Nam is NOT a werewolf. Revealing this immediately clears Nam and narrows the suspect pool to Riley, Jin, and Hoang, maximizing villager efficiency."
+            },
+            {
+                "Nam": 3,
+                "reason": "No new mechanical evidence or contradictions have emerged. I will listen for mirroring behavior or pseudo-technical terminology from Riley or Jin before intervening to guide the village toward mechanical verification."
+            },
+            {
+                "Jin": 8,
+                "reason": "I must claim Witch immediately to establish power role presence and confirm Cong's Seer status by revealing I saved him, ensuring the village trusts his mechanical evidence."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Cong claimed Seer and Jin claimed Witch. I must reinforce Cong's ground truth and press Nam and Riley for binary takes on suspects to identify potential werewolf deflection or silence."
+            },
+            {
+                "Riley": 2,
+                "reason": "Applying Strategic Silence. Let the power claims clash first. I will wait for a consensus to form and then pivot to the majority using 'Confused Observer' to validate the result."
+            }
+        ],
+        [
+            {
+                "Nam": 8,
+                "reason": "Cong (Seer) has cleared me. I must publicly validate this mechanical evidence and support the push against Riley to prevent wolves from redirecting the vote based on behavioral narratives."
+            },
+            {
+                "Jin": 9,
+                "reason": "I must claim my role to establish power role presence and support Cong's lead. Riley exhibits Passive Alignment and is the primary suspect. I need to solidify the village's focus on Riley to ensure a wolf exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is the Seer and has provided ground truth. Riley is silent and the primary suspect. I must immediately reinforce Cong's lead to prevent werewolf deflection and push for Riley's exile."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong has explicitly targeted me and cleared Nam. I must immediately deflect using 'Confused Observer' and 'Role Gaslighting' to question the convenience of his Seer claim before the village reaches a consensus."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "I have mechanical ground truth clearing Nam. With Nhan and Nam cleared, Riley is the primary suspect. I must aggressively push for Riley's exile to secure a villager win."
+            },
+            {
+                "Nam": 6,
+                "reason": "Cong (Seer) has cleared me. I must reinforce the Seer's mechanical evidence and flag Hoang's use of 'wolf signal' as a behavioral red flag, while pushing the focus onto Riley's silence."
+            },
+            {
+                "Jin": 9,
+                "reason": "I must claim my role to establish power role presence and reinforce the push against Riley, whose Passive Alignment and silence are strong Wolf Signals. This prevents the village from wasting votes."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Hoang are using 'ground truth' and 'binary' logic to isolate me. I must speak immediately to disrupt the narrative, mimic their terminology, and gaslight Cong's Seer claim to avoid exile."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "I have provided mechanical ground truth clearing Nam. With Nhan and Nam cleared, Riley is the only remaining unverified suspect. I must lead the push to exile Riley immediately to secure the win."
+            },
+            {
+                "Nam": 7,
+                "reason": "Cong has cleared me; any attack on me is a wolf signal. I must reinforce the Seer's mechanical evidence and flag Jin and Hoang for using pseudo-technical 'signal' labels to drive the vote."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong (Seer) and Jin (Witch) have isolated Riley. Riley's continued silence despite direct pressure is a definitive wolf signal. I must push for an immediate vote to eliminate the remaining wolf."
+            },
+            {
+                "Riley": 10,
+                "reason": "I am the primary target. Cong, Hoang, and Jin have formed a consensus using 'ground truth' and 'Passive Alignment'. I must immediately deflect and gaslight the Seer's timing to survive."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Riley is executing a textbook Process Attack, labeling transparency and coordination as 'too convenient' and a 'process attack' while ignoring mechanical ground truth. This is a definitive wolf signal. I must secure the vote immediately."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley is using behavioral-labeling narratives ('coordinated process attack') to discredit the Seer's mechanical evidence. Per strategy, this is a high-probability wolf signal. I must decisively support Cong and push for Riley's exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is using textbook Wolf Signals by labeling coordination as a 'process attack' and accusing the village of 'rushing'. I must immediately flag this behavioral pattern to secure Riley's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using textbook werewolf deflection by labeling coordination as a 'process attack' and 'too convenient'. This is gaslighting to divert from Cong's Seer results. I must expose this tactic immediately to secure the vote."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Riley is using behavioral-labeling narratives ('coordinated process attack') to discredit the Seer's mechanical evidence. Per strategy, this is a high-probability wolf signal. I must decisively support Cong and push for Riley's exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley has explicitly exhibited high-confidence Wolf Signals by labeling coordination as a 'process attack' and accusing the village of 'rushing.' I must decisively hammer this behavioral signal to secure the vote."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using textbook werewolf deflection by labeling the Seer's ground truth and the coordination as a 'process attack'. This is gaslighting. I must expose this diversion and push for Riley's exile immediately."
+            },
+            {
+                "Riley": 10,
+                "reason": "I am the primary target. I must urgently pivot from defense to an offensive 'Role Gaslighting' attack on Cong and Jin to create enough doubt to survive this vote."
+            }
+        ]
+    ]
+}

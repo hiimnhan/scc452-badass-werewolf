@@ -1,0 +1,21 @@
+NIGHT PHASE
+- TARGET TRACKING: Document wolf targets. IF wolves target a player immediately after a Seer clear, THEN that Seer is highly likely valid.
+- SAVE POTION (Witch): Use immediately if target is the Seer or a high-coordination innocent. Use on self ONLY if Seer is alive to provide ground truth.
+- POISON POTION (Witch): Use on players who committed high-priority 'Process Attacks' (labeling coordination as controlling/aggressive) and successfully redirected the village vote.
+
+DAY DISCUSSION
+- PROCESS ATTACK DETECTION: Flag players who label technical analysis, evidence requests, or logical coordination as 'aggressive', 'manipulative', 'controlling', 'robotic', or 'bullying'. This is a primary wolf signal.
+- REDIRECTION DETECTION: Flag players who shift the debate from mechanical evidence (Seer results, night deaths) to 'vibes', 'tone', 'behavioral signals', or 'feelings'.
+- SILENCE PENALTY: Treat persistent silence or refusal to answer direct binary questions as a wolf signal.
+- MIRRORING DETECTION: Identify players who echo the Seer/leader without independent analysis ('Blenders'). Cross-reference with voting patterns.
+- COORDINATION VALIDATION: IF a player attacks the drive for efficiency or logic as 'controlling', THEN categorize as a high-priority Process Attack.
+- CONFLICT RESOLUTION: IF multiple players claim Seer, THEN compare results against night deaths; the one inconsistent is the wolf.
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Seer-identified wolves.
+  2. Process Attackers (attacking coordination method).
+  3. Redirectors (focusing on vibes/tone).
+  4. Silent players/Blenders.
+  5. Mirrors.
+- DECISIVENESS: Vote immediately for the highest priority target to prevent narrative shifts and avoid splitting the vote.

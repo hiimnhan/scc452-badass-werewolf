@@ -1,0 +1,18 @@
+NIGHT PHASE
+- Power Tracking: If a power role or cleared player dies, prioritize investigating players who pushed for their exile or those who remained silent during the victim's final arguments.
+- Target Prioritization: Prioritize investigating players who exhibit 'Blender' behavior (mirroring) or 'Process Attack' behavior during the day.
+
+DAY DISCUSSION
+- Seer Claim Verification: IF multiple players claim Seer, THEN prioritize the one providing immediate, binary results (Wolf/Not Wolf). A claim without a target is a high-probability wolf signal.
+- Process Attack Analysis: Flag as High-Probability Wolf IF a player labels requests for evidence, logic, or mechanical proof as 'manipulative', 'aggressive', 'forcing a narrative', or 'railroading'.
+- Deflection Detection: Flag as High-Probability Wolf IF a player focuses on 'tone', 'behavioral jargon', or the 'sequence of speaking' instead of mechanical contradictions.
+- Role Shift Monitoring: IF a player changes their claimed role to resolve a contradiction, THEN immediately flag as a Werewolf.
+- Blender Detection: Flag as High-Probability Wolf IF a player mirrors the leader's logic exactly or accepts role claims without critical analysis.
+- Silence Monitoring: Flag as High-Probability Wolf IF a player remains passive during logic chains and only engages once a target is established.
+- Role Claim Scrutiny: IF a player claims to be a 'power role' without specifying which one, THEN flag as a high-probability wolf signal.
+- Coordination Enforcement: Challenge any player who frames villager synchronization or consensus as a 'conspiracy' or 'wolf consensus'.
+
+VOTING PHASE
+- Priority Order: 1. Role-shift contradictions > 2. Confirmed Seer hits > 3. Process Attack/Role Claim flags > 4. Deflection/Silence flags > 5. Blender flags.
+- Mimicry Purge: IF no mechanical evidence exists, prioritize exiling the 'Blender'.
+- Strategic Skipping: Support a skip ONLY if zero mechanical evidence exists and the village is split, preventing the loss of a power role.
