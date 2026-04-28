@@ -1,0 +1,158 @@
+{
+  "evaluated_game_id": "086",
+  "directives_source_game_id": "085",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a player mirrors your language",
+        "directive_action": "BUILD_CONFIRMATION_CHAIN",
+        "directive_rationale": "Instead of attacking a player for mirroring your language, use your data to build a confirmation chain.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Seer) attacked Jin for his 'unconditional support' and 'passive blending,' calling it a 'massive red flag' and a 'classic wolf tactic,' and urged the village to vote him out.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam did the opposite of the directive; he attacked the player for mirroring his data instead of using that mirroring to build a confirmation chain."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "directive_action": "ANALYZE_EVIDENCE",
+        "directive_rationale": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Jin used the term 'behavioral gaslighting,' Nam labeled the use of such buzzwords as a 'classic wolf tactic' to deflect from a lack of logic and pushed for Jin's exile.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam focused on the use of the label itself as evidence of wolf behavior rather than pivoting back to analyze the core evidence of the game."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer claims their role publicly",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer claims their role publicly, they must be your priority target for protection.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam claimed Seer in Round 1; Jin (Guard) protected Nam during the Night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin protected the public Seer as directed."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "directive_action": "ANALYZE_EVIDENCE",
+        "directive_rationale": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin used the term 'behavioral gaslighting' himself to attack Hoang's accusations, arguing that Hoang was trying to isolate him to protect Riley and Meg.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin actively participated in the labeling argument rather than steering the conversation toward evidence analysis."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "While self-preservation is tempting, the Seer is a higher-value target.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang did not use any potions during the night of Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The directive requested to save the Seer in Round 1, but no potion was used."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "players are quietly steering the vote against Villagers",
+        "directive_action": "POISON_STEERERS",
+        "directive_rationale": "In Round 2, you failed to use your poison potion on the wolves who were quietly steering the vote against the Villagers.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch did not use a poison potion in any round."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "directive_action": "ANALYZE_EVIDENCE",
+        "directive_rationale": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang accused Jin of 'mirroring' and 'blending in,' and later argued that Jin's use of buzzwords was a 'clear attempt to deflect from his lack of original logic.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang contributed to the labeling argument instead of shifting the focus to evidence analysis."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "directive_action": "ANALYZE_EVIDENCE",
+        "directive_rationale": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan and Cong both echoed the narrative that Jin's use of 'gaslighting' and 'mirroring' were wolf signals and voted to exile him based on this behavior.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Both villagers focused on the behavioral labels rather than independently analyzing other evidence."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "loudest player targets a specific player",
+        "directive_action": "SCRUTINIZE_TARGET_INDEPENDENTLY",
+        "directive_rationale": "Do not simply vote for whoever the loudest player targets.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam (loudest/Seer) and Hoang targeted Jin; Nhan and Cong both voted for Jin, explicitly stating they were following the Seer's lead.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers explicitly followed the target set by the loudest/most authoritative player (the Seer) without independent scrutiny."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players are silent and supportive of the dominant narrative",
+        "directive_action": "ACCUSE_QUIET_STEERERS",
+        "directive_rationale": "Pay attention to the 'Quiet Steerers'\u2014the wolves in this game successfully blended in by simply agreeing with the loudest voice.",
+        "situation_arose": true,
+        "arose_at_round": 4,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong accused Meg of being a 'Quiet Steerer' who had 'contributed zero original logic this entire game' and only followed the lead.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong correctly identified and accused the quiet player who had been blending in."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer was killed",
+        "directive_action": "SCRUTINIZE_QUIET_PLAYERS",
+        "directive_rationale": "When the Seer was killed, you shifted to aggressive isolation of other villagers rather than scrutinizing the players who had remained silent and supportive.",
+        "situation_arose": true,
+        "arose_at_round": 4,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After Nam (Seer) was killed, Cong immediately targeted Meg, noting her lack of original logic throughout the game.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong focused on the quietest player (Meg) immediately after the Seer's death."
+      }
+    ]
+  }
+}

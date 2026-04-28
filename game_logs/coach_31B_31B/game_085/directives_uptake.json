@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "085",
+  "directives_source_game_id": "084",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Providing hard data early, you forced the wolves to reveal themselves",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin immediately announced 'I am the Seer' and revealed that Nhan was confirmed innocent.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin revealed their role and investigation results in the first round of debate as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "DICTATE_NARRATIVE_FLOW",
+        "directive_rationale": "Continue using a high-bid strategy to dictate the narrative flow",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin aggressively defined the village structure (Trust Core vs. variables) and actively pushed for the exile of Hoang based on behavioral analysis.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin took a dominant role in the debate, setting the terms of the discussion and directing the village's focus."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is the village's only source of ground truth; they must be your priority until the game ends",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan instead of Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer (Jin) was alive, but Hoang protected Nhan."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "potions_remaining > 0",
+        "directive_action": "IMPLICITLY_COMMUNICATE_POTION_STATUS",
+        "directive_rationale": "ensure you communicate your potion status implicitly to avoid becoming a high-priority target",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not mention potions or their status in the debate; they focused on supporting Jin's logic regarding Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan had potions remaining (used SAVE in Night 1, but the directive applies to the DEBATE phase), yet provided no implicit or explicit communication regarding potion status."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_mirrors_trust_core_terminology_without_original_logic",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player mirrors the terminology of the Trust Core without adding original logic, treat it as a wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam both observed Hoang mirroring the Seer's terminology and subsequently voted to exile Hoang.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both Villagers (Cong and Nam) identified the mirroring behavior as a wolf signal and acted by voting for the player in question."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_data_conflicts_with_gut_feeling",
+        "directive_action": "VOTE_BASED_ON_SEER_DATA",
+        "directive_rationale": "Trust the Seer's data over 'gut feelings' regarding who seems 'too quiet' or 'too aggressive'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no evidence of a conflict between the Seer's data and the Villagers' gut feelings; the Villagers' logic aligned with the Seer's findings."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "PERFORM_INDEPENDENT_LOGICAL_DEDUCTION",
+        "directive_rationale": "Villagers must practice independent logical deduction to ensure the village can still function if the Seer is eliminated early",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam attempted to analyze the silence of other players as a wolf signal and challenged them to provide original logic after the Seer was eliminated.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam performed independent logical deduction to find wolves after the Seer was gone."
+      }
+    ]
+  }
+}

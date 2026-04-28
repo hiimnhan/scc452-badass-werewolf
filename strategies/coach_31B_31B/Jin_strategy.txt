@@ -1,20 +1,23 @@
 NIGHT PHASE
-- Save Potion: IF target is revealed and Save is available, THEN use it immediately to preserve power roles or Trust Anchors.
-- Poison Potion: IF the Seer identifies a player as a Werewolf, THEN use Poison the following night. NEVER poison a player cleared by the Seer.
-- Coordination: Prioritize the survival of the Seer above all players. If Guard, protect the Seer every night they are alive.
+- Guard Protection: IF I am Guard, THEN protect the Seer every single night. NEVER protect myself or any other player while the Seer is alive.
+- Witch Save: IF I am Witch AND Save is available, THEN reserve it exclusively for the Seer. Use it immediately if the Seer is targeted.
+- Witch Poison: IF I am Witch, THEN use Poison IMMEDIATELY IF: a) The Seer confirms a player as a Werewolf, b) A player is caught in a blatant factual contradiction, or c) The unverified variable pool is reduced to 2-3 players.
 
 DAY DISCUSSION
-- Role Claims: Claim Guard immediately on Day 1 to establish the Power Core. State: 'I am the Guard; I will protect the Seer and Trust Anchors to ensure our victory.'
-- Power Core Synergy: Validate Seer data instantly. Treat Seer-cleared players as absolute safety locks.
-- Wolf Signal Detection (Behavioral Gaslighting): IF a player labels Power Core coordination as 'too convenient,' 'aggressive,' or a 'logical leap,' THEN flag as high-confidence werewolf.
-- Wolf Signal Detection (Social Mimicry): IF a player provides no original logic and only echoes the majority or the Power Core without adding data, THEN flag as high-risk variable.
-- Trust Anchor Enforcement: IF a player attacks or frames a Seer-cleared Trust Anchor, THEN label as primary target for exile.
-- Variable Isolation: IF the Seer has cleared all but one or two players, THEN identify them as 'Last Variables' and push for immediate exile.
-- Power Role Validation: IF a claimed power role contradicts the Seer's ground truth, THEN flag as fake.
+- Role Claims: IF I am Seer, THEN reveal results neutrally and immediately. IF I am Guard, THEN claim role early (Day 1 or 2) or as soon as the suspect pool narrows to 4-5 players. NEVER remain silent to 'hide' the role.
+- Data Presentation: IF I am Seer, THEN describe specific behavioral patterns (e.g., 'Player X is echoing') rather than using jargon.
+- Seer Support: IF I am NOT the Seer, THEN amplify Seer data with unique observations; avoid mirroring the Seer's phrasing to prevent 'Wolf Mirroring' flags.
+- Power Role Proactivity: IF I am Witch or Guard, THEN actively participate in Day 1 to identify 'Vibe Traps' and support PoE. Avoid passive validation.
+- Resource Coordination: IF I am Guard or Witch, THEN explicitly state early that I am prioritizing the Seer to prevent redundant resource waste.
+- Wolf Signal (Vibe Trap): IF a player labels data-driven logic as 'aggression,' 'vibes,' or 'eagerness,' THEN flag as high-risk werewolf.
+- Wolf Signal (Logic Posturing): IF a player echoes the majority without original analysis, OR uses village terminology to frame others without factual evidence, THEN flag as high-risk werewolf.
+- Process of Elimination (PoE): IF the Seer's clears are valid, THEN prioritize remaining unverified players. Treat PoE as absolute truth; ignore accusations of 'posturing' or 'rushing'.
+- Role Conflict Resolution: IF two players claim the same power role, THEN immediately cross-reference with the Seer's clears. The uncleared claimant is the primary target.
+- Tone Caution: IF the debate shifts to communication style, THEN immediately redirect the group back to the Seer's results and the PoE list.
 
 VOTING PHASE
 - Primary Target: Players confirmed as werewolves by the Seer.
-- Secondary Target: Players exhibiting Social Mimicry (Echoing) or Behavioral Gaslighting.
-- Tertiary Target: The 'Last Variable' (remaining unconfirmed player).
-- Safety Lock: NEVER vote for a Seer-cleared player.
-- None Vote: Use ONLY IF all remaining players are Seer-cleared or zero factual data exists.
+- Secondary Target: Players caught in blatant role-claim contradictions (specifically those not cleared by the Seer).
+- Tertiary Target: Unverified variables identified via PoE.
+- Quaternary Target: Players utilizing Logic Posturing, Pseudo-Logic, or Vibe Traps.
+- Safety Lock: NEVER vote for a player the Seer has confirmed as NOT a werewolf.

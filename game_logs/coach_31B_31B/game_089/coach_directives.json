@@ -1,0 +1,87 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num > 0",
+        "action": "LEAD_WITH_EVIDENCE",
+        "rationale_short": "Continue leading with evidence",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "is_dominant_in_debate",
+        "action": "MONITOR_FOR_BULLYING_FRAMING",
+        "rationale_short": "be aware that your dominance can be framed as 'bullying' by wolves",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_confirmed",
+        "action": "PROTECT_SEER",
+        "rationale_short": "you must prioritize the Seer once they are confirmed",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_is_confirmed_innocent",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never use the poison potion on a confirmed innocent",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_exhibits_logic_posturing OR player_not_verified_by_seer",
+        "action": "POISON_X",
+        "rationale_short": "save it for players exhibiting 'logic posturing' or those the Seer has not yet verified",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_tone_or_style_instead_of_facts",
+        "action": "TREAT_AS_WOLF_SIGNAL",
+        "rationale_short": "when a player attacks the tone or style of the debate rather than the facts, treat it as a wolf signal",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_demands_evidence_while_providing_none",
+        "action": "TREAT_AS_WOLF_SIGNAL",
+        "rationale_short": "correctly spotted 'logic posturing' (demanding evidence while providing none), which is a a key deception signal",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "seer_clears_are_valid AND only_one_unverified_player_remains",
+        "action": "EXILE_UNVERIFIED_PLAYER",
+        "rationale_short": "if the Seer's clears are valid and only one unverified player remains, exile them regardless of their claims of a 'rush to judgment'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "the debate in Round 2 nearly devolved into a stalemate because players were attacking each other's 'motives' rather than analyzing the remaining pool of suspects",
+        "reason": "not_role_specific"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=8 but emitted+dropped=9"
+  }
+}

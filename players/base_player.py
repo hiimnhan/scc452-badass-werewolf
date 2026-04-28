@@ -873,8 +873,10 @@ No extra text, no markdown, no code fences.
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=3000, prepend_strategy=False)
 
-            # Safely extract and clean the strategy string
-            extracted_strategy = resp.get("strategy", "").strip()
+            if isinstance(extracted_strategy, str):
+                extracted_strategy = resp.get("strategy", "").strip()
+            elif isinstance(extracted_strategy, list):
+                extracted_strategy = "\n".join(extracted_strategy)
 
             # Check if we actually got meaningful text back (not just empty strings)
             if extracted_strategy:

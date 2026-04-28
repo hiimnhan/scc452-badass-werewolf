@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "role == 'Seer'",
+        "action": "AVOID_RIGID_TERMINOLOGY",
+        "rationale_short": "Your terminology ('Power Core', 'Trust Anchor') was too rigid, making you sound scripted",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "is_only_source_of_hard_data == True",
+        "action": "AVOID_AGGRESSIVE_FRAMING",
+        "rationale_short": "When you are the only source of hard data, avoid aggressive framing",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "is_only_source_of_hard_data == True",
+        "action": "PROVIDE_LIST_KNOWNS_VS_UNKNOWNS",
+        "rationale_short": "provide a clear list of knowns vs. unknowns to keep the village focused on the remaining variables",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "role == 'Guard'",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority must always be the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting the Witch in Round 1 left the Seer vulnerable",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "role == 'Guard'",
+        "action": "PROVIDE_INDEPENDENT_REASONING",
+        "rationale_short": "your tendency to mirror their language exactly instead of providing independent reasoning created a 'mimicry signal'",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_is_coordinating_with_and_protecting_seer == True AND absolute_proof_of_fake_claim == False",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a player who is actively coordinating with and protecting the Seer without absolute proof of a fake claim",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "role == 'Villager'",
+        "action": "PRIORITIZE_SEER_DATA",
+        "rationale_short": "the Seer's data is the only objective truth in the game",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_cleared_player == True",
+        "action": "DEFEND_SEER",
+        "rationale_short": "When a Seer clears you, your primary duty is to protect that Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_cleared_player == True",
+        "action": "AVOID_ATTACKING_SEER_CREDIBILITY",
+        "rationale_short": "not dismantle their credibility based on the wolves' behavioral framing",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "091",
+  "directives_source_game_id": "090",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolves_attempt_to_isolate_seer_via_aggression",
+        "directive_action": "MODERATE_AGGRESSION",
+        "directive_rationale": "be wary of how your aggression can be used by wolves to isolate fellow villagers",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The wolves (Riley and Meg) did not target the Seer (Jin) with aggression during the debate; Meg was passive and Riley was cautious."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Prioritize the Seer over yourself",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Jin (the Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer while the Seer was alive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 3",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "In Round 3, you protected yourself while the Seer was the wolves' primary target",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Nhan (the Witch) instead of Jin (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "In Round 3, the Guard protected Nhan instead of the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_confirmed_innocent_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion on a confirmed innocent",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan did not use any potions during the night of Round 2, even though Jin had cleared Nam and Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch withheld the poison from confirmed innocents."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demands_evidence_without_providing_own",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Be cautious of 'Logic Posturing'\u2014when a player demands evidence from others without providing any of their own, they are often trying to steer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam observed Cong demanding evidence and attacking tone without providing original logic, and subsequently voted to exile Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam accused and voted for Cong after Cong demanded evidence from others while providing no original analysis."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_focus_is_communication_style",
+        "directive_action": "SHIFT_FOCUS_TO_FACTUAL_DATA",
+        "directive_rationale": "avoid 'Vibe Traps' where you attack communication styles rather than factual data",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam identified Cong's focus on Hoang's tone as 'Vibe Trapping' and shifted the focus back to the Seer's clears and Cong's lack of logic.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam explicitly rejected the debate over communication style and redirected the focus to factual data (Seer clears)."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "final_rounds",
+        "directive_action": "USE_PROCESS_OF_ELIMINATION_BASED_ON_SEER_CLEARS",
+        "directive_rationale": "In the final rounds, use a strict Process of Elimination (PoE) based on the Seer's clears to narrow down the remaining suspects",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam used the Seer's clears of Nhan and himself to narrow the suspects down to Cong and Riley.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam explicitly cited the clears of Nhan and himself to isolate the remaining suspects."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_are_silent_and_blending_in",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "focusing on the silent players (Riley and Meg) who were blending in and avoiding the spotlight",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam asked Riley and Meg to provide their reasoning or roles to narrow down suspects, identifying them as unverified players.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nam targeted the silent players for information, though he voted 'None' in Round 1 rather than making a direct accusation."
+      }
+    ]
+  }
+}

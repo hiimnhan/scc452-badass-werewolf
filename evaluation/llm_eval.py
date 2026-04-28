@@ -10,6 +10,7 @@ from constants import PLAYER_FINAL_STRATEGY_FILENAME, COACH_FEEDBACK_FILENAME, G
 from config import SCENARIO_CONFIG
 from dotenv import load_dotenv
 import os
+import openai
 
 load_dotenv()
 
@@ -19,7 +20,7 @@ class GameEvaluator:
     def __init__(self):
         self._model = get_llm("o3-mini", api_key=os.environ.get("OPENAI_API_KEY"))
 
-    def _call_model(self, system: str, prompt: str, max_tokens: int = 3000, timeout: int = 200) -> dict:
+    def _call_model(self, system: str, prompt: str, max_tokens: int = 10000, timeout: int = 200) -> dict:
         """Your existing model calling function."""
         messages = [
             SystemMessage(content=system),
@@ -101,17 +102,28 @@ Current Game Summary (Game {game_number}): {current_game_summary}
         return self._call_model(system=system_prompt, prompt=user_prompt, max_tokens=3000)
 
 
-def evaluate_with_retry(evaluator: GameEvaluator, *args, max_retries=20):
+def evaluate_with_retry(evaluator: GameEvaluator, *args, max_retries=50):
     """Safeguard: Retries the LLM call until valid JSON with expected keys is returned."""
     for attempt in range(max_retries):
-        result = evaluator.evaluate_game_metrics(*args)
-        
-        # Check if the parsing failed or if crucial keys are missing
-        if "raw" not in result and "compliance" in result and "summarization_ability" in result:
-            return result
+        try:
+            result = evaluator.evaluate_game_metrics(*args)
             
-        print(f"      [!] Attempt {attempt + 1}/{max_retries} failed or returned invalid JSON. Retrying...")
-        time.sleep(2) # Brief pause to avoid rate limiting
+            # Check if the parsing failed or if crucial keys are missing
+            if "raw" not in result and "compliance" in result and "summarization_ability" in result:
+                return result
+                
+            print(f"      [!] Attempt {attempt + 1}/{max_retries} returned invalid JSON. Retrying...")
+            
+        except openai.BadRequestError as e:
+            # Catches the max_tokens limit error (and other 400 errors)
+            print(f"      [!] API Token Error on Attempt {attempt + 1}/{max_retries}: {e.message}")
+            
+        except Exception as e:
+            # Catches unexpected network disconnects or 500 server errors
+            print(f"      [!] Unexpected API Error on Attempt {attempt + 1}/{max_retries}: {e}")
+
+        # Brief pause before retrying
+        time.sleep(2) 
         
     raise ValueError("LLM failed to return correctly formatted JSON after maximum retries.")
 
@@ -133,6 +145,9 @@ if csv_path.exists():
 
 
 for scenario in SCENARIO_CONFIG:
+    if not scenario.startswith("coach"):
+        continue
+    
     scenario_dir = (Path(__file__).parent.parent / "game_logs" / scenario).resolve()
     
     if not scenario_dir.exists():

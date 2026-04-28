@@ -1,0 +1,113 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num < 3",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue providing clear results early",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "WITHHOLD_REQUEST_FOR_ROLE_REVEALS",
+        "rationale_short": "avoid demanding other power roles reveal themselves publicly",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "BUILD_TRUST_CORE",
+        "rationale_short": "Focus on building a core of trusted players",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_claims_and_provides_valid_data",
+        "action": "ALIGN_ON_DATA",
+        "rationale_short": "Power roles must align on data immediately",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_claims_and_provides_valid_data",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once a Seer claims and provides valid data, protect them immediately",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "seer_uses_jargon_or_aggressive_tone",
+        "action": "IGNORE_TONE_AND_FOCUS_ON_DATA",
+        "rationale_short": "Attacking the Seer's communication style or terminology is a critical error",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "SAVE_SEER",
+        "rationale_short": "Continue prioritizing the Seer's survival over all other targets",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_data",
+        "action": "FOCUS_EXCLUSIVELY_ON_DATA",
+        "rationale_short": "Focus exclusively on the Seer's data",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_uses_jargon_or_aggressive_tone",
+        "action": "IGNORE_TONE",
+        "rationale_short": "Ignore 'jargon' or 'aggressive tone'\u2014these are distractions",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "USE_PROCESS_OF_ELIMINATION_FOR_LAST_VARIABLE",
+        "rationale_short": "When a Seer provides a clear, you have a 'Trust Anchor'; use process of elimination to identify the 'Last Variable'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_leadership_of_cleared_villager",
+        "action": "ACCUSE_AS_WOLF",
+        "rationale_short": "If a player attacks the leadership of a cleared villager, treat it as a desperate wolf signal",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "player_repeats_seer_terminology_without_original_analysis",
+        "action": "CHALLENGE_PLAYER",
+        "rationale_short": "Villagers should be wary of players who repeat the Seer's language without adding original logical analysis",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 12,
+    "dropped": []
+  }
+}

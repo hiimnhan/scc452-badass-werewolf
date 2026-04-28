@@ -1,19 +1,27 @@
 Night Phase:
-- Save Potion: IF Seer is identified and targeted, use Save immediately. IF no Seer is identified, save the potion for the first night a target is revealed. NEVER use Save if the Guard's protection is confirmed for that target.
-- Poison Potion: ONLY use on players who are NOT Seer-cleared. IF a player exhibits high-risk signals (Social Mimicry/Gaslighting) and is NOT a Trust Anchor, they are the priority target. NEVER poison a Seer-cleared player under any circumstances.
+- If Seer: Investigate unverified players. Prioritize those exhibiting 'logic posturing', 'vibe traps', or those remaining silent during high-pressure debates.
+- If Guard: Protect the claimed Seer exclusively. Rotate to a Seer-cleared player ONLY when the 'no consecutive protection' rule applies, then return to the Seer immediately. NEVER protect self while Seer is alive. Ensure rotation is minimal to maximize Seer uptime.
+- If Witch:
+  - Save: Prioritize the claimed Seer. Coordinate with the Guard to avoid overlapping protection if possible.
+  - Poison: Use on confirmed wolves or the last remaining unverified variable when the pool is reduced to 2-3 players.
 
 Day Discussion:
-- Power Core Establishment: Demand immediate role revelation from Seer and Guard to synchronize the protection/save cycle.
-- Trust Anchor: Designate the first Seer-cleared player as the Trust Anchor. This player is strictly off-limits for Poison/Voting.
-- Wolf Detection (Social Mimicry): Flag players who echo the Power Core's logic without adding original analysis. Treat 'perfect agreement' as a wolf signal.
-- Wolf Detection (Behavioral Gaslighting): Target players who shift the debate from data to 'tone' or dismiss Seer data as 'too convenient'.
-- Narrative Control: Bid high to speak first. Force silent players or mimics to provide unique logic to isolate variables.
+- Role Claiming: IF I am a power role, claim early to establish a 'Power Core'.
+- Power Role Coordination: IF I am the Seer, explicitly demand that the Guard and Witch signal their presence to prevent 'lurking' signals.
+- Data Delivery: Deliver factual data decisively. DO NOT mirror the Seer's phrasing or terminology, as this is a wolf signal.
+- Wolf Detection (Logic Posturing/Mirroring): IF a player echoes Seer data without original analysis or uses the Seer's specific jargon, THEN flag as wolf.
+- Wolf Detection (Vibe Trap): IF a player attacks the tone/process of the debate to deflect from logic, THEN flag as wolf.
+- Wolf Detection (Pseudo-Logic): IF a player uses complex jargon to frame innocents or contradict the PoE, THEN highlight the factual contradiction.
+- Pressure Application: IF the variable pool is silent, demand specific deductive value or role claims immediately.
+- Process of Elimination (PoE): In the endgame, prioritize PoE over behavioral analysis. IF only one unverified variable remains, they are the target regardless of claim timing.
+- Legacy Data: IF the Seer is eliminated, advocate for the absolute use of their confirmed clears and prioritize the remaining unverified variable.
 
 Voting Phase:
 - Target Priority:
   1. Seer-confirmed wolves.
-  2. Players exhibiting Social Mimicry or Behavioral Gaslighting.
-  3. Players attacking the Seer or Trust Anchor.
-  4. The 'Last Variable' (final remaining uncleared player).
-- Verification: NEVER vote for or poison a Seer-cleared player.
-- Pivot Logic: IF a Seer-cleared player is exiled, immediately target the orchestrators of that vote as primary wolf suspects.
+  2. The last remaining uncleared variable (PoE).
+  3. Players utilizing 'Logic Posturing' or 'Pseudo-Logic'.
+  4. Players using 'vibe-based' deflections.
+- Verification: NEVER vote for a player cleared by the Seer.
+- Role Conflict Resolution: IF multiple players claim the same role, prioritize the Seer-cleared claimant; target the uncleared claimant.
+- Pivot Logic: IF a Seer-cleared player is exiled, immediately target the orchestrators of that vote.

@@ -1,0 +1,165 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Nhan.",
+            "Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "No one died last night, which suggests a possible save or a mistake. I have already confirmed that Nhan is not a werewolf. Nhan is our first Trust Anchor; any attempt to discredit them is a wolf signal."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang has provided the first piece of hard data by clearing me. We must treat Hoang as the Seer and protect this Power Core. Everyone else: provide your reasoning for who we should target, or you risk being isolated as a variable."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan is confirmed. We have a foundation of truth. Cong, Nam, Jin, Riley, Meg\u2014give me a reason why you should be trusted over the data I've provided. Any hesitation or attempt to pivot the conversation away from this established core is a wolf signal."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Hoang, you're pushing this 'confirmed' narrative way too hard. It's a classic move to force a trust bond early and shut down any other theories. Why are you so desperate to lock us into your logic? It feels like a setup to protect a partner."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Riley, your attempt to frame Hoang's data-driven approach as a 'setup' is a textbook wolf signal. You are attacking the Seer and our only Trust Anchor to distract us. Stop the gaslighting; the data is clear, and your aggression is a confession."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Riley, your attempt to label my confidence as 'desperation' is a textbook example of tonal gaslighting. You are attacking the only source of ground truth in this game to create doubt. This is a wolf signal. We vote Riley."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Hoang has provided hard data clearing me. Riley's only response is to attack the Seer and dismiss this data as a 'setup' without providing any logical counter-evidence. This aggression toward our only source of truth is a clear sign of a werewolf."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley is attacking the only available data we have. By framing Hoang's role claim as a 'setup' and dismissing facts as 'desperation,' Riley is using clear gaslighting tactics to distract us from the truth. This is a wolf signal. We must exile Riley."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is using tonal gaslighting to attack Hoang's data-driven approach. Instead of providing original logic, Riley is attempting to deflect attention from our Trust Anchor and the Seer. This pattern is a wolf signal. We must prioritize the Power Core and exile Riley."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Hoang has provided a clear investigation result for Nhan. Riley is attempting to discredit this data by framing Hoang's confidence as a 'setup' rather than addressing the facts. This deflection is a clear wolf signal. We must prioritize the Seer's data."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is attempting to frame factual data as a 'setup' and my confidence as 'desperation.' This is a clear attempt to gaslight the village and dismantle our only source of truth. Riley's behavior is a wolf signal. We must exile them."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang is trying to dictate the entire game with 'data' that no one can verify. This pressure to blindly trust him and Nhan is exactly how wolves isolate the rest of the village. I'm voting Hoang because this forced consensus is too suspicious."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Riley",
+                "reasoning": "Meg voted to exile Riley. Reason: I am a Villager. I agree with Hoang. The logic holds that attacking the Seer and the Trust Anchor is a wolf signal. Riley's opposition to the only available data makes them the most likely suspect."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Hoang.",
+            "Nhan (Guard) chose to protect Hoang.",
+            "Hoang (Seer) investigated Nam. Nam is NOT a wolf.",
+            "Cong (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan and Nam are confirmed innocent. We have a solid foundation of trust. Jin and Meg, your silence is becoming a liability. I am narrowing the wolf's hiding spot. We must scrutinize those who have contributed nothing to the village's safety."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang is right. Nhan is a Trust Anchor, and we must protect that data. Jin and Meg, your continued silence is a wolf signal. Provide your logic now or you are the primary targets for exile."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, I trust your clears of Nhan and Nam. I've been analyzing the variables. With Nhan and Nam confirmed, and Hoang as Seer, Meg is the most critical remaining variable. Meg, your silence is a liability. Explain your logic or we exile you."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin, your response is a textbook example of social mimicry. You are mirroring our terminology\u2014'variables' and 'liability'\u2014without offering a single original thought. You are trying to blend in while deflecting onto Meg. Explain your actual logic or you are the target."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin, Nam has exposed you. Mirroring our language to deflect onto Meg is a desperate attempt to blend in. You are providing zero original logic while hiding behind my clears. You are the wolf. Everyone, vote Jin."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin, you've been caught red-handed. Mirroring our language to deflect onto Meg is a classic wolf tactic to blend in. You have no original logic to provide because you are the wolf. Everyone, vote Jin now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Jin",
+                "reasoning": "Nhan voted to exile Jin. Reason: Jin is using our own language to mask a complete lack of original logic. His attempt to deflect onto Meg while mirroring our terminology is a clear wolf tactic to blend in. Following the Seer's lead, we must exile Jin."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's attempt to mirror our language while deflecting onto Meg is a clear wolf signal. He provides no original logic and merely mimics the Trust Core to blend in. Based on the Seer's lead and this mimicry, Jin must be exiled."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin is caught using social mimicry. He mirrored our terminology to deflect suspicion onto Meg without providing any original logical analysis. This is a classic wolf tactic to blend in. He has no defense; we must exile him now."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Hoang has confirmed Nhan and Nam as innocent. With their roles established, we must isolate the remaining variables. Meg's total silence is a liability and a wolf signal. To secure the village, we must exile the most suspicious remaining variable."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin is using mimicry to hide. He echoed our exact words to deflect suspicion onto Meg instead of providing his own reasoning. This is a classic wolf tactic to blend into the trust core. We must exile Jin now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: I am a Villager. I agree with Hoang. The observation regarding the mirroring of language suggests Jin is attempting to blend in without providing original logic. This logic holds."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Hoang.",
+            "Nhan (Guard) chose to protect Nam.",
+            "Hoang (Seer) investigated Meg. Meg is a wolf.",
+            "Cong (Witch) used POISON potion on Meg"
+        ],
+        "night_eliminated": [
+            "Hoang",
+            "Meg"
+        ]
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

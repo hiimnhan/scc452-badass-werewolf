@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "NIGHT",
+        "trigger": "players exhibit 'logic posturing' or 'mirroring' during the day",
+        "action": "INVESTIGATE_X",
+        "rationale_short": "prioritize your investigation on players who exhibit 'logic posturing' or 'mirroring' during the day to provide the village with an Anchor",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "You must prioritize the Seer to maintain the information pipeline",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "CONTRIBUTE_TO_DEDUCTION",
+        "rationale_short": "you remained passive in the Day 1 debate. As a power role, you should help the village identify 'Vibe Traps' and support the PoE process",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "wolf uses villager terminology to frame others ('Pseudo-Logic' counter-attacks)",
+        "action": "STAY_THE_COURSE",
+        "rationale_short": "be wary of 'Pseudo-Logic' counter-attacks\u2014when the wolf (Meg) used your own terminology ('mechanical inconsistency') to frame others, you correctly stayed the course",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "always",
+        "action": "MAINTAIN_POE_RIGOR",
+        "rationale_short": "Maintain strict PoE rigor",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "attacks on tone occur",
+        "action": "IGNORE_ATTACKS",
+        "rationale_short": "ignore attacks on tone",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 6,
+    "emitted": 6,
+    "dropped": []
+  }
+}

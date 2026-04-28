@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "CLEAR_GUARD",
+        "rationale_short": "By clearing the Guard immediately, you created an Anchor",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_in_variable_pool",
+        "action": "DEMAND_DEDUCTIVE_VALUE",
+        "rationale_short": "Continue demanding specific deductive value from the variable pool to prevent wolves from hiding in mirroring behavior",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "wolf_attempts_to_steal_claim",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "By waiting until the Wolf attempted to steal your claim, you turned a potential confusion into a confirmed exile",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the Seer is the village's most valuable asset and must be the priority",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "witch_is_alive",
+        "action": "COORDINATE_RESOURCES",
+        "rationale_short": "coordinate with the Guard via the day debate to ensure you aren't both wasting resources on the same target",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "witch_is_alive",
+        "action": "COORDINATE_RESOURCES",
+        "rationale_short": "coordinate with the Guard via the day debate to ensure you aren't both wasting resources on the same target",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "DEMAND_LOGIC",
+        "rationale_short": "more aggressive bidding and demands for logic could have forced the wolves to slip up earlier",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_claims_role_only_when_pressure_mounts",
+        "action": "CHALLENGE_CLAIM",
+        "rationale_short": "be wary of players who claim roles only when the pressure mounts",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "role_conflict_occurs",
+        "action": "CHECK_SEER_CLEARANCE",
+        "rationale_short": "When a role conflict occurs (e.g., two Guards), immediately check who is Seer-cleared",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 9,
+    "dropped": [
+      {
+        "advice_verbatim": "You correctly identified 'logic posturing' and 'vibe traps' used by the wolf to distract from the Seer's data.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

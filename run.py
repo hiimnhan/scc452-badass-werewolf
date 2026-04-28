@@ -240,7 +240,7 @@ def run_game(
     Raises immediately on any exception — caller decides how to handle it.
     """
     player_objects = build_player_objects(roles, villager_llm, wolf_llm, game_id, scenario)
-    # Coach uses villager_llm — it coaches the villager side, not the wolves
+    # Coach uses wolf_llm (strong model)
     coach = Coach(model=wolf_llm, game_id=game_id, scenario=scenario)
 
     seer = next((p for p in PLAYERS if roles[p] == Role.SEER), None)

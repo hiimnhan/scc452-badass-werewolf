@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "holding_investigation_result",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue to prioritize hard results over debate.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "ensure you protect the Seer consistently",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "healing_potion_remaining AND seer_is_alive",
+        "action": "SAVE_SEER",
+        "rationale_short": "failure to use your healing potion to protect the Seer... was a missed opportunity to extend the village's data source",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "wolf_attacks_power_core_tone_or_aggression",
+        "action": "ENDORSE_POWER_CORE",
+        "rationale_short": "successfully identified 'Vibe Traps'\u2014when wolves pivot from facts to attacking the 'tone' or 'aggression' of the Power Core",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_hard_data",
+        "action": "TRUST_SEER_DATA",
+        "rationale_short": "Always trust the Seer's hard data over any behavioral argument.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_is_eliminated",
+        "action": "APPLY_POE_BASED_ON_LEGACY_CLEARS",
+        "rationale_short": "When the Seer is eliminated, strictly apply the Process of Elimination (PoE) based on the Seer's legacy clears to find the remaining wolves.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 6,
+    "emitted": 6,
+    "dropped": []
+  }
+}

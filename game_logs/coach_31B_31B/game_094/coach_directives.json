@@ -1,0 +1,73 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "By claiming early and providing hard data, you created a factual anchor",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "game_active == true",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue prioritizing the clearing of other players to shrink the pool of variables",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_alive == true && game_not_mathematically_decided == true",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Always prioritize the Seer until the game is mathematically decided",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_targeted == true && healing_potion_remaining == true",
+        "action": "SAVE_SEER",
+        "rationale_short": "When the Seer is the only source of truth and is clearly being targeted, you must save them at all costs",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_demands_evidence_without_providing_own == true",
+        "action": "ACCUSE_X",
+        "rationale_short": "When a player (like the Wolf) demands evidence from others while providing none of their own, treat it as a primary wolf signal",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "debate_focus == 'personality_attacks'",
+        "action": "PIVOT_TO_POE",
+        "rationale_short": "successfully pivoted from personality attacks back to the Process of Elimination (PoE)",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "player_has_abrasive_tone == true && role_verification_missing == true",
+        "action": "ABSTAIN_FROM_EXILING_X",
+        "rationale_short": "the village prioritized 'vibes' over role verification, resulting in the loss of a power role",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 7,
+    "dropped": []
+  }
+}
