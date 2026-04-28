@@ -1,0 +1,121 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Cong.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": null,
+                "reasoning": "Cong voted to exile None. Reason: Since no one has spoken or provided any information, we have no basis for a logical accusation. Exiling randomly risks losing a critical power role. We should skip today and observe behavior in the next round."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": null,
+                "reasoning": "Nam voted to exile None. Reason: Since no one has spoken or provided any information, voting now would be a blind guess. We risk exiling an innocent villager. We should wait for more information before acting."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": null,
+                "reasoning": "Jin voted to exile None. Reason: Since no one has spoken or provided information, we have no basis for an accusation. I am skipping my vote to avoid an uninformed execution."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": null,
+                "reasoning": "Hoang voted to exile None. Reason: Since no one has spoken or provided any information, we have no basis for an accusation. I am skipping my vote to avoid wasting a day on a random guess."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": null,
+                "reasoning": "Riley voted to exile None. Reason: No one has provided any information or claims yet. Voting now would be based on nothing."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: Since no one has provided any information or accusations, I don't have enough evidence to vote for anyone. I'll skip this round to avoid making a mistake."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Cong"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "We've wasted a full day and lost two people. This silence is a wolf tactic. Nam, Jin, Riley, Meg\u2014I need binary commitments now. Who among you is a power role, and who is a plain villager? Stop hiding."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang, demanding 'binary commitments' is a classic wolf tactic to map out power roles for your next kill. I will not reveal my role to a player fishing for targets. Until someone provides a Seer result, your aggression is a red flag."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam, you just confirmed your guilt. Labeling a call for transparency as 'aggression' and a 'wolf tactic' is a textbook process attack and gaslighting. You are deflecting because you have no role to claim. I am calling for a vote on Nam immediately."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam, your response is a textbook process attack. Labeling a request for transparency as 'aggression' is a deflection tactic used to avoid commitment. Hoang is right; your behavior is a massive red flag. I'm voting to exile Nam."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's attempt to frame a call for transparency as a 'wolf tactic' is a blatant deflection. Jin has correctly identified this as a process attack. We have clear evidence of wolf behavior. Riley, Meg, stop being passive and join the vote. Nam is the target."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang and Jin are coordinating a blatant wolf hit. Jin is simply mirroring Hoang's jargon to create a fake consensus. This is not evidence; it is a coordinated attack to eliminate a villager. Riley, Meg, do not let them manipulate you. Vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang is aggressively fishing for power roles to target them at night. He and Jin are using coordinated, repetitive language to force a vote without any Seer evidence. This is a classic wolf strategy to eliminate threats through manufactured consensus. We must exile Hoang."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam is using classic deflection tactics. Labeling a call for transparency as 'aggression' and 'manipulation' is a blatant process attack intended to shift focus away from his own refusal to commit to a role. This behavior is a clear indicator of a werewolf."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam's responses are pure deflection. He labeled a request for transparency as 'aggression' and 'a wolf tactic'\u2014a classic process attack. He is now attempting to frame Jin's additive reasoning as 'mirroring' to divert the vote. Nam is a werewolf."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Hoang spoke first, then Nam responded, then Jin spoke. Nam's response occurred after the request for roles but before Jin's support. I am voting for Nam."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: I am a Villager. Nam's refusal to clarify his role while others are calling for transparency is a red flag. Since he is the primary target and cannot provide a clear answer, I'm voting Nam."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

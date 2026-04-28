@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "players_hesitate_to_confirm_roles",
+        "action": "FRAME_HESITATION_AS_CONFUSION_MASK",
+        "rationale_short": "By framing hesitation as a 'Confusion Mask,' you forced the wolves to react poorly.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "debate_start",
+        "action": "ENFORCE_ROLE_CALL",
+        "rationale_short": "Your aggressive role-call enforcement and rapid establishment of ground truth were excellent.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_primary_target",
+        "action": "PROTECT_SEER",
+        "rationale_short": "you must maintain the Protection Loop on the Seer until they are no longer the primary target.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "debate_start",
+        "action": "PROVIDE_INDEPENDENT_ANALYSIS",
+        "rationale_short": "ensure you are providing independent analysis rather than just echoing the Seer to avoid being flagged as a wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_empirical_data",
+        "action": "ALIGN_WITH_SEER_DATA",
+        "rationale_short": "By aligning with the Seer's empirical data over the wolves' emotional appeals, you minimized the risk of being misled.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 5,
+    "dropped": [
+      {
+        "advice_verbatim": "the village almost fell for a 'Confusion Mask' when a Villager attacked a Seer-cleared player; while the village correctly exiled the aggressor, this internal friction can be exploited by wolves to create chaos.",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Saving the Seer in Round 2 and poisoning the wolf in Round 3 secured the victory. This is the gold standard for Witch play.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

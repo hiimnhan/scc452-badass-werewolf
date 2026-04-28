@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "048",
+  "directives_source_game_id": "047",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "early_game",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early reveal and clear results provided the village with critical ground truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin immediately declared 'I am the Seer' at the start of the Round 1 debate and shared the result of the investigation on Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin revealed the role and provided results in the first round of debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue this aggressive transparency; it forces wolves into defensive, detectable patterns.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin revealed investigation results for Nhan in Round 1 and for Hoang in Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin consistently shared investigation results during the debate phases."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "wolf_count_not_minimal",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is the village's most valuable asset; prioritize their survival above all else until the wolf count is minimal.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 1 Night, Hoang protected himself. In Round 2 Night, Hoang protected Jin (the Seer).",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang protected the Seer in Round 2, but failed to do so in Round 1 when the wolf count was still at maximum."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "COORDINATE_WITH_WITCH",
+        "directive_rationale": "There was no explicit communication between the Guard and Witch regarding who was being protected",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang remained silent for the majority of the Round 1 debate and did not attempt to coordinate with Nhan (Witch).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not engage in any coordination with the Witch during the debate."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "COORDINATE_WITH_GUARD",
+        "directive_rationale": "you must coordinate more closely with the Guard",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan urged others to reveal their roles but did not specifically attempt to coordinate protection or save strategies with the Guard.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not coordinate with the Guard during the debate."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "guard_protecting_seer",
+        "directive_action": "SAVE_OTHERS",
+        "directive_rationale": "If the Guard is protecting the Seer, you can save others",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 2 Night, while Hoang (Guard) protected Jin (Seer), Nhan (Witch) used the POISON potion on Hoang instead of using a save potion on others.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The directive refers to the SAVE potion; Nhan used the POISON potion. However, the save potion had already been used in Round 1."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "guard_uncertain",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "if the Guard is uncertain, your save potion is the final line of defense for the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 1 Night, Hoang (Guard) protected himself, leaving the Seer (Jin) unprotected. Nhan used the SAVE potion on herself.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Guard did not protect the Seer, but Nhan used the save potion on herself rather than the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_silence_or_processing",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "You correctly identified that silence and 'processing' are wolf signals.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong identified that Nam and Hoang were stalling and refusing to claim roles, and subsequently voted to exile Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong correctly identified silence as a wolf signal and accused/voted for the silent player."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_voted_for_confirmed_wolf",
+        "directive_action": "DO_NOT_ENDORSE_X",
+        "directive_rationale": "Never clear a player just because they voted for a confirmed wolf; treat it as a calculated deception to gain trust.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Riley (wolf) voted for Nam (confirmed villager/exiled). In Round 2, Cong and Nhan did not clear Riley based on this vote, but rather continued to focus on Meg.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villager side did not grant Riley a 'clear' or endorsement based on the vote against Nam."
+      }
+    ]
+  }
+}

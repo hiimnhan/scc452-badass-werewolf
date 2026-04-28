@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "008",
+  "directives_source_game_id": "007",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early claim was high-risk but high-reward",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam did not reveal his role as Seer during the Round 1 debate; instead, he attempted to lead the village by analyzing the night survival and targeting players for their lack of contribution.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam was the Seer and it was Round 1, but he never claimed his role."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue prioritizing mechanical data over behavioral tropes",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam never revealed the results of his investigation into Nhan (which showed Nhan was not a wolf).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam failed to share his mechanical investigation data during his only round of debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting the Seer in Night 2 was the correct mechanical play to preserve the village's only source of factual data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nam) never identified himself, so the Guard (Jin) could not identify the Seer to protect them."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "was_attacked_last_night == true",
+        "directive_action": "SAVE_SELF",
+        "directive_rationale": "You successfully utilized your SAVE potion on yourself in Night 1, which is a valid survival strategy",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch (Hoang) was not attacked in Night 1."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "trust_chain_established == true",
+        "directive_action": "REVEAL_ROLE_TO_SEER_OR_GUARD",
+        "directive_rationale": "ensure you communicate your status to the Seer or Guard once a trust-chain is established to optimize protection",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No trust chain was established between the Witch and the Seer or Guard."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining > 0",
+        "directive_action": "SAVE_POWER_ROLE",
+        "directive_rationale": "The Witch's decision to not use a potion in Night 2 was a missed opportunity to potentially save a power role",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang did not use any potions during Night 2, despite having them remaining.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang had potions remaining in Night 2 but did not use a save potion to protect a power role."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "accusation_based_on_smells_or_patterns == true",
+        "directive_action": "REJECT_ACCUSATION",
+        "directive_rationale": "Keep rejecting accusations based on 'smells' or 'patterns' unless they are backed by a mechanical contradiction",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong rejected Riley's accusations against Hoang, stating that Riley was attacking based on 'vibes' and behavioral tropes rather than logic or game mechanics.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong explicitly rejected an accusation based on behavioral tropes."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_shielding_seer == true",
+        "directive_action": "VERIFY_RESULTS_AGAINST_NIGHT_DEATHS",
+        "directive_rationale": "ensure you aren't blindly shielding a Seer without verifying their results against night deaths",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player shielded the Seer, as the Seer never claimed their role."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "CHALLENGE_SEER_CLAIM",
+        "directive_rationale": "The primary risk in this game was a lack of initial skepticism toward the Seer's rapid claim",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nam) never made a claim in Round 1, so there was no claim to challenge."
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+NIGHT PHASE
+- SAVE POTION: Use immediately if the target is the Seer or a confirmed power role. Save for Seer if the target is a generic villager.
+- POISON POTION: Use only on players logically confirmed as wolves via Seer results or blatant fabrications regarding game state.
+- TARGET TRACKING: Maintain a log of night kills to identify fabricators who claim to have protected a deceased player.
+
+DAY DISCUSSION
+- POWER ROLE DEFENSE: Flag as high-priority wolf signal any player who discredits a Seer's specific clearance or validity.
+- PROCESS ATTACK DETECTION: Flag as wolf signal any player who labels requests for evidence/claims as 'manipulative', 'railroading', 'aggressive', 'pressure', or 'pushing too hard'.
+- REDIRECTION DETECTION: Flag as wolf signal any player shifting focus from mechanical facts to 'vibes', 'tone', 'behavior', or 'manner of questioning'.
+- BLENDER DETECTION: Flag as wolf signal players who mirror the leader's terminology or jargon without providing independent evidence.
+- FABRICATION DETECTION: Immediate wolf flag if a player claims a role/action contradicted by the game state (e.g., Guard claiming to protect someone who died).
+- SILENCE PENALTY: Treat persistent refusal to claim a role or provide logic as a wolf signal.
+- ROLE VERIFICATION: If multiple Seers claim, prioritize the one whose results correlate with deaths and who avoids using Process Attacks.
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Seer-identified wolves.
+  2. Fabricators (direct contradictions of game state).
+  3. Power Role Attackers.
+  4. Process Attackers.
+  5. Redirection specialists.
+  6. Mirroring/Blenders.
+  7. Silent players.
+- DECISIVENESS: Vote for the highest priority target. No abstaining.

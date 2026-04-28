@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No one has spoken yet. I have no evidence to present and need to listen for role claims or wolf signals first."
+            },
+            {
+                "Cong": 3,
+                "reason": "No one died tonight, which suggests a Guard save or Witch save. I need to listen for Seer claims or suspicious reactions to the no-kill outcome before pushing a target."
+            },
+            {
+                "Nam": 7,
+                "reason": "Zero deaths occurred. This indicates Guard or Witch activity. I must immediately push for role claims to identify the power roles and cross-reference their targets to find fakes."
+            },
+            {
+                "Jin": 10,
+                "reason": "Must claim Seer immediately and clear Nhan to establish a trusted core and control the narrative per strategy."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No statements have been made. I need to listen for a Seer claim to determine my next protection target. I have no evidence to lead with yet."
+            },
+            {
+                "Riley": 0,
+                "reason": "No accusations have been made. Per strategy, I remain passive and do not initiate accusations. I will observe the sequence of speakers and votes."
+            },
+            {
+                "Meg": 1,
+                "reason": "Strategic silence. I will not lead the agenda. I'll wait for others to speak to identify the most aggressive accuser and align with them for trust credit."
+            }
+        ],
+        [
+            {
+                "Nhan": 2,
+                "reason": "Jin's claim as Seer is currently consistent with my role. I will remain silent to avoid revealing my identity as Witch, allowing Jin to lead while I monitor for wolf signals."
+            },
+            {
+                "Cong": 3,
+                "reason": "Jin provided a specific result, making them the current logic driver. I need to observe if anyone counter-claims or uses process attack/deflection tactics before intervening."
+            },
+            {
+                "Nam": 6,
+                "reason": "No one died tonight. This indicates Guard or Witch activity. I need to cross-reference Jin's Seer claim with potential Guard/Witch claims to identify fake power roles and analyze the zero-death mechanical possibility."
+            },
+            {
+                "Hoang": 2,
+                "reason": "Jin claimed Seer and cleared Nhan. I have no new evidence to provide and will listen to see if any players use wolf signals or process attacks during the debate."
+            },
+            {
+                "Riley": 0,
+                "reason": "Jin has already claimed Seer and cleared Nhan. I will remain silent and observe the sequence of accusations to act as the closer."
+            },
+            {
+                "Meg": 2,
+                "reason": "Jin's claim is accepted as fact per strategy. No one is accusing me. Staying quiet to remain invisible while the village processes the Seer's claim."
+            }
+        ],
+        [
+            {
+                "Nhan": 2,
+                "reason": "Jin is a credible Seer and Nam is using logical process. I must remain hidden as the Witch to protect the Seer later. No immediate need to reveal my role or disrupt the current flow."
+            },
+            {
+                "Cong": 4,
+                "reason": "Jin provided a specific result first, making them the current logic driver. I need to monitor for counter-claims or 'blender' behavior from others to identify wolves."
+            },
+            {
+                "Jin": 2,
+                "reason": "I have already claimed Seer and cleared Nhan. Nam is currently driving the logic and requesting role explanations, which aligns with my strategy. I will listen for counter-claims or wolf signals."
+            },
+            {
+                "Hoang": 2,
+                "reason": "Jin claimed Seer and cleared Nhan. I must protect Jin tonight. Nam is asking for mechanical explanations, but I cannot reveal my role without risking my utility. I will observe for wolf signals."
+            },
+            {
+                "Riley": 1,
+                "reason": "No majority exists. Strategy dictates passive observation and remaining silent during disputes. I will wait for a sequence to establish before acting as the closer."
+            },
+            {
+                "Meg": 2,
+                "reason": "Jin claimed Seer and cleared Nhan. I will accept this for now to blend in and wait for others to lead the accusation. I'll target Jin at night."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "I must confirm the zero-death outcome to validate Jin's Seer claim and Nam's logic, preventing wolves from fabricating a narrative about why no one died. My confirmation stabilizes the village's trust in the current lead."
+            },
+            {
+                "Nam": 6,
+                "reason": "Zero-death implies Guard or Witch activity. I need to press for role claims from the Guard and Witch to verify their mechanical consistency and identify potential fake power roles."
+            },
+            {
+                "Jin": 2,
+                "reason": "I have already claimed Seer and cleared Nhan. Nam and Cong are currently driving the logic and seeking power role explanations. I will listen to see if any counter-claims or process attacks emerge."
+            },
+            {
+                "Hoang": 3,
+                "reason": "Jin has claimed Seer and cleared Nhan. I will protect Jin tonight. Currently, Nam and Cong are pushing for mechanical explanations, but I have no reason to reveal my role yet."
+            },
+            {
+                "Riley": 1,
+                "reason": "No majority exists. I must remain passive and avoid initiating accusations. I will wait for a sequence to emerge before speaking."
+            },
+            {
+                "Meg": 2,
+                "reason": "Jin claimed Seer and cleared Nhan. I will accept the claim as fact for now to blend in and avoid leading the agenda. I'll wait for others to speculate on the zero-death outcome."
+            }
+        ],
+        [
+            {
+                "Cong": 7,
+                "reason": "Hoang, Riley, and Meg are currently silent while the active players establish a logic chain. I need to pressure them for role claims or explanations to identify potential 'Blenders' or wolves hiding in silence."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan flagged Hoang, Riley, and Meg for silence. I need to push for role claims from them immediately; refusal or stalling is a high-probability wolf signal according to my strategy."
+            },
+            {
+                "Jin": 2,
+                "reason": "I have already claimed Seer and cleared Nhan. Nam, Cong, and Nhan are currently driving the logic. I will wait for Hoang, Riley, or Meg to respond or deflect."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nhan explicitly called out my silence. To avoid being flagged as a passive wolf target, I must acknowledge the logic and maintain my cover while observing for counter-claims."
+            },
+            {
+                "Riley": 2,
+                "reason": "No majority exists. I am following the Passive Observation and Closer roles. I will remain silent while others discuss the zero-death sequence."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan specifically called out my silence. According to strategy, I must claim 'Villager' immediately when silence is mentioned to maintain cover."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg has triggered multiple wolf signals: Process Attack ('reckless', 'pressuring') and Redirection. I must flag this behavior immediately to prioritize her for exile based on my strategy."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg used a Process Attack, labeling Nhan's logic as 'reckless' and focusing on 'chaos' rather than game-state contradictions. This flags her as a High-Probability Wolf per strategy. I must push this accusation now."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg used clear deflection jargon ('reckless', 'forcing a kill', 'create chaos') to attack the process of mechanical analysis. This is a high-probability wolf signal per strategy. I must push this accusation immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg exhibited a textbook Process Attack by labeling Nhan's logic as 'reckless' and 'forcing'. I must immediately flag this wolf signal to pivot the village's focus toward Meg for exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg used 'process attack' language by calling Nhan 'reckless' and claiming he is 'forcing a kill'. This is a definitive wolf signal per strategy. I must expose this as werewolf deflection immediately."
+            },
+            {
+                "Riley": 2,
+                "reason": "No majority exists. Following passive observation and strategic abstention. I will remain silent to avoid early scrutiny while others argue."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 4,
+                "reason": "No deaths occurred for two nights. I need to analyze claims to identify the Guard's targets and cross-reference with the Seer's findings to detect any Fabricators among the remaining players."
+            },
+            {
+                "Cong": 7,
+                "reason": "Two consecutive nights with no deaths suggest a Guard protecting the target or a Witch saving. I need to analyze the players' reactions to this pattern to identify potential wolves attempting to blend in."
+            },
+            {
+                "Nam": 9,
+                "reason": "Two consecutive zero-death nights are mechanically impossible without Guard/Witch intervention. I must demand role claims immediately to identify the protector or fake power roles."
+            },
+            {
+                "Jin": 10,
+                "reason": "Must immediately claim Seer and clear Hoang to expand the trusted core. This forces remaining suspects (Riley, Nam, Cong) to reveal roles and narrows the wolf pool."
+            },
+            {
+                "Hoang": 4,
+                "reason": "Jin is confirmed Seer and Nhan is clear. I need to push the village to focus on Riley and Nam, requesting binary commitments to identify wolves through passivity or deflection."
+            },
+            {
+                "Riley": 1,
+                "reason": "No accusations have been made. I will remain silent to observe the sequence of claims and only join a majority once established."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin is a credible Seer. Riley is exhibiting a Silence Penalty, a high-priority wolf signal. I must speak to validate the Seer's logic and pressure Riley to expose themselves, ensuring a decisive vote."
+            },
+            {
+                "Cong": 8,
+                "reason": "Riley is flagged for Silence/Abstention. Jin (Seer) is pushing for a role claim. I must support this pressure to force a contradiction or confirm Riley as a wolf to secure a win."
+            },
+            {
+                "Nam": 9,
+                "reason": "Two consecutive zero-death nights require immediate mechanical explanation. Riley is flagged for passivity and lack of claim. I must push for role claims from Riley, Hoang, and Cong to identify the fake power roles."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin has established a trusted core. I must immediately reinforce Jin's authority as the Seer and pressure Riley to provide a binary commitment, identifying any 'process attack' or 'gaslighting' responses as wolf signals."
+            },
+            {
+                "Riley": 2,
+                "reason": "Jin is initiating accusations. Per strategy, I remain silent during disputes and only speak to confirm mechanical facts or support a majority. I will wait for a 50%+ consensus before acting."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Riley is flagged for Silence Penalty. I must reinforce Jin's Seer claim and Nam's logic to secure Riley's exile, ensuring the village focuses on the highest priority target."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is flagged for Silence/Abstention. Jin (Seer) and Nam are already pushing. I must reinforce this pressure to force a claim or secure the vote, following the Priority Order for silence/abstention flags."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is the primary suspect. I must maintain narrative control and force a claim or a reveal of wolf signals (deflection/process attacks) before the vote to ensure a successful exile."
+            },
+            {
+                "Hoang": 3,
+                "reason": "Jin has already cleared me and Nhan, establishing a core. Nam is correctly pressuring Riley. I will remain silent to avoid exposing my Guard role unless Riley's response triggers a specific strategy signal."
+            },
+            {
+                "Riley": 2,
+                "reason": "Jin and Nam are coordinating. I will remain silent until a 50%+ majority for a vote is established to maintain my Closer role and avoid initiating accusations."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is flagged for Silence Penalty. As the Witch, I must reinforce the Seer's lead and the target's guilt to ensure a decisive exile of a high-priority wolf signal."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is flagged for Silence/Abstention and ignoring the Seer's direct prompts. I need to amplify the accusation to ensure the village exiles the high-probability wolf and prevents a wolf-coordinated skip."
+            },
+            {
+                "Nam": 9,
+                "reason": "Two consecutive zero-death nights require a mechanical explanation (Guard/Witch). Riley's continued silence and failure to claim a role is a high-probability wolf signal. I must push for an immediate claim or exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin (Seer) is actively building the core and targeting Riley. I must publicly validate Jin's result and support the push on Riley to ensure the village focuses on the high-probability wolf."
+            },
+            {
+                "Riley": 8,
+                "reason": "Jin and Nam have coordinated a direct attack. I must address the sequence of their demands to avoid being exiled before a majority is established."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is flagged for Silence Penalty and is the highest priority target. I must decisively align with Jin's Seer-led core and push for Riley's exile to ensure a win."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is flagged for Silence/Abstention, a high-probability wolf signal. I must reinforce the push against Riley to ensure a coordinated exile and break wolf coordination."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's continued silence after direct pressure from the Seer and me is a high-probability wolf signal. I must push for the exile now to capitalize on the passivity tracking and mechanical silence."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is the final suspect. I must maintain the momentum of the accusation and force an immediate vote to prevent any last-minute deflection or shift in target."
+            },
+            {
+                "Riley": 2,
+                "reason": "Jin, Nam, and Hoang are coordinating. I will remain silent until a majority is established or a role claim is demanded by the majority, then provide a minimalist claim."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin (Seer) has cleared me and Hoang. Riley is flagged for Silence Penalty. I must assertively support the trusted core and push for Riley's exile to ensure a decisive villager victory."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is flagged for Silence/Abstention and is the primary target of the Seer. I must push the accusation to ensure Riley is exiled and break wolf coordination."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's continued silence is a critical wolf signal. I must lock in the vote for Riley based on passivity tracking and the lack of a mechanical defense for the zero-death nights."
+            },
+            {
+                "Hoang": 2,
+                "reason": "The trusted core has already consolidated. Jin (Seer) and I have already called out Riley's silence. There is no need to repeat the accusation; we just need to execute the vote."
+            },
+            {
+                "Riley": 10,
+                "reason": "Jin, Nam, and Hoang have formed a majority (3/6). I must provide a minimalist claim and anchor to the death sequence to avoid immediate exile."
+            }
+        ]
+    ]
+}

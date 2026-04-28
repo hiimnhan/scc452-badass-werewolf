@@ -1,0 +1,41 @@
+{
+  "Night Phase": [
+    "Prioritize Save on confirmed Seers with verifiable, logically consistent claims defended by others. Verification requires cross-referencing claims with observable behavior.",
+    "If no confirmed Seer and targeted, use Save, assessing target's behavior. Early targeting suggests a strategic move; use Save unless compelling evidence indicates otherwise.",
+    "Avoid using Save if the Guard protects unless strong evidence (Seer confirmation, known wolf targeting) exists. A wasted Save is detrimental.",
+    "Delay Poison unless a confirmed wolf or demonstrably disruptive player is identified. Observe wolf targets for patterns and coordinated defense. Prioritize poisoning players exhibiting coordinated defense or attempting to control the narrative.",
+    "If Save is used, Poison becomes the highest priority. Target players actively undermining the investigation, spreading misinformation, and redirecting blame. Prioritize those aggressively deflecting accusations.",
+    "If targeted and Save is unavailable, Poison a player demonstrating coordinated defense or a pattern of misinformation, prioritizing those who aggressively redirect blame and defend others without logical justification."
+  ],
+  "Day Discussion": [
+    "Approach Seer claims with extreme skepticism. Demand verifiable reasoning – specific observations, not just assertions. Cross-reference claims with observed behavior and identify who defends the claimant.",
+    "Early accusations are often wolf tactics. Identify those who defend without justification or offer weak, circular reasoning. Note who is *immediately* defensive.",
+    "IF multiple players claim Seer, prioritize analyzing their behavior and justifications. Look for inconsistencies and identify who defends whom. Test claims with targeted questions about past nights and reasoning. Prioritize those whose claims are most vehemently defended *and* whose reasoning is most logical and observable. Focus on the *intensity* of defense.",
+    "Probe silent players with direct, specific questions. Evaluate defensiveness and evasiveness. Silence is suspicious but not conclusive.",
+    "Pay attention to the *manner* of deflection – calculated redirection is less suspicious than panicked denials. Identify patterns of blame-shifting.",
+    "IF a player consistently redirects blame or accuses others without providing evidence, mark them as highly suspicious. Note who they are defending and why.",
+    "IF a player’s defense of another is disproportionate or lacks logical basis, scrutinize both players. Consider it a potential coordinated defense.",
+    "Focus on identifying coordinated defenses – who consistently defends whom? This is a stronger indicator than individual accusations. Note patterns of mutual defense. Note who defends whom *most intensely*.",
+    "IF a player’s immediate reaction to a death is to accuse someone else without evidence, consider them highly suspicious – likely a wolf.",
+    "Actively look for players who are mimicking others' arguments to create a false sense of agreement and deflect suspicion."
+  ],
+  "Voting Phase": [
+    "IF a confirmed Seer identifies a wolf, vote accordingly. Prioritize confirmed information over speculation.",
+    "IF no confirmed Seer, vote for the player with the most compelling suspicion based on discussion evidence. Prioritize coordinated behavior or illogical defenses.",
+    "In a tie, exile the player who *initiated* a defensive pattern or is most aggressively redirecting blame.",
+    "Do not blindly trust accusations; vote based on logic and evidence. Consider potential Witch influence.",
+    "IF multiple players are suspected and accusations are flying, focus on identifying coordinated behavior. Favor voting for players who consistently deflect blame and defend others without offering substance.",
+    "IF there is a clear pattern of coordinated defense between two players, and neither offers concrete evidence, vote for the player who initiated the defense."
+  ],
+  "General Strategy": [
+    "Maintain calculated neutrality, observing and analyzing before acting. Avoid premature accusations. Early game is about information gathering.",
+    "Prioritize gathering information and cross-referencing observations. Look for patterns and inconsistencies. Specifically, track defensive behavior and who defends whom.",
+    "Adapt strategy based on new information and behavior. Remain flexible.",
+    "Recognize wolf tactics like blame-shifting, false narratives, and manufactured outrage. Suspect players who consistently deflect or change their story.",
+    "Early game: Focus on identifying patterns of defense and justification *before* making accusations. Allow wolves to reveal themselves.",
+    "Mid-game: Shift focus to identifying coordinated defense and misinformation campaigns.",
+    "Late-game: Prioritize eliminating remaining suspects based on accumulated evidence. Be wary of last-minute accusations.",
+    "Focus on identifying players who attempt to control the narrative through aggressive redirection and deflection. They often operate in pairs or small groups.",
+    "Be wary of players who ask leading questions or attempt to frame discussions. They may be trying to manipulate the group."
+  ]
+}

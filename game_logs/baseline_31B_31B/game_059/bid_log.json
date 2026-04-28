@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "First round, no deaths, no statements. I need to listen for Seer claims or wolf signals (redirection/process attacks) before making a move."
+            },
+            {
+                "Cong": 2,
+                "reason": "First day, no deaths. No evidence or claims yet. I will listen for Seer claims or 'Process Attack' behavior before intervening."
+            },
+            {
+                "Nam": 9,
+                "reason": "I have confirmed Nhan is not a werewolf. Revealing this mechanical truth immediately narrows the suspect pool and establishes my role to prevent wasteful exiles."
+            },
+            {
+                "Jin": 10,
+                "reason": "Strategy requires claiming my role immediately to establish presence and begin detecting wolf signals through player reactions and debate patterns."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No statements have been made yet. I need to listen for Seer claims or wolf patterns before intervening. No immediate evidence exists to justify a high bid."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish a presence and frame the night's failure to kill. I will suggest that the lack of a death implies a Guard/Witch interaction, focusing suspicion on the survivor."
+            },
+            {
+                "Meg": 1,
+                "reason": "Strategic passivity. No one is targeting me and no Seer has claimed yet. I will let others speak first to identify the power roles and current suspicions."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Jin's call for a Seer claim and logical coordination aligns with my strategy. I need to support this process to force the Seer out and identify any Process Attackers or Redirectors who oppose it."
+            },
+            {
+                "Cong": 6,
+                "reason": "Jin's claim and push for coordination are logically sound. I need to support this mechanical approach to encourage the Seer to reveal and prevent wolves from using 'process attack' deflections."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin requested the Seer to claim. I must reveal my identity and the fact that Nhan is cleared to establish mechanical truth and narrow the werewolf pool immediately."
+            },
+            {
+                "Hoang": 4,
+                "reason": "Jin's call for Seer coordination aligns with villager efficiency. I need to support the push for a Seer claim to identify targets for my poison potion and ensure the Seer is saved if they emerge."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin's Guard claim and request for a Seer claim could lead to early power role exposure. I need to intervene with mechanical logic to steer the Seer's focus toward Nhan or Cong."
+            },
+            {
+                "Meg": 6,
+                "reason": "Jin's demand for a Seer reveal is robotic and scripted. I need to intervene to frame this mechanical approach as manipulation, sowing doubt about Jin while appearing as a grounded villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Nam confirmed me as innocent. I must acknowledge this, validate Nam's claim to solidify the Seer's position, and push for the remaining players to provide independent analysis to detect blenders or redirectors."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam claimed Seer and immediately pivoted to target me and others without independent reasoning. This is a 'Blender' flag. I must challenge this lack of evidence to prevent being framed."
+            },
+            {
+                "Jin": 4,
+                "reason": "Nam claimed Seer and cleared Nhan. I need to validate this result and push the group to scrutinize Nam's target list (Cong, Hoang, Riley, Meg) to identify Wolf Signals."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nam has claimed Seer and confirmed Nhan. I must validate this ground truth and support the coordination requested by Jin to narrow the suspect pool to Cong, Riley, and Meg."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam's Seer claim put me and Meg on the suspect list. I need to pivot the focus toward Cong or Hoang using mechanical logic before the group consolidates against me."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to validate Nam's clear of Nhan to build trust and frame Jin's demand for 'efficient exile' as robotic manipulation to shift suspicion toward him."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong is committing a Process Attack by labeling Nam's logical narrowing as 'aggressive' and a 'leap in logic'. I must flag this wolf signal immediately to protect the Seer and push the vote toward Cong."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is using behavioral jargon ('aggressive', 'leap in logic') to deflect from mechanical truth and discredit my confirmed result on Nhan. I must shut down this narrative diversion immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong is exhibiting a clear Wolf Signal by attacking Nam's Seer logic as a 'leap in logic'. This is a Power Role Attack. I must flag this immediately to protect the Seer and drive the vote."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is launching a process attack against Nam's coordination and labeling the Seer's logic as a 'leap'. Per strategy, this is a werewolf deflection. I must expose this diversion and validate Nam's ground truth."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam listed me as a suspect. I must intervene to pivot the focus toward Cong's challenge of Nam, using mechanical logic to align with the majority while distancing myself from the suspect list."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to validate Nam's clear of Nhan to build trust and frame Jin's 'efficient exile' talk as robotic/scripted to sow doubt about the Guard claim."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam confirmed me as innocent. Cong is committing a Process Attack by labeling logical suspect narrowing as 'aggressive' and a 'leap in logic'. I must flag Cong as a high-priority wolf target to maintain village momentum."
+            },
+            {
+                "Cong": 9,
+                "reason": "Hoang is using a 'Process Attack' by labeling my request for logic as a 'wolf signal'. This is a high-probability wolf indicator. I must expose this deflection and push the accusation against Hoang."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is using behavioral jargon ('aggressive', 'leap in logic') to discredit mechanical evidence. I must assert the truth of my result and flag Cong's diversion as a wolf signal to secure the vote."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong is exhibiting a clear Power Role Attack by framing Nam's Seer process as a 'leap in logic'. I must flag this wolf signal immediately to steer the vote toward Cong."
+            },
+            {
+                "Riley": 5,
+                "reason": "Nam's suspect pool includes me. I need to align with the majority (Hoang/Nam) and use mechanical logic to shift focus onto Cong to avoid being flagged as a mirror."
+            },
+            {
+                "Meg": 5,
+                "reason": "Must validate Nam's clear of Nhan to build trust and pivot pressure onto Cong. I will frame Hoang's 'wolf signal' terminology as robotic to distance myself from that style while supporting the target."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam confirmed me as innocent. Cong is exhibiting high-priority wolf signals: Process Attack and Redirection. I must immediately validate Nam's result and push for Cong's exile to maintain village momentum."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam and Hoang are using Process Attack and Deflection flags to frame me. Nam is labeling mechanical logic as 'diversions' to incite a vote. I must expose this wolf behavior to avoid being exiled."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is exhibiting clear Wolf Signals: Power Role Attack and Narrative Framing. Nam (Seer) is verified. I must decisively back Nam's result and push for Cong's exile to eliminate a high-probability wolf."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is using a diversionary tactic by attacking Nam's tone and logic. I must reinforce the ground truth of Nam's result and label Cong's behavior as a wolf signal to secure an exile."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam and Hoang are building a consensus against Cong. I need to align with the majority using mechanical logic to establish villager trust and avoid being the next target of the Seer's pool."
+            },
+            {
+                "Meg": 7,
+                "reason": "Nam has cleared Nhan. I must immediately validate this clear to build trust and pivot to support the push against Cong, ensuring I look like a helpful villager while the town focuses on him."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "Nam is the Seer and confirmed me. I must reinforce Nam's lead and pressure Riley and Meg to provide independent analysis or be flagged as blenders/silent wolves."
+            },
+            {
+                "Nam": 10,
+                "reason": "I have confirmed Riley is a werewolf. This is absolute mechanical truth and must be revealed immediately to ensure the village exiles a confirmed wolf."
+            },
+            {
+                "Jin": 7,
+                "reason": "I must claim Guard immediately to establish my role and solidify Nam's position as the Seer, ensuring the village follows the mechanical evidence to target Riley or Meg."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nam is the Seer and Nhan is confirmed innocent. I must validate these ground truths and pressure the remaining players (Riley, Meg) to provide binary takes to flush out wolves."
+            },
+            {
+                "Riley": 6,
+                "reason": "Two nights of no deaths suggest the Guard and Witch are active. I need to introduce mechanical doubt about Nam's Seer claims to prevent a coordinated villager push."
+            },
+            {
+                "Meg": 2,
+                "reason": "I am currently safe. I will stay quiet during the early phase to observe the dynamics and only intervene to support Nam's clear of Nhan or to frame others."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam (Seer) has identified Riley as a Werewolf. I must immediately support this mechanical evidence and push for Riley's exile to maintain village momentum and prevent any redirection."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam (Seer) has identified Riley as a Werewolf. I must claim my role as Guard immediately to validate Nam's protection and push for Riley's immediate exile to secure a win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam provided a ground truth result identifying Riley as a wolf. I must immediately validate this result independently to secure Riley's exile and prevent any diversionary tactics from other players."
+            },
+            {
+                "Riley": 10,
+                "reason": "Nam has made a direct Seer claim and identified me as a wolf. I must immediately pivot to mechanical logic to discredit the result or create doubt before the vote."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam has identified my ally Riley as a wolf. I must immediately intervene to discredit Nam's claim, defend Riley, and frame Nam's certainty as an aggressive attempt to railroad the village."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam (Seer) identified Riley as a wolf. Riley is using a redirection tactic, shifting focus to night deaths to discredit the Seer. I must immediately push for Riley's exile based on the Seer's evidence."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is a confirmed werewolf attempting to use night-death mechanics to sow doubt. I must immediately shut down this diversion and force the exile of a confirmed wolf."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is exhibiting a Power Role Attack and Narrative Framing by using the lack of deaths to discredit the Seer. I must immediately validate Nam's result and push for Riley's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using diversion (night-kill anomalies) and gaslighting ('force a vote') to deflect from Nam's ground truth. I must expose these wolf signals and demand Riley's immediate exile."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is targeting my ally Riley. I must intervene immediately to defend Riley, validate Nhan's clear to build trust, and frame Nam as a fake Seer to save my teammate."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam (Seer) identified Riley as a wolf. Riley is using redirection by focusing on night-kill anomalies to discredit the Seer. I must immediately reinforce the Seer's result and push for Riley's exile."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is a confirmed werewolf. I must shut down their attempt to use night-death mechanics to sow doubt and ensure the village executes the exile immediately."
+            },
+            {
+                "Jin": 10,
+                "reason": "I must immediately claim Guard to validate Nam's Seer claim and decisively shut down Riley's diversion. Riley is exhibiting clear Power Role Attacks and Process Attacks; I need to secure the vote for their exile."
+            },
+            {
+                "Riley": 10,
+                "reason": "Nam has directly claimed I am a wolf. Hoang is reinforcing this. I must immediately pivot the mechanical failure of the night kill to frame Nam as a fake Seer to survive."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is targeting my ally Riley. I must intervene to discredit Nam as a fake Seer and frame Hoang's 'wolf signal' jargon as robotic manipulation to save Riley and build trust."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Riley is a confirmed werewolf. I must maintain absolute pressure and prevent any doubt from sowing, ensuring the village executes the exile immediately based on mechanical truth."
+            },
+            {
+                "Jin": 9,
+                "reason": "I must claim my role as Guard immediately to validate Nam's Seer claim and shut down Riley's diversionary attack. Confirming I protect the Seer solidifies the power role logic and secures Riley's exile."
+            },
+            {
+                "Hoang": 2,
+                "reason": "Riley is already cornered by Nam's ground truth and Nhan's validation. I have already exposed Riley's diversion. No new evidence is needed to secure the vote."
+            },
+            {
+                "Riley": 10,
+                "reason": "Nam has claimed a direct result on me. I must immediately pivot the logic to the missing night kills and question the Seer's validity to avoid certain exile."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is targeting my ally Riley. I must intervene to discredit Nam's 'ground truth' and frame Hoang and Nhan's aggressive push as scripted, robotic behavior to save Riley and sow doubt."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using a desperate redirection and a false claim that the Seer can kill to frame Nam. I must immediately flag this as a high-priority wolf signal to secure the vote."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is attempting to gaslight the village by claiming the Seer can kill. I must immediately expose this mechanical falsehood to secure the vote and prevent my own exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is exhibiting multiple Wolf Signals: Power Role Attacks and Narrative Framing. Nam is the confirmed Seer. I must claim Guard immediately to validate Nam and secure Riley's exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using blatant diversionary tactics and gaslighting, and is now attacking the Seer with a flawed understanding of role mechanics. I must decisively shut down this deflection to secure the vote."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is targeting my ally Riley. I must intervene to defend Riley, frame Hoang and Nhan's aggressive push as 'robotic/scripted', and sow doubt about Nam's fake Seer claim to save my teammate."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "The Seer (Nam) was killed, removing our primary intelligence. I must immediately push for the exile of Meg, who exhibits strong wolf signals through silence and blending, to prevent wolf victory."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam (Seer) is dead. I must immediately claim Guard to stabilize the village, confirm Nam's legitimacy, and push for the exile of Meg based on the Seer's final scrutiny list."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam (Seer) was killed. I must immediately cement Nam's ground truth results, confirm Nhan's innocence, and push the village to target remaining suspects before wolves can gaslight the group."
+            },
+            {
+                "Meg": 3,
+                "reason": "I am currently safe. I will remain quiet during the early phase to let the villagers clash, then intervene to validate Nam's clear of Nhan to build trust."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Nam (Seer) is dead. Meg is exhibiting high-priority wolf signals (Silence Penalty/Wolf Blending) by ignoring Hoang's direct question. I must push for Meg's exile to maintain momentum."
+            },
+            {
+                "Jin": 9,
+                "reason": "Hoang is questioning my role and demanding an explanation for Nam's death. I must immediately defend my claim as Guard and pivot the focus back to Meg's passive alignment and wolf signals."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang is pushing a robotic, binary interrogation. I need to support Nhan's clear to build trust and frame Hoang's demanding tone as manipulative to deflect the focus from my silence."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is exhibiting strong wolf signals (Silence Penalty/Wolf Blending) and failing to answer direct questions. I must push for her exile to maintain momentum now that the Seer is dead."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg's continued silence is a critical wolf signal. I must press for the binary answer and evaluate Jin's claim against the fact that Nam died despite my save potion being spent."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin and Hoang are railroading me using 'wolf signals' and binary demands. I must immediately frame this as robotic bullying and deflect suspicion onto Jin's failed Guard claim to flip the narrative."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg is executing a textbook Process Attack and Redirection. She labels logical coordination as 'manipulative' and 'a script' while shifting focus to Jin. This is a high-priority wolf signal. I must push for her exile immediately."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is exhibiting textbook Wolf Signals: Process Attacks ('manipulative', 'scripted', 'railroad') and Narrative Framing. I must immediately flag these signals to secure her exile and defend my role against her diversion."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is executing a textbook Process Attack and Gaslighting by labeling coordination as 'robotic' and 'railroading'. This is a definitive wolf signal. I must expose this behavior to secure her exile."
+            }
+        ],
+        [
+            {
+                "Jin": 10,
+                "reason": "Meg is using blatant Process Attacks ('manipulative', 'scripted', 'railroad') and attacking my role. I must decisively validate Nhan's analysis and push for Meg's immediate exile to secure victory."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg has executed multiple Process Attacks and Gaslighting tactics. I must reinforce Nhan's analysis, label Meg's behavior as definitive wolf signals, and coordinate the immediate exile of Meg to secure a victory."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan is leading a direct charge against me using jargon. I must immediately reframe this as bullying and railroad the suspicion back onto Jin's failed protection to survive the vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg has explicitly executed a Process Attack and Redirection. The evidence is absolute. I must push for an immediate vote to exile her before she can further derail the village coordination."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg is using blatant Process Attacks ('manipulative', 'script', 'railroad') to deflect. I must reinforce Nhan and Hoang's analysis to secure her exile and defend my Guard claim against her attempt to frame my protection as a failure."
+            },
+            {
+                "Meg": 10,
+                "reason": "I am being railroaded by a coordinated push. I must immediately frame Nhan and Hoang's 'process attack' jargon as robotic manipulation to shift the narrative from evidence to bullying before the vote is sealed."
+            }
+        ]
+    ]
+}

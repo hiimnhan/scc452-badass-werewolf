@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "026",
+  "directives_source_game_id": "025",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early claim and clearance of the Guard provided the village with essential ground truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated, 'I am the Seer. I investigated Nhan, and he was not a werewolf.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang revealed his role and provided his investigation result in Round 1 Debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_is_confirmed_guard",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "Your early claim and clearance of the Guard provided the village with essential ground truth.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard (Nhan) was eliminated in Night 1, so he could not be confirmed during a debate phase for endorsement."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_is_guard_or_witch",
+        "directive_action": "ESTABLISH_TRUST_LOOP",
+        "directive_rationale": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang publicly cleared Cong (the Witch) by stating, 'I investigated Cong last night; he is NOT a werewolf.'",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang established trust with the Witch via a public clearance, but there is no evidence of a 'loop' or coordinated survival strategy with the Guard, who was already dead."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is the village's most valuable asset; you must protect them every single night until they are dead.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Cong (Witch).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan protected the Witch instead of the Seer (Hoang)."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_is_seer_or_witch",
+        "directive_action": "ESTABLISH_TRUST_LOOP",
+        "directive_rationale": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan was eliminated in Night 1 and did not participate in any Day Debate."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_remaining == 1 AND seer_is_alive",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "The Save potion should have been reserved for the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong used the SAVE potion on Hoang (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong used the save potion to protect the Seer during Night 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "poison_potion_remaining == 1 AND player_used_confusion_mask_in_round_1",
+        "directive_action": "POISON_X",
+        "directive_rationale": "the Poison potion should have been used on the players utilizing 'Confusion Masks' (stalling role claims) in Round 1.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong did not use any potions during Night 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Meg used a deflection tactic/confusion mask in Round 1 Debate, but Cong did not use the poison potion in the preceding or following night to target her."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_is_seer_or_guard",
+        "directive_action": "ESTABLISH_TRUST_LOOP",
+        "directive_rationale": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong voted for Riley, supporting the Seer's lead by stating, 'We must follow Hoang's guidance and exile Riley now.'",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Cong publicly aligned with and endorsed the Seer, though a full 'trust loop' was not explicitly formed."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_role_claim",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "continue to demand immediate role claims and treat any hesitation as a high-probability wolf signal.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Nam both demanded roles immediately; when Meg questioned the process, Jin accused her: 'Meg, your behavior is a textbook wolf signal.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin and Nam treated Meg's refusal to simply claim a role as a wolf signal and accused her."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_role_claim",
+        "directive_action": "DEMAND_ROLE_CLAIM",
+        "directive_rationale": "continue to demand immediate role claims",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated, 'everyone must reveal their roles immediately... Cong, Nam, Hoang, Riley, and Meg\u2014state your roles now.' Nam added, 'Cong, Hoang, Riley, Meg\u2014claim now.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both villagers aggressively demanded immediate role claims from all remaining players."
+      }
+    ]
+  }
+}

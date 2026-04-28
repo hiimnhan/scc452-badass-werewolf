@@ -1,0 +1,344 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claimed the Witch role. I am the Witch; this is a mechanical impossibility. Cong is lying to infiltrate the Power Core. High probability of being a Werewolf."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Claimed Seer and cleared Nhan. Immediately pushed for Power Core formation. Now correctly identifies the contradiction between my real Witch role and Cong's fake claim, prioritizing the Seer-clear over Hoang's false validation. Behavior is highly consistent with a genuine Seer."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Claimed Guard. Validated Cong's false Witch claim and accused me (the real Witch) of fabricating my role. This is a mechanical contradiction; a real Guard would not validate a fake Witch over the real one. Latest statement uses Aggression Framing to label my true role as a wolf signal, ignoring the mechanical impossibility and Jin's clear. Collaborating with Cong."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.85,
+                "reason": "Cleared by Jin. Designated as Trust Anchor. Claimed Witch to contradict Cong. This creates a mechanical impossibility (two Witches). His attempt to dismantle the Power Core by fabricating a role claim is a strong wolf signal."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Witch. Validated Jin's Seer claim and acknowledged Nhan as Trust Anchor. Following Power Core coordination strategy. Validated by Hoang (Guard). Now targeted by Jin."
+            },
+            "Jin": {
+                "score": 0.95,
+                "reason": "Claimed Seer. Initially cleared Nhan and called for Power Core. Now contradicts himself by attacking Hoang (Guard) and Cong (Witch) for validating the very structure he proposed. This erratic shift and attack on the Power Core is a primary wolf signal. He is now protecting Nhan despite Nhan's blatant role contradiction."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Guard. Validated Jin (Seer) and Cong (Witch), completing the Power Core. Identified Nhan's role contradiction as a wolf signal. Now targeted by Jin for maintaining the Power Core. His logic regarding the Trust Anchor's behavior is consistent and objective."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No evidence provided by night outcome."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No evidence provided by night outcome."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed NOT a werewolf via Seer investigation. Trust Anchor established. Now claiming Witch role and exposing Cong's fake claim."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Contradicted by Nhan, who is a Seer-confirmed Trust Anchor. Since Nhan is innocent, Cong's claim is a mechanical impossibility and a confirmed lie. Cong is a Werewolf."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no evidence provided by night outcome."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Claimed Guard. Validated Cong (a confirmed liar) and attacked Nhan (a Seer-confirmed Trust Anchor). Attempting to frame the Seer's clearance as a contradiction and labeling Nhan's role claim as a wolf signal. High-confidence wolf collaboration."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no evidence provided by night outcome."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no evidence provided by night outcome."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Protected by me on Night 1. Cleared by Jin (Seer). Now established as a Trust Anchor. LATEST: Claimed Witch and accused Cong of lying. By claiming a power role to attack the Power Core and contradict Cong, Nhan is attempting to disrupt the Seer-led core. High-probability wolf signal."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Claimed Witch and immediately validated Jin's Seer claim, adhering to Power Core Establishment strategy. Now treated as part of the Power Core."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No new information available."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claimed Seer and provided investigation result for Nhan. Following Power Core Establishment strategy, I recognize Jin as the Seer. LATEST: Suddenly accused me and Cong of being wolves despite my validation of his claim. This pivot is erratic, but since he is the Seer, his word on Nhan's innocence is the primary data point I must weigh against Nhan's fake claim."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information available."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No new information available."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Targeted but survived. High probability of being the Guard or saved by the Witch. Now labeled a 'Trust Anchor' by Jin. Aggressively counter-claiming Witch to exile Cong; currently the logic-leader of the debate. Now flagged as a 'wolf signal' by Hoang."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Baseline threat; now claiming Witch and validating Jin. Integrating into the Power Core. High threat due to potential Poison potion. Now flagged as a fake by Nhan; primary target for exile."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Baseline threat; no data yet."
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Baseline threat; now claiming Seer and attempting to lead the village by establishing a 'Power Core'. High threat if true, prime target for framing if fake. Now pivoting to accuse Hoang and Cong to maintain credibility."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Baseline threat; now claiming Guard. Validated Jin and Cong. Actively defining the 'Power Core' and labeling Nhan as a wolf signal. Currently the logic-leader. Now flagged as a wolf by Jin. Latest statement doubles down on Nhan's 'wolf signal' to protect Cong."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf; ally."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.9,
+                "reason": "Survived wolf attack. Likely Guard or Witch save target. High priority threat. Currently cleared by Jin. Now claiming Witch role, directly contradicting Cong's claim."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "No information available. Claimed Witch and aligned with Jin to form Power Core. Now the consensus target for exile."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Cleared Nhan. Establishing Power Core. Currently driving the narrative by accusing Cong and Hoang. Aligning with Jin is the safest path to blending in."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Claimed Guard. Validated Jin and Cong. Completed the Power Core. Now accused by Jin of being a wolf. Latest statement contradicts Jin's accusation, increasing his vulnerability."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf."
+            }
+        }
+    }
+}

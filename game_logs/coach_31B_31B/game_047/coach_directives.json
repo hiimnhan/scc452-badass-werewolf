@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "early_game",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early reveal and clear results provided the village with critical ground truth.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue this aggressive transparency; it forces wolves into defensive, detectable patterns.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "wolf_count_not_minimal",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is the village's most valuable asset; prioritize their survival above all else until the wolf count is minimal.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "COORDINATE_WITH_WITCH",
+        "rationale_short": "There was no explicit communication between the Guard and Witch regarding who was being protected",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "COORDINATE_WITH_GUARD",
+        "rationale_short": "you must coordinate more closely with the Guard",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "guard_protecting_seer",
+        "action": "SAVE_OTHERS",
+        "rationale_short": "If the Guard is protecting the Seer, you can save others",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "guard_uncertain",
+        "action": "SAVE_SEER",
+        "rationale_short": "if the Guard is uncertain, your save potion is the final line of defense for the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_silence_or_processing",
+        "action": "ACCUSE_X",
+        "rationale_short": "You correctly identified that silence and 'processing' are wolf signals.",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_voted_for_confirmed_wolf",
+        "action": "DO_NOT_ENDORSE_X",
+        "rationale_short": "Never clear a player just because they voted for a confirmed wolf; treat it as a calculated deception to gain trust.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 9,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=10 but emitted+dropped=9"
+  }
+}

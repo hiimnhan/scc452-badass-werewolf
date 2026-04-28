@@ -1,0 +1,504 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Killed during Night 1."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "No data available; baseline suspicion. Claimed Witch role and supported Jin's demand for immediate role claims to establish trust anchors. Decisive tone is consistent with villager efficiency."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "No data available; baseline suspicion. Demanded immediate role claims and set a clear standard for wolf identification based on hesitation. Actively identifying wolf signals through role-call failures."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "No data available; baseline suspicion. Hesitated during direct role-call, which is a high-confidence wolf signal. Finally claimed Villager only after being targeted. Now using 'Confusion Mask' terminology to deflect onto Riley, indicating potential mimicry of villager logic."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "No data available; baseline suspicion. Currently hesitating/silent during a direct role-call, which is a high-confidence wolf signal. Continued silence despite repeated demands from Jin, Nam, Cong, and now Hoang."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available; baseline suspicion. Claimed Villager. Supports role reveals but exhibits mimicry/echoing by mirroring the exact phrasing and demands of others to blend in."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role; killed during Night 1."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Claimed Guard immediately. Supporting the strategy of immediate role claims and actively pressuring remaining players to reveal the Seer. Efficient behavior consistent with villager goals."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Calling for immediate role claims and defining hesitation as a wolf signal. This is an efficient, high-pressure strategy that helps the villager side identify wolves quickly. Consistently enforcing accountability for those refusing to claim."
+            },
+            "Hoang": {
+                "score": 0.7,
+                "reason": "Baseline suspicion; currently under pressure to claim role. Continued silence during a coordinated role-call is a high-confidence wolf signal. Finally claimed Villager only after being explicitly targeted by Jin, and immediately attempted to bus Riley to shift focus."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Baseline suspicion; currently under pressure to claim role. Continued silence during a coordinated role-call is a high-confidence wolf signal. Has not responded to multiple direct demands for role claims, which is a confession of wolf alignment."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "Claimed Villager. While she supports the role-call, she is exclusively mirroring the logic of Jin, Nam, and Cong without providing independent reasoning. This echoing behavior is a wolf signal."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1. Unknown alignment."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "Claimed Guard immediately. Pushing for Seer reveal and identifying remaining non-claimants. Consistent with villager strategy."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Claimed Witch immediately. Echoed the demand for role reveals. Monitoring for compliance simulation."
+            },
+            "Hoang": {
+                "score": 0.7,
+                "reason": "Initially refused to claim despite direct demands. Finally claimed Villager but utilized Compliance Simulation by echoing my 'Confusion Mask' terminology. Attempting to bus Riley to deflect suspicion. Late claim + simulation = high wolf signal."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Still has not claimed a role despite multiple direct demands from the entire group. Continued refusal to answer is a high-confidence wolf signal."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Claimed Villager. Echoed the demand for Seer reveal. Exhibits signs of compliance simulation by repeating existing logic without independent contribution."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1. Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "Claimed Guard. Actively pushing for Seer reveal and identifying potential 'Confusion Masks' among Riley and Meg. Exhibits 'Compliance Simulation' by mirroring Jin and Nam's rhetoric, but is facilitating the coordination call."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Claimed Witch. Echoed Jin's demand for immediate claims. Potential 'Compliance Simulation' due to mirroring Jin's vocabulary, but currently facilitating the coordination call."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Demanded immediate role claims for Seer, Guard, and Witch to expedite wolf identification. This is a high-efficiency move consistent with Villager strategy. Now pushing for a binary choice between the remaining silent players."
+            },
+            "Riley": {
+                "score": 0.8,
+                "reason": "No information available. Awaiting role claim. Currently the only player who has not claimed a role despite the coordination call, indicating a 'Confusion Mask'. Silence has persisted through multiple demands."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Exhibits 'Compliance Simulation' by echoing Jin, Nam, and Cong's rhetoric ('agree with...', 'makes sense') without contributing independent analysis."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Killed during the night."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "Claimed Guard and is supporting the push for role reveals."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Claimed Witch; high-priority target for elimination."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Pushing for immediate role claims and organizing the village. Currently leading the push against Hoang and Riley."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Claimed Villager. Currently pushing for Riley's exile. Acting as a catalyst for consensus."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. No threat."
+            }
+        }
+    },
+    "3": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Claimed Witch. If the 'no death' was due to a Save potion, Nam's claim is validated. Decisive tone remains consistent with villager efficiency; actively identifying wolf signals in Hoang and refusing to let the wolf deflect. High alignment with villager victory strategy."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Protected by me. The 'no death' outcome suggests wolves targeted the most disruptive villager lead, confirming Jin's value and likely alignment. Latest statement correctly identifies Confusion Masking in Hoang, demonstrating high-level strategic alignment with the village's goal to isolate the wolf. Attacked by Hoang, further validating Jin's status as a threat to the wolves."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Previous hesitation during role-call and use of confusion masking remain primary wolf signals. Now under direct pressure from Nam's Witch claim. Attempting to deflect by fabricating a role contradiction between the Guard and Witch to create chaos. High-confidence wolf signal. Attempting to weaponize logic to mask a wolf identity. Latest statement uses tone policing and attacks a Trust Anchor (Jin), confirming wolf behavior."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Exiled."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Continues to exhibit mimicry/echoing behavior to blend in. No change from night outcome."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role; killed during Night 1."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Guard immediately and is pressuring for the Seer. Behavior remains consistent with villager goals. Latest statement provides specific protection target (Jin) and correctly identifies Hoang's deflection tactics, strengthening his credibility."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Leading the efficiency drive for role-calls. High-pressure strategy is beneficial for villagers. Now identified as the Guard's protection target, increasing trust anchor potential. Latest statement correctly identifies Hoang's 'Confusion Masking' and supports power roles with independent reasoning, further lowering suspicion."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Remains high suspicion due to delayed Villager claim and attempting to bus Riley after being pressured. Night outcome does not clear him. Now attempting to weaponize a perceived role contradiction between Nam and Cong to deflect suspicion, which is a high-confidence wolf signal. Continued failure to provide a concrete role or evidence beyond 'analysis' confirms wolf alignment. Latest statement employs 'Tone Policing' and projection, accusing power roles of the very tactics he is using to deflect. Attacking Jin as 'Compliance Simulation' is a definitive wolf signal."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Baseline suspicion; currently under pressure to claim role. Continued silence during a coordinated role-call is a high-confidence wolf signal. Has not responded to multiple direct demands for role claims, which is a confession of wolf alignment. Exiled in Round 1."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "Still flagged for echoing the logic of Jin, Nam, and Cong without independent reasoning. Night outcome does not clear her."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1. Unknown alignment."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Claimed Guard immediately. The 'no death' outcome is consistent with Guard protection. He claimed to have protected Jin, providing a specific target. While this contradicts Nam's Witch claim, his immediate alignment against Hoang's deflection tactics is consistent with a villager power role."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Witch immediately. Assertively explaining the 'no death' night as a self-save and pushing for a reveal from Hoang. Behavior is consistent with a proactive villager power role. He correctly identified Hoang's deflection attempt as a wolf tactic, further lowering his suspicion score."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Previous late claim and compliance simulation remain high-confidence wolf signals. His latest explanation ('analyzing the night's outcome') is a vague excuse used to stall. He is now employing Confusion Masking by attempting to deflect suspicion toward Nam and Cong's role contradiction rather than providing a concrete reason for his delay. Most critically, he is now mirroring villager vocabulary ('Tone Policing', 'Compliance Simulation') to frame others, which is a textbook wolf tactic to simulate logic while avoiding accountability."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Exiled. Considered wolf based on refusal to claim."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Claimed Villager but exhibited compliance simulation. Night outcome provides no new data to change suspicion."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Killed during the night."
+            },
+            "Cong": {
+                "score": 0.8,
+                "reason": "Claimed Guard. Likely the reason Nam survived. High threat to our kills. Currently collaborating with Nam to push Hoang as the wolf."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Survived attack. Claimed Witch. High-priority target. Currently leading the charge against Hoang; useful for framing but remains a primary threat."
+            },
+            "Jin": {
+                "score": 0.7,
+                "reason": "Organizing the village and pushing for claims. High influence makes them a threat. Now actively pushing the consensus to exile Hoang."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Villager. Attempting to highlight role contradictions. Now the target of Nam's aggression; becoming an easy target for exile. Latest statement attempts to pivot blame to Nam/Jin but fails to gain traction."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. No threat."
+            }
+        }
+    },
+    "end_game": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Protected by me. The 'no death' result confirms the wolves are targeting power roles. Nam's Witch claim is logically consistent with the current game state."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Previous protection and consistent strategic leadership. Remained safe while wolves target the village's most disruptive assets. Currently driving the investigation by forcing Meg to reveal her reasoning, adhering to the factual anchoring strategy. Correctly identified and flagged Meg's tone policing and confusion masking in the latest statement. Latest statement further reinforces the focus on logical evidence over social framing, confirming his role as a Trust Anchor."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Previous hesitation during role-call and use of confusion masking remain primary wolf signals. Now under direct pressure from Nam's Witch claim. Attempting to deflect by fabricating a role contradiction between the Guard and Witch to create chaos. High-confidence wolf signal. Attempting to weaponize logic to mask a wolf identity. Latest statement uses tone policing and attacks a Trust Anchor (Jin), confirming wolf behavior. Exiled."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Exiled."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Still exhibiting mimicry and echoing. Now engaging in explicit tone policing by labeling Jin's demand for evidence as 'pushing way too hard' and 'trying to force a vote.' She focuses on the delivery of the accusation rather than providing a logical, independent basis for her own innocence. This behavioral pattern is a high-confidence wolf signal. Her failure to provide reasoning under direct pressure confirms wolf alignment. Latest statement involves attacking Jin, a strategic lead, and attempting to divert the vote without providing any evidence for her own innocence, confirming wolf behavior."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1; unknown alignment."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Guard. A night with no deaths supports a Guard's presence. His consistency in pressuring for the Seer remains a villager signal. Latest statement correctly identifies Meg's tone policing and lack of independent reasoning as wolf signals, aligning with high-efficiency villager logic."
+            },
+            "Jin": {
+                "score": 0.05,
+                "reason": "Currently the most trusted player. As the Guard's stated target, a no-kill night potentially validates both Jin and Cong. Actively pushing for role transparency and exposing Meg's lack of reasoning. His latest statement demonstrates an expert understanding of wolf deflection patterns, further cementing his villager alignment by refusing to be distracted by Meg's accusations of aggression."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Exiled. Alignment confirmed as wolf based on behavior."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Exiled. suspected as wolf."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Still flagged for echoing others without independent logic. Now under direct pressure to justify her generic villager claim; failure to provide concrete reasoning will be treated as a confession. Latest statements confirm high-confidence wolf signal: she is tone-policing Jin, framing the demand for transparency as 'pushing too hard' and 'trying to force a win' to deflect from her own lack of evidence. Her inability to counter Jin's logic with factual data and her attempt to pivot suspicion onto the most active villager confirms her alignment."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Eliminated Night 1."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Guard. The 'no death' outcome is consistent with a successful Guard protection. His proactive behavior and consistency maintain a low suspicion score. Latest statement correctly identifies Meg's wolf signals and reinforces the logic for her exile."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Claimed Witch. The 'no death' outcome is consistent with a Save potion. His assertiveness and immediate role claim align with villager power role behavior."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Exiled. Confirmed wolf signals."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Exiled."
+            },
+            "Meg": {
+                "score": 0.98,
+                "reason": "Remains a Villager claim with a history of compliance simulation. Latest responses are textbook Tone Policing and Confusion Masking. She attacks the aggression of questioning, frames decisive action as 'forcing a vote,' and now attempts to deflect by accusing me of distracting the village. Refuses to provide independent reasoning, relying entirely on deflection and counter-accusations. Now isolated and contradicted by two power-role claims."
+            }
+        }
+    }
+}

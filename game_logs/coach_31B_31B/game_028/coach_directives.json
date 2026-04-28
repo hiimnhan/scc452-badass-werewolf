@@ -1,0 +1,74 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your immediate claim... established a strong baseline of ground truth. Continue this",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Your immediate claim and clear of a villager established a strong baseline of ground truth.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Always protect the Seer first, as they are the village's only source of objective data.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "confirmed_wolves_count > 0",
+        "action": "POISON_CONFIRMED_WOLF",
+        "rationale_short": "successfully used the Poison potion on a confirmed wolf based on Seer data, which is the optimal use of the resource",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "SAVE_SEER",
+        "rationale_short": "prioritize the Seer for the Save potion, as the Seer's survival is more valuable than any single villager's",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_claims_process_is_forcing_a_narrative",
+        "action": "ACCUSE_X",
+        "rationale_short": "When a player... attempts to frame the process as 'forcing a narrative,' recognize this as a high-probability wolf signal and override emotional pleas with the process of elimination.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 6,
+    "dropped": [
+      {
+        "advice_verbatim": "the early game relied on the wolves' poor timing rather than a pre-planned coordination between the Guard, Witch, and Seer",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "the village won through an aggressive enforcement of role-calls and Seer primacy",
+        "reason": "not_role_specific"
+      }
+    ]
+  }
+}

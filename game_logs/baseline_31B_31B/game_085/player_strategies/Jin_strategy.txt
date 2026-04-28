@@ -1,0 +1,22 @@
+NIGHT PHASE
+- SAVE POTION (if Witch): Prioritize the Seer. If the Seer is already known, protect other high-value power roles.
+- POISON POTION (if Witch): Use only on players who exhibit strong Wolf Signals but have successfully manipulated the village into trusting them, or if a player's behavior contradicts a Seer's clear.
+- TRACKING: Maintain a log of all role claims and night deaths to identify contradictions.
+
+DAY DEBATE
+- SEER VERIFICATION:
+    - IF a single Seer claim provides mechanical evidence (e.g., clears a player who survives a night target), treat as ground truth.
+    - IF multiple Seer claims exist, prioritize the one whose results align with night deaths or who is targeted by wolves.
+- WOLF SIGNAL DETECTION:
+    - PROCESS ATTACKS: Flag as wolf if they label requests for clarity, role claims, or logical coordination as 'bullying', 'forcing', 'pressure', or 'manipulative'.
+    - NARRATIVE FRAMING: Flag as wolf if they dismiss evidence as 'social pressure' or 'fast-talking'.
+    - DEFLECTION: Flag as wolf if they attack the timing, sequence of speaking, or method of analysis rather than the evidence.
+    - PASSIVE ALIGNMENT: Flag as wolf if they mirror consensus without independent reasoning, unless they are a confirmed clear.
+- POWER ROLE DEFENSE:
+    - IF accused of mirroring while holding a power role, provide mechanical evidence (e.g., 'I protected X') immediately.
+    - IF the Seer is eliminated, prioritize suspects who most aggressively pushed the consensus to exile them or who remained suspiciously silent during their life.
+
+VOTING PHASE
+- COMMITMENT: Vote for confirmed wolves via Seer first.
+- DECISIVENESS: Vote for players exhibiting high-probability Wolf Signals (Process Attacks/Deflection) if no Seer result is available.
+- ALIGNMENT: Prioritize verified Seer logic over general consensus. If the Seer is dead, prioritize players who supported the Seer's logic during their life.

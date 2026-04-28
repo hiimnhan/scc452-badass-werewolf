@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "003",
+  "directives_source_game_id": "002",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "presenting_findings",
+        "directive_action": "WITHHOLD_DEMAND_FOR_IMMEDIATE_EXILE",
+        "directive_rationale": "present your findings and allow the village to reach the conclusion; this reduces the 'wolf-like' appearance of controlling the narrative",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam presented his finding that Nhan was not a werewolf and stated, 'Everyone else is a suspect; I want to see who tries to steer the narrative today.' He did not demand an immediate exile.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam provided the data and observed the reactions of others rather than demanding an immediate vote for a specific player."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "forming_accusation",
+        "directive_action": "AVOID_EMOTIONAL_NARRATIVES",
+        "directive_rationale": "Avoid emotional narratives",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Riley, citing Nam's objective data and Riley's failure to provide logical contradictions, avoiding emotional language.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin's accusation was based on the lack of logical counter-evidence and the presence of Seer data."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_death_occurred",
+        "directive_action": "TRACK_WHO_BENEFITED_FROM_DEATH",
+        "directive_rationale": "track who benefited from the Seer's death",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nam) survived the entire game."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wanting_to_validate_power_role_identity",
+        "directive_action": "REVEAL_ROLE_BEFORE_VALIDATING",
+        "directive_rationale": "Never validate a power role's identity using private knowledge unless you are ready to reveal your role to the village",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Hoang validated Nam's data as 'objective data' but did not reveal private knowledge of Nam's role to validate him; he simply accepted the claim."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conflict_between_phrasing_error_and_seer_clear",
+        "directive_action": "PRIORITIZE_CONFIRMED_CLEARS",
+        "directive_rationale": "Prioritize confirmed 'clears' over linguistic mistakes",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No conflict arose where a villager had to choose between a phrasing error and a Seer clear."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "forming_argument",
+        "directive_action": "FOCUS_ON_LOGICAL_CONTRADICTIONS_IN_TIMELINES",
+        "directive_rationale": "stop using 'behavioral tropes' (e.g., 'classic wolf move') to argue; focus on logical contradictions in timelines",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Riley, arguing that Riley's attempt to discredit objective data using 'feelings' rather than 'logical contradictions' was a strong indicator of a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan explicitly avoided behavioral tropes and focused on the absence of logical contradictions in Riley's argument."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent_or_only_agreeing_with_majority",
+        "directive_action": "CHALLENGE_SILENT_PLAYER",
+        "directive_rationale": "Pay closer attention to the 'silent' players\u2014the surviving Wolf spent the game agreeing with the winning narrative without ever leading it, which is a major deception signal",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not challenge the silent players; instead, he voted for Meg based on her attempts to discredit the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "While Nam (Seer) challenged the silent players (Jin and Meg), Nhan (Villager) did not initiate any challenge toward silent players."
+      }
+    ]
+  }
+}

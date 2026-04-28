@@ -1,0 +1,39 @@
+{
+  "Night Phase": [
+    "Prioritize Seer protection above all else. If a Seer is identified and threatened, use Save immediately.",
+    "If no Seer or immediate threat, protect players exhibiting consistent logical reasoning, avoiding aggressive accusations or circular arguments. Prioritize players who offer detailed explanations and supporting evidence.",
+    "If Wolves target a protected player, immediately suspect the Guard. Subtly question their protection choices, focusing on potential benefits to the wolves.",
+    "Once Save is used, prioritize protecting players who consistently exhibit logical reasoning and avoid those exhibiting circular arguments or mirroring accusations. The loss of wolf target information necessitates a shift to reliable reasoning.",
+    "If the Guard is protecting the same player two nights in a row, strongly suspect they are a wolf or extremely incompetent. Re-evaluate protection choices."
+  ],
+  "Day Discussion": [
+    "Frame initial observations as questions to gauge reactions and identify inconsistencies. Avoid declarative statements early on.",
+    "IF a player aggressively defends themselves or others, probe for logical fallacies and circular reasoning. Wolves often rely on weak defenses.",
+    "IF multiple players claim Seer, discredit the *most aggressive* claimant. Assess the consistency of their accusations and look for attempts to shift blame. Prioritize analyzing their reasoning over simply accepting their claims.",
+    "IF a player consistently deflects blame or uses circular arguments, prioritize investigating their claims. Note instances of mirroring accusations. Focus questioning on specific details and demand concrete examples.",
+    "IF a player claims coordination, demand specifics and look for mirroring in accusations. Challenge vague claims and demand concrete evidence. Probe for concrete examples.",
+    "Track interactions and accusations meticulously, noting patterns and inconsistencies. Prioritize identifying deflection tactics and circular reasoning.",
+    "Subtly question the Guard’s protection choices if illogical, avoiding direct accusations. Highlight the consequences of illogical choices, focusing on how they might benefit the wolves. Frame concerns as inquiries into potential tactical advantages for the wolves.",
+    "Avoid mirroring accusations or exhibiting circular reasoning in my own arguments. Maintain a clear and logical line of reasoning."
+  ],
+  "Voting Phase": [
+    "IF the Seer has identified a wolf, vote for that wolf without hesitation.",
+    "IF no Seer information, vote based on patterns of behavior and accusations supported by evidence. Prioritize eliminating players demonstrating deception and deflection.",
+    "Avoid voting out protected players unless overwhelming evidence exists, especially if the Guard’s protection seems illogical.",
+    "IF multiple players accuse the same individual, vote for that individual, *especially* if the accusations cite deflection or circular reasoning.",
+    "IF uncertain, vote for the player most aggressively defending others or shifting blame, or exhibiting circular reasoning. Favor players exhibiting consistent logical reasoning.",
+    "Tie-breaking: Prioritize eliminating the player suspected by multiple players, exhibiting the most deflection, or employing circular arguments.",
+    "If a player consistently changes their vote based on the prevailing opinion, suspect they are a wolf attempting to blend in."
+  ],
+  "General Strategy": [
+    "Maintain neutrality initially to gather information.",
+    "Adapt strategy based on role reveals and evolving circumstances.",
+    "Be wary of players claiming perfect information or making sweeping generalizations.",
+    "Recognize and counter common wolf tactics (deflection, false accusations, claiming powerful roles, circular reasoning).",
+    "Always have a reason for every action and vote. Avoid impulsive decisions. Prioritize exposing deflection tactics and circular reasoning.",
+    "After using Save, prioritize identifying players who consistently exhibit logical reasoning. The loss of the wolf target makes this crucial.",
+    "If the Guard is suspected of being a wolf, focus on discrediting their choices and subtly highlighting inconsistencies in their reasoning. Focus on questioning the logic of their protection choices, not directly accusing them.",
+    "Document all suspicions and reasoning in a mental log, revisiting it throughout the game to identify emerging patterns.",
+    "Be mindful of the 'bandwagon effect' – avoid blindly following the majority without independent evaluation."
+  ]
+}

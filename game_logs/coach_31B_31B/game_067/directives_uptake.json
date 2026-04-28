@@ -1,0 +1,91 @@
+{
+  "evaluated_game_id": "067",
+  "directives_source_game_id": "066",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_questioned_mechanics",
+        "directive_action": "EXPLAIN_SAVE_POTION_RULES",
+        "directive_rationale": "When the village questioned the mechanics, you should have pivoted from listing 'clears' to explaining the rules.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated in Round 1 and did not participate in any debate phases."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_deaths_last_night",
+        "directive_action": "ACKNOWLEDGE_WITCH_SAVE_POSSIBILITY",
+        "directive_rationale": "You must understand that 'no deaths' can be caused by either the Guard or the Witch.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard (Cong) was eliminated in Round 2 before the first 'no deaths' night occurred in Round 3."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_deaths_last_night",
+        "directive_action": "REFRAIN_FROM_ACCUSING_WITCH_OF_LYING",
+        "directive_rationale": "By calling the Witch a liar, you created a fake contradiction that the wolves exploited.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard (Cong) was eliminated in Round 2 and was not present for the Round 3 debate."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_deaths_last_night",
+        "directive_action": "ACCEPT_WITCH_SAVE_CLAIM",
+        "directive_rationale": "In this game, if a Witch uses a save potion on a target the wolves attacked, no one dies.",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Villagers Jin, Hoang, and Meg reacted differently: Jin accepted the claim and voted Riley; Hoang and Meg rejected the claim as a wolf tactic and voted Nam.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin followed the directive by trusting Nam's save claim, but Hoang and Meg ignored it, treating the claim as a wolf signal."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_confirmed_clearance_of_player",
+        "directive_action": "TRUST_DATA",
+        "directive_rationale": "When the Seer cleared the Guard, you should have trusted that data regardless of your personal feelings toward the Seer's tone.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated before they could reveal the clearance of the Guard (Cong) to the village."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_confirmed_clearance_of_player",
+        "directive_action": "VOTE_AGAINST_OTHERS",
+        "directive_rationale": "Never prioritize 'vibes' or perceived 'urgency' over a Seer's confirmed clearance.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer never provided a confirmed clearance to the public record."
+      }
+    ]
+  }
+}

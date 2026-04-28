@@ -1,0 +1,82 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "after_revealing_clear",
+        "action": "ENSURE_VILLAGE_ACKNOWLEDGEMENT",
+        "rationale_short": "ensure the village acknowledges your clears before moving to the next target",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protect the Seer until they are dead or the wolves are found.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_cleared_by_seer",
+        "action": "DO_NOT_POISON_X",
+        "rationale_short": "Never use your poison potion on a player cleared by the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_contradicts_seer_data",
+        "action": "POISON_X",
+        "rationale_short": "Save your poison for players who contradict the Seer's data.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "ENDORSE_X",
+        "rationale_short": "When the Seer provides a clear, that player is a confirmed ally.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_cleared_by_seer",
+        "action": "DO_NOT_ACCUSE_X",
+        "rationale_short": "Attacking a cleared player based on 'vibes' or 'tactics'... only creates chaos",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_contradicts_seer_data",
+        "action": "ACCUSE_X",
+        "rationale_short": "anyone contradicting it is a primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_claims_confused_or_processing_early_then_pivots_to_majority",
+        "action": "ACCUSE_X",
+        "rationale_short": "Players who claim to be 'confused' or 'processing' early on, only to pivot and vote with the majority... are often wolves blending in.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 8,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=9 but emitted+dropped=8"
+  }
+}

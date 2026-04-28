@@ -1,0 +1,78 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "performed excellently by claiming early",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "investigation_complete",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "providing immediate ground truth",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Prioritize the Seer exclusively until they are eliminated or the game is won",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_confirmed_wolf",
+        "action": "POISON_CONFIRMED_WOLF",
+        "rationale_short": "Once the Seer identifies a wolf, use the Poison immediately",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_silent",
+        "action": "CHALLENGE_SILENT_PLAYER",
+        "rationale_short": "maintain the habit of aggressively questioning 'silent' players",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_during_role_call",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "continue to penalize players who hesitate during role calls",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_frames_seer_cleared_player",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "continue to penalize players who... attempt to frame Seer-cleared players",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "Continue treating your results as absolute",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

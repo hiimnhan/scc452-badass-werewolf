@@ -1,0 +1,19 @@
+Night Phase:
+- Death Logging: Maintain a strict log of all eliminations and role claims to identify contradictions.
+- Zero-Death Analysis: IF no one dies, flag Guard/Witch activity. Cross-reference claims to verify who was saved.
+- Target Prioritization: Prioritize monitoring players who exhibited 'mirroring' or 'deflection' during the previous day.
+
+Day Discussion:
+- Seer Verification: Cross-reference Seer results with night deaths. IF a cleared player dies, flag as a silencing move. IF a claimed Seer attacks others for asking logical/mechanical questions, flag as a fake Seer.
+- Deflection Detection: Flag players who attack tone, process, or aggression (e.g., 'forcing a narrative', 'pushing too hard') instead of providing factual evidence as high-probability wolves.
+- Mirroring Detection: Flag players who adopt mechanical terminology (e.g., 'wolf signal', 'process attack') without contributing new evidence or using it to deflect from their own lack of evidence.
+- Coordination Analysis: IF multiple players align against a target without mechanical proof, flag as potential wolf coordination, unless the target is consistently using deflection tactics.
+- Passivity Tracking: Treat silence as neutral initially. IF a target is identified and a silent player fails to provide a mechanical defense or role claim, flag as a wolf signal.
+- Claim Verification: IF a player refuses to provide a role claim or stalls by questioning the 'timing' of the request, treat as a high-probability wolf signal.
+- Role-Claim Pressure: IF I am a Villager, I will explicitly claim my role early to avoid being flagged for 'refusing to claim' by wolves using my own logic against me.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities or contradict verified Seer truth.
+- Protective Voting: Vote against anyone attempting to exile a player cleared by a verified Seer.
+- Behavioral Targeting: In the absence of mechanical proof, vote for players using deflection jargon or mirroring.
+- Coordination Check: Question lead accusers basing votes on 'vibes' without mechanical backing, but prioritize the vote if the target's behavior matches confirmed deflection patterns.

@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "066",
+  "directives_source_game_id": "065",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "after_claiming_role",
+        "directive_action": "COORDINATE_PROTECTION_WITH_GUARD_AND_WITCH",
+        "directive_rationale": "once you claim, your only priority is ensuring the Guard and Witch know exactly who you are to create a 'Power Core' of protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong claimed Seer and immediately asked everyone else to claim their roles to identify contradictions, but did not specifically coordinate protection strategies with the Guard or Witch.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong claimed his role but focused on identifying contradictions rather than coordinating protection with the Guard and Witch."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "requesting_claims",
+        "directive_action": "EXPLAIN_UTILITY_OF_INFORMATION",
+        "directive_rationale": "explain why the information is needed for the village's survival rather than attacking players' tones",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nam did not request claims; Cong and Jin were the ones who requested claims in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_hesitate_to_claim",
+        "directive_action": "AVOID_FRAMING_HESITATION_AS_GUILT",
+        "directive_rationale": "framing hesitation as guilt often makes you look like a wolf trying to rush a vote",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nam did not comment on players' hesitation to claim; Meg was the one who questioned the delay in claims."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "guard_claims_protection_of_X_and_X_dies",
+        "directive_action": "IDENTIFY_GUARD_AS_LIAR",
+        "directive_rationale": "If the Guard claims to have protected someone and they still die, you can identify the liar",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No one died in Round 1 or 2 while the Guard was claiming protections."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evaluating_suspects",
+        "directive_action": "AVOID_VIBE_BASED_ACCUSATIONS",
+        "directive_rationale": "you pivoted to 'vibe-based' accusations against the Villager, which played directly into the wolves' hands",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin accused Hoang of attempting to deceive the village by lying about game mechanics, basing the accusation on the logic of the save potion.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin's accusation against Hoang was based on a disagreement over game mechanics (the save potion logic) rather than 'vibes' or tone."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "guard_claims_role",
+        "directive_action": "VERIFY_GUARD_CLAIM",
+        "directive_rationale": "the Witch didn't verify the Guard's claim before the village voted him out",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin did not verify Nam's Guard claim; instead, Jin voted for Hoang and was subsequently exiled by the village.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not attempt to verify Nam's claim, though Jin's own claim was the primary focus of the debate."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_exhibits_aggressive_tone",
+        "directive_action": "PRIORITIZE_ROLE_UTILITY_OVER_TONE",
+        "directive_rationale": "Stop prioritizing 'tone' or 'behavioral vibes' over role utility. Abrasive behavior is not a wolf signal",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Villagers (Nhan, Hoang) did not base their accusations on aggressive tone."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_mirrors_vocabulary_or_follows_consensus",
+        "directive_action": "AVOID_CONSENSUS_TRAP",
+        "directive_rationale": "Avoid the 'Consensus Trap'\u2014Riley and Meg (Wolves) blended in by mirroring your vocabulary and voting with the majority",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Hoang followed the consensus to exile Jin, as did the wolves Riley and Meg.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan and Hoang both voted for Jin along with the wolves Riley and Meg, following the majority consensus."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_requests_claims",
+        "directive_action": "EVALUATE_REQUEST_UTILITY",
+        "directive_rationale": "When a player like the Guard demands claims, evaluate if the request helps the village, not if the delivery is rude",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong (Seer) requested claims, Nhan and Hoang did not criticize the request and instead focused on the factual contradictions of the claims provided.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers did not attack the delivery of the request for claims."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "existence_of_factual_evidence",
+        "directive_action": "PRIORITIZE_FACTS_OVER_BEHAVIORAL_ACCUSATIONS",
+        "directive_rationale": "The transition from factual evidence (Seer's clear) to behavioral accusations (mirroring/vibes) allowed the wolves to manipulate the vote",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Hoang voted to exile Jin based on the factual contradiction regarding the save potion and the fact that no one died.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan and Hoang prioritized the factual contradiction of the save potion over behavioral vibes in Round 1."
+      }
+    ]
+  }
+}

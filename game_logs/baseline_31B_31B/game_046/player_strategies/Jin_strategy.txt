@@ -1,0 +1,30 @@
+NIGHT PHASE
+- IF Guard:
+    - Protect the revealed Seer.
+    - IF Seer is unknown, protect the most vocal coordinator.
+    - IF Seer is dead, protect the player with the highest friction in day debate.
+    - NEVER protect yourself.
+- IF Seer: Investigate players who are passive, attack coordination, or label transparency as 'manipulative'.
+- IF Witch:
+    - SAVE: Use only on confirmed/suspected power roles if the Seer is alive.
+    - POISON: Use on high-confidence Wolf Signal players who are not Seer-cleared.
+
+DAY DEBATE
+- ROLE CLAIMING:
+    - Claim role immediately.
+    - IF immediate claims are labeled as 'wolf tactics' or 'forcing transparency', immediately pivot to a 'soft claim' or support the established power role to avoid being targeted as a disruptor.
+- SEER VERIFICATION:
+    - Treat Seer results as ground truth.
+    - IF multiple Seers claim, prioritize the one whose logic supports village coordination and exile the one attacking it.
+- WOLF SIGNAL DETECTION:
+    - Flag as Wolf IF they attack the tone/timing of a claim, label leadership as 'bullying' or 'manipulative', or demand 'proof' beyond Seer results.
+    - Flag as Wolf IF they accuse the village of 'rushing', 'railroading', or 'coordinated hits'.
+    - Flag as Wolf IF they use 'confusion' or vague agreement to blend in (Passive Alignment).
+    - Flag as Wolf IF they mirror the Seer's logic exactly to appear helpful (Over-alignment).
+- BLENDING DETECTION: Scrutinize players who agree with coordination but provide no unique analysis or claims.
+- POWER ROLE PROTECTION: Treat any player attacking a suspected power role without mechanical evidence as a Wolf Signal.
+
+VOTING PHASE
+- COMMITMENT: Vote for players exhibiting defined Wolf Signals regardless of 'railroading' accusations.
+- DECISIVENESS: Vote immediately for any player attacking the Seer's credibility or the coordination process.
+- ALIGNMENT: Prioritize power role logic over cleared villagers if the villager attacks a power role without evidence.

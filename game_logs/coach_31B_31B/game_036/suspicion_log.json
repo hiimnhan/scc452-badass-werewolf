@@ -1,0 +1,476 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Witch. Actively countered Safe-Echoing by Nam and Riley, demanding independent logic over blind alignment. This behavioral analysis is a strong villager signal. Correctly identified Meg's 'Fatal Error' in framing logical scrutiny as destabilization, further cementing their alignment with the village's strategic needs."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Claimed Villager. Exhibits Safe-Echoing by blindly accepting Hoang's result as ground truth without independent analysis. Flagged as a potential 'Quiet Wolf' for mirroring the Seer's narrative too perfectly."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No data yet. Alignment remains unknown."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Claimed Seer and cleared Nhan. Assertively demanding role reveals to identify 'Confusion Masks'. Currently acting as the village trust anchor."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Claimed Villager. Exhibits Safe-Echoing by describing the Seer's result as the 'only empirical evidence' and aligning blindly. Mirroring the trust anchor without independent analysis flags them as a potential 'Quiet Wolf'."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Exhibits Safe-Echoing by treating Hoang's result as ground truth without analysis. Immediately attacked Cong for flagging the echoers, framing a request for logic as 'destabilizing' the trust anchor. This aggression toward critical analysis is a primary wolf signal. Now flagged for a 'Fatal Error' as she attempts to silence behavioral analysis to protect other echoers."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf by Hoang (Seer)."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Claimed Villager. Flagged as 'Hiding Wolf' for Safe-Echoing; blindly accepted Hoang's result as ground truth without independent logic."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No night deaths provide no evidence; baseline suspicion."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Claimed Seer. Provided clear result for Nhan. Assertive tone; awaiting verification/contradiction."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Claimed Villager. Flagged as 'Hiding Wolf' for Safe-Echoing; mirrors Nam by blindly aligning with Hoang's result as 'empirical evidence' without independent logic. Aggressively demands role claims to project transparency."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Flagged as 'Hiding Wolf' for Safe-Echoing of Hoang. Committed a 'Fatal Error' by attacking the Witch (Cong) for identifying wolf patterns. Using 'Confusion Mask' tactics by framing logical analysis as 'destabilizing' to protect Nam and Riley."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Cleared by Hoang (Seer). Treated as absolute ground truth."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claimed Witch. Deployed a 'Confusion Mask' by framing the push for transparency and Seer alignment as 'aggression'. Now committed a 'Fatal Error' by attacking Meg for defending the Seer's primacy and attempting to frame a villager as a wolf to destabilize the village's trust anchor."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No one died; no evidence to shift suspicion yet."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer immediately and provided a clear result for Nhan. Assertive posture aligns with villager strategy."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Aligns with Seer and Nam's pressure. Potential Safe-Echoing as they provide no independent logic, only agreement with the current majority/power."
+            },
+            "Meg": {
+                "score": 0.2,
+                "reason": "Claimed Villager. Correctly identified Cong's Confusion Mask and defended the Seer's primacy. Logic aligns with villager victory strategy; targeted by Cong's Fatal Error."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by Hoang's Seer claim. Treat as not-wolf unless Hoang is proven false."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Witch. Demonstrating independent logic by identifying Safe-Echoing in Nam and Riley. Correctly identified Meg's use of a Confusion Mask to deflect logical analysis. High alignment with villager-side strategic behavior."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Exhibiting 'Safe-Echoing' by accepting Hoang's result as ground truth without independent logic. Attempting to deflect attention by demanding claims from others."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Provided clear for Nhan. Actively pushing for role reveals to establish village structure."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Exhibiting 'Safe-Echoing' by aligning with Hoang's data as 'only empirical evidence' without independent reasoning. Mirroring Nam's pressure tactics to blend in."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Exhibiting 'Safe-Echoing' by treating Hoang's claim as ground truth. Using a Confusion Mask by framing Cong's logical critique of Nam/Riley as an attempt to 'destabilize' the village. This is a deflection tactic to protect other echoers and a 'Fatal Error' by attacking a player performing logical analysis."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via seer investigation."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Claimed Witch. Accused Nam and Riley of 'Safe-Echoing' and 'Hiding Wolf' signals. Analysis is logically consistent with strategy; correctly identified the blending pattern. Latest statement identifies Meg's deflection as a 'Fatal Error' and a 'Confusion Mask,' demonstrating high alignment with the village's strategic objective to expose wolves."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Demanded role reveals (positive). However, exhibited 'Safe-Echoing' by blindly accepting Seer results as ground truth without independent logic. Potential wolf blending in."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role; no night data to shift suspicion. Still needs to reveal role."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Demanded role reveals. However, exhibited 'Safe-Echoing' by aligning with Seer data as the only evidence and mirroring Nam's demands without independent logic. Potential wolf blending in."
+            },
+            "Meg": {
+                "score": 0.85,
+                "reason": "Claimed Villager. Exhibited 'Safe-Echoing' by treating Seer results as ground truth without independent logic. Committed a wolf signal by attempting to deflect Cong's logical analysis of echoing as 'destabilizing' to shift focus away from the identified pattern. Now flagged by Cong as committing a 'Fatal Error' by framing analysis as destabilization."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Survived the night. Either protected by Guard or saved by Witch. High probability of being a power role. Now cleared by Hoang's Seer claim."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Neutral threat. Claimed Witch. Now attempting to pivot the group away from Hoang's empirical data by framing alignment as a wolf signal. High threat due to counter-narrative positioning; now being flagged by Meg for destabilization. Latest: Attempting to force a rush to judgment on Meg to deflect suspicion from himself."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Neutral threat. Now driving the debate alongside Hoang; using a high-pressure, logical frame to force role reveals. Potential social leader."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Neutral threat. Has not yet spoken."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Neutral threat. Claimed Seer and is driving the debate with a demand for role reveals. Aligning with his logical approach for now."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow werewolf. Zero threat. Successfully reinforcing the trust anchor and framing Cong's dissent as a red flag. Now being targeted by Cong, providing a shield for my loyalty."
+            }
+        }
+    },
+    "end_game": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.1,
+                "reason": "Maintains strong villager signal by actively fighting Safe-Echoing and identifying Fatal Errors. High strategic value."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Still flagged as a 'Quiet Wolf' for Safe-Echoing. However, Hoang (Seer) has now explicitly confirmed Nam is not a werewolf. Per strategy: Asset Protection\u2014never vote for any player cleared by the Seer."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Still no data. Now flagged for a 'Confusion Mask' due to continued silence and refusal to reveal role despite demands from the trust anchor. Latest statement: finally claimed Villager and attacked Riley's Safe-Echoing. While the delay is suspicious, the logic used against Riley mirrors the Seer's analysis, slightly reducing the immediate suspicion score, now further reduced as Riley's desperation outweighs Jin's initial silence."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Confirmed as the likely target of the wolves, which strongly validates their claim as Seer. Survival is key for the village's ground truth. Actively enforcing role-calls and identifying behavioral red flags in Jin and Riley. Latest statement provides the definitive behavioral trigger for Riley's exile."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Continues to exhibit Safe-Echoing. Alignment remains suspect as they mirror the Seer's results without independent behavioral analysis; now explicitly flagged by the Seer for this behavior. Latest statement confirms Safe-Echoing by deferring to Hoang's 'data' and aggressively pushes for Jin's exile to mask their own lack of logic. Attempting to force a quick exile of Jin to eliminate a potential threat to their cover. Latest response doubles down on the Seer's data to avoid providing original logic, confirming a pattern of mirroring to blend in. Now explicitly designated as the primary suspect by the Seer. Latest statement commits a 'Fatal Error' by framing the Seer's logic as 'panic,' directly contradicting the trust anchor to deflect suspicion."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Exhibits Safe-Echoing. Immediately attacked Cong for flagging the echoers. Now flagged for a 'Fatal Error' as she attempts to silence behavioral analysis. Exiled."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed non-wolf by Hoang (Seer). Ground truth per strategy."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed non-wolf by Hoang (Seer). Ground truth per strategy."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "No new evidence from the night's outcome; maintains baseline suspicion. Flagged by Seer for using a 'Confusion Mask' due to silence. Latest statement: attempts to deflect by accusing Riley of the same patterns; while pivot-like, the Seer's current focus on Riley reduces Jin's immediate priority as a suspect."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Actively identifying 'Confusion Mask' and 'Safe-Echoing' patterns in Jin and Riley. Providing clear results for Nam. His latest analysis of Riley's mirroring behavior is consistent with factual power-role logic."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Still flagged as 'Hiding Wolf' for mirroring Nam and blindly aligning with Hoang's results. Latest statement confirms 'Hiding Wolf' patterns: uses Hoang's data as a shield to aggressively push for Jin's exile without independent evidence. Now explicitly flagged by the Seer (Hoang) for Safe-Echoing and aggressive redirection. Latest response attacks the Seer's logic, framing factual analysis as 'panic' and 'twisting cooperation,' a desperate attempt to undermine the Seer to avoid exile. Evidence threshold reached."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Flagged as 'Hiding Wolf' for Safe-Echoing of Hoang. Committed a 'Fatal Error' by attacking the Witch (Cong) for identifying wolf patterns. Using 'Confusion Mask' tactics by framing logical analysis as 'destabilizing' to protect Nam and Riley."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Cleared by Seer. Absolute ground truth."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Previous Fatal Error and Confusion Mask are not negated by a quiet night. Still a primary target."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Neutral. Initially flagged for Silence/Confusion Mask. Claimed Villager. While reactive, Hoang noted that Jin provided independent logic, which contradicts the Safe-Echoing pattern seen in Riley. Suspicion lowered relative to Riley."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Seer immediately and provided a clear. Assertive, consistent, and actively identifying wolf signals. Trustworthy."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Exhibiting Safe-Echoing behavior; providing no independent logic. Admits to mirroring consensus. Attempting to deflect suspicion by aggressively pushing for Jin's exile without independent reasoning. Seer (Hoang) has now explicitly flagged Riley's reliance on his data as a wolf signal and a deflection tactic. Latest statement employs a Confusion Mask, framing the Seer's logic as 'panic' and an 'attack' to deflect scrutiny. Target for immediate exile."
+            },
+            "Meg": {
+                "score": 0.2,
+                "reason": "Claimed Villager. Correctly identified Cong's Confusion Mask and defended the Seer's primacy. Logic aligns with villager victory strategy; targeted by Cong's Fatal Error."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by Hoang. Remains the most trusted player unless the Seer is exposed."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Witch. If she used her Save potion, it explains the night's outcome. Her independent logic remains a strong villager signal."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Still exhibiting 'Safe-Echoing' from Round 1. However, Hoang (Seer) has explicitly confirmed Nam is not a werewolf. Seer results are absolute ground truth."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Actively identifying behavioral patterns (Confusion Masks, Safe-Echoing) and providing clears. High-confidence villager alignment. His latest intervention to call out Riley's Safe-Echoing reinforces his role as the village's logical anchor."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Still exhibiting 'Safe-Echoing'. Like Nam, the lack of a night kill provides no evidence of innocence. Hoang has now specifically flagged Riley's mirroring as Safe-Echoing, increasing suspicion. Latest statement is a deflective attack, framing silence as an 'admission' to force an immediate exile, which is a manipulation tactic to avoid scrutiny of their own lack of logic. Now using a Confusion Mask by labeling logical counter-arguments as 'deflection' and 'panicking' to manipulate the village into an emotional vote. Hoang has now explicitly identified Riley's reliance on his data as a wolf signal. Latest response attempts to discredit the Seer by framing logical behavior as 'panic' and cooperation as a 'crime,' reinforcing the Confusion Mask."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Exhibiting 'Safe-Echoing' by treating Hoang's claim as ground truth. Using a Confusion Mask by framing Cong's logical critique of Nam/Riley as an attempt to 'destabilize' the village. This is a deflection tactic to protect other echoers and a 'Fatal Error' by attacking a player performing logical analysis."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation."
+            },
+            "Cong": {
+                "score": 0.3,
+                "reason": "Claimed Witch. Logically consistent analysis of wolf signals. No evidence to suggest wolf alignment."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Unknown alignment and role. Refusal to reveal role constituted a 'Confusion Mask.' Now claimed Villager. Correctly identified Riley's Safe-Echoing and deflection tactics, providing independent behavioral logic rather than blind trust. Score decreased as Jin is now the primary target of Riley's deflection."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Still exhibiting 'Safe-Echoing' by mirroring consensus without independent logic. Latest statement confirms reliance on Seer data as a shield to avoid providing own logic. Attempting to pivot to an aggressive stance against Jin to deflect suspicion. High probability of blending in. Now flagged for a deflection attack against a player who finally revealed their role. Latest statement doubles down on using Seer data as a weapon to silence others while providing zero independent behavioral analysis. Now explicitly attacking the Seer, framing logical analysis as 'panic' to undermine ground truth. Primary suspect."
+            },
+            "Meg": {
+                "score": 0.85,
+                "reason": "Claimed Villager. Exhibited 'Safe-Echoing' by treating Seer results as ground truth without independent logic. Committed a wolf signal by attempting to deflect Cong's logical analysis of echoing as 'destabilizing' to shift focus away from the identified pattern. Now flagged by Cong as committing a 'Fatal Error' by framing analysis as destabilization. Exiled."
+            }
+        }
+    }
+}

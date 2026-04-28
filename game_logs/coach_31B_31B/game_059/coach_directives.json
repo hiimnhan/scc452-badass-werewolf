@@ -1,0 +1,85 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "VOTE",
+        "trigger": "hard_contradiction_between_claims",
+        "action": "VOTE_AGAINST_CONTRADICTORY_CLAIMANT",
+        "rationale_short": "Prioritize hard contradictions over behavioral cues.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "VOTE",
+        "trigger": "behavioral_cue_of_hostility",
+        "action": "WITHHOLD_VOTE_BASED_ON_TONE",
+        "rationale_short": "Trust factual discrepancies over 'tone.'",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "uncertainty_about_game_state",
+        "action": "WITHHOLD_INFORMATION",
+        "rationale_short": "Never guess the game state.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "claim_request_about_save_status",
+        "action": "STAY_SILENT_IF_NOT_VERIFIED",
+        "rationale_short": "Claiming the Seer was saved when you didn't know for sure created a factual contradiction.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "any_debate_prompt",
+        "action": "REVEAL_VERIFIED_ACTIONS_ONLY",
+        "rationale_short": "Stick to your role and verified actions.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_echoes_power_role_without_new_evidence",
+        "action": "ACCUSE_X",
+        "rationale_short": "Watch for wolves who echo power roles without adding new evidence.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_mirrors_power_role_logic_to_target_quiet_player",
+        "action": "VOTE_AGAINST_MIRRORING_PLAYER",
+        "rationale_short": "When a wolf mirrors a power role's logic but uses it to target a 'quiet' player, it is a high-probability wolf signal.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "player_is_quiet",
+        "action": "WITHHOLD_VOTE",
+        "rationale_short": "Focus on these coordination patterns rather than gut feelings about who is 'too quiet.'",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "Excellent identification of 'Compliance Simulation.' You correctly spotted the wolves mirroring your logic to blend in while attacking a quiet villager.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

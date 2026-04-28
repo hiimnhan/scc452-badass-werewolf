@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "027",
+  "directives_source_game_id": "026",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your decision to claim early and provide data... forced the wolves to react.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin revealed they were the Seer and provided data (Nhan is innocent) during the voting phase of Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin revealed their role and data in Round 1, although it occurred during the vote rather than the debate phase."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any player claims your data is 'unverifiable'",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "any player who claims your data is 'unverifiable' is likely a wolf attempting to paralyze the village.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player claimed the Seer's data was 'unverifiable'."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is the village's only source of objective truth; you must prioritize their survival above all else.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Nhan instead of the Seer (Jin).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not protect the Seer; they protected the Witch."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_was_attacked",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Your use of the Save potion on the Seer in Round 2 was the turning point of the game.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was not attacked by wolves; the Seer was eliminated by the Witch's poison."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player shows 'Confusion Masks' (stalling/vague excuses) AND seer_is_unavailable",
+        "directive_action": "POISON_X",
+        "directive_rationale": "do not hesitate to use your Poison potion on players showing 'Confusion Masks' (stalling/vague excuses) if the Seer is unavailable.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The trigger requires the Seer to be unavailable; however, the Witch used the poison on the Seer himself while he was still alive."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REQUEST_ROLE_CALL",
+        "directive_rationale": "Continue this 'Role-Call Enforcement' to trap wolves in contradictions.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Villager) stated, 'Nhan is correct; we need a role call immediately.' Cong (Villager) stated, 'We don't need to \"let the Seer speak naturally\"\u2014we need facts.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both Villagers actively requested and supported a role call in Round 1."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "conflict between Seer-cleared player and uncleared player's intuition",
+        "directive_action": "VOTE_AGAINST_UNCLEARED",
+        "directive_rationale": "Always prioritize Seer-cleared players over the 'intuition' of uncleared players.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (cleared by Seer Jin) was accused by Meg (uncleared) of being too aggressive. Nam and Cong voted to exile Meg.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers prioritized the cleared player (Nhan) and voted against the uncleared player (Meg) who was attacking Nhan."
+      }
+    ]
+  }
+}

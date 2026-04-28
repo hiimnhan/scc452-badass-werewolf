@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "064",
+  "directives_source_game_id": "063",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early claim was high-risk but paid off by establishing a Trust Anchor immediately.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin immediately stated, 'I am the Seer,' at the start of the Day Debate in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin revealed their role as the Seer in the first round of debate as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "investigation_result == VILLAGER",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "Continue using clearances to build a core of trusted players",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that they investigated Nhan and confirmed they are not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin endorsed Nhan after receiving a villager investigation result."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "unverified_villagers_count > 0",
+        "directive_action": "MODERATE_AGGRESSION",
+        "directive_rationale": "be wary of how your aggression is perceived by unverified villagers to avoid splitting the vote",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin aggressively demanded claims, stating 'Any delay or vague answer will be treated as a wolf signal' and later claiming the silence of others was a 'wolf signal.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not moderate aggression; instead, they used high-pressure tactics against unverified players."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_revealed == true",
+        "directive_action": "COMMUNICATE_PROTECTION_TARGETS",
+        "directive_rationale": "communicate your protection targets to the Seer to cross-reference with their investigations",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang revealed their role as Guard and acknowledged Jin as the Seer, but did not communicate who they protected.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not share their protection targets with the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_revealed == true",
+        "directive_action": "COORDINATE_WITH_SEER",
+        "directive_rationale": "When you claim your role, prioritize coordinating with the Seer to validate the night's events",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan never explicitly revealed their role as the Witch during the debate."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "detected_behavior == 'Tone Policing' OR detected_behavior == 'Stalling'",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "You correctly identified 'Tone Policing' and 'Stalling' as wolf signals",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam observed the stalling of Cong and voted to exile Cong, stating the 'refusal to claim is a clear wolf signal.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified stalling and accused the player exhibiting that behavior."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_behavior == 'Aggressive'",
+        "directive_action": "AVOID_ACCUSING_BASED_ON_TONE",
+        "directive_rationale": "be careful not to let 'Aggression-Bias' cloud your judgment; as seen in Round 2, a villager's urgency can be mistaken for wolf-like pressure",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong observed the aggressive demands for claims from Jin, Nhan, and Hoang, and argued that exiling based on the timing of claims was premature.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong explicitly avoided accusing the aggressive players and cautioned against basing decisions on tone/timing."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_clearance == true AND behavioral_suspicion == true",
+        "directive_action": "VOTE_AGAINST_OTHER_THAN_CLEARED",
+        "directive_rationale": "Always prioritize Seer clearances over behavioral suspicions",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam noted that Nhan was cleared by the Seer and voted for Cong instead of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam prioritized the Seer's clearance of Nhan and voted for a non-cleared player."
+      }
+    ]
+  }
+}

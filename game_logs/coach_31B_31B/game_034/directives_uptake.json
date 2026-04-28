@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "034",
+  "directives_source_game_id": "033",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Continue prioritizing early claims to flush out wolves.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'I am the Seer,' during the Round 1 Day Debate and shared the result of their investigation on Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong revealed their role as the Seer in the first debate phase as directed."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_revealed == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "shielding the Seer after their reveal, which is the most critical survival strategy",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Guard) chose to protect Cong (Seer) during the Night 2 actions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Cong revealed as Seer in Round 1, Nam protected Cong in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_seer == true",
+        "directive_action": "SAVE_X",
+        "directive_rationale": "The Witch should save the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Witch) used the SAVE potion on Cong (Seer) during the Night 2 actions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch used the save potion on the Seer when the Seer was targeted by the wolf."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_unreachable_by_guard == true",
+        "directive_action": "SAVE_X",
+        "directive_rationale": "targets the Guard cannot reach to maximize resource efficiency",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There is no evidence in the record of the Witch targeting a player specifically because they were unreachable by the Guard."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_frames_transparency_requests_as_aggression == true",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "when a player frames requests for transparency as 'aggression.' This is a high-probability wolf signal.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley framed Hoang's request for reveals as 'way too aggressive.' In response, Nhan (Villager) voted for Riley, stating that framing the demand for transparency as 'aggression' is a classic wolf signal.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan correctly identified Riley's behavior as the trigger and voted to exile them."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_aligns_with_seer_without_independent_logic == true",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Always scrutinize those who align with the truth without providing independent logical contributions.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player aligned with the Seer without providing their own logical reasoning; those who aligned with the Seer (Nhan, Hoang, Jin) provided specific behavioral observations about the suspects."
+      }
+    ]
+  }
+}

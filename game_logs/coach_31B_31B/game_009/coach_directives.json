@@ -1,0 +1,70 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "no_deaths_last_night",
+        "action": "CONSIDER_WITCH_SAVE_OR_GUARD_PROTECT",
+        "rationale_short": "recognize that a night with no deaths is a primary indicator of a Witch save or Guard protect",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "game_state_seems_impossible",
+        "action": "QUESTION_OWN_ASSUMPTIONS",
+        "rationale_short": "When the game state seems impossible, question your own assumptions before accusing others of lying",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "alive_count_low AND seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority must be the Seer's survival above all else until the Wolves are identified",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "not_only_way_to_save_seer",
+        "action": "WITHHOLD_ROLE_AND_NIGHT_ACTIONS",
+        "rationale_short": "Never reveal your role or specific night actions through public claims unless it is the only way to save the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "power_role_accused_of_mechanical_error",
+        "action": "PLAY_DEVILS_ADVOCATE",
+        "rationale_short": "Always play Devil's Advocate when a power role is being accused of a mechanical error",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "aggressive_accusation_by_seer",
+        "action": "VERIFY_GAME_RULES",
+        "rationale_short": "followed the Seer's aggressive accusation without verifying the game rules",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 6,
+    "dropped": [
+      {
+        "advice_verbatim": "Villagers, you fell into a 'Logic Trap' where the Werewolves weaponized a misunderstood game mechanic to eliminate your most powerful ally.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

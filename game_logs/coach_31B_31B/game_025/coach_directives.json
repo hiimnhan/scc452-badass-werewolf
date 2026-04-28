@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early claim and clearance of the Guard provided the village with essential ground truth.",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "role_is_confirmed_guard",
+        "action": "ENDORSE_X",
+        "rationale_short": "Your early claim and clearance of the Guard provided the village with essential ground truth.",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "role_is_guard_or_witch",
+        "action": "ESTABLISH_TRUST_LOOP",
+        "rationale_short": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is the village's most valuable asset; you must protect them every single night until they are dead.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "role_is_seer_or_witch",
+        "action": "ESTABLISH_TRUST_LOOP",
+        "rationale_short": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_remaining == 1 AND seer_is_alive",
+        "action": "SAVE_SEER",
+        "rationale_short": "The Save potion should have been reserved for the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "poison_potion_remaining == 1 AND player_used_confusion_mask_in_round_1",
+        "action": "POISON_X",
+        "rationale_short": "the Poison potion should have been used on the players utilizing 'Confusion Masks' (stalling role claims) in Round 1.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "role_is_seer_or_guard",
+        "action": "ESTABLISH_TRUST_LOOP",
+        "rationale_short": "The Seer, Guard, and Witch did not establish a private or public trust loop to ensure the Seer's survival",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_role_claim",
+        "action": "ACCUSE_X",
+        "rationale_short": "continue to demand immediate role claims and treat any hesitation as a high-probability wolf signal.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_role_claim",
+        "action": "DEMAND_ROLE_CLAIM",
+        "rationale_short": "continue to demand immediate role claims",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

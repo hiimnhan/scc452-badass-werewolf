@@ -1,0 +1,55 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Witch
+**Cong:** Villager
+**Nam:** Villager
+**Jin:** Seer
+**Hoang:** Guard
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Meg.
+• Jin (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Nhan (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** Nhan is confirmed not a werewolf. Let's focus on observing the others. Cong, Nam, Hoang, Riley, and Meg – your actions and reasoning will be carefully scrutinized.
+**Nam:** Jin's confirmation of Nhan is a starting point. However, simply stating 'scrutiny' isn't helpful. Cong, Hoang, Riley, and Meg, please articulate your reasoning for your initial observations. Why are you focusing on anyone?
+**Nhan:** Jin's swift declaration of my innocence feels convenient, considering I was the target last night. I suggest we observe Jin's reasoning more closely; a quick defense can be a deflection.
+**Jin:** Nhan's immediate questioning of my process, after being cleared, is a clear deflection. It redirects attention from their own potential involvement. Nam, your request for reasoning is also suspect; it feels designed to muddy the waters.
+**Hoang:** Jin's eagerness to clear Nhan, followed by accusing him of deflection, is highly suspect. It feels manufactured to direct attention. I propose we observe Jin’s justifications closely.
+**Jin:** Nhan's immediate deflection is a strong indicator. Nam's request for reasoning feels like an attempt to obscure the conversation. I suggest we focus our attention on these two.
+
+### Votes
+**Nhan** voted for **Jin**
+> Nhan voted to exile Jin. Reason: Jin's quick defense and accusations of deflection seem manufactured to divert attention. We must focus on those who manipulate the conversation.
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin's accusations of 'deflection' are being used to avoid providing his own reasoning. His eagerness to control the narrative raises significant suspicion. Let's scrutinize his actions further.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin's behavior is erratic. First, a quick defense, then immediate accusations. This deflection tactic is a classic wolf move. We need to prioritize eliminating deceptive players.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Hoang's response feels manufactured to deflect from Nhan's actions. Their eagerness to accuse the Seer suggests an attempt to muddy the waters and protect a fellow wolf.
+**Hoang** voted for **Jin**
+> Hoang voted to exile Jin. Reason: Jin's behavior appears designed to deflect attention. His swift exoneration of Nhan and subsequent accusations are inconsistent and warrant closer examination.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Jin's rapid pivot from clearing Nhan to accusing him of deflection is a systemic inconsistency. This kind of manufactured behavior suggests a desperation tactic to control the narrative. I agree with Hoang; Jin's justifications are highly suspect and logically unsound.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: Jin's rapid shifts in accusation and the contradiction in clearing Nhan only to immediately attack them represents a significant behavioral anomaly. This systemic inconsistency suggests a manufactured narrative to sow confusion. I believe we need analytical validation of Jin's claims.
+
+**Day Exiled:** Jin
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Nam.
+• Nhan (Witch) used POISON potion on Nam
+**Night Eliminations:** Nhan, Nam
+---

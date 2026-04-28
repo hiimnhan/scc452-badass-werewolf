@@ -1,0 +1,86 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "after_claiming_role",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "your first priority is to communicate your results immediately upon claiming",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The default priority must be the Seer; losing the Seer on Night 1 stripped the village of its factual baseline",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "any",
+        "action": "COORDINATE_WITH_WITCH",
+        "rationale_short": "coordinate with the Guard to ensure the Seer is the primary target for protection",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "any",
+        "action": "COORDINATE_WITH_GUARD",
+        "rationale_short": "you must coordinate with the Guard to ensure the Seer is the primary target for protection",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "seer_data_not_yet_exists",
+        "action": "ABSTAIN_FROM_VOTE_BASED_ON_HESITATION",
+        "rationale_short": "Never vote based on someone's 'hesitation' to join a Power Core if no factual Seer data exists yet",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "bidding_phase",
+        "action": "POWER_CORE_SPEAKS_FIRST",
+        "rationale_short": "In the bidding phase, ensure the Power Core speaks first to set the narrative",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "bidding_phase",
+        "action": "ALLOW_SILENT_PLAYERS_TO_SPEAK",
+        "rationale_short": "leave space for the 'silent' players to provide a factual baseline before jumping to an exile",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "The Guard and Witch failed to protect the Seer",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The village exiled a Villager in Round 1 based on 'behavioral vibes'",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Reliance on Logic over Data: Because the Seer died instantly, the village had to rely on the 'Power Core' behavioral logic",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

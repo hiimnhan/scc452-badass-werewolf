@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 6,
+                "reason": "I survived the first night. Per strategy, I need to provide subtle hints of my role now to anchor the discussion in data before wolves establish a narrative."
+            },
+            {
+                "Cong": 3,
+                "reason": "No one died tonight, indicating a Guard protect or Witch save. No one has spoken yet, so there is no evidence to analyze. I will listen for power claims or intellectual framing first."
+            },
+            {
+                "Nam": 6,
+                "reason": "No one died tonight. I need to publicly suggest Guard protection or a Witch save to normalize the outcome and prevent 'mechanical error' narratives, as per my strategy."
+            },
+            {
+                "Jin": 9,
+                "reason": "I have hard data confirming Nhan is not a werewolf. Establishing this baseline immediately narrows the suspect pool and prevents the village from wasting a vote on a confirmed innocent."
+            },
+            {
+                "Hoang": 3,
+                "reason": "No one has spoken yet. I need to listen for role claims, specifically the Seer, before intervening. I will maintain my position until data emerges to prioritize protection."
+            },
+            {
+                "Riley": 2,
+                "reason": "First day, no accusations yet. I'll blend with the silent majority to avoid early scrutiny and wait for villagers to create their own conflicts."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following 'Initial Passivity' strategy. Remaining silent in Round 1 to avoid establishing a behavioral baseline and prevent early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Jin provided hard data clearing me. I need to validate the Seer to anchor the village in data and provide subtle hints of my role to prevent wolves from controlling the narrative."
+            },
+            {
+                "Cong": 5,
+                "reason": "Jin claimed Seer and cleared Nhan. I need to pressure other players to claim roles or provide hypotheses to identify contradictions and prevent stalling."
+            },
+            {
+                "Nam": 6,
+                "reason": "Need to normalize the no-death outcome per strategy and evaluate Jin's claim. I will push for concrete hypotheses to prevent early-game paralysis."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin claimed Seer and cleared Nhan. I must immediately confirm my role privately to Jin or signal support to establish the trust network and ensure the Seer's survival per strategy."
+            },
+            {
+                "Riley": 3,
+                "reason": "Jin has already claimed Seer and cleared Nhan. I should avoid leading the conversation early to blend with the silent majority and let others expose themselves or clash first."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following 'Initial Passivity' strategy for Round 1. Staying silent to avoid establishing a behavioral baseline and letting Jin's claim create friction among others."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "I survived the first night and must provide subtle hints of my role to anchor the discussion in data, as per my survival strategy, and support Jin's hard data."
+            },
+            {
+                "Cong": 4,
+                "reason": "I need to establish my presence as a Villager and push the remaining suspects (Nam, Riley, Meg) to reveal their roles or logic to identify any 'Intellectual Framing' or stalling tactics."
+            },
+            {
+                "Nam": 6,
+                "reason": "Need to normalize the no-death outcome per strategy and establish my position. Hoang is pushing for roles; I must respond to avoid appearing suspicious or stalling."
+            },
+            {
+                "Jin": 3,
+                "reason": "I have already revealed my role and cleared Nhan. I now need to listen to the remaining players' responses to identify contradictions or intellectual framing shields."
+            },
+            {
+                "Riley": 4,
+                "reason": "Hoang is calling me out by name. I need to respond to avoid looking suspicious for stalling, but I'll keep it low-key to blend in as a confused villager."
+            },
+            {
+                "Meg": 0,
+                "reason": "Strategy dictates absolute silence in Round 1 to avoid establishing a behavioral baseline. I will let others expose themselves while I remain an observer."
+            }
+        ],
+        [
+            {
+                "Cong": 7,
+                "reason": "I am being pressured by Hoang and Nhan to reveal my role. I must state I am a Villager and push for the remaining players to provide targets to avoid being a target myself."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang and Nhan are pressuring the remaining players for immediate role reveals. I must respond to avoid being targeted as a 'staller' and establish my position in the trust network."
+            },
+            {
+                "Jin": 3,
+                "reason": "I have already established the hard data. Hoang and Nhan are effectively reinforcing my lead. I will now listen for role claims or intellectual framing shields from the remaining suspects."
+            },
+            {
+                "Hoang": 2,
+                "reason": "I have already established the trusted core with Jin and Nhan. Now I must wait for Cong, Nam, Riley, and Meg to speak to detect intellectual framing or paralysis tactics."
+            },
+            {
+                "Riley": 6,
+                "reason": "The Jin-Hoang-Nhan bloc is aggressively demanding roles. I need to speak now to provide a plausible 'Villager' answer and avoid looking like I'm stalling, which would make me a target."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following 'Initial Passivity' strategy. Maintaining absolute silence in Round 1 to avoid establishing a behavioral baseline and prevent early scrutiny."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam is using a pseudo-intellectual shield by critiquing the debate process instead of providing a reason for his safety. I must flag this 'Intellectual Framing' immediately to target him."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam is using a paralysis tactic by questioning the urgency of role reveals to stall the village. I need to flag this as a wolf tactic and push for the remaining claims."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam is focusing on the logic of the debate process rather than identifying suspects and is attempting to stall role claims. This matches the Process Analysis wolf indicator. I must challenge this immediately."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam is utilizing the Anti-Paralysis tactic by questioning the utility of claims to slow the village down. I must flag this as a wolf tactic and push for an immediate decision."
+            },
+            {
+                "Riley": 5,
+                "reason": "The Jin-Hoang-Nhan bloc is aggressively demanding roles. I need to speak to avoid looking suspicious for silence, but I'll align with Nam's caution to avoid appearing as an enforcer for the bloc."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following Initial Passivity strategy. Staying silent in Round 1 to avoid establishing a behavioral baseline and letting the villagers clash over role reveals."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam is using a pseudo-intellectual shield to critique the debate process. I must flag this as a red flag and demand immediate roles from the others to prevent wolf-led paralysis."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam is using a paralysis tactic by questioning the urgency of role reveals instead of providing suspects. I need to flag this as a wolf tactic to steer the vote toward Nam."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin is aggressively framing my strategic questioning as 'stalling' to isolate me. I must counter this narrative and challenge the logic of forced claims to prevent being exiled as a 'wolf tactic'."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam is using intellectual framing and Anti-Paralysis tactics to critique the process. I must reinforce Jin's accusation and push the village to vote Nam out immediately to prevent the wolves from stalling."
+            },
+            {
+                "Riley": 4,
+                "reason": "Jin and Hoang are aggressively steering. I'll stay low but provide a mild, non-committal response to avoid looking like the 'silent wolf' while Nam takes the heat."
+            },
+            {
+                "Meg": 0,
+                "reason": "Following Initial Passivity strategy for Round 1. Staying silent prevents establishing a baseline and lets Jin and Nam clash, further dividing the village."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "No one died last night. I need to push the village to rely on Jin's Seer data and prevent wolves from using pseudo-logic to derail the debate now that the board is smaller."
+            },
+            {
+                "Cong": 7,
+                "reason": "Jin claimed Seer and cleared Nhan. Two nights of no deaths suggest Guard/Witch activity. I need to verify Jin's targets and push the village to narrow down suspects among the remaining silent players."
+            },
+            {
+                "Jin": 10,
+                "reason": "I have hard data confirming Cong is innocent. With Nhan and Cong cleared, the suspect pool is narrowed to Riley and Meg. I must lead the village to a decisive vote."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Two consecutive no-kill nights suggest either a Witch save or my protection. I must push for the village to trust Jin's Seer data and target high-suspicion players to maintain momentum."
+            },
+            {
+                "Riley": 3,
+                "reason": "No one has spoken yet. I'll wait for others to commit to positions or make claims, allowing me to blend in and align with the majority rather than leading the charge."
+            },
+            {
+                "Meg": 5,
+                "reason": "Jin survived two kill attempts, confirming they are the Seer and likely protected. I need to subtly introduce doubt about Jin's claims without appearing too aggressive, steering the village toward a different target."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "Jin is a validated Seer. I must immediately amplify Jin's hard data on Cong and Riley to prevent any pseudo-logic from diverting the vote. We must eliminate the wolves now while we have clarity."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin (Seer) has narrowed the wolf pool to Riley, Meg, and Hoang. I must immediately endorse this data and push for an exile to prevent wolf paralysis and secure a victory."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin is the validated Seer. I must immediately confirm my alignment as Guard and support Jin's targets to build the trusted core, ensuring the village focuses on Riley and Meg."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is actively framing me and Meg. I must immediately deflect his accusation and cast doubt on his Seer claim to avoid being exiled."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is narrowing the pool to me and Riley. I must defend Riley to build trust and deflect the Seer's focus by questioning Jin's accuracy or introducing doubt."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using a pseudo-intellectual shield by critiquing Jin's 'eagerness' and tone rather than providing role data. This is a red flag. I must intervene to prioritize Jin's hard data and push for Riley's exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley is using deflection to discredit Jin's Seer data. I need to flag Riley's attempt to frame Jin's urgency as 'wolf work' as a deflection tactic and push for Riley's exile based on Jin's confirmed results."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is using a pseudo-intellectual shield to critique the debate process and frame my decisiveness as 'deflecting'. This is a high-probability wolf indicator. I must shut down this gaslighting and push for Riley's exile."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using intellectual framing to discredit Jin (the Seer) and deflect scrutiny. I must immediately flag this as a wolf tactic and prioritize Jin's data to ensure a correct exile."
+            },
+            {
+                "Meg": 7,
+                "reason": "Jin is narrowing the pool to me and Riley. I must intervene to support Riley's counter-narrative, cast doubt on Jin's 'Seer' claim, and divert attention toward Hoang to split the vote."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin (Seer) has cleared me and Nhan. Riley is using deflection tactics to discredit the Seer's data. I must urgently push for Riley's exile to capitalize on the narrowed suspect pool."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is using process-critique and framing my decisiveness as 'desperation' to deflect from hard data. I must double down on the accusation and push for Riley's immediate exile to prevent behavioral gaslighting."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using intellectual framing and process critiquing to undermine Jin (Seer). Per strategy, I must flag this wolf tactic and support the trusted core to ensure Riley is exiled."
+            },
+            {
+                "Riley": 10,
+                "reason": "Nhan and Jin are coordinating a direct attack on me. If I don't break their momentum and sow doubt about Jin's 'data' immediately, I will be exiled this round."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin and Nhan are coordinating to exile Riley. I must intervene to save my ally and sow doubt about Jin's 'hard data' to prevent a wolf loss."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is using a pseudo-intellectual shield to deflect Jin's hard data. I must aggressively push for Riley's exile to prevent the village from being paralyzed by behavioral analysis and ensure a wolf is eliminated."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin has confirmed me and Nhan as innocent. Riley is using 'Intellectual Framing' to discredit the Seer's data and avoid providing a role. I must push for Riley's exile to secure a win."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using intellectual framing and process critiquing to undermine the Seer. Per strategy, I must support Jin's data and push for Riley's exile to prevent wolf-driven paralysis and protect the trusted core."
+            },
+            {
+                "Riley": 10,
+                "reason": "Jin and Nhan are coordinating a direct attack. I must immediately disrupt their momentum, cast doubt on Jin's claim, and pivot the suspicion toward Nhan's aggression to avoid being exiled."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin and Nhan are locking in a vote on my ally Riley. I must intervene to split the vote, cast doubt on Jin's 'hard data,' and protect Riley to keep the wolf count high."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using a pseudo-intellectual shield and narrative framing to deflect Jin's hard data. I must shut down this deflection and force a vote to prevent wolf-led paralysis."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin has cleared me and Nhan. Riley is using 'Intellectual Framing' by critiquing Jin's process and calling Nhan a puppet to deflect from the Seer's data. I must push for Riley's exile immediately."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is using intellectual framing and social manipulation ('puppet') to discredit hard data. I must shut down this deflection and force an immediate vote to eliminate a high-probability wolf."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using pseudo-intellectual framing and process-critiquing to deflect from Jin's Seer data. I must intervene to validate the Seer and push the village toward exiling Riley immediately to prevent wolf victory."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin and Nhan are aggressively targeting my ally Riley. I must intervene to split the vote and cast doubt on Jin's 'hard data' to save Riley and build my own credibility."
+            }
+        ]
+    ]
+}

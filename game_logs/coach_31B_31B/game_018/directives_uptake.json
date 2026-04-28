@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "018",
+  "directives_source_game_id": "017",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue to establish your findings as the ground truth early in the day.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam declared 'I am the Seer' and stated he investigated Nhan, confirming Nhan is NOT a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam revealed his role and his investigation result during the Round 1 debate as instructed."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority is the Seer; protecting anyone else while the Seer is alive is an unacceptable risk.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nhan instead of the Seer (Nam).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was alive, but Jin protected Nhan instead of Nam."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "always",
+        "directive_action": "MAINTAIN_SEER_ONLY_PROTECTION_LOOP",
+        "directive_rationale": "You must maintain a Seer-only protection loop.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nhan in Round 1 and Nam in Round 2.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not maintain a Seer-only loop, as he protected Nhan in the first night."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_remaining == True",
+        "directive_action": "RESERVE_SAVE_FOR_SEER",
+        "directive_rationale": "This potion is reserved exclusively for the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang did not use any potions in Round 1, effectively reserving the save potion.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang held the save potion in Round 1 and later used it on the Seer (Nam) in Round 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_result_on_target == 'Wolf'",
+        "directive_action": "POISON_TARGET",
+        "directive_rationale": "your Round 3 use of the POISON potion upon the Seer's 'Wolf' result on Meg was the correct execution of aggressive resource management.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not return a 'Wolf' result on any target during the game."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_fails_to_provide_role_claim_under_pressure == True",
+        "directive_action": "VOTE_AGAINST_PLAYER",
+        "directive_rationale": "When a player fails to provide a role claim under direct pressure, you must override caution and vote to exile them immediately to penalize the silence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Cong (Villagers) both voted to exile Meg after she failed to provide a role claim despite direct pressure from Nam and others during the debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers correctly identified Meg's silence under pressure and voted to exile her."
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "Night Phase": [
+    "Prioritize protecting Seers or Witches with remaining potions, especially early game. Their information is crucial.",
+    "IF Wolves target a player who consistently demonstrates strong deduction, protect them. Information gathering is paramount.",
+    "AVOID protecting players exhibiting coordinated defenses or overly aggressive questioning. These are likely Werewolves or their accomplices.",
+    "IF the Witch uses their Save potion, immediately re-evaluate. Wolves' target is now hidden. Shift focus to protecting players with strong deduction and observe reactions to the unprotected player. Note defenders.",
+    "Consider protecting passive players only if they are consistently targeted by Wolves; this can reveal Wolf patterns."
+  ],
+  "Day Discussion - Early Game (Rounds 1-2)": [
+    "Aggressively probe for coordinated defenses. Identify deflectors and redirection tactics. Focus on logical fallacies.",
+    "Challenge assumptions with 'Why do you believe that?' rather than 'Do you agree?'",
+    "Express skepticism towards ALL Seer claims, demanding clear reasoning and evidence. Do not reveal my own investigation results.",
+    "IF multiple players defend the same individual without reasoned justification, aggressively investigate their coordination. Ask probing questions.",
+    "IF a player consistently deflects blame or changes their story, mark them as suspicious. Document inconsistencies.",
+    "Subtly introduce doubt about players who echo each other's arguments without independent reasoning."
+  ],
+  "Day Discussion - Seer/Guard Claims": [
+    "Express skepticism towards all Seer claims, demanding detailed reasoning. Challenge vague claims.",
+    "Analyze Guard protection patterns for rationale. Question protection of passive players.",
+    "IF multiple Seer claims contradict, discredit the most aggressive claimant.",
+    "IF a player aggressively claims Guard without justification, consider them high-priority and test their claims."
+  ],
+  "Day Discussion - General": [
+    "Subtly guide discussion with targeted questions exposing flaws and redirecting suspicion away from myself.",
+    "Highlight a lack of independent reasoning in coordinated defenses; redirect suspicion.",
+    "Respond calmly and logically to accusations, highlighting inconsistencies.",
+    "Flag evasive players as suspicious and gather information through indirect questioning.",
+    "IF players make broad accusations without evidence, point out the lack of logic."
+  ],
+  "Voting Phase": [
+    "Prioritize voting for suspected Werewolves based on accumulated evidence and logical reasoning.",
+    "IF a false Seer harms the village, vote them out AFTER confirming a Wolf’s presence.",
+    "In ties, vote against the player with the most aggressive rhetoric unless a clear Wolf is evident.",
+    "Analyze vote motivations; look for patterns of unwavering loyalty.",
+    "IF the village is split, vote for the most consistently evasive player.",
+    "In the late game, vote for the player most likely to disrupt werewolf coordination."
+  ],
+  "Late Game": [
+    "Indirectly extract information from confirmed Villagers without revealing suspicions.",
+    "Be willing to sacrifice myself to reveal Wolves’ targets if it maximizes the Villager victory chance.",
+    "IF a confirmed Wolf is about to win, prioritize exposing them, even at my own expense. Bait wolves to reveal themselves."
+  ]
+}

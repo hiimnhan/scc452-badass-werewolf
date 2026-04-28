@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "024",
+  "directives_source_game_id": "023",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "early_game",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "providing early ground truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong revealed himself as the Seer and announced that he investigated Nhan and found them to be not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed his investigation results immediately in the first round of debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_displays_confusion_mask",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "aggressively penalizing 'Confusion Masks'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong explicitly stated that Jin, Riley, and Meg were using 'Confusion Masks' due to their silence and called for an immediate vote on Jin.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer identified the confusion mask and aggressively challenged the silent players."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_remain_uncleared",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Continue this high-pressure approach to isolate uncleared players",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong investigated Riley, found them to be a wolf, and immediately accused them, stating no further debate was required.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer maintained a high-pressure approach to isolate and accuse uncleared players."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1 && power_core_not_established",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "prioritize the Seer from Night 1 unless a Power Core is already established",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Nhan instead of the Seer (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Guard protected Nhan on Night 1 instead of following the directive to protect the Seer."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "the Seer is the village's most valuable asset",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Cong (the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer while they were alive in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_attacked",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "the priority must always be the Seer",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was not attacked during the game."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Once the Seer identifies a wolf... use the Poison potion",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin was exiled in Round 1 and was not present to use any potions in Round 2.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch was exiled before the Seer identified a wolf."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_logic_becomes_absolute_confusion_mask",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Once... a player's logic becomes an absolute 'Confusion Mask,' use the Poison potion",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch was exiled in Round 1; no poison was used during the night phase."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_provides_evidence",
+        "directive_action": "VOTE_BASED_ON_SEER_EVIDENCE",
+        "directive_rationale": "Always vote based on the Seer's evidence over gut feelings",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Hoang both voted for Jin after the Seer cleared Nhan and flagged the silent players as confusion masks.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers voted in alignment with the Seer's identification of the confusion masks."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attempts_to_stall_deflect_or_question_seer_data",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "any attempt to stall, deflect, or question the Seer's data... is a definitive wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang accused Riley of confession and deflection when Riley questioned Cong's 'absolute evidence'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villager (Hoang) immediately accused Riley for questioning the Seer's data."
+      }
+    ]
+  }
+}

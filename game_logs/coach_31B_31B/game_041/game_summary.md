@@ -1,0 +1,89 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Guard
+**Cong:** Witch
+**Nam:** Villager
+**Jin:** Villager
+**Hoang:** Seer
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nhan (Guard) chose to protect Nhan.
+• Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Cong (Witch) did not use any potions.
+**Night Eliminations:** None
+
+### Day Debate
+**Hoang:** I am the Seer. I investigated Nhan last night and confirmed Nhan is not a werewolf. Everyone else, reveal your roles immediately. Any hesitation or refusal to claim will be flagged as a Confusion Mask.
+**Meg:** I'm a Villager. Since Hoang claims the ground truth on Nhan, we should trust that for now. However, it's a Fatal Error to trust a Seer claim without verification. Who else is hiding their role? Let's get the claims out.
+**Hoang:** Meg, you are using my own terminology to cast doubt on the Seer. This is a False Logic Trap. You claim to be a Villager but mimic power-role language to create confusion. Cong, Nam, Jin, Riley—reveal your roles now or be flagged as wolves.
+**Jin:** I am a Villager. Meg, your attempt to discredit the Seer by mimicking his terminology is a Fatal Error. You are using a False Logic Trap to undermine our only source of ground truth. We must prioritize exiling Meg immediately. Cong, Nam, Riley—claim your roles now.
+**Hoang:** Meg, your mimicry is a textbook False Logic Trap. You use my terminology to mask an attempt to destabilize the Seer's authority. Cong, Nam, Riley—your silence is a Confusion Mask. Claim your roles now or you will be exiled next.
+**Meg:** Hoang, you're pushing this 'False Logic Trap' narrative way too hard to shut down any questioning of your claim. Jin, jumping on this without evidence is a Fatal Error. What specific evidence do you have that I'm a wolf other than 'mimicking' words?
+
+### Votes
+**Nhan** voted for **Meg**
+> Nhan voted to exile Meg. Reason: Meg is attempting to destabilize the Seer's authority by framing role-call enforcement as 'pushing a narrative'. This is a Fatal Error. She mimics villager logic while actively trying to discredit our only source of ground truth. We must exile her to maintain momentum.
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Meg is using a False Logic Trap, mimicking the Seer's language to appear aligned while simultaneously attempting to undermine the Seer's authority. This linguistic mimicry and aggressive deflection are clear signals of a werewolf attempting to blend in.
+**Nam** voted for **Meg**
+> Nam voted to exile Meg. Reason: Meg is mimicking the Seer's terminology to blend in, then attempting to frame the Seer's logic as aggression to create confusion. This behavioral pattern is a clear mask for a werewolf. We must exile her to secure the village.
+**Jin** voted for **Meg**
+> Jin voted to exile Meg. Reason: Meg is using a False Logic Trap by mimicking Seer terminology to undermine Hoang. Her attempt to frame the village's logic as 'pushing a narrative' is a textbook Confusion Mask. We must exile her to protect our ground truth.
+**Hoang** voted for **Meg**
+> Hoang voted to exile Meg. Reason: Meg is using a False Logic Trap, mimicking my terminology to undermine the Seer's authority. She further signals wolf behavior by labeling my demands for transparency as 'pushing a narrative' and attacking Jin for supporting the ground truth. Meg must be exiled.
+**Riley** voted for **Meg**
+> Riley voted to exile Meg. Reason: I am a Villager. Meg's attempts to discredit the Seer's claim and her use of contradictory logic suggest she is attempting to destabilize the village's only source of information. Based on the Seer's ground truth, Meg's behavior is a clear indicator of a wolf.
+**Meg** voted for **Hoang**
+> Meg voted to exile Hoang. Reason: Hoang is attempting to dictate the ground truth too aggressively. His insistence on labeling any questioning as a 'False Logic Trap' is a Fatal Error in logic and looks like a power trip to manipulate the village into exiling innocent people.
+
+**Day Exiled:** Meg
+---
+
+## Round 2
+**Night Actions:**
+• Riley (Wolf) targeted Hoang.
+• Nhan (Guard) chose to protect Hoang.
+• Hoang (Seer) investigated Cong. Cong is NOT a wolf.
+• Cong (Witch) used SAVE potion on Hoang
+**Night Eliminations:** None
+
+### Day Debate
+**Hoang:** I have confirmed Cong is not a werewolf. Nam and Riley, your continued silence is a Confusion Mask and a stall tactic. Reveal your roles immediately or you are the primary targets for exile. I will not tolerate this paralysis.
+**Cong:** Hoang is our ground truth. Nam and Riley, your silence is a clear Confusion Mask. Stop stalling and reveal your roles now, or we exile you today. The village will not be paralyzed by your cowardice.
+**Hoang:** Nam and Riley, your refusal to speak is a confession. This is a blatant stall tactic to avoid scrutiny. I demand your roles now. If you remain silent, I am calling for the immediate exile of Nam.
+**Nam:** I am a Villager. Hoang, I was observing the logic, not stalling. Cong, your repetition of Hoang's exact phrasing is blatant Safe-Echoing. You provide zero original analysis. Why are you mimicking the Seer so perfectly? Riley, speak now or you are the target.
+**Nhan:** Nam, you just committed a Fatal Error. Attacking Cong, who is Seer-cleared, is a desperate attempt to deflect. Your 'observation' was a Confusion Mask to stall. You are a werewolf. I am voting for Nam.
+**Nam:** Nhan, your attempt to frame my analysis of Cong's mimicry as a 'Fatal Error' is a textbook Confusion Mask. You are aggressively pushing for my exile to protect a teammate who can't think for himself. I am a Villager; Nhan is the wolf.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam committed a Fatal Error by attacking Cong, who was cleared by the Seer. His attempt to frame my scrutiny as a 'Confusion Mask' is a blatant deflection. This pattern of attacking cleared assets proves he is a werewolf. He must be exiled.
+**Cong** voted for **Nam**
+> Cong voted to exile Nam. Reason: Nam has committed a Fatal Error by attacking a player confirmed as a villager by the Seer. This is a desperate deflection tactic. His previous silence was a Confusion Mask, and his current aggression proves his wolf alignment. He must be exiled.
+**Nam** voted for **Nhan**
+> Nam voted to exile Nhan. Reason: Nhan is attempting to flip the narrative by calling my analysis of Cong's mimicry a 'Fatal Error'. This is a textbook Confusion Mask designed to shut down scrutiny and force my exile. Nhan's aggression is a cover for the wolves.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nam has committed multiple Fatal Errors by attacking Seer-cleared players, Cong and Nhan. His claim of 'observing' is a Confusion Mask to hide his stall tactic, and his attempt to frame Nhan as a wolf is a desperate deflection. Nam must be exiled.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam committed a Fatal Error by attacking Cong, a player I have confirmed as innocent. He is now attempting to deflect by framing Nhan. This pattern of attacking cleared villagers is a definitive signal that Nam is a werewolf.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: I am a Villager. Hoang has cleared Cong, yet Nam is attacking him. Contradicting the Seer's empirical evidence is a logical failure that suggests Nam is attempting to deflect suspicion. Nam's behavior is inconsistent with the established facts.
+
+**Day Exiled:** Nam
+---
+
+## Round 3
+**Night Actions:**
+• Riley (Wolf) targeted Hoang.
+• Nhan (Guard) chose to protect Riley.
+• Hoang (Seer) investigated Riley. Riley is a wolf.
+• Cong (Witch) used POISON potion on Riley
+**Night Eliminations:** Riley, Hoang
+---

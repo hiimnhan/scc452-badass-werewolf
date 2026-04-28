@@ -1,0 +1,121 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Cong.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": null,
+                "reasoning": "Cong voted to exile None. Reason: Since no one has spoken or provided any information today, we have no basis for an accusation. It is too risky to exile someone blindly; we should wait for more data."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": null,
+                "reasoning": "Nam voted to exile None. Reason: Since no one has spoken or provided information, there is no logical basis to accuse anyone. I refuse to vote based on guesswork; we need a real discussion to identify the wolves."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": null,
+                "reasoning": "Jin voted to exile None. Reason: Since no one has spoken or provided any information, we have no evidence to base a vote on. Voting randomly risks eliminating a fellow villager. We should skip today and gather information tomorrow."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": null,
+                "reasoning": "Hoang voted to exile None. Reason: Since no one has spoken or claimed a role, we have no information to base a decision on. Voting randomly is too risky for the village. Let's skip this round and push for a real debate tomorrow."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Since no one is speaking, we are flying blind. However, the total silence is a mechanical contradiction to how active villagers usually behave. I'm voting Cong to break the deadlock and see how others react to a targeted lead."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: With no information or claims on the table, any vote right now would be a random guess. It is safer to skip this vote than to risk exiling a fellow villager due to a lack of evidence."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Cong"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "We've lost two players and no one has spoken. This silence is a wolf tactic to avoid scrutiny. Jin, Hoang, Riley, Meg\u2014why are you all staying quiet? If you're villagers, start providing logic now or you're just shielding the wolves."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam, you're pushing a narrative based on silence rather than facts. Demanding 'logic' from everyone while providing none yourself is a common tactic to steer the vote. I'm not being shielded; I'm waiting for actual evidence. Why are you so desperate to force an accusation?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin, you're attacking me for demanding transparency because you have no facts to offer. Deflecting to my 'motives' instead of explaining your own silence is a textbook wolf move to avoid scrutiny. If you're a villager, provide a hypothesis, not a critique of my tone."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam, you are using behavioral tropes to frame me and others. There is no factual evidence here, only your desire to force an exile based on 'silence.' This is a classic narrative steer. Unless a Seer comes forward, I will not vote based on your baseless accusations."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin, you are weaponizing the word 'narrative' to mask your lack of contribution. If you are a villager, how does shutting down the demand for transparency serve the village? Your refusal to provide any hypothesis while attacking my motives is a clear deflection."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam, you are still looping the same argument about 'transparency' to mask your lack of evidence. You are aggressively pushing a narrative based on vibes and silence. This is a steering tactic. I will not be manipulated into a baseless vote. Does anyone else have actual data?"
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin's responses are purely defensive. Instead of offering a single hypothesis to help the village, he focuses entirely on attacking my motives. This deflection, coupled with his attempt to shut down the demand for transparency, strongly suggests he is hiding his identity."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": null,
+                "reasoning": "Jin voted to exile None. Reason: Nam is attempting to force an exile based on behavioral tropes and silence rather than factual evidence. Without a Seer's claim or a mechanical contradiction, any vote right now is a guess. I advocate for a 'None' vote to avoid a baseless mistake."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam is pushing for an exile based on behavioral assumptions and 'silence' rather than factual evidence. This narrative steering is a common wolf tactic to manipulate the vote. Jin's demand for actual data is the logical approach here."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's insistence on forcing an exile based solely on silence creates a mechanical contradiction. He is pushing a narrative steer to create a rush to judgment without factual evidence. This aggressive steering is a common tactic to purge villagers quickly."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam is pushing for an exile based on silence and behavior rather than any factual evidence. This aggressive steering is a mechanical anomaly; he is trying to force a vote without data, which only benefits the wolves."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

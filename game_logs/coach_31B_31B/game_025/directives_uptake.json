@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "025",
+  "directives_source_game_id": "024",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_call_triggered",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your aggressive claim and immediate data delivery were excellent.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan immediately claimed 'I am the Seer' and provided data that Cong was not a werewolf, while demanding others reveal their roles.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan revealed their role and delivered data immediately after Hoang triggered the role call."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_deflections_occur",
+        "directive_action": "DISMISS_DEFLECTIONS",
+        "directive_rationale": "dismissing wolf deflections as 'classic tactics.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan was eliminated at the end of Night 2, and no wolf deflections occurred during the Round 1 debate while Nhan was active."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Always prioritize the Seer's life over all others.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan during Night 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer (Nhan) in the first night."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified AND save_potion_remaining",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "You failed to use your save potion to protect the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use any potions during Night 2, and Nhan (the Seer) was eliminated.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam failed to use the save potion to protect Nhan during Night 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "suspect_identified AND poison_potion_remaining",
+        "directive_action": "POISON_SUSPECT",
+        "directive_rationale": "You failed to use your... poison potion to eliminate suspects.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nam did not use the poison potion in any night phase before being exiled in Round 1."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_call_triggered",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "do not remain silent during role calls",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam remained silent during the initial role call demands from Hoang, Nhan, and Jin, only claiming to be the Witch during the voting phase.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam remained silent during the debate phase of the role call, only revealing the role when voting."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_stays_silent",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "You correctly identified silence as a wolf signal in Round 1.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin accused Nam and Meg of using a 'Confusion Mask' due to their silence and called for Nam's exile.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin identified the silence of Nam and Meg as a wolf signal."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "emotional_appeals_contradict_seer_data",
+        "directive_action": "REJECT_APPEALS",
+        "directive_rationale": "Continue to reject emotional appeals (e.g., 'coordinated hits') when they contradict Seer data.",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin rejected Meg's claim that the vote against her was a 'coordinated hit,' stating it was a 'desperate manipulation to discredit ground truth.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly rejected the 'coordinated hit' appeal in favor of the Seer's data."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "speaking_turn_acquired",
+        "directive_action": "ENDORSE_SEER",
+        "directive_rationale": "ensure you use your turn to reinforce the Seer's findings",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated, 'Nhan's Seer result is ground truth, so Cong is cleared.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin used their turn to reinforce the Seer's finding regarding Cong."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "speaking_turn_acquired",
+        "directive_action": "ISOLATE_UNCLEARED_PLAYERS",
+        "directive_rationale": "use your turn to... isolate the remaining uncleared players.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin isolated Nam and Meg by stating 'Nam and Meg, your continued silence is a Confusion Mask.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin isolated the uncleared players (Nam and Meg) based on their behavior."
+      }
+    ]
+  }
+}

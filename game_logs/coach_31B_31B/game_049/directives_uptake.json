@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "049",
+  "directives_source_game_id": "048",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "early_game",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your aggressive transparency and early claiming created a vital factual anchor.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated 'I am the Seer' during the Round 1 Day Debate and immediately provided an investigation result for Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed their role in the first round of debate as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_has_not_claimed",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Continue forcing non-claimants to commit, as this exposes wolves.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam challenged Meg, stating 'Meg, you have been silent for too long. Claim your role and explain your logic now, or you are the primary suspect.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam actively pressured Meg to claim her role when she remained silent."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_cleared_by_village",
+        "directive_action": "PRIORITIZE_SURVIVAL",
+        "directive_rationale": "prioritize your own survival once cleared; you were the primary target.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was never formally cleared by the village (e.g., by another power role) or targeted for exile during the debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SEER_OR_WITCH",
+        "directive_rationale": "In Round 1, protecting yourself is a waste of a turn; prioritize the Seer or the Witch",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nhan, who was a Villager.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin protected Nhan instead of the Seer (Nam) or the Witch (Hoang)."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "DO_NOT_PROTECT_SELF",
+        "directive_rationale": "The Guard protected themselves in Round 1, failing to secure the Seer or Witch",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin did not protect himself in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Never use the poison potion on a player the Seer has cleared.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nhan (who was investigated by the Seer) and did not use the poison potion on any cleared player.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang did not poison Nhan or Cong, both of whom were cleared by the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "guard_is_unsure",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Use the save potion early to protect the Seer if the Guard is unsure.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no public indication that the Guard was unsure of who to protect."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear_result",
+        "directive_action": "OVERRIDE_BEHAVIORAL_ARGUMENTS",
+        "directive_rationale": "When a Seer provides a clear result, override any 'gut feeling' or 'behavioral' arguments used by wolves to sow doubt.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan and Cong both explicitly dismissed Riley's behavioral arguments against Nhan, citing Nam's clear result as the primary evidence.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers prioritized the Seer's factual clear over Riley's behavioral claims."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "wolf_votes_against_teammate",
+        "directive_action": "DO_NOT_ENDORSE_X",
+        "directive_rationale": "Do not be fooled by 'wolf-bussing' (wolves voting for their own teammates)",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Meg (Wolf) voted for Riley (Wolf). Nhan and Cong (Villagers) voted for Riley based on the Seer's result and Riley's behavior, rather than endorsing Meg's vote.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers did not use Meg's vote against Riley as evidence of Meg's innocence."
+      }
+    ]
+  }
+}

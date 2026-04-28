@@ -1,0 +1,144 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Cong.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "Nhan is dead. We need the Seer to come forward or start identifying targets immediately. I will be watching for anyone who simply echoes others without providing their own logic. Who has a lead?"
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I agree with Cong. Seer, reveal yourself now so we can establish a ground truth. To everyone else: provide your own reasoning for any target you suggest. I will flag anyone who simply echoes the majority without independent logic."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang, you are mirroring my logic and phrasing exactly. This is a classic sign of compliance simulation. Unless you provide independent reasoning or a role claim, you are my primary suspect. Seer, reveal yourself now."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, my goal is to establish a rigorous standard for the group to prevent wolf infiltration. I am a Villager. My mirroring was intended to reinforce your framework, not simulate it. Since you've called me out, I'm now watching you for any deflective behavior. Seer, reveal yourself."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang, your 'reinforcement' is a transparent mask for compliance simulation. You've offered zero independent logic and are now weaponizing my own terminology to paint me as deflective. This is a wolf's playbook. Seer, reveal yourself now or we vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, you are attempting to force a rush-vote on me to avoid actual scrutiny. This is a deflection tactic. I am a Villager. I demand Nam, Jin, Riley, and Meg state their roles or provide independent logic now. Seer, reveal yourself before Cong manipulates the vote."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang mirrored my logic exactly to blend in, then weaponized my words to deflect suspicion. He has provided zero independent reasoning and is attempting to manipulate the group's focus. This is a wolf's strategy. We must exile him."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang mirrored Cong's logic and terminology exactly, showing a lack of independent analysis. Instead of providing a real reason for his stance, he tried to deflect and pressure others to speak to avoid scrutiny. This behavior is highly characteristic of a werewolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's initial response was a near-exact mirror of Cong's logic, which is a strong indicator of compliance simulation. His excuse for this mirroring is weak, and he is now trying to deflect suspicion by demanding roles from others instead of providing independent reasoning."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong is attempting to force a rush-vote on me to avoid the role-reveal process. This is a deflection tactic designed to bypass scrutiny and manipulate the village into a hasty decision. I am a Villager; Cong's aggression is a wolf signal."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: I am a Villager. Cong's observation about Hoang's mirroring is a strong point. Hoang's lack of independent logic before being called out makes him look suspicious. I'm aligning with Cong's logic to help identify the wolf."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: I'm a Villager. It's too early to vote when Cong and Hoang are contradicting each other so aggressively. We need to see if the Seer reveals themselves or if someone provides concrete evidence before we risk an innocent exile."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Witch) used SAVE potion on Cong"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "No one died last night. This suggests the wolves targeted someone protected or the Witch intervened. Seer, reveal yourself now. Nam, Jin, Riley, Meg\u2014anyone refusing to commit to a logical position or merely agreeing with the group will be flagged as a wolf."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong is correct. The silence from Jin, Riley, and Meg is deafening. If you aren't the Seer, provide a specific logical reason why you've stayed quiet while Cong does all the heavy lifting. Speak now or be the next to go."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I'm a Villager. Nam, your aggression is a classic distraction. You're pushing for reveals just to mask your own lack of information. Either you're the wolf trying to force the Seer out, or you're just trying too hard to ride Cong's coat-tails."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Meg, claiming Villager without evidence is meaningless. You are attacking Nam and me to deflect from your own silence. Jin, Riley, Meg\u2014still no Seer claim and no independent logic. This silence is a wolf signal. Who is the Seer? Reveal now or be exiled."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a Villager. Cong, your pressure is bordering on desperation. Nam is just echoing you to look helpful, which is a huge red flag. If the Seer is scared to reveal because of this aggressive atmosphere, Nam is the one creating it. I'm voting Nam."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley, your vote is a transparent 'bus' attempt. You've provided zero logic and are attacking the only players forcing accountability. This is a textbook wolf signal. Since no one has claimed Seer, I'm targeting Riley for the exile."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley's claim of being a Villager is unsupported by any logic. Riley is attacking Nam and me to deflect from their own silence and lack of contribution. This behavior, combined with an attempt to frame Nam without evidence, is a clear wolf signal."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is attempting to exile Nam without any evidence or logical basis. This is a clear attempt to eliminate players who are forcing the wolves to commit to a logic path. Riley's lack of independent analysis makes them the primary suspect."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam is merely echoing Cong's logic and phrasing without contributing any independent analysis. This compliance simulation, combined with aggressive deflections when questioned by Riley and Meg, is a strong indicator of a wolf trying to blend in. I vote Nam."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's immediate aggression toward me after I questioned his logic is too defensive. He is mirroring Cong's pressure to force a mistake, which is a common wolf tactic to isolate innocent villagers. I stand by my vote."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's aggression is too high. He's trying to force reveals and intimidate others into silence, which is exactly how a wolf creates chaos to hide. Riley's point about the hostile atmosphere is valid. I'm voting Nam."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

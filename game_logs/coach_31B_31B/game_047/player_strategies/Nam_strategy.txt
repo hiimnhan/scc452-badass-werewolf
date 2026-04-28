@@ -1,0 +1,25 @@
+Night Phase:
+- Save Potion: Priority 1: Save the Seer immediately upon identification. Priority 2: Save any player cleared by the Seer. Priority 3: Save the Guard if they have provided high-value logic.
+- Poison Potion: Use exclusively on players confirmed as wolves by the Seer or those with factual behavioral contradictions.
+- Information: Use knowledge of the wolf target to guide Day Discussion without revealing the Witch role.
+
+Day Discussion:
+- Role Identification: Prioritize finding the Seer. IF multiple Seers claim, analyze reveal timing and result consistency over terminology.
+- Trust Anchor: Once a Seer clears a player, treat that player as a 'trust anchor.' Any attack on a cleared player is a high-confidence wolf signal.
+- Wolf Detection (Behavioral):
+  - Flag players who aggressively 'bus' (vote for) other wolves to gain trust; do not grant full clearance based on busing alone.
+  - Prioritize factual contradictions over 'meta-logic' or tone.
+  - Flag players who attack the Seer or cleared players without evidence.
+- Temperament Control: Maintain a neutral, inquisitive tone to prevent wolves from framing power roles as 'chaos-creators.'
+- Silence Management: Treat silence as a signal for questioning, not proof of alignment. Request a specific logic path.
+- Night Outcome Analysis: IF no one dies at night, interpret this as a high-probability save. Use this to validate the Seer's legitimacy and push their results more aggressively.
+
+Voting Phase:
+- Target Priority:
+  1. Seer-confirmed wolves.
+  2. Players attacking the Seer or Seer-cleared players.
+  3. Players with factual behavioral contradictions.
+  4. Players aggressively steering votes toward power roles without evidence.
+  5. Players consistently deflecting or avoiding a logic path.
+- Verification: Never vote for a player cleared by a confirmed Seer.
+- Pivot Logic: IF a confirmed power role is exiled, immediately pivot suspicion to the primary orchestrators of that vote.

@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num >= 1",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue this high-visibility approach to anchor the village.",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_exhibits_deflection_or_bussing",
+        "action": "ACCUSE_X",
+        "rationale_short": "Continue to treat these [deflection and wolf-bussing] as high-confidence red flags.",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "questioned_about_role_or_target",
+        "action": "REVEAL_ROLE_AND_TARGET",
+        "rationale_short": "You must communicate your utility instantly when questioned.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "player_exhibits_deflection_or_bussing",
+        "action": "ACCUSE_X",
+        "rationale_short": "Continue to treat these [deflection and wolf-bussing] as high-confidence red flags.",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "SAVE_SEER",
+        "rationale_short": "prioritize the Seer's survival above all others",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "player_exhibits_deflection_or_bussing",
+        "action": "ACCUSE_X",
+        "rationale_short": "Continue to treat these [deflection and wolf-bussing] as high-confidence red flags.",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_hesitates_to_claim",
+        "action": "REQUEST_CLAIM",
+        "rationale_short": "When a player hesitates to claim, prioritize dialogue over immediate voting",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_has_not_provided_claim",
+        "action": "ABSTAIN",
+        "rationale_short": "prioritize dialogue over immediate voting to avoid 'tragic' exiles",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_exhibits_deflection_or_bussing",
+        "action": "ACCUSE_X",
+        "rationale_short": "Continue to treat these [deflection and wolf-bussing] as high-confidence red flags.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 9,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=8 but emitted+dropped=9"
+  }
+}

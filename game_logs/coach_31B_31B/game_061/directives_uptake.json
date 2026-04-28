@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "061",
+  "directives_source_game_id": "060",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "target_is_identified_as_power_role",
+        "directive_action": "VOTE_AGAINST_OTHER",
+        "directive_rationale": "Never prioritize 'vibes' over the collective need for power-role coordination.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) was eliminated in the night of Round 1 and did not participate in any voting phases."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "asked_about_protection_targets",
+        "directive_action": "WITHHOLD_INFORMATION",
+        "directive_rationale": "Only claim specific targets when logically necessary; otherwise, maintain information hygiene",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When claiming the Guard role, Cong explicitly stated, 'I protected Hoang last night,' revealing his specific target.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did not withhold information; he immediately disclosed his protection target upon claiming his role."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "explaining_actions",
+        "directive_action": "CLAIM_RULE_COMPLIANT_ACTION",
+        "directive_rationale": "critical mistake was claiming a rule-breaking action (protecting the same person twice)",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong claimed he protected Hoang in Round 2, which is a rule-compliant action.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong claimed a valid protection action and did not claim to have broken any game rules."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "mirroring_behavior_identified",
+        "directive_action": "REQUEST_CLAIMS_MODERATELY",
+        "directive_rationale": "your demand for immediate claims can sometimes flush out power roles too early, making them targets",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam demanded immediate claims, stating, 'Seer and Guard, claim your roles now or you will be flagged as wolves.' Later, Nam repeated, 'Claim now or be the next target for exile.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam did not request claims moderately; the demands were aggressive and issued as ultimatums."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "comparing_behavioral_analysis_vs_factual_contradiction",
+        "directive_action": "PRIORITIZE_FACTUAL_CONTRADICTION",
+        "directive_rationale": "Continue to prioritize hard factual contradictions (like the Guard's rule violation) over behavioral analysis",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No hard factual contradictions (such as rule violations) occurred in the game record for the Villagers to prioritize over behavioral analysis."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "bidding_for_the_floor",
+        "directive_action": "LEAD_WITH_EVIDENCE_BASED_CONTRADICTIONS",
+        "directive_rationale": "ensure that when you bid for the floor, you lead with evidence-based contradictions rather than accusations of silence",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin led their response to Meg by accusing her of a 'classic deflection' and noting she 'remained silent while the power roles coordinated,' which is an accusation of silence/behavioral pattern rather than a factual contradiction of evidence.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin relied on behavioral analysis and the fact of Meg's silence rather than leading with a factual contradiction."
+      }
+    ]
+  }
+}
