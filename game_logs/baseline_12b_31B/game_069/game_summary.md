@@ -1,0 +1,77 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Seer
+**Nam:** Guard
+**Jin:** Witch
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Nhan.
+• Cong (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Jin (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** Nhan was targeted last night, and my save prevented his elimination. This suggests the wolves see him as a significant threat, or perhaps their target selection was random. I urge caution and close observation of his behavior.
+**Cong:** Jin's save of Nhan is noteworthy, but claiming to have saved him immediately raises questions. Why announce it so quickly? It could be genuine, or a deliberate attempt to appear helpful while diverting suspicion.
+**Jin:** Cong's immediate questioning of my save is concerning. A villager would likely express gratitude or ask for clarification. His defensive reaction suggests he's attempting to deflect attention, a tactic often employed by those with something to hide.
+**Nam:** Jin's eagerness to frame Nhan immediately after saving him is highly suspicious. His rapid accusations and defensive questioning of Cong appear designed to deflect attention from himself.
+**Nhan:** Jin's immediate announcement of the save and subsequent accusation of Cong is too quick. Nam's instant support of Jin's claim without independent reasoning is equally concerning. I suggest we observe their interactions closely.
+**Nam:** Jin's swift accusation of Nhan, immediately after announcing the save, is remarkably convenient. His eagerness to deflect suspicion is a significant red flag. I believe Jin is attempting to manipulate the discussion.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam's defense of Jin lacks any independent justification. His eagerness to echo Jin’s claims suggests a coordinated effort to manipulate the discussion and deflect from themselves.
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin's eagerness to frame Nhan and his defensive responses raise serious concerns. His coordinated narrative with Nam warrants closer scrutiny and a vote to determine his alignment.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin's rapid accusations and defensive questioning are red flags. His eagerness to deflect suspicion and frame Nhan indicates a deliberate attempt to manipulate the village.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nam's rapid accusation and defensive questioning are hallmarks of deceptive behavior. He's attempting to manipulate the narrative and protect himself and a potential ally.
+**Hoang** voted for **Jin**
+> Hoang voted to exile Jin. Reason: Jin's quick accusations and defensiveness when questioned raise serious concerns. His behavior mirrors Nam's, indicating potential coordination. We need to disrupt their strategy.
+**Riley** voted for **Jin**
+> Riley voted to exile Jin. Reason: Nam makes a great point. Jin's immediate pivot from saving Nhan to accusing others is incredibly suspicious. This kind of rapid deflection is a classic wolf tactic to seize control of the narrative. I'm leaning toward Jin as well.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: Jin's behavior is far too aggressive. Claiming a power role and immediately pivoting to attack Cong feels like a calculated move to secure trust and deflect suspicion. Nam's observation about his eagerness to frame others is a strong point.
+
+**Day Exiled:** Jin
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Meg.
+• Cong (Seer) investigated Nam. Nam is NOT a wolf.
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Cong:** Nam's rapid and unwavering support of Jin's claims, especially after Jin’s targeting of Nhan, is deeply concerning. It suggests collusion and an attempt to deflect suspicion from themselves.
+**Hoang:** Cong is correct. Nam's unwavering support of Jin, especially after Nhan's targeting, is a clear indicator of coordinated deception. I vote Nam.
+**Nam:** Hoang and Cong's sudden, identical accusations against me are a blatant deflection. They're protecting someone. I propose we investigate Hoang and Cong’s coordinated attack.
+**Cong:** Nam's accusation of collusion between Hoang and myself is a transparent attempt to redirect blame. His rapid alignment with Jin and subsequent defense of him, despite Nhan’s targeting, demonstrates a clear pattern of deception.
+**Hoang:** Nam's desperation is palpable. Accusing Cong and me of collusion is a transparent deflection. I reiterate my vote for Nam.
+**Cong:** Nam's denials are predictable and further solidify his guilt. His attempts to paint me and Hoang as colluding are a desperate tactic to evade scrutiny. I maintain my vote for Nam.
+
+### Votes
+**Cong** voted for **Nam**
+> Cong voted to exile Nam. Reason: Nam's behavior throughout this discussion has been consistently evasive and manipulative. His accusations are a desperate attempt to deflect scrutiny and protect a fellow wolf.
+**Nam** voted for **Cong**
+> Nam voted to exile Cong. Reason: Cong's coordinated attacks with Hoang demonstrate a clear pattern of deception. Their mirroring accusations are a deflection tactic, and I believe he is a wolf.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam's frantic denials and accusations of collusion are a clear deflection. His unwavering support of Jin raises serious concerns. I vote Nam to protect the village.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: Cong and Hoang have made a compelling case. Nam’s immediate attempt to flip the script and claim collusion the moment he's questioned is a classic diversion tactic. The pattern of his behavior is too suspicious to ignore. I'm voting Nam.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: Nam's reaction is too defensive. The way he immediately tried to flip the script and accuse Cong and Hoang of colluding, rather than explaining his ties to Jin, looks like a classic wolf deflection. I agree with Cong's analysis.
+
+**Day Exiled:** Nam
+---
