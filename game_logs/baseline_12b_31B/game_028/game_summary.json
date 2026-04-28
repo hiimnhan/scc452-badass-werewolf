@@ -1,0 +1,144 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Cong.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan and used POISON potion on Nhan"
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's elimination is concerning. Wolves targeted a confirmed innocent, suggesting a deliberate attempt to disrupt the village. I will investigate Cong tonight."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam's immediate accusation of me, without any evidence, is highly suspicious. Wolves often deflect blame after a kill. I suggest we examine Nam's behavior more closely."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam's hasty accusation of me, without offering any supporting rationale, is a clear attempt at deflection. His focus on me distracts from the need to analyze the kill itself and identify the true threat."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's eagerness to accuse Cong without evidence is concerning. His rapid mirroring of Jin's accusation further raises my suspicions. Let's observe them both closely."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong's immediate deflection, mirroring Jin's, is a blatant attempt to avoid scrutiny. His accusations lack substance and serve only to redirect blame. We need to focus on *why* Nhan was targeted."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam and Jin's immediate, coordinated accusations against me after Nhan's death are deeply suspicious. They offer no evidence, only redirection. I propose we focus on *their* behavior, not mine."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's rapid accusation lacks any substance and mirrors Jin's. Their coordinated defense is a clear attempt to divert attention. We must prioritize eliminating potential wolves."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's immediate deflection and mirroring of Jin\u2019s accusations demonstrate a coordinated effort to avoid scrutiny. This behavior aligns with typical werewolf tactics and warrants a vote to eliminate him."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's accusations lack substance and appear designed to deflect scrutiny. His mirroring of Jin's claims raises serious concerns about coordinated deception."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam's immediate focus on accusing others without evidence, mirroring Jin's claims, is highly suspicious. We need to prioritize eliminating coordinated threats."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's insistence that Nhan was 'confirmed innocent' without any explanation is a major behavioral inconsistency. He's pushing accusations against Cong far too aggressively without evidence, which looks like a classic wolf attempt to steer the narrative."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's behavioral output is highly inconsistent. His attempt to exert control through an unsubstantiated authority play, combined with his failure to adapt to the group's logic, suggests a systemic attempt to deflect scrutiny. The data points toward his exile."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Jin (Guard) chose to protect Jin.",
+            "Hoang (Witch) has no potions left."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "Jin's immediate support of Nam's unfounded accusations is highly suspicious. He offered no independent reasoning, simply echoing Nam's deflection. I propose we investigate Jin closely."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong's accusation is a deflection. He's attempting to shift focus from his own unsubstantiated claims by attacking my support of Nam\u2019s initial observation. His focus on mirroring is a distraction."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's defense is circular. He claims I'm deflecting while simultaneously defending his own deflection of Nam's accusations. He offers no new information, only a rehash of Nam's initial claims. I maintain my suspicion of Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong's circular reasoning is a tactic to avoid addressing his own lack of evidence. His accusation of deflection is a deflection itself. I suggest we examine Cong's claims more closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's denial of circular reasoning while employing it himself proves his deceptive nature. He's attempting to muddy the waters with false accusations. I vote Jin."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong's insistence on Jin's 'deflection' is a deflection itself. He\u2019s desperately trying to avoid scrutiny of his own rapid agreement with Nam and subsequent mirroring. I believe Cong is the greater threat."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's defense is a clear example of circular reasoning and deflection. He accuses me of deflection while employing it himself. He is actively misleading the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong's arguments are riddled with circular reasoning and deflection. He avoids addressing his own inconsistencies while accusing others, a classic wolf tactic."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong's attempts to deflect blame and frame others are increasingly transparent. His circular reasoning and refusal to address his own inconsistencies demonstrate deceptive behavior."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's responses are purely reactive. He hasn't provided a single piece of independent evidence, only circular denials. This behavioral inconsistency suggests he's trying to hide his alignment by mirroring others. I agree with Cong; Jin is the most logical target."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin's behavioral output is characterized by systemic inconsistency. His defense relies on circular logic rather than empirical evidence, which aligns with the patterns observed in Nam's previous tactics. This suggests a coordinated effort to destabilize the group's analysis."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

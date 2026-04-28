@@ -24,8 +24,8 @@ def parse_args() -> argparse.Namespace:
         description="Watch a Werewolf run and restart it if it crashes.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    parser.add_argument("--scenario", default="baseline", help="Scenario passed to run.py")
-    parser.add_argument("--mode", default="override", choices=["append", "override"], help="Run mode")
+    parser.add_argument("--scenario", default="baseline_12b_31B", help="Scenario passed to run.py")
+    parser.add_argument("--mode", default="append", choices=["append", "override"], help="Run mode")
     parser.add_argument(
         "--games",
         type=int,
@@ -35,13 +35,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--restart-threshold",
         type=int,
-        default=20,
+        default=100,
         help="If the most recent game number is below this value, derive --games from the console output when restarting.",
     )
     return parser.parse_args()
 
 
-def default_games_from_baseline(target_total: int = 20) -> int:
+def default_games_from_baseline(target_total: int = 100) -> int:
     baseline_root = Path(__file__).parent / "game_logs" / "baseline"
     if not baseline_root.exists():
         return target_total

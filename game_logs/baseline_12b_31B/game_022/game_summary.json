@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is confirmed not a werewolf. Let's focus our attention on observing the others. I propose we carefully watch Cong and Nam \u2013 they have not yet contributed to the discussion and warrant closer scrutiny."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's proposal to scrutinize Nam and Cong seems like a deflection. Why target those who haven't spoken? Let's examine Jin's motives for pushing this agenda."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam's immediate questioning of my motives is concerning. It's a classic deflection tactic \u2013 diverting attention from their own potential involvement. Let's observe Nam closely for inconsistencies."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's eagerness to deflect suspicion onto Nam and Cong, immediately after being questioned, is highly suspect. His actions mirror classic werewolf tactics. I propose we examine Jin's reasoning more closely."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's immediate targeting of Nam and myself, followed by Nam's defensive reaction, reeks of coordinated deflection. Jin\u2019s lack of specific reasoning for his accusations is deeply concerning. I propose we examine Jin\u2019s motives more closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's rapid deflection and mirroring accusations against Nam and Cong are concerning. It's a tactic wolves often employ to muddy the waters and deflect suspicion. I propose we focus our attention on Jin's behavior and justifications."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's rapid deflection and mirroring accusations are concerning. He consistently avoids addressing the core issues and instead attacks others. I believe he is a wolf attempting to sow discord."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's behavior is reactive and lacks logical justification. His quick targeting and deflection tactics are suspicious and warrant immediate investigation."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin's rapid deflection and mirroring accusations are classic werewolf tactics. He avoids providing reasoning and attempts to control the narrative. Let's eliminate him."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's defensive reaction and coordinated deflection with Cong and Hoang is a textbook werewolf tactic. We must disrupt their coordinated efforts and protect the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin's immediate deflection and mirroring accusations against Nam and Cong are highly suspicious. His justifications are weak, and his behavior aligns with classic werewolf tactics."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: I've been observing the flow of this conversation, and Jin's behavioral inconsistency is glaring. The rapid pivot from targeting quiet players to accusing Nam of deflection is a systemic outlier. I agree with the shared observation that Jin is attempting to muddy the waters."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: The behavioral output from Jin exhibits a systemic inconsistency. His attempt to designate targets without empirical evidence, followed by rapid deflection when questioned, suggests a tactical gambit to maintain narrative control. The collective data points toward Jin as the primary source of instability."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Riley.",
+            "Nhan (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
