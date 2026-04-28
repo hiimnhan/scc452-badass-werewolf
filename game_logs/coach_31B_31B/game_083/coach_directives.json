@@ -1,0 +1,106 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Excellent immediate claim",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "ENDORSE_GUARD",
+        "rationale_short": "clearing of the Guard",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "role_is_seer",
+        "action": "REQUEST_PROTECTION_COMMUNICATION",
+        "rationale_short": "ensure the Guard is communicating their protection target to maximize your survival",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your protection of the Seer in Night 1 was a game-winning move",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "role_is_guard",
+        "action": "ACT_AS_TRUST_ANCHOR",
+        "rationale_short": "your role as a 'Trust Anchor' allowed the village to maintain a logical center",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "SAVE_SEER",
+        "rationale_short": "correctly used the SAVE potion on the Seer in Night 1",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_is_dead",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "be more vocal about your existence once the Seer is dead",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_echoes_trust_core_without_original_logic",
+        "action": "ACCUSE_X",
+        "rationale_short": "By noticing that one player echoed the Trust Core without adding original logic, you isolated the remaining wolf",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "wolf_calls_decisiveness_aggression",
+        "action": "IGNORE_TONAL_GASLIGHTING",
+        "rationale_short": "Continue to ignore 'tonal gaslighting'\u2014when a wolf calls your decisiveness 'aggression,' it is usually a signal of their own desperation",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_hard_data",
+        "action": "PRIORITIZE_DATA_OVER_VIBES",
+        "rationale_short": "the danger of prioritizing 'vibes' over the Seer's hard data",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "witch_demands_transparency",
+        "action": "RECOGNIZE_AS_VIABLE_STRATEGY",
+        "rationale_short": "failed to recognize that the Witch's demand for transparency was a viable (though aggressive) villager strategy",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 11,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=11"
+  }
+}

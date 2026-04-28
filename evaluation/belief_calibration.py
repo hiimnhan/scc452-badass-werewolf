@@ -116,6 +116,7 @@ ax = sns.barplot(
     x='Bin_Label', 
     y='RMSE', 
     hue='Scenario',
+    hue_order=SCENARIO_CONFIG,
     palette='Set2'
 )
 
@@ -128,7 +129,7 @@ plt.title('Villager Belief Error (RMSE) per 25-Game Bin', fontsize=16, fontweigh
 plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
 plt.ylabel('Belief RMSE', fontsize=12, fontweight='bold')
 
-plt.legend(title='Scenario', bbox_to_anchor=(1.02, 1), loc='upper left')
+plt.legend(title='Scenario', loc='upper right')
 
 # Dynamically set y-axis limit to 15% above the maximum MSE so labels fit
 # max_mse = binned_df['RMSE'].max()

@@ -1,0 +1,213 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Cong (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Jin (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I am the Seer. I investigated Nhan last night and confirmed Nhan is innocent. We now have one confirmed innocent; everyone else is a variable. Let's see who tries to challenge this data or deflects from it."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong has provided the first piece of actionable data. Since Nhan is cleared, we focus on the remaining variables. If anyone claims to be the Seer now, they are a wolf and must be exiled immediately."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Cong's info is a solid starting point. If Nhan is clear, we have a foundation. However, Hoang, you're pushing for a consensus way too fast. Why are you so eager to lock this in? It feels a bit too convenient to steer the vote this early."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley, labeling Hoang's support of the Seer's data as 'steering' is a classic Vibe Trap. You are attacking the logic of the process rather than providing actual evidence. We follow Cong's data and the process of elimination. Riley is high-risk."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Jin, your aggression is a smokescreen. You're so desperate to frame me for 'vibe trapping' that you're ignoring the fact that we have zero proof of Cong's role. You're pushing a narrative to force a rush-vote. I'm the Guard; I'll protect the real assets while you deflect."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley, calling logic 'aggression' is a textbook Vibe Trap. You are attacking my tone to distract from the fact that you're obstructing the Seer's data. Your sudden Guard claim is a desperate deflection. We follow the PoE: Riley is the primary target."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley is attacking the tone of the debate and the speed of consensus rather than providing any facts. The sudden claim to be Guard after being questioned is a transparent attempt to deflect. We must trust the Seer's data and exile the primary obstructionist."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley has repeatedly attacked the tone of other players and questioned the validity of Seer data without providing evidence. This behavior, combined with a sudden role claim to deflect suspicion, is a strong indicator of a werewolf."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is attempting to deflect from the Seer's data by attacking the tone of the debate. Furthermore, Riley's claim to be the Guard is a blatant lie to gain trust. This is a desperate attempt to obstruct the village's progress."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley is repeatedly using Vibe Traps to distract the group by attacking our tone rather than the facts. The sudden Guard claim is a clear deflection to avoid being the target of the process of elimination. We must prioritize the Seer's data over Riley's distractions."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is attempting to discredit the Seer's data and attacking those who support it. The sudden Guard claim is a transparent attempt to deflect suspicion after being called out for using Vibe Traps to steer the conversation. Riley is the most logical target."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's relentless focus on me and his attempt to force a rush-vote without considering other variables is highly suspicious. He is trying to shut down debate and railroad the village into a mistake. We can't let one person's aggression dictate the exile."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Riley",
+                "reasoning": "Meg voted to exile Riley. Reason: I am a Villager. Riley's sudden Guard claim after challenging the Seer's data is a mechanical inconsistency. Jin's logic is sound; we must prioritize the Seer's confirmed data over an unverified claim made under pressure."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Cong.",
+            "Nam (Guard) chose to protect Cong.",
+            "Cong (Seer) investigated Nam. Nam is NOT a wolf.",
+            "Jin (Witch) used SAVE potion on Cong"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "I have investigated Nam and he is confirmed innocent. Nhan is also confirmed innocent. This leaves Jin, Hoang, and Meg. Hoang, you have only echoed my findings without adding any original analysis. Explain your logic or you are a suspect."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong, I am validating your data because Seer information is the only factual lead we have. My logic is simple: Nam and Nhan are cleared, so the wolf must be among the rest. Let's focus on Jin and Meg instead of wasting time on me."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang, you are practicing classic logic posturing. You claim to 'validate' data but offer no actual analysis, then immediately try to steer the vote toward Jin and Meg to deflect from yourself. Your behavior is a wolf signal. We vote Hoang."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang, you are merely echoing my data and attempting to deflect suspicion onto Jin and Meg without any evidence. Nam is correct; this is logic posturing. We have a confirmed innocent identifying your wolf signals. Everyone, vote to exile Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam, your attack is a distraction. I am following the Seer's data\u2014the only factual lead we have. If you are cleared, use that position to analyze Jin and Meg instead of attacking a villager for supporting the Seer. Let's stick to the data."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang, your refusal to provide original analysis while attempting to redirect the vote to me and Meg is a textbook wolf signal. You are logic posturing to hide in plain sight. Cong and Nam have identified your pattern; we vote Hoang now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang is merely echoing the Seer's data to blend in while attempting to redirect suspicion toward Jin and Meg without providing any evidence. This logic posturing and mirroring are classic wolf signals. We must follow the data and exile Hoang."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang is echoing Seer data without adding original analysis and attempting to deflect suspicion onto others. A confirmed innocent has identified this as logic posturing. We must exile Hoang."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang is using classic deflection tactics. He claims to follow the data but offers no original analysis, instead attempting to steer the vote toward Jin and Meg without evidence. This behavior is a wolf signal. We must exile Hoang."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang is using logic posturing to hide. He echoes the Seer's data without providing any original analysis and immediately tries to deflect suspicion toward Meg and me. This is a clear wolf signal. We must follow the Seer's leads and exile Hoang."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin is mirroring the rhetoric of others without providing any original analysis of the suspects. This mirroring is a common wolf tactic to blend in while steering the vote toward a villager. We must look at Jin's lack of independent logic."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: I am a Villager. Cong's Seer data is our only factual framework. Since Nam and Nhan are cleared, and Hoang is failing to provide original analysis while attempting to redirect the vote, his behavior is a mechanical inconsistency. I vote Hoang."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "3": {
+        "night_actions": [
+            "Meg (Wolf) targeted Cong.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Cong (Seer) investigated Meg. Meg is a wolf.",
+            "Jin (Witch) did not use any potions."
+        ],
+        "night_eliminated": [
+            "Cong"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Cong is dead, but his data remains. Nhan is confirmed innocent. Between Jin and Meg, Meg is the only unverified variable left. We must prioritize Process of Elimination. Meg, explain why you haven't provided any factual analysis. I'm voting Meg."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I am a Villager. Nam, your 'process of elimination' is a mechanical inconsistency. You are aggressively pushing a narrative to isolate me without providing any factual contradictions. Why are you so desperate to force a vote on me instead of analyzing Nam's own lack of a role claim?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Meg, you are using a classic vibe trap. Attacking my tone and calling logic 'mechanical' is a deflection to avoid the fact that you are the only remaining unverified variable. I am the Guard. The math is simple: Meg is the wolf. I vote Meg."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Nam, claiming Guard only after the Seer is dead is a mechanical inconsistency. You are forcing a vote on me to hide your own lack of verification. Nhan, as the only confirmed innocent, you cannot let Nam manipulate the vote. I vote Nam."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg, your attempt to label Nam's logic as 'aggressive' is a blatant Vibe Trap. You are the only unverified player left. Nam's Guard claim is consistent with our need to narrow the pool. I am voting Meg."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg, you are trapped. You've attacked Nam's tone and called his logic 'mechanical' instead of providing a single fact. Nam was cleared by Cong, and the math leaves only you. Your deflection is a textbook wolf tactic. I vote Meg."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Nam was cleared by Cong, and Jin has consistently supported the logic. Meg, you've focused on Nam's tone and 'desperation' instead of providing any evidence or a role claim. The math is clear: you are the only remaining suspect. I vote Meg."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Nhan is confirmed innocent and Jin's logic is sound. Meg is the only unverified player left and has spent the entire debate attacking tone rather than providing facts. This is a textbook wolf deflection. By process of elimination, Meg must be the werewolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Nam and Nhan are confirmed innocent by Cong's data. Meg is the only player left who has not been verified. Her focus on Nam's tone rather than providing factual evidence is a classic deflection tactic. The process of elimination points directly to Meg."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's sudden Guard claim following the Seer's death is a mechanical inconsistency. He is aggressively forcing a vote to bypass verification. I cannot support a claim that only emerged when it became convenient to isolate a single player."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Seer",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

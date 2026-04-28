@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "080",
+  "directives_source_game_id": "079",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_perfectly_mirrors_logic_and_agrees_with_every_word",
+        "directive_action": "BE_SKEPTICAL_OF_X",
+        "directive_rationale": "Be skeptical of players who offer zero original analysis and only 'agree' with the Power Core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin (Seer) viewed Hoang's mirroring as a positive establishment of a 'Power Core' and actively defended Hoang against Nam's accusations of mimicry, urging the village to vote for Nam instead.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not be skeptical of Hoang's mirroring; instead, he embraced it as strategic alignment and attacked the person who pointed it out."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting anyone else while the Seer is alive is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Guard) chose to protect Nhan (Witch) instead of Jin (Seer) in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected the Witch while the Seer was alive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "NEVER_DEVIATE_FROM_SEER",
+        "directive_rationale": "Never deviate from the Seer until they are dead or the game is won.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Guard) protected Jin (Seer) in Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "In the second night, Hoang correctly protected the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identifies_wolf_AND_day_vote_is_uncertain",
+        "directive_action": "POISON_TARGET",
+        "directive_rationale": "Once the Seer identifies a wolf, you must coordinate to poison that target if the day vote is uncertain.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) never identified a specific player as a wolf; he only provided clearances (Nhan, Cong)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "wolves_survive_AND_potions_remaining > 0",
+        "directive_action": "USE_POTIONS",
+        "directive_rationale": "Wasting your resources while the wolves survived is a failure of resource management.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) used the POISON potion on Hoang (Guard).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan used her remaining potion while wolves were still in play."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_mimics_seer_phrasing_without_original_analysis",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Use the day debate to challenge those who are merely echoing the Seer rather than providing their own deductive reasoning.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Villager) explicitly challenged Hoang for echoing Jin's terminology ('Power Core') and mirroring his language without adding original logic.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified the mimicry and challenged the player as directed."
+      }
+    ]
+  }
+}

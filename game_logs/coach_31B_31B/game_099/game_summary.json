@@ -1,0 +1,219 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. I investigated Nhan last night, and Nhan is confirmed not a werewolf. We have a verified villager; the rest of you are currently unverified variables. I expect everyone to provide a clear deductive contribution to this discussion."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam, your claim is noted. By clearing Nhan, you've narrowed our suspect pool to five variables. This is a logical starting point for the Power Core. Everyone else: provide specific deductive reasoning now or you will be flagged as mirroring."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang, you are mirroring my terminology and attempting to dictate the deductive framework without providing any original analysis. This is a classic wolf signal. You are attempting to blend into the Power Core by echoing me. I flag Hoang as a werewolf."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam, your attack is a baseless deflection. I am validating your data to establish a Power Core, which is the only way to filter the remaining variables. Dismiss the critique of my tone and focus on the fact that Nhan is cleared. Who else is stepping up?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang, your attempt to frame my accusation as a 'deflection' is a textbook vibe trap. You are attacking the process to avoid addressing your mirroring. You are not validating data; you are mimicking the Seer to hide. I maintain my flag: Hoang is a werewolf."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam, your attack on my logic is a desperate attempt to isolate me. I am the Witch. I validate Nhan's clearance because it is the only factual data we have. Your pivot to attacking the Power Core's structure is a wolf signal. Everyone, focus on the variables."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Nam is the Seer and has cleared me. Hoang attempted to mirror the Seer's logic to appear helpful, but only claimed to be the Witch after Nam flagged his behavior. This late claim and mirroring are classic werewolf tactics to hide in plain sight."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang is mirroring the Seer's language to blend in and only claimed a power role after being called out. This late claim and the use of analytical jargon to deflect from the Seer's observation are strong indicators of a werewolf."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang is mirroring my terminology to blend in and using tone-based deflections to avoid scrutiny. His sudden claim to be the Witch only after being flagged is a desperate attempt to avoid exile. He is a werewolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang is mirroring Nam's phrasing and using pseudo-logic to dictate the conversation without providing original data. His reactive claim to be the Witch only after being flagged, combined with his attempt to frame Nam's logic as a deflection, are strong wolf signals."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam is attacking the very process of using Seer data to narrow the suspect pool. This is a clear attempt to disrupt the Power Core and isolate power roles. His aggressive pivot away from the variables and toward the process identifies him as a werewolf."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": null,
+                "reasoning": "Riley voted to exile None. Reason: Nam and Hoang are both making strong claims, and we have a conflict between a Seer and a Witch. Voting now without more data is risky. I want to see how Cong and Jin react to this standoff before I commit my vote."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: I'm a villager. Nam has provided a clear Seer claim and a verified clear on Nhan. Hoang's aggressive mirroring and sudden Witch claim after being flagged by the Seer look like desperate deflections. I trust Nam's read here."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Cong. Cong is NOT a wolf."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. Nhan and Cong are confirmed villagers. This establishes our Power Core. Jin, Riley, and Meg: you are the remaining variables. Speak now with deductive value or you will be the next targets for elimination."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I'm a Villager. Nam, since you've cleared Nhan and Cong, the wolves are definitely among Jin, Riley, and me. Jin, you've been quiet while the rest of us are trying to solve this. Why aren't you contributing any deductive value?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Meg, you are mirroring my terminology to blend in without providing any original analysis. This is a classic wolf signal. Jin and Riley, provide your claims and deductive value now, or Meg will be our primary target for exile."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Nam, I'm just trying to follow your lead since you're the Seer. If you're ignoring my effort to help and attacking me for it, you're just creating chaos. Jin, your silence is a factual contradiction to Nam's demand for value. Why are you hiding?"
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Meg, your attempt to frame my leadership as 'creating chaos' is a blatant vibe trap to deflect from your mirroring. You are using pseudo-logic to attack Jin's silence while ignoring your own lack of original analysis. Meg is a werewolf. Vote Meg."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Meg, your behavior is a textbook wolf signal. You're mirroring Nam's words and using vibe traps to attack Jin's silence instead of providing original logic. You've failed to provide any deductive value. I'm with Nam: Meg is a werewolf. Vote Meg."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Nam's Seer claim has established a Power Core. Meg is mirroring Nam's terminology to blend in while using vibe traps to deflect attention toward Jin. This behavior, combined with a lack of original deductive value, strongly identifies Meg as a werewolf."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Meg is mirroring Nam's terminology to blend in and using vibe traps to deflect attention toward Jin's silence. She provides no original deductive value and attempts to frame the Seer's leadership as 'creating chaos'. This is a clear wolf pattern. Vote Meg."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: Meg is mirroring my terminology to blend in and using vibe traps to frame my leadership as 'chaos' to deflect suspicion. She provides no original analysis and uses pseudo-logic to attack Jin. Meg is a werewolf. Vote Meg."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Nam has established a Power Core with Nhan and Cong. Meg is mirroring the Seer's terminology to blend in while using vibe traps to frame Nam's leadership as 'creating chaos.' This pseudo-logic is a clear wolf signal. We must prioritize the PoE list. Vote Meg."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": null,
+                "reasoning": "Riley voted to exile None. Reason: Nam, calling Meg's mirroring a 'wolf signal' feels like a vibe trap. We should focus on the mechanical state: why was there no death last night? Was it a Guard save or a Witch save? Let's establish the night's mechanics before exiling based on tone."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Nam is the Seer and we need him. I've been clear about my role. Jin's complete refusal to provide any deductive value while the village is under attack is the most suspicious fact we have. He's hiding for a reason."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "3": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nam.",
+            "Jin (Guard) chose to protect Cong.",
+            "Nam (Seer) investigated Jin. Jin is NOT a wolf."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "Nam was our Seer and the wolves killed him to blind us. Nhan is cleared. That leaves Jin and Riley. Both have provided zero deductive value. Jin, explain your silence; Riley, give me one logical reason why you aren't the wolf."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. I have been protecting the Seer, and my priority is ensuring our remaining power roles survive. Nhan is cleared, and I am the Guard, leaving Riley as the only unverified variable. Riley, your silence is a wolf signal. You are the target."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin, your claim is a textbook late power role signal. You were silent while Nam was alive and only claimed Guard once Cong pressured you. This is a desperate attempt to frame Riley. I trust Cong and Nam's logic; Jin, you are the wolf."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin, your claim is a transparent attempt to blend in. You were silent until the Seer was dead, then suddenly claimed Guard to force a win. Nhan is cleared, and your timing is a wolf signal. I vote to exile Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan and Cong, you are ignoring the facts. Nam cleared both of you. Since I am the Guard, Riley is the only unverified variable left. Your sudden shift to target me is a distraction. We must exile Riley to win."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin, your 'logic' is a mask. You're using a fake Guard claim to manufacture a process of elimination against Riley. Your silence until the Seer was dead is a definitive wolf signal. I'm sticking with Cong\u2014Jin is the wolf. Vote Jin."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Jin",
+                "reasoning": "Nhan voted to exile Jin. Reason: Jin remained silent while the Seer was alive and only claimed Guard after being pressured. This late claim is a classic wolf tactic to frame Riley and force a win. I trust the logic of the cleared players. Jin is the wolf."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's claim to be the Guard is a desperate late-play. He remained silent while Nam was alive and only claimed a power role once the Seer was eliminated to frame Riley. This timing is a definitive wolf signal. He must be exiled."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Nam cleared Nhan and Cong. I am the Guard. By process of elimination, Riley is the only remaining unverified player. To secure a villager victory, we must exile the only person not cleared by the Seer."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's claim is far too convenient. To stay silent while Nam was alive and only claim Guard once the Seer is dead is a classic wolf move to seize control of the narrative. I agree with Nhan; the timing is a massive red flag."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "4": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nhan."
+        ],
+        "night_eliminated": [
+            "Nhan"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

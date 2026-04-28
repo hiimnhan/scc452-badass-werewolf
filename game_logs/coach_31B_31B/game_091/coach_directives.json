@@ -1,0 +1,73 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Continue using early claiming and providing clear data to force wolves into 'logic posturing'.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Always prioritize the Seer over any other role; the information pipeline is more valuable than any single life.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_available",
+        "action": "COORDINATE_OR_DIVERSIFY_TARGETS",
+        "rationale_short": "In future games, coordinate or diversify targets to avoid redundant resource use with the Guard.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "seer_identifies_wolf",
+        "action": "POISON_WOLF",
+        "rationale_short": "if the Seer identifies a wolf, poison them immediately to end the threat.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_pivots_to_criticizing_communication_style",
+        "action": "ACCUSE_WOLF",
+        "rationale_short": "When a player... pivots to criticizing communication style, treat it as a primary wolf signal.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "personality_based_deflections_occur",
+        "action": "IGNORE_DEFLECTIONS",
+        "rationale_short": "ignore personality-based deflections.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_data_available",
+        "action": "USE_POE_MAP",
+        "rationale_short": "Stick to the Process of Elimination (PoE) map based on Seer data.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 7,
+    "dropped": []
+  }
+}

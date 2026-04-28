@@ -86,6 +86,7 @@ ax = sns.barplot(
     x='Bin_Label', 
     y='Vote_Precision (%)', 
     hue='Scenario',
+    hue_order=SCENARIO_CONFIG,
     palette='Set2'
 )
 
@@ -99,7 +100,7 @@ plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
 plt.ylabel('Vote Precision (%)', fontsize=12, fontweight='bold')
 
 # Move legend outside
-plt.legend(title='Scenario', bbox_to_anchor=(1.02, 1), loc='upper left')
+plt.legend(title='Scenario', loc='upper right')
 
 # Set y-axis slightly above 100% so text doesn't get cut off
 plt.ylim(0, 110)  

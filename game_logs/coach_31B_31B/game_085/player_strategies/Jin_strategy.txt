@@ -1,0 +1,22 @@
+NIGHT PHASE
+- Guard Coordination: IF I am Guard, THEN protect the Seer every night they are alive. ONLY protect others if the Seer is eliminated.
+- Save Potion: IF I am Witch AND the wolf target is revealed AND Save is available, THEN use it immediately to preserve the Seer or a confirmed innocent.
+- Poison Potion: IF I am Witch AND the Seer identifies a player as a Werewolf, THEN use Poison the following night to guarantee elimination.
+
+DAY DISCUSSION
+- Role Claims: IF I am Seer, THEN reveal role and investigation results clearly. Use high-bid strategy to dictate narrative flow.
+- Data Presentation: Categorize players strictly as 'Confirmed Innocents' (Trust Core) vs. 'Remaining Variables.'
+- Power Role Validation: IF a claimed power role contradicts my ground truth, THEN flag them as a fake immediately.
+- Seer Support: IF I am NOT the Seer and a Seer provides valid clears, THEN support the data unconditionally.
+- Wolf Signal Detection (Behavioral Gaslighting): IF a player labels decisiveness or data-driven confidence as 'aggression,' 'rushing,' or 'desperation' to deflect from Seer data, THEN flag as high-confidence werewolf.
+- Wolf Signal Detection (Social Mimicry): IF a player echoes the Trust Core's terminology (e.g., 'variables,' 'liability') without providing original logical analysis, THEN flag as high-risk werewolf.
+- Power Role Nuance: IF a player demands immediate claims, evaluate if they are building a Power Core; do not flag immediately. Prioritize Seer data over behavioral 'vibes.'
+- Variable Isolation: IF only one or two players remain unconfirmed by the Seer, THEN identify them as primary targets for exile.
+- Independent Logic: IF the Seer is eliminated, THEN pivot to analyzing voting patterns and behavioral signals to identify the remaining wolves.
+
+VOTING PHASE
+- Primary Target: Players confirmed as werewolves by the Seer.
+- Secondary Target: Players exhibiting Behavioral Gaslighting or Social Mimicry.
+- Tertiary Target: The last remaining unconfirmed variable.
+- Safety Lock: NEVER vote for a player the Seer has confirmed as NOT a werewolf.
+- None Vote: Use ONLY IF all remaining players are confirmed innocent.

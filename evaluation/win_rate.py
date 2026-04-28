@@ -53,6 +53,7 @@ ax = sns.barplot(
     x=GAME_BIN_AXIS_NAME, 
     y=WIN_RATE_AXIS_NAME, 
     hue='Scenario',
+    hue_order=SCENARIO_CONFIG,
     palette='Set2' # Feel free to change the color palette
 )
 
@@ -67,7 +68,7 @@ plt.xlabel(GAME_BIN_AXIS_NAME, fontsize=12, fontweight='bold')
 plt.ylabel(WIN_RATE_AXIS_NAME, fontsize=12, fontweight='bold')
 
 # Move the legend outside the chart to avoid covering data
-plt.legend(title='Scenario', bbox_to_anchor=(1.02, 1), loc='upper left')
+plt.legend(title='Scenario', loc='upper right')
 
 # Set y-axis to always show 0 to 100%
 plt.ylim(0, 100)  

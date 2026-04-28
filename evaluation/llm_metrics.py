@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 from constants import BIN_SIZE
+from run import SCENARIO_CONFIG
 
 # /opt/miniconda3/envs/scc452-badass-werewolf/bin/python -m evaluation.llm_metrics
 
@@ -76,12 +77,19 @@ output_dir.mkdir(parents=True, exist_ok=True)
 def plot_metric(data, y_col, title, ylabel, filename, is_percentage=False, y_max=None):
     plt.figure(figsize=(12, 6))
     
+    scenario_keys = list(SCENARIO_CONFIG.keys())
+    target_scenarios = [scenario_keys[1], scenario_keys[3]]
+    all_colors = sns.color_palette('Set2', len(scenario_keys))
+    locked_palette = {scenario: color for scenario, color in zip(scenario_keys, all_colors)}
+    # ----------------------
+
     ax = sns.barplot(
         data=data, 
         x='Bin_Label', 
         y=y_col, 
         hue='scenario',
-        palette='Set2'
+        hue_order=target_scenarios,  # Forces it to only show the 2nd and 4th
+        palette=locked_palette       # Forces them to use their original colors
     )
     
     # Add labels on top of bars
@@ -93,7 +101,7 @@ def plot_metric(data, y_col, title, ylabel, filename, is_percentage=False, y_max
     plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
     plt.ylabel(ylabel, fontsize=12, fontweight='bold')
     
-    plt.legend(title='Scenario', bbox_to_anchor=(1.02, 1), loc='upper left')
+    plt.legend(title='Scenario', loc='upper right')
     
     # Set y-axis limits
     if y_max:
@@ -109,8 +117,7 @@ def plot_metric(data, y_col, title, ylabel, filename, is_percentage=False, y_max
     output_path = output_dir / filename
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"Saved: {output_path}")
-    
-    # plt.show()
+    plt.close() # Good practice to close the figure so they don't stack in memory
 
 # --- 5. Generate Visuals ---
 # Chart 1: Compliance Rate
