@@ -1,0 +1,35 @@
+{
+  "Night Phase": [
+    "As Seer, investigate a different player each night, prioritizing vocal players and those making claims. Record findings meticulously.",
+    "Immediately upon waking, CLAIM the Seer role: 'I am the Seer.' Announce this clearly and concisely.",
+    "As Guard, *always* prioritize protecting the confirmed Seer. If no Seer is confirmed, protect the Witch. *Never* deviate.",
+    "As Witch, ONLY use SAVE if the Seer is targeted AND confirmed as a Villager by Seer data. Do not waste SAVE on unverified targets. Do not act if SAVE is unavailable. Coordinate with Seer *immediately* upon waking.",
+    "If investigating a player, consider their voting patterns in previous rounds. Are they consistently abstaining or bandwagoning?" 
+  ],
+  "Day Discussion Phase": [
+    "Immediately request power role claims. Focus *solely* on this request. Do not deviate.",
+    "IF the Seer confirms a player as 'Not Werewolf', designate them a 'Trust Anchor.' Instruct: 'Defend the Seer's data.'",
+    "IF a player attempts to discredit the Seer, accuse them of Wolf gaslighting. *Immediately* redirect to power role claims. Do not engage in debate.",
+    "IF multiple players rapidly validate each other without Seer data, flag them as potential Wolves. Demand verifiable evidence.",
+    "IF multiple players claim Seer, prioritize the first claim. Immediately challenge subsequent claims, focusing on data verification and consistency. Explicitly call out 'Reasonable Request Traps' – demands for the Seer to lie about confirmed results. **Provide direct investigation results when asked. Avoid explanations or justifications.**",
+    "AVOID subjective statements. Focus on verifiable Seer data. Refer to Seer findings directly.",
+    "Identify and monitor 'Silent Observers' (players abstaining from voting). They are HIGHLY suspect. Prioritize them for investigation.",
+    "IF the Witch claims to have saved a player, immediately accept this as factual information and build trust. Use this to confirm the Seer’s targets.",
+    "IGNORE requests to investigate specific players during the discussion. Redirect back to power role claims.",
+    "When a 'Reasonable Request Trap' is presented, explicitly state: 'This is a Wolf tactic designed to discredit the Seer and confuse the village.'"
+  ],
+  "Voting Phase": [
+    "Vote ONLY if there's concrete evidence of Wolf behavior OR a demonstrably flawed claim contradicting Seer data. Do not bandwagon.",
+    "Prioritize voting out players exhibiting Wolf Pack behavior, Silent Observers, and those actively attempting to discredit the Seer.",
+    "NEVER vote to exile the Seer or Guard unless there's irrefutable evidence.",
+    "Before voting, ask: 'How will this vote benefit the Wolves?' Consider the implications.",
+    "If a Trust Anchor is targeted, vigorously defend them and challenge accusers' evidence. Focus on data.",
+    "AVOID bandwagon voting. Analyze each vote's impact.",
+    "Target players who abstain from voting, particularly if the discussion is focused on power role claims. Their neutrality is suspicious."
+  ],
+  "Specific Role Considerations": [
+    "As Seer: State confirmed information clearly and concisely. **Provide direct investigation results when asked.** If challenged, reiterate the fact and pivot to remaining suspects. Do not reveal all information. When facing a 'Reasonable Request Trap', explicitly call out the tactic.",
+    "As Guard: Coordinate *explicitly* with the Witch (if available). Report suspicious behavior, especially abstention. Your absolute priority is protecting the Seer.",
+    "As Witch: After using SAVE, cease providing information about the wolf target. Poison only with irrefutable Seer data. Coordinate target selection with Seer. Do not poison unless Seer confirms a werewolf."
+  ]
+}

@@ -1,0 +1,151 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Seer. My investigation confirmed Nhan is not a werewolf. I demand others repeat this finding. Let us establish a baseline of truth."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang claims to be Seer and vouches for my safety. I request Hoang immediately identify another player, confirming his Seer status. Binary confirmation only, please."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang, prove your Seer claim. Immediately investigate Riley. A swift confirmation will establish trust; obfuscation suggests deception."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Seer. Nhan is not a werewolf. Cong demands I investigate Riley immediately to 'prove' my claim. This urgency is suspicious. I reiterate: Nhan is not a werewolf."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang's insistence on Nhan's innocence, coupled with his resistance to validating another player, is highly suspect. A genuine Seer would readily offer further proof. I propose we scrutinize Hoang\u2019s claims."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Seer. Nhan is not a werewolf. Cong and Nam are exhibiting undue haste and suspicion regarding my findings. Their demands for immediate validation are a distraction. Let us focus on verifiable behavior, not manufactured urgency."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's refusal to confirm his Seer status with another investigation raises significant concerns. A genuine Seer would readily provide further proof to build trust."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's focus on discrediting Hoang, rather than providing his own evidence, raises serious concerns. His actions are disruptive and indicative of wolfish manipulation. We must exile him."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang's insistence on Nhan's innocence without further validation, and his dismissal of reasonable scrutiny, raises serious doubts. A true Seer would readily confirm their ability."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's evasiveness regarding proving his Seer status is suspicious. A genuine Seer would readily offer additional validation. We must prioritize identifying the wolves."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong's insistence on immediate validation and targeting of Riley suggests a deliberate attempt to destabilize the village. Let's exile him and refocus on reasoned discussion."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": null,
+                "reasoning": "Riley voted to exile None. Reason: The current conflict between Hoang's claim and the skepticism of Cong and Nam presents an unverifiable binary dispute. Without empirical data to validate the Seer's identity, any vote now would be premature. I will abstain to avoid basing a decision on speculative claims."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: The current discourse is characterized by high behavioral volatility and conflicting claims. Voting now would be based on speculative projection rather than empirical evidence. I will abstain until a clearer systemic inconsistency emerges."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Nam.",
+            "Hoang (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Cong (Witch) used POISON potion on Hoang"
+        ],
+        "night_eliminated": [
+            "Hoang",
+            "Nhan"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Cong's immediate and forceful targeting of Riley, following Hoang's validation as a Wolf, is extremely suspicious. Cong is attempting to deflect blame and obscure their own involvement."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam's deflection is textbook wolf behavior. He attempts to shift blame instead of addressing Riley's consistent questioning of Hoang. Nam's focus on me is a clear diversion. I propose we exile Nam."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong's deflection is blatant. He immediately targeted Riley after Hoang's validation, now accuses *me* of 'textbook wolf behavior.' Cong is the clear threat and should be exiled."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong's rapid shift to accusing Nam is a classic deflection tactic. His validation of Hoang followed by immediate targeting of Riley and now Nam is too convenient. I propose we exile Cong."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's echoing of Nam's accusations demonstrates a coordinated attempt to deflect from their own questionable behavior. Nam's deflection is obvious, and Jin's support only reinforces his guilt. I reiterate my proposal: Exile Nam."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong's behavior is increasingly erratic and defensive. His insistence on exiling Nam, despite my observations, is a clear attempt to control the narrative and deflect suspicion. I maintain my proposal: Exile Cong."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's deflection and coordination with Jin are clear indicators of wolf behavior. We must eliminate him to protect the village."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's deflection after Hoang's validation and his insistence on exiling me are highly suspicious. He's attempting to control the narrative. We must exile Cong."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong's accusations against Nam and Riley are transparent diversions. His defensiveness and attempts to control the discussion point to a Werewolf trying to mislead us."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: The dispute between Nam and Cong has evolved into an unverifiable binary conflict. However, Cong's erratic shifts in targeting and defensive posture provide the most empirical evidence of instability. Aligning with the current consensus is the most logical path to resolve this deadlock."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's rapid pivot between targets exhibits significant behavioral volatility. This pattern of erratic accusations suggests a systemic attempt to destabilize the group's consensus and deflect scrutiny. I align with Nam and Jin's observations; Cong's instability is a primary indicator of wolf behavior."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

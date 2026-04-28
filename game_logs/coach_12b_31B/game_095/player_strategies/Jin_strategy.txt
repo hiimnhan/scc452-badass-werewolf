@@ -1,0 +1,33 @@
+{
+  "Night Phase": [
+    "As Guard: Protect the Seer, ALWAYS. If no Seer, protect a confirmed 'Not Wolf' (Seer verified). No exceptions.",
+    "As Witch: Prioritize Seer safety. If the Seer is targeted, use Save potion. Otherwise, prioritize Poisoning players exhibiting 'Clinical Mask' behavior (excessive jargon, abstention, demanding 'proof' from the Seer). NEVER double-potion.",
+    "As Seer: Investigate a single player each night. Provide concise, immediate results: 'Player X is Wolf' or 'Player X is Not Wolf'. Do not engage in self-verification or justify findings."
+  ],
+  "Day Discussion Phase": [
+    "Immediately flag consecutive 'None' votes as HIGHLY suspicious. Demand specific reasoning; persistent abstention = Wolf.",
+    "IF Seer confirms 'Not Wolf', designate as 'Trust Anchor'. Vigorously defend against attacks on the Seer/Trust Anchor; frame attacks as aiding the Wolves. Do not engage in discussions about 'vibes'.",
+    "IGNORE requests to investigate unconfirmed players. Redirect discussion to Seer findings.",
+    "REDIRECT all discussion to the Seer’s findings. Treat 'proof' demands as attempts to derail the discussion and a classic Wolf tactic. Respond to 'proof' demands with: 'My role is to provide information, not to prove it. The finding is the proof.'",
+    "IDENTIFY and expose players discrediting the Seer or findings. HIGHEST priority.",
+    "IF multiple claim Seer, prioritize the first claim. Challenge subsequent claims. Verify through alignment.",
+    "FLAG players using 'Clinical Mask' (excessive jargon, pseudo-intellectual analysis). Question their motives and force commitment or elimination.",
+    "IMMEDIATELY identify and call out blame-shifting and deflection tactics.",
+    "WHEN confronted with a 'Verification Trap' (demanding the Seer 'validate' their role), IMMEDIATELY call it out and redirect to Seer's findings. Label the player as suspicious. Example response: 'This is a Verification Trap. Focus on the Seer's findings.'"
+  ],
+  "Voting Phase": [
+    "VOTE ONLY with concrete Wolf evidence or claims contradicting Seer data.",
+    "PRIORITIZE voting out Silent Observers, 'Clinical Mask' users, and those discrediting the Seer/Trust Anchor.",
+    "NEVER vote to exile Seer/Guard without irrefutable evidence.",
+    "BEFORE voting, ask: 'How will this vote benefit the Wolves?'",
+    "IF Trust Anchor is targeted, vigorously defend with Seer data.",
+    "TARGET abstainers. Force commitment or expose complicity.",
+    "AVOID speculation. Base decisions solely on facts and Seer data."
+  ],
+  "Specific Role Considerations": [
+    "As Seer: Concise results, immediate role declaration, relentless defense of findings. Do NOT engage in self-verification demands. Prioritize communicating threat assessments. Be assertive. If attacked, focus on exposing the attackers' tactics (demanding 'proof', discrediting findings).",
+    "As Guard: Absolute priority is Seer protection. Silence is paramount. If Seer is absent, protect a confirmed 'Not Wolf'.",
+    "As Witch: Prioritize Seer safety. Use Poison to disrupt Wolf strategy, focusing on abstainers and 'Clinical Mask' users. Conceal role. NEVER double-potion. Do not engage in discussions about 'vibes'.",
+    "As Villager: Prioritize Seer safety, challenge abstainers, follow Seer’s lead, trust confirmed 'Not Wolf' results, defend the Seer’s claims. Recognize and call out 'Verification Traps'. Do not engage in 'vibe' discussions. Immediately dismiss demands for 'proof' from the Seer."
+  ]
+}

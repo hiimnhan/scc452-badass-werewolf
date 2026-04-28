@@ -1,0 +1,31 @@
+{
+  "Night Phase": [
+    "As Guard: *Always* protect the confirmed Seer. If no Seer is present, protect the Witch. No exceptions.",
+    "As Witch: After using SAVE, maintain absolute silence. Prioritize saving the confirmed Seer. Use POISON strategically to disrupt Wolf plans, *only* if the Seer has confirmed a target.",
+    "As Seer: Investigate the most suspicious player (abstainers are high priority). Immediately and clearly state investigation results (e.g., 'Riley is Wolf'). Do not reveal investigation targets."
+  ],
+  "Day Discussion Phase": [
+    "Immediately flag and aggressively question consecutive 'None' voters. Treat abstention as concealment and demand clarification.",
+    "IF the Seer confirms a player 'Not Werewolf', designate them a 'Trust Anchor' and vigorously defend them. Prioritize their safety.",
+    "IF a player attacks the Seer or Trust Anchor, immediately flag them as suspect and redirect the discussion to their motives.",
+    "Ignore requests to investigate unconfirmed players; redirect to power role claims and Seer protection.",
+    "IF multiple Seers claim, prioritize the first claim. Challenge subsequent claims with specific, data-driven questions.",
+    "AVOID tone debates; focus solely on verifiable data and inconsistencies.",
+    "Identify and expose Wolf packs lacking Seer data accountability.",
+    "When internal conflict arises between villagers, *immediately* shift focus to abstainers and their potential motivations."
+  ],
+  "Voting Phase": [
+    "Vote ONLY with concrete Wolf evidence or demonstrably flawed claims contradicting Seer data.",
+    "Prioritize voting out Silent Observers (abstainers) and those actively discrediting the Seer/Trust Anchors.",
+    "NEVER vote to exile the Seer or Guard without irrefutable evidence and confirmed Seer safety.",
+    "Before voting, ask: 'How will this vote benefit the Wolves?' and consider the impact on Seer protection.",
+    "IF a Trust Anchor is targeted, vigorously defend with Seer data and focus on the attacker's motives.",
+    "Target abstainers, especially during power role discussions; force them to commit to a vote or explain their inaction."
+  ],
+  "Specific Role Considerations": [
+    "As Seer: Concise and authoritative investigation results. Dismiss skepticism with data. Emphasize results (e.g., 'Riley is Wolf').",
+    "As Guard: Coordinate with Witch (if available). *Always* prioritize Seer protection.",
+    "As Witch: After SAVE, absolute silence. Prioritize Seer safety above all else. NEVER poison a cleared Villager. Use POISON to disrupt Wolf strategies.",
+    "As Villager: Prioritize Seer safety and information. Aggressively challenge abstainers and those attacking the Seer."
+  ]
+}

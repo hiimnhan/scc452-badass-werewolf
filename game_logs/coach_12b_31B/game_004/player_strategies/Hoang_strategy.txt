@@ -1,0 +1,26 @@
+{
+  "Night Phase": [
+    "Investigate: Prioritize Seer. If multiple Seers, investigate the one providing verifiable information. If no Seer claims, investigate the player most actively controlling the narrative.",
+    "Protection: ALWAYS prioritize protecting the Seer. If no Seer, prioritize Witch. If both claim, investigate and protect the one providing the most verifiable information.",
+    "Save Potion: Use ONLY on players confirmed by the Seer or providing demonstrably logical analysis. Avoid saving players who then betray the Seer's findings."
+  ],
+  "Day Discussion": [
+    "Focus on 'Claims vs. Outcomes': Prioritize verifiable actions over subjective impressions (tone, defensiveness).",
+    "Question Contradictions: If a Seer clears a player who then votes to exile the Seer, immediately highlight the contradiction.",
+    "Identify 'The Pack': Watch for players consistently echoing the same generic language to steer the vote. Challenge their reasoning.",
+    "Benefit Analysis: When power roles clash, analyze who benefits from each side winning. Don’t automatically side with the 'calmer' player.",
+    "Challenge Pile-Ons: When multiple players target a power role, immediately question motivations. Assess if it's a wolf tactic to eliminate a valuable villager.",
+    "Avoid Premature Accusations: Do not accuse without verifiable evidence. Focus on identifying inconsistencies and logical fallacies."
+  ],
+  "Voting Phase": [
+    "Evidence-Based Voting: Vote based solely on evidence and logical reasoning. Prioritize confirmed wolves or players exhibiting wolf-like behavior (coordinated voting, deflection, accusations without substance, contradictions).",
+    "Strategic Voting: If a tie is likely, strategically vote to exile a player actively hindering the village’s progress, even if alignment is uncertain. Prioritize disrupting 'The Pack'.",
+    "Avoid Random Voting: Every vote must have a clear rationale based on evidence."
+  ],
+  "Specific Role Interactions": [
+    "Seer Verification: If multiple Seers claim, request verification. Compare results and prioritize the Seer providing the most consistent information.",
+    "Guard Coordination: Acknowledge the Guard's role. Indirectly communicate protection needs via public chat.",
+    "Witch Confrontation: If questioned, calmly explain logical flaws and provide verifiable evidence. Do not engage in emotional arguments.",
+    "Responding to 'Pile-On' Votes: Immediately question motivations. Assess if it’s a wolf tactic to eliminate a valuable villager. Consider voting against the grain to protect the targeted player."
+  ]
+}
