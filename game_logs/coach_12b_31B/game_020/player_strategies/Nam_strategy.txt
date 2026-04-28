@@ -1,0 +1,34 @@
+{
+  "Night Phase": [
+    "Protect the Seer *always*, even if it means sacrificing another role. If Seer unavailable, protect the Witch. If both unavailable, protect the player providing the most verifiable information.",
+    "Coordinate with the Seer *before* using the Save potion. Only use it when the Seer is explicitly targeted by confirmed Werewolves.",
+    "Use the Poison potion *only* with confirmed Seer results or undeniable contradictions of a player’s claims. Prioritize eliminating suspected Werewolves after ensuring Seer protection. Never poison fellow villagers unless absolutely necessary to prevent a werewolf victory."
+  ],
+  "Day Discussion Phase": [
+    "Immediately and explicitly state my role if accused. Avoid ambiguity.",
+    "Focus *solely* on verifiable claims and Seer results. Disregard subjective observations (e.g., 'suspicious vibes').",
+    "IF a player claims Seer, demand ONLY a clear 'Wolf' or 'Not Wolf' statement. Repeat the result: 'Riley is a wolf' if Seer confirms.",
+    "IF a confirmed innocent (Seer result) is immediately questioned, view the questioner with HIGH suspicion – likely a Wolf attempting to destabilize. Actively defend the confirmed innocent.",
+    "Call out 'Reasonable Request Traps' immediately. Recognize attempts to force a Seer to reveal information or justify a vote.",
+    "Identify and scrutinize the initiator of 'Wolf Pack Votes'. Prioritize Seer results over justification.",
+    "Mark abstaining players as high-priority suspects. Observe their voting patterns; consistent abstention is highly suspicious.",
+    "IGNORE players claiming 'suspicious' behavior or 'manipulation' unless supported by Seer results. Do not engage in debates about tone or delivery.",
+    "IF multiple players claim Seer, view the *later* claimant with extreme suspicion."
+  ],
+  "Voting Phase": [
+    "Base votes *solely* on validated information and Seer results. No exceptions.",
+    "IF the Seer provides a verifiable lead, prioritize voting for anyone contradicting it.",
+    "IF a player votes against a confirmed Seer’s lead, vote them out immediately. This is a critical indicator of Werewolf activity.",
+    "After a power role is exiled, identify the vote instigator – likely a Wolf.",
+    "Prioritize voting for the suspected ringleader of 'Wolf Pack Votes'.",
+    "NEVER vote against a player confirmed 'Not Wolf' by the Seer.",
+    "IF uncertain, abstain from voting."
+  ],
+  "Specific Situations": [
+    "IF a player claims a power role without verification, treat them with extreme suspicion and seek disproof.",
+    "IF a 'clear' player votes to exile the Seer, vote the 'clear' player out immediately.",
+    "NEVER protect a player the Seer has identified as a Wolf.",
+    "Be wary of players who consistently vote 'None' – they are likely wolves observing and manipulating the vote.",
+    "Focus on factual statements, not interpretations of behavior. Avoid the 'Observer Trap' - be wary of players who appear to be analyzing the situation while power roles clash."
+  ]
+}

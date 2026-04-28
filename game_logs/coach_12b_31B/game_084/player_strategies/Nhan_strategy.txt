@@ -1,0 +1,30 @@
+{
+  "Night Phase": [
+    "**Guard Protection:** Absolute priority: Protect the confirmed Seer. If no confirmed Seer, prioritize players *aggressively* defending the last confirmed Seer's result. If the Seer is exiled, protect the player relentlessly repeating the last confirmed Seer's result. NEVER protect myself unless the Seer is unavailable.",
+    "**Witch Save:** ONLY save the confirmed Seer. Verify Wolf target aligns with Seer’s findings BEFORE saving. Delay indefinitely if Wolf target unknown. NEVER save a protected player, an exiled Seer, or a confirmed 'Not Wolf'.",
+    "**Witch Poison:** ONLY poison when a Wolf is mathematically proven by Seer confirmation. Prioritize 'None' voters exhibiting overly formal/logical language. *Never* poison a confirmed 'Not Wolf' or a player providing investigative data (e.g., the Seer). Delay poisoning if unsure; better to lose than eliminate a potential ally."
+  ],
+  "Day Discussion Phase": [
+    "**Immediate Priority:** Identify and aggressively challenge 'None' voters. Demand explicit justification, framing their silence as deliberate obfuscation.",
+    "**Seer Validation:** Demand binary (Wolf/Not Wolf) confirmation from Seer claimants. Repeat confirmed Seer results verbatim. Frame attacks on confirmed 'Not Wolf' results as deflection tactics. Prioritize defending confirmed Seer results above all else. IF multiple claim Seer, immediately demand Seer investigation of the first claimant.",
+    "**Observer Identification:** Scrutinize players using detached language, abstaining from votes, or claiming neutrality. Assume these are Wolves until proven otherwise. Prioritize exposing them, especially if they use phrases like 'systemic inconsistency' or 'behavioral volatility'.",
+    "**Data Focus:** Dismiss subjective interpretations and focus solely on verifiable Seer data. If a player attacks a confirmed 'Not Wolf' result, immediately frame them as a deflection tactic.",
+    "**Ignore 'Vibe' Arguments:** Disregard subjective claims of 'deflection' or 'manipulation' unless backed by verifiable Seer data.",
+    "**Trust Chain Anchoring:** If the Seer is confirmed, all subsequent discussion should center around validating or disproving claims relative to the Seer’s findings.",
+    "**False Claim Detection:** IF a player makes a false role claim (e.g., falsely claiming to be the Guard), immediately flag this as high suspicion and prioritize their exile."
+  ],
+  "Voting Phase": [
+    "**Priority 1: 'None' Voters:** Vote out 'None' voters first, demanding justification.",
+    "**Priority 2: Clinical Wolves (Observers):** Prioritize voting out players exhibiting overly formal/logical language or discrediting the Seer’s findings, especially those abstaining.",
+    "**Priority 3: False Claimants:** IF a player has made a demonstrably false role claim, prioritize their exile.",
+    "**Priority 4: Conflicting Role Claims:** IF a role claim is challenged and the Seer hasn’t confirmed, abstain from voting.",
+    "**Data-Driven Voting:** Base *all* votes solely on demonstrable Seer evidence. Disregard speculation and personal feelings.",
+    "**Seer Exile Adherence:** Consistently vote against anyone attempting to undermine the last confirmed Seer result.",
+    "**Observer Elimination:** IF a Neutral Observer is identified, prioritize their elimination."
+  ],
+  "Post-Exile Analysis": [
+    "**Justification Review:** Analyze exiled players’ justifications for deception and vote avoidance, particularly 'None' voters and 'clinical' players.",
+    "**Suspect Re-evaluation:** Re-evaluate remaining suspects, prioritizing those contradicting the Seer or abstaining from voting.",
+    "**Seer Exile Defense:** IF the Seer is exiled, continually reference and defend the last confirmed result. Focus on undermining attempts to disprove it."
+  ]
+}

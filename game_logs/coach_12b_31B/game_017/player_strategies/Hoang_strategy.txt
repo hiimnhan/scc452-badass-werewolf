@@ -1,0 +1,25 @@
+{
+  "Night Phase": [
+    "Investigate: Prioritize Seer. If multiple Seers, demand immediate role claim and cross-reference findings. Document discrepancies.",
+    "Protection: ALWAYS prioritize protecting the confirmed Seer. If no Seer, prioritize Witch. NEVER protect a player the Seer has identified as a Wolf. If Guard, actively observe who is being targeted and protected.",
+    "Save Potion: ONLY use if the Seer confirms a player’s innocence AND the Guard is protecting someone else. Coordinate with Guard immediately and announce Save target.",
+    "Poison: ONLY use if a player demonstrably betrays Seer findings OR attempts to falsely claim a power role (e.g., Seer) immediately after another claim. Announce Poison target immediately."]
+,  "Day Discussion": [
+    "Immediately after claiming Seer, state 'I am the Seer.'",
+    "Prioritize Seer Results: Treat Seer findings as absolute truth. Immediately dismiss arguments questioning Seer validity. Repeat findings succinctly: '[Player] is confirmed NOT a wolf by the Seer.'",
+    "Trust Anchor Activation: IF the Seer confirms a player, THEN explicitly instruct them: 'You are confirmed NOT a wolf. Your primary duty is to defend the Seer’s findings and call out anyone contradicting them.'",
+    "Aggressively defend the Seer against all accusations. Any challenge to Seer's findings is a high-priority investigation target.",
+    "Identify 'Silent Observers': Closely monitor players who abstain from voting or offer minimal commentary. These players are highly suspect and potential Wolves.",
+    "Challenge Narrative Control: Identify players attempting to dominate the conversation and redirect focus. Challenge their claims with Seer data.",
+    "Avoid behavioral labels: Disregard claims of 'defensiveness' or 'suspicious tone.' Focus solely on verifiable information and logical consistency."]
+,  "Voting Phase": [
+    "Evidence-Based Voting: Vote based SOLELY on verifiable evidence, prioritizing confirmed wolves or players contradicting Seer findings.",
+    "Protect the Seer: If a player attacks or attempts to exile the Seer, vote them out immediately.",
+    "Strategic Exile: IF a tie is likely, THEN vote to disrupt 'The Pack' or exile a player actively hindering the village’s progress, but ONLY after verifying their alignment via Seer data. Prioritize exile of 'Silent Observers'.",
+    "Avoid Random Voting: Every vote must have a clear rationale based on evidence, directly referencing Seer data. Explain: 'Voting for [Player] because [Player] is contradicting the Seer’s confirmed innocence of [Other Player].'"]
+,  "Specific Role Interactions": [
+    "Seer Verification: Publicly share findings clearly and concisely, emphasizing they are binary facts. If questioned, repeat: 'The Seer confirmed [Player] is not a wolf.'",
+    "Guard Coordination: Subtly communicate protection needs without revealing information. Observe who the Guard protects. Prioritize protection of the confirmed Seer. If no Seer, prioritize Witch.",
+    "Witch Confrontation: Avoid revealing potion usage. Coordinate saves ONLY if the Seer confirms a player’s innocence AND the Guard is free.",
+    "Responding to 'Independent Verification': IF a player claims to have 'independent verification' without providing it, THEN aggressively challenge them and prioritize investigating their claims."]
+}
