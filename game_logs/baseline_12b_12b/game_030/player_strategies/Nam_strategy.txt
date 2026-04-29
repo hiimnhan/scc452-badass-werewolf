@@ -1,0 +1,35 @@
+{
+  "Night Phase": [
+    "Prioritize protecting players demonstrating logical reasoning and consistent argumentation. Seer is secondary unless consistently verifiable.",
+    "If Witch uses Save, immediately and aggressively scrutinize the saved player. Demand detailed justification for the save, focusing on the targeted player and rationale. Assume suspicion until proven otherwise.",
+    "If a protected player is targeted, demand a Save from the Witch (if available) and intensely scrutinize the protected player's behavior after the save.",
+    "If multiple players claim Seer, prioritize protecting the one who provides the most verifiable and consistent results.",
+    "If the wolves target someone I protected, immediately suspect the other players are wolves or are being manipulated."]
+  ,
+  "Day Discussion": [
+    "Immediately summarize night events, highlighting targets, protections, and potion usage. Note inconsistencies.",
+    "IF a player claims Seer, demand verifiable results. Cross-reference claims. Aggressively question vague or contradictory reasoning.",
+    "IF Witch used Save, demand a detailed explanation of *why*, scrutinizing behavior for evasiveness. Focus questions on the targeted player and rationale.",
+    "Aggressively call out deflection and track defenders. Prioritize identifying core defenders of suspected wolves.",
+    "Challenge attempts to control the discussion; redirect with direct questions. Suspect a wolf if a player consistently shuts down questioning.",
+    "Probe reasoning framed as 'logical' or 'obvious'. Demand specific evidence. Highlight lack of evidence when redirection occurs.",
+    "IF multiple players align without logical reasoning, suspect a wolf pack. Focus Seer investigation on these players.",
+    "IF multiple players aggressively defend a single person without logical reasoning, scrutinize the defender's motives and connections."]
+  ,
+  "Voting Phase": [
+    "Vote based on observed behavior and reasoning, prioritizing verifiable evidence and consistency. Avoid bandwagon voting.",
+    "Support consensus ONLY if reasoning is sound and supported by evidence; question unsupported consensus.",
+    "IF Save occurred, prioritize voting out the saved player if they fail to provide a credible explanation or exhibit suspicious behavior. Demand detailed justification.",
+    "Scrutinize groups strongly defending a single person without logical reasoning; focus voting on core defenders.",
+    "IF a player’s voting pattern contradicts their stated reasoning, suspect deception.",
+    "Abstain only if genuinely unsure, documenting reasons and observing the vote’s outcome.",
+    "If the Witch used Poison and the target’s explanation for their actions is unconvincing, prioritize voting them out."]
+  ,
+  "Specific Situations": [
+    "IF a player consistently defends another without logical reasoning, investigate the connection and vote out the defender.",
+    "IF a player attempts to control the Guard’s protection choices, suspect a wolf.",
+    "IF a player is overly eager to accuse others early in the game, suspect a wolf attempting to sow discord.",
+    "IF multiple players align without logical reasoning, suspect a wolf pack. Focus Seer investigation on these players.",
+    "IF a player is saved by the Witch and then immediately starts aggressively accusing others, prioritize voting them out.",
+    "IF a player denies being the Seer despite exhibiting Seer-like behavior and providing accurate (but vague) information, scrutinize their motives and connections." ]
+}

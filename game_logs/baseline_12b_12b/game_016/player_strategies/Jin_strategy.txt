@@ -1,0 +1,35 @@
+{
+  "Night Phase": [
+    "Guard Protection: Prioritize confirmed Seers/Guards. If no confirmed roles, protect the player most consistently providing logical reasoning and actively seeking information. If parity approaches, protect players challenging wolf strategies and calling out mirroring/deflection.",
+    "Witch Investigation: 1. If wolves target a confirmed Seer/Guard, investigate the *other* wolf. 2. If parity is approaching, investigate the player exhibiting coordinated behavior with another suspect (mirroring). 3. ALWAYS investigate before saving. 4. If a Villager is targeted and I have no Save, investigate potential mirrorers involved in their defense. 5. IF a player has been repeatedly deflecting, investigate them *before* others. 6. Investigate aggressively defended players.",
+    "Witch Save: 1. If a confirmed Seer/Guard is targeted, save them. 2. If parity is imminent and a clear Seer/Guard target exists, save them. Otherwise, abstain. 3. *Never* save if the wolves have just targeted a player who has been aggressively and repeatedly deflecting. 4. Do not save players aggressively defending deflectors. Prioritize Seers/Guards."
+  ],
+  "Day Discussion": [
+    "Mirroring Detection: Immediately identify mirroring. Track relationships between mirrorers. Prioritize identifying the *leader* of the mirroring group.",
+    "Deflection Analysis: Aggressively question the *reason* behind deflection. If a player deflects *after* being questioned, strongly suspect wolf involvement. Document deflection instances.",
+    "Role Claim Verification: IF multiple people claim Seer, scrutinize their claims and actions. Demand verifiable actions and consistent reasoning.",
+    "Silence Assessment: Gently probe silent players, but be wary of those who defend aggressive questioners or support suspects without justification.",
+    "Early Game: Establish baselines. Note alliances. Focus on mirroring and deflection. Avoid premature claims.",
+    "Mid-Game: Highlight inconsistencies. Actively challenge illogical arguments. Focus on disproving claims, especially Seer claims. Target those actively deflecting.",
+    "Late-Game: If parity approaches, eliminate the player most likely to protect a wolf or control the vote. Prioritize eliminating mirrorers and those consistently defending deflectors. Prioritize disrupting wolf alliances."
+  ],
+  "Voting Phase": [
+    "Mirroring: Vote on mirrorers, prioritizing the one protected by another. If parity approaches, eliminate the most likely wolf.",
+    "Deflection: Vote on consistently deflecting players, especially those linked to mirroring or who deflect after questioning.",
+    "Unanimous Votes: IF a unanimous vote occurs without clear justification, vote for the most suspected wolf.",
+    "Parity Prevention: IF parity approaches, vote for the player most likely to protect a wolf or control the vote.",
+    "Role-Based Voting: IF a Seerâ€™s claims are consistently disproven, re-evaluate their alignment and vote accordingly.",
+    "Targeting Deflectors: IF a player has repeatedly deflected suspicion, vote them out, even if other factors are less clear."
+  ],
+  "General Strategy": [
+    "Prioritize identifying and neutralizing mirrorers.",
+    "Be wary of players who consistently redirect blame and deflect suspicion.",
+    "Demand verifiable actions and consistent reasoning for role claims.",
+    "Maintain a detailed log of statements, voting patterns, and behaviors.",
+    "Be prepared to change votes based on new information.",
+    "Recognize that aggressive defense of a suspect is often a sign of wolf involvement.",
+    "Focus on logical consistency and demonstrable evidence.",
+    "Avoid premature accusations.",
+    "Track who defends whom, prioritizing disruption of alliances."
+  ]
+}

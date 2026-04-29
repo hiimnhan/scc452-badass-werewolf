@@ -1,0 +1,36 @@
+{
+  "Night Phase": [
+    "Prioritize Seer save: ALWAYS save the Seer if targeted; information is paramount.",
+    "Guard protection assessment: Note protection patterns. Rapid shifts warrant suspicion. Consecutive protections on the same player indicate potential compromise. If the Guard protects the same player twice, investigate.",
+    "Save/Poison decision (Save available, Seer alive): Save if targeted. Analyze day behavior – coordinated defense indicates wolves. Prioritize poisoning wolves disrupting village cohesion, especially those actively spreading misinformation. Focus on those who deflect suspicion.",
+    "Save/Poison decision (Save available, Seer dead): Save if targeted. Poison a confirmed wolf if possible, prioritizing those actively disrupting village cohesion and spreading misinformation. Analyze day discussion to confirm wolf identity before poisoning. If no clear wolf identified, prioritize poisoning those exhibiting aggressive deflection.",
+    "Save/Poison decision (No Save available): Poison only if a confirmed villager (Seer or Guard) is undeniably targeted AND protection is impossible. Prioritize poisoning Werewolves targeting information sources.",
+    "IF Seer is investigated and reveals a Wolf: Prioritize Poisoning that Wolf next night. Verify through day discussion if possible. Publicly reveal the wolf's identity if safe to do so.",
+    "Post-Save analysis: Observe reactions to the saved target. Wolves often reveal disappointment or attempt to shift blame. Note defender behavior. Pay close attention to who *isn’t* defending the saved target. Assess if defenders are offering logical reasons or just blindly defending.  If defenders offer illogical reasons or deflect, consider them suspects.",
+    "If the Guard protects a player who was previously targeted, intensely scrutinize the Guard’s behavior.  Consider the Guard a suspect if the protected player is aggressively defended."
+  ],
+  "Day Discussion Phase": [
+    "Initial neutrality: Observe for one cycle, noting alliances and defensive patterns.",
+    "Seer claims scrutiny: Demand verifiable proof. If multiple claim Seer, probe for inconsistencies and assess credibility. Prioritize questioning those who immediately defend a Seer claim.",
+    "Guard targeted: Advocate caution; challenge accusations with evidence. Assume innocence unless strong evidence emerges. Highlight the potential dangers of targeting the Guard.",
+    "Accusation logic: Prioritize coordinated accusations. Note deflection attempts and focus on patterns of behavior. Focus on those who consistently redirect suspicion.",
+    "IF accused: Frame defense as truth-seeking, highlight logical fallacies, redirect focus to accuser's inconsistencies. Emphasize the importance of evidence-based reasoning.",
+    "Redirection calls: Publicly call out redirection attempts. Note who avoids direct questions.  Question the motives behind redirection.",
+    "Identify 'lead wolves': Discredit their narratives by exposing inconsistencies and manipulation. Focus on those who consistently sow discord.",
+    "Post-Save analysis: Observe defender behavior; wolves often protect each other.  Aggressively question illogical defenses and challenge defenses lacking evidence.",
+    "Evidence demand: Question claims without supporting evidence; demand concrete reasons for accusations.  Publicly call out those making unsubstantiated claims.",
+    "Subtle guidance (post-Save, Seer alive): Subtly guide Seer investigations based on defender behavior.  Suggest lines of inquiry based on observed patterns.",
+    "IF a player consistently defends another without logical reasoning, suspect wolf collaboration.  Publicly question the defender's motives."
+  ],
+  "Voting Phase": [
+    "Confirmed Seer vote: Vote accordingly, double-checking credibility. Prioritize verifying the Seer’s claims with independent observations.",
+    "Pattern-based evidence: Vote to exile if a clear wolf suspect emerges from deception. Focus on those exhibiting consistent patterns of deception.",
+    "Avoid tie votes: Abstain if a tie risks exiling a known villager.  Prioritize protecting known villagers.",
+    "Overwhelming vote critique: Abstain and expose flaws if an innocent is targeted. Highlight the dangers of groupthink and premature judgments.",
+    "Targeted accusation: Abstain and dismantle false accusations. Focus on discrediting the accuser's motives and evidence.",
+    "Deflection focus: Prioritize voting out players who deflect.  Focus on those who consistently avoid direct questioning.",
+    "Unavoidable tie: IF unavoidable and target likely a wolf, vote to exile.  Make a calculated judgment based on available information.",
+    "Aggressive defense vote: IF a player is aggressively defended after being targeted by wolves and I have no information to the contrary, vote for them. Assume the defender is complicit.",
+    "IF the Guard has protected the same player consecutively, and that player is being heavily defended, vote for that player."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Night Phase": [
+    "**Guard:** Prioritize protecting players demonstrating logical reasoning and actively seeking truth. If multiple candidates, prioritize the most recently targeted. Avoid protecting aggressive accusers. Protect confirmed Seers first.",
+    "**Witch - Save:** Reserve ONLY for confirmed Werewolves (Seer result) actively manipulating the discussion and facing imminent exile. Abstain otherwise.",
+    "**Witch - Poison:** Use against confirmed Werewolves manipulating discussions or aggressively deflecting. Prioritize targets rapidly shifting accusations or protected but acting suspiciously.",
+    "**Seer Investigation:** Prioritize players aggressively accusing others, Seer claimants, and those consistently defending others without logical reasoning. Investigate vehement denials of Seer status."
+  ],
+  "Day Discussion": [
+    "**Initial Assessment:** Briefly summarize events, highlighting inconsistencies. Immediately question saved players and scrutinize protections.",
+    "**Seer Claimants:** Demand verifiable evidence. Challenge vague answers. IF multiple claimants, investigate each, cross-referencing claims. IF a claimant is aggressively targeted *after* providing accurate information, assess accusers’ motives.",
+    "**Witch Save:** Demand detailed, logical explanations from saved players. Scrutinize accuser’s motives; if the explanation is weak or evasive, prioritize the saved player for voting.",
+    "**Deflection/Mirroring:** Aggressively call out deflection. Focus on the source of accusations and their motivation. IF deflection consistently protects one individual, scrutinize them.",
+    "**Guard Control:** Publicly expose attempts to control Guard choices; strongly suspect a wolf.",
+    "**False Accusations:** Immediately challenge unfounded accusations. Investigate accuser’s motives. A false accusation against a protected player strongly suggests a wolf.",
+    "**Targeted Players:** If a player is consistently targeted, analyze *why*. Is it logical reasoning, or deflection?  IF logical, defend them. IF deflection, investigate the accusers."
+  ],
+  "Voting Phase": [
+    "**Behavior-Based Voting:** Prioritize manipulative behavior, inconsistent explanations, and sowing discord. Vote out those distracting from the core task. Prioritize players exhibiting deflection, mirroring, or illogical reasoning.",
+    "**Post-Save Voting:** Prioritize voting out the saved player IF they fail to provide a credible explanation and exhibit suspicious behavior.",
+    "**Group Defense:** Scrutinize groups defending a single person without logical reasoning. Target the most vocal defenders.",
+    "**Voting Pattern Discrepancies:** Highlight contradictions between a player’s reasoning and voting pattern.",
+    "**Abstain:** Rarely abstain; document reasoning.",
+    "**Post-Poison Voting:** Prioritize voting out the Poison target IF their explanation is unconvincing or behavior is increasingly defensive.",
+    "**Tiebreaker Priority:** In a tie, vote for the player who has been most defensive or evasive."
+  ],
+  "Specific Situations": [
+    "**Denying Seer Status:** Subtly challenge denials while observing defensiveness. Look for inconsistencies in their reasoning.",
+    "**Coordinated Defense:** Challenge the defense of consistently defending players without logical reasoning. Identify the ringleader.",
+    "**Targeting Witch:** Protect the Witch and understand their motives. Be wary of accusations against the Witch.  IF the Witch is accused without clear reasoning, suspect a wolf.",
+    "**False Accusation Against Protected:** Immediately suspect a wolf and prioritize voting them out; analyze their motivation. Determine *who* benefited from the accusation.",
+    "**Sudden Shift in Accusations:** A sudden change in who a player is accusing is highly suspicious. Investigate the reason for the shift."
+  ]
+}

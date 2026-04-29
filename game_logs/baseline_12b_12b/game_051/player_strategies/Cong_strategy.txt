@@ -1,0 +1,37 @@
+{
+  "Night Phase": [
+    "Prioritize Seer Save: ALWAYS save the Seer if targeted; information is paramount.",
+    "Protection Priority (Seer Alive): Prioritize players demonstrating logical reasoning and synthesis of information. Early game: curious players. Later: those effectively analyzing information and challenging assumptions. Focus on players asking probing questions.",
+    "Protection Priority (Seer Dead): Prioritize players demonstrating strong reasoning and observation, focusing on logical deductions. Protect those who challenge assumptions and expose manipulation. Focus on those actively seeking information.",
+    "Consecutive Protection Scrutiny: IF I protect the same player two nights in a row, strongly suspect wolf collaboration unless compelling evidence exists. Publicize this suspicion.",
+    "Save/Poison (No Save Available): Poison only if a confirmed villager (Seer or Guard) is undeniably targeted AND protection is impossible; prioritize Werewolves targeting information sources. Document reasoning.",
+    "Early Game Assessment: Observe player interactions, identify potential alliances, and note silence. Pay attention to players avoiding direct questioning.",
+    "Delayed Save Usage: Assess information from the first day’s discussion before committing the Save. Prioritize saving for known information sources."
+  ],
+  "Day Discussion Phase": [
+    "Initial Observation: Observe for one cycle, noting alliances and defensive patterns. Note unusual silence or eager defenders.",
+    "Seer Claim Verification: IF multiple claim Seer, demand verifiable proof. Publicly challenge inconsistencies. Be skeptical. Demand specific, verifiable claims. If no proof is offered, treat all claimants as suspicious.",
+    "Guard Targeted: Advocate caution; challenge accusations with evidence. Assume innocence unless proven otherwise. Focus on accusing those aggressively defending the Guard.",
+    "Accusation Analysis: Prioritize accusations supported by logical reasoning. Note deflection attempts. Publicly highlight logical fallacies. Question motives behind accusations.",
+    "Redirection Identification: Publicly call out redirection attempts. Question motives of those avoiding direct questions.",
+    "Aggressive Defense Scrutiny: Note defenders of aggressively defended players; their reasoning may be suspect. Publicly challenge weak defenses. IF a player is excessively defended, they are likely a wolf.",
+    "Post-Save Analysis: Aggressively question illogical defenses. Note who *doesn’t* defend the saved player.",
+    "Early Game Focus: Expose deflection tactics.",
+    "Defense Analysis: IF a player is defended with weak or circular reasoning, prioritize voting them out.",
+    "Mirroring Behavior: Publicly point out inconsistencies in mirroring arguments.",
+    "Focus on Reasoning: Demand explicit reasoning for all claims and accusations.",
+    "Recognize Wolf Patterns: Be alert for sudden shifts in alliances, disproportionate defensiveness, and attempts to control the narrative."
+  ],
+  "Voting Phase": [
+    "Confirmed Seer Vote: Vote accordingly, verifying credibility through observation.",
+    "Pattern-Based Evidence: Vote to exile if a clear wolf suspect emerges from deception and pattern recognition.",
+    "Tie Avoidance: Abstain if a tie risks exiling a known villager.",
+    "Targeted Accusation Disruption: Abstain and dismantle false accusations; focus on discrediting the accuser.",
+    "Aggressive Defense Vote: IF a player is aggressively defended with weak or circular reasoning, vote for that player.",
+    "Consecutive Protection Scrutiny: IF I protected the same player consecutively and that player is heavily defended, vote for that player.",
+    "Late Game: Prioritize eliminating any player demonstrating manipulative behavior or inconsistent narratives.",
+    "Suspicious Defenses: Prioritize voting out players defended with weak or circular reasoning.",
+    "If unsure, abstain.",
+    "Avoid bandwagon voting: Independently assess each player’s behavior before casting a vote."
+  ]
+}

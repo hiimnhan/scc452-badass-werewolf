@@ -1,0 +1,154 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Cong (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Meg",
+                "statement": "Nhan's survival is unsettling. Being targeted and *not* eliminated? It screams deliberate manipulation. Someone wants us to think he's harmless, but I doubt it."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg, accusing Nhan of manipulation without evidence is a risky tactic. Why target him specifically? What manipulation do you allege, and what evidence supports it?"
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg's accusation against Nhan is premature and lacks any supporting evidence. Jin's questioning is reasonable. Let's focus on gathering facts before making baseless claims."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg's accusations are baseless and designed to sow discord. Jin and Hoang are attempting to shield her. I suggest we examine their coordinated defense more closely."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's immediate and aggressive deflection, accusing Jin and Hoang of shielding him, is highly suspicious. He's reacting defensively instead of logically addressing Meg's concerns."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan's immediate accusations against Jin and Hoang, following Meg's unsubstantiated claim, appear rehearsed and designed to deflect scrutiny. I suggest we carefully observe their coordinated defense."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's defensive reaction and coordinated defense with Jin and Hoang raise serious concerns. His immediate accusations lack substance and appear rehearsed."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's rapid deflection and blaming of others following Meg's accusation is a classic tactic. His behavior lacks logical reasoning and warrants closer scrutiny."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's defensive reaction and accusation of Jin and Hoang without evidence indicates a wolf attempting to deflect. His behavior is too quick and reactive."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's reaction to Meg's accusation was not logical. His immediate deflection and accusations of shielding are suspicious and warrant further investigation through exile."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Meg's accusations against Nhan were baseless and lacked evidence. Her subsequent behavior points to deflection and coordinated manipulation. We must prioritize eliminating potential wolves."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's reaction to Meg's concerns was far too aggressive. His immediate accusations against Jin and Hoang felt forced and designed to distract us. I'm concerned about his motives."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's behavior is too reactive and defensive. His accusations against Jin and Hoang are a clear attempt to mislead us. We need to eliminate this potential manipulator."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Hoang (Seer) investigated Meg. Meg is a wolf.",
+            "Cong (Witch) used POISON potion on Meg"
+        ],
+        "night_eliminated": [
+            "Meg",
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Cong and Hoang's immediate defense of Nhan, after he was aggressively deflecting, is highly suspicious. They are clearly working together to obfuscate the truth."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's accusations are a clear deflection. His mirroring of Meg's claims and subsequent targeting of Cong and myself demonstrate a desperate attempt to shift blame. I strongly suspect Nam is a werewolf."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang's denial is transparent deflection. He accuses me of mirroring Meg while simultaneously mirroring my own accusations against him and Cong. He's reacting to the conversation, a classic wolf tactic."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's frantic accusations and mirroring of Meg's earlier claims are textbook wolf behavior. He's desperately trying to deflect blame and sow discord. I vote Nam."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's frantic denial and accusation of mirroring are a classic deflection tactic. Nam's observations are far more logical. I vote Hoang."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang's continued denials and accusations of mirroring are textbook deflection. He's reacting to my observations and attempting to paint me as the aggressor. I vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang's accusations of mirroring are a blatant deflection tactic. He's reacting defensively and attempting to shift blame, a clear sign of wolf behavior."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang's frantic denials and accusations of mirroring are classic deflection. His behavior aligns with the established wolf patterns, making him a clear threat to the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam's frantic denials and mirroring of Meg's initial accusations are classic wolf tactics. He's desperately trying to deflect and sow discord. I vote Nam."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's reaction to Nam's observations is too aggressive and defensive. It feels like a deliberate attempt to mislead us. I'm concerned about his reasoning."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "3": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nam.",
+            "Cong (Witch) has no potions left."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}
