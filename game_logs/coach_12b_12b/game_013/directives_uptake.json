@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "013",
+  "directives_source_game_id": "012",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "challenged_on_clear",
+        "directive_action": "STATE_SEER_ROLE_AND_CONFIRMATION",
+        "directive_rationale": "When challenged, do not argue 'behavior' or 'disruption'; instead, state: 'I am the Seer, Nhan is confirmed.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Hoang challenged his claim, Nam stated: 'I am the Seer, and Nhan is confirmed.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam used the exact required phrasing to confirm his role and Nhan's status when challenged by Hoang."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "challenged_on_clear",
+        "directive_action": "ACCUSE_ATTACKERS_OF_BEING_WOLVES",
+        "directive_rationale": "Anyone attacking this fact is likely a Wolf trying to kill the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated: 'Anyone attacking this fact is likely a Wolf trying to kill the Seer.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam followed the directive by explicitly accusing those attacking his clear of being wolves."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_alive_and_trusted_core_not_established",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "You must protect the Seer every night until a Trusted Core is established.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nhan instead of Nam (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was alive and no trusted core was established, but Jin protected Nhan."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_cleared_witch",
+        "directive_action": "VOTE_FOR_SEER_NOT_ALLOWED",
+        "directive_rationale": "You committed the ultimate betrayal by voting for the Seer who just cleared you.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nam) did not clear the Witch (Hoang); instead, the Witch attacked the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_cleared_witch",
+        "directive_action": "VOTE_FOR_SEER_PROTECTION",
+        "directive_rationale": "The Seer is your highest priority",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not clear the Witch."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_attacking_seer",
+        "directive_action": "POISON_ATTACKER",
+        "directive_rationale": "any player attacking the Seer should be your primary target for the poison potion.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch (Hoang) was the one attacking the Seer, and no night phase occurred after the Seer was attacked in Round 1 before the Witch was exiled."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_claim_exists",
+        "directive_action": "PRIORITIZE_CLAIM_OVER_TONE",
+        "directive_rationale": "Never prioritize 'vibes' or 'tone' over a Seer's claim.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated: 'Nam is the Seer, and his claim about Nhan is verifiable.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong prioritized Nam's mechanical claim over Hoang's contradictory accusations."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple_players_using_identical_phrasing_to_attack_seer",
+        "directive_action": "IDENTIFY_WOLF_ECHO_CHAMBER",
+        "directive_rationale": "When multiple players (Villager, Witch) use identical phrasing like 'verifiable information' to attack a Seer, you are in a Wolf-led echo chamber.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There were no multiple players using identical phrasing to attack the Seer; the attacks on Nam were distinct (Hoang in R1, Jin/Riley in R2)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "031",
+  "directives_source_game_id": "030",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Witch claims Seer is a wolf based on a save",
+        "directive_action": "CHALLENGE_WITCH_ON_FACTUAL_CONTRADICTION",
+        "directive_rationale": "when the Witch claimed you were a wolf, you should have focused the village on the factual contradiction: the Witch claimed to save you, yet you were still alive and active",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang (Seer) challenged Cong (Witch) by stating that Cong's claim of saving Nhan directly contradicted the fact that Nhan was not a werewolf, calling it a 'blatant contradiction' and a 'deliberate attempt to discredit' his findings.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang identified the contradiction between his Seer result and the Witch's save claim and used it to push for Cong's exile."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Pressure to rely on behavioral analysis",
+        "directive_action": "REVEAL_INVESTIGATION_DATA",
+        "directive_rationale": "Use your data as the only objective metric and ignore 'vibes'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Jin and Nhan questioned Hoang's behavior and accused him of mirroring Cong's tactics, Hoang repeatedly asserted 'Confirmed Werewolf: Meg' based on his investigation.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang ignored the behavioral accusations from the other players and continued to rely on his investigation data regarding Meg."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive and there are other confirmed villagers",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Never stop protecting the Seer until they are the only confirmed villager left",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Hoang (Seer) during the second night.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan protected the Seer while other players were still in the game."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Knowledge of a player's role is not confirmed by save potion",
+        "directive_action": "WITHHOLD_FABRICATED_ROLE_DATA",
+        "directive_rationale": "Never fabricate role data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not fabricate role data; he claimed to have saved Nhan, which is a game action, not a role assignment claim."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides a 'Clear' for a player",
+        "directive_action": "ENDORSE_CLEARED_PLAYER",
+        "directive_rationale": "When the Seer provides a 'Clear,' that player is an absolute truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Jin both endorsed the Seer's clear of Nhan by arguing that Cong's contradicting save claim was a deceptive attempt to sow discord.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers accepted the Seer's clear of Nhan and used it to target the player contradicting it."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Player attempts to frame a Seer-cleared player",
+        "directive_action": "ACCUSE_FRAMER_AS_WOLF",
+        "directive_rationale": "any attempt to frame a cleared player is a wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong claimed his save of Nhan suggested Hoang's clear was deceptive (effectively framing Nhan's status as a wolf), Nam and Jin accused Cong of being a threat and attempting to deceive the village.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers accused the player (Cong) who attempted to undermine the Seer's clear of Nhan."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Player attacks a Seer-cleared player",
+        "directive_action": "VOTE_AGAINST_ATTACKER",
+        "directive_rationale": "When the Seer clears someone, you must vote as a unified block against anyone attacking that cleared player",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam and Jin both voted for Cong after Cong attacked the validity of the Seer's clear of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers voted against Cong, who had attacked the Seer-cleared player's status."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Wolves claim Seer alignment is 'wolf coordination'",
+        "directive_action": "DEFEND_SEER_ALIGNMENT",
+        "directive_rationale": "Agreeing with the Seer is not 'wolf coordination'\u2014it is village alignment",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player claimed that alignment with the Seer was 'wolf coordination'."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer's data is questioned based on erratic behavior",
+        "directive_action": "PRIORITIZE_SEER_DATA",
+        "directive_rationale": "Do not let wolves gaslight you into doubting the Seer's data based on 'erratic behavior'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Hoang provided data that Meg was a wolf, Jin and Nhan questioned this based on Hoang's behavior (mirroring Cong) and decided to exile Hoang instead of Meg.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers (Jin and Nhan) prioritized the behavioral analysis ('mirroring Cong') over the Seer's data and voted to exile the Seer."
+      }
+    ]
+  }
+}

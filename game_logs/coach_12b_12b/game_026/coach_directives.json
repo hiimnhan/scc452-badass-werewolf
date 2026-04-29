@@ -1,0 +1,78 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "attacked_by_other_player",
+        "action": "LABEL_ATTACKER_AS_WOLF",
+        "rationale_short": "When attacked, do not just defend; explicitly label the attackers as wolves for attempting to invalidate objective data.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority is the Seer. Always shield the Seer first.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_has_not_returned_wolf_result_on_player",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison without a Seer's 'Wolf' result.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "ENDORSE_PLAYER",
+        "rationale_short": "When the Seer provides a 'Clear,' that player is an objective asset.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_calls_seer_result_convenient_or_too_quick",
+        "action": "ACCUSE_ACCUSER",
+        "rationale_short": "Anyone calling a Seer's result 'convenient' or 'too quick' is using wolf-gaslighting keywords; you must immediately pivot your suspicion toward the accuser, not the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_reinterprets_seer_result_as_deception",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "If someone tries to re-interpret a Seer's result as 'deception,' they are a wolf.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "mechanical_seer_result_available",
+        "action": "VOTE_AS_BLOCK_BASED_ON_RESULT",
+        "rationale_short": "Vote as a block based on mechanical results, not intuition.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "Stop prioritizing 'behavioral vibes' over mechanical facts.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

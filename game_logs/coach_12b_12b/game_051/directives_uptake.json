@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "051",
+  "directives_source_game_id": "050",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "another_player_claims_seer",
+        "directive_action": "COUNTER_CLAIM",
+        "directive_rationale": "When a fake Seer claims, you must immediately counter-claim",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No other player claimed to be the Seer; only Hoang made the claim."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "another_player_claims_seer",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "provide your investigation data (e.g., 'I know the Guard is innocent')",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No other player claimed to be the Seer."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "another_player_claims_seer",
+        "directive_action": "CHALLENGE_LOGIC",
+        "directive_rationale": "Do not 'concur' with a fake claim to be polite",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No other player claimed to be the Seer."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_not_provided_verifiable_data",
+        "directive_action": "WITHHOLD_PROTECTION",
+        "directive_rationale": "Only protect a Seer who has provided verifiable data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan protected Riley (a Werewolf) instead of withholding protection or protecting the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "At the start of Round 1 Night, the Seer had not yet provided any data. Nhan did not withhold protection; he protected Riley."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "fake_seer_claims",
+        "directive_action": "WITHHOLD_DEFENSE",
+        "directive_rationale": "By protecting and defending the fake Seer, you became a liability",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The only player who claimed Seer was Hoang, who was the actual Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_not_confirmed_target_as_wolf",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a player unless the Seer has confirmed them as a Wolf",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong did not use any potions during Round 2 Night.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer (Hoang) was exiled in Round 1 and could not confirm any targets in Round 2. Cong correctly withheld the poison potion."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "two_players_claim_seer",
+        "directive_action": "ANALYZE_OBJECTIVE_DATA",
+        "directive_rationale": "When two players claim Seer, look for who provides objective data versus who uses deflection",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Only one player (Hoang) claimed to be the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "majority_voting_pattern_detected",
+        "directive_action": "ANALYZE_LOGIC_OF_CLAIMS",
+        "directive_rationale": "voting with the crowd rather than analyzing the logic of the claims",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam and Jin both voted for Hoang, following the lead of Cong and Nhan, citing that Cong's save claim proved Hoang was lying.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam and Jin followed the majority voting pattern to exile Hoang without questioning the logic of how a Witch's save and a Seer's investigation could both be true (or how a Witch could be lying)."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "behavioral_red_flags_presented",
+        "directive_action": "REQUEST_MECHANICAL_CONTRADICTIONS",
+        "directive_rationale": "rely on 'vibe' arguments (e.g., 'erratic,' 'rushed,' 'suspicious') rather than mechanical contradictions",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam used behavioral arguments, calling Cong's defense 'blatant manipulation' and a 'calculated distraction' and 'classic wolf tactic'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam relied on behavioral 'vibe' arguments (manipulation, distraction, classic tactics) rather than requesting or identifying mechanical contradictions."
+      }
+    ]
+  }
+}

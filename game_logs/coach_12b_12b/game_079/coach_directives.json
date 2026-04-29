@@ -1,0 +1,74 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "making_claims",
+        "action": "KEEP_CLAIMS_CLINICAL_AND_EVIDENCE_BASED",
+        "rationale_short": "keep your claims clinical and evidence-based to avoid looking like a 'fake' Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "selecting_protection_target",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority must always be the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "targeting_seer_clears_without_mechanical_evidence",
+        "action": "WITHHOLD_ACCUSATION",
+        "rationale_short": "attacking the Seer's clears without mechanical evidence (like a result) is a 'Betrayal Trigger'",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "saved_player_last_night",
+        "action": "WITHHOLD_ACCUSATION_OF_SAVED_PLAYER",
+        "rationale_short": "Never use night-action knowledge to frame a saved player",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_not_a_wolf_result",
+        "action": "PRIORITIZE_AS_MECHANICAL_TRUTH",
+        "rationale_short": "Continue to prioritize the Seer's 'Not a Wolf' results as mechanical truth over behavioral 'vibes'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 5,
+    "dropped": [
+      {
+        "advice_verbatim": "The Witch, Guard, and Seer operated in total isolation rather than as a support system",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Your play was catastrophic",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "The Witch's role is to preserve the village, not fabricate accusations",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "aggressive language can be weaponized by wolves",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "Night Phase:\n": [
+    "Guard: Protect the Seer without exception. If Seer is eliminated, protect the Witch. Record protection target.",
+    "Seer: Investigate the most vocal player making claims. Announce 'Not Wolf' immediately. Repeat 'I am the Seer, [Player Name] is confirmed. Attacking this is a Wolf tactic.' if challenged.",
+    "Witch: 1. Save: ONLY if Seer confirms a wolf target AND target is protected by the Guard OR a player directly contradicts a Seer result. 2. Poison: ONLY to eliminate a confirmed wolf actively undermining the Seer or attacking a confirmed innocent. NEVER claim the Witch role. Explicitly remind village that saving a player does *not* contradict a Seer’s confirmation."
+  ],
+  "Day Discussion:\n": [
+    "Seer Primacy: Focus *exclusively* on Seer confirmations. Disregard subjective observations. *Never* concur with a false Seer claim.",
+    "IF multiple people claim Seer, THEN demand verifiable investigation results from each. Prioritize those who provide results.",
+    "IF a player attacks a Seer-cleared player, THEN IMMEDIATELY state: 'Attacking a confirmed innocent is a Wolf tactic.' Demand immediate vote. No discussion about the victim’s behavior.",
+    "IF a player claims a contradiction between a Seer’s 'clear' and a night action, THEN state: 'A Seer’s 'clear' is evidence of innocence. A night action does not invalidate this. Disregarding the Seer is a Wolf tactic.'",
+    "IF echo-voting occurs, THEN question the *originator* of the argument and demand justification. Prioritize identifying the original source.",
+    "IF a player makes a demonstrably false claim (e.g., falsely claiming a role), THEN state: '[Player Name]'s claim is false. They are attempting to deceive the village.' Demand immediate vote. No debate.",
+    "IF there's an attempt to discredit the Seer, THEN state: 'Any attempt to discredit the Seer is a Wolf tactic.' Demand immediate vote. No debate.",
+    "Actively and explicitly state the Seer and Guard's alliance. Highlight the combined power of confirmed clears and protection. Refrain from initiating any discussion that isn't directly related to Seer confirmations or immediate threats."
+  ],
+  "Voting Phase:\n": [
+    "Protect Innocents (Absolute Priority): *Always* vote to protect confirmed innocents. Immediately halt any vote targeting a confirmed innocent and demand a protection vote. No exceptions.",
+    "Exile Attackers (Priority 1): *Immediate Exile:* Immediately vote to exile the attacker of a confirmed innocent. No discussion.",
+    "Exile Echo-Voters (Priority 2): *Immediate Exile:* Vote out the originator of the echo-voting pattern. Focus on the player driving the coordinated argument.",
+    "Exile Contradictors (Priority 3): *Immediate Exile:* Immediately vote against anyone making demonstrably false claims, especially about saves or Seer confirmations. Prioritize those falsely claiming a role.",
+    "Post-Seer Death: Request investigation of all potential new Seers. Demand they investigate a player and announce findings. Vote to exile any claimant who refuses or provides inconsistent results. Prioritize demonstrable results.",
+    "Suspected Seer: Vote to exile them. Prioritize protecting previously confirmed innocents."
+  ]
+}

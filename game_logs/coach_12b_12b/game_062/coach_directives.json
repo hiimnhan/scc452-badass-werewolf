@@ -1,0 +1,130 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "claiming_role == True",
+        "action": "AVOID_DEFENSIVENESS",
+        "rationale_short": "When claiming, do not get defensive",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "claiming_role == True",
+        "action": "AVOID_REQUESTING_VOTE_ON_SKEPTICS",
+        "rationale_short": "When claiming, do not... demand votes on skeptics",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "claiming_role == True",
+        "action": "REITERATE_FINDINGS",
+        "rationale_short": "reiterate your findings",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-004",
+        "phase": "DEBATE",
+        "trigger": "claiming_role == True",
+        "action": "EXPLAIN_PROOF_AS_CONSISTENCY",
+        "rationale_short": "explain that your proof is the consistency of your results over time",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-005",
+        "phase": "DEBATE",
+        "trigger": "conflict_with_villagers == True",
+        "action": "AVOID_ESCALATING_CONFLICT",
+        "rationale_short": "Avoid escalating conflicts with Villagers",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "player_claimed_seer == True",
+        "action": "PROTECT_CLAIMING_SEER",
+        "rationale_short": "protect them immediately upon their claim to ensure the village has a source of information",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_under_threat == True && potions_remaining > 0",
+        "action": "SAVE_SEER",
+        "rationale_short": "Do not waste it on yourself if the Seer is under threat",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "was_cleared_by_seer == True",
+        "action": "ENDORSE_SEER_VALIDITY",
+        "rationale_short": "if you are cleared by the Seer, your primary goal is to support the Seer's validity",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "was_cleared_by_seer == True",
+        "action": "AVOID_CASTING_DOUBT_ON_SEER",
+        "rationale_short": "not to cast doubt on them based on their debate style",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear_result == True",
+        "action": "PRIORITIZE_DATA_OVER_VIBES",
+        "rationale_short": "Stop prioritizing 'behavioral vibes' over hard data. When the Seer provides a clear result, that is your only anchor of truth",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_demands_immediate_proof_from_seer == True",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "Any player who demands 'immediate proof' or attacks the Seer's credibility without evidence is likely a Wolf",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_credibility_without_evidence == True",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "Any player who... attacks the Seer's credibility without evidence is likely a Wolf",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_was_cleared_by_seer == True && player_turns_on_seer == True",
+        "action": "IGNORE_ACCUSATIONS",
+        "rationale_short": "If a player is cleared by the Seer but then turns on them... ignore their accusations",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "player_was_cleared_by_seer == True && player_turns_on_seer == True",
+        "action": "DEFEND_SEER",
+        "rationale_short": "If a player is cleared by the Seer but then turns on them... protect the Seer",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 17,
+    "emitted": 14,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=17 but emitted+dropped=14"
+  }
+}

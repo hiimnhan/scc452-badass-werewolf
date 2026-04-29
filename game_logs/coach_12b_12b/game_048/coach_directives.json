@@ -1,0 +1,78 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealing_investigation_results",
+        "action": "PRESENT_AS_OBJECTIVE_FACTS",
+        "rationale_short": "present your results as objective facts",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "communicating_with_village",
+        "action": "AVOID_CHARACTER_ATTACKS",
+        "rationale_short": "avoid attacking others' characters",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "DEFEND_CLEARED_PLAYER",
+        "rationale_short": "When the Seer clears someone... defend them regardless of the social noise",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "considering_poison_potion",
+        "action": "WITHHOLD_POISON_UNLESS_CONFLICTING_CLAIM_OR_CONTRADICTION",
+        "rationale_short": "Never poison a player unless there is a conflicting Seer claim or a logical contradiction",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "considering_save_potion",
+        "action": "SAVE_SEER",
+        "rationale_short": "Prioritize saving the Seer above all others",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "seer_cleared_player",
+        "action": "VOTE_AGAINST_OTHER_THAN_CLEARED_PLAYER",
+        "rationale_short": "Stop prioritizing 'vibes' over role data. The Seer provided a mechanical clear for the Villager in Round 1; voting against the Seer because their tone felt 'manufactured' is a fatal error.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "hearing_psychological_buzzwords",
+        "action": "IGNORE_BUZZWORDS_FOCUS_ON_LOGICAL_CONTRADICTIONS",
+        "rationale_short": "Ignore psychological buzzwords like 'suspicious' or 'deflective' and focus only on logical contradictions",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "Your data was correct, but your delivery was overly aggressive",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

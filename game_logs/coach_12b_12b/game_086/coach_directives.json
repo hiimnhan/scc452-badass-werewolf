@@ -1,0 +1,106 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "providing_investigation_result",
+        "action": "REVEAL_INVESTIGATION_NEUTRALLY",
+        "rationale_short": "Present your findings neutrally.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "after_providing_clear",
+        "action": "WITHHOLD_AGGRESSIVE_TARGETING",
+        "rationale_short": "By immediately jumping from a clear to aggressive targeting of other players, you played into the wolves' hands",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "after_reporting_fact",
+        "action": "STAY_SILENT_FOR_VILLAGE_DISCUSSION",
+        "rationale_short": "Report the fact, then let the village discuss, rather than 'hunting' in a way that looks unstable.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_revealed_or_provided_clear",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The moment the Seer reveals themselves or provides a clear, they become the wolves' primary target. Your priority is the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_revealed_or_provided_clear",
+        "action": "AVOID_PROTECTING_RANDOM_VILLAGER",
+        "rationale_short": "Protecting a 'logical observer' or a random villager is a waste of your ability.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_identified_as_wolf_by_seer",
+        "action": "POISON_X",
+        "rationale_short": "use it only on players the Seer has identified as wolves",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_actively_attacking_confirmed_clear",
+        "action": "POISON_X",
+        "rationale_short": "use it only on... those who actively attack a confirmed clear.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "absence_of_evidence",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "ensure your future targets are based on evidence, not guesswork.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "behavioral_arguments_presented",
+        "action": "DISREGARD_BEHAVIORAL_ANALYSIS",
+        "rationale_short": "Stop relying on 'behavioral analysis.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "concrete_clear_provided",
+        "action": "PRIORITIZE_OBJECTIVE_RESULTS",
+        "rationale_short": "Prioritize objective results over social intuition.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "consensus_forming_without_evidence",
+        "action": "CHALLENGE_CONSENSUS",
+        "rationale_short": "When everyone suddenly agrees that a Seer is 'suspicious' without evidence... Question the consensus.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 13,
+    "emitted": 11,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=13 but emitted+dropped=11"
+  }
+}

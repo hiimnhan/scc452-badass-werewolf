@@ -1,0 +1,34 @@
+{
+  "Night Phase": [
+    "**Guard:** Protect the Seer exclusively, every night. If the Seer is eliminated, protect the Witch. Never protect the same player consecutively.",
+    "**Witch:** Prioritize saving the Seer. ONLY save if the Seer is targeted AND under Guard protection. NEVER poison a player cleared by the Seer. If the Seer is not targeted, do nothing.",
+    "**Witch - Save Priority:** If multiple Seer-confirmed Wolf targets are under Guard protection, prioritize saving the player most likely to provide further information (e.g., a strong debater, someone who has previously demonstrated sharp observation)."
+  ],
+  "Day Discussion": [
+    "**Seer Primacy:** State findings neutrally. Acknowledge verification requests with 'The Seer’s role is to reveal, verification is secondary.' Avoid accusatory language.",
+    "**Confirmed Core Protection:** Aggressively defend Seer-cleared players. Any attack on a Seer-cleared player is a high-priority Wolf tactic and warrants an immediate vote.",
+    "**Responding to Skepticism (Critical Update):** IF a player demands verification AFTER a Seer clear, IMMEDIATELY mark them as HIGH suspicion and prioritize for exile. State 'The Seer has spoken.' Silence and focus on the accuser’s behavior.",
+    "**Addressing Accusations:** IF accused of falsely framing a player, calmly deny and redirect focus to the accuser’s behavior and their pattern of attacks.",
+    "**New Seer Claim:** Require a public investigation with a clear finding before supporting. If a claimant refuses or is unable to provide a clear finding, immediately exile them.",
+    "**AVOID:** Demanding proof from the Seer. Maintain silence on their methods.",
+    "**Bandwagon Analysis:** If a significant portion of the village targets the Seer, investigate the instigators of the bandwagon and vote them out first. Do not join the bandwagon without identifying its source.",
+    "**Mirror Tactic Detection:** IF a player accuses the Seer of 'deflecting' or 'manufacturing outrage,' immediately mark them as HIGH suspicion. They are likely projecting."
+  ],
+  "Voting Phase": [
+    "**Protect Core:** Always vote to protect Confirmed Core members (Seer-cleared players).",
+    "**Exile Attackers:** Immediate Exile: Vote to exile anyone attacking a Confirmed Core member, especially a Seer or Seer-cleared player.",
+    "**Exile False Claimants:** Immediate Exile: Vote to exile anyone making demonstrably false claims, particularly regarding Seer status.",
+    "**Exile Discreditors:** Immediate Exile: Vote to exile anyone discrediting the Seer or actively sowing doubt about Seer findings.",
+    "**No Clear Target:** Vote for the player exhibiting the most Wolf-like behavior (deflection, aggression without evidence, supporting the majority against Seer investigations, mirroring).",
+    "**IF** a player demands verification *after* a Seer clear, prioritize exile.",
+    "**Momentum Control:** Resist bandwagoning. Analyze the source of the bandwagon and investigate them. Prioritize evidence-based voting over groupthink."
+  ],
+  "Specific Situations": [
+    "**Seer-Cleared Attack:** Prioritize immediate exile of the attacker. Do not engage in lengthy debate.",
+    "**Multiple Seer Claimants:** Require each claimant to perform a public investigation and reveal their findings. Vote to exile the least convincing claimant. Focus on clear, actionable Seer results.",
+    "**IF** the Seer is eliminated, immediately shift focus to observing player behavior and identifying potential Wolves. Prioritize protecting the Witch.",
+    "**Deflection Detected:** IF a player, especially after a Seer clear, aggressively redirects suspicion to another player without providing evidence, immediately mark them as highly suspicious.",
+    "**Vague Accusations:** Disregard accusations based solely on 'vibes' or 'feelings.' Demand concrete evidence and logical reasoning.",
+    "**Witch Accused:** If accused of being a wolf, calmly state the Seer’s role and defer to their findings. Redirect attention to the accuser’s behavior."
+  ]
+}

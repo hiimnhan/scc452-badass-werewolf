@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "021",
+  "directives_source_game_id": "020",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early reveal was the correct move to establish a trusted core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang announced that Nhan was 'confirmed not a werewolf' and proposed investigating Cong, but did not explicitly state 'I am the Seer'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang acted on Seer information immediately in Round 1, effectively signaling the role, though he did not use a formal 'I am the Seer' declaration."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting yourself while the Seer is still alive is a critical error; the Seer... must be protected every single night.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Riley (Werewolf) instead of Hoang (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan failed to protect the Seer in Round 1, instead protecting a Werewolf."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_has_seer_clear == True",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use poison on a 'clear' result.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Witch) used the POISON potion on Nhan, who had been cleared by Hoang in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong poisoned Nhan despite Nhan having a Seer clear."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_is_dead == True",
+        "directive_action": "WITHHOLD_ATTACK_ON_SEER_CREDIBILITY",
+        "directive_rationale": "attacking the Seer's narrative after their death is a wolf-like behavior that confused your fellow villagers.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The game ended shortly after the Seer (Hoang) was exiled in Round 2; Cong attacked Hoang's credibility while Hoang was still alive, not after death."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_claims_seer_is_too_eager",
+        "directive_action": "CHALLENGE_CLAIMANT",
+        "directive_rationale": "You correctly identified the wolf's 'gaslighting' tactic in Round 1 when a wolf claimed the Seer was 'too eager.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nhan claimed Hoang's 'eagerness' was concerning and Jin called Hoang's 'eagerness' suspect, Nam did not challenge these claims; instead, Nam voted for Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam (Villager) did not challenge the players claiming the Seer was too eager; he aligned with them."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clear_exists == True",
+        "directive_action": "ENDORSE_CLEAR_PLAYER",
+        "directive_rationale": "Trust mechanical results (Seer clears) over 'vibes' or behavioral skepticism.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam voted to exile Hoang, citing that Hoang's insistence on Nhan's innocence 'without Seer confirmation' was suspicious, despite Hoang effectively declaring a clear.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam dismissed the clear and voted against the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_is_dead == True AND player_attempts_to_invalidate_previous_clears == True",
+        "directive_action": "VOTE_AGAINST_PLAYER",
+        "directive_rationale": "Once the Seer is dead, their previous clears remain objective facts; anyone attempting to invalidate those results should be exiled immediately.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The game ended upon the Seer's exile; no subsequent voting round occurred."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_guard_bond_exists == True",
+        "directive_action": "DEFEND_BOND",
+        "directive_rationale": "The village failed to treat the Seer-Guard bond as an unbreakable block, allowing internal suspicion to override confirmed evidence.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "A Seer-Guard bond was never established or recognized by the village."
+      }
+    ]
+  }
+}

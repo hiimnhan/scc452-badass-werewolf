@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "007",
+  "directives_source_game_id": "006",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_ignores_clear",
+        "directive_action": "CHALLENGE_LOGIC_FAILURE",
+        "directive_rationale": "If the village ignores a clear, the Seer must aggressively call out the failure of logic.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin challenged Hoang for calling his clear of Nhan 'unsubstantiated' and demanded Hoang provide mechanical reasoning for his accusation, calling Hoang's redirection 'baseless'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin aggressively challenged Hoang's logic when Hoang attempted to dismiss the clear of Nhan."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "You must protect the Seer every single night until they are dead.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Nhan instead of Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang failed to protect the Seer (Jin), choosing to protect Nhan instead."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_guard",
+        "directive_action": "ACT_AS_ANCHOR_OF_TRUST",
+        "directive_rationale": "Once the Seer cleared the Guard, the Guard should have been the anchor of trust.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) never cleared the Guard (Hoang); in fact, the Seer voted to exile the Guard."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "behavioral_suspicion_only",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion based on behavioral suspicion.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the poison potion on Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan used the poison potion on Jin despite Jin not being logically contradicted or identified as a wolf by another role; the action was based on behavioral suspicion from the previous day."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_logically_contradicted_or_identified_by_seer",
+        "directive_action": "POISON_X",
+        "directive_rationale": "use it only on players who have logically contradicted themselves or were identified by the Seer.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player was logically contradicted or identified as a werewolf by the Seer before the poison was used."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "vibe_based_logic_or_behavioral_suspicion",
+        "directive_action": "IGNORE_BEHAVIOR",
+        "directive_rationale": "Stop using 'vibe-based' logic... If a player is 'acting weird' but has no logical contradiction, ignore it.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam both voted for Hoang based on his 'deflective' and 'accusatory' behavior and the fact that he provided no 'verifiable reasoning'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Both Villagers (Cong and Nam) based their suspicion and votes on Hoang's behavior/manner of speaking rather than mechanical evidence."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evidence_available",
+        "directive_action": "FOCUS_ON_MECHANICAL_EVIDENCE_AND_VOTING_RECORDS",
+        "directive_rationale": "Focus exclusively on mechanical evidence and voting records.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam focused on the absence of 'verifiable reasoning' and behavioral patterns (deflection) rather than mechanical evidence or voting records.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers focused on the quality of the debate and behavioral cues rather than mechanical evidence."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_player",
+        "directive_action": "ESTABLISH_TRUSTED_CORE",
+        "directive_rationale": "The village must build a trusted core around this result.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam acknowledged Jin's declaration regarding Nhan as a 'significant development' and focused the a search for wolves among the remaining players.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam and Cong accepted the clear of Nhan and used it to narrow the pool of suspects."
+      }
+    ]
+  }
+}

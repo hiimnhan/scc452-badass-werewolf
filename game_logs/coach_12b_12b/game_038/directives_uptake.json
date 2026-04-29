@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "038",
+  "directives_source_game_id": "037",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_questioned_your_clear",
+        "directive_action": "DOUBLE_DOWN_ON_MECHANICAL_CERTAINTY",
+        "directive_rationale": "When the village questioned your clear, you should have doubled down on the mechanical certainty of your role",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Riley questioned Nam's faith in Jin (the cleared player), Nam responded: 'I am the Seer, Jin is confirmed. Riley attacks confirmed Seer information. Riley is a threat to the village and must be exiled.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam repeatedly asserted his role and the certainty of his clear when challenged by Riley."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_questioned_your_clear",
+        "directive_action": "AVOID_AGGRESSIVE_REACTION",
+        "directive_rationale": "rather than reacting aggressively, which allowed the Wolves to frame you as 'controlling the narrative.'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam responded to Riley's questioning by calling Riley a 'threat to the village' and demanding he 'must be exiled.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam reacted aggressively by immediately labeling the questioner a threat and demanding their exile."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is identified, protect them every single night.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nam (the identified Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin protected the Seer after Nam identified himself in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_active",
+        "directive_action": "PRIORITIZE_PROTECTING_SEER_OVER_GENERIC_VILLAGER",
+        "directive_rationale": "Protecting a generic Villager while the Seer is active is a waste of a resource.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nam (Seer) instead of a generic villager.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin prioritized the Seer over other players."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "poison_potion_available AND NOT absolute_certainty",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion without absolute certainty.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Hoang was exiled in Round 1; the poison potion was never used."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_identified",
+        "directive_action": "AVOID_POISONING_SEER",
+        "directive_rationale": "Treat the Seer as untouchable.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Hoang was exiled in Round 1."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "hard_information_vs_behavioral_vibes",
+        "directive_action": "PRIORITIZE_HARD_INFORMATION",
+        "directive_rationale": "Villagers, prioritize hard information over behavioral 'vibes.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated: 'Hoang's claim directly contradicts Nam's Seer clear of Nhan. This is a mechanical contradiction...'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong prioritized the mechanical contradiction of the Seer's clear over behavioral observations."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_cleared_player",
+        "directive_action": "FLAG_AS_WOLF",
+        "directive_rationale": "Any player attacking a Seer-cleared player should be flagged as a high-probability Wolf.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Riley attacked Jin (who was cleared by Nam), Nhan voted for Riley, citing that Riley was 'undermining the Seer.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan flagged Riley as a threat for attacking the cleared player Jin."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_about_defensive_tones",
+        "directive_action": "TRUST_SEER_RESULTS",
+        "directive_rationale": "Stop debating 'defensive tones' and start trusting the Seer's results as the village's North Star.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley argued that Nam's faith in Jin 'feels like a deliberate attempt to shield someone.' Cong responded that 'Riley's accusations are based on feelings, not evidence' and voted for Riley.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong explicitly rejected Riley's 'feelings' based approach in favor of the Seer's evidence."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_provides_vague_justifications_and_votes_with_majority",
+        "directive_action": "CHALLENGE_PLAYER",
+        "directive_rationale": "Question those who simply blend in with the crowd rather than providing evidence.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No villager spent the debate challenging other villagers for blending in; most participants took strong, evidence-based or vibe-based positions."
+      }
+    ]
+  }
+}

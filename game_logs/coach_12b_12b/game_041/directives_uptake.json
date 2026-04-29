@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "041",
+  "directives_source_game_id": "040",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_X_attacks_you_or_your_cleared_player",
+        "directive_action": "ACCUSE_PLAYER_X",
+        "directive_rationale": "once that was established, anyone attacking you or the Guard was a Wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong questioned Hoang's Seer status and Nhan's support, Hoang accused Cong of using a 'deflection tactic' to mislead the village.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang identified Cong as a likely Wolf after Cong attacked both the Seer's claim and the cleared player (Nhan)."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_you",
+        "directive_action": "DEFEND_SEER",
+        "directive_rationale": "When a Seer clears you, your sole purpose is to protect them",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated, 'I strongly support Hoang's claim and urge everyone to focus on verifiable information moving forward.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan explicitly defended Hoang after being cleared by him in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_you",
+        "directive_action": "AMPLIFY_SEER_FINDINGS",
+        "directive_rationale": "When a Seer clears you, your sole purpose is to... amplify their findings",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan reiterated that Hoang's identification of him as a Villager was a 'vital anchor' and urged the village to defend this fact.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan repeatedly amplified the significance of Hoang's clear on him."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_clears_you",
+        "directive_action": "VOTE_AGAINST_SEERS_TARGETS",
+        "directive_rationale": "not to question their 'narrative' to avoid suspicion",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Cong, who was the primary target of the Seer's accusations during the debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan voted against Cong, aligning with the Seer's findings."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_identified",
+        "directive_action": "COORDINATE_PROTECTION_WITH_GUARD",
+        "directive_rationale": "coordinate with the Guard to ensure the Seer is the priority target for protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong used the SAVE potion on Nhan instead of Hoang (the identified Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did not prioritize the Seer for protection; in fact, Cong killed the Seer in Round 2."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_X_attacks_seer_cleared_player_Y",
+        "directive_action": "ACCUSE_PLAYER_X",
+        "directive_rationale": "If the Seer says 'Player X is clear,' and Player Y attacks Player X, Player Y is a Wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated, 'Any attack on Nhan is a Wolf tactic' after Cong questioned the validity of Nhan's support for Hoang.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin correctly identified the attack on the cleared player (Nhan) as a Wolf tactic."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_X_contradicts_seer_findings",
+        "directive_action": "VOTE_AGAINST_PLAYER_X",
+        "directive_rationale": "start voting based on who contradicts the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Cong, who had contradicted the Seer's findings by demanding verification of the Seer's status.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin voted against the player contradicting the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_X_seems_aggressive",
+        "directive_action": "ABSTAIN_FROM_VOTING_ON_X",
+        "directive_rationale": "Stop voting based on who seems 'aggressive'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Nhan, citing Nhan's 'aggressive defense of Hoang' as a reason for exile.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam voted based on Nhan's perceived aggression/behavior rather than abstaining."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_claims_seer_is_performative_or_erratic",
+        "directive_action": "IGNORE_BEHAVIORAL_ADJECTIVES",
+        "directive_rationale": "Ignore how a player sounds; focus on the Seer's results",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin ignored Meg's claim that Hoang's declaration was 'too swift' and focused on the confirmation of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin maintained focus on the results (the clear) rather than the behavioral descriptors used by the wolves."
+      }
+    ]
+  }
+}

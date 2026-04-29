@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is not a werewolf. This is confirmed. Let's focus on establishing a baseline for the others. Cong, Nam, Hoang, Riley, and Meg \u2013 please state your intentions for this game."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's claim about Nhan being 'confirmed' is premature and unsubstantiated. What evidence supports this assertion? Until presented, I find Jin's certainty suspicious."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam's immediate challenge to a confirmed result is concerning. Demand specific evidence supporting your skepticism, Nam. Until then, your behavior raises suspicion."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's insistence on Nhan's 'confirmation' without evidence is highly suspect. Demanding I provide evidence for *questioning* his claim is a deflection. I propose we focus on observing all players, starting with Jin, until verifiable information emerges."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin's insistence on my 'confirmation' without any supporting evidence is concerning. Nam's observation is valid; let's prioritize observing all players, starting with Jin, until verifiable information emerges."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's insistence on Nhan's 'confirmation' is a deflection. Nam is correct to question this unsubstantiated claim. I agree we need to observe all players and prioritize verifiable information."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Jin",
+                "reasoning": "Nhan voted to exile Jin. Reason: Jin's unsubstantiated claim regarding my role and defensive responses to scrutiny raise significant concerns. We need verifiable information, not premature declarations."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's claim about Nhan lacks any supporting evidence. His defensiveness when challenged indicates a potential attempt to deflect suspicion. We need verifiable information, not unsubstantiated assertions."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin's claim of 'confirmed' status for Nhan lacks any evidence and appears designed to deflect scrutiny. His behavior warrants immediate investigation and potential exile."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's behavior is disruptive and lacks any supporting evidence. His focus on questioning the Seer instead of contributing to the discussion is a clear red flag. Exile Nam to protect the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam's immediate and sustained challenge to Jin's claim, without providing any evidence, is highly suspicious. He is actively attempting to undermine the Seer and control the narrative."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's insistence on Nhan's innocence, without offering any supporting evidence, feels oddly aggressive. We need to be cautious of those pushing narratives too forcefully. Let's observe Jin further."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin's behavior is concerning. His insistence on Nhan's 'confirmation' without any supporting evidence seems like a deflection. We need verifiable information, and Jin's defensiveness raises red flags."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Riley.",
+            "Nhan (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Nam"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

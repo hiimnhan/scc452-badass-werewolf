@@ -1,0 +1,164 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 4,
+                "reason": "Need to establish a baseline. Propose we start with investigations of Cong, Nam, and Jin. No actions last night are suspicious."
+            },
+            {
+                "Cong": 4,
+                "reason": "It's early. Need to assess player behavior and listen for any immediate red flags or contradictions. Premature accusations are dangerous."
+            },
+            {
+                "Nam": 9,
+                "reason": "Nhan is confirmed. I must immediately declare this and establish a baseline of verifiable information. Wolves will exploit any silence."
+            },
+            {
+                "Jin": 6,
+                "reason": "Need to establish the Seer/Guard alliance and request the Seer investigate Cong. Early verification is critical to identifying wolves."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Saving Jin revealed the wolves' target. I must immediately share this information and observe reactions to gauge potential wolf allies and solidify my position."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin survived. Need to subtly reinforce suspicion without appearing overly aggressive. A measured statement guides the village's focus."
+            },
+            {
+                "Meg": 7,
+                "reason": "Cong's focus on Jin is useful. I'll subtly amplify his concerns, reinforcing Jin\u2019s untrustworthiness without appearing overly aggressive."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam claims to be Seer and cleared me. This must be defended immediately. Any attack on Nam undermines our entire strategy and assists the wolves."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nam claims to be Seer and cleared Nhan. This requires immediate validation. Protecting Nam and verifying Nhan's status is paramount to village survival."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam claims to be Seer and cleared Nhan. I must ensure his claim is legitimate and Nhan's safety. Immediate verification is critical to establish trust and prevent manipulation."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam claims to be Seer and cleared Nhan. I must validate this to protect Nhan and direct suspicion towards potential wolves. Immediate verification is vital."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to subtly reinforce Jin's suspicious behavior without appearing overly aggressive. A moderate bid allows me to guide the conversation without drawing direct attention."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin's survival is a massive red flag. Cong's aggression needs mirroring to appear helpful. Must amplify Jin's untrustworthiness before he recovers."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam's claim is the foundation. I must immediately reinforce that the Seer's role *is* the proof, and attacking him aids the wolves."
+            },
+            {
+                "Nam": 9,
+                "reason": "Need to immediately reinforce Nhan's confirmed status and discourage any attempts to undermine it. Protecting the Seer is secondary to protecting confirmed Villagers."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nam's claim demands immediate scrutiny. His self-proclamation as Seer and Nhan's clear require immediate validation to prevent deception and guide village focus."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam claims to be Seer. Need to ensure his claim is validated and Nhan's safety. Early validation is crucial for village strategy."
+            },
+            {
+                "Riley": 7,
+                "reason": "Need to reinforce the Jin suspicion and subtly question Nam's Seer claim. A moderate bid allows me to steer the conversation without appearing overly eager."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin's survival is a massive red flag. Cong is already pushing it; I need to amplify the suspicion and solidify Jin as the primary target before he recovers."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam's claim and Nhan's confirmation are the foundation. Cong's hesitation and probing are suspicious. Must reinforce Nam's role and deflect attention from him."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam's deflection and insistence on his Seer claim despite Cong's reasonable request for verification raises suspicion. Need to press for clarity and observe his reactions."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam's insistence on his Seer claim, despite lacking verification and combined with Cong's unwavering support, raises immediate suspicion. I must demand verification before further discussion."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam's repeated claims and Cong's unquestioning support raise serious doubts. I must reinforce the Seer's findings and redirect focus to Nam's behavior."
+            },
+            {
+                "Riley": 7,
+                "reason": "Need to subtly reinforce doubts about Nam's Seer claim while appearing supportive. Cong's blind defense is a weakness to exploit; a gentle nudge towards scrutiny is vital."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin survived the night despite claims. Nam's unwavering support of Jin is suspicious. I must amplify the distrust and push for Jin's exile before Cong steers the narrative."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam claims to be Seer and cleared me. This is the foundation of our strategy. Jin's request to investigate Hoang and his assessment of Nam/Cong is concerning and needs immediate refutation."
+            },
+            {
+                "Cong": 8,
+                "reason": "Jin's observation about Nam and Cong's interaction is concerning. Need to address this immediately and reinforce the need to protect Nam while observing Jin."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin is aggressively attacking a confirmed Seer result and attempting to redirect suspicion. This is a high-priority threat that demands immediate and forceful counteraction."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin's deflection and blatant attempt to shift suspicion to me is a classic wolf tactic. I must immediately counter this and expose his deception to protect the Seer and guide the village."
+            },
+            {
+                "Riley": 7,
+                "reason": "Need to subtly reinforce Jin's suspicions of Nam without appearing overly eager. Gently amplify existing doubts to guide the village's focus."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin's accusations are gaining traction. I must reinforce the narrative of Jin's manipulation and deflect attention from Riley and myself."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam claims Seer status and cleared me. Jin attacks Nam, a confirmed 'Not Wolf.' This is assisting the Wolves. I must interrupt and redirect focus to protecting Nam and validating his findings."
+            },
+            {
+                "Cong": 8,
+                "reason": "Jin's immediate and aggressive questioning of Nam, especially after Nam's Seer claim, is highly suspicious. Must address this deflection tactic and reinforce Nam's claim while scrutinizing Jin."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nam's escalating defensiveness and Cong's unwavering support, despite a lack of independent verification, strongly suggests deception. Immediate action is needed to expose them before they manipulate the vote."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is aggressively deflecting and attempting to manipulate the village. I must immediately counter his claims and reinforce Nam's Seer status to protect the Seer and guide the vote."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin's accusation is gaining traction. Need to subtly reinforce Jin's distraction while subtly questioning Nam's methods, appearing concerned about village harmony."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin is aggressively attacking Nam and Cong are defending him. I must amplify Jin's concerns about Nam's Seer claim to further destabilize the village."
+            }
+        ]
+    ]
+}

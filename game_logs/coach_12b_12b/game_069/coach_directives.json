@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "villager_questions_results == True",
+        "action": "CHALLENGE_PLAYER_TO_EXPLAIN_REJECTION",
+        "rationale_short": "When a Villager questions your results, don't just repeat the fact; demand they explain why they are ignoring hard data.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority is the Seer. Always shield the Seer until their death is inevitable or they are proven false.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_is_claiming_seer == True",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a claiming Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_is_seer_cleared == True",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison... their clears.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "SAVE_SEER",
+        "rationale_short": "Your role is to preserve the Seer at all costs.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "was_cleared_by_seer == True",
+        "action": "VOTE_AGAINST_OTHERS",
+        "rationale_short": "You committed a fatal error by voting for the Seer who just cleared you.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "was_cleared_by_seer == True",
+        "action": "DEFEND_SEER",
+        "rationale_short": "A Seer-cleared player must become the Seer's strongest shield",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear == True",
+        "action": "ENDORSE_CLEAR",
+        "rationale_short": "If a Seer provides a clear, rally around it immediately to build a power core.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "No communication or voting alignment existed between the Seer, Guard, and Witch",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Your logic was sound, but you failed to assert your authority.",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "While skepticism is natural, refusing to accept a Seer's clear creates a 'Skepticism Trap' that disrupts the village.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

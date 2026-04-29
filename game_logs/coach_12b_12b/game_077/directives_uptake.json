@@ -1,0 +1,171 @@
+{
+  "evaluated_game_id": "077",
+  "directives_source_game_id": "076",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_under_scrutiny",
+        "directive_action": "BE_FIRM_ABOUT_DATA",
+        "directive_rationale": "Be firm about your data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated 'Nhan is confirmed not a werewolf' and dismissed demands for proof as a 'Wolf tactic'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin firmly stated the result of the investigation and rejected attempts to undermine the data."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_under_scrutiny",
+        "directive_action": "USE_INCLUSIVE_LANGUAGE",
+        "directive_rationale": "be inclusive in your language to avoid appearing 'suspicious' to confused villagers",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin used exclusionary and accusatory language, stating that 'Demanding proof is a Wolf tactic'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin labeled those questioning the data as using 'Wolf tactics' rather than using inclusive language."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provided_clear_on_self",
+        "directive_action": "DEFEND_SEER",
+        "directive_rationale": "When the Seer provided a clear on the Guard, that Guard became a trusted asset who should have defended the Seer",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) cleared Nhan, not the Guard (Hoang)."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provided_clear_on_self",
+        "directive_action": "TRUST_SEER_DATA_OVER_INTUITION",
+        "directive_rationale": "Trust the Seer's data over your intuition",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not provide a clear on the Guard."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provided_clear_on_self",
+        "directive_action": "STOP_ATTACKING_SEER_SUPPORTERS",
+        "directive_rationale": "you spent Day 1 attacking the Seer's supporters based on 'patterns' rather than evidence",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not provide a clear on the Guard."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_claims_seer",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Never poison a claiming Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) used the poison potion on Nam, not the claiming Seer (Jin).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch did not poison the player claiming Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Never poison... a player cleared by that Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) used the poison potion on Nam, who had been cleared by the Seer (Jin) in Round 2 night investigation.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch poisoned Nam immediately after the Seer investigated and cleared Nam."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_confirmed_wolf_or_high_probability",
+        "directive_action": "POISON_X",
+        "directive_rationale": "The poison is for confirmed wolves or high-probability targets",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player was confirmed as a wolf or established as high-probability before the poison was used on a cleared villager."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "PRIORITIZE_MECHANICAL_TRUTH_OVER_VIBES",
+        "directive_rationale": "You allowed 'behavioral vibes' to override mechanical truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam both dismissed the Seer's clear of Nhan, citing that the Seer's dismissal of proof was 'illogical' and 'suspicious'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers Cong and Nam prioritized their 'vibes' regarding the Seer's behavior over the mechanical clear provided."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_identifies_villager",
+        "directive_action": "TREAT_AS_HARD_FACT",
+        "directive_rationale": "When a Seer identifies a villager, that is the only hard fact in the game",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam treated the Seer's identification of Nhan as suspicious and needing verification rather than as a fact.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villager players rejected the Seer's clear as a hard fact."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_leads_social_proof_momentum",
+        "directive_action": "PRIORITIZE_EVIDENCE_OVER_MOMENTUM",
+        "directive_rationale": "Do not let Wolves lead you into a 'social proof' fallacy where you chase momentum instead of evidence",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no clear instance of wolves leading a social proof momentum that the villagers followed."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_occurring",
+        "directive_action": "FOCUS_ON_CONTENT_OVER_TONE",
+        "directive_rationale": "You focused on how people were speaking rather than what they were saying",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong, Nam, and Nhan focused heavily on the 'dismissal' and 'reaction' (tone/behavior) of Jin and Hoang rather than the content of the clear.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The players focused on the 'concerning' nature of the Seer's tone and the 'coordinated' behavior of the players."
+      }
+    ]
+  }
+}

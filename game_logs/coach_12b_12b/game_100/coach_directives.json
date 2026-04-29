@@ -1,0 +1,62 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "met with 'suspicious behavior' accusations",
+        "action": "DOUBLE_DOWN_ON_LOGIC",
+        "rationale_short": "when met with 'suspicious behavior' accusations, double down on the logic: if you are the Seer, any player attacking your clear is effectively helping the wolves",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer was exiled",
+        "action": "PROTECT_REMAINING_POWER_ROLES",
+        "rationale_short": "once the Seer was exiled, you failed to secure the remaining power roles",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player has been explicitly cleared by the Seer",
+        "action": "DO_NOT_POISON_X",
+        "rationale_short": "Never poison a confirmed villager; it is a game-ending error",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "Seer provides a clear",
+        "action": "ACCUSE_ANYONE_ATTACKING_THAT_CLEAR",
+        "rationale_short": "When a Seer provides a clear, anyone attacking that clear should be your primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "Seer provides factual data",
+        "action": "PRIORITIZE_DATA_OVER_BEHAVIORAL_SUSPICION",
+        "rationale_short": "You prioritized 'vibes' and 'behavioral suspicion' over the Seer's factual data",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 6,
+    "emitted": 5,
+    "dropped": [
+      {
+        "advice_verbatim": "You provided a clear, factual result immediately.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

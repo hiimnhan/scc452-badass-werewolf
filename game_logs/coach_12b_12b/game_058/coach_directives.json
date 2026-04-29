@@ -1,0 +1,122 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "claiming_a_player_is_confirmed",
+        "action": "REVEAL_INVESTIGATION_EXPLICITLY",
+        "rationale_short": "explicitly state 'I investigated Cong and he is NOT a wolf' immediately",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "providing_investigation_results",
+        "action": "STATE_RESULTS_CLEARLY_AND_IMMEDIATELY",
+        "rationale_short": "State your results clearly and immediately to prevent the village from turning on you",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "VOTE",
+        "trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "action": "DEFEND_SELF",
+        "rationale_short": "Never exile a claiming Power Role unless another player claims that same role",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is your primary asset; protect them every single night until they are dead",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "potions_remaining_save_gt_0",
+        "action": "SAVE_SEER_OR_CRITICAL_POWER",
+        "rationale_short": "the SAVE potion must be reserved for the Seer or to prevent a critical loss of power",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "player_was_attacked_last_night",
+        "action": "WITHHOLD_ACCUSATION_WITHOUT_SEER_RESULT",
+        "rationale_short": "claiming a target is a Wolf without a Seer result is a Wolf tactic",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "VOTE",
+        "trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "action": "DEFEND_SELF",
+        "rationale_short": "Never exile a claiming Power Role unless another player claims that same role",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "evaluating_player_suspicion",
+        "action": "IGNORE_VIBE_LOGIC",
+        "rationale_short": "Stop using 'vibe' logic. Using terms like 'suspicious' or 'aggressive' is a trap",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "evaluating_player_suspicion",
+        "action": "TRUST_MECHANICAL_TRUTHS",
+        "rationale_short": "Only trust Mechanical Truths: role claims and investigation results",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_has_cleared_a_player",
+        "action": "ENDORSE_CONFIRMED_CORE",
+        "rationale_short": "If a Seer clears a player, they form a 'Confirmed Core'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_confirmed_core_without_counter_claim",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "anyone attacking that core without a counter-claim is a high-probability Wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "VOTE",
+        "trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "action": "ABSTAIN_FROM_EXILING_POWER_ROLE",
+        "rationale_short": "Never exile a claiming Power Role unless another player claims that same role",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-006",
+        "phase": "VOTE",
+        "trigger": "claiming_power_role_and_results_are_mechanically_possible",
+        "action": "ABSTAIN_FROM_EXILING_POWER_ROLE",
+        "rationale_short": "Never exile a claiming Power Role unless... their results are mechanically impossible",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 13,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=13"
+  }
+}

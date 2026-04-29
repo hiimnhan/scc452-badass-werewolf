@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "085",
+  "directives_source_game_id": "084",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "REVEAL_INVESTIGATION",
+        "directive_action": "USE_NEUTRAL_LANGUAGE",
+        "directive_rationale": "keep your delivery neutral. Avoid emotional language about 'illogical behavior'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan revealed Cong was Not Wolf. However, Nhan later used emotional language, stating Nam's questioning was 'concerning' and asking 'How does this contradict the Seer\u2019s mechanical role?'",
+        "verdict": "IGNORED",
+        "verdict_notes": "While the initial reveal was neutral, the Seer quickly pivoted to emotional and confrontational language when questioned by Nam."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "SEER_REVEALED",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer reveals themselves, your sole priority is to protect them.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong protected Nhan during the night of Round 1, coinciding with Nhan's reveal in the following day phase.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "PLAYER_CLEARED_BY_SEER",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Never poison a player already cleared by the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use a poison potion on Cong, who was cleared by Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam did not poison the cleared player."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "SEER_IDENTIFIES_NOT_WOLF",
+        "directive_action": "TREAT_AS_OBJECTIVE_FACT",
+        "directive_rationale": "When the Seer identifies someone as Not a Wolf, treat it as an objective fact.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang initially acknowledged the confirmation of Cong. However, by the voting phase, Jin and Hoang both voted to exile the Seer (Nhan), effectively disregarding the validity of his findings.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers Jin and Hoang quickly turned on the Seer, casting doubt on his findings and voting to exile him."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "SEER_IDENTIFIES_NOT_WOLF",
+        "directive_action": "STOP_DEMANDING_PROOF",
+        "directive_rationale": "Stop demanding 'proof' or 'verification' from the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated in his vote reason that 'A true Seer would present findings, not direct suspicion,' and Hoang noted that a genuine Seer would 'simply reiterate their findings,' implying a demand for a different type of proof/behavior.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers Jin and Hoang questioned the legitimacy of the Seer's claims based on his behavior rather than accepting the results."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "PLAYER_ATTACKING_SEER_CLEAR",
+        "directive_action": "FOCUS_ON_ATTACKER",
+        "directive_rationale": "ignore these demands and focus on those attacking the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nam questioned Nhan's targeting, Jin and Hoang did not focus on Nam; instead, they joined in attacking Nhan, eventually voting to exile him.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers joined the attack on the Seer rather than focusing on the person attacking the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "UNANIMOUS_VOTE_BASED_ON_VIBES",
+        "directive_action": "SCRUTINIZE_VOTE_LEADERS",
+        "directive_rationale": "When a vote is unanimous and based on 'vibes' rather than Seer evidence, scrutinize the people leading the charge.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The votes in the game were not unanimous; Nhan voted for Nam and Riley voted for Jin in Round 1."
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealing_confirmed_core",
+        "action": "FRAME_AS_VILLAGE_TOOL",
+        "rationale_short": "frame your 'Confirmed Core' as a tool for the village rather than a mandate",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_has_revealed_and_cleared_a_player",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once the Seer reveals themselves and clears a player, you must protect the Seer immediately",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_cleared_by_seer_or_supporting_verified_power_role_without_counter_claim",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a player who has been cleared by the Seer or who is supporting a verified power role without a direct counter-claim",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_a_clear",
+        "action": "SHIFT_BURDEN_OF_PROOF_TO_ACCUSER",
+        "rationale_short": "When a Seer provides a clear, the burden of proof shifts to the accuser",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_cleared_player_using_vague_logic",
+        "action": "ACCUSE_WOLF",
+        "rationale_short": "Anyone attacking a cleared player using vague logic... is likely a Wolf mirroring logical language to mislead you",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "day_debate",
+        "action": "ENSURE_SEER_INFO_IS_FOCAL_POINT",
+        "rationale_short": "In the day debate, use your bidding to ensure the Seer's information is the focal point",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "seer_under_attack_by_process_arguments",
+        "action": "VOTE_WITH_EVIDENCE",
+        "rationale_short": "If the Seer is under attack by players using 'process' arguments, override your gut feeling and vote with the evidence",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "Your data was objective, but your delivery was perceived as too aggressive.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

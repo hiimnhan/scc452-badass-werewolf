@@ -1,0 +1,70 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "being accused of being controlling or too aggressive",
+        "action": "STATE_LOGIC_OF_MECHANICAL_CHECK",
+        "rationale_short": "focus on the logic: 'I have a mechanical check that proves X is innocent.'",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer has revealed themselves",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once the Seer reveals themselves, they... must be protected every single night.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "poison_potion_remaining == 1 AND (Seer_confirmed_wolf OR logic_test_failed)",
+        "action": "POISON_X",
+        "rationale_short": "Always wait for a Seer's confirmation or a failed logic test before using the poison potion.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "Seer provides a 'Clear'",
+        "action": "VOTE_AS_BLOC_WITH_SEER",
+        "rationale_short": "You must vote as a bloc with the Seer regardless of their personality.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player attacks a Seer's delivery style rather than the data",
+        "action": "ACCUSE_PLAYER_OF_BEING_WOLF",
+        "rationale_short": "If a player attacks a Seer's delivery style rather than the data, they are likely a Wolf.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "multiple players use identical vague terms like 'deflection' and 'manufactured narrative' to attack power roles",
+        "action": "ACCUSE_PLAYERS_OF_COORDINATION",
+        "rationale_short": "When multiple players use identical vague terms... to attack power roles, they are coordinating.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 6,
+    "dropped": [
+      {
+        "advice_verbatim": "Stop prioritizing 'vibes' over data.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

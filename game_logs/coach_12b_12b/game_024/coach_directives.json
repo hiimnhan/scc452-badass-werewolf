@@ -1,0 +1,95 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealed_investigation_result == 'Non-Wolf'",
+        "action": "DEMAND_TRUST_IN_OBJECTIVE_FACT",
+        "rationale_short": "failed to aggressively demand the village trust your result as objective fact",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "witch_action_contradicts_seer_result",
+        "action": "FRAME_AS_CATASTROPHIC_ERROR_OR_WOLF_LIE",
+        "rationale_short": "When the Witch contradicted you, you should have framed it as a catastrophic error or a wolf lie",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your protocol must be: Protect the Seer every single night until they are dead.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_result_for_target != 'Wolf'",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Using the Poison potion on a player without a Seer's 'Wolf' result is a critical failure.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "intuition_only_no_mechanical_evidence",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never use poison based on intuition.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_uses_keywords(['erratic behavior', 'too aggressive', 'deflection'])",
+        "action": "DISREGARD_BEHAVIORAL_ANALYSIS",
+        "rationale_short": "Terms like 'erratic behavior,' 'too aggressive,' and 'deflection' are wolf keywords used to distract from mechanical results.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear AND player_attempts_to_invalidate_based_on_suspicion",
+        "action": "TARGET_PLAYER_FOR_EXILE",
+        "rationale_short": "When the Seer provided a clear, any player attempting to invalidate that result based on 'suspicion' should have been your primary target.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "conflict_between_objective_data_and_convincing_speech",
+        "action": "VOTE_BASED_ON_OBJECTIVE_DATA",
+        "rationale_short": "You voted based on who sounded more 'convincing' rather than who had the objective data.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "You lost due to a complete collapse of role coordination and a failure to prioritize mechanical evidence over 'vibes.'",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The village should have recognized that a Seer's clear is an objective fact, and the Witch's action was simply a mistake, not proof of the Seer's deception.",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The wolves (Riley and Meg) successfully used 'behavioral analysis' to steer votes away from themselves and toward the Guard and Witch",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=10 but emitted+dropped=11"
+  }
+}

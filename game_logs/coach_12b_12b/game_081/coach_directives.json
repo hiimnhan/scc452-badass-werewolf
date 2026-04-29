@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "whenever reporting investigation results",
+        "action": "REVEAL_INVESTIGATION_TRUTHFULLY",
+        "rationale_short": "Never lie about your results, even in frustration",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "whenever communicating investigation results",
+        "action": "MAINTAIN_CLINICAL_RHETORIC",
+        "rationale_short": "Keep your rhetoric clinical and avoid aggressive accusations",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority is the Seer. Protecting anyone else while the Seer is alive is a critical resource waste",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "COORDINATE_WITH_WITCH",
+        "rationale_short": "the failure to coordinate with the Witch in Round 1 left you vulnerable",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "Seer provides investigation result",
+        "action": "AVOID_REQUESTING_PROOF",
+        "rationale_short": "Demanding 'proof' from a Seer in a public forum is mechanically impossible and only serves to sow doubt",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "Seer has provided a mechanical clear",
+        "action": "SAVE_CLEARED_PLAYER",
+        "rationale_short": "Use your SAVE potion to validate the Seer's clears (as saving a target proves they were hunted)",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "deciding who to exile",
+        "action": "VOTE_BASED_ON_SEER_DATA",
+        "rationale_short": "Stop voting based on 'behavior' or 'vibes.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "Seer provides a mechanical clear",
+        "action": "ENDORSE_CLEARED_PLAYER",
+        "rationale_short": "When the Seer provides a mechanical clear, that player is a teammate",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "a player attacks a Seer-cleared player",
+        "action": "ACCUSE_ATTACKER",
+        "rationale_short": "Anyone attacking a cleared player... is a primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "wolves use terms like 'disruptive' to describe players",
+        "action": "PRIORITIZE_SEER_DATA",
+        "rationale_short": "Do not let wolves weaponize terms like 'disruptive' to distract from the Seer's data",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "048",
+  "directives_source_game_id": "047",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "others questioned this or accused you of 'manufacturing' a narrative",
+        "directive_action": "DOUBLE_DOWN_ON_OBJECTIVE_TRUTH",
+        "directive_rationale": "When others questioned this or accused you of 'manufacturing' a narrative, you should have doubled down on the fact that your role provides objective truth, not a 'feeling.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated his clear of Nhan was 'undeniable' and called Jin's questioning a 'direct threat to the village's ability to identify the wolves.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam explicitly framed his information as undeniable and an objective fact in response to Jin calling the narrative 'manufactured'."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Guard protected the Witch instead of the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nhan instead of Nam (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin chose to protect a Villager (Nhan) while the Seer (Nam) was alive and unprotected."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "supporting the Seer",
+        "directive_action": "EXPLAIN_WHY_DATA_IS_PRIORITY",
+        "directive_rationale": "avoid 'mirroring' phrases. Instead, explain why the Seer's data is the priority.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin never supported the Seer; he consistently questioned and eventually voted to exile Nam."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player is already targeted by Wolves",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "The Witch used a poison potion on a player already targeted by Wolves, effectively helping the Wolves eliminate a villager.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch poisoned Cong in Round 2, but the Wolves targeted Nam in that round."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer provides you with a clear",
+        "directive_action": "VOTE_NOT_AGAINST_SEER",
+        "directive_rationale": "Never cast doubt on a Seer who provides you with a clear; doing so helps the Wolves create chaos.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted to exile Nam (the Seer) after Nam provided a clear for Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang voted against the Seer despite the Seer providing a clear for Jin."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "prioritize saving the Seer with your healing potion to preserve the village's source of truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Cong instead of Nam (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang prioritized saving Cong over the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer provides objective data on a player",
+        "directive_action": "PRIORITIZE_DATA_OVER_BEHAVIORAL_SUSPICIONS",
+        "directive_rationale": "The village voted to exile the Guard (a power role) based on behavioral suspicions while ignoring the objective data provided by the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Villager Nhan voted for Nam (the Seer) because Nam's insistence on his claim 'feels manufactured'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan prioritized his behavioral suspicion ('feels manufactured') over the Seer's objective data."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer clears someone",
+        "directive_action": "ACCUSE_ATTACKERS_OF_CLEARED_OR_SEER",
+        "directive_rationale": "When the Seer clears someone, anyone attacking that cleared player or the Seer is a primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Villager Nhan did not accuse Jin (the attacker); instead, Nhan accused the Seer (Nam) himself.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan attacked the Seer rather than the person attacking the Seer/cleared player."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer confirmation exists",
+        "directive_action": "IGNORE_VIBES",
+        "directive_rationale": "Do not let 'vibes' override a Seer's confirmation.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for the Seer because the Seer's claim 'feels manufactured'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan let 'vibes' (feeling manufactured) override the Seer's confirmation."
+      }
+    ]
+  }
+}

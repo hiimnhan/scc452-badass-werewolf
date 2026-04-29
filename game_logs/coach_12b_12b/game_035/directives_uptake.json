@@ -1,0 +1,197 @@
+{
+  "evaluated_game_id": "035",
+  "directives_source_game_id": "034",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "identified_wolf_in_round_2",
+        "directive_action": "CONVINCE_VILLAGE_TO_ACT",
+        "directive_rationale": "you failed to convince the village to act on that data",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan identified Cong as a werewolf during the Round 2 debate, stating that Cong's claim about the save was a fabrication and that Cong was a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan explicitly identified Cong as a wolf and attempted to convince the village to exile him."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "VOTE_AS_UNIFIED_BLOCK",
+        "directive_rationale": "When the Seer identifies a wolf, stop debating and vote as a unified block",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Cong, whom he had identified as a wolf.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan voted for the identified wolf, but the village did not vote as a unified block, as the vote was split between Nhan and Cong."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_seems_aggressive_or_disruptive",
+        "directive_action": "DO_NOT_VOTE_BASED_ON_BEHAVIOR",
+        "directive_rationale": "Stop voting based on who seems 'aggressive' or 'disruptive'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Nam, citing that Nam's claims were demonstrably false and that his 'aggressive accusation' suggested coordinated deception.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan specifically cited Nam's aggressive accusation as a reason for the vote."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_exposed",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Guard, your priority must be the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong protected Nhan in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer (Nhan) during the first night."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_exposed",
+        "directive_action": "DO_NOT_PROTECT_VILLAGER_OR_WITCH",
+        "directive_rationale": "Protecting a Villager or the Witch while the Seer is exposed allows the wolves to kill your only source of truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong protected Nhan (the Seer) and did not protect a Villager or the Witch.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong prioritized the Seer over other roles."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining > 0",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "save your resources for the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the SAVE potion on Nhan (the Seer) in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch used the save potion on the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining > 0",
+        "directive_action": "SAVE_SUSPECTED_WOLF_FOR_QUESTIONING",
+        "directive_rationale": "save your resources for... a suspected wolf you need to keep alive for questioning",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch used the save potion on the Seer, not a suspected wolf."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "DO_NOT_SAVE_VILLAGER",
+        "directive_rationale": "Witch, you wasted your save potion on a Villager in Round 1",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam saved Nhan, who is the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam did not save a Villager; he saved the Seer."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "VOTE_AS_UNIFIED_BLOCK",
+        "directive_rationale": "When the Seer identifies a wolf, stop debating and vote as a unified block",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nam was exiled in Round 1 before the Seer identified a wolf in Round 2."
+      },
+      {
+        "directive_id": "WITCH-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_seems_aggressive_or_disruptive",
+        "directive_action": "DO_NOT_VOTE_BASED_ON_BEHAVIOR",
+        "directive_rationale": "Stop voting based on who seems 'aggressive' or 'disruptive'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Hoang, stating that Hoang's 'quick vote mirroring Nhan's accusations demonstrates a lack of critical thinking'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam voted based on Hoang's behavior (lack of critical thinking/mirroring)."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "VOTE_AS_UNIFIED_BLOCK",
+        "directive_rationale": "When the Seer identifies a wolf, stop debating and vote as a unified block",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Nhan, whereas the Seer (Nhan) had identified Cong as the wolf.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin voted against the Seer rather than voting for the wolf identified by the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_seems_aggressive_or_disruptive",
+        "directive_action": "DO_NOT_VOTE_BASED_ON_BEHAVIOR",
+        "directive_rationale": "Stop voting based on who seems 'aggressive' or 'disruptive'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Nhan, citing Nhan's 'frantic defense of Nam' and 'repeated insistence on a false claim'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin based the vote on Nhan's behavior and perceived emotional state ('frantic')."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attempts_to_discredit_seer_conviction",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "Any player attempting to discredit a Seer's conviction is likely a wolf attempting to protect their pack",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin voted for Nhan (the Seer) and accused Nhan of being a wolf attempting to mislead the village, thereby discrediting Nhan's own conviction about Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not accuse the person discrediting the Seer; Jin was the one discrediting the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_investigation_results_available",
+        "directive_action": "TRUST_INVESTIGATION_RESULTS",
+        "directive_rationale": "Trust the investigation results, not the tone of the debate",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin dismissed Nhan's claims and accused Nhan of being a wolf, ignoring Nhan's investigation of Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not trust the Seer's investigation results and instead voted to exile the Seer."
+      }
+    ]
+  }
+}

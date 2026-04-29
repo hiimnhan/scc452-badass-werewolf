@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealed_clear_on_player_x",
+        "action": "DEMAND_VOTING_BLOCK_WITH_X",
+        "rationale_short": "When you clear a player, you must demand they form a voting block with you.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_x_attacks_seer_clear",
+        "action": "ACCUSE_X_AS_WOLF",
+        "rationale_short": "if a player attacks your clear, they are likely a wolf attempting to gaslight the village.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority is the Seer. Protecting anyone else while the Seer is alive is a critical failure.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "In Round 1, you protected a random player instead of the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_x_is_seer_confirmed_clear",
+        "action": "WITHHOLD_POISON_FROM_X",
+        "rationale_short": "never use it on a 'clear' or a claimed Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_identifies_target",
+        "action": "ENDORSE_SEER_TARGET",
+        "rationale_short": "You must act as the Seer's enforcer, not a rogue agent.",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear_on_player_x",
+        "action": "TRUST_X_AS_ANCHOR",
+        "rationale_short": "When the Seer provides a clear, that player is a trusted anchor.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_x_attempts_to_invalidate_seer_results",
+        "action": "ACCUSE_X_AS_PRIMARY_WOLF_SUSPECT",
+        "rationale_short": "Anyone attempting to invalidate the Seer's mechanical results is a primary wolf suspect.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "Do not let 'behavioral suspicion' override your results",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "Stop relying on 'vibes' (e.g., 'too insistent,' 'suspiciously helpful')",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "zero synergy between the Seer, Guard, and Witch; they acted as individuals rather than a coordinated unit",
+        "reason": "not_role_specific"
+      }
+    ]
+  }
+}

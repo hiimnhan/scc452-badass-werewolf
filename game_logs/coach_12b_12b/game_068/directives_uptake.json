@@ -1,0 +1,130 @@
+{
+  "evaluated_game_id": "068",
+  "directives_source_game_id": "067",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_known",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Guard, your priority must be the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nam (Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam claimed Seer in Round 1; Jin protected him in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_known",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your primary objective is to protect the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) used the POISON potion on Nam (Seer) during the night of Round 2.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Instead of protecting the known Seer, the Witch killed him."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_high_probability_wolf",
+        "directive_action": "POISON_X",
+        "directive_rationale": "use the poison only on high-probability wolves",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch used poison on the Seer, who was not identified as a high-probability wolf."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_claiming_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Poisoning the claiming Seer is an unforgivable error",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) used the POISON potion on Nam, who had claimed Seer in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch poisoned the claiming Seer directly."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_confirmed_clear",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Any player attacking a confirmed clear... is a high-priority suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Villager) voted to exile Nhan, who had been cleared by the Seer Nam.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong attacked the confirmed clear (Nhan) rather than accusing those attacking Nhan."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "When a Seer provides a clear, rally around that player immediately to build a power core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Villager) voted to exile Nhan, the player the Seer had cleared.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did not endorse the cleared player; he voted to exile them."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "argument_is_based_on_vibes_or_disruptive_behavior",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "stop relying on 'vibes' like 'disruptive behavior' or 'sowing discord.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Villager) based his vote on Nhan's 'suspicious' behavior and 'sowing doubt,' and did not challenge this logic.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong adopted the vibe-based argument rather than challenging it."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_pivots_to_agree_with_majority_to_blend_in",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Be wary of players like Riley who pivot to agree with the majority just to blend in.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No clear pivot to blend in was observed by the Villager player."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_mirror_each_other_language",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "the village failed to notice the wolves (Riley/Meg) mirroring each other's language to manipulate the vote",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Villager) mirrored Jin's accusation against Hoang and did not accuse the mirroring players.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong participated in the mirroring behavior rather than accusing those doing it."
+      }
+    ]
+  }
+}

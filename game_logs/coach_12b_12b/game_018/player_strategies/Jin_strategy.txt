@@ -1,0 +1,31 @@
+{
+  "Night Phase": [
+    "**Guard:** Protect the Seer *without exception*. If the Seer is eliminated, protect the Witch.",
+    "**Seer:** Investigate the most suspicious player. Announce 'Not Wolf' concisely. When challenged, state: 'I am the Seer, [Player Name] is confirmed. Attacking this is a Wolf tactic.' Do not engage in debates about behavior. Prioritize speed and clarity.",
+    "**Witch:** Save *only* if the Seer is targeted and confirmed innocent. Never poison the Seer or a confirmed innocent. If no Seer target, do *not* use the save. Do not reveal role. If there is uncertainty about whether a player is confirmed, *do not* use the Save."
+  ],
+  "Day Discussion": [
+    "**General:** Prioritize Seer results *above all else*. Disregard 'vibes' and demands for 'mechanical reasoning'. These are likely Wolf tactics.",
+    "**Responding to Accusations (Self):** Immediately invalidate accusations lacking specific, verifiable evidence. Redirect the conversation to Seer results.",
+    "**Seer Testimony:** Treat 'Not Wolf' as immutable. Challenge any contradiction to the Seer's confirmed result. Do *not* concede or justify. State: 'I am the Seer, [Player Name] is confirmed. Any attempt to discredit this is a Wolf tactic.'",
+    "**Multiple Seer Claims:** Demand target and result from each claimant. Cross-reference. Prioritize consistent accuracy. If claims contradict, aggressively question the claimants, focusing on the inconsistencies.",
+    "**Defending the Seer:** If anyone questions the Seer's validity, immediately redirect the conversation to the Seer’s confirmed results. Frame dissent as a Wolf tactic. Do not engage in debate about the Seer’s methods.",
+    "**Responding to 'Mechanical Reasoning':** Immediately dismiss any argument based on 'mechanical reasoning' or 'game theory' that attempts to invalidate a confirmed Seer result. These are deflection tactics.",
+    "**Identifying Wolf Deflection:** Be wary of players who consistently demand proof from the Seer while offering none for their own accusations."
+  ],
+  "Voting Phase": [
+    "**Protect Confirmed Innocents:** *Always* vote to protect confirmed innocents. A vote against a confirmed innocent is a major red flag and warrants immediate scrutiny.",
+    "**Prioritize Seer Discreditors:** Immediately vote against anyone attempting to discredit a confirmed Seer result. This is the highest priority.",
+    "**Target Wolf Coordination:** Identify players using identical phrasing or arguments to attack the Seer. These are likely coordinated Werewolves.",
+    "**'Bused' Suspects:** If a player was 'bused' and cleared by the Seer, monitor their behavior closely. Any shift towards Wolf-like behavior warrants a vote.",
+    "**Strategic Voting (Ties):** Eliminate the player most disruptive to information gathering or actively misleading the village. Prioritize players who sow discord."
+  ],
+  "Specific Situations": [
+    "**Early Game:** Immediately focus on identifying the Seer. Form a Trusted Core around the Seer’s confirmed results. Do not deviate.",
+    "**Mid-Game:** Strengthen the Trusted Core. Focus on dismantling deflection and exposing Werewolves. *Never* question a confirmed Seer result.",
+    "**Late Game:** Eliminate remaining suspects decisively, prioritizing those who continue to deflect or obstruct information gathering.",
+    "**Witch Saves Against Clear:** Immediately suspect the Witch. Aggressively question their motives and vote accordingly. This is a critical betrayal.",
+    "**Seer/Witch Contradiction:** IF the Witch saves against a confirmed innocent, immediately suspect the Witch. Aggressively question their motives and vote accordingly. This is a critical betrayal.",
+    "**If Seer claims multiple players are not wolves:** Prioritize defending the first confirmed player above all else. Maintain absolute loyalty to the first confirmed result."
+  ]
+}

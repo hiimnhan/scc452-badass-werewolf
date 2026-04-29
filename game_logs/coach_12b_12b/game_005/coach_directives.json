@@ -1,0 +1,103 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a player has been cleared by a 'Not a Wolf' result",
+        "action": "DEFEND_X",
+        "rationale_short": "Once you clear a player, that player is 100% safe. Never let behavioral arguments override a clear result.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "behavioral suspicion is raised against a cleared player",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Ignore behavioral suspicion and demand mechanical evidence.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "You must protect the Seer every single night until they are dead.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "behavioral suspicion is raised against the Guard",
+        "action": "RELY_ON_SEER_CLEAR",
+        "rationale_short": "The village ignored the Seer's clear of the Guard... eventually exiling the Guard based on 'flimsy reasoning'.",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "has performed a save",
+        "action": "WITHHOLD_INFORMATION",
+        "rationale_short": "Do not reveal your save too early.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "need to coordinate a confirmed block of safe players",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Only reveal your role to coordinate a confirmed block of safe players.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "arguments are based on 'vibes' (e.g., 'too convenient', 'reeks of deflection')",
+        "action": "DISCARD_ARGUMENT",
+        "rationale_short": "Stop relying on 'vibes.' Terms like 'too convenient' or 'reeks of deflection' are traps used by wolves.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "behavioral suspicion is presented",
+        "action": "DEMAND_MECHANICAL_EVIDENCE",
+        "rationale_short": "Ignore behavioral suspicion and demand mechanical evidence.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "a player has been cleared by the Seer",
+        "action": "ENDORSE_X",
+        "rationale_short": "The village ignored the Seer's clear of the Guard... eventually exiling the Guard based on 'flimsy reasoning'.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "players mirror accusations (e.g., 'X is deflecting') using emotional logic",
+        "action": "DISCARD_SUSPICION_CHAIN",
+        "rationale_short": "If they are using emotional logic rather than mechanical contradictions, discard the entire chain of suspicion.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 10,
+    "dropped": [
+      {
+        "advice_verbatim": "The Witch, Guard, and Seer acted as individuals rather than a unified block",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=11"
+  }
+}

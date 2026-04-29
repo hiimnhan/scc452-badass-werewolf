@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "081",
+  "directives_source_game_id": "080",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "received_suspicion == true",
+        "directive_action": "MAINTAIN_CLINICAL_TONE",
+        "directive_rationale": "Stay clinical and focus on the logic of the clear, not the character of the accuser.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang responded to Cong's suspicion by stating that Cong's immediate challenge and demand for proof was 'highly suspicious' and suggested the village focus on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not maintain a clinical tone focused on the logic of the clear; instead, he attacked the character/behavior of the accuser (Cong)."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "received_suspicion == true",
+        "directive_action": "AVOID_HOSTILITY",
+        "directive_rationale": "When you react with hostility to suspicion, you provide Wolves with the 'erratic' narrative they use to frame you.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang labeled Cong's questioning as 'highly suspicious' and actively pushed for the village to target Cong in response to being questioned.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang reacted to suspicion by immediately accusing the accuser of being suspicious, which constitutes a hostile defensive posture."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority must always be the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Riley (a Werewolf) instead of Hoang (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan failed to protect the Seer despite the Seer being alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_player_i_saved == true",
+        "directive_action": "ENDORSE_SEER",
+        "directive_rationale": "Saving a player does not contradict a Seer's clear; it confirms the Wolves targeted that person.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong (Witch) stated that Hoang clearing Nhan (whom Cong had saved) was 'highly suspect' and demanded proof of the Seer claim.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did the opposite of endorsing the Seer; he used the Seer's clear of the saved player as a reason to suspect the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_player_i_saved == true",
+        "directive_action": "AVOID_ATTACKING_SEER",
+        "directive_rationale": "By attacking the Seer for clearing someone you saved, you actively dismantled the village's only source of truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong explicitly attacked Hoang, calling his claim 'extraordinarily suspicious' and voting to exile him.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong directly attacked the Seer for clearing the player he had saved."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provided_clear == true",
+        "directive_action": "TREAT_PLAYER_AS_BASELINE_TRUTH",
+        "directive_rationale": "When a Seer provides a 'Not Wolf' result, that player is a baseline of truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam voted for Cong, effectively ignoring Nhan (the cleared player) as a source of truth, while Jin focused on the Seer's claim and the behavior of Cong.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "While a clear was provided, neither Nam nor Jin explicitly treated Nhan as a 'baseline of truth' to derive further logic; they focused on the conflict between Hoang and Cong."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_clear_without_evidence == true",
+        "directive_action": "ACCUSE_ATTACKER",
+        "directive_rationale": "Anyone attacking that baseline without evidence\u2014like the Witch did\u2014should be your primary suspect, not the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Jin both accused Cong (the attacker of the Seer's clear) and voted to exile him.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Both villagers identified Cong's attack on the Seer's clear as suspicious and targeted Cong for exile."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_uses_behavioral_descriptors == true",
+        "directive_action": "PRIORITIZE_MECHANICAL_EVIDENCE",
+        "directive_rationale": "The village ignored the Wolves' use of vague, behavioral descriptors... choosing 'vibes' over mechanical evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley and Meg (Wolves) used behavioral descriptors ('sudden and forceful attacks', 'hasty and lacked any solid basis') to frame Nam. Jin and Hoang relied on the Seer's mechanical clear of Jin to target Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin, as a villager, prioritized the mechanical evidence (Hoang's clear of him) over Nam's behavioral accusations."
+      }
+    ]
+  }
+}
