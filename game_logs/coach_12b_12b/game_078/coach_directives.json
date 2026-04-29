@@ -1,0 +1,130 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealing_investigation_result",
+        "action": "COMMUNICATE_CALMLY",
+        "rationale_short": "State your results clearly and calmly to avoid appearing like a fake Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "revealing_investigation_result",
+        "action": "AVOID_AGGRESSIVE_LANGUAGE",
+        "rationale_short": "your aggressive language ('He is a threat') makes you an easy target",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_vague_terms_like_destabilizing_disruptive_or_obstructing",
+        "action": "CHALLENGE_ACCUSERS",
+        "rationale_short": "When multiple players use vague terms... you are witnessing a Wolf pack coordinating a lynch. Use logic over momentum.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once you have a Seer, your only priority is their survival",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_has_cleared_players",
+        "action": "PROTECT_CLEARED_PLAYERS",
+        "rationale_short": "Once you have a Seer, your only priority is... the survival of their clears",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "VOTE",
+        "trigger": "seer_identified",
+        "action": "AVOID_VOTING_SEER",
+        "rationale_short": "you pivoted to attacking the Seer based on behavioral suspicions",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-004",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_vague_terms_like_destabilizing_disruptive_or_obstructing",
+        "action": "CHALLENGE_ACCUSERS",
+        "rationale_short": "When multiple players use vague terms... you are witnessing a Wolf pack coordinating a lynch. Use logic over momentum.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_is_confirmed_villager_by_seer",
+        "action": "AVOID_POISONING_PLAYER",
+        "rationale_short": "NEVER poison a cleared player",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "AVOID_POISONING_SEER",
+        "rationale_short": "NEVER poison... the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_vague_terms_like_destabilizing_disruptive_or_obstructing",
+        "action": "CHALLENGE_ACCUSERS",
+        "rationale_short": "When multiple players use vague terms... you are witnessing a Wolf pack coordinating a lynch. Use logic over momentum.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_not_a_wolf_result",
+        "action": "ENDORSE_PLAYER",
+        "rationale_short": "When the Seer provides a 'Not a Wolf' result, that player is a confirmed asset",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_cleared_by_seer",
+        "action": "AVOID_VOTING_PLAYER",
+        "rationale_short": "Do not vote for the Seer or their cleared players based on 'tone' or 'defensiveness'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "seer_identified",
+        "action": "AVOID_VOTING_SEER",
+        "rationale_short": "Do not vote for the Seer... based on 'tone' or 'defensiveness'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_vague_terms_like_destabilizing_disruptive_or_obstructing",
+        "action": "CHALLENGE_ACCUSERS",
+        "rationale_short": "When multiple players use vague terms... you are witnessing a Wolf pack coordinating a lynch. Use logic over momentum.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 13,
+    "emitted": 14,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=13 but emitted+dropped=14"
+  }
+}

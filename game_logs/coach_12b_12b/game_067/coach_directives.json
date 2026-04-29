@@ -1,0 +1,93 @@
+{
+  "by_role": {
+    "Seer": [],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_known",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Guard, your priority must be the Seer.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_known",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your primary objective is to protect the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_is_high_probability_wolf",
+        "action": "POISON_X",
+        "rationale_short": "use the poison only on high-probability wolves",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "target_is_claiming_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Poisoning the claiming Seer is an unforgivable error",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_confirmed_clear",
+        "action": "ACCUSE_X",
+        "rationale_short": "Any player attacking a confirmed clear... is a high-priority suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "ENDORSE_X",
+        "rationale_short": "When a Seer provides a clear, rally around that player immediately to build a power core.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "argument_is_based_on_vibes_or_disruptive_behavior",
+        "action": "CHALLENGE_X",
+        "rationale_short": "stop relying on 'vibes' like 'disruptive behavior' or 'sowing discord.'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_pivots_to_agree_with_majority_to_blend_in",
+        "action": "ACCUSE_X",
+        "rationale_short": "Be wary of players like Riley who pivot to agree with the majority just to blend in.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "players_mirror_each_other_language",
+        "action": "ACCUSE_X",
+        "rationale_short": "the village failed to notice the wolves (Riley/Meg) mirroring each other's language to manipulate the vote",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 9,
+    "dropped": [
+      {
+        "advice_verbatim": "Seer, you provided a clear on the Witch in Round 1; this should have been the absolute anchor for the village.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

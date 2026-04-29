@@ -1,0 +1,120 @@
+{
+  "evaluated_game_id": "065",
+  "directives_source_game_id": "064",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "has_confirmed_clear",
+        "directive_action": "DIRECT_VILLAGE_TO_PROTECT_CLEAR",
+        "directive_rationale": "be more assertive in directing the village to protect this 'anchor'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan announced that Cong is confirmed Not Wolf and part of the 'Confirmed Core'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan immediately identified Cong as a confirmed clear and labeled him as part of a 'Confirmed Core' to anchor the village."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_discussing_behavioral_vibes",
+        "directive_action": "CHALLENGE_VIBES_WITH_DATA",
+        "directive_rationale": "ignore behavioral 'vibes' from others",
+        "confidence": 0.9,
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nam and Jin questioned Nhan's 'eagerness' and 'premature' claims (behavioral vibes), Nhan voted for Nam, stating that Nam's focus on discrediting the result was a wolf tactic and that attacking confirmed villagers undermines the village.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan dismissed the behavioral critiques of his speed and eagerness by refocusing the argument on the fact that he had provided a confirmed result."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority must always be the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer during the first night."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_claiming_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use your poison potion on a claiming Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the POISON potion on Cong.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The target of the poison was Cong, not the claiming Seer (Nhan), who had already been exiled."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_confirmed_clear",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use your poison potion on... their confirmed clears",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used POISON potion on Cong, who had been confirmed as Not Wolf by the Seer in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam poisoned Cong despite Cong being a confirmed clear from the Seer's investigation."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "accuser_using_generic_descriptors",
+        "directive_action": "REVERT_TO_SEER_DATA",
+        "directive_rationale": "Do not be swayed by 'generic accusers.' ... you should have reverted to the Seer's hard data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang supported Nhan's data, stating that anyone attacking the findings was likely a wolf. Jin, however, followed Nam's lead in calling Nhan's claim 'premature'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang followed the directive by sticking to the Seer's data; Jin ignored it by being swayed by Nam's behavioral descriptors."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_results_conflict_with_social_manipulation",
+        "directive_action": "PRIORITIZE_SEER_RESULTS",
+        "directive_rationale": "All villagers must prioritize Seer results over social manipulation",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang both faced a conflict between Nhan's clear of Cong and the social pressure/suspicion raised by Nam. Hoang prioritized the Seer result; Jin prioritized the social manipulation/skepticism.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang followed the directive, but Jin ignored it, voting to exile the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_pivots_to_attack_power_role",
+        "directive_action": "IDENTIFY_LEADER_OF_CHARGE",
+        "directive_rationale": "if the village suddenly pivots to attack a power role, pause and identify who is leading the charge",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "As the village pivoted to attack Nhan (the claiming Seer), Hoang identified that Nam was the one driving the skepticism, stating 'Anyone attacking Nhan's findings is likely a Wolf'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang correctly identified the source of the attack on the power role (Nam) and flagged it as suspicious."
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "attacked_by_another_player",
+        "action": "LEAN_ON_CONFIRMED_CORE_LOGIC",
+        "rationale_short": "when Hoang began attacking you, you should have leaned harder on the 'Confirmed Core' logic to rally the village",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num >= 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is the village's only source of mechanical truth; they must be protected every single night regardless of other suspicions",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "accused_by_other_players",
+        "action": "PROVIDE_MECHANICAL_EVIDENCE_OR_VOTING_PATTERNS",
+        "rationale_short": "When you are accused, you must provide mechanical evidence or voting patterns to defend your role rather than simple counter-accusations",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "INCREASE_PRESENCE_IN_DEBATE",
+        "rationale_short": "your lack of presence in the Day 1 debate allowed the village to exile you",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_confirmed_core_member",
+        "action": "TARGET_PLAYER_FOR_EXILE",
+        "rationale_short": "Any player attacking the Core (like Hoang did) should be the primary target",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_is_under_attack",
+        "action": "DEFEND_SEER",
+        "rationale_short": "you must ensure the Seer is not isolated",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_results_remain_consistent",
+        "action": "PRIORITIZE_SILENT_PLAYERS_OVER_VOCAL_SEER",
+        "rationale_short": "you should have prioritized the silent players over the vocal Seer once the Seer's results remained consistent",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_echoes_consensus_without_new_mechanical_evidence",
+        "action": "APPLY_ANTI_ECHO_PROTOCOL",
+        "rationale_short": "the village failed to apply the 'Anti-Echo Protocol' to those who provided no new mechanical evidence",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "dispute_between_seer_and_cleared_villager",
+        "action": "IGNORE_DISPUTE_AND_FOCUS_ON_SILENT_PLAYERS",
+        "rationale_short": "the village allowed a dispute between the Seer and a cleared Villager to distract from the silent Werewolves",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 9,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=10 but emitted+dropped=9"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early reveal was the correct move to establish a trusted core.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting yourself while the Seer is still alive is a critical error; the Seer... must be protected every single night.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_has_seer_clear == True",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never use poison on a 'clear' result.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_is_dead == True",
+        "action": "WITHHOLD_ATTACK_ON_SEER_CREDIBILITY",
+        "rationale_short": "attacking the Seer's narrative after their death is a wolf-like behavior that confused your fellow villagers.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_claims_seer_is_too_eager",
+        "action": "CHALLENGE_CLAIMANT",
+        "rationale_short": "You correctly identified the wolf's 'gaslighting' tactic in Round 1 when a wolf claimed the Seer was 'too eager.'",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clear_exists == True",
+        "action": "ENDORSE_CLEAR_PLAYER",
+        "rationale_short": "Trust mechanical results (Seer clears) over 'vibes' or behavioral skepticism.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "seer_is_dead == True AND player_attempts_to_invalidate_previous_clears == True",
+        "action": "VOTE_AGAINST_PLAYER",
+        "rationale_short": "Once the Seer is dead, their previous clears remain objective facts; anyone attempting to invalidate those results should be exiled immediately.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "seer_guard_bond_exists == True",
+        "action": "DEFEND_BOND",
+        "rationale_short": "The village failed to treat the Seer-Guard bond as an unbreakable block, allowing internal suspicion to override confirmed evidence.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 8,
+    "dropped": []
+  }
+}

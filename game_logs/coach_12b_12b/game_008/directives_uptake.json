@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "008",
+  "directives_source_game_id": "007",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing investigation results",
+        "directive_action": "FOCUS_ON_DATA",
+        "directive_rationale": "Focus on the data, not the 'behavior' of others.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated 'Nhan is confirmed not a werewolf. This is verifiable information' and asked to focus on identifying wolves among remaining players.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam led with the investigation result and explicitly called it verifiable information."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing investigation results",
+        "directive_action": "AVOID_CONTROLLING_TONE",
+        "directive_rationale": "your tone became overly controlling, which gave the Wolves a narrative to use against you.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated that Hoang's contradiction of his information was 'unacceptable' and demanded 'mechanical proof' supporting Hoang's claim.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam used a commanding and confrontational tone, calling the opposition's behavior 'unacceptable', which the Wolves (Riley and Meg) specifically cited as 'aggressive defense' in their voting reasons."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is the village's most valuable asset; protect them every night regardless of other suspicions.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nhan instead of Nam (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin protected Nhan instead of the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "considering using poison potion",
+        "directive_action": "AVOID_POISONING_SEER",
+        "directive_rationale": "Never use the poison potion based on 'behavioral suspicion.' The Seer is your primary ally",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch did not use the poison potion in this game."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player is accused of being 'defensive' or 'deflecting'",
+        "directive_action": "IGNORE_BEHAVIORAL_SUSPICION",
+        "directive_rationale": "behavioral suspicion is a common Wolf tactic to sow discord",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan was accused by Cong of being complicit. Nhan responded by stating 'Cong's accusation of complicity lacks mechanical evidence' and called it a 'deflection tactic', urging the group to focus on verifiable actions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan explicitly rejected the behavioral suspicion and redirected the conversation toward mechanical evidence."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides a clear",
+        "directive_action": "ENDORSE_PLAYER_AS_TRUSTED_CORE",
+        "directive_rationale": "When a Seer provides a clear, that player becomes part of the Trusted Core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) voted for Hoang, citing that Hoang's claim contradicted 'verifiable information' (the Seer's clear of Nhan).",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan used the Seer's clear of himself to identify the attacker (Hoang) as a wolf, but did not explicitly designate a 'trusted core' of players."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "making a voting decision",
+        "directive_action": "ANALYZE_VOTING_PATTERNS",
+        "directive_rationale": "Use that core to analyze voting patterns, not personality clashes.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Cong, stating 'Cong's shifting accusations and deflection are undeniable. Jin accurately pointed this out.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan analyzed Cong's pattern of shifting targets across rounds rather than relying on a personality clash."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "making a voting decision",
+        "directive_action": "PRIORITIZE_MECHANICAL_EVIDENCE",
+        "directive_rationale": "You exiled your own Guard based on 'deflection' and 'behavior' rather than mechanical evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Cong, citing that Cong's accusations lacked mechanical evidence and were based on shifting narratives.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan specifically demanded mechanical evidence and based his vote on the lack thereof in Cong's accusations."
+      }
+    ]
+  }
+}

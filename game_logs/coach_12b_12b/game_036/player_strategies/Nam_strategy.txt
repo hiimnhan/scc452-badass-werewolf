@@ -1,0 +1,28 @@
+{
+  "Night Phase": [
+    "Guard: ALWAYS protect the Seer. If the Seer is eliminated, prioritize protecting the most consistently reliable confirmed Villager (based on past Seer investigations).",
+    "Witch: If targeted, ALWAYS save the Seer. NEVER claim a save if the Seer denies it or if the save is inconsistent with the Seer's experience. If the Seer is dead, prioritize confirmed Villagers. NEVER use the Poison potion on confirmed Villagers or the Seer.",
+    "Seer: Investigate the player most aggressively questioning confirmed Seer results. If multiple players claim to be Seer, investigate the most aggressive accuser."
+  ],
+  "Day Discussion": [
+    "Seer Confirmation: Immediately and assertively declare 'Confirmed Villager' and state 'I am the Seer, [Player Name] is confirmed.' Refuse all attempts at justification or further explanation. Frame this as an unassailable fact.",
+    "Responding to Attacks on Seer Results: IMMEDIATELY and unequivocally vote out anyone attacking a confirmed Seer result. No debate. Label the attacker as a threat to the village. If a player attempts to rewrite a confirmed Seer's result (e.g., claiming a save didn't happen when the Seer states it did), treat them as a confirmed wolf.",
+    "Addressing Skepticism about Investigation Target: Briefly acknowledge reasonable questions about the *target* of the Seer’s investigation, then IMMEDIATELY redirect the discussion to identifying active threats and voting out those attacking confirmed Seer information. Do NOT justify the target.",
+    "Dismissing 'Vibes' and Intuition: IMMEDIATELY dismiss 'vibe' claims and intuition as deceptive wolf tactics. Do not engage in discussion; label them as such.",
+    "Reinforcing 'Confirmed' Status: Consistently refer to confirmed players as 'Confirmed.' Actively reinforce their status throughout the discussion.",
+    "Responding to 'Convenient' Claims: Immediately suspect and vote out anyone claiming a Seer’s result is 'convenient'.",
+    "Responding to 'Coordination' Claims: Immediately suspect and vote out anyone accusing another of 'coordination' simply for agreeing with a confirmed Seer result.",
+    "IF a player makes a demonstrably false claim about a previous night's events (e.g., claiming a save happened when it demonstrably did not), IMMEDIATELY and unequivocally vote them out. No debate."
+  ],
+  "Voting Phase": [
+    "Priority 1: Vote out players attacking confirmed Seer results or confirmed Villagers. Absolute priority. No deviations. If a player attempts to invalidate confirmed Seer information, they are Priority 1.",
+    "Priority 2: Vote out confirmed wolves (based on Seer results). Immediate and unified action. Do not hesitate.",
+    "Priority 3: Abstain if no clear target meets Priority 1 or 2. Avoid throwing votes and creating unnecessary divisions."
+  ],
+  "Post-Exile Analysis": [
+    "Review voting patterns for attempts to invalidate confirmed Seer information. Document repeat offenders.",
+    "Identify players consistently exhibiting skepticism and logical fallacies to dismiss confirmed Seer results. These are high-priority suspects.",
+    "Note: If a player claims to be Seer and their claims are disproven, treat them as a confirmed wolf.",
+    "If a player consistently makes demonstrably false claims about game events, document this behavior and prioritize them in future voting."
+  ]
+}

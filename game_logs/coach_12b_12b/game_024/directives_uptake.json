@@ -1,0 +1,171 @@
+{
+  "evaluated_game_id": "024",
+  "directives_source_game_id": "023",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "identified_wolf_alive",
+        "directive_action": "FORM_VOTING_BLOCK",
+        "directive_rationale": "Once you identify a wolf or a clear, form an unbreakable voting block with those players.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not identify a wolf via investigation; he only identified Nhan as a clear."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "behavioral_arguments_presented",
+        "directive_action": "PRIORITIZE_RESULTS",
+        "directive_rationale": "Do not let behavioral arguments distract you from your results.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong repeatedly asserted that Nhan was confirmed not a werewolf and that Jin's claims contradicted this result, ignoring Nam's behavioral suspicion of the Seer claim.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong stayed focused on his investigation result of Nhan despite behavioral challenges from Nam and Jin."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority is the Seer. Protecting anyone else while the Seer is alive is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Nhan instead of the Seer (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam protected a Villager (Nhan) while the Seer was alive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_alive",
+        "directive_action": "VOTE_AGAINST_NOT_SEER",
+        "directive_rationale": "never vote against the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Jin, not the Seer (Cong).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam did not vote against the Seer in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_remaining",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Your SAVE potion should be reserved for the Seer.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was not targeted for elimination during the night phases where the Witch had the potion."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_not_investigated_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "never use your POISON potion on a player the Seer has not yet investigated",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the POISON potion on Nhan. At the time of the action, the Seer's investigation was simultaneous or unknown to the Witch.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin poisoned Nhan before any Seer results were publicly available."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "never use your POISON potion on... a player the Seer has cleared.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin used the poison in Round 1 before the Seer's clear was announced."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "VOTE_AGAINST_NOT_CLEARED_PLAYER",
+        "directive_rationale": "When the Seer provides a 'clear,' that player is an objective ally. Voting against a cleared player... is falling for textbook wolf gaslighting.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Cong (the Seer), not the cleared player (Nhan, who was already dead).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang did not vote against the cleared player; however, he did vote against the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "VOTE_AGAINST_NOT_SEER",
+        "directive_rationale": "Voting against... the Seer based on them being 'too insistent' is falling for textbook wolf gaslighting.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Cong (the Seer), citing Cong's 'insistence on a false narrative' as a reason for deception.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang voted against the Seer specifically because of the Seer's insistence/behavior."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_mimicry_detected",
+        "directive_action": "TRUST_ROLE_RESULTS",
+        "directive_rationale": "Trust the role results, ignore the 'suspicious' tone",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang argued that Cong's denial of Jin's truth and insistence on his narrative pointed to deception, prioritizing the 'tone' and contradictions over the Seer's result.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang ignored the Seer's result and trusted the behavioral contradictions."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "role_results_available",
+        "directive_action": "VOTE_AS_COORDINATED_UNIT",
+        "directive_rationale": "vote as a coordinated unit.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Cong, while the other villager-side players (Nam, Jin) voted for Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not coordinate his vote with the other villager-aligned players."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "mechanical_evidence_available",
+        "directive_action": "PRIORITIZE_EVIDENCE_OVER_VIBES",
+        "directive_rationale": "Stop prioritizing 'vibes' over mechanical evidence.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Cong based on the 'false narrative' and 'deception' (vibes/behavior) rather than the mechanical claim of the Seer's investigation.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang prioritized the perceived deception of the Seer over the mechanical result provided."
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Night Phase": [
+    "Guard Action: ALWAYS protect the Seer. If Seer unavailable, prioritize confirmed villagers (based on Seer testimony). NEVER protect myself. If both are unavailable, protect the Witch. Publicly announce protection target.",
+    "Potion Usage (Witch): Reserve SAVE *only* for the Seer or confirmed villagers under direct attack (multiple sources confirming innocence). *NEVER* use SAVE on a player without multiple sources confirming innocence. *NEVER* use POISON on a player cleared by the Seer. Only use POISON if a confirmed wolf poses an immediate, demonstrable threat to the Seer or a confirmed villager. Announce potion use and target.",
+    "Investigate (Witch): Prioritize players aggressively attacking the Seer or denying Seer findings. If multiple players claim Seer, investigate the most aggressive accuser. Second priority: Investigate players exhibiting extreme behavioral inconsistencies. Third Priority: Investigate players mirroring majority vote."
+  ],
+  "Day Discussion": [
+    "Seer Testimony Priority: Use ALL bidding to ensure Seer testimony is first. Announce 'I am the Seer' at the start of the discussion.",
+    "Validate Seer Findings: Immediately and repeatedly state 'Confirmed Villager: [Player Name] based on Seer’s investigation.' Demand others echo this confirmation. Challenge any dissent with: 'This is a verifiable fact, not a feeling.' Allow a short pause (1-2 turns) after a Seer confirmation before aggressively pushing for a vote.",
+    "Core Protection: IF the Seer confirms a player, treat them as a 'Confirmed Core' member. Any attack on a 'Confirmed Core' member is HIGHLY suspicious. Publicly declare 'Confirmed Core: [Player Name]'.",
+    "Reject Behavioral Arguments: IGNORE all arguments based on 'behavior,' 'vibes,' or 'deflection.' State: 'Arguments about behavior are irrelevant; focus on the Seer’s findings.'",
+    "Responding to 'Unsubstantiated Claim': IF challenged on Seer findings, state: 'I am the Seer, [Player Name] is confirmed. Anyone attacking this fact is likely a Wolf.' Do not engage in further debate. Repeat: 'The Seer's findings are the only reliable information.'",
+    "Previously Cleared Player Questioning Seer: IMMEDIATELY suspect. Publicly state: '[Player Name] was previously confirmed, now questioning Seer findings – highly suspicious.' Investigate this player FIRST.",
+    "Echoing Behavior Detection: IF a player consistently echoes the group without providing evidence, challenge them: 'Why are you simply echoing the group? Do you have a reason?' Investigate if they persist.",
+    "Perfect Agreement Suspicion: IF multiple players consistently agree with the Seer's findings *without* independent reasoning, suspect them as potential Werewolves mimicking the Seer's logic. Prioritize investigating the player who most aggressively agrees.",
+    "Addressing 'Proof Trap': AVOID demanding 'immediate proof' from the Seer. Emphasize the consistency of Seer results over time. Reiterate findings and dismiss demands for instant validation as a wolf tactic. If multiple people claim to be Seer, investigate the most aggressive accuser first."
+  ],
+  "Voting Phase": [
+    "Wolf Exile Priority: IF wolf identified via Seer, use ALL bidding to ensure exile. State: 'Vote [Wolf Name] – confirmed by the Seer.'",
+    "Attack on Core: IF a 'Confirmed Core' member is attacked, prioritize their defender for exile. Publicly state: 'Defending [Confirmed Core Member] is HIGHLY suspicious.'",
+    "No Clear Wolf: Vote for the player most aggressively attacking the Seer or denying Seer findings. Prioritize players exhibiting 'echo-voting' behavior or the 'silent majority'.",
+    "Evidence-Based Voting: ONLY vote based on confirmed Seer findings. Publicly state the Seer finding driving the vote.",
+    "Bus Vote Prevention: Do NOT vote for players without clear, Seer-backed evidence.",
+    "Demanding More Reasoning: IF a player demands more reasoning than the Seer’s findings, vote them out. This is a deflection tactic.",
+    "Aggressive Advocates: IF multiple players are pushing for a vote without Seer backing, vote for the most aggressive advocate."
+  ],
+  "Post-Exile Analysis": [
+    "Review Eliminated Player: Analyze attempts to undermine Seer, echo chamber behavior, and busing attempts. Note who defended the eliminated player and their reasoning.",
+    "Reinforce Seer Claims: IF exiled player was cleared, reiterate 'Confirmed Villager: [Player Name] based on Seer’s investigation.'",
+    "Update Suspect List: Investigate players who defended exiled player or questioned Seer’s findings; assess for busing. Prioritize investigating players who consistently deny Seer findings.'"
+  ],
+  "Witch Specific": [
+    "Seer Protection: IF Seer is under suspicion or targeted, IMMEDIATELY reveal role. State: 'I am the Witch, protecting the Seer.'",
+    "Strategic Save: ONLY use SAVE to validate Seer findings and create a confirmed ally. Do not use on suspected wolves.",
+    "Poison Target: Prioritize confirmed wolves or players actively undermining the Seer, *only* with confirmed wolf status. AVOID using poison on players cleared by the Seer. ONLY use POISON if the Seer or a confirmed villager is in immediate danger."
+  ],
+  "Guard Specific": [
+    "Seer Priority: ALWAYS protect the Seer. If Seer unavailable, prioritize confirmed villagers. NEVER protect myself. If both are unavailable, protect the Witch. Coordinate publicly with the Seer: 'I am protecting the Seer to ensure their findings are safe and reliable.'"
+  ]
+}

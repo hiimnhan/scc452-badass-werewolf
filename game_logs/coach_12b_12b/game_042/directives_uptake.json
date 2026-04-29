@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "042",
+  "directives_source_game_id": "041",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a player is attacking a target you have cleared",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "ensure the village understands that anyone attacking your cleared targets is effectively outing themselves as a Wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After clearing Nhan, Jin observed Nhan attacking Nam and then observed Nam attacking Jin's claim. Jin eventually voted to exile Nhan, the player he had cleared, citing that Nhan was attempting to discredit the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Instead of accusing those attacking his cleared target, Jin eventually accused and voted for the cleared target (Nhan) himself."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a player is attacking a target you have cleared",
+        "directive_action": "DOUBLE_DOWN_ON_LOGIC",
+        "directive_rationale": "Double down on this logic during the debate",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin repeated that Nhan was confirmed not a werewolf twice, but then shifted to calling Nhan's behavior 'concerning' and 'suspicious'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin initially repeated the clear, but did not use the logic to defend the target or attack the attackers; he eventually turned on the cleared target."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Ensure they are guarded every single night to maximize their utility",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan (Witch) instead of Jin (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected the Witch instead of the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PRIORITIZE_SEER_SURVIVAL",
+        "directive_rationale": "Your primary objective is the Seer's survival",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Nam.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan used the save potion on Nam rather than reserving it for or prioritizing the Seer's survival."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_has_been_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Poisoning a player who has been cleared by the Seer is a catastrophic error",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan did not use the poison potion on anyone.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not poison the cleared target (himself/others)."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_has_been_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "never use your poison on a cleared player based on a 'gut feeling'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan did not use the poison potion.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not use poison on any cleared player."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_not_a_wolf_result",
+        "directive_action": "TREAT_AS_HARD_CLEAR",
+        "directive_rationale": "When the Seer provides a 'Not a Wolf' result, that player is a hard-clear",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong voted for Nam, and Nam and Hoang expressed skepticism about Jin's confirmation of Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers (Cong, Nam) did not treat Nhan as a hard clear; Nam actively attacked the validity of the clear."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_attacks_cleared_player",
+        "directive_action": "VOTE_AGAINST_X",
+        "directive_rationale": "Any player attacking a cleared player... is likely a Werewolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam attacked Nhan (the cleared player) and Jin (the Seer). Cong voted for Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong voted against Nam, who was attacking the cleared player and the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "psychological_labels_used",
+        "directive_action": "IGNORE_LABELS",
+        "directive_rationale": "Ignore psychological labels like 'orchestrated' or 'suspicious'; focus exclusively on the Seer's findings",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong focused on Nam's 'erratic and accusatory' behavior and 'common wolf tactic' rather than the Seer's clear of Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong relied heavily on behavioral labels to justify his vote."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "behavioral_intuition_conflicts_with_hard_data",
+        "directive_action": "PRIORITIZE_HARD_DATA",
+        "directive_rationale": "Stop prioritizing 'behavioral' intuition over hard data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong voted based on Nam's erratic behavior, and Nam voted based on Jin's suspicious behavior, ignoring the hard data of the Seer's clear.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers prioritized behavioral intuition over the Seer's hard data."
+      }
+    ]
+  }
+}

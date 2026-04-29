@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "032",
+  "directives_source_game_id": "031",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num <= 2",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "you didn't explicitly state your role early enough",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated, 'I am Jin, the Seer' in the first turn of the Round 1 Day Debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed their role immediately in Round 1."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_being_gaslit",
+        "directive_action": "COMBAT_GASLIGHTING",
+        "directive_rationale": "effectively combat the gaslighting",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Meg and Nhan attacked Hoang and Jin's credibility, Jin stated, 'I am the Seer, Hoang is confirmed. Meg and Nhan's attacks on Hoang and my credibility are a Wolf tactic.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly identified the attacks on their credibility as a wolf tactic and reaffirmed their role and data."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "identified_wolf_is_alive",
+        "directive_action": "REQUEST_VOTE_ON_WOLF",
+        "directive_rationale": "Once a wolf is identified, the village must vote as a unified block",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin investigated Meg during the night of Round 3 and found she was a wolf, but Jin was eliminated by the wolves in the same night and never had a chance to request a vote on the Day 3 debate.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "While a wolf was identified, the Seer was eliminated before the VOTE phase of that round occurred."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority must be the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Jin during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer in Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identified_wolf",
+        "directive_action": "VOTE_AGAINST_WOLF",
+        "directive_rationale": "Never let 'behavioral analysis' override the Seer's objective data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not identify a wolf until Round 3 night, by which time the Guard (Hoang) had already been exiled."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_player",
+        "directive_action": "WITHHOLD_CLAIM_OF_SAVE",
+        "directive_rationale": "Claiming to have saved a player that the Seer cleared is a classic wolf tactic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not claim to have saved themselves or anyone else during the Round 1 debate, despite having used the save potion on themselves that night.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan withheld the claim of save after being cleared by the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_data",
+        "directive_action": "ENDORSE_SEER",
+        "directive_rationale": "support the Seer's data above all else",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan initially questioned Jin's shift to Nam ('Jin's swift accusation of Nam... is concerning'), although they later voted for Nam.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Instead of endorsing the Seer, Nhan explicitly expressed concern and suspicion regarding the Seer's targeting of Nam."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_active",
+        "directive_action": "WITHHOLD_POTION_TEST",
+        "directive_rationale": "Never use your potions or claims to 'test' the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan did not use any potions during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not use potions to test the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_is_aggressive",
+        "directive_action": "IGNORE_TONE",
+        "directive_rationale": "Ignore the tone and focus on the mechanics",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'The Seer has confirmed Nhan is clear. We must protect Nhan... Let's observe the others carefully.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong ignored the aggression in Jin's targeting of Nam and focused on the fact that Nhan was cleared."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "VOTE_AGAINST_WOLF",
+        "directive_rationale": "When the Seer identifies a wolf, your only job is to vote for that person",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not identify a wolf during the Day/Vote phases while Cong was alive (the only wolf identification happened in Round 3 night, and the Seer was killed)."
+      }
+    ]
+  }
+}

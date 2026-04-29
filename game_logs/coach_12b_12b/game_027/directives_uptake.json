@@ -1,0 +1,107 @@
+{
+  "evaluated_game_id": "027",
+  "directives_source_game_id": "026",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "attacked_by_other_player",
+        "directive_action": "LABEL_ATTACKER_AS_WOLF",
+        "directive_rationale": "When attacked, do not just defend; explicitly label the attackers as wolves for attempting to invalidate objective data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After Riley questioned Jin's motives and called his claim a 'convenient assertion,' Jin stated that Riley's behavior was a 'clear pattern of deflection and undermining confirmed information' and a 'classic wolf tactic.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly labeled Riley's attack as a wolf tactic."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer. Always shield the Seer first.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Jin (the Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer while the Seer was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_not_returned_wolf_result_on_player",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison without a Seer's 'Wolf' result.",
+        "confidence": 1.0,
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) did not use any potions during the night of Round 2, despite the Seer not having identified a wolf yet.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch withheld the poison potion."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "ENDORSE_PLAYER",
+        "directive_rationale": "When the Seer provides a 'Clear,' that player is an objective asset.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Hoang both endorsed Nhan after Jin (Seer) confirmed Nhan as a villager, calling Nhan a 'confirmed villager' and stating that attacking Nhan was a wolf tactic.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Villagers Cong and Hoang endorsed the player cleared by the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_calls_seer_result_convenient_or_too_quick",
+        "directive_action": "ACCUSE_ACCUSER",
+        "directive_rationale": "Anyone calling a Seer's result 'convenient' or 'too quick' is using wolf-gaslighting keywords; you must immediately pivot your suspicion toward the accuser, not the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Riley called Jin's assertion 'convenient,' Cong accused Riley of a 'blatant attempt to undermine objective information' and labeled him 'highly suspect.' Hoang also labeled Riley as his 'primary suspect.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Villagers pivoted suspicion to Riley immediately after he used the keyword 'convenient' to describe the Seer's claim."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_reinterprets_seer_result_as_deception",
+        "directive_action": "ACCUSE_PLAYER_AS_WOLF",
+        "directive_rationale": "If someone tries to re-interpret a Seer's result as 'deception,' they are a wolf.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam questioned Jin's Seer status and suggested the defense of Nhan was 'deeply suspicious.' In response, Cong, Hoang, and Jin accused Nam of employing a 'blatant Wolf tactic' to mislead the village.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Villagers accused Nam of being a wolf after he attempted to reinterpret the Seer's results as suspicious."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "mechanical_seer_result_available",
+        "directive_action": "VOTE_AS_BLOCK_BASED_ON_RESULT",
+        "directive_rationale": "Vote as a block based on mechanical results, not intuition.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan, Cong, Nam, Jin, and Hoang all voted to exile Riley, who had attacked the Seer's mechanical result.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The village voted as a block against the player attacking the Seer's result."
+      }
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "evaluated_game_id": "056",
+  "directives_source_game_id": "055",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "cleared_a_player",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "When you clear a player, you create a 'Confirmed Core.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang immediately revealed his role and stated that Nhan was confirmed to be a villager.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang followed the directive by revealing his investigation and clearing Nhan in Round 1."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "attacked_on_tone_or_behavior",
+        "directive_action": "STATE_MECHANICAL_FACT",
+        "directive_rationale": "Do not get lured into emotional arguments about your 'tone'; instead, repeatedly state the mechanical fact: 'I am the Seer, and [Player] is confirmed innocent.'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Riley called his claim 'flimsy' and 'manipulation', Hoang responded by stating Nam's defense of Jin and Riley's accusation were 'textbook deflection tactics' and urged a vote on Nam.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "While Hoang maintained his claim, he engaged in behavioral analysis ('deflection tactics') rather than strictly sticking to the mechanical fact of who he cleared."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_power_role",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "If you are a Power Role, bid high to establish the mechanical reality of the game before the Wolves can sow discord.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang claimed Seer in the very first statement of the first day debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang established his role immediately at the start of the game."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_claims",
+        "directive_action": "ENDORSE_SEER",
+        "directive_rationale": "The moment the Seer claims, you must amplify their voice and protect them.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not speak during the debate but voted for Cong, who was attacking the Seer.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan did not verbally endorse the Seer during the debate, but his vote supported the Seer's position."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_under_attack",
+        "directive_action": "DEFEND_SEER",
+        "directive_rationale": "If the Seer is under attack, you do not join the skepticism\u2014you defend the source of information.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan voted for Cong, stating that Cong's attack on the potential Seer was a 'classic Wolf tactic'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan defended the Seer through his voting reason, labeling the attack as a wolf tactic."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_power_role",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "If you are a Power Role, bid high to establish the mechanical reality of the game before the Wolves can sow discord.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not make any verbal claims or 'bid high' during the debate.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan remained silent during the debate and did not attempt to establish his status."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_strategic_purpose_for_claim",
+        "directive_action": "WITHHOLD_ROLE_REVEAL",
+        "directive_rationale": "The Witch claimed their role too early and without a strategic purpose",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong did not claim to be the Witch, but he did reveal that he 'saved' Nhan last night, which is a Witch-specific action.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong revealed his mechanical action (saving Nhan) in Round 1, effectively revealing his role without a clear strategic purpose to do so."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_claims",
+        "directive_action": "ENDORSE_SEER",
+        "directive_rationale": "The moment the Seer claims, you must amplify their voice and protect them.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong called Hoang's claim 'deeply suspicious' and a 'blatant contradiction'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did the opposite of endorsing the Seer; he actively attacked the Seer's claim."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_under_attack",
+        "directive_action": "DEFEND_SEER",
+        "directive_rationale": "If the Seer is under attack, you do not join the skepticism\u2014you defend the source of information.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The trigger requires the Seer to be under attack by others; in Round 1, Cong was the one initiating the attack."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "is_power_role",
+        "directive_action": "BID_HIGH",
+        "directive_rationale": "If you are a Power Role, bid high to establish the mechanical reality of the game before the Wolves can sow discord.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong used his knowledge of the save to attack the Seer rather than to establish a 'confirmed core' or village power structure.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did not use his power role status to establish mechanical reality for the village, but rather to sow discord."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear_result",
+        "directive_action": "CHALLENGE_ATTACKERS",
+        "directive_rationale": "When a Seer provides a clear result, anyone attacking that result without a counter-claim is a high-probability Wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin challenged Cong, stating that Cong's immediate accusation of Hoang was a 'Wolf tactic' and demanded a vote on Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin correctly identified Cong as an attacker of the Seer's result and challenged him."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_result",
+        "directive_action": "DEMAND_MECHANICAL_PROOF",
+        "directive_rationale": "Demand mechanical proof: 'What role are you and what evidence do you have?'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that Cong was 'attacking a potential Seer without providing any concrete evidence'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin pointed out the lack of concrete evidence provided by Cong."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_cites_behavioral_suspicion_only",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "If the answer is 'they seem manipulative,' that person is likely a Wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam accused Cong's rapid escalation and forceful accusation as being 'highly suspect' and suggesting a 'coordinated attack'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam accused Cong of being a wolf based on the behavioral pattern of the attack."
+      }
+    ]
+  }
+}

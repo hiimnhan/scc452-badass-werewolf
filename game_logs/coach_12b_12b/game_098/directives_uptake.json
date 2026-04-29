@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "098",
+  "directives_source_game_id": "097",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a villager attacks a player the Seer has cleared",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Once you clear a player, any villager who continues to attack that player should be your primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam (Seer) investigated Nhan and cleared him. In the Round 1 vote, Cong voted for Nhan. Nam did not accuse Cong; instead, Nam voted for Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam cleared Nhan, and Cong attacked Nhan, but Nam chose to accuse and vote for Hoang instead of Cong."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village argues about a cleared player's tone",
+        "directive_action": "COMMAND_VILLAGE",
+        "directive_rationale": "You were too passive in Round 1 when the village began arguing about the Witch's 'tone' despite your clear.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After clearing Nhan, Nam observed that demanding proof of a clear is a Wolf tactic and focused the village on other players.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam was not passive; he actively asserted his role and characterized the skepticism regarding the clear as a Wolf tactic."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Guard protected the Witch in Round 1 instead of hard-locking the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin protected Nhan instead of the Seer (Nam) in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "always",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority is the Seer; protecting anyone else is a waste of a move.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nhan in Night 1 and Nam in Night 2.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin protected the Seer in Round 2, but failed to do so in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Witch wasted the Save potion on a basic Villager instead of prioritizing the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) used the SAVE potion on Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang saved Nhan (a Villager) instead of Nam (the Seer)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Poisoning a cleared villager is a game-ending mistake that actively helps the Wolves.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Seer) had cleared Nhan in Round 1 and Hoang in Round 2. Hoang used the POISON potion on Nam.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The directive concerns poisoning a cleared villager. Hoang poisoned the Seer, not a cleared villager."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "The Witch must save the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang saved Nhan instead of Nam (the Seer)."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_cleared_by_seer",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "If the Seer clears someone, they are a teammate regardless of how 'controlling' or 'suspicious' they seem.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) was cleared by Nam. Cong (Villager) voted to exile Nhan, stating that Nhan's blind faith in Nam suggests coordination.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong (Villager) attacked Nhan despite Nhan being cleared by the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "behavioral_analysis_or_vibes_presented",
+        "directive_action": "IGNORE_ARGUMENT",
+        "directive_rationale": "Stop using 'behavioral analysis' or 'vibes' to judge players.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong argued that Nhan's 'blind faith' suggests coordination. Nhan ignored this and focused on the Seer's clear. However, Cong continued to use behavioral arguments in Round 2, calling Nhan's behavior 'evasive and defensive'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong consistently used behavioral analysis ('blind faith', 'evasive and defensive') to justify votes."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_results_available",
+        "directive_action": "VOTE_AS_BLOC",
+        "directive_rationale": "the village must vote as a bloc based on the Seer's results, ignoring all 'personality' arguments.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam (Seer) cleared Nhan. In the vote, Nhan voted None, Cong voted Nhan, Nam voted Hoang, Jin voted Nam, Hoang voted Nam, Riley voted Nhan, and Meg voted Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The village did not vote as a bloc based on the Seer's results; they voted for different players, including the cleared player (Nhan) and the Seer (Nam)."
+      }
+    ]
+  }
+}

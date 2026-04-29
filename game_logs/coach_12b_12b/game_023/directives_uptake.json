@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "023",
+  "directives_source_game_id": "022",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_doubts_confirmed_clear",
+        "directive_action": "ACCUSE_SKEPTICS_AS_WOLVES",
+        "directive_rationale": "When the village began doubting a confirmed clear, you should have explicitly labeled the skeptics as wolves.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated that Jin was attempting to invalidate confirmed Seer information and called Jin a 'clear and present danger', instructing the village to 'Vote Jin'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified Jin as attacking his confirmed information and explicitly labeled him a danger to the village, requesting his exile."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_cleared_by_seer_is_alive",
+        "directive_action": "FORM_VOTING_BLOCK_WITH_CLEARED_PLAYER",
+        "directive_rationale": "Once a Seer clears a player, those two must form an unbreakable voting block.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Cong, while the player he cleared, Hoang, also voted for Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam and Hoang both voted for Cong in Round 1."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your primary objective is the Seer. Protecting anyone else while the Seer is alive is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nhan instead of Nam (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin protected Nhan while the Seer (Nam) was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER_OR_TRUSTED_CORE",
+        "directive_rationale": "Save potions... must be reserved for the Seer or the 'Trusted Core.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nhan.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang saved Nhan; while Nhan was not the Seer, he was part of the early trusted core identified by the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "TREAT_PLAYER_AS_OBJECTIVE_ANCHOR",
+        "directive_rationale": "When the Seer provides a 'Clear,' that player is an objective anchor.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated, 'Nam's declaration as Seer and identification of Hoang is crucial. I will defend Nam and his findings vigorously.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan treated Nam's clear of Hoang as crucial information to be defended."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_defending_confirmed_fact_is_aggressive",
+        "directive_action": "DO_NOT_EXILE_PLAYER",
+        "directive_rationale": "Do not exile players for being 'too forceful' or 'aggressive' when they are defending a confirmed fact",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Nhan, stating Nhan's 'immediate and forceful defense of Nam and Hoang... raises serious concerns.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong voted to exile Nhan specifically because Nhan was being forceful in defending the Seer's information."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_cleared_by_seer_is_alive",
+        "directive_action": "FORM_VOTING_BLOCK_WITH_CLEARED_PLAYER",
+        "directive_rationale": "Once a Seer clears a player, those two must form an unbreakable voting block.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (Villager) voted for Hoang (cleared player).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan voted against the player (Hoang) who had been cleared by the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_attempts_to_invalidate_seer_result",
+        "directive_action": "VOTE_AGAINST_PLAYER",
+        "directive_rationale": "Any player attempting to invalidate a Seer's result\u2014even after the Seer's death\u2014is a werewolf.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "No Villagers remained active in the vote except for the Seer and Witch (Hoang). Nhan and Cong were dead.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The only remaining Villagers were either the Seer, the Witch, or already dead by the time the invalidation occurred in Round 2."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "cleared_player_attacks_seer",
+        "directive_action": "REQUEST_VOTE_ON_ATTACKER",
+        "directive_rationale": "the moment a cleared player (Villager) attacked the Seer, they should have been the primary target for exile.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No cleared player attacked the Seer."
+      }
+    ]
+  }
+}

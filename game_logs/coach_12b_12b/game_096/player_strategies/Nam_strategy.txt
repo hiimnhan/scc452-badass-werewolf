@@ -1,0 +1,30 @@
+{
+  "Night Phase": [
+    "- Guard: ALWAYS protect the Seer. If the Seer is eliminated, prioritize confirmed Villagers. If no confirmed Villagers exist, protect a random player.",
+    "- Witch: Remain SILENT unless targeted. IF targeted, ALWAYS save the Seer. IF the Seer is dead, prioritize confirmed Villagers. Use Poison ONLY if a player is confirmed as a Wolf by the Seer or demonstrable logical contradiction. NEVER use Poison based on behavioral suspicion.",
+    "- Seer: Investigate the player most aggressively questioning confirmed Seer results. IF multiple claim Seer, investigate the MOST aggressive accuser."
+  ],
+  "Day Discussion": [
+    "- Immediately declare 'Confirmed Villager' and state 'I am the Seer, [Player Name] is confirmed.' (If Seer). Repeat frequently.",
+    "- ONLY discuss verifiable Seer results. Discard all discussion of 'vibes,' 'tone,' 'deflection,' or 'echo chambers'.",
+    "- IF a player demands 'proof' of a Seer clear, IMMEDIATELY accuse of Wolf tactics and redirect focus. State: 'Demanding proof is a Wolf tactic.' Do not engage in debate.",
+    "- IF a player questions a Seer clear, immediately label them as suspicious. State: 'Questioning a Seer clear is suspicious behavior.'",
+    "- IF mirroring is detected, PAUSE, analyze voting patterns. Prioritize threats to the Seer, but do NOT mention 'mirroring'.",
+    "- IF a player attempts to shift blame from a confirmed Seer/Villager, flag as suspicious and state: 'Shifting blame from a confirmed Seer/Villager is a Wolf tactic.'",
+    "- If multiple players demand 'proof', identify the MOST aggressive player and state: 'Aggressive demands for proof indicate Wolf tactics; focus on [Player Name].'"
+  ],
+  "Voting Phase": [
+    "- Priority 1: Vote out players aggressively attacking confirmed Seer results or confirmed Villagers. State: 'Voting [Player Name] for attacking confirmed Seer results.'",
+    "- Priority 2: Vote out confirmed Wolves (based on Seer results). Immediate and unified action. State: 'Voting [Player Name] - confirmed Wolf.'",
+    "- Priority 3: Abstain if no clear target meets Priority 1 or 2. Do not create division.",
+    "- IF a player claims Seer and is disproven, vote them out immediately. State: 'Voting [Player Name] - false Seer claim.'",
+    "- DO NOT blindly follow majority votes. Analyze voting patterns for coordinated attacks. Prioritize disrupting coordination."
+  ],
+  "Post-Exile Analysis": [
+    "- Review voting patterns for attempts to invalidate confirmed Seer information. Document repeat offenders.",
+    "- Identify players consistently exhibiting skepticism towards Seer results. Flag as potential wolves.",
+    "- Analyze behavior of players blindly following majority votes - potential sheep-wolves.",
+    "- Note players who shift allegiances or attack previously supported players.",
+    "- Briefly summarize voting dynamics, emphasizing the importance of trusting confirmed Seer data. Reinforce that demanding 'proof' of Seer clears is a Wolf tactic."
+  ]
+}

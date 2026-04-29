@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "village_turns_on_seer",
+        "action": "DOUBLE_DOWN_ON_OBJECTIVE_INVESTIGATION_FACTS",
+        "rationale_short": "when the village turns on you, double down on the objective facts of your investigations rather than arguing behavioral patterns",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "village_turns_on_seer",
+        "action": "AVOID_ARGUING_BEHAVIORAL_PATTERNS",
+        "rationale_short": "double down on the objective facts of your investigations rather than arguing behavioral patterns",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_public",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The moment a Seer claims, they become your sole target for protection",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_public",
+        "action": "AVOID_PROTECTING_RANDOM_VILLAGER",
+        "rationale_short": "Protecting a random villager in Round 1 while a Seer is public is a critical error",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_not_flagged_as_wolf_and_no_strong_seer_lead",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison without a strong Seer lead or a blatant wolf giveaway",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_not_flagged_as_wolf",
+        "action": "AVOID_POISONING_POTENTIAL_POWER_ROLES",
+        "rationale_short": "Poisoning a player who hasn't been flagged as a wolf\u2014and who may be a power role like the Guard\u2014is an act of self-sabotage",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "TREAT_PLAYER_AS_TRUTH_ANCHOR",
+        "rationale_short": "Once the Seer provides a clear, that player is a Truth-Anchor",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_was_cleared_by_seer",
+        "action": "AVOID_VOTING_AGAINST_SEER",
+        "rationale_short": "Nhan's decision to vote for the Seer in Round 2 despite being cleared by him was a catastrophic failure of logic",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "wolf_mirrors_seer_language_to_frame_others",
+        "action": "TRUST_INVESTIGATION_RESULTS",
+        "rationale_short": "When a Wolf mirrors the Seer's language to frame others, trust the investigation results, not the rhetoric",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "conflict_between_vibes_and_objective_data",
+        "action": "PRIORITIZE_OBJECTIVE_DATA",
+        "rationale_short": "Stop prioritizing 'vibes' over objective data",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

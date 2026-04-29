@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "073",
+  "directives_source_game_id": "072",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "communicating_results",
+        "directive_action": "BE_FIRM_BUT_INCLUSIVE",
+        "directive_rationale": "be firm but inclusive to prevent Wolves from weaponizing your personality against you",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated twice that he is the Seer and Nhan is confirmed. When challenged by Cong, he labeled Cong's behavior as 'disruptive and suspicious' and voted to exile him.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nam was firm in his claims, but his shift to labeling the challenger as 'disruptive' and 'suspicious' lacks the inclusivity intended to prevent personality weaponization."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_discussing_behavioral_analysis",
+        "directive_action": "ENCOURAGE_TRUST_IN_SEER_DATA",
+        "directive_rationale": "you must encourage the village to trust the Seer's data over behavioral analysis",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that Nam's claim 'requires verification' and that he would 'observe Nam's actions and consistency closely to assess the validity of his claim.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Instead of encouraging trust in the Seer's data, Jin explicitly prioritized behavioral analysis and verification over the Seer's results."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Poisoning a player cleared by the Seer... This is an absolute prohibition",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the poison potion on Nam, who had previously cleared Nhan and had been defended by Hoang in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The directive prohibits poisoning a player *cleared* by the Seer. Nam was the Seer himself, not a player cleared by the Seer. Therefore, poisoning Nam does not violate this specific prohibition."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_providing_data",
+        "directive_action": "SUPPORT_SEER",
+        "directive_rationale": "The Witch must act as the Seer's support system, not an independent judge",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated 'Nam is the Seer, and Nhan is confirmed' and accused those questioning it of being wolves.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang actively supported the Seer's claims and defended them against challengers."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "TREAT_AS_MECHANICAL_TRUTH",
+        "directive_rationale": "when a Seer clears a player, that player is a mechanical truth",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan voted to exile Nam (the Seer) because he believed Nam's claims were unsubstantiated.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not treat the Seer's clear of himself as truth; instead, he voted to exile the Seer for failing to provide further verification."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_cleared_person_or_seer",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Any player attacking a cleared person or the Seer should be your primary suspect",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "While Cong attacked the Seer, Nhan voted for the Seer (Nam) rather than the attacker (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan failed to accuse the person attacking the Seer; he instead joined the attack against the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_using_vague_terms_like_erratic_or_unsettling_to_mirror_each_other",
+        "directive_action": "IDENTIFY_AS_DECEPTION_SIGNAL",
+        "directive_rationale": "Wolves (Riley/Meg) used vague terms like 'erratic' and 'unsettling' to mirror each other... this is a deception signal",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Meg described Hoang's behavior as 'increasingly erratic'. Nhan and Jin did not identify this specific phrasing as a deception signal.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The trigger occurred when Meg used the word 'erratic', but the villagers did not flag this terminology as a signal of deception."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "vote_based_on_tone",
+        "directive_action": "VOTE_BASED_ON_LOGIC",
+        "directive_rationale": "When the village votes based on 'tone' rather than logic, the Wolves are winning",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Nam because the Seer 'refuses to verify' and his defense 'relies on Hoang's support'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan's vote was based on a lack of verification rather than 'tone', but it ignored the logic of the Seer's initial clear."
+      }
+    ]
+  }
+}

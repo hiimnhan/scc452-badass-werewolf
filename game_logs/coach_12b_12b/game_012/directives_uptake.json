@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "012",
+  "directives_source_game_id": "011",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village questions the mechanical justification of a result",
+        "directive_action": "DOUBLE_DOWN_ON_ROLE_AND_RESULT",
+        "directive_rationale": "When the village questioned the 'mechanical justification' of your result, you shifted targets to Nam instead of doubling down on your role and the fact that your result is an absolute truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated Nhan was confirmed not a werewolf. When Nam questioned the evidence for this assertion, Jin responded by calling Nam's challenge 'concerning' and demanded Nam provide evidence for his skepticism.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin did not shift targets immediately in the debate, but he focused more on attacking Nam's behavior than explicitly doubling down on the mechanical nature of the Seer's role as an absolute truth."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village prioritizes vibes over the Seer's result",
+        "directive_action": "DEMAND_TRUST_IN_RESULT",
+        "directive_rationale": "Never pivot; demand the village trust the Seer's result over 'vibes'.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin maintained that Nhan was confirmed and accused Nam of being disruptive for questioning the result.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin did not pivot his result; he insisted the confirmation was a fact and attacked those questioning it."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "night_start",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your primary directive is to protect the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan (the Witch).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected Nhan instead of Jin (the Seer)."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer is being targeted for exile",
+        "directive_action": "DEFEND_SEER_RESULT",
+        "directive_rationale": "You allowed the Seer to be exiled without... speaking up to defend the Seer's result.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan explicitly joined Nam in questioning Jin's 'unsubstantiated claim' and suggested prioritizing the observation of Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan actively targeted the Seer instead of defending the Seer's result."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer is about to be exiled",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "You allowed the Seer to be exiled without using your save potion",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted to exile Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan voted for the Seer's exile and did not use the save potion (which was used on themselves during the night)."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player logically contradicts themselves",
+        "directive_action": "POISON_PLAYER",
+        "directive_rationale": "Save your poison for players who logically contradict themselves.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player clearly logically contradicted themselves in the record."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "suspicion is based on behavioral vibes rather than mechanical proof",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "you poisoned Nam based on behavioral suspicion ('vibes') rather than mechanical proof.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the poison potion on Nam.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan poisoned Nam, whose suspicion was based on behavioral challenges to the Seer (vibes) rather than mechanical proof of wolf identity."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer has provided a clear on a player",
+        "directive_action": "VOTE_AGAINST_NON_CLEARED_PLAYERS",
+        "directive_rationale": "Behavioral suspicion must NEVER override a Seer's clear.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong and Nam both voted to exile Jin (the Seer) despite Jin having cleared Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Both villagers ignored the Seer's clear and voted for the Seer based on behavioral suspicion."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple players use identical phrasing like 'lack of mechanical justification'",
+        "directive_action": "ACCUSE_COORDINATED_WOLVES",
+        "directive_rationale": "When you saw multiple players using identical phrasing like 'lack of mechanical justification,' you should have recognized this as an echo chamber\u2014a primary signal of wolf coordination.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam, Nhan, and Cong all used nearly identical phrasing regarding 'unsubstantiated claims' and 'verifiable information'. Cong and Nam did not accuse them of coordination; they joined in the phrasing.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers joined the echo chamber rather than accusing the participants of coordination."
+      }
+    ]
+  }
+}

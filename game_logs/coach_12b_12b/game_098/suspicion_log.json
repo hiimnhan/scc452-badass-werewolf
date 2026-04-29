@@ -1,0 +1,476 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "No action last night provides no information. Requires observation. Still neutral."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Claims to be Seer. Confirmed Nhan is Not Wolf. Must be protected and his findings defended. Initial claim needs verification, but for now, treated as truth. Actively defending against verification requests."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No action last night provides no information. Requires observation. Still neutral."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Claims to have saved Nhan, potentially Guard. This aligns with Nam\u2019s Seer claim. Needs verification, but a positive sign for now. Must monitor closely for inconsistencies."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action last night provides no information. Requires observation. Still neutral."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No action last night provides no information. Requires observation. Still neutral."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.8,
+                "reason": "Immediately and unconditionally accepts Nam's Seer claim. Eagerly defends Nam and directs suspicion elsewhere. This rapid acceptance without critical evaluation is suspicious. Linked to Hoang's save, further increasing suspicion of coordinated behavior."
+            },
+            "Nam": {
+                "score": 0.25,
+                "reason": "Claims to be Seer and cleared Nhan. Must be verified through actions and consistent clears. Repeatedly stating Seer status is a possible tactic. Requires observation of future clears."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No action or statement yet. Neutral."
+            },
+            "Hoang": {
+                "score": 0.65,
+                "reason": "Saved Nhan last night, potentially a genuine Guard action. However, this creates a link with Nhan, requiring careful observation to determine if it\u2019s a coordinated effort."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action or statement yet. Neutral."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No action or statement yet. Neutral."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a werewolf via Seer investigation. Accepts Seer results and proposes observation of remaining players. Appears cooperative and trustworthy at this early stage. Continues to defend Seer results and proposes observation of remaining players, reinforcing trustworthiness. Proactively defends Seer claims and suggests Hoang is Guard, which could be genuine or a deflection tactic."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. No new information."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. No new information."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Unknown alignment and role. No new information. Suggests prioritizing verification of Seer claim, potentially a deflection tactic. Mentioned saving Nhan, attempting to appear helpful. Emphasizing verification of Seer claim may be a way to control the narrative and shift focus away from himself."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. No new information."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. No new information."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.75,
+                "reason": "Identified as non-werewolf by Nam. Currently under my protection. Accepts Nam's Seer claim and suggests observation of others. His unquestioning acceptance of Nam's claim requires further observation. His unwavering support for Nam, without any independent verification, is concerning and suggests potential collusion or blind faith. Hoang claims to have saved him last night, which could indicate a coordinated strategy. Acting as a mouthpiece for Nam is highly suspicious."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No new information. Remains equally suspect."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Claims to be the Seer and verified Nhan as non-werewolf. Needs further verification and observation. Potentially a valuable asset, but could be deception. Prioritizing protection if claim holds true. Nhan's acceptance of his claim is a positive indicator. Aggressively dismissing requests for proof suggests deception and attempts to control the narrative. His claim needs to be tested. His influence on Nhan is concerning."
+            },
+            "Hoang": {
+                "score": 0.7,
+                "reason": "No new information. Remains equally suspect. Claims to have saved Nhan last night. Advocating for verification of Nam's Seer claim, but immediately defending Nhan's acceptance of the claim. This could indicate an attempt to appear trustworthy while subtly supporting Nam. Saving Nhan and supporting Nam\u2019s claim suggests coordination."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information. Remains equally suspect."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No new information. Remains equally suspect."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.65,
+                "reason": "Confirmed as not a werewolf by Nam (potential Seer). Saved by Witch last night. Accepting Nam's Seer claim for now, but observing for inconsistencies. His immediate and fervent defense of Nam\u2019s Seer claim, dismissing verification requests, is concerning. Potentially coordinating with Nam. Increasing suspicion due to aggressively defending Nam\u2019s claim without requesting verification."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No new information. Neutral status."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Claims to be Seer and confirmed Nhan's innocence. Now aggressively dismissing requests for verification, displaying defensive behavior. Potentially deceptive; warrants investigation. High priority target for investigation. His claim of being Seer is being actively defended by Nhan. Increasing suspicion due to Nhan's strong defense."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No new information. Neutral status."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No new information. Neutral status."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No new information. Neutral status."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.99,
+                "reason": "Claims immediate and unquestioning acceptance of Nam's Seer claim. This hasty endorsement appears calculated to gain trust or deflect suspicion. Potential accomplice or attempting to manipulate the village's perception. High threat level due to potential knowledge and manipulative behavior. Relies on Nam's support to reinforce his Seer claim. Actively shaping the narrative to deflect suspicion. Shows excessive loyalty to Nam's claims, potentially attempting to deflect suspicion from himself. Saved by Hoang, creating a potential alliance."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No change. Still an unknown. Observe."
+            },
+            "Nam": {
+                "score": 0.92,
+                "reason": "Claims to be Seer, aggressively pushing this narrative. Dismissing demands for proof is a deflection tactic. Quick endorsement of Nhan's acceptance strengthens suspicion. High threat level due to potential knowledge and manipulative behavior. Relies on Nhan's support to reinforce his Seer claim."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No change. Still an unknown. Observe."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Saved Nhan, suggesting a possible alliance or shared interest. This action could be genuine or a calculated move to influence the village. Requires further observation to determine intent."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Ally. No change."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.99,
+                "reason": "Surviving the night despite being targeted raises suspicion. His immediate and unquestioning acceptance of Nam's Seer claim is overly enthusiastic and suggests a deliberate attempt to influence the group's perception. His eagerness to identify potential threats further reinforces a potentially deceptive strategy. His proactive defense of Nam is a clear attempt to control the narrative. His insistence on focusing on others shows an attempt to deflect suspicion. His eagerness to declare threats is a manipulation tactic."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Nhan's survival makes him a slightly more concerning unknown. He's quiet, and quiet players can be dangerous. Nam\u2019s confirmation of his Seer role will influence how we assess Cong\u2019s potential threat."
+            },
+            "Nam": {
+                "score": 0.75,
+                "reason": "Similar to Cong, Nhan's survival increases his potential threat. Requires observation. His declaration as Seer demands scrutiny; we must appear to accept his findings while subtly questioning their implications. His insistence on proof of his Seer status is a deflection tactic. His assertion of Seer status should be treated with skepticism. Hoang\u2019s statement further strengthens Nam's position, requiring increased vigilance."
+            },
+            "Jin": {
+                "score": 0.85,
+                "reason": "Jin will analyze the night's events. His logic is a key vulnerability to exploit. We need to subtly guide his suspicions away from us and towards Nhan or Riley. His confirmation of Nam's Seer role will influence his deductions. He\u2019s seeking patterns; exploit his desire for logical consistency. Nam\u2019s deflection tactic will likely appeal to Jin\u2019s desire for logical consistency."
+            },
+            "Hoang": {
+                "score": 0.55,
+                "reason": "Still an unknown. No immediate concerns, but requires observation. His immediate support for Nam\u2019s claim, while seemingly innocuous, could be a tactic to deflect suspicion. He\u2019s actively contributing to the reinforcement of Nam\u2019s narrative."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Maintain his image as a wildcard. His targeting of Nhan was reasonable, reinforcing this perception. Do not draw attention to him. Nam\u2019s confirmation of his Seer role is irrelevant to Riley\u2019s current status as a red herring."
+            }
+        }
+    },
+    "end_game": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.98,
+                "reason": "Immediate and unquestioning support of Nam\u2019s Seer claim, especially after Nam cleared him. Now actively attempting to deflect with a baseless demand for mechanical contradictions, further cementing suspicion. Defending Hoang despite clear evidence of coordination. Demanding contradictory evidence is a stalling tactic and a clear attempt to derail the investigation."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Claims to be Seer and cleared Nhan. The immediate elimination of Jin strongly suggests this is a fabrication to deflect suspicion. Requires observation of future claims, but current actions are highly suspect. His Seer claim needs to be challenged."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Eliminated. Confirmed as a victim of a coordinated attack."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Saving Nhan after Nam's Seer claim, and now dismissing Nhan\u2019s request for evidence as a 'deflection tactic'. This is consistent with coordinated wolf behavior and a deliberate attempt to obstruct the investigation. Actively pushing for Nhan's exile without offering concrete proof."
+            },
+            "Riley": {
+                "score": 0.7,
+                "reason": "Previously neutral. Now echoing Nhan's deflection and targeting Hoang. This mirrors the 'Mirror Tactic' \u2013 falsely accusing others to divert suspicion. Needs further observation to determine if this is genuine suspicion or coordinated deception. Increased suspicion due to mirroring Nhan's tactics."
+            },
+            "Meg": {
+                "score": 0.3,
+                "reason": "No action or statement yet. Neutral."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.99,
+                "reason": "Previously suspected of werewolf coordination due to fervent defense of Nam's false Seer claim and survival. His demand for 'mechanical contradictions' is a clear deflection tactic, attempting to shift blame and avoid addressing his own suspicious behavior. Cong's echo further strengthens suspicion. Now actively attempting to derail the discussion with illogical demands."
+            },
+            "Cong": {
+                "score": 0.85,
+                "reason": "Previously neutral, now actively supporting my assessment of Nhan and his coordination with Nam. Motives remain unclear \u2013 potential complicity requires continued observation. His rapid agreement with my assessment of Nhan is concerning. Now also accused of coordination by Riley, strengthening suspicion. Echoing my claims is highly suspicious."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Eliminated during the night. Previously suspected of deception due to false Seer claim and defensive behavior."
+            },
+            "Jin": {
+                "score": 1.0,
+                "reason": "Eliminated during the night. No prior suspicion, potentially collateral damage."
+            },
+            "Riley": {
+                "score": 0.75,
+                "reason": "Previously neutral. Now accusing me of deflection and coordinating with Cong, a tactic typical of werewolves attempting to sow discord and shift blame. Requires closer scrutiny. Attempting to redirect suspicion onto me, a classic werewolf tactic."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No new information. Remains neutral."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.99,
+                "reason": "Hoang's save complicates things, but Nhan's unwavering support for Nam and his quick acceptance of Nam's Seer claim remain highly suspicious. He\u2019s likely complicit or attempting to deflect suspicion. The save buys him temporary protection, but amplifies the narrative of a coordinated deception. Demanding 'mechanical contradictions' is a transparent deflection tactic, further solidifying his guilt. Desperate and intellectually dishonest - a clear indicator of guilt."
+            },
+            "Cong": {
+                "score": 0.35,
+                "reason": "Still an unknown. No significant change. Consistent with a villager following the logic of the current debate, reinforcing Hoang's accusations against Nhan."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "Saving Nhan is a significant action. It could be genuine belief or a calculated move to deflect suspicion. The save now appears as a deliberate attempt to protect a known suspect, further increasing suspicion. Needs close monitoring \u2013 potential Seer trying to mislead, or a risky Werewolf play. Now a key focus, given the save. His defense of Nhan is suspicious. Accusing Nhan of deflection is a clever tactic to deflect from his own actions. Now a serious threat; likely complicit with Nhan."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Ally. No change. Continue to leverage her trust. Coordinate target selection."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.99,
+                "reason": "His uncritical acceptance of Nam\u2019s Seer claim is highly suspect. He's actively working to control the narrative and deflect attention. Hoang\u2019s accusation solidifies him as a prime target, which is beneficial. His survival after Nam\u2019s death is a significant red flag. Cong's support of this accusation further isolates him. Now demanding 'mechanical contradictions' to deflect blame \u2013 a stalling tactic demonstrating desperation and further confirming his guilt. Hoang's relentless pressure amplifies the narrative against him. This demand proves he has no valid defense."
+            },
+            "Cong": {
+                "score": 0.8,
+                "reason": "Echoing Hoang\u2019s accusation against Nhan. This strengthens the narrative and solidifies his position as a supporter of the group. Still needs observation, but leaning toward alignment with the villagers\u2019 current suspicion. His eagerness to agree with Hoang makes him slightly more suspect. He seems easily swayed by Hoang\u2019s narrative."
+            },
+            "Nam": {
+                "score": 0.85,
+                "reason": "Claiming Seer is a power play. We must appear to accept his claim, but subtly question his motives and the validity of his information. His confirmation of Riley's targeting of Nhan is a deflection tactic. Jin's death removes a significant obstacle to his plan. We need to maintain the appearance of supporting his claims."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Eliminated. His logical analysis posed a threat; his absence simplifies our task."
+            },
+            "Hoang": {
+                "score": 0.75,
+                "reason": "His focus on Nhan is strategically sound. He\u2019s attempting to steer the blame away from himself. Supporting his claim reinforces his position and potentially distracts from us, but his persistence raises minor suspicion. Cong's agreement with Hoang makes him slightly more suspect. Riley's accusation now further implicates him, increasing pressure. His insistence on Nhan's guilt, even after Jin's death, suggests desperation."
+            },
+            "Riley": {
+                "score": 0.05,
+                "reason": "Maintains wildcard image. Shifting blame to Hoang reinforces his unpredictable nature and deflects suspicion. His targeting of Nhan initially seemed reasonable, but now targeting Hoang solidifies his image as a chaotic element \u2013 easily manipulated. His actions serve as a useful distraction."
+            }
+        }
+    }
+}

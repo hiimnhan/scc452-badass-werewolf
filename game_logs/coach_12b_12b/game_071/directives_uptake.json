@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "071",
+  "directives_source_game_id": "070",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "communicating data to the village",
+        "directive_action": "USE_INCLUSIVE_DELIVERY",
+        "directive_rationale": "Be firm with your data, but inclusive in your delivery to avoid the 'Skepticism Trap.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated 'Nhan is confirmed not a werewolf' and later said, 'Nam's cautious observation is understandable, but let's move past skepticism'. However, he quickly pivoted to accusing Nhan of trying to 'undermine my authority and sow doubt' when questioned.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Hoang started inclusively by acknowledging Nam's caution, but quickly shifted to a confrontational tone when Nhan asked for specifics."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "communicating data to the village",
+        "directive_action": "AVOID_AUTHORITARIAN_PHRASING",
+        "directive_rationale": "Demanding others 'state their intentions' and using phrases like 'Confirmed Core' sounded authoritarian",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang used the phrase 'Confirmed Villager: Nhan' and stated that a villager 'would accept the Seer's finding', claiming Nhan's questions were designed to 'undermine my authority'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang used authoritarian framing by referencing his own 'authority' and suggesting there is a correct way for a villager to behave toward the Seer."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer has cleared the Guard",
+        "directive_action": "DEFEND_SEER_VALIDITY",
+        "directive_rationale": "Once the Seer cleared you, you should have been the most aggressive defender of the Seer's validity.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan questioned Hoang's investigative process and method, stating 'let's examine Hoang's investigative process' and later voted to exile Hoang, citing that Hoang's reaction to scrutiny was 'concerning'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Instead of defending the Seer, Nhan actively scrutinized and voted against him."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer is a candidate for exile",
+        "directive_action": "VOTE_AGAINST_SEER_FORBIDDEN",
+        "directive_rationale": "any vote against them\u2014regardless of their 'tone'\u2014is a gift to the Wolves.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted to exile Hoang, stating that Hoang's behavior was 'concerning' and that a genuine Seer would welcome scrutiny.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong voted against the Seer specifically because of the Seer's tone/behavior."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer is under attack",
+        "directive_action": "DEFEND_SEER_REPUTATION",
+        "directive_rationale": "Your role is to protect the Seer's life and reputation at all costs.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong joined Nhan in questioning Hoang, stating, 'Hoang's insistence on accepting his Seer claim without scrutiny... is concerning.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong attacked the Seer's reputation rather than defending it."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides a clear",
+        "directive_action": "TREAT_AS_ABSOLUTE_TRUTH",
+        "directive_rationale": "When a Seer provides a clear, treat it as absolute truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated, 'Hoang claims to be Seer and has cleared Nhan. I will observe Hoang's behavior and Nhan's reaction closely. Let's see if Hoang's claim holds up under scrutiny.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam explicitly refused to treat the clear as absolute truth, choosing instead to observe and scrutinize the claim."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player attacks a cleared player",
+        "directive_action": "ACCUSE_X_AS_PRIMARY_SUSPECT",
+        "directive_rationale": "Anyone attacking a cleared player is a primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam observed Cong's questioning of Hoang (the Seer) and Nhan (the cleared player) and stated, 'Cong's aggressive questioning... raises concerns. This coordinated skepticism is a tactic to sow doubt and potentially protect a wolf.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified Cong's attack on the cleared player (Nhan) as suspicious and pushed Cong as a suspect."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player uses vague terms like 'manipulative' or 'suspicious' without evidence",
+        "directive_action": "CHALLENGE_GENERIC_ACCUSER",
+        "directive_rationale": "Beware of 'Generic Accusers' who use vague terms like 'manipulative' or 'suspicious' to push a target without providing evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin accused Nam of 'classic deflection' and 'attempt to mislead'. Nam responded by calling Jin's behavior 'textbook wolf behavior' and 'active misleading'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Both villagers (Nam and Jin) used generic terms of suspicion against each other; while they challenged the other's narrative, they both employed the 'generic accuser' tactics the directive warned against."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "conflict between behavioral red flags and mechanical data",
+        "directive_action": "PRIORITIZE_MECHANICAL_DATA",
+        "directive_rationale": "You prioritized 'behavioral red flags' (tone and aggression) over mechanical data (the Seer's clear).",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Cong, citing Cong's 'aggressive questioning' and 'coordinated skepticism' as the reason, despite the Seer's mechanical clear of Nhan (whom Cong was questioning).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam prioritized the behavioral red flag of 'aggressive questioning' to target Cong, rather than using the Seer's mechanical clear of Nhan to simply trust Nhan's alignment."
+      }
+    ]
+  }
+}

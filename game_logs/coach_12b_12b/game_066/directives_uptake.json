@@ -1,0 +1,78 @@
+{
+  "evaluated_game_id": "066",
+  "directives_source_game_id": "065",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing_investigation_data",
+        "directive_action": "PROVIDE_DATA_CLEARLY_WITHOUT_DEMANDING_CONFIRMED_CORE",
+        "directive_rationale": "provide the data clearly but allow the village a moment to absorb it before demanding a 'confirmed core.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated 'I am the Seer. Nhan is confirmed not a werewolf' and immediately pivoted to attacking Cong's behavior as a 'blatant attempt to deflect suspicion.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang provided the data clearly and did not demand a confirmed core."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_part_of_seer_confirmed_core",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion on a player who is part of a Seer's confirmed core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Witch) did not use the poison potion; instead, Cong used the SAVE potion on Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The poison was withheld. Note: The Seer's clear happened during the day, but the Witch did not poison the cleared player in the subsequent night (Round 2) as the game ended or actions weren't recorded for poison."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_hard_clear_on_player",
+        "directive_action": "TREAT_PLAYER_AS_ANCHOR",
+        "directive_rationale": "Whenever a Seer provides a clear, treat that person as an anchor",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that Cong's demands for verification of Hoang's claim were a 'Wolf tactic' and voted to exile Cong to 'protect the Seer and the village,' effectively treating the Seer (Hoang) and the cleared player (Nhan) as anchors.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin treated the Seer's data as reliable and defended the cleared player/Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_anchor",
+        "directive_action": "ACCUSE_AS_HIGH_PRIORITY_WOLF",
+        "directive_rationale": "anyone attacking that anchor is a high-priority wolf suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong accused Nhan (who was cleared by the Seer), Jin accused Cong of using 'Wolf tactics' and voted to exile him.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin correctly identified the attack on the anchor as suspicious and prioritized the accusation."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_provides_hard_clear_on_player",
+        "directive_action": "PRIORITIZE_DATA_OVER_BEHAVIORAL_SCRUTINY",
+        "directive_rationale": "you prioritized 'vibes' and 'behavioral scrutiny' over hard data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Cong, citing the need to protect the Seer and the village, based on the Seer's clear of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin voted based on the Seer's data rather than behavioral scrutiny of Nhan."
+      }
+    ]
+  }
+}

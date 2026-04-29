@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_cleared_by_seer == True",
+        "action": "DOMINATE_DEBATE_WITH_CLEAR",
+        "rationale_short": "You and your clear should have dominated the debate to isolate the remaining players.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your primary directive is the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "round_num == 2 && seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting yourself in Round 2 while the Seer was alive was a critical waste of a turn.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "VOTE",
+        "trigger": "seer_is_active == True",
+        "action": "VOTE_ACCORDING_TO_SEER_RESULTS",
+        "rationale_short": "Once a Seer is active, your vote must support their findings.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "player_claims_seer == True && counter_claim_exists == False",
+        "action": "DO_NOT_EXILE_CLAIMANT",
+        "rationale_short": "Exiling a claiming Seer who had no counter-claim is a catastrophic failure.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_claims_seer == True",
+        "action": "PRIORITIZE_ROLE_FACT_OVER_BEHAVIORAL_SUSPICION",
+        "rationale_short": "Allowing 'behavioral suspicion' to override the objective fact of the Seer's role.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_cleared_by_seer == True",
+        "action": "TREAT_PLAYER_AS_FACTUAL_ALLY",
+        "rationale_short": "When the Seer provided a clear, that player became a factual ally.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_or_clear == True && counter_claim_exists == False",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "Any player attacking the Seer or their clear without a counter-claim should be viewed as a primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_mirroring_behavioral_accusations_against_seer == True",
+        "action": "ACCUSE_MIRRORING_PLAYERS",
+        "rationale_short": "when multiple players (Riley/Meg) mirrored the same behavioral accusations against the Seer, this was a clear 'Echo Chamber' signal of wolf coordination.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-006",
+        "phase": "DEBATE",
+        "trigger": "conflict_between_voting_records_and_perceived_tone == True",
+        "action": "PRIORITIZE_VOTING_RECORDS",
+        "rationale_short": "You must prioritize mechanical evidence (voting records) over perceived tone.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

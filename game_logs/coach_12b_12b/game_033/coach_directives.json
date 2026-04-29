@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "REVEAL_INVESTIGATION",
+        "action": "FRAME_AS_MECHANICAL_FACT",
+        "rationale_short": "When you cleared a player, you should have framed it as a mechanical fact, not a suggestion.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "SEER_IS_ALIVE",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority must be the Seer. Protecting a random villager while the Seer is exposed is a critical failure.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "PLAYER_CLEARED_BY_SEER",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never use the poison potion based on behavioral suspicion; only use it on verified wolves.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "PLAYER_VERIFIED_WOLF",
+        "action": "POISON_X",
+        "rationale_short": "only use it [poison potion] on verified wolves.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "PLAYER_QUESTIONS_SEER_MOTIVES_OR_TONE",
+        "action": "ACCUSE_X",
+        "rationale_short": "Any player who questions a Seer's 'motives' or 'tone' is using a classic wolf manipulation tactic to sow doubt.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "PLAYER_ATTACKS_SEER_CLEARED_PLAYER",
+        "action": "ACCUSE_X",
+        "rationale_short": "Once the Seer clears a player... anyone attacking them\u2014including the cleared player themselves\u2014should be viewed as suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "SEER_IDENTIFIES_WOLF",
+        "action": "BLOCK_VOTE_TARGET",
+        "rationale_short": "If the Seer identifies a wolf, the village must block-vote that target regardless of how 'reasonable' their defense sounds.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "SEER_PROVIDES_DATA",
+        "action": "PRIORITIZE_DATA_OVER_BEHAVIOR",
+        "rationale_short": "The village failed due to prioritizing 'behavioral vibes' over objective data.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "The village exiled their own Seer in Round 1 because they focused on his 'stonewalling' rather than his data.",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The wolves successfully used 'stability' and 'order' as buzzwords to trick the village into exiling the Guard.",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "you failed to command the room",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

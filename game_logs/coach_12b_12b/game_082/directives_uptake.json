@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "082",
+  "directives_source_game_id": "081",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "whenever reporting investigation results",
+        "directive_action": "REVEAL_INVESTIGATION_TRUTHFULLY",
+        "directive_rationale": "Never lie about your results, even in frustration",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin stated that Nhan had been confirmed not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin truthfully reported the result of his investigation of Nhan from the previous night."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "whenever communicating investigation results",
+        "directive_action": "MAINTAIN_CLINICAL_RHETORIC",
+        "directive_rationale": "Keep your rhetoric clinical and avoid aggressive accusations",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin initially reported the result calmly, but quickly escalated to calling Nhan's request for verification a 'blatant attempt to discredit my role and sow doubt.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin's rhetoric became aggressive and accusatory almost immediately after communicating the result."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer. Protecting anyone else while the Seer is alive is a critical resource waste",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan instead of Jin (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected Nhan while the Seer (Jin) was alive, directly violating the priority directive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "COORDINATE_WITH_WITCH",
+        "directive_rationale": "the failure to coordinate with the Witch in Round 1 left you vulnerable",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "There is no record of Hoang coordinating with Nhan (the Witch) during the night phase of Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not attempt to coordinate with the Witch in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides investigation result",
+        "directive_action": "AVOID_REQUESTING_PROOF",
+        "directive_rationale": "Demanding 'proof' from a Seer in a public forum is mechanically impossible and only serves to sow doubt",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that Jin's claim 'requires verification' and asked how it contradicted the Seer's mechanical role.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan explicitly requested verification/proof of the Seer's claim."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer has provided a mechanical clear",
+        "directive_action": "SAVE_CLEARED_PLAYER",
+        "directive_rationale": "Use your SAVE potion to validate the Seer's clears (as saving a target proves they were hunted)",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer had cleared Nhan on the previous round's day debate (though technically the clear happened that night, the directive trigger of 'provided' usually implies public knowledge, but Nhan was indeed the cleared player) and Nhan saved themselves."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "deciding who to exile",
+        "directive_action": "VOTE_BASED_ON_SEER_DATA",
+        "directive_rationale": "Stop voting based on 'behavior' or 'vibes.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted to exile Nhan because Nhan's behavior was 'designed to sow doubt and destabilize the village.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong voted based on behavioral observations rather than the Seer's data (which had actually cleared Nhan)."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides a mechanical clear",
+        "directive_action": "ENDORSE_CLEARED_PLAYER",
+        "directive_rationale": "When the Seer provides a mechanical clear, that player is a teammate",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong did not endorse Nhan; instead, he voted to exile Nhan in Round 1, citing behavioral concerns.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong ignored the Seer's clear and actively targeted the cleared player."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a player attacks a Seer-cleared player",
+        "directive_action": "ACCUSE_ATTACKER",
+        "directive_rationale": "Anyone attacking a cleared player... is a primary suspect",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong attacked Nhan (who was Seer-cleared) by calling his behavior destabilizing; Nam did not accuse Cong, but instead accused Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam (Villager) did not accuse Cong for attacking the cleared player; he instead targeted the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolves use terms like 'disruptive' to describe players",
+        "directive_action": "PRIORITIZE_SEER_DATA",
+        "directive_rationale": "Do not let wolves weaponize terms like 'disruptive' to distract from the Seer's data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam described Jin's behavior as 'disruptive.' Nam then voted to exile Jin, ignoring the Seer's data regarding Nhan.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The trigger requires wolves to use the term to distract from data; in this case, Nam (a Villager) used the term to attack the Seer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "presenting_findings",
+        "action": "MAINTAIN_CLINICAL_NEUTRALITY",
+        "rationale_short": "Maintain clinical neutrality.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "presenting_findings",
+        "action": "AVOID_DEMANDING_EXPLANATIONS",
+        "rationale_short": "Avoid demanding explanations",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "presenting_findings",
+        "action": "AVOID_ATTACKING_BEHAVIOR",
+        "rationale_short": "Avoid attacking others' behavior",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-004",
+        "phase": "DEBATE",
+        "trigger": "presenting_findings",
+        "action": "PRESENT_FINDINGS_ONLY",
+        "rationale_short": "Present your findings and let the village react.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting a random Villager in Round 1 while the Seer is the Wolves' primary target is a critical error.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is the only source of objective truth; they must be protected at all costs.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "AVOID_QUESTIONING_CLEARED_PLAYER",
+        "rationale_short": "You spent your time questioning a Seer-cleared Villager",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "AVOID_DEMANDING_VALIDATION",
+        "rationale_short": "demanding 'validation' of the Seer. This is a Wolf tactic.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "AVOID_SOWING_DOUBT",
+        "rationale_short": "Never sow doubt about a Seer's clear",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "AVOID_USING_BEHAVIORAL_CONCERNS_TO_OVERRIDE",
+        "rationale_short": "Stop using 'behavioral concerns' to override Seer clears.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_clear",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "any player attacking that clear... is a primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_mechanical_result_vs_vibes",
+        "action": "TRUST_MECHANICAL_RESULT",
+        "rationale_short": "Trust the Seer's mechanical result over 'vibes.'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 12,
+    "dropped": []
+  }
+}

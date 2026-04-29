@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "092",
+  "directives_source_game_id": "091",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "being accused of being controlling or too aggressive",
+        "directive_action": "STATE_LOGIC_OF_MECHANICAL_CHECK",
+        "directive_rationale": "focus on the logic: 'I have a mechanical check that proves X is innocent.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin responded to Cong's accusation of 'deflection' by stating 'The Seer's role is to reveal, verification is secondary' and arguing that Cong's reaction was a 'classic deflection tactic.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not state the logic of the mechanical check to defend himself; instead, he counter-accused Cong of deflection."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer has revealed themselves",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer reveals themselves, they... must be protected every single night.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Guard) chose to protect Cong in Round 2, despite Jin having revealed himself as the Seer in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected Cong instead of the revealed Seer (Jin)."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "poison_potion_remaining == 1 AND (Seer_confirmed_wolf OR logic_test_failed)",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Always wait for a Seer's confirmation or a failed logic test before using the poison potion.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not confirm any player as a wolf before the Witch used the poison potion on Cong in Round 2."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer provides a 'Clear'",
+        "directive_action": "VOTE_AS_BLOC_WITH_SEER",
+        "directive_rationale": "You must vote as a bloc with the Seer regardless of their personality.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong and Nam (Villagers) both voted for Jin (the Seer), while Jin voted for Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Both Villagers voted against the Seer rather than voting as a bloc with him."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player attacks a Seer's delivery style rather than the data",
+        "directive_action": "ACCUSE_PLAYER_OF_BEING_WOLF",
+        "directive_rationale": "If a player attacks a Seer's delivery style rather than the data, they are likely a Wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong accused Jin's 'deflection tactic' as a 'hallmark of werewolf behavior,' other Villagers did not accuse Cong of being a wolf; Nam instead accused Hoang of corroborating the narrative.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Villagers did not accuse the player (Cong) who attacked the Seer's style."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple players use identical vague terms like 'deflection' and 'manufactured narrative' to attack power roles",
+        "directive_action": "ACCUSE_PLAYERS_OF_COORDINATION",
+        "directive_rationale": "When multiple players use identical vague terms... to attack power roles, they are coordinating.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong, Nhan, and Nam all used the term 'deflection' to attack Jin (the Seer), but the Villagers did not accuse these players of coordination; instead, they used the term themselves to attack others.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Villagers did not accuse the players using the vague terms of coordination; they adopted the terminology."
+      }
+    ]
+  }
+}

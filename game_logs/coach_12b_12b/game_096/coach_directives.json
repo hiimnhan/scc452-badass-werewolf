@@ -1,0 +1,134 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "have_clear_result",
+        "action": "LEAD_VILLAGE_BLOC",
+        "rationale_short": "When you have a 'clear,' you must lead the village as a bloc.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "findings_questioned_on_vibes",
+        "action": "DOMINATE_DEBATE",
+        "rationale_short": "Do not let players like the Villager or Guard question your findings based on 'vibes.'",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "VOTE",
+        "trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "action": "TRUST_RESULTS",
+        "rationale_short": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_identified",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once the Seer is identified, you must 'hard-lock' your protection on them every single night",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "DEFEND_PLAYER",
+        "rationale_short": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "VOTE",
+        "trigger": "seer_clears_player",
+        "action": "VOTE_AGAINST_EXILING_PLAYER",
+        "rationale_short": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-004",
+        "phase": "VOTE",
+        "trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "action": "TRUST_RESULTS",
+        "rationale_short": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_available",
+        "action": "SAVE_SEER",
+        "rationale_short": "Your Save potion is a precious resource reserved exclusively for the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "DEFEND_PLAYER",
+        "rationale_short": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "VOTE",
+        "trigger": "seer_clears_player",
+        "action": "VOTE_AGAINST_EXILING_PLAYER",
+        "rationale_short": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-004",
+        "phase": "VOTE",
+        "trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "action": "TRUST_RESULTS",
+        "rationale_short": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "DEFEND_PLAYER",
+        "rationale_short": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "seer_clears_player",
+        "action": "VOTE_AGAINST_EXILING_PLAYER",
+        "rationale_short": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "action": "TRUST_RESULTS",
+        "rationale_short": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 15,
+    "emitted": 14,
+    "dropped": [
+      {
+        "advice_verbatim": "Terms like 'red flags' are often tools used by Wolves to gaslight the village.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}
