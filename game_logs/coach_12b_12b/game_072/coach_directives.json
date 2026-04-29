@@ -1,0 +1,81 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "communicating_results",
+        "action": "BE_FIRM_BUT_INCLUSIVE",
+        "rationale_short": "be firm but inclusive to prevent Wolves from weaponizing your personality against you",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "village_discussing_behavioral_analysis",
+        "action": "ENCOURAGE_TRUST_IN_SEER_DATA",
+        "rationale_short": "you must encourage the village to trust the Seer's data over behavioral analysis",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_cleared_by_seer",
+        "action": "DO_NOT_POISON_X",
+        "rationale_short": "Poisoning a player cleared by the Seer... This is an absolute prohibition",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_providing_data",
+        "action": "SUPPORT_SEER",
+        "rationale_short": "The Witch must act as the Seer's support system, not an independent judge",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "TREAT_AS_MECHANICAL_TRUTH",
+        "rationale_short": "when a Seer clears a player, that player is a mechanical truth",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_cleared_person_or_seer",
+        "action": "ACCUSE_X",
+        "rationale_short": "Any player attacking a cleared person or the Seer should be your primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "players_using_vague_terms_like_erratic_or_unsettling_to_mirror_each_other",
+        "action": "IDENTIFY_AS_DECEPTION_SIGNAL",
+        "rationale_short": "Wolves (Riley/Meg) used vague terms like 'erratic' and 'unsettling' to mirror each other... this is a deception signal",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "vote_based_on_tone",
+        "action": "VOTE_BASED_ON_LOGIC",
+        "rationale_short": "When the village votes based on 'tone' rather than logic, the Wolves are winning",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 8,
+    "dropped": []
+  }
+}

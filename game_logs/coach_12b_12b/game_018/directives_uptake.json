@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "018",
+  "directives_source_game_id": "017",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_is_cleared",
+        "directive_action": "REQUEST_VOTE_AS_UNIFIED_BLOCK",
+        "directive_rationale": "You must lead the village to vote as a unified block based on your results.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Nhan, the player he had previously cleared, stating that Nhan's behavior was concerning.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam cleared Nhan in the debate but then voted to exile Nhan, which is the opposite of leading the village to protect a cleared player."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_requests_mechanical_reasoning",
+        "directive_action": "IGNORE_REQUEST",
+        "directive_rationale": "Do not let players distract you with requests for 'mechanical reasoning'.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player requested mechanical reasoning from Nam."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority is the Seer. Protecting anyone else while the Seer is alive is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin protected Nhan instead of the Seer (Nam).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin failed to protect the Seer in Round 1, choosing to protect Nhan instead."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER_OR_TRUSTED_CORE",
+        "directive_rationale": "Save potions are for the Seer or the Trusted Core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nhan.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "While Hoang did not save the Seer, Nhan had been cleared by the Seer, making Nhan part of the 'Trusted Core' at that moment."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "any_state",
+        "directive_action": "NEVER_POISON_SEER",
+        "directive_rationale": "NEVER poison the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the POISON potion on Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang did not poison the Seer (Nam)."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "suspect_seer",
+        "directive_action": "LOOK_FOR_CONTRADICTIONS_IN_RESULTS",
+        "directive_rationale": "If you suspect the Seer, look for contradictions in their results, but never kill your own lead investigator.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Hoang explicitly defended Nam's Seer claim and did not express suspicion."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_self",
+        "directive_action": "PROTECT_AND_VALIDATE_SEER",
+        "directive_rationale": "When a Seer clears you, your primary duty is to protect and validate that Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that the immediate loyalty toward Nam warranted observation and suggested shifting focus away from validating the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan was cleared by the Seer but actively discouraged the validation of the Seer's claim."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demands_mechanical_proof_or_uses_game_theory_to_invalidate_seer",
+        "directive_action": "ACCUSE_PLAYER_AS_WEREWOLF",
+        "directive_rationale": "Anyone demanding 'mechanical proof' or using 'game theory' to invalidate a Seer's result is usually a Werewolf attempting to derail the investigation.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player demanded mechanical proof or used game theory to invalidate the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_provides_result",
+        "directive_action": "TRUST_RESULT_OVER_VIBE",
+        "directive_rationale": "Trust the result, not the 'vibe.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Nhan, despite the Seer's result clearing Nhan, citing Nhan's 'concerning' behavior.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong prioritized his 'vibe' (concern over Nhan's behavior) over the Seer's result that Nhan was not a wolf."
+      }
+    ]
+  }
+}

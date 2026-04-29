@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "Cong is confirmed Not Wolf and is now part of the Confirmed Core. I investigated Cong last night, and the Seer's result is absolute truth. Let's focus on identifying the Werewolves among the remaining players."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "The Seer confirmed Nhan is not a wolf. Attacking Nhan is illogical. Let's focus on identifying the actual threat amongst Nam, Jin, Hoang, Riley, and Meg."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong is confirmed Not Wolf and is now part of the Confirmed Core. Let's shift our focus to Nam, Jin, Hoang, Riley, and Meg. I will investigate one of them tonight to provide further clarity."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's immediate and forceful declaration of Cong's innocence, coupled with being the Witch's save target, is highly suspect. He's attempting to deflect attention and solidify a false alliance."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's eagerness to declare Cong safe, combined with Nam's observation about being the Witch's save target, raises significant concerns. The Seer has spoken; let's investigate Nhan."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's insistence on Cong's confirmed status, without Seer testimony, is concerning. Nam and Jin raise valid points about deflection. I propose we investigate Nhan tonight."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's behavior is a classic Wolf tactic: discrediting the Seer and confirmed villagers. His coordinated attack with Jin and Hoang warrants immediate exile."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam is actively undermining the Seer's clear and coordinating an attack on Nhan. This behavior is a hallmark of a Werewolf attempting to sow chaos."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's behavior is highly suspicious. His quick claim of Cong's innocence and the Witch's save suggest a coordinated deflection. We must remove this potential threat."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's behavior is manipulative and deflective. His quick claim of Cong's innocence, alongside being a potential save target, warrants immediate scrutiny and exile."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's actions are inconsistent with a villager's behavior. His insistence on Cong's innocence and deflection accusations warrant a vote to uncover the truth."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's insistence on Cong's innocence and the 'absolute truth' of the Seer is highly suspicious. He's clearly trying to manipulate the vote. We need to prioritize village safety and investigate further."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's aggressive defense of Cong and his quick shift to investigating others seems designed to manipulate us. We need to proactively address this potential threat before he can further obscure the truth."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Cong (Guard) chose to protect Nam.",
+            "Nam (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Cong",
+            "Jin"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

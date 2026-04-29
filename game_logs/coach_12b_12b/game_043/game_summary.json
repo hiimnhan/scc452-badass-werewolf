@@ -1,0 +1,150 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer, Nhan is confirmed. I investigated Nhan last night, and they are a confirmed Villager."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's claim is a direct attack. I am a Villager, as Nam claims to have verified. I demand Nam provide mechanical justification for this baseless accusation. Attacking a confirmed Villager destabilizes the village."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer, Nhan is confirmed. Nhan's demand for 'mechanical justification' is a blatant attempt to undermine confirmed Seer information. I vote Nhan."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam claims to be the Seer and confirmed Nhan. However, Nhan's demand for 'mechanical justification' is a clear deflection tactic and attempt to undermine the Seer. I vote Nhan."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's insistence on his Seer status and immediate vote for me, without mechanical justification, is highly suspect. Hoang's immediate support reinforces this coordinated attack. I demand Nam explain *how* he verified my alignment."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer, Nhan is confirmed. Nhan's demand for 'mechanical justification' is a deliberate attack on confirmed Seer information. I vote Nhan."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's Seer claim lacks any verifiable basis. His insistence and attack on me, without justification, is a clear attempt to mislead the village. We must eliminate this threat."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's claims lack any supporting evidence. His aggressive defense and coordinated attack on Nhan without justification indicates deception. We must prioritize facts, not baseless assertions."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's insistence on 'mechanical justification' is a clear attempt to undermine the confirmed Seer result. We must protect our information and vote out this threat."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's demands and defensiveness are suspicious. Nam and Hoang's coordinated vote points to a coordinated attack. We must protect the village and exile Nhan."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's insistence on 'mechanical justification' is a deflection tactic. The Seer has spoken; let's exile this disruptive player and focus on finding the remaining wolves."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's reaction to Nam's claim was far too aggressive. Demanding 'mechanical justification' feels like a deflection tactic to avoid scrutiny. We need to be cautious and eliminate potential threats immediately."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's insistence on 'mechanical justification' after being confirmed as a Villager by the Seer is extremely odd. It feels like a deflection tactic to protect someone. We need to prioritize village safety."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Hoang. Hoang is NOT a wolf.",
+            "Hoang (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's unwavering support of Nam's false claims is deeply concerning. His silence now is a calculated attempt to deflect suspicion. I demand a vote on Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin\u2019s accusations are a textbook deflection. He demands a vote on me while exhibiting the same deflection tactics Nam used. Vote Jin."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's defense is a blatant attempt to redirect blame. His unwavering support of Nam's lies and immediate attack on Jin demonstrate a coordinated effort to mislead the village. Vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong and Jin are echoing each other's deflection tactics. Their coordinated attack on me proves they are wolves working together. Vote Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's desperate attempts to deflect blame and mirror Nam\u2019s tactics are undeniable proof of his guilt. I demand a vote on Hoang immediately."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin and Cong are echoing each other\u2019s deflection tactics. Their coordinated attack proves they are wolves working together. Vote Jin."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang's desperate defense of Nam and subsequent attacks on Jin and myself demonstrate a coordinated effort to deceive the village. We must exile him."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's desperate deflection tactics and mirroring of Nam's behavior prove his guilt. We must exile him to protect the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin and Cong are echoing each other's deflection tactics, demonstrating a coordinated wolf strategy. Vote Jin to disrupt their coordination and protect the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's reflexive defense and mirroring of accusations from Jin and Cong strongly suggests collusion. We need to stop this coordinated deflection before it misleads us."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's frantic accusations and attempts to deflect blame are highly suspicious. He's mirroring Nam's tactics, suggesting a coordinated effort to mislead us. We must protect the village."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

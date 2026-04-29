@@ -1,0 +1,97 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "results_are_challenged_with_illogical_claims",
+        "action": "EXPLAIN_MECHANICS_OF_FALSE_CLAIMS",
+        "rationale_short": "if your results are challenged with illogical claims, explicitly explain the mechanics of why those claims are false to educate the village",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "VOTE",
+        "trigger": "trusted_core_formed_via_clears",
+        "action": "ORGANIZE_VOTES_AROUND_CORE",
+        "rationale_short": "When a 'Trusted Core' is formed via Seer clears, organize your votes around that core",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your sole priority is the Seer. Protecting a random villager or a suspected wolf is a wasted turn.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "DO_NOT_ATTACK_RESULTS_BASED_ON_OWN_ACTIONS",
+        "rationale_short": "Never attack the Seer's results based on your own actions.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "VOTE",
+        "trigger": "trusted_core_formed_via_clears",
+        "action": "ORGANIZE_VOTES_AROUND_CORE",
+        "rationale_short": "When a 'Trusted Core' is formed via Seer clears, organize your votes around that core",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "argument_is_behavioral_suspicion_or_deflection",
+        "action": "DISREGARD_ARGUMENT",
+        "rationale_short": "Stop relying on 'behavioral suspicion' or 'deflection' arguments.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "mechanical_evidence_available",
+        "action": "BASE_VOTE_ON_MECHANICAL_EVIDENCE",
+        "rationale_short": "Base every vote on mechanical evidence.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "TREAT_DOUBT_AS_RED_FLAG",
+        "rationale_short": "If the Seer clears a player, that player is a fact; any attempt to cast doubt on that clear should be treated as a red flag for werewolf behavior.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "trusted_core_formed_via_clears",
+        "action": "ORGANIZE_VOTES_AROUND_CORE",
+        "rationale_short": "When a 'Trusted Core' is formed via Seer clears, organize your votes around that core",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "VOTE",
+        "trigger": "vibe_based_logic_conflicts_with_verified_roles",
+        "action": "PRIORITIZE_VERIFIED_ROLES",
+        "rationale_short": "Do not let 'vibe-based' logic override verified roles.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 10,
+    "dropped": []
+  }
+}

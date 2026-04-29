@@ -1,0 +1,103 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "under_attack_or_questioned",
+        "action": "BE_FIRM_BUT_INCLUSIVE",
+        "rationale_short": "Be firm but inclusive to avoid giving Wolves ammunition to label you as 'aggressive' or 'disruptive.'",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_claims_and_clears",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once a Seer claims and clears, prioritize their protection and support immediately.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_claims_and_clears",
+        "action": "ENDORSE_SEER",
+        "rationale_short": "Once a Seer claims and clears, prioritize their protection and support immediately.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player_claims_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "poison potion is for confirmed Wolves or high-probability suspects, never for the village's primary source of information.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "SUPPORT_CLEAR",
+        "rationale_short": "Your role is to support the Seer's clears, not to 'test' the Seer by eliminating them.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_result",
+        "action": "TREAT_AS_MECHANICAL_TRUTH",
+        "rationale_short": "When the Seer provided a clear result on Day 1, you debated the Seer's 'verification' rather than treating the data as mechanical truth.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_cleared_player_or_seer",
+        "action": "ACCUSE_X",
+        "rationale_short": "Anyone attacking a cleared player or the Seer should be your primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "DEFEND_SEER",
+        "rationale_short": "Clear players must actively defend the Seer to prevent a vacuum of doubt",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "VOTE_AGAINST_NON_SEER",
+        "rationale_short": "voting against the Seer after being cleared is a catastrophic failure of logic.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "player_votes_for_suspect",
+        "action": "CHALLENGE_VOTER",
+        "rationale_short": "Do not trust a player simply because they vote for a suspect; look for those who consistently sow doubt about confirmed roles.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 10,
+    "dropped": [
+      {
+        "advice_verbatim": "Be wary of 'False-Flag' voting.",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=11"
+  }
+}

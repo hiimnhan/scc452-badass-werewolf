@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "village_voting_based_on_behavioral_analysis",
+        "action": "ARGUE_FACTUAL_ANCHOR",
+        "rationale_short": "When the village began voting for the Witch based on 'suspicious behavior,' you should have more aggressively argued that a confirmed clear is a factual anchor",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the lack of a coordinated 'Seer-Shield' strategy in Round 1 left the village fragmented",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "uncertain_of_target",
+        "action": "PROTECT_SEER_OR_VOCAL_VILLAGER",
+        "rationale_short": "protecting the Seer or the most vocal villager is generally safer than guessing",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "NIGHT",
+        "trigger": "seer_provided_information",
+        "action": "NARROW_PROTECTION_TARGETS",
+        "rationale_short": "Use the Seer's information to narrow down who NOT to protect",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_attacked",
+        "action": "SAVE_SEER",
+        "rationale_short": "your priority must be the Seer... Save the Seer at all costs",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "self_attacked",
+        "action": "WITHHOLD_SAVE_POTION",
+        "rationale_short": "You wasted your save potion on yourself in Round 1",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "role_data_available",
+        "action": "PRIORITIZE_ROLE_DATA_OVER_VIBES",
+        "rationale_short": "Stop prioritizing 'vibes' and behavioral analysis over hard role data",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_cleared_player_or_seer",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "any player attacking a cleared player or the Seer should be your primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "wolf_narrative_steering",
+        "action": "CHALLENGE_WITH_LOGICAL_PROOF",
+        "rationale_short": "Replace 'He's acting weird' with 'He is attacking a player the Seer confirmed as a villager.'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 10,
+    "emitted": 9,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=10 but emitted+dropped=9"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "evaluated_game_id": "097",
+  "directives_source_game_id": "096",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "have_clear_result",
+        "directive_action": "LEAD_VILLAGE_BLOC",
+        "directive_rationale": "When you have a 'clear,' you must lead the village as a bloc.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin announced 'Nhan is confirmed not a werewolf' and stated 'The Seer has spoken.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin immediately announced the clear and attempted to establish it as a fact for the village."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "findings_questioned_on_vibes",
+        "directive_action": "DOMINATE_DEBATE",
+        "directive_rationale": "Do not let players like the Villager or Guard question your findings based on 'vibes.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Cong questioned Nhan's request for confirmation and the nature of Seer findings, Jin eventually voted for Nhan in the same round, citing Nhan's 'attempt to control the narrative.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin did not dominate the debate to protect the finding; instead, Jin voted to exile Nhan, the very person he had just cleared."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "directive_action": "TRUST_RESULTS",
+        "directive_rationale": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Nhan, despite having cleared Nhan earlier in the round.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin voted against the player he had personally cleared."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is identified, you must 'hard-lock' your protection on them every single night",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Jin.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Jin identified as Seer in Round 1, Hoang protected him in Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "DEFEND_PLAYER",
+        "directive_rationale": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang voted for Cong, but regarding the cleared player (Nhan), Hoang's voting behavior in Round 1 was against Cong, and in Round 2, Hoang aggressively pushed to vote Nhan out.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not defend Nhan; in Round 2, Hoang specifically called Nhan's behavior 'deeply concerning' and urged the village to vote him out."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "VOTE_AGAINST_EXILING_PLAYER",
+        "directive_rationale": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang voted to exile Nhan despite Nhan being cleared by the Seer in Round 1."
+      },
+      {
+        "directive_id": "GUARD-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "directive_action": "TRUST_RESULTS",
+        "directive_rationale": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang followed the crowd/Seer's new accusation rather than the original clear result."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Your Save potion is a precious resource reserved exclusively for the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan used the potion on Cong instead of the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "DEFEND_PLAYER",
+        "directive_rationale": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan was the player cleared. He did not defend himself based on the Seer's result, but instead asked the Seer to confirm it publicly.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The directive applies to defending *another* player cleared by the Seer; Nhan was the one cleared."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "VOTE_AGAINST_EXILING_PLAYER",
+        "directive_rationale": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No other player was cleared by the Seer for Nhan to protect."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "directive_action": "TRUST_RESULTS",
+        "directive_rationale": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No other player was cleared by the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "DEFEND_PLAYER",
+        "directive_rationale": "When the Seer clears a player, that player is a teammate regardless of how 'suspicious' or 'manufactured' their behavior seems.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated 'The Seer confirmed Nhan is not a werewolf. Let's focus on that fact and avoid baseless accusations.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong explicitly defended Nhan based on the Seer's clear."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "VOTE_AGAINST_EXILING_PLAYER",
+        "directive_rationale": "If the Seer says a player is innocent, any attempt to exile that player is a Wolf tactic.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Despite defending Nhan in the debate, Cong voted to exile Nhan in the vote phase."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "voting_pattern_of_crowd_conflicts_with_results",
+        "directive_action": "TRUST_RESULTS",
+        "directive_rationale": "Trust the Seer's results, not the voting patterns of the crowd.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong voted against the player the Seer had cleared."
+      }
+    ]
+  }
+}

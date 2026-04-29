@@ -1,0 +1,158 @@
+{
+  "evaluated_game_id": "060",
+  "directives_source_game_id": "059",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "you must ensure the village locks in your results",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan immediately announced that he investigated Cong and that Cong is NOT a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan revealed his investigation result in the first debate phase."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "ANNOUNCE_ROLE",
+        "directive_rationale": "The Seer announces",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan announced his role as Seer during the Day 1 debate while revealing his result.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "While the directive specified NIGHT phase (which is mechanically impossible for public announcements in this game's structure), the player announced the role at the first available opportunity in Round 1."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "claiming_seer_exists == true",
+        "directive_action": "PROTECT_CLAIMING_SEER",
+        "directive_rationale": "Your sole priority is the claiming Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Hoang instead of the claiming Seer, Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan had claimed Seer in Round 1, but Cong protected Hoang in Round 2 Night."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "claiming_seer_exists == false",
+        "directive_action": "PROTECT_CLAIMING_SEER",
+        "directive_rationale": "Protecting anyone else while the Seer is alive is a waste of your ability",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "A claiming Seer (Nhan) existed from Round 1 onwards."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "the Guard protects the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan (the Seer) during the first night.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "claiming_seer_exists == true && mechanical_contradiction == false",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a power role unless there is a mechanical contradiction",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use the poison potion on anyone during the game.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam did not poison any power roles."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_attacked == true",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "the Witch saves the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the SAVE potion on Nhan (the Seer) during Night 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam saved the Seer when the wolves targeted him."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "accusation_basis == 'vibe'",
+        "directive_action": "STOP_VIBE_BASED_ACCUSATIONS",
+        "directive_rationale": "Stop using 'vibe-based' accusations",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player explicitly based an accusation on 'vibes' in a way that triggered a response from the villager roles."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "FOCUS_ON_MECHANICAL_TRUTHS",
+        "directive_rationale": "Focus exclusively on mechanical truths: role claims, investigation results, and voting patterns",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin voted for Nam based on Nam's role claim and the conflict with Nhan's Seer claim.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin focused on the conflicting role claims of the Seer and Witch."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_cleared_by_seer == true",
+        "directive_action": "ENDORSE_PLAYER_AS_CONFIRMED_CORE",
+        "directive_rationale": "Once the Seer clears a player, that player is part of the 'Confirmed Core'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin voted for Nam, effectively endorsing Nhan's clear of Cong by treating Nam as the suspicious party.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin accepted the Seer's results but did not explicitly use the term 'Confirmed Core' or explicitly endorse Cong as a core member."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_confirmed_core == true && player_has_no_counter_claim == true",
+        "directive_action": "ACCUSE_PLAYER_AS_WOLF",
+        "directive_rationale": "Anyone attacking the Core without a counter-claim is a high-probability Wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin voted for Nam after Nam attacked Nhan (the Seer) and Cong (the cleared player).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin accused Nam (via vote) for attacking the Seer and the cleared player."
+      }
+    ]
+  }
+}

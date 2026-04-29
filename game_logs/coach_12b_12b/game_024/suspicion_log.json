@@ -1,0 +1,504 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nam": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated despite Guard protection. Highly suspicious of Werewolf involvement."
+            },
+            "Cong": {
+                "score": 0.99,
+                "reason": "Claims to be Seer, investigated Nhan before death. Nhan's death and Jin's confession strongly implicate Cong in a deception scheme. Wolves often falsely claim Seer. Now aggressively demanding unquestioning belief in his Seer claim, a classic deflection tactic to silence dissent and control the narrative. Jin's confession seems designed to support Cong\u2019s false narrative. Extremely suspicious."
+            },
+            "Jin": {
+                "score": 0.99,
+                "reason": "Confessed to poisoning Nhan, immediately following Cong's Seer claim. This is a highly suspicious and disruptive action, indicative of either a desperate attempt to deflect suspicion or a deliberate wolf strategy to manipulate the village. The timing is too convenient and suggests collusion or deception. Likely coordinating with Cong. Brazen confession indicates a desperate attempt to control the narrative."
+            },
+            "Hoang": {
+                "score": 0.65,
+                "reason": "Nhan's death increases suspicion. Observing behavior for signs of collusion, especially in relation to Cong and Jin. Initial assessment requires careful observation."
+            },
+            "Riley": {
+                "score": 0.65,
+                "reason": "Nhan's death increases suspicion. Observing behavior for signs of collusion, especially in relation to Cong and Jin. Initial assessment requires careful observation."
+            },
+            "Meg": {
+                "score": 0.65,
+                "reason": "Nhan's death increases suspicion. Observing behavior for signs of collusion, especially in relation to Cong and Jin. Initial assessment requires careful observation."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated by poison. Confirmed as a threat."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Claims to be the Seer and investigated Nhan, stating he was not a werewolf. This is a blatant lie, as I, the Witch, poisoned Nhan. This is strong evidence of werewolf deception and an attempt to manipulate the village. Now, he doubles down on the false claim despite being exposed, indicating a coordinated and desperate attempt to deceive the village. Definitively a wolf."
+            },
+            "Nam": {
+                "score": 0.35,
+                "reason": "Suspicious of Cong, mirroring a potential deflection tactic. Initial observation is reasonable, but requires further scrutiny. Their vigilance is noteworthy, but could be a wolf attempting to redirect suspicion."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No change. Remains unknown."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No change. Remains unknown."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No change. Remains unknown."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated last night. Alignment unknown."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Claims to be Seer, investigated Nhan (who was killed), and aggressively defends his claim against Jin's accusation of poisoning. Response is overly aggressive and deflective, resembling a Werewolf attempting to silence dissent and control the narrative. Doubling down on a potentially false claim is a major red flag. Now actively being accused of lying. Exhibiting classic deflection tactics."
+            },
+            "Nam": {
+                "score": 0.3,
+                "reason": "Previously suspected Cong. Jin\u2019s statement strengthens this suspicion, but Nam's role remains passive. Needs to demonstrate active engagement in identifying the Werewolves."
+            },
+            "Jin": {
+                "score": 0.7,
+                "reason": "Claims to be Witch and poisoned Nhan, directly contradicting Cong's Seer claim. Bold and risky statement, potentially truthful. The directness of the accusation is concerning, but may be genuine. Aggressively accusing Cong of lying and manipulation. The accusation, if true, would explain Cong's defensiveness."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No action or statement yet. Neutral suspicion."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No action or statement yet. Neutral suspicion."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Seer claim is immediate and forceful. Seems designed to control the narrative and deflect suspicion. Invested Nhan, a convenient scapegoat. Defensively reacting to Jin\u2019s claim, attempting to label dissenters as wolves. His claims are now being questioned, and he needs to be seen as unreliable. Repeating claims despite direct contradiction suggests a desire to dominate the discussion and obscure the truth."
+            },
+            "Nam": {
+                "score": 0.65,
+                "reason": "Neutral. Observant, but predictable. His eagerness to appear discerning makes him vulnerable to manipulation. His skepticism is valuable but easily exploited. His questioning of Cong provides a useful avenue for sowing discord."
+            },
+            "Jin": {
+                "score": 0.98,
+                "reason": "Claims to be Witch and poisoned Nhan. Extremely aggressive and self-incriminating. Likely a desperate attempt to deflect blame, or a very confident wolf. This requires immediate exploitation. His bold claim may be a misdirection. Now appears to be attempting to shift blame onto Cong. His erratic behaviour and unsubstantiated claims make him a prime target for exile. Needs to be framed as unstable."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Neutral. Maintain observation. His role is currently unknown, but he needs to be brought into the discussion. Remains a passive observer."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Ally. Maintain a facade of cooperation and trust. Avoid direct coordination unless absolutely necessary."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Immediate Seer reveal after Nhan's death. Seemingly eager to direct suspicion, which is unusual. Could be a calculated attempt to deflect blame or appear helpful. His vehement defense is suspicious and inconsistent with genuine confidence. Claim is likely false. Excessively defensive response to Jin\u2019s accusation; attempting to silence dissent. High threat."
+            },
+            "Nam": {
+                "score": 0.75,
+                "reason": "Questioning Cong's Seer claim. Shows some level of awareness, but could be easily manipulated. His suspicion, while accurate in identifying Cong as potentially suspect, makes him a potential target if he becomes too vocal or persistent. Reinforce his doubts subtly."
+            },
+            "Jin": {
+                "score": 0.98,
+                "reason": "Claims to have poisoned Nhan. Highly disruptive and suspicious. Boldly accusing himself is unusual, likely a deliberate tactic to deflect suspicion or manipulate the group. His accusation against Cong is useful for creating chaos. The directness and confidence are far too high for a villager \u2013 likely a power role attempting to dominate the discussion and frame others. Needs immediate and focused scrutiny."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Low threat. Appears passive, likely a villager. Useful to observe reactions to others' accusations."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Ally. Continue coordination and trust. His initial suggestion proved effective."
+            }
+        }
+    },
+    "3": {
+        "Nam": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated despite Guard protection. Confirms Werewolf targeting and ruthlessness."
+            },
+            "Cong": {
+                "score": 0.99,
+                "reason": "Claims to be Seer, but Nhan's death and Jin's confession strongly implicate him in a deception scheme. Highly likely to be a wolf actively manipulating the village. Riley\u2019s statement adds to the likelihood of Cong\u2019s involvement in a deceptive strategy. Likely coordinating with Jin and Riley."
+            },
+            "Jin": {
+                "score": 0.99,
+                "reason": "Confessed to poisoning Nhan. Brazen confession suggests collusion with Cong and a deliberate attempt to control the narrative. Now actively deflecting suspicion by accusing Riley, a classic deflection tactic. Extremely suspicious. Actively being defended by Riley, further reinforcing the coordinated deception. Desperate accusation of Riley solidifies deception. Now being supported by Meg, suggesting coordinated deception."
+            },
+            "Hoang": {
+                "score": 0.65,
+                "reason": "Nhan's death increases suspicion. Observing behavior for signs of collusion, especially in relation to Cong and Jin. No overt actions yet, but remaining cautious."
+            },
+            "Riley": {
+                "score": 0.98,
+                "reason": "Nhan's death increases suspicion. Now echoing Jin\u2019s claims and defending him against accusations, potentially indicating collusion or shared information. Actively supporting Jin\u2019s deflection attempt, a concerning sign of deception. Direct accusation of Nam, a blatant attempt to deflect and frame, solidifies suspicion of coordinated deception with Jin. Echoing Jin's deflection and attacking Nam. Now being supported by Meg, suggesting coordinated deception."
+            },
+            "Meg": {
+                "score": 0.75,
+                "reason": "Nhan's death increases suspicion. Observing behavior for signs of collusion, especially in relation to Cong and Jin. Now echoing Riley and Jin's narrative, suggesting possible alignment with their deception. Her observation of Nam's 'eager' defense reinforces the perception of coordinated manipulation."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated by my poison. Confirmed as a werewolf."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Previously claimed Nhan was not a werewolf. My poison eliminated Nhan, proving Cong's claim false and demonstrating deceptive behavior. He is a werewolf."
+            },
+            "Nam": {
+                "score": 0.8,
+                "reason": "Previously expressed suspicion of Cong, but now defends Cong's false claim. This is a clear attempt to protect a werewolf and divert suspicion. Likely a Wolf or heavily influenced by one. Defending Cong's false claim indicates a coordinated effort with the werewolves."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No new information. Remains unknown."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Accusing me of desperation and deflection while ignoring my elimination of Nhan is a clear attempt to divert suspicion. Actively trying to frame the Witch. Mirroring Nam's defense of Cong further reinforces the coordination. High likelihood of being a Wolf. Repeatedly attacks me and deflects suspicion from himself and Nam."
+            },
+            "Meg": {
+                "score": 0.3,
+                "reason": "Identified Nam and Riley's coordination, demonstrating some observational ability. However, aligning with Riley, who is aggressively targeting the Witch, raises suspicion. Needs further observation to determine if she's genuinely perceptive or a deceptive Wolf."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated. Alignment unknown, but likely a Villager given the Werewolf's need to eliminate."
+            },
+            "Cong": {
+                "score": 0.98,
+                "reason": "Strongly suspect. Jin's accusation directly contradicts Cong\u2019s claim. Aggressive defensiveness and deflection are consistent with Werewolf behavior. Highly likely to be a wolf. Nam\u2019s shift away from Cong strengthens this assessment."
+            },
+            "Nam": {
+                "score": 0.85,
+                "reason": "Previously suspected Cong, now mirroring Riley\u2019s line of attack on Jin. Blindly defending Jin and now Riley, indicating alignment with a deceptive strategy or potential complicity. Meg\u2019s observation confirms the pattern of eagerness to defend suspected players."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Accusation of poisoning Nhan remains. Now exhibiting reactive and defensive behavior, mirroring initial deflection tactics. Framing Riley\u2019s concerns as deflection suggests desperation and potential protection of another player. Accusations of coordination with Riley and Nam are a desperate attempt to divert attention. Strong indication of Werewolf."
+            },
+            "Riley": {
+                "score": 0.85,
+                "reason": "Initially neutral, now exhibiting deflection and attempting to discredit Jin. Escalating accusations against Nam without evidence, suggesting desperation and potential protection of a Werewolf. Mirroring Jin\u2019s narrative and defending him despite clear inconsistencies. Potentially complicit. Meg\u2019s observation supports the coordination suspicion."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Previously neutral. Now demonstrating observational skills and identifying suspicious behavior. Her assessment of Nam\u2019s defense of Jin adds weight to the suspicion of coordinated deception. Remains a potential villager, but requires further observation."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "Seer claim discredited. Likely a villager or desperate power role. Still worth observing, but lower priority."
+            },
+            "Nam": {
+                "score": 0.97,
+                "reason": "Questioning Cong's claim too aggressively. Demonstrates critical thinking, which could uncover our plans. Amplifying inconsistencies in his logic and portraying him as arrogant and disruptive. Increasingly suspicious of Riley \u2013 needs to be subtly manipulated into opposing Riley\u2019s claims. Riley\u2019s accusation is a significant blow. Jin's accusation of coordination further increases suspicion."
+            },
+            "Jin": {
+                "score": 0.99,
+                "reason": "Aggressive self-accusation failed. Clearly attempting to control the narrative and shift blame. Demonstrates desperation and deceptive tactics. Actively attempting to discredit Riley. A primary target for framing. His outburst is weakening his position. Claims coordination with Riley and Nam - indicative of a failing strategy."
+            },
+            "Hoang": {
+                "score": 0.25,
+                "reason": "Still a low threat. Continue to observe his reactions and use him as a gauge of group sentiment."
+            },
+            "Riley": {
+                "score": 0.01,
+                "reason": "Reliable. Observant. Aligns with our narrative. Reinforce his claims and subtly guide him to support our framing of Nam. A valuable asset. His latest accusation is perfectly timed. Now a target for Jin's deflection - needs careful management."
+            }
+        }
+    },
+    "4": {
+        "Jin": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated by my poison. Confirmed werewolf."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Previously defended Nhan, who was a werewolf. This proves deceptive behavior and confirms werewolf status. Eliminated."
+            },
+            "Nam": {
+                "score": 0.95,
+                "reason": "Now defends Cong's false claim about Nhan, demonstrating coordination with the werewolves. Strong indication of werewolf involvement. Defended by Riley and now being supported by Meg and Hoang."
+            },
+            "Hoang": {
+                "score": 0.95,
+                "reason": "Previously unknown. Now actively attempting to discredit the Witch's observations and redirect suspicion. Accusation of deflection is a common tactic to avoid scrutiny. Mirroring Meg\u2019s accusation of panic further suggests coordination. Defending Riley and Nam. His accusation of deflection is a clear attempt to shield a werewolf."
+            },
+            "Riley": {
+                "score": 0.99,
+                "reason": "Aggressively attacking me and deflecting suspicion while ignoring Nhan's elimination. Mirroring Nam's defense of Cong indicates coordination and a high likelihood of being a werewolf. Continuing to deflect and attack the Witch. Now defended by Meg and Hoang."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Aligning with Riley, who is aggressively attacking the Witch and deflecting suspicion. Now actively accusing me of inconsistency and panic, employing deflection tactics to protect Riley and Hoang. Defending Riley's attacks against the Witch demonstrates complicity. Mirroring Hoang\u2019s accusation of panic."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 1.0,
+                "reason": "Eliminated. Likely a Villager given the Werewolf's need to eliminate."
+            },
+            "Cong": {
+                "score": 1.0,
+                "reason": "Eliminated. Highly likely a Werewolf given Jin\u2019s initial accusation and subsequent behavior."
+            },
+            "Nam": {
+                "score": 1.0,
+                "reason": "Eliminated. Wolves prioritized Nam, confirming his alignment as a significant threat to the villagers. Likely a Werewolf."
+            },
+            "Jin": {
+                "score": 0.99,
+                "reason": "Nam's elimination strongly suggests Jin was protecting him. Now, Jin is attempting to shift blame onto Meg, aligning with Riley\u2019s previous defense of him. This deflective behavior and coordinated strategy are hallmarks of a Werewolf. His insistence on Meg's association with Riley is a clear attempt to distract from his own suspicious actions. Continues to deflect and redirect focus."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Riley\u2019s exile does not negate her prior actions. She aggressively defended Jin, and likely collaborated with him."
+            },
+            "Meg": {
+                "score": 0.85,
+                "reason": "Initially suspicious due to alignment with Riley, but now displaying reactive defense of Jin, likely to deflect from his increasingly erratic behavior. Her denial of disruption is a classic deflection tactic. Potential accomplice. Defending Jin now despite his obvious deflection tactics."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "His Seer claim was easily discredited. Still a potential villager or a desperate role, but currently low priority."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Eliminated. No longer a threat."
+            },
+            "Jin": {
+                "score": 0.99,
+                "reason": "Jin\u2019s aggressive self-accusation and failed deflection attempt solidify his position as a major threat. Accusing Meg now is a transparent attempt to divert attention from himself, demonstrating instability. He\u2019s now a primary deflection target. Desperation indicates a power role or significant knowledge."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "His immediate defense of Meg, followed by a vote for Jin, is a calculated attempt to deflect suspicion. It suggests complicity or an attempt to manipulate the narrative. His passivity previously allowed manipulation; now, this defense makes him a potential target for suspicion. Likely complicit with Jin. His vote for Jin, while seemingly helpful, is a distraction."
+            },
+            "Riley": {
+                "score": 0.05,
+                "reason": "Riley's observations have been accurate so far, aligning with our narrative. He\u2019s a valuable asset. We must reinforce his claims and subtly guide him to support our framing of Hoang."
+            }
+        }
+    }
+}

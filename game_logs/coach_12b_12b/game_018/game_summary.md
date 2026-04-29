@@ -1,0 +1,56 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Villager
+**Nam:** Seer
+**Jin:** Guard
+**Hoang:** Witch
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Jin (Guard) chose to protect Nhan.
+• Nam (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Hoang (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Nam:** I am the Seer, Nhan is confirmed. Anyone attacking this fact is likely a Wolf. Let's focus on identifying potential werewolves, not discrediting proven villagers.
+**Cong:** Nam's declaration that he is the Seer and cleared Nhan is vital. I will defend this claim vigorously. Anyone questioning Nam's Seer status is likely a wolf attempting to eliminate the Seer and sow chaos.
+**Nhan:** Cong's fervent defense of Nam's Seer claim is noteworthy. I appreciate the support, but such immediate and unwavering loyalty warrants observation. Let's focus on identifying other potential threats, not solely on defending one claim.
+**Jin:** Nam's claim as Seer, confirming Nhan, is crucial. Any attempts to undermine this are likely Wolf tactics designed to eliminate our primary source of information. Let's defend Nam and focus on identifying other threats.
+**Nam:** Nhan's call to shift focus away from validating my Seer confirmation is deeply concerning. Their eagerness to move on, despite the critical importance of establishing trust, suggests a deliberate attempt to sow doubt and obfuscate the truth.
+**Hoang:** Nam is the Seer, and he confirmed Nhan. Anyone attacking this fact is likely a wolf trying to eliminate our source of information. Let's defend Nam and focus on identifying other threats.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam's insistence on immediate validation of his Seer claim, and his reaction to questioning, are highly suspicious. His behavior demonstrates a desire to control the narrative and silence opposition.
+**Cong** voted for **Nhan**
+> Cong voted to exile Nhan. Reason: Nhan's behavior after being cleared by Nam is concerning. They are attempting to deflect and sow doubt. We must prioritize protecting our Seer and identifying potential wolves.
+**Nam** voted for **Nhan**
+> Nam voted to exile Nhan. Reason: Nhan's request to move past validating my Seer confirmation is concerning. Trust is paramount, and their eagerness to dismiss it suggests deception.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Hoang's unwavering support for Nam's claim, without offering independent reasoning, raises concerns. We must prioritize protecting our information sources, and Hoang's behavior is disruptive.
+**Hoang** voted for **Nhan**
+> Hoang voted to exile Nhan. Reason: Nhan's dismissal of Nam's Seer confirmation is concerning. Wolves often deflect to sow doubt. Let's eliminate this potential threat and protect our Seer.
+**Riley** voted for **Nhan**
+> Riley voted to exile Nhan. Reason: I have a very bad feeling about Nhan. Their eagerness to dismiss Nam's claims feels forced and unnatural. We need to prioritize identifying potential threats, and Nhan's behavior is deeply concerning.
+**Meg** voted for **Nhan**
+> Meg voted to exile Nhan. Reason: Nhan's insistence on shifting focus away from Nam's vital Seer confirmation is concerning. It feels like a deliberate attempt to sow doubt and hide something. We need to prioritize confirming our information.
+
+**Day Exiled:** Nhan
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Jin.
+• Jin (Guard) chose to protect Nam.
+• Nam (Seer) investigated Jin. Jin is NOT a wolf.
+• Hoang (Witch) used POISON potion on Cong
+**Night Eliminations:** Cong, Jin
+---

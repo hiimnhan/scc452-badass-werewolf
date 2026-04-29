@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is confirmed not a werewolf. This is vital information. We must now focus our attention on identifying the wolves among Cong, Nam, Hoang, Riley, and Meg. Let's demand verifiable reasoning for any accusations."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's declaration regarding Nhan is a significant development. Let's ensure we rigorously assess Cong, Hoang, Riley, and Meg. What verifiable reasons do they have to prove their innocence?"
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's clearance is a crucial starting point. Cong, Hoang, Riley, and Meg \u2013 provide verifiable reasoning for your claims. Vague assertions will not suffice."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's demand for 'verifiable reasoning' is ironic, given his own unsubstantiated claim about Nhan. He's deflecting scrutiny. Let's examine Jin's reasoning \u2013 or lack thereof \u2013 before demanding anything of others."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's accusation of deflection is baseless and a clear attempt to redirect suspicion. He provides no mechanical reasoning, only vague assertions. I demand he substantiate his claim, or face exile."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's demand for verifiable reasoning is a blatant deflection. He made an unsubstantiated claim about Nhan and now deflects when questioned. His behavior is highly suspect and warrants immediate scrutiny."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's response to Jin's claim was purely defensive and accusatory. He offered no verifiable reasoning, only redirection. This aligns with typical werewolf tactics."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang's accusations are baseless and deflective. He demands reasoning from others while providing none himself. This behavior is characteristic of a wolf trying to manipulate the discussion."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang's constant redirection and lack of verifiable reasoning raises serious concerns. He's avoiding scrutiny instead of proving his innocence."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's accusations are baseless and deflective. He offers no verifiable reasoning, demonstrating a pattern consistent with werewolf behavior. We must prioritize eliminating deflectors."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin's behavior is inconsistent and manipulative. He demands evidence while lacking it himself, exhibiting deceptive tactics. His accusations are unsubstantiated and warrant exile."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's demands for verifiable reasoning are overly controlling and suspicious. He seems to be trying to dictate the flow of the conversation, which is a tactic often used to hide something."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's eagerness to accuse without offering his own concrete evidence is concerning. We need to ensure our village is protected from those who sow discord and distrust."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nhan (Witch) used POISON potion on Jin"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Jin"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

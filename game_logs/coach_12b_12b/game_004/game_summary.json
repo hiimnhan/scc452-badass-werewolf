@@ -1,0 +1,214 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Cong (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Jin (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Cong",
+                "statement": "Nhan is confirmed not a werewolf. This eliminates a significant source of aggressive accusations. I suggest we shift focus to observing the others for patterns of deflection or inconsistent claims."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Cong's confirmation of Nhan is a significant development. I propose we prioritize observing Cong's future actions to assess the validity of his claim. Let's see if his investigations continue to yield useful information."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's scrutiny of the Seer's actions is concerning. It's an attempt to undermine the Seer's role without offering concrete evidence. Let's observe Hoang closely for further deflection tactics."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Cong's focus on deflection is concerning. Accusing Hoang of deflection immediately after confirming my innocence feels like a tactic to shift blame and control the narrative. I suggest we observe Cong's future actions closely."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Cong's immediate accusation of deflection against Hoang, following his confirmation of my innocence, is a concerning tactic. I suggest we observe Cong's actions closely to assess the validity of his Seer claim."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan's immediate accusation of deflection, following my confirmation of his innocence, is a concerning pattern. It strongly suggests an attempt to redirect suspicion. I propose we closely observe Nhan's future actions."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's focus on deflection feels manufactured. His behavior suggests an attempt to manipulate the discussion and avoid scrutiny. We need to observe him closely."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's quick accusations of deflection immediately after being cleared are highly suspicious. This behavior aligns with a defensive tactic used by werewolves to redirect blame."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's swift accusation of deflection against Hoang is a tactic to manipulate the discussion. His behavior warrants close scrutiny and potential exile to protect the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong's rapid shift to accusing others of deflection, especially after Nhan's confirmation, raises serious concerns. We must prioritize removing players who actively disrupt clear information gathering."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong's behavior feels manipulative. His swift accusations and defenses suggest he's trying to control the narrative and deflect scrutiny. We need to prioritize eliminating potential wolves."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's behavior since Nhan's survival has been unsettling. His eagerness to shift blame and accuse others feels calculated. We need to prioritize village safety and remove potential threats."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's immediate focus on accusing others of deflection, especially so soon after confirming Nhan's innocence, raises serious concerns. It feels like a manipulative tactic to distract from his own actions."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nam (Guard) chose to protect Nam.",
+            "Jin (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Hoang and Nam's mirroring of accusations against each other is a blatant deflection tactic. They are working together to mislead us. I propose we vote out Hoang."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin's accusation of Hoang and Nam is vague. How is mirroring accusations *mechanically* a deflection tactic? Nam echoed Cong's claims, which is concerning, but Jin needs to provide more than just a claim of mirroring."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's demand for a 'mechanical' explanation is a stalling tactic. He's protecting Nam. I propose we vote out Nam. His unquestioning support of Cong and now Jin's vague accusations is highly suspicious."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's accusation of me protecting Nam is a direct echo of Cong's deflection. This pattern of mirroring accusations strongly suggests Hoang is a wolf attempting to sow discord and avoid scrutiny. I vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's insistence on 'mechanical' explanations is a transparent stalling tactic. He's deflecting from Nam's unwavering support of Cong and Jin's dubious claims. I maintain my vote for Nam."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's repeated mirroring of accusations, first with Cong and now with me, is a clear attempt at deflection. He's actively trying to muddy the waters. I vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's pattern of mirroring accusations is a clear deflection tactic. He's actively sowing discord and avoiding scrutiny. We must eliminate him."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang's pattern of mirroring accusations with Cong and then with Nhan indicates a deliberate attempt to deflect suspicion. This behavior is highly indicative of a wolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's mirroring of accusations with both Cong and Nhan is a clear deflection tactic. His insistence on mechanical explanations from Nhan is a stalling maneuver to avoid scrutiny. We must eliminate him."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's mirroring of accusations is a clear pattern of deflection. His demand for 'mechanical' explanations is a stalling tactic. He's protecting someone."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's constant mirroring of accusations with Cong and now Nhan is incredibly suspicious. It's a clear attempt to confuse and deflect blame. We need to remove this disruptive influence."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's repeated mirroring of accusations, first with Cong and now with Nhan, is a clear deflection tactic. He's trying to confuse us and avoid scrutiny. We need to remove this disruptive element."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "3": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Jin (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "Nhan's continued aggression and deflection are blatant. He demands mechanical reasoning while employing manipulative tactics himself. I propose we exile Nhan immediately."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's accusations are a blatant deflection. He mirrors Hoang and Cong's previous tactics, now attacking me to avoid scrutiny. I propose we examine Nam's own behavior and question his motives."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "Nam's pointing out Nhan's deflection is astute. However, Jin's quick agreement with Nam feels\u2026 convenient. Let's examine Jin's motives closely; he\u2019s eager to jump on the bandwagon."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's accusations are textbook deflection. He's echoing Cong and Hoang's tactics, attempting to shift blame. Jin blindly follows Nam \u2013 a clear bandwagon. I propose we investigate Nam's actions and motives."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's desperate attempts to deflect and accuse are transparent. He and Nam are coordinating to mislead us. I propose we exile Nhan now to disrupt their strategy."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin's eagerness to agree with my assessment of Nhan and his quick call to exile him are too convenient. Nhan's deflection is obvious, but Jin's swift agreement smells of coordination. I maintain my proposal: exile Nhan."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Jin",
+                "reasoning": "Nhan voted to exile Jin. Reason: Jin's eagerness to agree with Nam and exile me without mechanical justification is a clear sign of coordination and deflection. We must disrupt their strategy by exiling Jin."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's behavior is consistently manipulative and deflective. His coordination with Jin is too obvious; exiling him is crucial to disrupt their strategy and protect the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's behavior is increasingly erratic and defensive. His accusations are transparent attempts to deflect scrutiny and protect his fellow wolves. We must exile him to disrupt their strategy."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's constant accusations and shifting blame are concerning. His behavior mirrors previous attempts to mislead us. Disrupting this pattern is crucial for our safety."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Jin",
+                "reasoning": "Meg voted to exile Jin. Reason: Jin's rapid agreement with Nam\u2019s assessment feels rehearsed. He\u2019s too quick to jump on the bandwagon, suggesting a lack of independent thought and a potential desire to deflect suspicion from himself."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Seer",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

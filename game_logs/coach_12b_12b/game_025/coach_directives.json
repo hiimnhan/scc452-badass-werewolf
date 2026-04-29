@@ -1,0 +1,118 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "role_claimed == 'Seer'",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "calmly stated your role",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "role_claimed == 'Seer'",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "calmly stated... your investigation result on the Guard",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "behavioral_suspicion_raised",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "do not let 'behavioral suspicion' distract you",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_identified_via_protection",
+        "action": "ENDORSE_SEER",
+        "rationale_short": "publicly validating the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "VOTE",
+        "trigger": "seer_identified_via_protection",
+        "action": "VOTE_AGAINST_OTHER_THAN_SEER",
+        "rationale_short": "You knew the Seer was clear... yet you voted to exile them",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "seer_identified_via_protection",
+        "action": "DEFEND_SEER",
+        "rationale_short": "Your job is to be the Seer's shield, both physically and socially",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "target_not_confirmed_wolf_by_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never use the poison potion on a whim. Poisoning an un-investigated player (Villager) is a waste",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "round_num < 3",
+        "action": "WITHHOLD_SAVE_CLAIM",
+        "rationale_short": "claiming a save too early can paint a target on your back",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "seer_alive",
+        "action": "SAVE_SEER",
+        "rationale_short": "use your save to protect the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-004",
+        "phase": "VOTE",
+        "trigger": "seer_investigation_result_available",
+        "action": "VOTE_BASED_ON_SEER_RESULT",
+        "rationale_short": "let the Seer's results drive the day's voting",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "power_role_claims_identity",
+        "action": "PRIORITIZE_MECHANICAL_RESULT",
+        "rationale_short": "When a power role claims their identity, prioritize the mechanical result over 'suspicious' tone",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "wolf_uses_keywords_erratic_or_manipulative",
+        "action": "DISREGARD_BEHAVIORAL_ANALYSIS",
+        "rationale_short": "Terms like 'erratic behavior' and 'manipulative' are keywords wolves use to deflect from mechanical truths",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 13,
+    "emitted": 12,
+    "dropped": [
+      {
+        "advice_verbatim": "Instead of aggressively attacking the Witch for saving you",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

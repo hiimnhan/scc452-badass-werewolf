@@ -1,0 +1,74 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "Another player makes a demonstrably false claim about a 'save' that didn't happen",
+        "action": "EXPLAIN_GAME_MECHANICS",
+        "rationale_short": "When the Guard made a demonstrably false claim about a 'save' that didn't happen, you needed to explicitly explain the game mechanics to the Villagers to lock in the vote.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "any",
+        "action": "DO_NOT_FABRICATE_ACTIONS",
+        "rationale_short": "Never fabricate actions to 'test' players or create narratives",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "claiming to have saved a target",
+        "action": "ALIGN_CLAIM_WITH_TARGET_EXPERIENCE",
+        "rationale_short": "If you are the real Witch, your claims must perfectly align with the target's experience.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "any",
+        "action": "IGNORE_TONE_AND_FRANTIC_BEHAVIOR",
+        "rationale_short": "Stop basing votes on 'tone' or 'frantic behavior.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "any",
+        "action": "FOCUS_ON_LOGICAL_CONTRADICTIONS",
+        "rationale_short": "Focus exclusively on logical contradictions.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "Seer provides a factual contradiction regarding another player's claims",
+        "action": "PRIORITIZE_SEER_MECHANICAL_TRUTH",
+        "rationale_short": "In Round 2, the Seer provided a factual contradiction regarding the Guard's claims; you should have prioritized the Seer's mechanical truth over the Guard's aggression.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "VOTE",
+        "trigger": "Two players make contradictory claims regarding a mechanical event (e.g., a save)",
+        "action": "VOTE_AGAINST_CONTRADICTOR",
+        "rationale_short": "The Witch claimed to save the Seer, but the Seer denied it... the Witch should have been exiled immediately without debate.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=8 but emitted+dropped=7"
+  }
+}

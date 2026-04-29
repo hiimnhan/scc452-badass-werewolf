@@ -1,0 +1,104 @@
+{
+  "evaluated_game_id": "058",
+  "directives_source_game_id": "057",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "a player has claimed the Seer role",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Failing to protect the Seer after they claimed their role.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nam (the Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam claimed Seer in Round 1, and Jin protected him in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target is already protected by the Guard",
+        "directive_action": "WITHHOLD_SAVE_POTION",
+        "directive_rationale": "used a SAVE potion on yourself (redundant since the Guard protected you)",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) used the SAVE potion on Nhan, who was also protected by Jin (Guard) that same night.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang used the save potion on a target already protected by the Guard, contradicting the directive to withhold it."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target is a claiming Power Role without a mechanical contradiction",
+        "directive_action": "WITHHOLD_POISON_POTION",
+        "directive_rationale": "Never poison a claiming Power Role without a mechanical contradiction.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) was exiled in Round 1 and was not present to take actions in Round 2.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The player was exiled before the trigger condition could be acted upon in subsequent rounds."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer provides mechanical clears/investigations",
+        "directive_action": "VOTE_BASED_ON_MECHANICAL_TRUTHS",
+        "directive_rationale": "prioritized 'vibes' over mechanical truths",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Cong (Villagers) both voted for Hoang after Nam (Seer) provided a mechanical clear for Nhan and accused Hoang of lying about it.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers voted to exile the player contradicting the Seer's mechanical clear."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "a player has been cleared by the Seer",
+        "directive_action": "DEFEND_CONFIRMED_CORE",
+        "directive_rationale": "treat the Seer and their cleared targets as an untouchable unit",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (Villager) voted for Nam (Seer) and Cong (Villager) voted for Nam (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Both villagers voted to exile the Seer, failing to defend the confirmed core."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "an attack is made on the Confirmed Core without a counter-claim",
+        "directive_action": "ACCUSE_ATTACKER_AS_WOLF",
+        "directive_rationale": "Any attack on the Core without a counter-claim is a high-probability Wolf signal.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan and Cong attacked Nam (Seer) by voting for him; no other player defended the core or accused Nhan/Cong as wolves based on this attack (Jin defended Nam in debate, but Nhan and Cong did not act as the directive required).",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The directive applies to Villagers observing an attack on the core. Nhan and Cong were the attackers; Jin (Guard) is not a Villager role for this specific directive."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evaluating a player's role or guilt",
+        "directive_action": "REQUEST_MECHANICAL_PROOF",
+        "directive_rationale": "Stop using terms like 'suspicious' or 'erratic'; demand mechanical proof: 'What role are you, and what evidence do you have?'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan and Cong both demanded that Nam prove his Seer status and reveal his investigations ('Nam, prove your Seer status. What did you investigate last night?', 'What player did you investigate and what was the result? Prove your claim immediately.').",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers explicitly requested mechanical proof and investigation results."
+      }
+    ]
+  }
+}

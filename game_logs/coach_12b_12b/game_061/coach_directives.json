@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "players agree with Seer claims too perfectly",
+        "action": "SCRUTINIZE_VOTING_PATTERNS",
+        "rationale_short": "When Wolves agree with you too perfectly, scrutinize their voting patterns.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "claiming_seer_is_alive",
+        "action": "PROTECT_CLAIMING_SEER",
+        "rationale_short": "You must protect the claiming Seer every night without exception.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "argument_is_behavioral_or_vibes_based",
+        "action": "STOP_VOTING_ON_VIBES",
+        "rationale_short": "Stop voting based on 'vibes' or 'disruptive behavior.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_cleared_by_seer_attacks_seer",
+        "action": "VOTE_AGAINST_ATTACKER",
+        "rationale_short": "if the Seer clears someone, and that person attacks the Seer... exile them immediately.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "guard_votes_against_seer_after_being_cleared",
+        "action": "VOTE_AGAINST_GUARD",
+        "rationale_short": "The Guard's decision to vote against the Seer after being cleared should have been an immediate red flag.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 5,
+    "dropped": [
+      {
+        "advice_verbatim": "The village failed to realize the Werewolves were mimicking the Seer's logic to appear as part of the 'Confirmed Core.'",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "the loss of the Seer/Guard synergy later made your early success moot",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

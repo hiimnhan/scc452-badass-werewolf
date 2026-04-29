@@ -1,0 +1,122 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_cleared",
+        "action": "ENDORSE_X",
+        "rationale_short": "A Seer's clear is a fact.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_cleared",
+        "action": "DEFEND_X",
+        "rationale_short": "Avoid 'The Pivot.' Once you clear someone, they are part of the 'Village Core.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_outside_village_core_and_destabilizing",
+        "action": "ACCUSE_X",
+        "rationale_short": "Focus your attacks on those outside that core who attempt to destabilize it.",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-004",
+        "phase": "DEBATE",
+        "trigger": "player_is_mirroring_majority",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your primary mission is to protect the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "player_is_mirroring_majority",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_available",
+        "action": "SAVE_SEER",
+        "rationale_short": "The Witch used a save potion on a Villager rather than reserving it for the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_is_confirmed_clear",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "The Witch attacked a confirmed clear in Round 1.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "player_is_mirroring_majority",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clear_provided",
+        "action": "ENDORSE_X",
+        "rationale_short": "Prioritize 'Mechanical Truth' over 'Behavioral Logic.' A Seer's clear is a fact.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clear_provided",
+        "action": "IGNORE_SUSPICIOUS_BEHAVIOR_OF_CLEAR",
+        "rationale_short": "Never allow gut feelings to override hard data.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_and_clears_identified",
+        "action": "ESTABLISH_TRUSTED_CIRCLE",
+        "rationale_short": "The village failed to establish a trusted circle (Seer + Clears).",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_is_mirroring_majority",
+        "action": "CHALLENGE_X",
+        "rationale_short": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 13,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=13"
+  }
+}

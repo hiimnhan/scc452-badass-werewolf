@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "011",
+  "directives_source_game_id": "010",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_cleared_by_seer == True",
+        "directive_action": "DOMINATE_DEBATE_WITH_CLEAR",
+        "directive_rationale": "You and your clear should have dominated the debate to isolate the remaining players.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang announced Nhan was not a werewolf, but Nhan immediately dismissed the finding as a 'deflection'. Hoang then shifted focus to Nam, but failed to maintain control of the debate and was eventually exiled.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not dominate the debate with the clear; instead, the clear (Nhan) attacked him, and Hoang quickly pivoted to other targets."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your primary directive is the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan chose to protect Riley (a Werewolf) instead of Hoang (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan protected a werewolf instead of the Seer."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 2 && seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting yourself in Round 2 while the Seer was alive was a critical waste of a turn.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Hoang) was exiled in Round 1 and was not alive in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_is_active == True",
+        "directive_action": "VOTE_ACCORDING_TO_SEER_RESULTS",
+        "directive_rationale": "Once a Seer is active, your vote must support their findings.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang (Seer) cleared Nhan. Cong (Witch) voted to exile Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong voted against the Seer rather than following the Seer's clearing of Nhan."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_claims_seer == True && counter_claim_exists == False",
+        "directive_action": "DO_NOT_EXILE_CLAIMANT",
+        "directive_rationale": "Exiling a claiming Seer who had no counter-claim is a catastrophic failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam and Jin (Villagers) both voted to exile Hoang after he acted as the Seer, despite no other player claiming the role.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers voted to exile the sole Seer claimant."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_claims_seer == True",
+        "directive_action": "PRIORITIZE_ROLE_FACT_OVER_BEHAVIORAL_SUSPICION",
+        "directive_rationale": "Allowing 'behavioral suspicion' to override the objective fact of the Seer's role.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Jin focused entirely on Hoang's 'erratic behavior' and 'shifting accusations' to justify their suspicion, ignoring his role claim.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers prioritized behavioral suspicion over the Seer's role claim."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_cleared_by_seer == True",
+        "directive_action": "TREAT_PLAYER_AS_FACTUAL_ALLY",
+        "directive_rationale": "When the Seer provided a clear, that player became a factual ally.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang cleared Nhan. Nam and Jin did not treat Nhan as an ally; by Round 2, Jin explicitly called Nhan's defense of Hoang 'blatant deflection' and voted to exile him.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers did not treat the cleared player (Nhan) as an ally."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_or_clear == True && counter_claim_exists == False",
+        "directive_action": "ACCUSE_PLAYER",
+        "directive_rationale": "Any player attacking the Seer or their clear without a counter-claim should be viewed as a primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (the clear) attacked Hoang (the Seer). Nam and Jin (Villagers) did not accuse Nhan for this; instead, they joined in attacking Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers did not accuse the player (Nhan) who attacked the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple_players_mirroring_behavioral_accusations_against_seer == True",
+        "directive_action": "ACCUSE_MIRRORING_PLAYERS",
+        "directive_rationale": "when multiple players (Riley/Meg) mirrored the same behavioral accusations against the Seer, this was a clear 'Echo Chamber' signal of wolf coordination.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley and Meg both mirrored accusations that Hoang's reasoning was 'inconsistent' and lacked 'logical basis'. Nam and Jin did not accuse them; they agreed with these accusations.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers joined the echo chamber rather than accusing the mirroring players."
+      },
+      {
+        "directive_id": "VILLAGER-006",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conflict_between_voting_records_and_perceived_tone == True",
+        "directive_action": "PRIORITIZE_VOTING_RECORDS",
+        "directive_rationale": "You must prioritize mechanical evidence (voting records) over perceived tone.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No specific conflict between voting records and tone was debated by the villagers; they relied almost exclusively on tone/behavior."
+      }
+    ]
+  }
+}

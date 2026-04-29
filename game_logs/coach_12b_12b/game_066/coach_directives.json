@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_was_previously_cleared_or_supported",
+        "action": "DEFEND_X",
+        "rationale_short": "The Seer attacking their own cleared/supporting players in Round 2 created a vacuum of trust",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_was_previously_supported_and_is_dead",
+        "action": "AVOID_ATTACKING_X",
+        "rationale_short": "You committed the ultimate betrayal in Round 2 by attacking a player who had previously supported you and was already dead",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Failing to protect the Seer in Round 1 left the village's most valuable asset vulnerable",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "seer_is_exposed",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority must always be the Seer. Protecting a random player in Round 1 while the Seer is exposed is a waste of your ability",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "save_potion_used_last_night",
+        "action": "COMMUNICATE_SAVE_INFO",
+        "rationale_short": "your lack of communication during the day left the village in chaos",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_identical_vague_descriptors",
+        "action": "ACCUSE_PACK",
+        "rationale_short": "When multiple players use vague, generic descriptors to target someone, stop and look for the pack",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "seer_hard_data_exists",
+        "action": "VOTE_BASED_ON_SEER_DATA",
+        "rationale_short": "Never prioritize 'vibes' or 'stability' over the Seer's hard data",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player_X",
+        "action": "ENDORSE_X",
+        "rationale_short": "If the Seer clears someone, that person is your strongest ally",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_X_attacks_seer_cleared_player",
+        "action": "ACCUSE_X",
+        "rationale_short": "anyone attacking them [a cleared player] is a primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "VOTE",
+        "trigger": "seer_findings_exist",
+        "action": "VOTE_BASED_ON_SEER_FINDINGS",
+        "rationale_short": "The village abandoned the Seer's initial findings in favor of behavioral accusations",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

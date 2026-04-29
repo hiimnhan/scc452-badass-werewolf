@@ -1,0 +1,78 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "GUARD_QUESTIONS_SEER",
+        "action": "LOGICALLY_EXPLAIN_INFORMATION_VALUE",
+        "rationale_short": "When the Guard questioned you, you pivoted to attacking them rather than logically explaining the value of your information.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "SEER_REVEALED_ROUND_1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once the Seer revealed themselves in Round 1, you should have protected them the following night.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "SEER_REVEALED",
+        "action": "DEFEND_SEER",
+        "rationale_short": "Instead, you spent the day arguing with the Seer, which signaled to the village that the Seer was a wolf.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "PLAYER_PROVIDED_CLEAR_HELPFUL_SCAN AND NO_CONFIRMED_COUNTER_CLAIM",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a player who has provided a clear, helpful scan unless there is a confirmed counter-claim.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "BEHAVIORAL_ANALYSIS_ONLY",
+        "action": "IGNORE_TONE",
+        "rationale_short": "Stop relying on 'behavioral analysis.' In Werewolf, tone is a distraction.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "SEER_CLEARS_PLAYER",
+        "action": "ENDORSE_PLAYER",
+        "rationale_short": "If the Seer clears someone, they are a trusted asset regardless of how they speak.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "WOLVES_ECHOING_BEHAVIORAL_ARGUMENTS",
+        "action": "DISREGARD_ARGUMENTS",
+        "rationale_short": "the village failed to recognize that the wolves (Riley and Meg) were simply echoing 'behavioral' arguments to manipulate the vote.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "only role results and voting patterns are facts",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

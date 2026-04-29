@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a player is attacking a target you have cleared",
+        "action": "ACCUSE_X",
+        "rationale_short": "ensure the village understands that anyone attacking your cleared targets is effectively outing themselves as a Wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "a player is attacking a target you have cleared",
+        "action": "DOUBLE_DOWN_ON_LOGIC",
+        "rationale_short": "Double down on this logic during the debate",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Ensure they are guarded every single night to maximize their utility",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PRIORITIZE_SEER_SURVIVAL",
+        "rationale_short": "Your primary objective is the Seer's survival",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_has_been_cleared_by_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Poisoning a player who has been cleared by the Seer is a catastrophic error",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "target_has_been_cleared_by_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "never use your poison on a cleared player based on a 'gut feeling'",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_not_a_wolf_result",
+        "action": "TREAT_AS_HARD_CLEAR",
+        "rationale_short": "When the Seer provides a 'Not a Wolf' result, that player is a hard-clear",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_attacks_cleared_player",
+        "action": "VOTE_AGAINST_X",
+        "rationale_short": "Any player attacking a cleared player... is likely a Werewolf",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "psychological_labels_used",
+        "action": "IGNORE_LABELS",
+        "rationale_short": "Ignore psychological labels like 'orchestrated' or 'suspicious'; focus exclusively on the Seer's findings",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "behavioral_intuition_conflicts_with_hard_data",
+        "action": "PRIORITIZE_HARD_DATA",
+        "rationale_short": "Stop prioritizing 'behavioral' intuition over hard data",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=10"
+  }
+}

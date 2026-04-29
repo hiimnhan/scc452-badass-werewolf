@@ -1,0 +1,12 @@
+=== Game Summary (your observations so far) ===
+- Round 1 Night: => No one was killed during the night.
+- Round 1 Day: => Jin received 6 votes. Jin is exiled!
+- Round 2 Night: => Cong was killed during the night.
+
+=== Suspicion Scores (0.0 = innocent → 1.0 = wolf) ===
+  Meg: 0.65 — Immediately suspicious of Jin's statement about Nhan. Accusation of narrative control is aggressive and premature. Potential wolf tactic to distract. Observing closely. Her skepticism appears justified by Jin's defensive response. Now, her direct accusation of Jin attempting to control the narrative is a strong, early play, indicating either confidence or a deceptive attempt to shift focus. Nhan's support of Jin raises further concern about Meg's initial assessment. Nam’s agreement with her adds weight to her observations.
+  Hoang: 0.50 — No information yet. Unknown alignment and role.
+  Riley: 0.50 — No information yet. Unknown alignment and role.
+  Nam: 0.40 — No information yet. Unknown alignment and role. Now, echoes Meg's concerns about Jin's motives and reinforces the suspicion around Jin's claim regarding Nhan. This suggests Nam is aligning with Meg's assessment and looking for justification for Jin’s actions. It’s a cautious but significant move, indicating a willingness to question the established narrative.
+  Jin: 0.35 — Claims to have confirmed Nhan is not a werewolf, likely the Seer. Needs verification, but a valuable asset if true. Initial score reflects potential for deception, but high value if genuine. Being targeted by Meg's suspicion. Now, his response to Meg's skepticism is overly defensive and attempts to redirect the conversation, raising further concern. His defensiveness amplifies Meg's accusation; he’s not denying it, just trying to deflect. Nhan's support of Jin is concerning; it may be coordinated. Nam's questioning of his justification further reinforces suspicion.
+  Nhan: 0.25 — Confirmed not a werewolf by Jin. Villager. Now, supports Jin's baseline establishment, a move that appears calculated to deflect suspicion and aligns with Jin’s narrative. This behavior warrants closer scrutiny; it may be an attempt to appear reasonable while shielding a wolf. Nam's questioning of Jin’s actions increases scrutiny of Nhan’s support.

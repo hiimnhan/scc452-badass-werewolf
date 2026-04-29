@@ -1,0 +1,106 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num >= 1",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "you must ensure the village locks in your results",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "NIGHT",
+        "trigger": "round_num >= 1",
+        "action": "ANNOUNCE_ROLE",
+        "rationale_short": "The Seer announces",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "claiming_seer_exists == true",
+        "action": "PROTECT_CLAIMING_SEER",
+        "rationale_short": "Your sole priority is the claiming Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "claiming_seer_exists == false",
+        "action": "PROTECT_CLAIMING_SEER",
+        "rationale_short": "Protecting anyone else while the Seer is alive is a waste of your ability",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "NIGHT",
+        "trigger": "round_num >= 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the Guard protects the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "claiming_seer_exists == true && mechanical_contradiction == false",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a power role unless there is a mechanical contradiction",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "seer_attacked == true",
+        "action": "SAVE_SEER",
+        "rationale_short": "the Witch saves the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "accusation_basis == 'vibe'",
+        "action": "STOP_VIBE_BASED_ACCUSATIONS",
+        "rationale_short": "Stop using 'vibe-based' accusations",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "round_num >= 1",
+        "action": "FOCUS_ON_MECHANICAL_TRUTHS",
+        "rationale_short": "Focus exclusively on mechanical truths: role claims, investigation results, and voting patterns",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_cleared_by_seer == true",
+        "action": "ENDORSE_PLAYER_AS_CONFIRMED_CORE",
+        "rationale_short": "Once the Seer clears a player, that player is part of the 'Confirmed Core'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_confirmed_core == true && player_has_no_counter_claim == true",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "Anyone attacking the Core without a counter-claim is a high-probability Wolf",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 11,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=11"
+  }
+}

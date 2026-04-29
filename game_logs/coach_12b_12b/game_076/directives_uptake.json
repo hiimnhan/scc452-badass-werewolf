@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "076",
+  "directives_source_game_id": "075",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "questioned_by_players",
+        "directive_action": "REMAIN_FIRM_AND_INCLUSIVE",
+        "directive_rationale": "remain firm but inclusive to avoid giving the pack a narrative to weaponize",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang claimed Seer and cleared Nhan. When Cong and Nhan questioned the claim and requested a specific investigation of Riley, Hoang responded by calling Cong's insistence a 'clear attempt to stifle investigation' and voted to exile Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not remain inclusive; he became adversarial toward the players questioning him and voted to exile Cong for doing so."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_revealed_and_confirmed",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is revealed and confirmed, they are your absolute priority for protection every single night",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan protected Hoang during the Night 2 actions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang revealed as Seer in Round 1; Nhan protected him in Round 2."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "RALLY_AROUND_CLEAR",
+        "directive_rationale": "When a Seer provides a clear, the village must rally around that core",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin explicitly stated trust in the clear ('I will trust this for now'), but Nam and the other villagers focused on the behavior of the Seer and Jin rather than rallying around Nhan.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin followed the directive, but other villagers (Nam) did not rally around the clear, focusing instead on the social dynamics of the claim."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_about_seer_tone_or_behavior",
+        "directive_action": "PRIORITIZE_MECHANICAL_DATA",
+        "directive_rationale": "Do not debate the Seer's 'tone' or 'behavior' over mechanical data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam, Cong, and Nhan all explicitly debated Hoang's 'defensive reaction' and 'insistence', prioritizing these behavioral observations over the mechanical clear provided for Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The villagers spent the entire debate discussing the Seer's tone and behavior rather than the mechanical data (Nhan's clear)."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_using_vague_terms_like_obfuscate_or_deflection",
+        "directive_action": "ACCUSE_GENERIC_ACCUSERS",
+        "directive_rationale": "Be wary of 'Generic Accusers' using vague terms like 'obfuscate' or 'deflection'\u2014this is a classic Wolf pack signal",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No players used specific vague terms like 'obfuscate' or 'deflection' to trigger this directive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a player cleared by the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong did not poison Nhan (who was cleared in Round 1); instead, Cong poisoned Hoang.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch did not poison the player cleared by the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison... the Seer themselves",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong used the POISON potion on Hoang, the identified Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong directly contradicted the directive by poisoning the Seer."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_confirmed_wolf_or_high_probability_suspect",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Poison is for confirmed Wolves or high-probability suspects",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong poisoned Hoang after expressing high suspicion of Hoang's Seer claim in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Based on Cong's own stated suspicions in the Round 1 debate, Hoang was a high-probability suspect for Cong."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_vibe_check_only",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "never for a 'vibe' check",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong poisoned Hoang based on behavioral observations (tone and reaction), which constitutes a 'vibe check'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong used the poison based on behavioral suspicions (vibe check) rather than mechanical proof."
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "014",
+  "directives_source_game_id": "013",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_is_occurring",
+        "directive_action": "PRIORITIZE_FACTUAL_RESULTS",
+        "directive_rationale": "Continue prioritizing factual results over behavioral arguments.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong focused strictly on the mechanical contradiction of Jin's claim versus his Seer result regarding Nhan, stating that any attack on this fact is a wolf tactic.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong consistently prioritized the factual result of his investigation over behavioral claims in Round 1 and Round 2."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "When the Seer is alive, you must protect them every single night",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam protected Nhan instead of the Seer (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam failed to protect the Seer in Round 1 despite the Seer being alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_already_cleared_by_seer",
+        "directive_action": "DO_NOT_SAVE_X",
+        "directive_rationale": "You wasted your SAVE potion on a player already cleared by the Seer.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer's result for Nhan was determined during the same night the Witch used the save potion; Nhan was not 'already cleared' prior to the action."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "own_claim_conflicts_with_seer_results",
+        "directive_action": "ALIGN_CLAIM_WITH_SEER",
+        "directive_rationale": "When your claim conflicts with the Seer's results, you become an immediate target for exile.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin doubled down on the claim that saving Nhan proved Nhan was a werewolf, directly contradicting Cong's Seer result and calling Cong a liar.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin actively fought against the Seer's results rather than aligning with them."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Use your potions to protect the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin used the save potion on a Villager instead of the Seer."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "poison_potion_available",
+        "directive_action": "POISON_SUSPECTED_WOLF",
+        "directive_rationale": "Use your potions to... execute suspected wolves.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin was exiled in Round 1 and did not have an opportunity to use a poison potion in subsequent rounds."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "VOTE_AS_SINGLE_UNIT",
+        "directive_rationale": "Once the Seer identifies a wolf, the 'Trusted Core' must vote as a single unit.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang, Nhan (dead), and Nam (Guard) all voted for Riley after Cong's results and the debate identified Riley as a wolf/deflector.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villager-side players (Cong, Nam, Hoang) voted as a single unit to exile Riley in Round 2."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_makes_vibe_based_accusation",
+        "directive_action": "IGNORE_BEHAVIORAL_ARGUMENTS",
+        "directive_rationale": "Do not let 'vibe-based' accusations from wolves... distract you from the Seer's mechanical evidence.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang ignored Riley's behavioral accusations about Nam 'blindly following' others, instead citing that Cong had confirmed Nam as a Villager.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang dismissed Riley's vibe-based argument in favor of the Seer's mechanical confirmation."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_shifts_to_suspicious_behavior",
+        "directive_action": "STICK_TO_SEER_RESULTS",
+        "directive_rationale": "Allowing the debate to shift toward 'suspicious behavior' rather than sticking to the Seer's objective results.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang repeatedly brought the conversation back to the fact that Cong had confirmed Nam's innocence whenever Riley attacked Nam's behavior.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang successfully anchored the debate to the Seer's results despite Riley's attempts to shift to behavioral suspicion."
+      }
+    ]
+  }
+}

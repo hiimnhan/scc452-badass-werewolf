@@ -1,0 +1,184 @@
+{
+  "evaluated_game_id": "040",
+  "directives_source_game_id": "039",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_cleared",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "A Seer's clear is a fact.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan explicitly stated 'Cong is cleared' and 'he is definitively not a werewolf'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan immediately endorsed Cong after clearing him."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_cleared",
+        "directive_action": "DEFEND_X",
+        "directive_rationale": "Avoid 'The Pivot.' Once you clear someone, they are part of the 'Village Core.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan maintained the clear of Cong throughout Round 1, even while under attack by Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan stood by the clear of Cong."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_outside_village_core_and_destabilizing",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Focus your attacks on those outside that core who attempt to destabilize it.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan accused Nam of being disruptive and using wolf tactics to sow discord.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan targeted Nam, who was attacking the Seer and the cleared player."
+      },
+      {
+        "directive_id": "SEER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_mirroring_majority",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan did not challenge anyone for mirroring the majority."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your primary mission is to protect the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan (the Seer) in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer as directed."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_mirroring_majority",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not challenge any player for mirroring the majority."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "The Witch used a save potion on a Villager rather than reserving it for the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the SAVE potion on Nhan (the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch saved the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_confirmed_clear",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "The Witch attacked a confirmed clear in Round 1.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No poison action was recorded for Nam in the night logs."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_mirroring_majority",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nam did not challenge anyone for mirroring the majority."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clear_provided",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "Prioritize 'Mechanical Truth' over 'Behavioral Logic.' A Seer's clear is a fact.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin endorsed the clear by stating that Nam's attack on Nhan after the clear was a wolf tactic.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin accepted the clear and defended the Seer based on it."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clear_provided",
+        "directive_action": "IGNORE_SUSPICIOUS_BEHAVIOR_OF_CLEAR",
+        "directive_rationale": "Never allow gut feelings to override hard data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin did not express any suspicion toward Cong after Nhan cleared him.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin ignored any potential suspicion and treated Cong as clear."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_and_clears_identified",
+        "directive_action": "ESTABLISH_TRUSTED_CIRCLE",
+        "directive_rationale": "The village failed to establish a trusted circle (Seer + Clears).",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang voted with the Seer and the cleared player to exile Nam, effectively operating as a trusted group in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers aligned with the Seer and the clear in the first round."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_mirroring_majority",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "Do not mistake agreement for innocence. Analyze who is providing evidence versus who is simply following the crowd.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The villagers did not challenge anyone for mirroring the majority."
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "039",
+  "directives_source_game_id": "038",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing 'Hard-Info'",
+        "directive_action": "BE_FIRM",
+        "directive_rationale": "When providing 'Hard-Info,' be firm; your results are the only objective truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'The Seer has confirmed Nhan is clear. This is a verifiable fact.' and later voted for Jin, citing Jin's attacks on the Seer as highly suspicious.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong presented the clear on Nhan as a 'verifiable fact' and maintained his position despite Jin's opposition."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "selecting target to protect",
+        "directive_action": "PROTECT_SEER_OR_CONFIRMED_CLEAR",
+        "directive_rationale": "Never protect anyone other than the Seer or a confirmed clear.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Nhan, who had been investigated by the Seer and confirmed as not a wolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam protected Nhan, who was a confirmed clear."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "WITHHOLD_ROLE_REVEAL",
+        "directive_rationale": "You committed a fatal error by claiming the Witch role in Round 1 to contradict the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin argued that Cong's behavior was suspicious and accused Nhan and Nam of coordinated efforts, but did not claim to be the Witch.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin did not reveal the Witch role during the Round 1 debate."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "need_to_justify_kill OR need_to_save_seer",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "In the future, only claim Witch if you have a kill you need to justify or to save the Seer.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch (Jin) was exiled in Round 1 before any need to justify a kill or save the Seer arose."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "exiled_player_was_wolf",
+        "directive_action": "EXAMINE_VOTE_PUSHERS_VS_FOLLOWERS",
+        "directive_rationale": "When a Wolf is exiled, do not trust the others who voted for them blindly; examine who pushed the vote and who just followed.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The only player exiled before the game ended was Jin (Witch) and Nam (Guard). No Werewolf was exiled."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_mechanical_contradictions_without_evidence",
+        "directive_action": "PRIORITIZE_SEER_DATA",
+        "directive_rationale": "when a player like the Villager in Round 3 attacks the Seer's 'mechanical contradictions' without evidence, recognize this as gaslighting and prioritize the Seer's data over the attacker's noise.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) stated that Cong's (Seer) accusations were a 'blatant attempt to deflect' and claimed Cong 'offers no verifiable evidence,' mirroring the attacks on the Seer's validity.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not prioritize the Seer's data; instead, Nhan attacked the Seer's credibility and claimed the Seer was a Wolf."
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "evaluated_game_id": "030",
+  "directives_source_game_id": "029",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue to be the information core",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated: 'Cong has been confirmed not a werewolf. I investigated him last night.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan revealed his investigation result for Cong immediately in Round 1 debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_findings == True",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "ensure the village understands that attacking your findings is a red flag for wolf behavior",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After Nam called Nhan's claim 'demonstrably false', Nhan voted for Nam, stating Nam's 'fabricated claim and aggressive accusations... strongly suggest he is a wolf'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan accused Nam of being a wolf after Nam attacked the Seer's investigation findings."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer's life.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer (Nhan) while he was alive in Round 1."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_confirmed_wolf == False",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion based on 'vibes' or suspicion.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use the poison potion.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam did not use the poison potion in Round 1."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_confirmed_wolf == True",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Use it ONLY on players the Seer has confirmed as wolves.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer never confirmed any player as a wolf during the game."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "justifying_vote == True",
+        "directive_action": "AVOID_BEHAVIORAL_ADJECTIVES",
+        "directive_rationale": "Stop using behavioral adjectives like 'suspicious' or 'mirroring' to justify votes.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin justified his vote for Nam by stating 'Nam's behavior is erratic and manipulative.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin used behavioral adjectives ('erratic', 'manipulative') to justify his vote."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear == True",
+        "directive_action": "ENDORSE_X",
+        "directive_rationale": "When the Seer provides a 'Clear,' treat it as an objective fact.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated: 'Nhan claims to be the Seer and cleared Cong. I will await further investigation to validate this claim.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not treat the clear as a fact, but instead stated he would wait for validation."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_or_cleared == True",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "Anyone attacking the Seer or a cleared player is a primary wolf suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "After Nam attacked Nhan's findings and called Nhan a wolf, Jin stated: 'Nam's claim... is a blatant attempt to discredit the Seer... I vote to exile Nam.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin accused Nam after Nam attacked the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_questions_seer_motives == True",
+        "directive_action": "DISREGARD_ARGUMENT",
+        "directive_rationale": "Do not fall for the 'reasonable doubt' trap; questioning the Seer's motives is a classic wolf tactic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang questioned Nhan's claim by saying he would 'await further investigation to validate this claim.'",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No villager specifically engaged with Hoang's doubt in a way that demonstrated they either disregarded or accepted it; they focused on Nam."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_data_available == True",
+        "directive_action": "VOTE_AS_UNIFIED_BLOCK",
+        "directive_rationale": "Vote as a unified block based on Seer data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "The village voted for Nam, but this was based on Nam's attack on the Seer, not the Seer's data (which was a clear for Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The village did not vote based on the Seer's data (Cong being clear); they voted to remove the person attacking the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-006",
+        "directive_phase": "VOTE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "VOTE_AGAINST_SEER_TARGET",
+        "directive_rationale": "The village failed to unify behind the Seer's lead in Round 1",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "The Seer (Nhan) did not target anyone for exile in the debate; he only provided a clear for Cong. The villagers voted for Nam.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer did not provide a target for exile in Round 1, only a 'clear' for Cong."
+      }
+    ]
+  }
+}

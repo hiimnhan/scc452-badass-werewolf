@@ -1,0 +1,184 @@
+{
+  "evaluated_game_id": "059",
+  "directives_source_game_id": "058",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "claiming_a_player_is_confirmed",
+        "directive_action": "REVEAL_INVESTIGATION_EXPLICITLY",
+        "directive_rationale": "explicitly state 'I investigated Cong and he is NOT a wolf' immediately",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'Nhan is confirmed not a werewolf. This is verifiable fact.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong explicitly revealed the investigation result for Nhan immediately during the debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing_investigation_results",
+        "directive_action": "STATE_RESULTS_CLEARLY_AND_IMMEDIATELY",
+        "directive_rationale": "State your results clearly and immediately to prevent the village from turning on you",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong's first message in the debate was 'Nhan is confirmed not a werewolf.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The result was stated clearly and immediately at the start of the debate."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "directive_action": "DEFEND_SELF",
+        "directive_rationale": "Never exile a claiming Power Role unless another player claims that same role",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong did not vote to exile any other player who claimed a power role."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Seer is your primary asset; protect them every single night until they are dead",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Nhan instead of Cong (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was alive, but Nam protected Nhan."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining_save_gt_0",
+        "directive_action": "SAVE_SEER_OR_CRITICAL_POWER",
+        "directive_rationale": "the SAVE potion must be reserved for the Seer or to prevent a critical loss of power",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin used the save potion on Nhan (a Villager) rather than Cong (the Seer)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_was_attacked_last_night",
+        "directive_action": "WITHHOLD_ACCUSATION_WITHOUT_SEER_RESULT",
+        "directive_rationale": "claiming a target is a Wolf without a Seer result is a Wolf tactic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin accused Cong and Hoang of being 'overly eager and coordinated' and later voted to exile Hoang based on behavior.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin did not explicitly claim a specific player was a wolf based on the attack, but did make accusations based on behavior without a Seer result."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "directive_action": "DEFEND_SELF",
+        "directive_rationale": "Never exile a claiming Power Role unless another player claims that same role",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted to exile Hoang, who had not claimed a power role, but did not vote for Cong (the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin did not exile the claiming power role (Cong)."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evaluating_player_suspicion",
+        "directive_action": "IGNORE_VIBE_LOGIC",
+        "directive_rationale": "Stop using 'vibe' logic. Using terms like 'suspicious' or 'aggressive' is a trap",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that Hoang's behavior was 'highly suspect' and 'suggests he's shielding a potential wolf'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan used 'suspect' and behavioral 'vibe' logic to evaluate Hoang."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evaluating_player_suspicion",
+        "directive_action": "TRUST_MECHANICAL_TRUTHS",
+        "directive_rationale": "Only trust Mechanical Truths: role claims and investigation results",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan questioned Cong's Seer claim, stating it 'needs verification' and that Hoang was protecting an 'unsubstantiated Seer claim'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not trust the mechanical truth provided by Cong (the Seer) and instead focused on behavioral patterns."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_has_cleared_a_player",
+        "directive_action": "ENDORSE_CONFIRMED_CORE",
+        "directive_rationale": "If a Seer clears a player, they form a 'Confirmed Core'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan attacked the validity of Cong's clear of Nhan himself, calling it 'unsubstantiated'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan failed to endorse the core; in fact, Nhan questioned the very clear that made them part of that core."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_confirmed_core_without_counter_claim",
+        "directive_action": "ACCUSE_PLAYER_AS_WOLF",
+        "directive_rationale": "anyone attacking that core without a counter-claim is a high-probability Wolf",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Consistent with Nhan's behavior, the 'core' was not established/accepted, so attacking it did not trigger this for other villagers."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "claiming_power_role_and_no_counter_claim_exists",
+        "directive_action": "ABSTAIN_FROM_EXILING_POWER_ROLE",
+        "directive_rationale": "Never exile a claiming Power Role unless another player claims that same role",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Hoang, not Cong (the claiming Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not vote to exile the claiming power role."
+      },
+      {
+        "directive_id": "VILLAGER-006",
+        "directive_phase": "VOTE",
+        "directive_trigger": "claiming_power_role_and_results_are_mechanically_possible",
+        "directive_action": "ABSTAIN_FROM_EXILING_POWER_ROLE",
+        "directive_rationale": "Never exile a claiming Power Role unless... their results are mechanically impossible",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Hoang, not Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not exile the power role."
+      }
+    ]
+  }
+}
