@@ -1,0 +1,104 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Guard
+**Cong:** Witch
+**Nam:** Villager
+**Jin:** Villager
+**Hoang:** Seer
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Hoang.
+• Nhan (Guard) chose to protect Cong.
+• Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Cong (Witch) used SAVE potion on Hoang
+**Night Eliminations:** None
+
+### Day Debate
+**Meg:** Hoang's survival is concerning. We targeted him, and he remains. This suggests he's manipulating the night's events. Jin, your silence is also unsettling. Explain yourself.
+**Nam:** Meg, your immediate accusations of Hoang and Jin are concerning. Accusations without reasoning are a tactic to sow discord, a common wolf strategy. Explain *why* their survival is 'concerning' beyond mere survival.
+**Jin:** Meg's accusations are premature and lack substance. Simply stating someone's survival is 'concerning' isn't reasoning. I remain silent to observe and assess, not to manipulate.
+**Nam:** Meg, your accusations are a diversion. Focusing on Hoang and Jin without a clear justification is a classic wolf tactic to muddy the waters. Let's focus on concrete observations, not manufactured concerns.
+**Hoang:** Meg, your accusations against Jin and myself are unsubstantiated and appear designed to shift focus. Let's prioritize reasoned discussion and concrete observations, rather than speculative claims.
+**Nam:** Meg, your accusations against Jin and Hoang are premature. Focusing on their survival without providing concrete evidence of manipulation is a tactic to distract from your own lack of reasoning.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam's consistent defense of Hoang and Jin, combined with their mirroring arguments, raises serious concerns about coordinated behavior. We need to disrupt potential wolf pairings.
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Meg's accusations against Hoang and Jin lacked concrete reasoning and appear designed to deflect attention. Nam's critique highlighted this flaw. We need logical players, not accusers.
+**Nam** voted for **Meg**
+> Nam voted to exile Meg. Reason: Meg's accusations are unsubstantiated and appear designed to sow discord. We need reasoned discussion, not manufactured concerns.
+**Jin** voted for **Meg**
+> Jin voted to exile Meg. Reason: Meg's accusations against Hoang and myself were baseless and manipulative. She offered no real reasoning, just manufactured 'concerns' to distract from her own lack of justification.
+**Hoang** voted for **Meg**
+> Hoang voted to exile Meg. Reason: Meg's accusations lack reasoning and appear designed to sow discord. Her defensiveness when challenged raises red flags. We need to focus on logical discussion, not manufactured concerns.
+**Riley** voted for **Hoang**
+> Riley voted to exile Hoang. Reason: Hoang's insistence on 'reasoned discussion' after surviving a targeted night feels performative. It’s curious he’s so focused on process when the outcome is so unusual. We must prioritize village safety.
+**Meg** voted for **Jin**
+> Meg voted to exile Jin. Reason: Jin's silence and vague claims of 'observing' are suspicious. He avoids direct engagement and appears to be hiding something. A true villager would be more proactive in identifying threats.
+
+**Day Exiled:** Meg
+---
+
+## Round 2
+**Night Actions:**
+• Riley (Wolf) targeted Hoang.
+• Nhan (Guard) chose to protect Jin.
+• Hoang (Seer) investigated Nam. Nam is NOT a wolf.
+• Cong (Witch) did not use any potions.
+**Night Eliminations:** Hoang
+
+### Day Debate
+**Jin:** Hoang's elimination confirms Meg's targeting. Nhan aggressively defended Meg. Nhan, your loyalty to Meg is deeply concerning. Explain your reasoning.
+**Nam:** Jin, your eagerness to pin this on Nhan is suspicious. You've conveniently shifted blame after Meg's exile. Explain why you're so quick to accuse Nhan, and what evidence beyond defending Meg you have.
+**Jin:** Nam deflects. You attack me for questioning Nhan's unwavering support of Meg, who just targeted Hoang. This is a classic deflection tactic. Nhan and Nam are working together.
+**Nam:** Jin, your accusations are conveniently timed to deflect from your own behavior. You immediately targeted Nhan after Meg's exile, showing no independent thought. Explain your sudden shift in focus.
+**Jin:** Nam's continued attacks on my reasoning, rather than addressing Nhan's defense of Meg, are blatant deflection. Nhan and Nam are protecting each other. I vote Nhan.
+**Cong:** Jin's relentless accusations and redirection tactics are a clear attempt to manipulate this discussion. His eagerness to blame Nhan without presenting concrete evidence is highly suspect.
+
+### Votes
+**Nhan** voted for **Jin**
+> Nhan voted to exile Jin. Reason: Jin's relentless accusations and deflection tactics are designed to mislead. He's actively attempting to shift blame and protect a fellow wolf. Exile Jin to disrupt their coordination.
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin’s relentless accusations and deflection tactics are a clear attempt to manipulate this discussion. His eagerness to blame others without evidence is highly suspect. We must stop this manipulation.
+**Nam** voted for **Jin**
+> Nam voted to exile Jin. Reason: Jin's constant redirection and unfounded accusations are a clear attempt to sow discord and deflect from his own suspicious behavior. He needs to be removed from the discussion.
+**Jin** voted for **Nhan**
+> Jin voted to exile Nhan. Reason: Nhan's unwavering defense of Meg, who targeted Hoang, is deeply suspicious. He deflects from legitimate questioning, indicating a coordinated effort with Nam.
+**Riley** voted for **Nhan**
+> Riley voted to exile Nhan. Reason: Nhan's quietness throughout this discussion, coupled with Nam's immediate defense, feels unsettling. It's curious that he offers no independent assessment, relying solely on others to justify his position.
+
+**Day Exiled:** Jin
+---
+
+## Round 3
+**Night Actions:**
+• Riley (Wolf) targeted Nam.
+• Nhan (Guard) chose to protect Cong.
+• Cong (Witch) did not use any potions.
+**Night Eliminations:** Nam
+
+### Day Debate
+**Nhan:** Riley's silence is concerning. Cong has observed Jin's manipulation; Riley hasn't contributed. I propose we investigate Riley's inactivity. Jin is clearly a wolf, but we need to secure the remaining players.
+**Cong:** Nhan's sudden focus on Riley feels like a deflection. He’s desperately trying to shift blame while avoiding scrutiny of his own unwavering support for Jin.
+**Nhan:** Cong's accusation of deflection is a classic wolf tactic. He's attempting to muddy the waters and distract from Jin's obvious guilt. Riley's silence doesn't equate to wolf behavior, but Cong's sudden shift is highly suspect.
+**Cong:** Nhan's frantic attempts to deflect from his own loyalty to Jin are a clear indicator of his involvement. His accusations against Riley are transparently designed to avoid scrutiny.
+**Nhan:** Cong's vehement defense and accusation of deflection are classic wolf tactics. His sudden shift in focus is designed to distract from Jin's guilt and protect a fellow wolf. I maintain Riley's silence is not inherently suspicious.
+**Cong:** Nhan's escalating defensiveness and blatant redirection towards Riley are textbook wolf behavior. His insistence on Riley's silence being suspicious is a desperate attempt to divert attention from his own loyalty to Jin.
+
+### Votes
+**Nhan** voted for **Cong**
+> Nhan voted to exile Cong. Reason: Cong's sudden attacks and redirection are textbook wolf behavior. He's attempting to deflect from Jin and protect a fellow wolf. We must eliminate him to secure the village.
+**Cong** voted for **Nhan**
+> Cong voted to exile Nhan. Reason: Nhan's behavior has become increasingly erratic and defensive. He's desperately trying to deflect from his loyalty to Jin, a clear sign of wolf involvement.
+**Riley** voted for **Nhan**
+> Riley voted to exile Nhan. Reason: Nhan's increasingly frantic accusations and attempts to redirect blame are concerning. His defensiveness suggests he's hiding something and needs to be investigated further for the village's safety.
+
+**Day Exiled:** Nhan
+---

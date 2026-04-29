@@ -873,6 +873,8 @@ No extra text, no markdown, no code fences.
         for attempt in range(MAX_RETRIES):
             resp = self.call_model(prompt, max_tokens=3000, prepend_strategy=False)
 
+            extracted_strategy = resp.get("strategy", "")
+
             if isinstance(extracted_strategy, str):
                 extracted_strategy = resp.get("strategy", "").strip()
             elif isinstance(extracted_strategy, list):

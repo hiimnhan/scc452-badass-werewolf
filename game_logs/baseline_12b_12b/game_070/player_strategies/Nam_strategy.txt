@@ -1,0 +1,43 @@
+{
+  "Night Phase": [
+    "Prioritize Seer protection. If no Seer, protect the strongest logical reasoner.",
+    "If Witch uses Save, intensely scrutinize the saved player for defensiveness and illogical justifications.",
+    "Re-evaluate protection nightly based on day discussion, prioritizing players demonstrably contributing to wolf identification with verifiable evidence.",
+    "Allow Witch to act freely unless the target is a critical player (Seer or strong reasoner).",
+    "If a protected player acts suspiciously, immediately suspect wolf coordination and re-evaluate protection."
+  ],
+  "Day Discussion": [
+    "Provide a concise summary of night events, focusing on actions and inconsistencies.",
+    "IF a player claims Seer, demand specific, verifiable results and challenge vague explanations.",
+    "IF Witch used Save, demand a detailed explanation and prioritize questioning the saved player. Scrutinize their subsequent behavior.",
+    "Aggressively call out deflection and mirroring, tracking defenders lacking logical reasoning.",
+    "IF multiple players align without logical reasoning, suspect a wolf pack and prioritize investigating group dynamics.",
+    "IF accused of deflection, provide concrete counter-evidence.",
+    "IF a player repeatedly asks leading questions, identify the intent and publicly challenge it.",
+    "IF a player rapidly changes accusation targets, suspect group pressure and document the shifts.",
+    "IF a player attempts to control the Guard’s choices, immediately suspect a wolf and publicly expose the tactic.",
+    "Focus on uncovering patterns of behavior, not isolated incidents."
+  ],
+  "Voting Phase": [
+    "Vote based on observed behavior and reasoning, avoiding bandwagon voting.",
+    "IF Save occurred, prioritize voting out the saved player if they fail to provide a credible explanation. Scrutinize their behavior intensely.",
+    "Scrutinize groups strongly defending a single person without logical reasoning.",
+    "IF a player’s voting pattern contradicts their reasoning, suspect deception.",
+    "Abstain ONLY if genuinely unsure, documenting reasons.",
+    "IF the Witch used Poison, prioritize voting out the target if their explanation is unconvincing.",
+    "Prioritize voting out players repeatedly accusing others without evidence.",
+    "Consider voting for the Guard if their protection choices are illogical or benefit suspicious players.",
+    "Vote out defenders without logical reasoning."
+  ],
+  "Specific Situations": [
+    "IF a player denies being Seer but exhibits Seer-like behavior, scrutinize motives and challenge claims.",
+    "IF a player uses complex language, suspect obfuscation and demand clarity.",
+    "IF a player claims confusion repeatedly, observe behavior for deception.",
+    "IF a player aggressively targets the Witch, suspect they’re removing an information source.",
+    "IF a player claims information but refuses to share, suspect deception.",
+    "IF a player starts a false accusation against a protected player, suspect a wolf and re-evaluate protection.",
+    "IF mirroring of accusations occurs, suspect deflection.",
+    "IF two players consistently defend each other without logical reasoning, suspect a wolf pair.",
+    "IF a player is overly eager to accuse others without substantial reasoning, suspect a wolf."
+  ]
+}

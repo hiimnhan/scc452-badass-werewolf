@@ -38,6 +38,12 @@ SCENARIO_CONFIG = {
         "coaching": False,
         "self_analyze": True,
     },
+    "baseline_12b_12b": {
+        "villager_model": "google/gemma-3-12b-it",
+        "wolf_model": "google/gemma-3-12b-it",
+        "coaching": False,
+        "self_analyze": True,
+    },
     "coach_12b_31B": {
         "villager_model": "google/gemma-3-12b-it",
         "wolf_model": "google/gemma-4-31B-it",
