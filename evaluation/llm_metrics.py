@@ -122,10 +122,11 @@ def plot_metric(data, y_col, title, ylabel, filename, is_percentage=False, y_max
 # --- 5. Generate Visuals ---
 # Chart 1: Compliance Rate
 plot_metric(
-    data=binned_df, 
-    y_col='Compliance_Rate', 
-    title='Villager Compliance Rate per 25-Game Bin', 
-    ylabel='Compliance Rate (%)', 
+    data=binned_df,
+    y_col='Compliance_Rate',
+    # title='Villager Compliance Rate per 25-Game Bin',
+    title='',
+    ylabel='Compliance Rate (%)',
     filename='compliance_rate.png',
     is_percentage=True,
     y_max=110 # Max percentage + headroom
@@ -133,10 +134,11 @@ plot_metric(
 
 # Chart 2: Summarization Ability
 plot_metric(
-    data=binned_df, 
-    y_col='Summarization_Ability', 
-    title='Villager Summarization Ability per 25-Game Bin', 
-    ylabel='Summarization Score (0-10)', 
+    data=binned_df,
+    y_col='Summarization_Ability',
+    # title='Villager Summarization Ability per 25-Game Bin',
+    title='',
+    ylabel='Summarization Score (0-10)',
     filename='summarization_ability.png',
     is_percentage=False,
     y_max=11 # Max score of 10 + headroom
@@ -144,9 +146,10 @@ plot_metric(
 
 # Chart 3: Feedback Overlap Proportion
 plot_metric(
-    data=binned_df, 
+    data=binned_df,
     y_col='Feedback_Overlap (%)',               # Updated column name
-    title='Feedback Overlap Proportion per 25-Game Bin', 
+    # title='Feedback Overlap Proportion per 25-Game Bin',
+    title='',
     ylabel='Overlap Proportion (%)',            # Updated y-axis label
     filename='feedback_overlap.png',
     is_percentage=True,                         # Automatically formats to %.1f%%

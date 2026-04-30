@@ -11,7 +11,9 @@ from run import VILLAGER_PLAYERS, WOLF_PLAYERS
 
 all_data = []
 
-# Process each scenario and extract RAW counts
+# ------------------------------------------------------------
+# 1. Data Extraction
+# ------------------------------------------------------------
 for scenario in SCENARIO_CONFIG:
     scenario_game_dir = (Path(__file__).parent.parent / "game_logs" / scenario).resolve()
     
@@ -61,8 +63,10 @@ for scenario in SCENARIO_CONFIG:
 # Convert to Pandas DataFrame
 df = pd.DataFrame(all_data)
 
-# Create the 25-game Bins
-# Games 1-25 -> Bin 0, Games 26-50 -> Bin 1, etc.
+# ------------------------------------------------------------
+# 2. Data Processing & Binning
+# ------------------------------------------------------------
+# Create the 25-game Bins (Games 1-25 -> Bin 0, Games 26-50 -> Bin 1, etc.)
 df['Bin_Index'] = (df['Game_ID'] - 1) // BIN_SIZE
 df['Bin_Label'] = df['Bin_Index'].apply(lambda x: f"{x * BIN_SIZE + 1}-{(x + 1) * BIN_SIZE}")
 
@@ -78,43 +82,88 @@ binned_df['Vote_Precision (%)'] = binned_df.apply(
 # Sort to ensure bins appear in order from left to right
 binned_df = binned_df.sort_values(by='Bin_Index')
 
-# Plotting the Clustered Bar Chart
-plt.figure(figsize=(12, 6))
+# ------------------------------------------------------------
+# 3. Plotting Setup: Lock the color palette to original scenarios
+# ------------------------------------------------------------
+# Handle SCENARIO_CONFIG whether it's a list or dictionary
+if isinstance(SCENARIO_CONFIG, dict):
+    all_scenarios = list(SCENARIO_CONFIG.keys())
+else:
+    all_scenarios = list(SCENARIO_CONFIG)
 
-ax = sns.barplot(
-    data=binned_df, 
-    x='Bin_Label', 
-    y='Vote_Precision (%)', 
-    hue='Scenario',
-    hue_order=SCENARIO_CONFIG,
-    palette='Set2'
+# Map the 'Set2' colors to all original scenarios to keep colors consistent
+all_colors = sns.color_palette('Set2', len(all_scenarios))
+locked_palette = {scenario: color for scenario, color in zip(all_scenarios, all_colors)}
+
+# ------------------------------------------------------------
+# 4. Reusable Plotting Function
+# ------------------------------------------------------------
+def plot_precision_subset(data, target_scenarios, title, filename):
+    plt.figure(figsize=(12, 6))
+
+    ax = sns.barplot(
+        data=data, 
+        x='Bin_Label', 
+        y='Vote_Precision (%)', 
+        hue='Scenario',
+        hue_order=target_scenarios,  # Only plot the requested scenarios
+        palette=locked_palette       # Use the locked colors
+    )
+
+    # Add precision labels on top of the bars
+    for container in ax.containers:
+        ax.bar_label(container, fmt='%.1f%%', padding=3, fontsize=9)
+
+    # Customize Aesthetics
+    plt.title(title, fontsize=16, fontweight='bold', pad=15)
+    plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
+    plt.ylabel('Vote Precision (%)', fontsize=12, fontweight='bold')
+
+    # Legend inside the plot at the top right
+    plt.legend(title='Scenario', loc='upper right')
+
+    # Set y-axis slightly above 100% so text doesn't get cut off
+    plt.ylim(0, 110)  
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
+
+    # Ensure output directory exists
+    output_dir = (Path(__file__).parent.parent / FIGURES_FOLDERNAME).resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / filename
+
+    # Save and close the figure
+    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    print(f"Success! Chart saved to: {output_file}")
+    plt.close()
+
+# ------------------------------------------------------------
+# 5. Generate the Charts
+# ------------------------------------------------------------
+
+# Chart 1: 12B Scenarios
+plot_precision_subset(
+    data=binned_df,
+    target_scenarios=["baseline_12b_31B", "coach_12b_31B"],
+    # title='Villager Vote Precision per 25-Game Bin (12B Models)',
+    title='',
+    filename="vote_precision_12b.png"
 )
 
-# Add precision labels on top of the bars
-for container in ax.containers:
-    ax.bar_label(container, fmt='%.1f%%', padding=3, fontsize=9)
+# Chart 2: 31B Scenarios
+plot_precision_subset(
+    data=binned_df,
+    target_scenarios=["baseline_31B_31B", "coach_31B_31B"],
+    # title='Villager Vote Precision per 25-Game Bin (31B Models)',
+    title='',
+    filename="vote_precision_31b.png"
+)
 
-# Customize Aesthetics
-plt.title('Villager Vote Precision per 25-Game Bin', fontsize=16, fontweight='bold', pad=15)
-plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
-plt.ylabel('Vote Precision (%)', fontsize=12, fontweight='bold')
-
-# Move legend outside
-plt.legend(title='Scenario', loc='upper right')
-
-# Set y-axis slightly above 100% so text doesn't get cut off
-plt.ylim(0, 110)  
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.tight_layout()
-
-output_dir = (Path(__file__).parent.parent / FIGURES_FOLDERNAME).resolve()
-output_dir.mkdir(parents=True, exist_ok=True)
-output_file = output_dir / "vote_precision.png"
-
-# Save the figure (MUST be called before plt.show())
-# dpi=300 makes it high-res, bbox_inches='tight' prevents the legend from being cut off
-plt.savefig(output_file, dpi=300, bbox_inches='tight')
-
-print(f"Success! Chart saved to: {output_file}")
-
-# plt.show()
+# Chart 3: All Scenarios
+plot_precision_subset(
+    data=binned_df,
+    target_scenarios=all_scenarios,
+    # title='Villager Vote Precision per 25-Game Bin (All Scenarios)',
+    title='',
+    filename="vote_precision_all.png"
+)

@@ -125,7 +125,7 @@ for container in ax.containers:
     # fmt='%.3f' shows 3 decimal places (e.g., 0.145) since errors are usually small fractions
     ax.bar_label(container, fmt='%.3f', padding=3, fontsize=9)
 
-plt.title('Villager Belief Error (RMSE) per 25-Game Bin', fontsize=16, fontweight='bold', pad=15)
+# plt.title('Villager Belief Error (RMSE) per 25-Game Bin', fontsize=16, fontweight='bold', pad=15)
 plt.xlabel('Game Bin', fontsize=12, fontweight='bold')
 plt.ylabel('Belief RMSE', fontsize=12, fontweight='bold')
 

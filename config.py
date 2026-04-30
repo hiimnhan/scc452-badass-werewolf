@@ -20,7 +20,9 @@ MODEL_PROVIDERS = {
     "liquid/lfm-2-24b-a2b": ChatOpenAI,
     "zai-org/GLM-4.7-Flash": ChatOpenAI,
     "nvidia/nemotron-3-super-120b-a12b:free": ChatOpenAI,
-    "o3-mini": ChatOpenAI
+    "o3-mini": ChatOpenAI,
+    "openai/gpt-oss-120b": ChatOpenAI,
+    "openai/gpt-oss-20b": ChatOpenAI,
 }
 
 LLM_BASE_CONFIG = {
@@ -32,15 +34,21 @@ LLM_BASE_CONFIG = {
 # ============================================================
 
 SCENARIO_CONFIG = {
+    # "baseline_12b_12b": {
+    #     "villager_model": "google/gemma-3-12b-it",
+    #     "wolf_model": "google/gemma-3-12b-it",
+    #     "coaching": False,
+    #     "self_analyze": True,
+    # },
+    # "coach_12b_12b": {
+    #     "villager_model": "google/gemma-3-12b-it",
+    #     "wolf_model": "google/gemma-3-12b-it",
+    #     "coaching": True,
+    #     "self_analyze": True,
+    # },
     "baseline_12b_31B": {
         "villager_model": "google/gemma-3-12b-it",
         "wolf_model": "google/gemma-4-31B-it",
-        "coaching": False,
-        "self_analyze": True,
-    },
-    "baseline_12b_12b": {
-        "villager_model": "google/gemma-3-12b-it",
-        "wolf_model": "google/gemma-3-12b-it",
         "coaching": False,
         "self_analyze": True,
     },

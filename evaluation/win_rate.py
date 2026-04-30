@@ -63,7 +63,7 @@ for container in ax.containers:
     ax.bar_label(container, fmt='%.1f%%', padding=3, fontsize=9)
 
 # Customize the aesthetics
-plt.title('Villager Win Rate per 25-Game Bin by Experiment', fontsize=16, fontweight='bold', pad=15)
+# plt.title('Villager Win Rate per 25-Game Bin by Experiment', fontsize=16, fontweight='bold', pad=15)
 plt.xlabel(GAME_BIN_AXIS_NAME, fontsize=12, fontweight='bold')
 plt.ylabel(WIN_RATE_AXIS_NAME, fontsize=12, fontweight='bold')
 
