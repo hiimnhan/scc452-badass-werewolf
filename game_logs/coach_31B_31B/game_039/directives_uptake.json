@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "039",
+  "directives_source_game_id": "038",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "Continue providing clear clears to narrow the suspect pool.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong revealed that he investigated Nhan and that Nhan was not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed his investigation result in Round 1 as directed."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "exiled_player_was_wolf == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "protecting the Seer in Round 2 after the first wolf was exiled prevented a game-ending loss.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Guard) chose to protect Cong (Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Meg (a wolf) was exiled in Round 1, the Guard protected the Seer in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_protected_by_guard == true",
+        "directive_action": "WITHHOLD_SAVE_POTION",
+        "directive_rationale": "Witch used the SAVE potion on a player who was already protected by the Guard in Round 1, resulting in a wasted resource.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on Cong, who was also protected by Nam (the Guard).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch used the save potion on a player who was already protected by the Guard, contradicting the directive to withhold it."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "pushing_aggressive_accusation == true",
+        "directive_action": "MODERATE_AGGRESSION",
+        "directive_rationale": "your aggressive push can sometimes look like a wolf 'bus' to undecided villagers.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin demanded immediate role claims from all players and stated that any hesitation would be treated as a wolf signal.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch maintained a highly aggressive tone, demanding immediate claims and threatening targets, rather than moderating aggression."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_and_guard_aligned_structural_push == true",
+        "directive_action": "VOTE_WITH_POWER_ROLES",
+        "directive_rationale": "when the Seer and Guard are aligned, trust their structural push over a gut feeling about 'aggression.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Meg, aligning with the Seer (Cong) and the Guard (Nam).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang voted consistent with the structural push provided by the Seer and Guard."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "USE_BIDDING_SYSTEM_FOR_SPEAKING_SLOT",
+        "directive_rationale": "use the bidding system to secure high-priority speaking slots during the debate to force role claims before wolves can craft a narrative.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang spoke after Meg, Cong, and Jin; there is no evidence of a bidding system being used in the record.",
+        "verdict": "IGNORED",
+        "verdict_notes": "There is no mention or evidence of a bidding system being employed by the Villagers in the game record."
+      }
+    ]
+  }
+}

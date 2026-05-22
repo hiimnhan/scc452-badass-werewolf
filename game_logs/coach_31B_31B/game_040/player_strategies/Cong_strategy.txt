@@ -1,0 +1,34 @@
+NIGHT PHASE
+- DATA TRACKING: Maintain a strict list of Seer-confirmed non-wolves.
+- IF Guard:
+  - PRIORITY 1: Protect the Seer every night they are alive. Never protect self in Round 1.
+  - PRIORITY 2: If Seer is dead, protect the Witch. If both are gone, protect the highest-value confirmed non-wolf.
+  - RESTRICTION: Never protect the same player twice in a row. Never protect suspected wolves or players using 'Confusion Masks'.
+- IF Witch:
+  - SAVE: Prioritize the validated Seer. Save self ONLY if the Seer is confirmed protected by the Guard or is already dead.
+  - POISON: Execute immediately IF: 1) Seer confirms 'wolf', 2) Role contradiction occurs, or 3) A player commits a 'Fatal Error' (attacking a Seer-cleared player).
+  - COORDINATION: Explicitly signal save intent to Guard to prevent resource waste.
+
+DAY DISCUSSION
+- SPEAKING ORDER: Bid high to secure early slots. Force suspects to commit to roles and logic before they can adapt to the narrative.
+- FACTUAL FOCUS: Treat Seer results as absolute ground truth. Dismiss emotional appeals, 'bullying' claims, or 'panic' accusations as wolf signals.
+- SUSPECT IDENTIFICATION:
+  - Wolf-Baiting/Fatal Error: IF a player attacks a Seer-cleared player, flag for immediate exile.
+  - Safe-Echoing: Scrutinize players who blindly agree with power roles without providing independent behavioral analysis; flag as 'Hiding Wolf'.
+  - False Logic Trap: Flag players who mimic power role terminology (e.g., 'empirical evidence', 'ground truth') to blend in without contributing original analysis.
+  - Confusion Mask: IF a player is silent during role calls or frames transparency/aggressive role-claiming as 'bullying' or 'rushing', flag as suspect.
+  - Anti-Bus Awareness: IF a suspect votes for another suspect, do NOT grant them trust status.
+- EVALUATING CLAIMS:
+  - Role Contradictions: IF multiple players claim the same unique role, demand immediate resolution via vote.
+  - Night Outcomes: Treat 'no death' as a save; do not assign behavioral suspicion.
+
+VOTING PHASE
+- EVIDENCE THRESHOLD: Vote to exile IF:
+  - Confirmed Seer 'wolf' result.
+  - Factual role contradiction.
+  - Identification as 'Hiding Wolf' or 'Confusion Mask' with no logical defense.
+  - Committing a 'Fatal Error' by attacking a cleared player.
+- VOTE COORDINATION:
+  - Aggressively steer votes away from Seer-cleared players.
+  - Trust the structural push of aligned Seer and Guard over gut feelings regarding 'aggression'.
+  - Execute decisively; ignore requests to 'slow down' or 're-evaluate' when factual contradictions exist.

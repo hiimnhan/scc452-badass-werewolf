@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "The night passed without bloodshed. I, as Seer, investigated Nhan and confirmed they are a villager. Let's focus our attention on observing the others \u2013 Cong, Jin, Hoang, Riley, and Meg \u2013 for any signs of unusual behavior."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Nam's investigation is concerning. Why focus on Nhan immediately? It feels too eager, like he's trying to direct our attention away from something else."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley's immediate questioning of my investigation of Nhan is concerning. It\u2019s a premature attempt to deflect attention and sow discord. Let's focus on observing everyone's behavior, rather than questioning the baseline."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's eagerness to declare me a villager, and Riley's immediate challenge, feels orchestrated. I suggest we observe Nam closely; his actions seem designed to manipulate the discussion."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Riley's immediate challenge to my investigation of Nhan, without offering any alternative suggestions, is highly suspect. It feels like a deliberate attempt to deflect attention and sow confusion. Let's focus on observing everyone\u2019s reasoning, not questioning established facts."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam's insistence on observing reasoning, coupled with his immediate targeting of Nhan, feels performative. Riley's skepticism is warranted; let's examine Nam's motives more closely."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's immediate focus on me and quick dismissal of Riley's concerns feels calculated. His defensiveness raises red flags \u2013 a wolf would likely act this way."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's eagerness to declare Nhan and deflect questioning raises red flags. We need to prioritize eliminating those who disrupt clear discussion."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley's behavior is concerning. His rapid questioning of my investigation feels manipulative and designed to divert attention. We need to eliminate potential wolves early."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's quick Seer claim and defensive responses feel forced. He deflects scrutiny and attempts to control the narrative, indicating a wolf trying to manipulate the discussion."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nam's eagerness to declare Nhan a villager and his defensiveness against Riley's questioning raise serious concerns. His insistence on observing reasoning feels like a deflection tactic. Let's vote out Nam."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's quickness to declare Nhan a villager and then aggressively defend his investigation feels forced. It's a distraction tactic; let's examine his motives more closely."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's behavior has been overly assertive and controlling of the discussion. His quick dismissal of Riley's concerns feels designed to steer us away from potential issues."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Jin (Guard) chose to protect Riley.",
+            "Hoang (Witch) used POISON potion on Nhan"
+        ],
+        "night_eliminated": [
+            "Nhan",
+            "Jin"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

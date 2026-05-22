@@ -1,0 +1,31 @@
+{
+  "Night Phase:\n": [
+    "Protect the Seer first, then the Witch, then a Villager. Prioritize protecting power roles to maintain information flow.",
+    "If no Seer or Witch is alive, protect the player who has provided the most verifiable information during the day phase.",
+    "Avoid protecting the same player consecutively to maximize protection coverage."
+  ],
+  "Day Discussion Phase:\n": [
+    "Focus solely on verifiable claims and outcomes. Disregard subjective observations about tone or demeanor.",
+    "IF a player claims Seer, demand a specific, verifiable lead from a previous round. Evaluate its implications. Cross-reference with previous events. If no lead is provided, view them with extreme suspicion.",
+    "IF multiple players claim Seer, prioritize the player providing the most verifiable and actionable information. Scrutinize claims that contradict previous Seer results.",
+    "IF a 'Wolf Pack Vote' emerges (multiple players using similar justifications), identify the ringleader – the one initiating the vote and scrutinize them first.",
+    "Resist 'pile-on' voting. Pause and evaluate if the narrative is wolf-driven. Actively question justifications used in the pile-on.",
+    "If a player uses vague terms like 'convenient,' 'swift,' or 'orchestrated' to attack another player without specific evidence, view them with HIGH suspicion. This is a common wolf tactic.",
+    "If a player immediately questions a confirmed innocent’s claim, view that player with HIGH suspicion. This is a deflection tactic.",
+    "If a player's actions contradict a confirmed Seer's investigation, vote them out IMMEDIATELY."
+  ],
+  "Voting Phase:\n": [
+    "Base votes SOLELY on validated information and logical reasoning. Avoid bandwagon voting.",
+    "IF a 'Wolf Pack Vote' is detected, prioritize voting for the suspected ringleader.",
+    "IF the Seer has provided a verifiable lead, prioritize voting for anyone contradicting that lead.",
+    "IF the Guard has protected a player, assess if that protection aligns with village interests. Question the Guard's judgment if they protected a suspected wolf.",
+    "If a player votes against a confirmed Seer's lead, vote them out.",
+    "Do not vote based on 'vibes' or accusations without evidence."
+  ],
+  "Specific Situations:\n": [
+    "IF a player claims to be a power role (Seer/Witch/Guard) without providing verifiable information, view them with extreme suspicion and actively seek evidence to disprove their claim.",
+    "IF a player consistently votes with others against power roles, analyze their motivations and potential wolf affiliation. Look for echo-chamber behavior.",
+    "IF a 'clear' player (confirmed by Seer) votes to exile the Seer, vote the 'clear' player out immediately. This is a critical contradiction.",
+    "Track the 'Narrative Leader'. Identify who is steering the vote using emotional arguments. Prioritize voting for the Narrative Leader."
+  ]
+}

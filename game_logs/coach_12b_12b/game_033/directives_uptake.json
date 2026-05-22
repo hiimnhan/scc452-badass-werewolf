@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "033",
+  "directives_source_game_id": "032",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_ignoring_confirmed_innocent",
+        "directive_action": "ASSERT_AUTHORITY",
+        "directive_rationale": "You must be more assertive; any player attacking a confirmed innocent is a wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam asserted his role and confirmed Nhan, then aggressively accused Nhan of being a wolf for questioning the Seer's justification.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam was highly assertive and immediately labeled the player questioning the confirmation as a wolf."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacking_confirmed_innocent",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "any player attacking a confirmed innocent is a wolf.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam accused Nhan (whom he had just cleared) of being a wolf because Nhan demanded justification for the clear.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam accused the player who was challenging the confirmation of being a wolf."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_seer_confirmed_innocent",
+        "directive_action": "DO_NOT_ATTACK_X",
+        "directive_rationale": "Never attack a player the Seer has cleared.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted to exile Nam, the Seer who had cleared Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The directive was to not attack the *confirmed innocent* (Nhan). Jin did not attack Nhan; he attacked Nam (the Seer)."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Your Save potion was wasted on yourself in Round 1; prioritize the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nhan (a Villager), not Nam (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang saved Nhan instead of the Seer as directed."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "suspected_wolf_identified",
+        "directive_action": "POISON_X",
+        "directive_rationale": "In Round 2, you failed to use your poison on a suspected wolf",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the POISON potion on Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang used the poison potion on a player in Round 2."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "fellow_villager_disagreeing",
+        "directive_action": "STOP_ANALYZING_BEHAVIOR",
+        "directive_rationale": "Stop analyzing 'behavior' and follow the Seer's data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang analyzed Nhan's 'aggressive questioning' and 'pattern' of behavior to justify voting for him.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang explicitly analyzed behavioral patterns rather than simply following the Seer's data."
+      },
+      {
+        "directive_id": "WITCH-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_data_available",
+        "directive_action": "VOTE_ACCORDING_TO_SEER",
+        "directive_rationale": "follow the Seer's data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Hoang voted for Nhan. Nam (Seer) had confirmed Nhan was NOT a wolf.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang voted against the player the Seer had cleared as innocent."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_confirmed_innocent",
+        "directive_action": "VOTE_BLOCK_WITH_SEER",
+        "directive_rationale": "Always vote as a block with the Seer's findings, regardless of how 'suspicious' a player's tone seems.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (Villager) voted to exile Nam (the Seer), while Nam voted to exile Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not vote with the Seer; he voted to exile the Seer."
+      }
+    ]
+  }
+}

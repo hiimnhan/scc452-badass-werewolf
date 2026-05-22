@@ -1,0 +1,114 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "village_turns_on_your_clear",
+        "action": "EMPHASIZE_ATTACKERS_ATTACKING_SEER_VISION",
+        "rationale_short": "when the village turns on your clear, emphasize that the attackers are effectively attacking the Seer's vision",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_same_generic_adjectives_to_describe_suspect",
+        "action": "ACCUSE_WOLF_PACK_COORDINATION",
+        "rationale_short": "When multiple players use the same generic adjectives to describe a suspect, they are likely a wolf pack coordinating a bandwagon",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "VOTE",
+        "trigger": "target_is_seer_or_seer_clear",
+        "action": "VOTE_AGAINST_X_ONLY_IF_CONTRADICTORY_HARD_EVIDENCE",
+        "rationale_short": "Never vote against the Seer or their clears unless you have contradictory hard evidence",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_same_generic_adjectives_to_describe_suspect",
+        "action": "ACCUSE_WOLF_PACK_COORDINATION",
+        "rationale_short": "When multiple players use the same generic adjectives to describe a suspect, they are likely a wolf pack coordinating a bandwagon",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "WITHHOLD_ROLE_REVEAL",
+        "rationale_short": "you claimed your role publicly on Day 1, removing your utility and making yourself a target",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "target_is_claiming_seer",
+        "action": "DO_NOT_POISON_X",
+        "rationale_short": "Never poison a claiming Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_same_generic_adjectives_to_describe_suspect",
+        "action": "ACCUSE_WOLF_PACK_COORDINATION",
+        "rationale_short": "When multiple players use the same generic adjectives to describe a suspect, they are likely a wolf pack coordinating a bandwagon",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "basis_is_vibes_or_suspicious_behavior",
+        "action": "ABSTAIN_FROM_VOTING",
+        "rationale_short": "Stop voting based on 'vibes' or 'suspicious behavior'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "ENDORSE_X_AS_ANCHOR",
+        "rationale_short": "When a Seer provides a clear, that player is your anchor",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_cleared_player",
+        "action": "ACCUSE_X_AS_PRIMARY_SUSPECT",
+        "rationale_short": "Attacking a Seer-cleared player... anyone doing this should be your primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "debate_focuses_on_seer_tone_instead_of_data",
+        "action": "REFOCUS_ON_SEER_DATA",
+        "rationale_short": "Do not fall for the 'Skepticism Trap' where you debate a Seer's tone instead of using their data",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_use_same_generic_adjectives_to_describe_suspect",
+        "action": "ACCUSE_WOLF_PACK_COORDINATION",
+        "rationale_short": "When multiple players use the same generic adjectives to describe a suspect, they are likely a wolf pack coordinating a bandwagon",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 12,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=12"
+  }
+}

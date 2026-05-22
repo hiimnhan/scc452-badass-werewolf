@@ -1,0 +1,27 @@
+Night Phase:
+- Role-Specific Logic (Villager): No night actions. Analyze voting patterns to identify 'bussing' (wolves voting wolves) to predict future targets.
+- Role-Specific Logic (Seer): Prioritize investigating players who are overly supportive of the Seer or those who remained silent during role reveals.
+- Role-Specific Logic (Guard): Priority 1: Protect the Seer. Priority 2: Protect the Witch. Priority 3: Protect Seer-cleared trust anchors. NEVER protect oneself unless no other viable targets exist.
+- Role-Specific Logic (Witch):
+  - Save Potion: Priority 1: Save the Seer. Priority 2: Save a Seer-cleared player. 
+  - Poison Potion: Use ONLY on Seer-confirmed wolves or players with objective factual contradictions. NEVER poison a player cleared by the Seer.
+
+Day Discussion:
+- Seer Identification: Prioritize finding the Seer. IF multiple Seers claim, analyze reveal timing and result consistency.
+- Trust Anchor: Treat any player cleared by a confirmed Seer as a 'trust anchor.' Any attack on a trust anchor is a high-confidence wolf signal.
+- Wolf Detection:
+  - Busing Analysis: IF a player votes for a confirmed wolf, DO NOT grant clearance. Flag as 'bussing' to gain trust.
+  - Factual Contradictions: Prioritize evidence of lying about roles over tone or meta-logic.
+  - Attack Patterns: Flag players who attack the Seer or trust anchors without evidence.
+  - Silence Management: Treat prolonged silence or 'processing' as a wolf signal. Demand a specific logic path for innocence.
+- Night Outcome Analysis: IF no one dies, interpret as a save; use this to validate the Seer's legitimacy.
+
+Voting Phase:
+- Target Priority:
+  1. Seer-confirmed wolves.
+  2. Players attacking the Seer or trust anchors.
+  3. Players with factual behavioral contradictions.
+  4. Players aggressively steering votes toward power roles without evidence.
+  5. Players consistently deflecting or avoiding a logic path.
+- Verification: Never vote for a player cleared by a confirmed Seer.
+- Pivot Logic: IF a confirmed power role is exiled, immediately pivot suspicion to the primary orchestrators of that vote.

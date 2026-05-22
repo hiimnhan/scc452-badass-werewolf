@@ -1,0 +1,171 @@
+{
+  "evaluated_game_id": "075",
+  "directives_source_game_id": "074",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_began_to_doubt_seer",
+        "directive_action": "BE_FIRM_PROVIDE_DATA",
+        "directive_rationale": "Be firm, provide your data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that Cong was confirmed Not Wolf and argued that Hoang's insistence on a role reveal was a deliberate attempt to sow discord and undermine verifiable information.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan remained firm and repeatedly cited the data (Cong's clearance) when Hoang questioned their legitimacy."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "players_use_generic_language_like_manipulative_or_erratic",
+        "directive_action": "CALL_OUT_LANGUAGE",
+        "directive_rationale": "call out the 'generic' language (e.g., 'manipulative', 'erratic') used by the Wolves",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan did not call out the specific language used by Nam, Riley, or Meg (who used terms like 'classic wolf behavior', 'disruptive', 'obfuscate') during the debate; Nhan focused on the logic of the clear.",
+        "verdict": "IGNORED",
+        "verdict_notes": "While wolves used generic descriptors like 'disruptive' and 'obfuscate' in their voting reasons, Nhan did not specifically call out the language itself."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple_players_pivot_to_target_seer_with_vague_rhetoric",
+        "directive_action": "CHALLENGE_COORDINATED_ATTACK",
+        "directive_rationale": "When multiple players suddenly pivot to target the Seer using the same vague rhetoric, it is a coordinated Wolf attack.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan identified Hoang's questioning as an attempt to sow discord but did not explicitly challenge the coordinated nature of the attack by Nam, Riley, and Meg, as the pivot occurred primarily during the voting phase.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan challenged Hoang, but did not address the broader coordinated pivot of the other players."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer. Protecting a random player or a suspect when the Seer is alive is a waste of a night action.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_revealed_self",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer reveals themselves, they are the only target that matters for protection.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Hoang.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan had effectively revealed as Seer in Round 1, but Cong protected Hoang in Round 2 instead."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "NEVER use the poison potion on a player who has been cleared by the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the poison potion on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong had been explicitly cleared by Nhan in Round 1, yet Nam poisoned him in Round 2."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_mirroring_seer_logic",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "NEVER use the poison potion on a player... [who] is mirroring the Seer's logic.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the poison potion on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong mirrored Nhan's logic exactly in Round 1, arguing that attacking a clear is illogical, yet Nam poisoned him."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_clears",
+        "directive_action": "SUPPORT_CLEARS",
+        "directive_rationale": "Your role is to support the Seer's clears, not to 'test' the village.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam poisoned the only player the Seer had cleared (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam actively eliminated the Seer's clear instead of supporting them."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "hard_data_exists",
+        "directive_action": "STOP_VOTING_BASED_ON_VIBES_OR_MIRRORING",
+        "directive_rationale": "Stop voting based on 'vibes' or 'mirroring' when hard data exists.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Hoang, citing that Hoang's behavior was disruptive and a 'known Wolf tactic'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin followed the data (the clear) by voting for the person attacking the clear, although the reasoning still relied on behavioral 'tactics'."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacking_seer_cleared_player",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "If the Seer clears a player, any person attacking that player is a primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Hoang because Hoang was questioning the Seer's clear of Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin targeted Hoang for attacking the established clear."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "round_num == 1 && target == (seer || cleared_player)",
+        "directive_action": "IDENTIFY_AS_WOLF_BEHAVIOR",
+        "directive_rationale": "In Round 1, voting for the Seer or a cleared player is an automatic signal of Wolf behavior.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Hoang, who was targeting the Seer, rather than voting for the Seer or the cleared player.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin did not vote for the Seer or the cleared player, so the specific trigger for this directive was not met by Jin's own action."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple_players_pivot_to_target_seer_with_vague_rhetoric",
+        "directive_action": "TRUST_SEER_MECHANICAL_TRUTH",
+        "directive_rationale": "Do not follow the momentum; trust the Seer's mechanical truth over the Wolves' behavioral narrative.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin voted for Hoang and trusted that Nhan's clear of Cong was a established fact, ignoring the push to exile Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin resisted the momentum to exile the Seer and instead targeted the person undermining the Seer's data."
+      }
+    ]
+  }
+}

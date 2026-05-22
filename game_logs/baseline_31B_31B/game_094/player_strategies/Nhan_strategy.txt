@@ -1,0 +1,25 @@
+NIGHT PHASE
+- SAVE POTION: Use ONLY IF the target is the confirmed Seer or the most credible logic-driver. IF the Guard likely protected them (indicated by high community trust), prioritize saving a different high-value target to avoid waste.
+- POISON POTION: Use ONLY IF a player is flagged as a high-priority wolf (Priority 1-3) and the Day Vote is unlikely to reach a majority.
+- TARGET TRACKING: Log all deaths and claims. Cross-reference Guard claims with the 'no-consecutive-protection' rule to identify Fabricators.
+
+DAY DISCUSSION
+- POWER ROLE DEFENSE: IF a player discredits a Seer's specific clearance, flag as high-priority wolf signal.
+- PROCESS ATTACK DETECTION: IF a player labels requests for mechanical logic as 'manipulative', 'aggressive', 'reckless', 'pressure', or 'pushing too hard', flag as wolf signal.
+- REDIRECTION DETECTION: IF a player shifts focus from game-state/mechanics to 'vibes', 'tone', 'behavior', or 'manner of questioning', flag as wolf signal.
+- BLENDER DETECTION: IF a player mirrors a leader's terminology without providing independent evidence, flag as wolf signal.
+- FABRICATION DETECTION: IF a player claims a role/action contradicting the game state, flag as immediate wolf.
+- SILENCE PENALTY: IF a player refuses to claim a role or provide logic during their turn, flag as wolf signal.
+- ROLE VERIFICATION: IF multiple Seers claim, prioritize the one whose results correlate with deaths and who avoids Process Attacks.
+- WITCH VERIFICATION: IF a player claims knowledge of a wolf target on a zero-death night without claiming Witch, flag as Fabricator.
+
+VOTING PHASE
+- PRIORITY RANKING:
+  1. Seer-identified wolves.
+  2. Fabricators (direct contradictions of game state).
+  3. Power Role Attackers.
+  4. Process Attackers.
+  5. Redirection specialists.
+  6. Mirroring/Blenders.
+  7. Silent players.
+- DECISIVENESS: Vote for the highest priority target. No abstaining.

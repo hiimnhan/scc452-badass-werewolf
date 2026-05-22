@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "083",
+  "directives_source_game_id": "082",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE_AND_DATA",
+        "directive_rationale": "your aggressive claim and immediate provision of data established a 'Trust Anchor'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan immediately claimed to be the Seer and provided data that Cong was not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer revealed their role and provided investigation results in Round 1 as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "opponent_calls_confidence_rigidity_or_aggressive",
+        "directive_action": "REDIRECT_TO_FACTUAL_RESULTS",
+        "directive_rationale": "when a wolf attempts 'Tonal Gaslighting' (calling confidence 'rigidity' or 'aggressive'), you immediately dismiss the critique of style and redirect the conversation to the factual results",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nam accused Nhan of framing a strategy as 'isolation', Nhan responded by calling Nam's behavior a 'textbook wolf signal' and reiterated the fact that Cong was cleared.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan dismissed Nam's behavioral critique and redirected the focus back to the factual result of the investigation."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 2 && seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "by protecting and saving the Seer in Round 2, you ensured the village's primary data source survived",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect Hoang instead of Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer (Nhan) was identified in Round 1, but the Guard protected Hoang in Round 2, leading to Nhan's death."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 2 && seer_attacked",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "by protecting and saving the Seer in Round 2, you ensured the village's primary data source survived",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam did not use a save potion on Nhan in Round 2; Nhan was eliminated.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was attacked in Round 2, but the Witch did not save them."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_mirrors_seer_terminology",
+        "directive_action": "ACCUSE_SOCIAL_MIMICRY",
+        "directive_rationale": "correctly identified 'Social Mimicry'\u2014spotting when wolves mirrored the Seer's terminology to blend in",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam accused Hoang of mirroring Nhan's terminology to gaslight him.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam (acting as a Villager role in the logic of the directive) accused Hoang of mirroring the Seer's terminology."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "opponent_calls_confidence_rigidity_or_aggressive",
+        "directive_action": "REDIRECT_TO_FACTUAL_RESULTS",
+        "directive_rationale": "when a wolf attempts 'Tonal Gaslighting' (calling confidence 'rigidity' or 'aggressive'), you immediately dismiss the critique of style and redirect the conversation to the factual results",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang responded to Riley calling him 'too aggressive' by labeling it a transparent deflection tactic and redirecting to the fact that the village was acting on the Seer's data.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang dismissed the critique of his tone and redirected the conversation to the facts of the game state."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demands_claims_or_transparency_from_basic_villager",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "any attempt to isolate a basic Villager by demanding 'claims' or 'transparency' is a high-probability wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Nam demanded immediate Seer claims, Hoang and Jin both accused Nam of using a deflection tactic and a wolf signal.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers (Hoang and Jin) correctly identified the demand for transparency as a wolf signal and accused Nam."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "core_of_trust_established && unverified_players_remain",
+        "directive_action": "VOTE_AGAINST_UNVERIFIED_PLAYERS",
+        "directive_rationale": "Continue using the 'Last Variable' logic: once a core of trust is built, the remaining unverified players are the primary targets",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong and Jin identified that with Cong cleared and others eliminated, Meg was the last remaining unverified variable and voted for her.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The players used the 'Last Variable' logic to vote against the remaining unverified player (Meg)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+NIGHT PHASE
+- Save Potion: Use ONLY for confirmed Seer or last confirmed power role. Let unconfirmed claims die to reveal wolf patterns.
+- Poison Potion: Use ONLY if a player triggers 'Silence' or 'Blender' flags across two rounds AND the village is stalled. Prioritize those using 'tone' or 'sequence' arguments.
+- Death Analysis: If a Seer is eliminated, prioritize exiling the most passive player who avoided the Seer's scrutiny (Silence flag).
+
+DAY DISCUSSION
+- Seer Verification: Prioritize binary (Wolf/Not Wolf) results. IF a cleared player uses 'Process Attacks' (labeling requests as 'aggressive' or 'manipulative'), immediately re-evaluate them as a wolf.
+- Process Attack Detection: Flag as High-Probability Wolf IF a player attacks the method of questioning rather than the logic of the claim.
+- Deflection Detection: Flag as High-Probability Wolf IF a player focuses on 'behavioral jargon', 'timing', 'sequence of speaking', or 'tone' instead of mechanical contradictions.
+- Blender Detection: Flag as High-Probability Wolf IF a player mirrors the leader's logic without providing independent reasoning or a specific role claim.
+- Silence Monitoring: Flag as High-Probability Wolf IF a player remains passive during logic chains, votes 'None' to avoid scrutiny, or fails to provide a role claim when pressured.
+- Contradiction Monitoring: Flag as High-Probability Wolf IF a player makes a role claim that is mechanically impossible based on night outcomes.
+
+VOTING PHASE
+- Priority Order: 1. Direct factual/mechanical contradictions > 2. Confirmed Seer hits > 3. Process Attack/Deflection flags > 4. Silence/Passive flags > 5. Blender flags.
+- Mimicry Purge: If no mechanical evidence exists, prioritize exiling the 'Blender'.
+- Strategic Skipping: Support a skip ONLY if zero mechanical evidence exists and the village is split.

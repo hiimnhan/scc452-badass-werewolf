@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "035",
+  "directives_source_game_id": "034",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Excellent early reveal. By providing a clear for a Villager in Round 1, you established a trust anchor",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Seer) was eliminated during the Night phase of Round 1 and did not participate in the Day Debate.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was eliminated before the debate phase began and therefore could not reveal their role."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "providing a clear for a Villager in Round 1",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Seer) was eliminated during the Night phase of Round 1 and did not participate in the Day Debate.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer was eliminated before the debate phase and could not share investigation results."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_actively_contributing_to_logic",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "continue to prioritize clearing players who are actively contributing to the logic flow",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1 Night and never participated in any debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting the Seer is the highest priority",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Guard) chose to protect Cong (himself) instead of Nhan (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Guard protected themselves rather than the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive && save_potion_remaining",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Using the save potion on the Seer... ensured that even a 'Wolf-heavy' night couldn't eliminate the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Witch) did not use any potions during the first night.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch did not use the save potion to protect the Seer, who was subsequently eliminated."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_data",
+        "directive_action": "PERFORM_BEHAVIORAL_ANALYSIS",
+        "directive_rationale": "Always pair the Seer's data with your own behavioral analysis of the suspect",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer was eliminated in Round 1 Night and never provided any data during the debate phases."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "any_state",
+        "directive_action": "REQUEST_ROLE_CALLS",
+        "directive_rationale": "Your aggressive push for transparency and role-calls was the winning factor",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang (Villager) immediately demanded that everyone reveal their roles, stating: 'Everyone reveal your roles immediately. I am a Villager.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang aggressively pushed for role calls at the start of the first debate."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_frames_request_for_clarity_as_aggression",
+        "directive_action": "IDENTIFY_CONFUSION_MASK",
+        "directive_rationale": "You correctly identified 'Confusion Masks'\u2014specifically when wolves framed requests for clarity as 'aggression'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Meg (Wolf) called Hoang's demand for reasoning a 'distraction', Hoang identified this as a 'textbook wolf signal' and Nam explicitly called it a 'Confusion Mask'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers correctly identified the wolf's attempt to frame the request for transparency as a distraction/aggression."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_attacks_cleared_player",
+        "directive_action": "VOTE_AGAINST_X",
+        "directive_rationale": "any player attacking a cleared player... should be exiled immediately as a 'fatal error'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player was officially 'cleared' by the Seer in the public record, so no one was exiled for attacking a cleared player."
+      }
+    ]
+  }
+}

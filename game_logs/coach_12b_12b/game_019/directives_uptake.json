@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "019",
+  "directives_source_game_id": "018",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "cleared_player_attacks_seer",
+        "directive_action": "EXPLAIN_LOGICAL_FAILURE",
+        "directive_rationale": "When a cleared player (Villager) turns against you, do not just vote them out; explain why their skepticism is a logical failure for the village.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The cleared player (Nhan) never attacked the Seer (Cong); instead, Nhan voted with the Seer against Nam in Round 1."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1 && seer_claimed == false",
+        "directive_action": "PROTECT_SEER_CLAIMANT",
+        "directive_rationale": "Protecting a random villager in Round 1 while the Seer is exposed is a strategic error.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The trigger requires the Seer to have not claimed; however, the Guard acts during the Night, and the Seer claims during the following Day. By the time the Seer claimed in Day 1, the Round 1 Night action had already occurred."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_claimed == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is claimed, they are your only target.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Guard) chose to protect Cong (Seer) during the Night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer claimed in Round 1, and the Guard protected him in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_has_no_wolf_behavior && target_not_contradicted_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "never use it on someone who hasn't shown clear werewolf behavior or been contradicted by a Seer.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Witch) used the POISON potion on Cong (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Seer (Cong) had not been contradicted by another Seer, and while some players found him erratic, he was the only claimed Seer. The Witch poisoned him regardless."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_self",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "If the Seer clears you, your sole purpose is to protect the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) defended Cong's claim and voted for Nam, who was questioning the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After being cleared by Cong, Nhan actively supported the Seer and voted against those attacking the Seer's validity."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_cleared_self",
+        "directive_action": "AVOID_QUESTIONING_VALIDATION",
+        "directive_rationale": "Questioning the Seer's 'insistence on validation' is a werewolf tactic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not question the Seer's validation; instead, Nhan attacked Nam for questioning the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan adhered to the directive by not questioning the Seer's process."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "objective_seer_data_available",
+        "directive_action": "IGNORE_VIBES_AND_BEHAVIORAL_CONCERNS",
+        "directive_rationale": "Stop relying on 'vibes' or 'behavioral concerns' when objective Seer data is available.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan ignored behavioral concerns about Cong and focused on the fact that Cong had cleared him, voting Nam for doubting that data.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan prioritized the Seer's data over the 'behavioral concerns' raised by Nam, Hoang, and Jin."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_attacks_seer_clear",
+        "directive_action": "VOTE_AGAINST_ATTACKER",
+        "directive_rationale": "The Seer's 'Clear' is a factual anchor; anyone attacking that anchor is the primary target.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Nam, who had expressed skepticism regarding Cong's claim and the clearance of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan voted against the player (Nam) who was attacking the Seer's clearance."
+      }
+    ]
+  }
+}

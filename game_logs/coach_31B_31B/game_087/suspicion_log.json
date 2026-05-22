@@ -1,0 +1,424 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a wolf via investigation; eliminated."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no data available yet."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no data available yet."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Currently facilitating the discussion by prompting others to respond to the Seer claim. Correctly flagged Meg for providing no original analysis; his focus on logical contribution over blind agreement is a villager-aligned behavior."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no data available yet."
+            },
+            "Meg": {
+                "score": 0.75,
+                "reason": "Agreed with the Seer's claim but provided no original logical analysis; merely echoing the current lead to blend in. Now attempting to divert attention by criticizing Hoang's tone and labeling his observation as a red flag rather than contributing factual deductions."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated. Cleared by Cong's Seer claim."
+            },
+            "Cong": {
+                "score": 0.4,
+                "reason": "Claimed Seer. Investigated Nhan (confirmed not wolf). Proactive in establishing a lead for the village. Now actively pressuring players to provide original logic to avoid passive blending, which aligns with a winning villager strategy."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No data available; baseline suspicion."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "No data available; baseline suspicion. Facilitating discussion by prompting others to respond to Cong's claim. Actively challenging passive agreement to force original logic from the group."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No data available; baseline suspicion."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Claims Villager. Quickly validated Cong's Seer claim and logic without providing independent analysis. When challenged by Hoang, she shifted to defensive deflection, labeling Hoang's questioning as a 'red flag' rather than offering her own logical reasoning for trusting Cong. Now under direct pressure from the Seer to provide original analysis."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1. Confirmed innocent by Cong's Seer claim."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Claimed Seer. Investigated Nhan and found them not a werewolf. Currently an unconfirmed variable acting as the Seer. Actively identifying wolf signals (Quiet Steerer/Deflection) in Meg's behavior."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unconfirmed variable; no data available yet."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Unconfirmed variable. Prompted others to respond to Cong's claim. Actively flagged Meg for echoing the Seer without providing original analysis, which is a key wolf signal."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unconfirmed variable; no data available yet."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Unconfirmed variable. Claims to be a Villager. Echoes Cong's logic and supports the claim without providing original analysis (Quiet Steerer). Attempting to deflect Hoang's observation by labeling it a 'red flag' and questioning his motives rather than providing factual evidence (Deflection). Now flagged by the claimed Seer for prioritizing tone over original analysis."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1. Identified as not a werewolf by Cong's claim."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Stated Nhan was not a werewolf. Actively pushing for logical contributions and flagging Meg's diversionary tactics, which aligns with villager interests."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available yet."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Claimed Villager. Echoed Cong's logic and claim without adding any original analysis. When questioned, she shifted to a defensive tone and attacked the questioning rather than providing factual reasons to trust Cong. Now being flagged by the Seer claimant for diverting the conversation."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Killed night 1. Used by Cong to establish credibility."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Claimed Seer. Uses high-logic terminology ('trust anchor'). High threat due to analytical framing. Now demanding 'original analysis' and labeling others' behavior as 'wolf signals,' attempting to dominate the debate through intellectual pressure."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information yet."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "No information yet."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Prompting others to react to Cong's claim. Acting as a facilitator for the perceived Seer. Pushing for 'actual reasons' and analysis, which aligns with the logical villager pattern. Now clashing with Meg."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow wolf. Effectively blending in by supporting the Seer claim to avoid suspicion. Successfully framing Hoang as overly aggressive."
+            }
+        }
+    },
+    "end_game": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a wolf via investigation; eliminated."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed NOT a werewolf via Seer investigation. Absolute Trust Anchor."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Unknown alignment; no data available yet. Remaining silent despite direct prompts from the Seer and Hoang to provide original logic. This lack of contribution is a strong wolf signal."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Continuing to prioritize logical contributions and flagging non-contributory behavior. Actively reinforcing the Seer's data and pressuring suspects to reveal their logic. Latest statement correctly dismisses 'vibe-based' arguments and enforces the Seer's data as the primary truth."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Unknown alignment; no data available yet. Remaining silent despite direct prompts from the Seer and Hoang to provide original logic. Latest response completely avoids providing logic and instead attacks the Seer and Hoang for being 'paranoid' and 'forcing' logic. This attempt to pivot the debate toward 'vibes' and tone is a critical wolf signal. Now explicitly attacking the Seer, labeling data-driven deduction as 'bullying,' and voting for the Seer's exile. This is a definitive wolf signal."
+            },
+            "Meg": {
+                "score": 0.75,
+                "reason": "Agreed with the Seer's claim but provided no original logical analysis; merely echoing the current lead to blend in. Now attempting to divert attention by criticizing Hoang's tone and labeling his observation as a red flag rather than contributing factual deductions. Exiled."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Eliminated. Cleared by Cong's Seer claim."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claims Seer. Cleared Nam. The fact that no one died last night strongly suggests the wolves targeted him and were blocked by the Guard, significantly increasing the credibility of his claim. He is now actively forcing passive players to provide original logic and correctly identifying Riley's deflection tactics."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "No new data. Now under direct pressure from the Seer and Hoang to explain his reasoning. Failure to provide original logic will increase suspicion of passive blending."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Continues to facilitate logical discussion. Validated Cong's Seer claim and is actively pushing Jin and Riley to commit to a logical position. Correctly identifies and dismisses Riley's deflection and tone-policing, redirecting the village to the factual data provided by the Seer. Behavior is highly consistent with a villager."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "No new data. Now under direct pressure from the Seer and Hoang to explain his reasoning. Latest statement employs deflection and tone-policing; instead of providing logic, he labels the request for data as 'paranoid' and 'forced.' This avoidance of commitment to a logical position strongly suggests wolf behavior. Continued failure to provide a target or logic while attacking the process confirms high suspicion. Now directly identified as the wolf by the Seer due to persistent deflection. Latest move is to label Cong's leadership as 'bullying' and 'control,' attempting to flip the narrative from logic to 'vibes' to discredit the Seer."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Claims Villager. Quickly validated Cong's Seer claim and logic without providing independent analysis. When challenged by Hoang, she shifted to defensive deflection, labeling Hoang's questioning as a 'red flag' rather than offering her own logical reasoning for trusting Cong. Now under direct pressure from the Seer to provide original analysis."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1. Confirmed innocent by Cong's Seer claim."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Confirmed as the wolves' target for the night. Wolves rarely target their own. His claim as Seer is now highly credible. Providing clear data on Nam. Latest statement correctly flags Riley's deflection and redirects the village back to the lack of logical contribution."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed innocent. Investigated by the claimed Seer (Cong) and found not to be a werewolf."
+            },
+            "Hoang": {
+                "score": 0.2,
+                "reason": "Unconfirmed variable. Correctly identified wolf signals in Meg's behavior. Now actively pushing for original logic from unconfirmed variables (Riley and Jin) and supporting the Seer's data. Behavior is consistent with a villager attempting to isolate wolves. Latest statement reinforces this by rejecting tone-based arguments and prioritizing the Seer's data."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Unconfirmed variable. Flagged by Cong and Hoang for providing no original logic, fitting the 'Quiet Steerer' pattern. Latest statement is a clear Deflection signal: labels the request for logic as 'paranoid' and 'forced' rather than providing actual reasoning. Attacking the tone of the debate to deflect from their own lack of contribution. Now being isolated as the primary suspect due to total lack of logical contribution. Confirmed by Cong's latest analysis as attempting to pivot to 'vibes' to avoid providing data. Latest statement doubles down on deflection, attacking the Seer's 'control' and 'overthinking' to avoid presenting any logical case against others."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Unconfirmed variable. Claims to be a Villager. Echoes Cong's logic and supports the claim without providing original analysis (Quiet Steerer). Attempting to deflect Hoang's observation by labeling it a 'red flag' and questioning his motives rather than providing factual evidence (Deflection). Now flagged by the claimed Seer for prioritizing tone over original analysis."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Provided a clear result on Nam. Actively pushing for logic from silent players. No one died last night, suggesting he might be a protected target."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed as not a werewolf by Cong (Seer). Treated as absolute truth."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "Flagged by Cong for providing no original logic. Potential quiet steerer."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Flagged by Cong for providing no original logic. Instead of providing reasoning, Riley attacked the tone of the debate, called the logic 'forced' and 'paranoid', and attempted to frame the push for evidence as 'ganging up'. Now openly attacking the Seer, calling Cong's data-driven approach a 'cover' and attempting to lead a vote against the Seer to deflect suspicion."
+            },
+            "Meg": {
+                "score": 0.8,
+                "reason": "Exiled."
+            }
+        }
+    }
+}

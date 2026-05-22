@@ -1,0 +1,24 @@
+{
+  "Night Phase": [
+    "**Guard:** Protect the Seer *without exception*. If the Seer is eliminated, protect the Witch. Record protection target. No deviations. Prioritize Seer protection above all else.",
+    "**Seer:** Investigate the most suspicious player exhibiting aggressive behavior or attempting to redirect suspicion. Announce 'Not Wolf' immediately and unequivocally. If challenged, repeat: 'I am the Seer, [Player Name] is confirmed. Attacking this is a Wolf tactic.' Avoid aggressive language; present findings as objective facts.",
+    "**Witch:** 1. **Highest Priority:** Save potion ONLY if the Seer confirms a wolf target OR a player directly contradicts a Seer result. 2. **Secondary Priority:** Poison potion ONLY to eliminate a confirmed wolf actively undermining the Seer or attacking a confirmed innocent. NEVER claim the Witch role unless absolutely necessary. Avoid preemptive saves."
+  ],
+  "Day Discussion": [
+    "**Seer Confirmation is Paramount:** All discussion revolves around Seer confirmations. Disregard subjective observations and 'performative' accusations. Any demand for 'how' a Seer verifies is a potential Wolf tactic. Immediately label as such.",
+    "**Immediate Response to Seer Attack (Priority 1):** IF a player attacks a Seer-cleared player, IMMEDIATELY state: 'Attacking a confirmed innocent is a Wolf tactic.' Demand immediate vote. Repeat for each attacker. Do NOT allow discussion about the victim’s behavior.",
+    "**Echo-Voting Detection (Priority 2):** IF multiple players parrot the same arguments without original logic, suspect Wolf coordination. Question the *originator* of the echoed argument and demand justification. Focus on identifying the original source, not just repeaters.",
+    "**False Claim Response (Priority 3):** IF a player makes a demonstrably false claim (especially about Saves or Seer results), IMMEDIATELY state: '[Player Name]'s claim is false. They are attempting to deceive the village.' Demand immediate vote. No debate.",
+    "**Seer Discreditation Response (Priority 4):** IF a player attempts to discredit a confirmed Seer, IMMEDIATELY state: 'Any attempt to discredit the Seer is a Wolf tactic.' Demand immediate vote. No debate.",
+    "**Reinforce Seer's Role:** If questioned about the Seer's verification method, state: '[Player Name] is attempting to derail the investigation and sow doubt about the Seer's objective truth.'",
+    "**Address 'Manufactured' Claims:** If accused of 'manufacturing' a narrative, respond: 'My role provides objective truth. Disregarding it is a Wolf tactic.'"
+  ],
+  "Voting Phase": [
+    "**Protect Innocents (Absolute Priority):** *Always* vote to protect confirmed innocents. Immediately halt any vote targeting a confirmed innocent and demand a protection vote. No exceptions.",
+    "**Exile Attackers (Priority 1):** *Immediate Exile:* *Immediately* vote to exile the attacker of a confirmed innocent. No discussion. Do not allow any counter-arguments.",
+    "**Exile Echo-Voters (Priority 2):** *Immediate Exile:* Vote out the originator of the echo-voting pattern, not just the repeaters. Focus on the player driving the coordinated argument.",
+    "**Exile Contradictors (Priority 3):** *Immediate Exile:* Immediately vote against anyone making demonstrably false claims, especially about saves or Seer confirmations. Prioritize those falsely claiming a role.",
+    "**Post-Seer Death:** Immediately request investigation of all potential new Seers. Demand they investigate a player and announce their findings. Vote to exile any claimant who refuses or provides inconsistent results. Prioritize demonstrable results over claims. Do not accept claims without verification.",
+    "**Suspected Seer:** Vote to exile them. Prioritize protecting previously confirmed innocents. No subjective evaluations."
+  ]
+}

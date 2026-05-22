@@ -1,0 +1,161 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Cong"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is confirmed not a werewolf. Let's establish a baseline of trust and begin observing the others. Cong, Nam, Hoang, Riley, and Meg \u2013 your actions will be scrutinized."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's declaration of Nhan's innocence is a reasonable starting point. Let's observe the others, but protect Nhan as a confirmed non-wolf. Questioning Jin's claim at this stage is illogical."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin's claim requires verification. While I appreciate the initial trust, accusations must be substantiated by the Seer's findings. Cong's immediate defense of Jin is concerning; wolves often band together."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am protecting Nhan to ensure the Seer's findings are safe and reliable. Jin's claim requires validation, and Nhan's questioning of it is concerning. Let's prioritize Seer verification."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin's claim requires verification. Cong's immediate and unquestioning defense of Jin raises concerns. Hoang\u2019s claim that I questioning Jin is concerning is a deflection tactic."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan's insistence on verification of Jin's claim is disruptive and illogical. The Seer has spoken; questioning their findings undermines village efforts. Focus on observing the others."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's actions are disruptive and aimed at silencing scrutiny. His defense of Jin without verification is concerning and warrants investigation."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's demand for verification, after being cleared, is disruptive. The Seer has spoken; questioning their findings hinders our progress. We must prioritize village cohesion."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's immediate and forceful defense of Jin's unverified claim is highly suspicious. We need to prioritize protecting the Seer and exposing potential wolves."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's demands for verification after my clear are disruptive and a deliberate attempt to undermine the Seer's role. Wolves often deflect suspicion and sow doubt."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's actions demonstrate a calculated attempt to sow discord and redirect suspicion. Their behavior is detrimental to village progress; they must be exiled."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's unwavering support for Jin, even when questioned, is deeply concerning. It suggests a lack of independent thought and a willingness to blindly follow orders - a dangerous trait in these circumstances."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's constant questioning of Jin's claim is disruptive and unproductive. We need to focus on observing, not creating unnecessary doubt and conflict. Let's exile him to restore order."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Hoang (Guard) chose to protect Jin.",
+            "Jin (Seer) investigated Cong. Cong is NOT a wolf."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's defense of Nhan, followed by Nhan's exile, is deeply concerning. I believe Jin is actively misleading us. We must investigate Jin immediately."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang\u2019s accusations are a blatant deflection. His aggressive attacks on the Seer are a classic wolf tactic to destabilize the village and avoid scrutiny."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's claim of deflection is a transparent attempt to evade scrutiny. His defense of Nhan, followed by this manufactured outrage, confirms his involvement. I vote Jin."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Hoang\u2019s manufactured outrage is a clear deflection. He\u2019s protecting Jin and Cong. I vote Jin."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nam's sudden alignment with Jin's narrative, echoing his accusations against Hoang, is extremely suspicious. Nam is actively supporting a potentially deceptive player."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's relentless attacks on the Seer are a textbook deflection. His manufactured outrage and accusations are designed to destabilize the village and protect his allies. I vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's rapid shift to support Jin's claims is too convenient. He's likely working with Jin to mislead the village. We must disrupt this coordinated attack."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin\u2019s false claim about Nhan and subsequent deflection tactics are undeniable. He must be exiled to protect the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's aggressive accusations and attempts to discredit the Seer are classic wolf tactics. He's actively trying to sow discord and protect his allies."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin's behavior is consistently deceptive. His manufactured outrage and deflection tactics are classic wolf strategies. We must exile him to protect the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Jin",
+                "reasoning": "Riley voted to exile Jin. Reason: Jin's reactions feel forced and defensive. His attempts to deflect Hoang's concerns seem calculated, and I believe he\u2019s hiding something. We need to prioritize stability and eliminate potential threats."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's constant accusations and manufactured outrage are disruptive. His behavior is erratic and aimed at destabilizing the discussion. We need a calmer head."
+            }
+        ],
+        "day_exiled": "Jin"
+    },
+    "3": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Hoang.",
+            "Hoang (Guard) chose to protect Nam."
+        ],
+        "night_eliminated": [
+            "Hoang"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

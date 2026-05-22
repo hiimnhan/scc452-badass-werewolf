@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "043",
+  "directives_source_game_id": "042",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role == 'Seer'",
+        "directive_action": "COMMUNICATE_TARGETS_TO_GUARD",
+        "directive_rationale": "ensure you communicate your targets clearly to the Guard to optimize protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Seer) stated in Round 1 Debate: 'I investigated Nhan last night, and Nhan is confirmed not a werewolf.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam clearly communicated his investigation target and the result to the public, which includes the Guard (Jin)."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_only_known_power_role == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "once the Seer is the only known power role, you must prioritize them",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nam (Seer) during Night 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "By Round 2 Night, Nam was the only established power role, and Jin protected him."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_only_known_power_role == True",
+        "directive_action": "PROTECT_CONFIRMED_VILLAGER",
+        "directive_rationale": "prioritize them or a confirmed Villager over an unverified suspect",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) protected Nhan in Night 1. However, Nhan was not yet 'confirmed' at the start of Night 1 as the Seer's result was not available until the following Day.",
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "In Night 1, no one was yet a 'confirmed villager' because the Seer's result was revealed during the Day debate. In Night 2, the Guard prioritized the Seer per GUARD-001."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_remaining == 1",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Your priority must always be the Seer-Guard protection loop",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Witch) used the SAVE potion on Nam (Seer) during Night 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang used the save potion to protect the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent == True",
+        "directive_action": "CROSS_REFERENCE_WITH_SEER_RESULTS",
+        "directive_rationale": "the village should cross-reference silence with Seer results before committing an exile",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) targeted Cong for silence in Round 2, and Nam (Seer) intervened stating he had ground truth on Nhan and Jin, concluding Cong's behavior was that of a wolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The village (Nhan, Nam, Jin) cross-referenced the silence of Cong, Hoang, and Riley with the known 'ground truth' of cleared players to isolate the wolf."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role == 'Villager'",
+        "directive_action": "DEMAND_INDEPENDENT_LOGIC",
+        "directive_rationale": "Continue to demand independent logic from players",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Villager) demanded that Cong, Hoang, and Riley claim their roles and provide reasoning, labeling Meg's deflection as a 'Confusion Mask'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan consistently pushed for role reveals and transparency, rejecting emotional appeals/deflections."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_frames_logical_scrutiny_as_coordinated_effort == True",
+        "directive_action": "REQUEST_VOTE_ON_PLAYER",
+        "directive_rationale": "the moment a player frames logical scrutiny as a 'coordinated effort,' treat it as a Fatal Error and push for exile",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Meg framed Jin's demand for transparency as 'barking orders' and being 'too aggressive'. Nhan and Jin identified this as a 'Confusion Mask' and a 'Fatal Error', immediately pushing for a vote to exile Meg.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Meg framed the push for logic/transparency as aggressive control; the Villagers immediately labeled it a Fatal Error and exiled her."
+      }
+    ]
+  }
+}

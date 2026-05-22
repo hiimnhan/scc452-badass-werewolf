@@ -1,0 +1,506 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "No one died night 1. This implies a double-save or a Witch save. I must force immediate role claims to identify the Guard and Witch and check for contradictions early."
+            },
+            {
+                "Cong": 8,
+                "reason": "I have a confirmed Trust Anchor (Nhan) and a 'no death' night to analyze. Establishing Nhan as a non-wolf early narrows the suspect pool and provides a factual anchor for the village."
+            },
+            {
+                "Nam": 2,
+                "reason": "No claims have been made. I need to identify the Seer before I can optimize my protection. I will listen for role claims first."
+            },
+            {
+                "Jin": 10,
+                "reason": "As a power role, strategy dictates I claim immediately and demand reveals from all players to establish a factual baseline and identify wolves."
+            },
+            {
+                "Hoang": 9,
+                "reason": "No one died tonight. I must immediately demand claims from the Seer, Guard, and Witch to determine if a save occurred or if the wolves failed, preventing a 'Confusion Mask'."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish myself as a helpful villager early. I'll provide mild analysis to blend in and steer suspicion toward those who might be power roles since Nhan survived."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to claim Villager immediately per strategy and establish a neutral presence to blend in since the night kill failed."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "No one died. Jin claims Witch but used no potions, meaning Guard must have protected the target. I must force immediate role claims to identify the Guard and Seer to verify this state."
+            },
+            {
+                "Cong": 8,
+                "reason": "I must establish Nhan as a Trust Anchor immediately and evaluate Jin's Witch claim against the 'no death' night to detect potential factual contradictions."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin demanded immediate role claims. Per strategy, hesitation is a wolf signal. I must claim Guard immediately to establish my role and avoid suspicion."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin claimed Witch and demanded roles. I must immediately reinforce the demand for Seer and Guard claims to identify the cause of the night's survival and flush out 'Confusion Masks'."
+            },
+            {
+                "Riley": 7,
+                "reason": "Jin's demand for claims is a high-risk moment. I must claim Villager immediately to avoid suspicion and establish a presence before others start analyzing silence."
+            },
+            {
+                "Meg": 6,
+                "reason": "Must immediately claim Villager per strategy. Need to align with Jin's demand for claims to blend in while identifying the Seer for elimination."
+            }
+        ],
+        [
+            {
+                "Nhan": 6,
+                "reason": "Need to force immediate claims from Cong, Hoang, Riley, and Meg to identify contradictions. Nam's claim explains the no-kill night, but we must verify if a Seer exists and if others are simulating."
+            },
+            {
+                "Cong": 9,
+                "reason": "Nhan is a confirmed Trust Anchor. Nam's claim as Guard is consistent with the 'no death' night and Nhan's safety. I must reveal my role to anchor the village and solidify Nam's credibility."
+            },
+            {
+                "Jin": 7,
+                "reason": "Nam claimed Guard and explained the night's outcome. I must now pressure the remaining players for claims to identify the Seer and detect any contradictions or wolf signals like hesitation."
+            },
+            {
+                "Hoang": 7,
+                "reason": "Nam and Jin have claimed Guard and Witch. I must demand the Seer claim immediately to avoid 'Confusion Masks' and verify if the current power role claims are consistent."
+            },
+            {
+                "Riley": 6,
+                "reason": "Must claim Villager immediately to avoid suspicion from Jin's demand. Need to establish presence and blend in while the power roles are claiming."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my role as Villager immediately per strategy and blend in by supporting the current claims to avoid appearing suspicious."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "I am cleared by the Seer and the Guard's claim matches the no-kill outcome. I need to verify the remaining players (Hoang, Riley, Meg) and check for contradictions before they can coordinate a lie."
+            },
+            {
+                "Nam": 8,
+                "reason": "Cong is the confirmed Seer. I must immediately secure his identity as my priority protection target for tonight to prevent a power role loss."
+            },
+            {
+                "Jin": 8,
+                "reason": "Power roles have claimed. I must now scrutinize Hoang, Riley, and Meg for refusal to claim or vague excuses, as hesitation is a wolf signal per strategy."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Cong demanded my role. I must claim Villager immediately to avoid being flagged for using a 'Confusion Mask'. I need to verify if Riley and Meg comply or stall."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong demanded my role. I must claim Villager immediately to avoid suspicion for silence and establish my presence before others can frame me."
+            },
+            {
+                "Meg": 10,
+                "reason": "Cong demanded my role claim. I must immediately declare 'Villager' to follow my strategy and avoid suspicion for stalling."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Need to force Hoang and Riley to claim roles immediately. Meg is exhibiting Compliance Simulation by echoing Cong without logic; I must highlight this behavior to prioritize her as a suspect once roles are claimed."
+            },
+            {
+                "Cong": 7,
+                "reason": "Meg is engaging in Compliance Simulation by echoing my logic without independent reasoning. I need to pressure Hoang and Riley for roles to identify contradictions before the vote."
+            },
+            {
+                "Nam": 8,
+                "reason": "Meg is exhibiting Compliance Simulation by mirroring Cong without independent logic. I must flag this behavior immediately to prioritize her as a target before the vote."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg is exhibiting Compliance Simulation, a primary wolf signal. Hoang and Riley are refusing to claim. I must push for their reveals and flag Meg's behavior to drive a target for exile."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Meg is exhibiting 'Compliance Simulation' by mirroring Cong's logic without independent evidence. I must flag this behavior and demand Riley's claim to expose any further 'Confusion Masks' or mirroring."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong demanded my role. I must claim Villager immediately to avoid suspicion and establish a presence before the group focuses on me or Hoang."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "I am cleared by the Seer. I must now leverage this position to force Hoang and Riley to claim and scrutinize Meg's compliance simulation to prevent wolf blending."
+            },
+            {
+                "Cong": 9,
+                "reason": "Jin is employing Tone Policing and targeting Hoang/Riley based on silence, violating my strategy. I must intervene to redirect the village toward factual contradictions and prevent an exile based on behavioral cues."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang and Riley are refusing to claim roles, a high-confidence wolf signal. Meg is exhibiting Compliance Simulation. I must push for their exile to ensure a villager victory."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin has flagged me for using a 'Confusion Mask' by not claiming. I must claim Villager immediately to avoid being exiled as a priority target."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is aggressively targeting me and Meg for silence. I must claim Villager immediately to stop the momentum and pivot suspicion toward Jin's aggressive behavior to protect Meg."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is targeting me with 'Compliance Simulation' and targeting my packmate Riley. I must provide a sterilized defense and deflect suspicion to survive and protect the pack."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam claimed to protect me twice in a row, which is a factual impossibility per official rules. This is a hard contradiction. I must expose this lie immediately to force a vote."
+            },
+            {
+                "Cong": 9,
+                "reason": "I have confirmed Nhan and Jin are not wolves. Establishing these Trust Anchors immediately narrows the suspect pool to Hoang, Meg, Riley, and Nam, accelerating the identification of the werewolves."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley is refusing to claim roles despite coordinated calls, which is a high-confidence wolf signal. I must push for their exile immediately to secure a villager victory."
+            },
+            {
+                "Jin": 10,
+                "reason": "I saved Cong, the claimed Seer, confirming he was the wolf target. This validates his role and proves the wolves are targeting the Seer. I must announce this to solidify Cong's authority and focus fire on Riley/Meg."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Must immediately push for Riley's exile due to a persistent 'Confusion Mask' and target Meg for 'Compliance Simulation'. No one died two nights in a row; we must capitalize on this stability to eliminate the obvious suspects."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to provide a logical defense for Meg to blend in as a helpful villager and subtly cast doubt on the power role claims before the village reaches consensus."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my Villager claim and blend in. Since no one has spoken, I will provide a neutral, supportive presence to avoid looking suspicious while monitoring for Seer claims."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Nam is caught in a hard factual contradiction regarding Guard rules. As Seer, I must anchor the village to Nhan's truth and push for Nam's immediate exile to secure a wolf win."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan is attempting a frame job with a blatant factual contradiction. I must immediately expose this lie to prevent my own exile and confirm Nhan as a wolf."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam committed a factual rule violation. I know Cong was the wolf target tonight because I saved them, proving Nam's claim of protecting Nhan is a lie and Cong's Seer claim is authentic. Must push for Nam's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam committed a hard factual contradiction by claiming to protect Nhan twice in a row. This is a primary wolf signal. I must push for an immediate exile to secure a win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is already framed by a factual error. I need to lend weight to the vote against him to ensure an innocent is exiled and blend in with the majority."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nhan has identified a factual lie from Nam. I must align with Nhan immediately to blend in and push Nam toward exile while he is the consensus target."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam's claim is a factual impossibility. I must force an immediate vote to exile him and expose Cong, who validated a confirmed liar."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam is caught in a hard factual contradiction. As Seer, I must anchor the vote by confirming Nhan and Jin are not wolves, ensuring the village exiles the proven liar without hesitation."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan and Jin are coordinating a factual lie to frame me. I must immediately expose their contradiction of my actual actions to prevent my own exile and identify them as wolves."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam committed a hard factual contradiction by claiming to protect Nhan twice in a row. This is a primary wolf signal. I must push for his immediate exile to secure a win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is already framed by a factual rule error. I will voice support for the vote to blend in with the majority and establish myself as a helpful Villager without leading the charge."
+            },
+            {
+                "Meg": 8,
+                "reason": "Two players have reached a consensus against Nam based on a rule violation. I must align immediately to appear as a helpful villager and secure the exile of a non-pack member."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam's claim is a factual impossibility. I must maintain momentum to ensure the village exiles this confirmed liar immediately before wolves can pivot the narrative."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan, Cong, and Jin are coordinating a PRIORITY 1 factual lie to frame me. I must immediately expose their contradiction regarding my protection targets to prevent my own exile and identify the wolf pack."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nam has committed a hard factual contradiction. I have already claimed Witch and identified him as a wolf. I must push the village to execute the vote immediately to ensure his exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam committed a hard factual rule violation regarding Guard protection. This is a primary wolf signal. I must push for an immediate exile to secure a win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is already framed by a rule violation. I need to align with the majority to blend in and solidify my 'Villager' status without leading the charge."
+            },
+            {
+                "Meg": 8,
+                "reason": "Consensus is rapidly forming against Nam. I must align immediately with Nhan, Jin, and Cong to blend in and ensure Nam is exiled, following the rapid consensus strategy."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam is caught in a factual contradiction regarding Guard rules. I must lead the push to force an immediate exile and maintain momentum to prevent wolf stalling."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nam is caught in a hard factual rule contradiction. As Seer, I must solidify the vote to ensure this primary suspect is exiled before wolves can pivot the narrative."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan, Cong, and Jin are coordinating a PRIORITY 1 factual lie to frame me as a wolf. I must immediately expose their contradiction regarding my protection targets to prevent my own exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam committed a hard factual contradiction by claiming to protect Nhan twice in a row. This is a primary wolf signal. I must push for an immediate exile to secure the win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is already framed by a factual error and power role claims. I need to blend with the majority to appear as a trusting villager while avoiding leading the charge."
+            },
+            {
+                "Meg": 8,
+                "reason": "Nam is the consensus target due to a rule violation. I must align immediately with Nhan, Jin, and Cong to blend in and ensure Nam is exiled."
+            }
+        ],
+        [
+            {
+                "Cong": 2,
+                "reason": "The village has already converged on Nam due to a hard factual contradiction. My Seer reveal and Nhan's clearance are established. I will listen for any desperate fabrications from Nam."
+            },
+            {
+                "Nam": 10,
+                "reason": "I am being framed by a coordinated wolf pack (Nhan, Cong, Jin) using a fabricated factual contradiction. I must immediately expose their lie to prevent my own exile and identify them as wolves."
+            },
+            {
+                "Jin": 2,
+                "reason": "The village has a hard factual contradiction on Nam and a Seer-clear for Nhan. The target is established; I have already asserted my role and accusation. I now wait for the vote."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam committed a hard factual contradiction by claiming to protect the same player twice. This is a primary wolf signal. I must push for an immediate vote to secure the exile."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nam is already framed and the village is aligned. I need to vote with the majority to blend in and solidify my status as a trusted villager while avoiding leading the charge."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nam is the consensus target due to a factual rule violation. I must align immediately to blend in and avoid being seen as a protector of a wolf."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin (Witch claim) was killed tonight. I must immediately force role-calls and verify Cong's Seer results to prevent wolf stalling and target the remaining high-suspicion players (Meg/Riley)."
+            },
+            {
+                "Cong": 10,
+                "reason": "I have confirmed Nhan and Hoang as Trust Anchors. Jin's death confirms the wolves are targeting power roles. I must reveal these results to isolate Meg and Riley immediately."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin (Witch) was killed, a major blow to info. Must immediately consolidate the Seer's (Cong) value, push for Riley's claim to expose Confusion Masks, and target Meg for Compliance Simulation."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish a presence and subtly cast doubt on Cong's Seer claim before he can consolidate power and verify too many players."
+            },
+            {
+                "Meg": 2,
+                "reason": "Jin is dead, and Nam was exiled. I am currently not a target. I'll wait for others to speak to align with the emerging consensus and maintain a low profile."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong is the Seer and has narrowed the suspects to Riley and Meg. I must immediately reinforce the push for Meg's exile based on the Seer's guidance and her compliance simulation to maintain momentum."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is the Seer and has cleared me and Nhan. Meg is exhibiting Compliance Simulation and Riley is using a Confusion Mask. I must push for Meg's exile to secure a villager victory."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong is narrowing the field to me and Meg. I must immediately defend Meg with independent logic and cast doubt on Cong's Seer claim to prevent her exile."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong claimed Seer and explicitly proposed my exile. I must immediately deploy a sterilized defense and provide independent logic to deflect suspicion and avoid becoming the consensus target."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong is the Seer and has cleared me and Hoang. Meg is using mirror-logic to pivot suspicion to Riley, a classic compliance simulation. I must push for Meg's exile to maintain momentum."
+            },
+            {
+                "Cong": 10,
+                "reason": "Meg is using a classic wolf tactic: dismissing factual signals as 'vague feelings' while attempting to pivot the remaining suspect pool toward Riley. I must shut down this narrative immediately to secure the win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is using Tone Policing and Compliance Simulation to frame Riley. I must immediately flag her deflection and support Cong's accusation to ensure the wolf is exiled."
+            },
+            {
+                "Riley": 9,
+                "reason": "Meg just pivoted suspicion to me to save herself. I must immediately counter this, discredit Cong's Seer claim to protect our numbers, and shift the target back to Cong or another villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong (Seer) has provided clears for me and Hoang. Meg is exhibiting compliance simulation by mirroring Cong's logic to target Riley. I must push the exile of Meg to maintain momentum and secure a win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong has identified Meg's Compliance Simulation and Tone Policing. I must immediately support the Seer's lead and push for Meg's exile to secure a villager victory."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong is narrowing the list to me and Meg. Meg has already pivoted to me. I must intervene immediately to frame Cong as a fake Seer to save Meg and myself."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong is the Seer and is aggressively targeting me. I must deflect his accusation and pivot the village toward Riley or Hoang immediately to survive the vote."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong has cleared Hoang and me. Meg is exhibiting compliance simulation and mirroring logic to frame Riley. I must push the vote for Meg immediately to maintain momentum and secure the win."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using tone policing and compliance simulation to frame Riley. I must solidify the vote for Meg before she can pivot the group, as Nhan and Hoang are already anchors."
+            },
+            {
+                "Riley": 9,
+                "reason": "Cong and Hoang are locking in Meg. I must intervene to save my ally by casting doubt on Cong's Seer claim and leveraging Meg's pivot to appear as the 'confused' villager."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong and Hoang have formed a consensus against me. I must immediately deflect and push the target back to Riley using the Seer's clearances to avoid exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong (Seer) has cleared Hoang and me. Meg and Riley are the only remaining suspects. Meg is exhibiting clear compliance simulation and mirroring. I must consolidate the vote on Meg to ensure a win."
+            },
+            {
+                "Cong": 10,
+                "reason": "Riley is attacking confirmed Trust Anchors and questioning Seer clearances to sow discord. I must shut down this deflection and secure the vote for Meg, who is exhibiting clear wolf signals."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is using tone policing to discredit the Seer and frame me as a 'puppet' to deflect. I must expose this as a wolf signal and push the vote toward Meg and Riley."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong and Hoang have formed a consensus against me. I must immediately deflect and push the target toward Riley or challenge the logic to avoid exile."
+            }
+        ]
+    ],
+    "4": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong (Seer) was killed tonight. Riley was the primary attacker of Cong and benefits most from the Seer's death. I must force Riley to commit to a narrative immediately to expose them."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong (Seer) was killed. Riley is a primary suspect due to the Seer's prior warnings and deflective tactics. I must push for Riley's immediate exile to secure a villager victory."
+            },
+            {
+                "Riley": 7,
+                "reason": "Cong is dead; the village is blind. I need to step in early to redefine the suspicion list and steer the group toward Hoang or Nhan before they consolidate."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong (Seer) was killed Night 4. Riley is the prime suspect due to previous attacks on Cong and lack of clearance. I must push for Riley's immediate exile to maintain momentum and secure victory."
+            },
+            {
+                "Riley": 10,
+                "reason": "Hoang is leading a direct charge against me using the dead Seer's claim. I must immediately pivot the suspicion toward Hoang's aggressive behavior to avoid being exiled."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using 'Quiet-Player Framing' and attacking my silence to deflect from the Seer's clearance. I must immediately shut down this narrative and force the vote on Riley to secure victory."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using Tone Policing and framing a Seer-cleared player (Nhan) to deflect. This is a primary wolf signal. I must immediately shut down the deflection and secure the vote on Riley."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using 'Quiet-Player Framing' against me to deflect from the Seer's clearance. I must immediately shut down this narrative and force the vote on Riley to secure a villager victory."
+            },
+            {
+                "Riley": 9,
+                "reason": "Hoang is aggressively rallying the village against me using Cong's claim. I must immediately dismantle the trust in Nhan to create doubt and pivot the target toward Hoang before a consensus forms."
+            }
+        ],
+        [
+            {
+                "Hoang": 10,
+                "reason": "Riley is trapped. Nhan has joined the accusation. I must maintain pressure and secure the vote to exile Riley immediately to ensure a Villager victory before any further night kills."
+            },
+            {
+                "Riley": 10,
+                "reason": "Hoang and Nhan have coordinated a hard push against me. I must immediately disrupt their narrative and cast doubt on their partnership to avoid exile this round."
+            }
+        ],
+        [
+            {
+                "Nhan": 1,
+                "reason": "The case against Riley is closed. Hoang and I have already established the logic, Riley has only offered deflections, and the vote is effectively decided. No further debate is needed."
+            },
+            {
+                "Riley": 10,
+                "reason": "Hoang and Nhan have coordinated a lock on me. I must disrupt their alignment and cast doubt on Nhan's 'clearance' now that Cong is dead, or I will be exiled immediately."
+            }
+        ]
+    ]
+}

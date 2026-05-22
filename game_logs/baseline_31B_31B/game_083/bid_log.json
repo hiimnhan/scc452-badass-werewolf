@@ -1,0 +1,302 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "I have a confirmed clearance for Cong. Establishing ground truth early prevents the village from wasting a vote and narrows the suspect pool."
+            },
+            {
+                "Cong": 2,
+                "reason": "No statements have been made. I need to observe the first few speakers to detect 'Blender' behavior, silence, or process attacks before intervening to direct the vote."
+            },
+            {
+                "Nam": 3,
+                "reason": "No information has been shared yet. I will wait to see who claims Seer or exhibits wolf behavior before revealing my knowledge of Nhan's target status."
+            },
+            {
+                "Jin": 2,
+                "reason": "No information available. No one died night 1, which suggests a save or failed kill. I will listen for Seer claims or suspicious behavior before acting."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No information available. No one died night 1, suggesting a Witch save or Guard protection. I need to listen for power role claims first."
+            },
+            {
+                "Riley": 0,
+                "reason": "Following 'Passive Observation' and 'The Closer' role. No accusations have been made. I will remain silent to avoid establishing a pattern and wait for a majority to form."
+            },
+            {
+                "Meg": 2,
+                "reason": "No one has spoken yet. I will stay quiet to avoid setting the agenda and let others expose themselves first."
+            }
+        ],
+        [
+            {
+                "Cong": 2,
+                "reason": "Nhan's claim is consistent with my role. I am cleared. I need to monitor others for Blender behavior or Process Attacks in response to this claim before intervening."
+            },
+            {
+                "Nam": 2,
+                "reason": "Nhan has already claimed Seer and cleared Cong. I know Nhan is safe because I saved them. I will wait to see if anyone contradicts Nhan or uses deflection tactics before intervening."
+            },
+            {
+                "Jin": 2,
+                "reason": "Nhan claimed Seer and cleared Cong. Since no one has contested this yet, it is treated as ground truth. I will listen for wolf signals or conflicting claims before intervening."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nhan claimed Seer and cleared Cong. I need to request binary commitments from passive players (Nam, Jin, Riley, Meg) to flush out wolves and prevent them from blending in."
+            },
+            {
+                "Riley": 1,
+                "reason": "Nhan claimed Seer and cleared Cong. No majority exists yet. Following strategy to remain silent during villager conflicts and avoid initiating accusations."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nhan claimed Seer. Per strategy, Seers must be eliminated immediately upon claiming. I need to challenge the claim or push for their exile to protect the pack."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg is exhibiting high-priority wolf signals: Power Role Defense (discrediting Cong's clearance) and Redirection (shifting to 'trust' and 'certainty'). I must flag her as a wolf immediately to lead the vote."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using a Process Attack by labeling Nhan's claim as 'forcing a kill' rather than addressing the mechanical result. I must flag Meg as a high-probability wolf to guide the village's vote."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg is using Deflection Detection triggers by attacking Nhan's tone/timing rather than evidence. Nhan was the wolf target (saved by me), making Meg's attack a high-probability wolf signal. I must pivot the village toward Meg."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg is exhibiting clear Wolf Signals (Deflection and Process Attack) by attacking Nhan's method and certainty rather than the evidence. I must flag this behavior immediately to pivot the village toward Meg."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg used 'forcing' to describe Nhan's claim, which is a Process Attack. This is a definitive wolf signal. I must expose her deflection and solidify Nhan's ground truth immediately."
+            },
+            {
+                "Riley": 0,
+                "reason": "Nhan and Meg are already in conflict. I will remain silent to observe the sequence and avoid establishing a pattern, acting only as the closer if a majority forms."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is actively attempting to discredit my confirmed clearance of Cong (Power Role Defense) and redirecting the discussion (Redirection Detection). I must solidify the accusation against her and protect my status as Seer."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg's behavior is a textbook Process Attack. I must confirm Nhan's binary result and amplify Hoang's analysis to secure Meg's exile, preventing a wolf from manipulating the village narrative."
+            },
+            {
+                "Nam": 9,
+                "reason": "Nhan was the wolf target; I saved them. Nhan is 100% verified. Meg's deflection is a confirmed wolf signal. I must assert Nhan's validity to force Meg's exile immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg is exhibiting clear Wolf Signals (Deflection and Process Attack) by attacking Nhan's claim method. I need to amplify Hoang's logic and push for Meg's exile to secure an early win."
+            },
+            {
+                "Riley": 0,
+                "reason": "Villagers are currently conflicting. Meg and Hoang are arguing. I will remain silent and observe the sequence of accusations to act as the closer later."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang is aggressively targeting me. I must use the Defensive Pivot to frame Hoang as forcing a kill without proof and deflect suspicion back to the Seer claim."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is actively attacking my clearance of Cong and redirecting the discussion. I must reinforce the ground truth and flag her behavior as a high-priority wolf signal to secure her exile."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg's behavior is a textbook Process Attack. I must confirm Nhan's binary result to solidify Nhan as the Seer and force Meg's exile before the wolves can pivot."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg exhibited clear Wolf Signals (Deflection/Process Attack) by targeting Nhan's tone rather than evidence. I need to solidify the consensus to exile Meg immediately based on these signals and Nhan's Seer claim."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Meg used process attack language ('forcing'), which is a definitive wolf signal. I must push for an immediate vote to exile her before she can divert the village."
+            },
+            {
+                "Riley": 0,
+                "reason": "Villagers are currently arguing. I am not a target. I will remain silent until a majority forms to act as the closer."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang and Nam are aggressively targeting me without independent evidence. I must pivot immediately to frame them as forcing a kill to avoid being exiled."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Meg has triggered multiple high-probability wolf flags: Process Attack and Deflection. As a cleared player, my confirmation of Nhan's Seer claim is critical to solidify the case for Meg's exile."
+            },
+            {
+                "Nam": 3,
+                "reason": "The target is already established. Nhan and Hoang have reinforced the logic. I have already stated my position; further speaking now provides no new mechanical evidence and may seem like wolf coordination."
+            },
+            {
+                "Jin": 9,
+                "reason": "Nhan's Seer claim is currently the only mechanical evidence. Meg is exhibiting clear Process Attack and Deflection signals. I must voice my support to cement the consensus and ensure Meg is exiled."
+            },
+            {
+                "Hoang": 2,
+                "reason": "The target is clearly established. Nhan, Nam, and I have already identified Meg's process attack. No new evidence is needed; we just need to move to the vote to eliminate her."
+            },
+            {
+                "Riley": 8,
+                "reason": "Meg is at risk. Hoang, Nam, and Nhan have formed a majority against her. I must intervene as the closer to shift the focus or disrupt the vote sequence."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nhan, Hoang, and Nam are coordinating to exile me. I must pivot immediately to frame their lack of evidence as an attempt to force a kill."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "I have a second confirmed clearance (Jin). With Cong and Jin cleared, the wolf pool is drastically narrowed. I must announce this immediately to isolate the remaining suspects."
+            },
+            {
+                "Cong": 3,
+                "reason": "No new data yet. I will wait for others to speak to identify Blender behavior or Process Attacks among Jin, Riley, Nam, and Hoang before intervening."
+            },
+            {
+                "Nam": 8,
+                "reason": "Two consecutive zero-death nights are mechanically impossible without Guard/Witch intervention. I know I didn't save anyone last night, meaning the Guard protected the wolf target. I must analyze claims to find the wolf."
+            },
+            {
+                "Jin": 7,
+                "reason": "Two consecutive nights with no deaths suggest Guard protection or Witch saves. I need to push for the Seer (Nhan) to reveal their targets to narrow down the remaining wolves."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nhan is the claiming Seer and Cong is confirmed. I need to push for binary commitments from Jin and Riley to flush out remaining wolves and prevent them from blending in."
+            },
+            {
+                "Riley": 1,
+                "reason": "No accusations have started. Following the 'Closer' and 'Passive Observation' roles, I will remain silent until a majority forms or mechanical facts are established."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Nhan has narrowed the pool to Nam, Hoang, and Riley. I must immediately reinforce Nhan's Seer status and pressure Riley, who is flagged for silence, to force a contradiction or a 'Blender' response."
+            },
+            {
+                "Nam": 8,
+                "reason": "Nhan is a verified Seer. With Jin and Cong cleared, the wolves are among Nam, Hoang, and Riley. I must assert my role as Witch to prevent my own exile and push for Riley's elimination."
+            },
+            {
+                "Jin": 2,
+                "reason": "Nhan has cleared me and Cong, narrowing the pool to Nam, Hoang, and Riley. Nhan is currently pressing Riley for a defense; I should listen to Riley's response to detect Wolf Signals before intervening."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Nhan has cleared Cong and Jin. Only Nam, Riley, and I remain. Riley is passive and requested to commit. I must push for a binary commitment from Riley to isolate the wolf."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nhan explicitly targeted me. I must respond to avoid becoming the primary suspect, but I will stick to passive observation and mechanical anchoring to blend in."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is the only remaining unconfirmed player. I must press for a role claim to identify fabrications or confirm the Silence Penalty, narrowing the wolf pool to Riley immediately."
+            },
+            {
+                "Cong": 7,
+                "reason": "Hoang is exhibiting 'Blender' behavior by mirroring Nhan's terminology exactly. I need to flag this pattern to the village while Nhan pressures Riley, ensuring we don't overlook a wolf simulating alignment."
+            },
+            {
+                "Nam": 7,
+                "reason": "Riley's silence is a wolf signal. I need to press Riley and evaluate Hoang's mirroring. As the Witch, I must steer the vote toward Riley to narrow the wolf count."
+            },
+            {
+                "Jin": 3,
+                "reason": "I am cleared by the Seer. Nhan and Hoang are already applying pressure to Riley. I will wait for Riley's response to check for Wolf Signals (Deflection/Passive Alignment) before intervening."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nhan and Hoang have narrowed the suspect pool to me. I must provide a minimalist claim to avoid immediate exile and shift focus to the sequence of their accusations."
+            }
+        ],
+        [
+            {
+                "Cong": 8,
+                "reason": "Riley is flagged for Silence Monitoring and is under direct pressure. I need to reinforce Nhan's logic and push for a role claim to force a contradiction or confirm wolf status."
+            },
+            {
+                "Nam": 8,
+                "reason": "Riley is cornered and silent, a critical wolf signal. I must align the village to exile Riley immediately to ensure a win before wolves can target Nhan or me tonight."
+            },
+            {
+                "Jin": 8,
+                "reason": "Nhan is the verified Seer and has cleared Cong and me. Riley is cornered and exhibiting a strong Wolf Signal through silence. I must press for Riley's exile to secure a villager victory."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Riley is the sole unknown player and has ignored multiple requests for binary commitment. I must push for immediate exile to secure a villager victory before the wolves can react."
+            },
+            {
+                "Riley": 10,
+                "reason": "Nhan and Hoang have isolated me as the only remaining suspect. I must provide a minimalist claim to avoid immediate exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is using Redirection and Process Attack tactics by focusing on speaking order and 'pressure' instead of providing a concrete role claim. This is a high-priority wolf signal that must be flagged immediately."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley just triggered a 'Deflection Detection' flag by focusing on the 'sequence of speaking' instead of the mechanical demand for a role. I must immediately flag this behavior to secure Riley's exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley's response is a textbook example of Deflection Detection, attacking the sequence and tone rather than providing a defense. I must flag this behavioral wolf signal to ensure the village exiles Riley immediately."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is exhibiting clear Wolf Signals: Narrative Framing and Deflection. They are attacking the speaking order and labeling logical coordination as 'pressure' instead of defending themselves. I must push for Riley's exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using gaslighting by labeling evidence-seeking as 'pressure' and diverting to the timing of speech. This is a definitive wolf signal per strategy. I must push for immediate exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley is exhibiting high-priority wolf signals: Redirection Detection and Process Attack. As Seer, I must decisively label this behavior and push for Riley's immediate exile to secure the win."
+            },
+            {
+                "Cong": 9,
+                "reason": "Riley exhibited a textbook 'Deflection Detection' flag by focusing on the sequence of speaking rather than providing a substantive answer. I must reinforce this high-probability wolf signal to secure Riley's exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Riley is exhibiting clear Deflection Detection by attacking the process rather than providing evidence. I must reinforce the Seer's logic and push for Riley's exile to secure a villager victory."
+            },
+            {
+                "Jin": 9,
+                "reason": "Riley is exhibiting clear Wolf Signals: Narrative Framing and Deflection. I need to reinforce Hoang's analysis and lock in the vote for Riley to secure a villager victory."
+            },
+            {
+                "Riley": 8,
+                "reason": "Hoang and Nhan are coordinating to isolate me. I must use mechanical anchoring to challenge Hoang's sequence of accusations and prevent a majority from forming."
+            }
+        ]
+    ]
+}

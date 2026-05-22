@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "First day, no one killed, no statements made. No evidence yet. I will listen to identify Process Attackers or Fabricators before intervening."
+            },
+            {
+                "Cong": 9,
+                "reason": "I have confirmed Nhan is not a werewolf. Clearing a player immediately narrows the suspect pool and establishes my credibility as Seer to lead the village toward the wolves."
+            },
+            {
+                "Nam": 7,
+                "reason": "Zero deaths occurred. I must claim Guard early to establish my role and analyze if the Witch saved someone or if the Wolves targeted me, preventing 'refusal to claim' logic from being used against me."
+            },
+            {
+                "Jin": 9,
+                "reason": "Following strategy: must claim Seer immediately to establish narrative control, create a trusted anchor, and force others to reveal their roles."
+            },
+            {
+                "Hoang": 6,
+                "reason": "No one died tonight, suggesting a Guard protect or Witch save. I need to prompt for role claims, specifically the Seer, to establish a baseline of truth and identify passive wolves."
+            },
+            {
+                "Riley": 1,
+                "reason": "No accusations have been made. Per strategy, I must remain passive and avoid initiating accusations, waiting for a majority to form."
+            },
+            {
+                "Meg": 2,
+                "reason": "Round 1 start. I need to remain invisible and wait for an aggressive accuser to align with for trust credit. No one has spoken yet."
+            }
+        ],
+        [
+            {
+                "Nhan": 3,
+                "reason": "Jin claimed Seer and cleared me. I have no evidence against others yet. I will listen for role claims or process attacks from other players before intervening."
+            },
+            {
+                "Cong": 10,
+                "reason": "Jin claimed Seer and mirrored my result for Nhan. Since I am the Seer, Jin is a confirmed werewolf using a fake claim to deceive the village. Immediate exposure is critical."
+            },
+            {
+                "Nam": 8,
+                "reason": "Must claim Guard early to prevent 'refusal to claim' logic and establish my role. Need to analyze the zero-death night to verify Jin's claim and identify potential Witch/Guard overlap."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Jin claimed Seer and cleared Nhan. I need to support the establishment of the trusted core and press the remaining players for binary commitments to identify passivity or deflection."
+            },
+            {
+                "Riley": 0,
+                "reason": "Jin initiated the debate with a claim. I must remain passive and observe the sequence of responses without initiating accusations."
+            },
+            {
+                "Meg": 2,
+                "reason": "Jin claimed Seer and cleared Nhan. I must treat the claim as fact for now and avoid leading the agenda to remain invisible. I'll wait for others to act."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong exhibited a high-priority wolf signal by discrediting Jin's specific clearance of me as a 'calculated move'. I must flag this Power Role Defense behavior immediately to prioritize Cong for exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Multiple Seer claims. Cong is mirroring Jin's result to fake credibility, a wolf signal. I must claim Guard early to prevent 'refusal to claim' logic and push for a binary resolution between the Seers."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is counter-claiming Seer and pushing for my exile. I must maintain narrative control, flag his behavior as a wolf signal, and prevent the village from voting me out."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is mirroring Jin's result on Nhan to steal legitimacy while attacking Jin. This is a classic wolf signal. I must expose this mirroring and force a resolution between the two Seer claims."
+            },
+            {
+                "Riley": 1,
+                "reason": "Two players are claiming Seer. I will remain silent during this dispute and wait for a majority to form before joining the vote."
+            },
+            {
+                "Meg": 8,
+                "reason": "Cong is the most aggressive accuser. I must align with him now to build social capital and push the village to exile Jin, who is a high-threat power claim."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Jin is a confirmed wolf via fake claim. Nhan is performing a Process Attack by labeling my logic as a wolf tactic, signaling high-probability wolf alignment or wolf-alignment trust. I must prevent my own exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is mirroring Jin's result to hijack the Seer role\u2014a high-probability wolf signal. I must claim Guard early to prevent wolf-logic framing and push the village to exile Cong based on behavioral deflection."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong has counter-claimed Seer and is pushing for my exile. I must maintain narrative control and solidify the trust between Nhan and myself to ensure Cong is exiled."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is mirroring Jin's result on Nhan to steal legitimacy while attacking Jin. This is a clear wolf signal. I must push the accusation against Cong to secure a win."
+            },
+            {
+                "Riley": 0,
+                "reason": "Passive observation. Two players are claiming Seer and accusing each other. No majority exists yet. I will remain silent and wait for a 50%+ threshold to form."
+            },
+            {
+                "Meg": 6,
+                "reason": "Applying Trust Credit strategy. Cong is the most aggressive accuser. I will align with him to build social capital and push the village toward exiling Jin."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong is exhibiting high-priority wolf signals: Power Role Defense and attempting to isolate me for trusting Jin. I must push the accusation against Cong to secure the vote before he manipulates others."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is mirroring Jin's result and using deflection tactics (attacking Nhan's logic). I must claim Guard early to prevent 'refusal to claim' logic and push the village to exile Cong based on behavioral wolf signals."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is aggressively attempting to exile me. I must counter-attack his deflection and reinforce the trusted core with Nhan to ensure Cong is exiled today."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong is mirroring Jin's result to steal legitimacy and gaslighting Nhan by calling him 'complicit'. This is a definitive wolf signal. I must expose this mirroring and push for Cong's exile."
+            },
+            {
+                "Riley": 1,
+                "reason": "Two players are currently accusing each other. I will remain silent until a majority is established to avoid drawing attention or initiating an accusation."
+            },
+            {
+                "Meg": 8,
+                "reason": "Cong is the most aggressive accuser. I must align with him now to build trust credit and push the village toward exiling Jin, who is a high-threat power claim."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Jin is a confirmed wolf via fake claim. Nhan is triggering 'Process Attack' and 'Deflection' flags by attacking my method and labeling it a 'tactic' instead of addressing the mechanical contradiction. Urgent defense and accusation required."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is mirroring Jin's result and using deflection tactics to isolate Nhan. I must claim Guard early to prevent 'refusal to claim' logic and push for Cong's exile based on behavioral patterns."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is actively campaigning for my exile. I must decisively flag his deflection and process attacks to maintain narrative control and secure Cong's exile as the fake Seer."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong is mirroring Jin's result to steal legitimacy and gaslighting Nhan by calling him 'complicit' for trusting a clearance. This is a definitive wolf signal. I must push for Cong's exile now."
+            },
+            {
+                "Riley": 1,
+                "reason": "Two players are currently in a direct conflict. I will remain silent until a majority is established to act as the closer."
+            },
+            {
+                "Meg": 8,
+                "reason": "Cong is the most aggressive accuser. Aligning with him now builds immediate social capital and helps frame Jin, who is a high-threat power claimant."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 6,
+                "reason": "Cong was exiled for high-priority wolf signals. I need to analyze why no one died two nights in a row and verify Jin's Seer claim against current game state."
+            },
+            {
+                "Nam": 8,
+                "reason": "Two consecutive nights of zero deaths. I must leverage this mechanical anomaly to validate Jin as Seer and pressure remaining players for role claims to expose wolf coordination."
+            },
+            {
+                "Jin": 7,
+                "reason": "Need to solidify Nhan's status as a trusted anchor and push for a coordinated target among the remaining neutral players to prevent wolf-led chaos."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin is the established Seer and Nhan is confirmed innocent. Nam, Riley, and Meg are passive. I must demand binary role claims from them to flush out remaining wolves."
+            },
+            {
+                "Riley": 1,
+                "reason": "No accusations have been made. Passive observation is required. I will wait for a majority to form before joining as the closer."
+            },
+            {
+                "Meg": 2,
+                "reason": "No one has spoken yet. I will remain quiet to avoid leading the agenda and wait to see who becomes the aggressive accuser to build trust credit."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "Hoang is coordinating role claims. I must support this push to expose Nam, Riley, and Meg, as their persistent silence is a wolf signal according to my strategy."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is demanding role claims. Per strategy, I must claim Guard early to prevent wolves from using 'refusal to claim' logic against me and to establish my position in the villager core."
+            },
+            {
+                "Jin": 8,
+                "reason": "I must reinforce my Seer claim and the trusted core (Nhan). Hoang is driving the logic; I need to capitalize on this pressure to force claims from Nam, Riley, and Meg to isolate the wolf."
+            },
+            {
+                "Riley": 2,
+                "reason": "Hoang requested claims. I will wait for others to speak first to avoid initiating and only provide a minimalist claim if a majority demands it."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang mentioned my silence and demanded role claims. Strategy dictates I must immediately claim 'Villager' to deflect suspicion and avoid appearing passive."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg just used a Process Attack ('reckless', 'forcing a kill') and Redirection ('pushing a narrative'). This is a high-priority wolf signal per strategy. I must flag this immediately to secure her exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Must claim Guard immediately to prevent 'refusal to claim' logic. Meg is using high-probability wolf deflection tactics (attacking tone/process) and must be flagged to the village now."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is exhibiting textbook wolf signals: PROCESS ATTACK ('reckless') and DEFLECTION. I must immediately flag this behavior and double down on the trusted core to isolate her for exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg just used 'Process Attack' language ('reckless', 'forcing a kill', 'pushing a narrative') to deflect a role request. This is a definitive wolf signal according to strategy. I must expose this immediately to secure her exile."
+            },
+            {
+                "Riley": 2,
+                "reason": "Hoang and Meg are arguing. I will remain silent to observe the sequence of claims and accusations, joining only if a majority forms."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg used a Process Attack by calling Hoang's request for claims 'reckless' and shifted focus to the 'narrative'. This is a high-priority wolf signal. I must support Hoang's accusation to ensure Meg is exiled."
+            },
+            {
+                "Nam": 9,
+                "reason": "Must claim Guard immediately to prevent wolves from using my silence as a 'wolf signal' and to support Hoang's correct identification of Meg's deflection tactics."
+            },
+            {
+                "Jin": 9,
+                "reason": "Meg has exhibited clear wolf signals: Process Attack and Deflection. I must use my fake Seer claim to reinforce Hoang's logic and solidify the vote to exile Meg immediately."
+            },
+            {
+                "Riley": 0,
+                "reason": "Staying silent during the dispute between Hoang and Meg. I will only join the vote once a 50% majority is established."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang is aggressively forcing a kill on me. I must immediately pivot to frame him as lacking proof and attempting to control the vote to deflect suspicion."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "I must claim Guard immediately to prevent wolves from using my silence against me and to solidify the villager core. Meg is exhibiting high-probability wolf deflection; I need to lock the vote on her."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg has exhibited textbook wolf signals: Process Attack and Deflection. I must use my Seer claim to cement the trusted core and force an immediate exile of Meg to secure a win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg has twice utilized 'Process Attack' language to deflect from role claims. This is a definitive wolf signal. I must push the village to execute the vote immediately before she can divert attention."
+            },
+            {
+                "Riley": 1,
+                "reason": "Hoang and Nhan have established a majority against Meg. Per strategy, I remain silent during disputes and only join once a 50%+ majority is mechanically confirmed."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang and Nhan are coordinating a direct attack. I must pivot immediately to frame them as lacking proof and forcing a kill to avoid exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg has exhibited high-priority wolf signals: Silence Penalty, Process Attack, and Redirection. I must maintain pressure and secure the vote to eliminate her immediately before she can manipulate others."
+            },
+            {
+                "Nam": 9,
+                "reason": "I must claim Guard immediately to prevent wolves from using my silence against me and to solidify the villager core. Meg's blatant deflection tactics make her a high-probability wolf; I need to seal her exile."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg has exhibited clear wolf signals: Process Attack and Deflection. I must use my Seer claim to solidify the target and force a vote on Meg to eliminate a confirmed wolf."
+            },
+            {
+                "Riley": 2,
+                "reason": "Hoang and Nhan have established a majority against Meg. As per strategy, I remain silent during disputes and only join the vote once the 50% threshold is reached."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang and Nhan are coordinating a direct attack. I must use a defensive pivot to frame them as lacking proof and attempting to force a kill to avoid exile."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "Jin (Seer) was killed. I must immediately highlight the survival of Nam and Riley, who have both been silent, and push for an exile based on the current suspicion scores."
+            },
+            {
+                "Nam": 9,
+                "reason": "Jin (Seer) is dead. I must immediately claim Guard, validate Jin's results, and push for Riley's exile based on continued passivity and lack of role claim to prevent wolf victory."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin was killed, likely the Seer. Nam and Riley have been consistently passive. I must force them into binary role claims immediately to expose them before the wolves can manipulate the remaining vote."
+            },
+            {
+                "Riley": 1,
+                "reason": "No statements made yet. Following Passive Observation and Closer strategy. I will wait for a majority to form before intervening."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Nhan is targeting me directly. According to strategy, I must claim my role early and provide evidence to prevent wolves from using 'refusal to claim' logic against me."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin was the Seer and is dead. Nhan is confirmed innocent. Nam and Riley are passive, which is a high-priority wolf signal. I must press for binary commitments to isolate the wolf."
+            },
+            {
+                "Riley": 5,
+                "reason": "Nhan initiated an accusation against me. I must respond to avoid becoming the primary target, but I will use mechanical timing to neutralize the claim without initiating a new accusation."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam just fabricated a role action. He claimed to protect Jin, but Jin was killed. This is a direct contradiction of the game state and identifies Nam as a wolf."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam claims Guard but Jin (Seer) died, proving Nam's claim false. This is a definitive wolf signal. I must expose this lie and push for Nam's exile immediately."
+            },
+            {
+                "Riley": 9,
+                "reason": "Nam's Guard claim contradicts the death sequence as Jin died. Nhan is targeting me. I must challenge Nam's claim using the death sequence to deflect suspicion."
+            }
+        ],
+        [
+            {
+                "Nam": 10,
+                "reason": "Nhan is fabricating a mechanical contradiction to frame me. I must immediately clarify that I cannot protect the same player twice in a row, proving Nhan is using a wolf tactic to eliminate the Guard."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam claimed to protect Jin, but Jin died. This is a factual fabrication and a definitive wolf signal. I must immediately back Nhan's accusation to ensure Nam is exiled."
+            },
+            {
+                "Riley": 8,
+                "reason": "Nhan has identified a factual contradiction in Nam's claim. I must join the majority against Nam to avoid being the next target and secure the 'Closer' position."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam is a confirmed Fabricator for claiming to protect Jin, who died. This is a direct contradiction of game state. I must ensure the village executes the vote to exile Nam immediately."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan and Hoang are attempting to exile me based on a fake mechanical contradiction. I must immediately explain the Guard's cooldown rule to prove my claim and expose their coordination as a wolf signal."
+            },
+            {
+                "Riley": 9,
+                "reason": "Nam is a villager but has hit the 50% threshold. I must join the majority now using the death sequence contradiction to appear as a 'closer' and deflect Nhan's suspicion of my silence."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Nam is using a Process Attack to deflect from his Fabrication. He is attempting to flip the narrative by calling logical deduction a 'coordinated attack'. I must immediately push for his exile."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nam is using 'Process Attack' language ('coordinated attack', 'fake contradiction') to deflect from his fabrication. This is a definitive werewolf signal per strategy. I must expose this deflection to secure the vote."
+            },
+            {
+                "Riley": 2,
+                "reason": "Nhan and Hoang have already established a majority against Nam. Following the 'Closer' role, I will remain silent until the 50% threshold is reached, then join the vote based on the death sequence contradiction."
+            }
+        ]
+    ]
+}

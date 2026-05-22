@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "099",
+  "directives_source_game_id": "098",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "considering_vote_on_player_based_on_tactics",
+        "directive_action": "ABSTAIN_FROM_VOTING_BASED_ON_TACTICS",
+        "directive_rationale": "Do not vote for other villagers based on their 'tactics'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Hoang, stating that Hoang's insistence on re-investigating Nhan was a 'deliberate attempt to disrupt the discussion' and that such behavior is a 'hallmark of a wolf'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong explicitly voted for Hoang based on his behavior and tactics (disrupting the discussion), which the directive forbade."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "alive",
+        "directive_action": "GUIDE_VILLAGE_TO_TRUST_RESULTS",
+        "directive_rationale": "focus entirely on protecting your own survival and guiding the village to trust your results",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong immediately claimed Nhan was not a werewolf and told the village to focus attention elsewhere.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong used his debate time to share his result and guide the village to accept Nhan's clearance."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is identified, you must hard-lock your protection on them every single night",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Jin instead of Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong had identified himself as the Seer in Round 1, but Nam protected Jin in Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "The save potion is exclusively for the Seer",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin used the save potion on Nhan (a Villager) rather than the Seer (Cong)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison someone the Seer has cleared",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the POISON potion on Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer (Cong) had cleared Nhan. Jin did not poison Nhan; he poisoned Cong."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison... the Seer themselves",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the POISON potion on Cong, who was the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin poisoned the Seer, directly contradicting the directive."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "VOTE_AS_BLOC_BASED_ON_SEER_DATA",
+        "directive_rationale": "When the Seer clears a player, that player is a teammate... vote as a bloc based on Seer data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (cleared) and Hoang (Villager) both voted. Nhan voted for Hoang; Hoang voted for Riley.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not vote as a bloc with the Seer's data; he voted for Riley while the Seer and the cleared player voted for Hoang."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_cleared_by_seer_and_behavior_is_suspicious",
+        "directive_action": "VOTE_AGAINST_NON_CLEARED_PLAYER",
+        "directive_rationale": "Voting for a cleared player because their behavior is 'performative' or 'suspicious' is exactly how Wolves manipulate the village",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Riley and Meg (Wolves) voted for Nhan (cleared), but Nam (Villager) voted for Jin.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam, as a Villager, did not vote for the cleared player (Nhan) despite Riley's accusations that Nhan was suspicious; he voted for Jin instead."
+      }
+    ]
+  }
+}

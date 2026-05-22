@@ -1,0 +1,73 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "communicating findings to the village",
+        "action": "AVOID_JARGON",
+        "rationale_short": "avoid using jargon like 'Trust Anchor' or 'Wolf Signal'",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "communicating findings to the village",
+        "action": "DESCRIBE_SPECIFIC_BEHAVIORS",
+        "rationale_short": "Focus on describing specific behaviors (e.g., 'Player X is echoing me without adding logic') rather than labeling them",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Prioritize the Seer from Night 1 onwards",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_remaining == 1 && no_clear_contradiction_exists",
+        "action": "RESERVE_SAVE_FOR_SEER",
+        "rationale_short": "reserve the Save potion exclusively for the Seer unless a clear contradiction proves another player's role",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_echoing",
+        "action": "CHALLENGE_ORIGINAL_ANALYSIS",
+        "rationale_short": "Continue pushing players to provide original analysis",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_pivots_to_vibes_or_feelings",
+        "action": "REDIRECT_TO_SEER_DATA",
+        "rationale_short": "identify this as a deflection tactic and redirect the group back to the Seer's data",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_self",
+        "action": "OBSERVE_AND_REPORT_REACTIONS",
+        "rationale_short": "When the Seer clears a player, that cleared player should... actively observe and report on the suspects' reactions to the clear",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 7,
+    "dropped": []
+  }
+}

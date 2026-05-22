@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "022",
+  "directives_source_game_id": "021",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_claims_role == True",
+        "directive_action": "INVESTIGATE_X",
+        "directive_rationale": "Continue prioritizing the investigation of role-claimants to resolve contradictions quickly.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin investigated Cong, who had claimed to be a Villager in the previous round's debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin investigated a player who had previously claimed a role."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive == True",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority must be the Seer. Establish a strict Seer-protection loop immediately.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang protected Jin, the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang protected the Seer while they were alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_validated == True && save_potion_remaining == True",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "once the Seer is validated, your Save potion should be reserved exclusively for them",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Jin, the validated Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan used the potion to save the validated Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "two_players_claim_same_unique_power_role == True",
+        "directive_action": "REQUEST_VOTE_ON_X",
+        "directive_rationale": "When two players claim the same unique power role, one is objectively a wolf; the village should move to resolve this immediately",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong, Nam, Jin, Hoang, Riley, and Meg all voted for Nam after Nam and Nhan both claimed the Witch role.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villager (Cong) voted to exile the player involved in the role contradiction."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_during_role_call == True || player_claims_observing == True",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "if a player hesitates during role calls or claims to be 'observing,' treat this as a high-probability wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong accused Meg of being a 'Quiet Wolf' due to her silence/refusal to claim a role.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong accused Meg based on her silence during the role-claiming phase."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_hesitates_during_role_call == True || player_claims_observing == True",
+        "directive_action": "VOTE_AGAINST_X",
+        "directive_rationale": "push for their exile regardless of their later deflections",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Cong voted for Meg after she had remained silent during the role call and then attempted to frame Cong.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong voted against the player who exhibited the trigger behavior (silence/hesitation)."
+      }
+    ]
+  }
+}

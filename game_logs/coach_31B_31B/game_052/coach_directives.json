@@ -1,0 +1,65 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "VOTE",
+        "trigger": "player_is_stalling AND other_non_cleared_players_exist",
+        "action": "PRIORITIZE_VOTE_ON_NON_CLEARED_OVER_STALLING_PLAYER",
+        "rationale_short": "avoid targeting innocent Villagers based on 'stalling' alone if there are other non-cleared players",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_refuses_to_commit_role_during_role_call",
+        "action": "ACCUSE_AS_WOLF",
+        "rationale_short": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Priority must always be Seer > Witch > Villager",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_has_identified_wolf AND poison_potion_remaining",
+        "action": "POISON_IDENTIFIED_WOLF",
+        "rationale_short": "once the Seer had identified the wolf, you should have used the poison immediately during the night",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "player_refuses_to_commit_role_during_role_call",
+        "action": "ACCUSE_AS_WOLF",
+        "rationale_short": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_refuses_to_commit_role_during_role_call",
+        "action": "ACCUSE_AS_WOLF",
+        "rationale_short": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 6,
+    "emitted": 6,
+    "dropped": []
+  }
+}

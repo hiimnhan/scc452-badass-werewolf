@@ -1,0 +1,84 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Witch
+**Cong:** Villager
+**Nam:** Villager
+**Jin:** Seer
+**Hoang:** Guard
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Hoang (Guard) chose to protect Nhan.
+• Jin (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Nhan (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Jin:** I am the Seer. I investigated Nhan last night, and Nhan is not a werewolf. We now have one confirmed villager; we must focus our suspicion on the remaining five players to identify the wolves.
+**Hoang:** Jin, I acknowledge your claim and validate your data. Nhan is now our confirmed baseline. Everyone else, unless you have a conflicting power claim, we focus our scrutiny on the remaining five. We cannot afford a wasted vote.
+**Nam:** Hoang, you are echoing Jin's data without adding any original analysis. Validating the baseline is an easy way to blend in. Cong, Riley, Meg—give us your deductive value or role claims now so we can narrow the variable pool.
+**Hoang:** Nam, your attempt to frame the validation of Seer data as 'blending in' is a textbook example of pseudo-logic designed to confuse the group. I am prioritizing factual data over your baseless critiques. We stick to Jin's clearance of Nhan.
+**Jin:** Hoang, using terms like 'pseudo-logic' to attack Nam for questioning your lack of original analysis is a major red flag. You are mirroring my data and then attacking the critique. Everyone, focus on the PoE: Nhan is clear, Hoang is now high-risk.
+**Hoang:** Jin, your sudden pivot to attack me for validating your own data is a blatant contradiction. Nam and Jin are now working in tandem to deflect from the facts. I dismiss the critique of my tone; we focus on the data. Nhan is clear; Nam is the target.
+
+### Votes
+**Nhan** voted for **Hoang**
+> Nhan voted to exile Hoang. Reason: Hoang is mirroring the Seer's data without adding original analysis and is now attempting to frame Jin and Nam to deflect suspicion. His use of pseudo-logic to attack those questioning his behavior is a clear red flag. We must prioritize the Seer's data.
+**Cong** voted for **Hoang**
+> Cong voted to exile Hoang. Reason: Hoang is using analytical jargon to deflect from his lack of original input. He has now pivoted to attacking Jin, our claimed Seer, and Nam for questioning him. This pattern of mirroring data and then attacking the source is a clear indicator of a werewolf.
+**Nam** voted for **Hoang**
+> Nam voted to exile Hoang. Reason: Hoang is mirroring the Seer's data without adding analysis and attacking anyone who questions him. His use of complex terminology to deflect from his lack of original logic and his attempt to frame Jin and me are clear signs of a werewolf.
+**Jin** voted for **Hoang**
+> Jin voted to exile Hoang. Reason: Nhan is confirmed clear. Hoang is echoing my data to blend in and is using deflective language to attack Nam for questioning him. This pattern of mirroring and aggressive deflection is a high-risk werewolf signal. We must exile Hoang.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam is utilizing pseudo-logic to frame the necessary validation of Seer data as suspicious. This is a clear attempt to deflect attention and confuse the village. We must prioritize the Seer's data and eliminate those attempting to undermine it.
+**Riley** voted for **None**
+> Riley voted to exile None. Reason: The conflict between Jin, Hoang, and Nam is creating too many contradictions to act on. If Jin is the Seer and Hoang validated them, why the sudden pivot? We need more concrete evidence or a conflicting power claim before we risk a wasted vote.
+**Meg** voted for **Hoang**
+> Meg voted to exile Hoang. Reason: I am a Villager. Jin is the Seer and has provided a factual baseline with Nhan's clear. Hoang's behavior and subsequent contradiction of the Seer's logic create a mechanical inconsistency that we cannot ignore. I follow the Seer's lead.
+
+**Day Exiled:** Hoang
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Jin.
+• Jin (Seer) investigated Cong. Cong is NOT a wolf.
+• Nhan (Witch) did not use any potions.
+**Night Eliminations:** Jin
+
+### Day Debate
+**Cong:** Jin was the Seer and was killed tonight, which confirms the wolves viewed them as a threat. Nhan is confirmed innocent. This leaves Nam, Riley, and Meg. Riley and Meg, give me a logical reason why you aren't the wolves.
+**Meg:** I'm a Villager. Cong, demanding 'logical reasons' is a deflection. Nam has been aggressively driving the narrative since day one; that's a mechanical inconsistency with a passive villager role. Nam, explain your push for Hoang without any factual data.
+**Nam:** Meg, your use of 'mechanical inconsistency' is a pseudo-logic trap to deflect from your own lack of evidence. You are attacking my tone to avoid the fact that you are an unverified variable. I am a Villager; your deflection confirms you are a wolf.
+**Cong:** Meg, you are using Logic Posturing and Vibe Traps. Calling Nam's assertiveness a 'mechanical inconsistency' is a transparent attempt to deflect scrutiny. You've provided zero evidence while attacking a villager. Meg is the wolf. I am voting to exile her.
+**Meg:** Cong, your accusations are based on behavioral labels, not mechanical contradictions. You're ignoring the fact that you're leading a rush to exile me without a single piece of factual data. This is a classic wolf tactic to isolate a villager. I'm voting Cong.
+**Cong:** Meg, your claim that my analysis is a 'wolf tactic' is a classic Vibe Trap. You are attacking my process because you cannot provide a logical defense for yourself. You've spent this entire debate deflecting and posturing. I am not wavering; Meg is the wolf.
+
+### Votes
+**Nhan** voted for **Meg**
+> Nhan voted to exile Meg. Reason: Meg is relying on deflection and attacking the style of the debate instead of providing logical evidence. Her attempts to frame logical scrutiny as 'wolf tactics' are a clear Vibe Trap used to avoid accountability. She is the most likely wolf.
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Meg has provided no logical defense for her innocence, instead relying on deflection and attacks on Nam and me. Her attempt to frame assertiveness as a 'mechanical inconsistency' is a clear tactic to distract the village from her own lack of verification.
+**Nam** voted for **Meg**
+> Nam voted to exile Meg. Reason: Meg is using pseudo-logic and attacking the tone of the debate to deflect scrutiny. She provides no evidence for her claims and relies on vibe-based accusations to frame others. This behavior is a clear wolf tactic to avoid being identified as an uncleared variable.
+**Riley** voted for **Meg**
+> Riley voted to exile Meg. Reason: Cong's breakdown of the logic is sound. Meg is relying entirely on attacking the process and using behavioral deflections rather than providing any mechanical evidence for her innocence. At this stage, the lack of a factual defense makes her the most likely wolf.
+**Meg** voted for **Cong**
+> Meg voted to exile Cong. Reason: Cong is relying entirely on behavioral labels and 'vibe' assessments rather than mechanical contradictions. This aggressive rush to exile me without factual data is a transparent attempt to manipulate the vote. I am voting Cong for this mechanical inconsistency.
+
+**Day Exiled:** Meg
+---
+
+## Round 3
+**Night Actions:**
+• Riley (Wolf) targeted Nhan.
+• Nhan (Witch) used POISON potion on Riley
+**Night Eliminations:** Riley, Nhan
+---

@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "032",
+  "directives_source_game_id": "031",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num >= 1",
+        "directive_action": "REVEAL_INVESTIGATION",
+        "directive_rationale": "the Seer should continue providing 'ground truth' immediately to narrow the suspect pool",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin revealed himself as the Seer in Round 1 and stated that Nhan was confirmed NOT a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin immediately revealed his role and investigation results in the first debate phase."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SELF",
+        "directive_rationale": "The Guard correctly protected themselves in Round 1",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected Nhan instead of himself in Round 1."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 2",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Guard correctly protected... the Seer in Round 2",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Jin (the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang protected the Seer in Round 2 as directed."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_targeted",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "prioritize the Seer if they are targeted",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the POISON potion on Meg instead of using a SAVE potion on Jin (who was targeted by wolves).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin was targeted by Riley and Meg, but Nhan used the poison potion on Meg instead of saving Jin."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "potions_remaining > 0",
+        "directive_action": "COORDINATE_WITH_SEER",
+        "directive_rationale": "the Witch should coordinate with the Seer to ensure the most valuable information source is protected first",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There is no record of coordination between Nhan and Jin during the night phases."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_voted_for_confirmed_wolf",
+        "directive_action": "WITHHOLD_CLEAR",
+        "directive_rationale": "Do not grant a 'clear' to any player simply because they voted for a confirmed wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Riley (a wolf) voted for Cong. In Round 2, Nam and Nhan did not grant Riley a 'clear' based on this vote; instead, they accused him of being a wolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villagers did not grant Riley a clear just because he voted for the exiled Cong."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_hesitates_during_role_call",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "continue to treat hesitation during role calls as a primary wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Jin both accused Cong of being a wolf because he remained silent during the role call.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam and Jin correctly identified Cong's silence/hesitation as a wolf signal."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_agrees_with_seer_without_independent_logic",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "always scrutinize players who simply agree with the Seer without providing independent logic",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin challenged Nam and Riley to provide independent logic rather than just observing or agreeing.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin explicitly demanded that Nam and Riley stop observing and provide independent logic."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_uses_silence_then_frames_logical_demands_as_bullying",
+        "directive_action": "IDENTIFY_CONFUSION_MASK",
+        "directive_rationale": "correctly identified the 'Confusion Mask'\u2014where wolves used silence and then framed the village's logical demands as 'bullying'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley claimed that Nam was 'bullying' him to force a narrative. Nhan and Nam both responded by identifying this as a 'textbook Confusion Mask'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan and Nam specifically identified Riley's 'bullying' claim as a Confusion Mask."
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "100",
+  "directives_source_game_id": "099",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "guard_is_silent",
+        "directive_action": "COMMUNICATE_NEED_FOR_GUARD_REVEAL",
+        "directive_rationale": "you failed to communicate the need for the Guard to reveal themselves earlier",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Guard (Nam) revealed himself immediately in Round 1 Debate, so the trigger 'guard_is_silent' never occurred."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "ENGAGE_IN_DEBATE",
+        "directive_rationale": "Failing to engage in the debate while the Seer was alive created a 'wolf signal'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam explicitly claimed the Guard role and actively engaged in the debate, stating that the Seer (Cong) was the priority for protection and demanding deductive value from others.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard actively participated in the debate while the Seer was alive."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "SIGNAL_EXISTENCE",
+        "directive_rationale": "You must signal your existence or coordinate with the Seer early to avoid being mistaken for a wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated 'I am the Guard' in the first round of debate immediately after the Seer's claim.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The player signaled their existence as the Guard immediately."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "COORDINATE_WITH_SEER",
+        "directive_rationale": "coordinate with the Seer early to avoid being mistaken for a wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam coordinated with Cong by acknowledging the Seer's clear of Nhan and declaring the Seer the priority for protection.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard explicitly coordinated their role's function with the Seer's data."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "true",
+        "directive_action": "AVOID_MIMICKING_SEER_LANGUAGE",
+        "directive_rationale": "Never mimic the Seer's language",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin claimed the Witch role and used distinct terminology such as 'prioritizing the Seer', 'pool of variables', and 'logic posturing', rather than mimicking the Seer's phrasing.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch used her own distinct language to describe the game state."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "flagged_by_players",
+        "directive_action": "PROVIDE_ORIGINAL_DATA",
+        "directive_rationale": "provide original data... immediately when flagged",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Hoang called Jin's behavior 'highly untrustworthy', Jin did not provide new 'data' (as the Witch's role provides limited data compared to the Seer), but instead defended her logic and continued the debate.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Jin responded to the flag, though as a Witch, 'original data' is limited primarily to the role claim and potion status."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "flagged_by_players",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "provide... a clear claim immediately when flagged",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin had already revealed her role ('I am the Witch') prior to being flagged by Hoang.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The role was revealed immediately at the start of the debate, satisfying the need for a clear claim."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_votes_for_another_player_and_is_later_targeted",
+        "directive_action": "CONSIDER_TACTICAL_SACRIFICE",
+        "directive_rationale": "When Meg (Wolf) voted for Hoang (Witch) and then was later targeted, you ignored the possibility that the wolves were sacrificing their own to blend in",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan observed that Meg had previously voted for Hoang (Round 1) and was now the target (Round 3). Instead of considering a tactical sacrifice, Nhan concluded that Meg was the wolf based on the process of elimination (Cong's clear of Nhan and Nam's Guard claim).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan relied on mathematical elimination rather than considering if the wolf was sacrificing a teammate to blend in."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_has_cleared_everyone_except_one_person",
+        "directive_action": "VOTE_AGAINST_UNVERIFIED_PLAYER",
+        "directive_rationale": "When the Seer has cleared everyone except one person, that person is the wolf, regardless of how suspicious the Guard's timing seems",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Meg, noting that Cong's data cleared him and Nam was the Guard, leaving Meg as the only unverified player.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan voted against the only remaining unverified player as instructed."
+      }
+    ]
+  }
+}

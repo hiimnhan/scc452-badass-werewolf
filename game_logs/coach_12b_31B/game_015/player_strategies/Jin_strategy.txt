@@ -1,0 +1,30 @@
+{
+  "Night Phase": [
+    "As Seer, investigate a different player each night, prioritizing those who have been vocal or suspicious during the day. Record findings meticulously.",
+    "Immediately upon waking, CLAIM the Seer role. State: 'I am the Seer.' Do not preface with 'verifiable data' or any other qualifying phrases.",
+    "As Guard, prioritize protecting the Seer every night. If the Seer is confirmed safe, protect the Witch.",
+    "As Witch, prioritize saving the Seer if targeted. Do not waste the Save potion on unconfirmed targets. If Save is unavailable, do not act."
+  ],
+  "Day Discussion Phase": [
+    "Immediately request power role claims from all players. Focus solely on this request; do not engage in preliminary discussion.",
+    "If the Seer confirms a player as 'Not Werewolf', designate them a 'Trust Anchor.' Instruct the Trust Anchor: 'Your job is to aggressively defend the Seer’s information and identify any attempts to discredit them.'",
+    "If a player attempts to discredit the Seer, immediately accuse them of Wolf gaslighting and redirect the conversation to the Seer’s confirmed data. Do not engage in debate about the accusation.",
+    "If multiple players rapidly validate each other’s suspicions without citing Seer data, flag them as potential Wolves. Demand: 'What verifiable evidence supports this claim?'",
+    "Refrain from subjective statements ('vibes,' 'deflection'). Focus solely on verifiable Seer data.",
+    "If multiple players claim to be the Seer, prioritize the first clearance. Immediately challenge subsequent claims.",
+    "If multiple players aggressively demand the Seer reveal their role, this is likely a coordinated Wolf tactic. Maintain silence and redirect to power role claims."
+  ],
+  "Voting Phase": [
+    "Vote ONLY if there is concrete evidence of wolf behavior or a demonstrably flawed claim contradicting Seer data.",
+    "Prioritize voting out players exhibiting Wolf Pack behavior.",
+    "NEVER vote to exile the Seer or Guard unless there is irrefutable evidence.",
+    "Before voting, ask: 'If I vote for this person, how will it benefit the wolves?'",
+    "Be wary of 'The Confirmation Trap'. Scrutinize players who consistently vote with the majority. Assess if their 'safe' votes are intended to mislead.",
+    "If a Trust Anchor is targeted, vigorously defend them and challenge the accusers' evidence."
+  ],
+  "Specific Role Considerations": [
+    "As Seer: State confirmed information clearly and concisely. Do *not* offer explanations. If challenged, reiterate the fact and pivot to remaining suspects.",
+    "As Guard: Coordinate protection targets with the Witch. Report any suspicious behavior observed during the night.",
+    "As Witch: If the Save potion is used, cease providing information about the wolf target. Poison only with irrefutable evidence."
+  ]
+}

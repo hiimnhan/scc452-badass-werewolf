@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "076",
+  "directives_source_game_id": "075",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "a player is attacking a player the Seer has cleared",
+        "directive_action": "FORCEFULLY_EXPLAIN_SUSPICION",
+        "directive_rationale": "you must be more forceful in explaining that any player attacking a cleared player is automatically suspicious",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Seer) stated that Riley was the primary suspect because Riley was attempting to undermine the Power Core and shift focus away from the confirmed data (Nhan's clear) toward vague behavioral suspicions.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified Riley's attempt to undermine the coordination surrounding the cleared player (Nhan) as a classic werewolf tactic and explicitly labeled Riley the primary suspect."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer reveals themselves",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority must shift to the Seer the moment they reveal themselves",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin (Guard) chose to protect Nam (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Nam revealed himself as the Seer in Round 1, Jin protected Nam during the Night of Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer has cleared a player",
+        "directive_action": "DO_NOT_ATTACK_CLEARED_PLAYER",
+        "directive_rationale": "you validated a fake role claim (the fake Witch) and attacked a Seer-cleared player",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin acknowledged Nhan as the Trust Anchor and voted for Riley instead of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin did not attack the Seer-cleared player (Nhan) and instead supported the clear."
+      },
+      {
+        "directive_id": "GUARD-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Conflict between 'Power Core' coordination and Seer's data",
+        "directive_action": "PRIORITIZE_SEER_DATA",
+        "directive_rationale": "Never prioritize a 'Power Core' over the Seer's actual data",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no conflict between the Power Core and the Seer's data; they were in complete alignment."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Target is a fellow power role (e.g. Guard)",
+        "directive_action": "DO_NOT_POISON",
+        "directive_rationale": "Using it on the Guard\u2014a fellow power role\u2014is a game-ending mistake",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Hoang did not use the poison potion on any player."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Player has been flagged by the Seer or committed a logical fallacy during debate",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Only poison players who have been flagged by the Seer or have committed a logical fallacy during debate",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang did not use a poison potion during the night following Round 1, despite Riley being flagged by the Seer and the village as suspicious.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "While Hoang followed the negative constraint (not poisoning innocent power roles), they did not take the action to poison the flagged player Riley."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer clears a player",
+        "directive_action": "TRUST_CLEARED_PLAYER_OVER_LOGICAL_ARGUMENTS",
+        "directive_rationale": "If the Seer clears someone, trust that person over any 'logical' argument presented by others",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan and Cong both explicitly cited Nam's clearance of Nhan to dismiss Riley's 'logical' arguments regarding the convenience of the Power Core's coordination.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers (Nhan, Cong) prioritized the Seer's data over Riley's behavioral and logical arguments."
+      }
+    ]
+  }
+}

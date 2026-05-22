@@ -1,0 +1,151 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Nam (Guard) chose to protect Nhan.",
+            "Cong (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Jin (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Nhan was targeted last night. I used my save to protect them. Let's observe their actions closely to determine their alignment. Early game requires careful observation, not rash accusations."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's save of Nhan is noted. While potentially helpful, early reveals can be deceptive. Let's observe all players carefully; rash accusations benefit no one."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Jin saved Nhan. A reasonable action, but early saves often mask intentions. Let's observe Jin and Cong's interactions; their mirroring suggests possible coordination."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam's linking of Cong and me through mirroring is interesting. Let's see if this perceived coordination manifests in their subsequent actions. I suggest we all observe each other carefully and avoid jumping to conclusions."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Jin saved me, which I appreciate. However, Nam's observation about Jin and Cong mirroring each other is astute. Their coordinated language raises concerns. I propose we watch their interactions closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's save of Nhan is a calculated move. Highlighting mirroring between Jin and Cong is astute, Nam. Let's observe their actions closely; their coordinated language demands scrutiny."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's echoing of Jin's statements suggests a coordinated effort. We need to disrupt potential wolf pairings early to protect the village."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nam's deflection tactics and coordinated agreement with Hoang and Nhan raise significant concerns. We need to disrupt potential wolf alliances early."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Jin",
+                "reasoning": "Nam voted to exile Jin. Reason: Jin's save and subsequent defense with Cong and Nhan feels orchestrated. Their coordinated language and deflection warrant a closer look and a potential exile."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's focus on perceived mirroring between Cong and me feels manufactured. Disrupting this potential coordination is vital for accurate assessment and preventing wolf manipulation."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong's echoing of Jin's sentiments and their coordinated language raises red flags. Let's observe their actions more closely by exiling Cong."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nam's focus on perceived coordination between Jin and Cong is a bit premature. Let's see if this pattern continues; it warrants closer scrutiny and a potential exile if it persists."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's focus on Jin and Cong's mirroring seems a bit too convenient. It's possible he's trying to shift blame and distract us from his own potential involvement. Let's not be misled by manufactured drama."
+            }
+        ],
+        "day_exiled": null
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nam (Guard) chose to protect Jin.",
+            "Cong (Seer) investigated Nam. Nam is NOT a wolf.",
+            "Jin (Witch) used POISON potion on Cong"
+        ],
+        "night_eliminated": [
+            "Nam",
+            "Cong"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "Jin saved me last night. Given Cong's elimination and Jin's coordination with him, I believe Jin is a Werewolf attempting to manipulate the village."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's immediate defense of Jin, after being saved, is highly suspect. Wolves often protect each other and then deflect blame. I believe both Nhan and Jin are working together."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan's accusations are a blatant deflection. He attempts to paint me as manipulative while simultaneously defending himself against valid scrutiny. Hoang echoes Nhan's false narrative, indicating coordination."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin's save on Nhan, followed by Nhan's immediate defense, is textbook werewolf behavior. They are coordinating to deflect suspicion. I vote Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's insistence on my guilt, echoing Nhan's deflection, is a clear tactic to divert attention. Nhan's immediate defense after being saved and Hoang's unwavering support reveal a coordinated effort to mislead the village. I vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan and Jin are working together. Jin saved Nhan, and Nhan immediately defended Jin. I maintain my vote for Jin."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's unwavering support for Jin and mirroring accusations demonstrate coordinated wolf behavior. We must eliminate this threat to the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's defense of me is a clear deflection. His coordination with Hoang reveals a deceptive strategy to mislead the village. Exile Nhan to protect our village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin's save and Nhan's immediate defense are too convenient. They're clearly working together to mislead us. We must eliminate Jin to protect the village."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's unwavering support for Jin, echoing his accusations, suggests he's being manipulated. We need to remove those blindly following false leads to protect the village."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's eagerness to agree with Nhan and his blind faith in Jin's narrative are concerning. He's easily led and could be unknowingly aiding the werewolves. We need to remove potential pawns."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Seer",
+        "Nam": "Guard",
+        "Jin": "Witch",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

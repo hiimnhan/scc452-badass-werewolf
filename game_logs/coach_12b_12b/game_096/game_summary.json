@@ -1,0 +1,149 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Cong.",
+            "Nhan (Guard) chose to protect Cong.",
+            "Hoang (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Cong (Witch) used SAVE potion on Cong"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Hoang",
+                "statement": "Confirmed Villager: Nhan is not a werewolf, based on my investigation. Let's focus on gathering information and identifying the Werewolves together."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's confirmation of Nhan is vital. We must protect Nhan and trust the Seer's judgment. Let's focus our attention elsewhere, as attacking Nhan is illogical."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Confirmed Villager: Nhan is not a werewolf, based on my investigation. Cong's immediate and strong support of Nhan is noted. Let's proceed cautiously and observe all players' actions."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's confirmation of Nhan is crucial. Attacking Nhan is illogical and a clear sign of deception. Let's observe Nam, Jin, Riley, and Meg closely for any signs of aggression towards Nhan or Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Confirmed Villager: Nhan is not a werewolf, based on my investigation. Cong's unwavering defense of Nhan, while seemingly supportive, warrants closer scrutiny. Let's observe Cong\u2019s subsequent actions."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's repeated confirmations of Nhan's innocence, coupled with Cong's immediate and fervent support, is highly suspect. Their coordinated defense feels manufactured."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's excessive and immediate defense of Hoang and Nhan raises red flags. It appears to be a coordinated deflection tactic. We must prioritize identifying and eliminating Wolves."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin's manufactured defense and accusations are a clear attempt to undermine the Seer and create chaos. His actions warrant immediate scrutiny and a vote."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's defense of Hoang and Nhan feels manufactured and coordinated. We need to disrupt this potential Wolf duo and assess Hoang's claims carefully."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong's behavior is highly unusual. His immediate, unwavering defense of Hoang and Nhan's claims without further investigation is a red flag. We need to investigate further."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin's accusations against the Seer and myself are a tactic to sow discord and deflect suspicion. We need to prioritize identifying the Werewolves, and Jin's actions are hindering that."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's behavior is highly suspicious. His unwavering defense of Nhan feels forced and designed to deflect attention from himself. We need to remove this potential threat to ensure our safety."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nam's behavior seems incredibly odd. Protecting himself twice in a row just doesn't make sense. We need someone reliable on our side, and I'm not sure we can trust him."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Nhan (Guard) chose to protect Hoang.",
+            "Hoang (Seer) investigated Jin. Jin is NOT a wolf."
+        ],
+        "night_eliminated": [
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's Seer claim is demonstrably false, given Nam's elimination. He's actively misleading us to protect a fellow wolf. I vote Hoang."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's claim is false. Nam's death proves it. Jin is correct; Hoang is actively misleading us. I vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin and Nhan are now actively attacking verifiable facts. Nhan was previously confirmed. This sudden shift in allegiance, coupled with Jin's false accusations, reveals coordinated wolf activity. I vote Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's lies are exposed. Nhan swiftly jumps to his defense. I vote Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin and Nhan are now actively attacking verifiable facts. Nhan was previously confirmed. Anyone supporting Jin's false accusations is likely a Wolf. I reiterate: Vote Jin."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's blatant deflection and manufactured defense are now undeniable. His claim is false, and his actions actively harm the village. I vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's manufactured defense and false Seer claim have been exposed. His actions are actively misleading the village and protecting a fellow wolf. He must be exiled."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's lies have been exposed. His desperate attempts to deflect blame only solidify his guilt. We must exile him to protect the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's defense of Jin's false claims is a clear indication of wolf coordination. He previously supported the Seer's findings, now actively undermining them."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's sudden defense of Jin and his increasingly erratic behavior strongly suggest he's attempting to deflect blame and mislead us. His accusations are inconsistent with the facts."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's increasingly frantic denials and attempts to shift blame are highly suspicious. His defense of Jin seems disingenuous. We need to eliminate potential deceivers."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Guard",
+        "Cong": "Witch",
+        "Nam": "Villager",
+        "Jin": "Villager",
+        "Hoang": "Seer",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "089",
+  "directives_source_game_id": "088",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_turns_on_seer",
+        "directive_action": "DOUBLE_DOWN_ON_OBJECTIVE_INVESTIGATION_FACTS",
+        "directive_rationale": "when the village turns on you, double down on the objective facts of your investigations rather than arguing behavioral patterns",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated Nhan was confirmed not a werewolf and urged the village to investigate others, and later voted for Jin because Jin questioned the Seer's clear.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong stuck to the fact of Nhan's clearance and the need to identify wolves based on that information."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_turns_on_seer",
+        "directive_action": "AVOID_ARGUING_BEHAVIORAL_PATTERNS",
+        "directive_rationale": "double down on the objective facts of your investigations rather than arguing behavioral patterns",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong focused on the investigation result (Nhan is clear) and identified those questioning the clear as suspicious, without engaging in complex behavioral arguments about the other players' personalities.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong avoided behavioral arguments, focusing instead on the investigation fact and the reaction to it."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_public",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The moment a Seer claims, they become your sole target for protection",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam chose to protect Nhan instead of Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong claimed Seer in the Day 1 debate, but Nam protected Nhan during the Night 1 phase (Note: the record shows Nam protected Nhan in Night 1, and Cong claimed in Day 1. However, the directive applies the 'moment a Seer claims'. Since Cong claimed in Day 1, Nam should have protected him in Night 2. In Night 2, Nam protected Hoang). Nam ignored the Seer in both night phases."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_public",
+        "directive_action": "AVOID_PROTECTING_RANDOM_VILLAGER",
+        "directive_rationale": "Protecting a random villager in Round 1 while a Seer is public is a critical error",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam protected Hoang (a villager) during Night 2, after Cong had publicly claimed Seer in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam protected a villager despite the Seer being public."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_not_flagged_as_wolf_and_no_strong_seer_lead",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison without a strong Seer lead or a blatant wolf giveaway",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the poison potion on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin poisoned Cong, who was the public Seer and had not been flagged as a wolf by any objective evidence."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_not_flagged_as_wolf",
+        "directive_action": "AVOID_POISONING_POTENTIAL_POWER_ROLES",
+        "directive_rationale": "Poisoning a player who hasn't been flagged as a wolf\u2014and who may be a power role like the Guard\u2014is an act of self-sabotage",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin poisoned Cong, the public Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin poisoned the most prominent power role in the game."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "TREAT_PLAYER_AS_TRUTH_ANCHOR",
+        "directive_rationale": "Once the Seer provides a clear, that player is a Truth-Anchor",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan, after being cleared by Cong, stated 'I await verification from the Seer' and 'Cong claims to have cleared me', treating the clear as an unverified claim rather than a fact.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not treat himself as a truth anchor, instead distancing himself from the claim by calling it unverified."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_was_cleared_by_seer",
+        "directive_action": "AVOID_VOTING_AGAINST_SEER",
+        "directive_rationale": "Nhan's decision to vote for the Seer in Round 2 despite being cleared by him was a catastrophic failure of logic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Nam, not the Seer (Cong).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not vote against the Seer who cleared him."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_mirrors_seer_language_to_frame_others",
+        "directive_action": "TRUST_INVESTIGATION_RESULTS",
+        "directive_rationale": "When a Wolf mirrors the Seer's language to frame others, trust the investigation results, not the rhetoric",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no instance of a wolf mirroring the Seer's specific investigation language to frame others during the debate."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conflict_between_vibes_and_objective_data",
+        "directive_action": "PRIORITIZE_OBJECTIVE_DATA",
+        "directive_rationale": "Stop prioritizing 'vibes' over objective data",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan expressed suspicion of Nam based on his 'defense of Cong' and 'coordination with Hoang', which are behavioral 'vibes' rather than the objective data provided by the Seer.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan prioritized behavioral patterns and coordination vibes over the objective data provided by the Seer."
+      }
+    ]
+  }
+}

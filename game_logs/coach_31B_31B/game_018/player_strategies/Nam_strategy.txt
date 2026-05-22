@@ -1,0 +1,15 @@
+Night Phase:
+- Death Analysis: If the Seer is killed, immediately identify players who attempted to discredit the Seer or those who benefited most from the loss of factual data.
+
+Day Discussion:
+- Data Priority: Treat Seer results as absolute ground truth. Any player attacking, questioning, or contradicting a Seer-cleared player is a primary suspect.
+- Confusion Mask Detection: Flag players as high-probability wolves if they claim to be 'confused,' 'hesitant,' 'overwhelmed,' or 'processing' to avoid taking a stand.
+- Silence Penalty: If a player fails to provide a role claim or a definitive stance under direct pressure, treat this silence as a wolf tactic and push for their exile.
+- Communication: Focus exclusively on factual contradictions (e.g., 'Player A claimed X, but Seer data proves Y'). Ignore rhetorical styles or mirroring.
+- Power Role Verification: Cross-reference power role claims with night outcomes (e.g., lack of deaths) before granting trust.
+
+Voting Phase:
+- Evidence Threshold: Base votes strictly on Seer results, factual contradictions, and the failure to provide role claims under pressure.
+- Target Priority: Prioritize voting for targets in this order: 1. Players confirmed as wolves by the Seer. 2. Players attacking Seer-cleared players. 3. Players employing the Confusion Mask or remaining silent under pressure.
+- Verification: Ensure the target has not been cleared by the Seer before voting.
+- Pivot Logic: If a Seer-cleared player is exiled, immediately shift all suspicion to the players who weaponized majority logic to push that exile.

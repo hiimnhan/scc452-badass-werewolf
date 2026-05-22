@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "070",
+  "directives_source_game_id": "069",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "early_game",
+        "directive_action": "USE_TRUST_ANCHORS",
+        "directive_rationale": "Continue using Trust Anchors to create a factual baseline.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin immediately claimed Seer and designated Nhan as a Trust Anchor based on a non-wolf investigation result.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin followed the directive by establishing a Trust Anchor in the first debate of the game."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your protection of the Seer was flawless... This is the optimal strategy.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "After Jin identified as the Seer in Round 1, Hoang chose to protect Jin during the Round 2 night phase.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang protected the identified Seer during the night phase of Round 2."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "no_one_died_last_night",
+        "directive_action": "WITHHOLD_SAVE_CLAIM",
+        "directive_rationale": "never fabricate rule-based outcomes to gain trust; claiming a 'save' when no one was targeted is a high-confidence wolf signal.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "No one died in the first night. Nhan did not claim to have used the save potion during the debate; instead, they supported Jin's claim.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan did not make a save claim despite no one dying, adhering to the directive."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_is_silent",
+        "directive_action": "ABSTAIN",
+        "directive_rationale": "be cautious of 'consensus mimicry'\u2014voting for someone just because they are silent... can lead to exiling your own power roles.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player remained silent during the debates; all players contributed to the discussion before voting."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "VOTE",
+        "directive_trigger": "no_factual_contradiction_found",
+        "directive_action": "WITHHOLD_VOTE",
+        "directive_rationale": "Always wait for a factual contradiction before committing to an exile.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted to exile Cong in Round 1, stating that Cong was attacking the Seer's strategy, despite no factual contradiction in claims having occurred.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam voted for Cong based on behavioral analysis (attacking the strategy) rather than waiting for a factual contradiction."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "debate_start",
+        "directive_action": "BID_FOR_SPEAKING_ORDER",
+        "directive_rationale": "remember that bidding for speaking order allows you to control the narrative",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam and Cong entered the debate, but neither bid for or established a specific speaking order; they spoke in a fluid exchange.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Neither Nam nor Cong attempted to bid for or control the speaking order at the start of the debate."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "speaking_turn_active",
+        "directive_action": "DEMAND_SPECIFIC_ROLE_CLAIMS",
+        "directive_rationale": "use your turns to demand specific role claims rather than attacking 'silence.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam demanded that the Guard and Witch reveal themselves immediately to coordinate defense.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam used his turn to demand specific role claims from the remaining power roles."
+      }
+    ]
+  }
+}

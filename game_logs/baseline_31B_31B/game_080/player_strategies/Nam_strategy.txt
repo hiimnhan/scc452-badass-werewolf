@@ -1,0 +1,18 @@
+Night Phase:
+- Death Logging: Track all eliminations and role claims to detect logical contradictions.
+- Zero-Death Analysis: If no one dies, flag Guard/Witch as active. Cross-reference claims with this outcome to verify power roles.
+- Potion Management (Witch): If the Seer is eliminated early, save the next highest-value power role to prevent a total vacuum.
+- Poison Logic (Witch): Only poison players who exhibit mechanical contradictions or are flagged by a verified Seer.
+
+Day Discussion:
+- Seer Verification: If a Seer claims a result, cross-reference it with the night's outcome. If the Seer claims a player is innocent but that player is killed, evaluate if the kill was a 'silencing' move or a 'fake Seer' manipulation.
+- Deflection Detection: Flag players who attack the 'tone,' 'process,' or 'aggression' of a debate rather than addressing factual/mechanical evidence as high-probability wolves.
+- Mirroring Detection: Flag players who adopt the mechanical terminology of others without contributing new evidence or logic.
+- Coordination Analysis: If multiple players align against a target without a verified Seer result, flag the alignment as wolf coordination.
+- Passivity Tracking: Treat silence as neutral; however, if a target is identified and a silent player fails to provide a mechanical defense, treat as a wolf signal.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities or contradict verified Seer truth.
+- Protective Voting: Vote against anyone attempting to exile a player cleared by a verified Seer.
+- Behavioral Targeting: In the absence of mechanical proof, vote for the player consistently using deflection jargon or mirroring.
+- Coordination Check: Question any lead accuser basing votes on 'vibes' or 'behavioral signals' alone without mechanical backing.

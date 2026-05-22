@@ -1,0 +1,211 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I am the Seer. I investigated Cong last night, and he is confirmed NOT a werewolf. Everyone else, reveal your roles immediately. Any hesitation or vague claims will be treated as a red flag."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan is the Seer and has cleared me. This is absolute ground truth. Nam, Jin, Hoang, Riley, Meg: claim your roles now. Any 'confusion' or hesitation is a confession of being a wolf."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam, Jin, Hoang, Riley, Meg: the clock is ticking. Reveal your roles now. Any attempt to stall, claim confusion, or play cautious is a confession. I have already established ground truth with Cong; your turn to be transparent."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a Villager. Nhan, since you've cleared Cong, we have a starting point. Nam, you're being far too quiet while the Seer is demanding answers. Your hesitation is a massive red flag. Let's look at Nam first."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Witch. Riley, your immediate attempt to frame me as a 'red flag' without a single piece of evidence is a classic wolf tactic to deflect attention. You are projecting. I trust Nhan's result on Cong. Riley is the primary suspect."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam, your delayed response is a red flag. Now you attempt to frame Riley, who complied immediately. This deflection is a classic wolf tactic. Jin, Hoang, Meg: reveal your roles now or you will be flagged as Quiet Wolves alongside Nam."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam hesitated to reveal his role when demanded, a clear red flag. He then attempted to frame Riley, who was transparent and cooperative. This deflection is a classic werewolf tactic to divert attention from their own suspicious behavior."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nam",
+                "reasoning": "Cong voted to exile Nam. Reason: Nhan is the Seer and his results are absolute truth. Nam hesitated to claim his role and is now attempting to deflect suspicion onto others. This behavior is a confession. We must exile Nam now."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley immediately attempted to frame me as a 'red flag' without any evidence the moment the debate began. This aggressive deflection is a classic wolf tactic to steer the village away from themselves. I trust the Seer's clear result on Cong, making Riley the primary suspect."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nhan is our Seer and Cong is cleared. Nam hesitated to claim a role and then immediately attempted to frame Riley for simply following the Seer's request. This deflection is a classic werewolf tactic. We must exile Nam."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nam",
+                "reasoning": "Hoang voted to exile Nam. Reason: Nhan has provided a clear for Cong, establishing a baseline of truth. Nam hesitated during role demands and is now using deflection to frame Riley. This pattern of hesitation followed by aggressive projection is a classic werewolf tactic to avoid scrutiny."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nam",
+                "reasoning": "Riley voted to exile Nam. Reason: Nhan is the Seer and has flagged Nam's hesitation and deflection. Nam's claim to be the Witch feels like a desperate attempt to gain power after being caught stalling. We have to trust the Seer's lead here. Nam is the most suspicious."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nam",
+                "reasoning": "Meg voted to exile Nam. Reason: Nhan has provided a clear lead with Cong. Nam's hesitation and subsequent aggressive deflection against Riley are classic signs of a wolf trying to survive the Seer's pressure. We can't risk keeping someone this unstable in the village."
+            }
+        ],
+        "day_exiled": "Nam"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Cong (Guard) chose to protect Jin.",
+            "Nhan (Seer) investigated Jin. Jin is NOT a wolf."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I have confirmed that both Cong and Jin are not werewolves. They are cleared. Hoang and Meg, reveal your roles immediately. Any hesitation or vague claims will be treated as a confession of being a wolf."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is the Seer and has cleared Cong and me. Hoang and Meg, your silence is a confession. Reveal your roles now or we vote you out. Which one of you is the wolf?"
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan is the Seer and the absolute authority. Hoang and Meg, you are stalling. This silence is a 'Confusion Mask'. Reveal your roles now or you are the wolves. I am voting for whoever hesitates first."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang and Meg, your continued silence is a direct admission of guilt. You are using a Confusion Mask to avoid exposure. I will not allow this game to stall. Reveal your roles now or be exiled immediately."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang and Meg, you have been given multiple chances to claim roles and you've chosen silence. This is a textbook Confusion Mask. Since you refuse to provide any logic or roles, I am voting to exile Hoang first. Meg, you are next."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am a Villager. My silence was not a mask, but I now see Meg's continued refusal to claim a role is a wolf stall tactic. Nhan is the Seer and has cleared Cong and Jin. We must exile Meg immediately to stop the paralysis."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Cong and Jin are confirmed innocent. Hoang has claimed a role, but Meg continues to use a Confusion Mask, remaining silent to avoid commitment. This refusal to reveal her role is a confession. We must exile Meg immediately."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Nhan is the Seer and has cleared the others. Meg's persistent silence and refusal to claim a role is a textbook Confusion Mask. This is a direct admission of guilt. We must exile Meg now to secure the victory."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Nhan is our confirmed Seer. While Hoang finally claimed a role, Meg continues to use a Confusion Mask by remaining silent and refusing to provide any logic or role claim. This silence is a confession. Meg must be exiled."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Nhan has provided clear data on Cong and Jin. Meg is the only remaining player refusing to claim a role despite multiple direct demands. This silence is a stall tactic to paralyze the village. Meg must be exiled."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Meg",
+                "reasoning": "Riley voted to exile Meg. Reason: I am a Villager. Meg's silence is an admission of guilt. Hoang finally claimed a role, but Meg still hasn't. We can't risk another day of silence. I'm following Nhan's lead and voting to exile Meg."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: I am a Villager. I remained silent to observe the conflict and identify the liar, but Hoang's sudden, desperate claim and immediate attack on me are classic wolf deflection tactics. Nhan is our Seer; we must trust the clearances and exile Hoang."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "3": {
+        "night_actions": [
+            "Riley (Wolf) targeted Hoang.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Hoang. Hoang is NOT a wolf."
+        ],
+        "night_eliminated": [
+            "Hoang"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "I am the Seer. I have confirmed Cong, Jin, and Hoang are not wolves. By process of elimination, Riley is the werewolf. We must exile Riley now to win this game."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nhan is the Seer and has cleared Cong and me. By process of elimination, Riley is the only remaining possibility. Riley, you have no defense against this data. We vote Riley now to end the game."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a simple Villager, and this is a blatant setup. Nhan, you're claiming to know everyone's role to force a win. It's too convenient. Jin, you're just echoing Nhan to hide your own guilt. This is a coordinated wolf attack on me!"
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley, your claims are desperate and baseless. I have ground truth data clearing Cong, Jin, and Hoang. You are the only remaining player. Your attempt to frame Jin and dismiss my results as 'too convenient' is a classic wolf tactic. We vote Riley now."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Riley, your attempt to call the Seer's results 'too convenient' is a textbook werewolf indicator. Nhan has cleared everyone but you. Your baseless claims of a 'setup' cannot override ground truth. We are voting you out now to secure the victory."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Riley, your desperation is transparent. Attacking the Seer's results as 'too convenient' and framing a cleared player like Jin are blatant werewolf tactics. The data is absolute: you are the wolf. Cong, Jin, vote Riley now to end this."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: I have confirmed that Cong, Jin, and Hoang are not werewolves. Riley is the only remaining suspect. Riley's attempt to dismiss these facts as 'too convenient' and frame Jin is a clear admission of guilt. We must exile Riley to win."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Nhan has provided factual data clearing everyone else. Riley's attempt to frame the Seer and a cleared player is a desperate werewolf tactic. The logic is absolute: Riley is the wolf."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Nhan has provided ground truth clearing Cong and me. Riley's only defense is to call the Seer's data 'too convenient' and claim a setup, which are classic wolf tactics. The logic is absolute: Riley is the only remaining suspect."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Riley",
+                "reasoning": "Riley voted to exile Riley. Reason: I can't believe it's come to this. I've tried to warn you all, but if you're so convinced by Nhan's claims that I'm the wolf, then I'll vote for myself just to end this nightmare. I am a villager, but you've already decided."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

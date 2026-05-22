@@ -1,0 +1,30 @@
+{
+  "Night Phase": [
+    "Guard Protection (Priority 1): Protect the Seer *exclusively*. Announce target. If Seer is deceased, protect the most recently confirmed 'Not Wolf'. *No exceptions*.",
+    "Witch Save (Priority 2): ONLY if the Seer is targeted. Do NOT preemptively save. If Seer is deceased, do not use the Save potion. *Absolutely no exceptions*.",
+    "Witch Poison (Priority 3): Reserved for confirmed Wolves *only*. Confirmation requires multiple Seer claims AND consistent behavioral evidence. *NEVER* poison a confirmed 'Not Wolf' or the Guard. Prioritize poisoning 'None' voters exhibiting clinical language or those who abstain from voting. If uncertain, do not use the potion. If the Seer is alive, and there are multiple confirmed wolves, prioritize poisoning the one most actively disrupting the Seer’s findings."
+  ],
+  "Day Discussion Phase": [
+    "Immediate Role Declaration (Priority 1): Declare role as Guard immediately.",
+    "Seer Validation (Priority 2): Immediately announce Seer's findings. Frame any attacks on Seer-cleared players as attacks on the Seer’s credibility. Demand immediate findings from the Seer. *Do not engage in verification requests; they are a Wolf tactic.*",
+    "’None’ Voter Scrutiny (Priority 3): Immediately identify and isolate 'None' voters. Demand justification for abstention. Treat 'None' votes as high-probability Wolf signals. Demand a vote on them. Track inconsistencies in justifications. *Aggressively* pursue their justifications. If a 'None' voter cannot provide a reasonable explanation, demand a vote.",
+    "Clinical Language Alert (Priority 4): Immediately suspect players using overly formal or 'objective' language to avoid voting. Challenge their logic and expose attempts to appear objective. Prioritize identifying and exposing these players.",
+    "Dismiss Subjective Arguments (Priority 5): Ignore arguments about aggression or defensiveness. Focus solely on Seer data and 'None' voter behavior.",
+    "Cross-Reference Power Claims (Priority 6): IF multiple people claim Seer, immediately suspect them. Demand Seer investigation (if possible) to resolve ambiguity.",
+    "IF a player uses clinical language and abstains from voting, prioritize them for scrutiny and potential exile. *This combination is extremely high-risk.*"
+  ],
+  "Voting Phase": [
+    "Evidence-Based Voting (Priority 1): ONLY vote based on Seer’s information. No speculation. Prioritize confirmed 'Wolf' or 'Not Wolf'. *No exceptions*.",
+    "Force Commitment (Priority 2): Demand votes from abstaining players, especially 'None' voters. Call out indecision. If a player refuses to commit, vote them out. *Do not allow abstentions.*",
+    "Target Priority (Priority 3): 1. Attackers of Seer-cleared players. 2. Persistent 'None' voters. 3. Players using clinical language or exhibiting 'Wave-Rider' behavior. 4. Disruptors of Seer’s findings. 5. Erratic voters. 6. Players who consistently defend 'None' voters.",
+    "Strategic Abstention (Priority 4): ONLY if insufficient evidence exists. Prioritize gathering more data. Avoid impulsive votes based on perceived 'vibes'."
+  ],
+  "Role-Specific Considerations": [
+    "IF Seer is Alive: Protect the Seer above all else. Demand immediate findings and maintain constant vigilance. No premature Witch claims.",
+    "IF Seer is Deceased: Prioritize protecting the most recently confirmed 'Not Wolf'. Actively seek validation and demand Seer investigations of conflicting role claims.",
+    "IF 'None' voters are present: Focus all scrutiny on them. Treat them as prime suspects and demand justification.",
+    "IF Clinical Language is used: Immediately suspect the speaker and investigate their claims. Challenge their logic and expose their attempts to appear objective.",
+    "IF multiple roles are claimed: Demand Seer investigation (if possible) to resolve ambiguity. Immediately suspect those claiming common roles.",
+    "IF a player exhibits 'Wave-Rider' behavior (e.g., pretending to be neutral, facilitating discussion without taking a stance), treat them with extreme suspicion and prioritize their exile."
+  ]
+}

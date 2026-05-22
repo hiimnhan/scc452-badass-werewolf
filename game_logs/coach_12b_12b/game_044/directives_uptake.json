@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "044",
+  "directives_source_game_id": "043",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_was_cleared_by_seer AND player_attacks_seer",
+        "directive_action": "STATE_VOTING_AGAINST_CLEARED_ASSISTS_WOLVES",
+        "directive_rationale": "clearly state to the village that anyone voting against a cleared player is assisting the Wolves",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan was cleared by Cong in Round 1, but Nhan did not attack Cong; instead, Nhan voted with Cong against Hoang."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Guard) chose to protect Nhan instead of Cong (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam protected Nhan during the first night while the Seer (Cong) was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_is_claimed_or_cleared_power_role AND NOT multi_source_proof_of_deception",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a claimed or cleared power role without absolute, multi-source proof of deception.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin did not use the poison potion in any round."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "KEEP_SEER_ALIVE",
+        "directive_rationale": "Your priority is to keep the Seer alive at all costs.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on themselves (Jin), not the Seer (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin prioritized their own survival over protecting the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_was_cleared_by_seer",
+        "directive_action": "VOTE_AGAINST_OTHER",
+        "directive_rationale": "Voting for a cleared player (or the Seer) is a vote for the Wolves.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (Villager) voted for Hoang, not the cleared player or the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan correctly voted against someone other than the cleared player (himself) or the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_requests_mechanical_justification_of_role",
+        "directive_action": "IGNORE_REQUEST",
+        "directive_rationale": "Ignore demands for 'mechanical justification'; the role's result is the only proof required.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan asked, 'How does demanding clarification from Cong contradict the Seer's mechanical role?' in response to Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not ignore the request for mechanical justification; instead, Nhan engaged with it and questioned the logic of the defense."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_requests_mechanical_justification_of_role",
+        "directive_action": "ACCUSE_PLAYER_OF_GASLIGHTING",
+        "directive_rationale": "Treat anyone demanding 'how' a role works as a potential wolf attempting to gaslight the village.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not accuse Hoang of gaslighting; instead, Nhan questioned Jin's defense of Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan failed to accuse the player (Hoang) who was requesting mechanical justification."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_provides_consensus_without_original_logic",
+        "directive_action": "ACCUSE_PLAYER_OF_BLENDING_IN",
+        "directive_rationale": "When players provide consensus without original logic, they are likely wolves blending in.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that 'Jin's immediate defense of Cong's claim, without any reasoning, is highly suspect.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan accused Jin of acting suspiciously for providing support/consensus without independent reasoning."
+      }
+    ]
+  }
+}

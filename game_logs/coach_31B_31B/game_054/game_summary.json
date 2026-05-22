@@ -1,0 +1,153 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Meg",
+                "statement": "I'm a Villager. It's frustrating that no one died last night; the wolves are probably playing it too safe or we have a strong Guard. Let's start by questioning Nhan\u2014surviving the first night is often a sign of a wolf trying to blend in."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg, your accusation is baseless. Surviving the first night is not evidence of being a wolf, and attacking me immediately is a clear deflection tactic. Everyone, we need immediate role claims now. Who is the Seer?"
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. Nhan is correct; we need immediate role claims. Meg, your attack on Nhan is a baseless deflection and a high-confidence wolf signal. I demand the Seer reveal themselves now so we can establish a trust anchor and stop the guesswork."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. I investigated Nhan last night, and Nhan is NOT a werewolf. Meg, your attempt to frame a confirmed trust anchor is a high-confidence wolf signal. Everyone, vote for Meg."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Nam is the confirmed Seer and Nhan is cleared. Meg, you attempted to frame a cleared player, which is a primary suspect signal. The logic is absolute: Meg is a werewolf. Everyone, vote Meg now."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nam is our Seer and Nhan is cleared. Meg, attacking a cleared player with baseless logic is a definitive wolf signal. I support the Seer's result unconditionally. Everyone, vote Meg now."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Nam is the Seer and has confirmed I am not a werewolf. Meg attempted to frame a cleared player with baseless accusations, which is a definitive wolf signal. We must exile Meg now to secure a villager win."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Nam is the Seer and has confirmed Nhan is not a werewolf. Meg attempted to frame Nhan with baseless logic, which is a clear signal of a werewolf trying to deflect suspicion. We must follow the Seer's data and exile Meg."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: I have confirmed that Nhan is not a werewolf. Meg's attempt to frame a cleared player using baseless logic is a definitive wolf signal. To protect the village, we must exile Meg immediately."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Nam is our Seer and has cleared Nhan. Meg's immediate and baseless attempt to frame a cleared player is a definitive wolf signal. To ensure a villager victory, we must exile Meg now."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Nam is the Seer and has cleared Nhan. Meg attempted to frame Nhan with baseless logic, which is a clear wolf signal. We must prioritize the Seer's information and eliminate the player attacking our trust anchors. Vote Meg."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Meg",
+                "reasoning": "Riley voted to exile Meg. Reason: I'm a Villager. Nam has already cleared Nhan as the Seer, and Meg's immediate attack on a cleared player is a clear wolf signal. I'm following the logic path provided by our power roles here. Meg needs to be exiled."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Meg",
+                "reasoning": "Meg voted to exile Meg. Reason: I agree with Nam. If the Seer says Nhan is clear, then my mistake in questioning Nhan makes me look like a wolf. I'll follow the Seer's lead to help the village."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "2": {
+        "night_actions": [
+            "Riley (Wolf) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Hoang. Hoang is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nam"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "Two nights with no deaths is a massive red flag. Nam is our Seer; Jin, if you are Guard, confirm who you protected. Everyone else\u2014Cong, Hoang, Riley\u2014claim your roles immediately. Any hesitation is an admission of guilt."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. I protected Nam last night to ensure our Seer survives. Cong, Hoang, Riley\u2014stop stalling and reveal your roles now. Your silence is a confession of wolf alignment."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a Villager. I'm not stalling; I'm trying to make sense of this. Nhan, you're pushing incredibly hard for roles right now. It feels like you're trying to force a narrative to hide something. Why the sudden aggression?"
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Witch. Riley, your attempt to frame Nhan's drive for efficiency as 'aggression' is a textbook deflection. Nhan is Seer-cleared; attacking him is a critical wolf signal. Cong, you are still silent. That is a confession. We vote Riley or Cong."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I am a Villager. Hoang, I was not stalling; I was analyzing the claims. Riley, you are attacking Nhan, a confirmed Trust Anchor, to distract from your own guilt. This is a clear wolf signal. We must exile Riley immediately."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Cong, you're mirroring Hoang's terminology way too perfectly. It's a blatant wolf signal to blend in with the power block. I'm a Villager; the logic path here is that Cong is just echoing others to avoid scrutiny. We should look closer at him."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Riley is attacking Nhan, who is Seer-cleared, and focusing on 'tone' rather than content to deflect from the role-call. This is a textbook wolf signal. Cong's alignment with the logic of the power roles makes Riley's accusation of mirroring a desperate distraction."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Riley is attacking Nhan, who has been cleared by the Seer. Attempting to frame a confirmed innocent player as aggressive is a clear deflection tactic used by werewolves to sow doubt. Riley's behavior is a direct contradiction of villager interests."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is attacking Nhan, who is a confirmed trust anchor. Labeling the push for role clarity as 'aggression' is a classic deflection tactic used by werewolves to distract the village. This pattern of behavior is a clear signal of wolf alignment."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley is attacking Nhan, who is confirmed as not a werewolf. Attempting to frame Nhan's drive for efficiency as 'aggression' is a textbook wolf deflection tactic. Riley's accusations against others are baseless attempts to distract from their own refusal to provide concrete logic."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is attacking Nhan, who is cleared by the Seer. Framing a request for transparency as 'aggression' is a classic wolf deflection. Riley's attempt to shift blame to Cong for agreeing with the power roles is a desperate tactic to avoid exile."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong is mirroring Hoang's terminology too perfectly. It's a classic wolf signal to blend in with the power block and avoid scrutiny. He's just echoing others to look safe, which is highly suspicious. We should exile Cong."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "guard_is_silent",
+        "action": "COMMUNICATE_NEED_FOR_GUARD_REVEAL",
+        "rationale_short": "you failed to communicate the need for the Guard to reveal themselves earlier",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_is_alive",
+        "action": "ENGAGE_IN_DEBATE",
+        "rationale_short": "Failing to engage in the debate while the Seer was alive created a 'wolf signal'",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_is_alive",
+        "action": "SIGNAL_EXISTENCE",
+        "rationale_short": "You must signal your existence or coordinate with the Seer early to avoid being mistaken for a wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "seer_is_alive",
+        "action": "COORDINATE_WITH_SEER",
+        "rationale_short": "coordinate with the Seer early to avoid being mistaken for a wolf",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "true",
+        "action": "AVOID_MIMICKING_SEER_LANGUAGE",
+        "rationale_short": "Never mimic the Seer's language",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "flagged_by_players",
+        "action": "PROVIDE_ORIGINAL_DATA",
+        "rationale_short": "provide original data... immediately when flagged",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "flagged_by_players",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "provide... a clear claim immediately when flagged",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_votes_for_another_player_and_is_later_targeted",
+        "action": "CONSIDER_TACTICAL_SACRIFICE",
+        "rationale_short": "When Meg (Wolf) voted for Hoang (Witch) and then was later targeted, you ignored the possibility that the wolves were sacrificing their own to blend in",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "seer_has_cleared_everyone_except_one_person",
+        "action": "VOTE_AGAINST_UNVERIFIED_PLAYER",
+        "rationale_short": "When the Seer has cleared everyone except one person, that person is the wolf, regardless of how suspicious the Guard's timing seems",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 9,
+    "dropped": [
+      {
+        "advice_verbatim": "Your data was the village's strongest asset. You correctly identified mirroring and vibe traps",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

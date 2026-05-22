@@ -1,0 +1,88 @@
+{
+  "by_role": {
+    "Seer": [],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "Seer provides a clear on the Guard",
+        "action": "DEFEND_SEER_CREDIBILITY",
+        "rationale_short": "Guard, once cleared, your primary responsibility was to defend the Seer's credibility, not question their 'method.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "the Witch and Guard must coordinate to ensure the Seer is the most protected and trusted asset.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "Player is claiming Seer and has provided clears",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a claiming Seer, especially one who has already provided clears.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "COORDINATE_PROTECTION_WITH_GUARD",
+        "rationale_short": "the Witch and Guard must coordinate to ensure the Seer is the most protected and trusted asset.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "Seer data is available",
+        "action": "VOTE_BASED_ON_SEER_DATA",
+        "rationale_short": "Villagers, you lost this game because you prioritized 'behavioral vibes' over hard data.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "Two players use nearly identical vague language to frame others",
+        "action": "ACCUSE_PLAYERS_OF_MIRRORING",
+        "rationale_short": "Failure to recognize Wolf mirroring: Riley and Meg used nearly identical vague language... which should have been a signal of their partnership.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "Players use vague terms like 'unsettling' and 'erratic' to target a player",
+        "action": "IDENTIFY_AS_MIRRORING",
+        "rationale_short": "When the Wolves used vague terms like 'unsettling' and 'erratic' to target Nam, they were mirroring each other to create a false consensus.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "A player attacks a Seer or a player cleared by the Seer",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "When a Seer provides a clear, any player attacking that clear or the Seer is an immediate primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "VOTE",
+        "trigger": "Seer results are available",
+        "action": "FOLLOW_MECHANICAL_TRUTH",
+        "rationale_short": "Ignore the 'tone' of the debate and follow the mechanical truth of the Seer's results.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 9,
+    "dropped": []
+  }
+}

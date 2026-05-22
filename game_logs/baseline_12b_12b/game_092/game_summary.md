@@ -1,0 +1,83 @@
+# Game Summary
+**Winner:** Werewolves
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Villager
+**Nam:** Seer
+**Jin:** Guard
+**Hoang:** Witch
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Jin (Guard) chose to protect Nhan.
+• Nam (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Hoang (Witch) used SAVE potion on Nhan
+**Night Eliminations:** None
+
+### Day Debate
+**Nam:** Nhan is confirmed not a werewolf. Let's observe everyone carefully and look for inconsistencies in their reasoning. I'll be investigating further tonight to help us identify the threat.
+**Meg:** Nam's eagerness to investigate is... unsettling. Jumping to conclusions about 'inconsistencies' before we've even established a baseline seems rash. It's possible he's trying to distract us.
+**Hoang:** Nam's eagerness to declare Nhan clear is concerning. It feels premature, especially given the wolves targeted Nhan last night. Let's observe Nam's investigation closely for any signs of deflection.
+**Nam:** Meg's immediate dismissal of my investigation and suggestion of distraction is concerning. It's a proactive attempt to shift blame without any evidence. I suggest we observe Meg's behavior closely.
+**Hoang:** Nam's quickness to declare Nhan safe, followed by an immediate accusation against Meg, feels manufactured. It's a deflection tactic to avoid scrutiny. I suggest we observe Nam’s investigation closely.
+**Cong:** Nam's rapid accusation of Meg, immediately after declaring Nhan safe, is a clear deflection. He avoids addressing Hoang's valid concerns and attempts to redirect suspicion. I believe Nam is being deceptive.
+
+### Votes
+**Nhan** voted for **Nam**
+> Nhan voted to exile Nam. Reason: Nam's behavior is highly suspicious. He quickly declared me safe, then immediately accused Meg, a clear deflection tactic. His eagerness and inconsistent reasoning raise serious concerns.
+**Cong** voted for **Nam**
+> Cong voted to exile Nam. Reason: Nam's rapid shift to accusing Meg after declaring Nhan safe is a clear deflection tactic. He avoids addressing legitimate concerns and attempts to control the narrative.
+**Nam** voted for **Cong**
+> Nam voted to exile Cong. Reason: Cong's accusations are baseless and designed to deflect attention. His behavior mirrors known wolf tactics of sowing discord and shifting blame. We need to eliminate this disruptive force.
+**Jin** voted for **Nam**
+> Jin voted to exile Nam. Reason: Nam's quick shift from declaring Nhan safe to accusing Meg demonstrates deflection. His reactive defense suggests he's hiding something. We need to prioritize eliminating potential manipulators.
+**Hoang** voted for **Nam**
+> Hoang voted to exile Nam. Reason: Nam's behavior is highly suspicious. His quick accusations and deflection tactics suggest he's trying to manipulate the discussion and avoid scrutiny. I believe he's a threat to the village.
+**Riley** voted for **Nam**
+> Riley voted to exile Nam. Reason: Nam's behavior is too reactive and inconsistent. He's quick to accuse others while avoiding scrutiny himself, which raises serious red flags.
+**Meg** voted for **Nam**
+> Meg voted to exile Nam. Reason: Nam's quickness to accuse and defend feels manufactured. He's avoiding addressing legitimate concerns and trying to redirect suspicion. His behavior is too reactive and lacks genuine reasoning.
+
+**Day Exiled:** Nam
+---
+
+## Round 2
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Jin (Guard) chose to protect Hoang.
+• Hoang (Witch) used POISON potion on Meg
+**Night Eliminations:** Nhan, Meg
+
+### Day Debate
+**Jin:** Cong's early accusation against Nam now seems calculated. The wolves eliminated Nhan and Meg, likely to silence opposition. Cong's eagerness to point fingers aligns with this pattern.
+**Cong:** Jin's accusation of calculated behavior is a deflection. He's attempting to redirect blame after Nhan and Meg were eliminated, a classic wolf tactic. His focus on me is a distraction.
+**Jin:** Cong's denial is precisely the kind of reactive deflection we expect from a wolf. His accusations against me are a desperate attempt to shift focus from his own suspicious behavior.
+**Hoang:** Jin's keen observation of Cong's deflection is compelling. Cong's reactive denials and attempts to frame Jin are consistent with wolf behavior. I urge everyone to examine Cong's actions closely.
+**Jin:** Cong's reflexive defense and immediate counter-accusation are hallmarks of a wolf attempting to deflect. His pattern of accusation and denial warrants immediate scrutiny.
+**Hoang:** Cong's denials and accusations against Jin are increasingly desperate. His behavior mirrors the deflection tactics we've observed from eliminated wolves. I strongly urge a vote against Cong.
+
+### Votes
+**Cong** voted for **Jin**
+> Cong voted to exile Jin. Reason: Jin's deflection and desperate attempts to shift blame are classic wolf behavior. His accusations are baseless and reactive, indicating a clear attempt to mislead the village.
+**Jin** voted for **Cong**
+> Jin voted to exile Cong. Reason: Cong's immediate and aggressive denial of Jin's observation, coupled with his accusations, are classic deflective wolf tactics. We must eliminate this threat to ensure village victory.
+**Hoang** voted for **Cong**
+> Hoang voted to exile Cong. Reason: Cong's defensive behavior and attempts to deflect suspicion strongly suggest wolf alignment. His pattern mirrors previous wolf tactics; a vote against him is necessary.
+**Riley** voted for **Cong**
+> Riley voted to exile Cong. Reason: Cong's defensive reactions and quick accusations against Jin are highly suspicious. He's attempting to muddy the waters and deflect attention from the real wolves. We must protect ourselves.
+
+**Day Exiled:** Cong
+---
+
+## Round 3
+**Night Actions:**
+• Riley (Wolf) targeted Hoang.
+• Jin (Guard) chose to protect Jin.
+• Hoang (Witch) has no potions left.
+**Night Eliminations:** Hoang
+---

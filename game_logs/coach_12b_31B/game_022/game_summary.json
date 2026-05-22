@@ -1,0 +1,96 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Cong (Guard) chose to protect Nhan.",
+            "Nhan (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Nam (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Let's establish roles. Everyone, please state your power role."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "I am the Seer. Cong is not a werewolf."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan, you claim to be the Seer and cleared Cong. State your investigation method. How did you determine Cong is not a werewolf?"
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "This is a Reasonable Request Trap. Do not fall for this wolf tactic."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Nhan's defensive response to a simple request is concerning. A genuine Seer would readily explain their process. I find their behavior highly suspicious."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's refusal to explain their 'Seer' investigation is a blatant attempt to avoid scrutiny. A genuine Seer would welcome verification. I suspect Nhan is a werewolf attempting to deceive us."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's questioning is a deliberate attempt to discredit the Seer and sow doubt. This tactic is often employed by wolves to confuse and manipulate the village. I vote Hoang."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's behavior is highly suspicious. A true Seer would readily explain their investigation. Their refusal and accusation indicates they are likely a wolf attempting to mislead us."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's evasiveness regarding his Seer investigation and the suspicious Save potion usage raise serious concerns. He failed a reasonable request and is likely a wolf attempting to mislead."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nhan",
+                "reasoning": "Jin voted to exile Nhan. Reason: Nhan's evasiveness when questioned about their Seer claim is highly suspicious. A genuine Seer would readily explain their process, not accuse others of traps."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's response to a simple verification request was evasive and suspicious. A genuine Seer would welcome scrutiny, not deflect it with baseless accusations."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: I've been watching the exchange, and Nhan's reaction to a simple question is a red flag. Calling a request for transparency a 'wolf tactic' feels like a desperate deflection. The lack of openness makes Nhan the most logical suspect right now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: I've been observing the exchange, and it's hard to ignore how defensive Nhan has become. When Cong and Hoang asked for simple verification, Nhan pivoted to accusations rather than providing answers. This pattern is highly characteristic of a werewolf trying to manipulate the group."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Cong (Guard) chose to protect Hoang.",
+            "Nam (Witch) used POISON potion on Hoang"
+        ],
+        "night_eliminated": [
+            "Jin",
+            "Hoang"
+        ]
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Seer",
+        "Cong": "Guard",
+        "Nam": "Witch",
+        "Jin": "Villager",
+        "Hoang": "Villager",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

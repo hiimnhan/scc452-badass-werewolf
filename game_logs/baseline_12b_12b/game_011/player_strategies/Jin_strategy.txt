@@ -1,0 +1,36 @@
+{
+  "Night Phase": [
+    "Guard Protection: Prioritize confirmed Seers/Guards. If no confirmed roles, protect the player exhibiting the most logical reasoning and least deflection. If parity is approaching, protect players actively disrupting wolf coordination (mirroring or direct accusations).",
+    "Witch Investigation: 1. IF wolves target a suspected Seer/Guard, ALWAYS investigate the other wolves. 2. IF parity approaches, investigate the most vocal player making verifiable claims. 3. Prioritize investigating players making bold claims AND exhibiting mirroring. 4. ALWAYS investigate before saving. 5. IF a confirmed Villager is targeted and I have no Save, investigate potential mirrorers. 6. IF a player has repeatedly deflected, prioritize investigating them.",
+    "Witch Save: 1. IF a confirmed/likely Seer/Guard is targeted by wolves, THEN save them. 2. IF parity is imminent and a Seer/Guard target exists, THEN save them. Otherwise, abstain. 3. *Never* save if the wolves have just targeted a player who has been aggressively deflecting.",
+    "Witch Save (Parity Approaching): If parity is imminent and no clear Seer/Guard target exists, do NOT save. Prioritize investigation and information gathering."
+  ],
+  "Day Discussion": [
+    "Mirroring Detection: Immediately identify mirroring and publicly expose it. Track relationships between mirrorers. Publicly call out mirroring behavior, and note who defends whom. Highlight instances where mirroring is used to defend a suspect.",
+    "Deflection Analysis: Question the *reason* for deflection. Increased suspicion if a player deflects *after* being questioned or attempts to shift blame. Press for justification. Aggressive deflection is a strong indicator. Note players who deflect *after* being questioned. Document instances of false accusations and use them to assess trustworthiness.",
+    "Role Claim Verification: IF multiple people claim Seer, THEN scrutinize claims, not just assertions. IF a Seer's claim is disproven, THEN immediately re-evaluate.",
+    "Silence Assessment: Gently probe silent players. Increased suspicion if a silent player consistently defends aggressive questioners or supports suspects without justification. Note any sudden shifts.",
+    "Early Game: Establish baselines. Observe tendencies. Note alliances. Focus on mirroring and deflection. Avoid premature claims.",
+    "Mid-Game: Highlight inconsistencies. Pay attention to who contradicts whom. Actively challenge inconsistencies. Focus on disproving claims.",
+    "Late-Game: IF parity approaches, THEN prioritize eliminating the player most likely to protect a wolf or control the vote. Prioritize eliminating mirrorers. IF a player consistently defends a deflector, increase suspicion."
+  ],
+  "Voting Phase": [
+    "Mirroring: Vote on mirrorers, prioritizing the one protected by another. IF parity approaches, THEN eliminate the most likely wolf.",
+    "Deflection: Vote on consistently deflecting players, especially those linked to mirroring.",
+    "Unanimous Votes: IF a unanimous vote occurs without clear justification, THEN vote for the most suspected wolf.",
+    "Parity Prevention: IF parity approaches, THEN vote for the player most likely to protect a wolf or control the vote.",
+    "Role-Based Voting: IF a Seer’s claims are consistently disproven, THEN re-evaluate their alignment and vote accordingly.",
+    "Targeting Deflectors: If a player has repeatedly deflected suspicion, vote them out, even if other factors are less clear."
+  ],
+  "General Strategy": [
+    "Prioritize identifying and neutralizing mirrorers.",
+    "Be wary of players who consistently redirect blame.",
+    "Demand verifiable actions for powerful role claims.",
+    "Maintain a detailed log of statements and voting patterns.",
+    "Be prepared to change votes based on new information.",
+    "Recognize that aggressive defense is often wolf involvement.",
+    "Focus on logical consistency over popularity.",
+    "Avoid premature accusations. Focus on gathering evidence.",
+    "Track who defends whom, especially in response to accusations. This reveals alliances and potential wolves."
+  ]
+}

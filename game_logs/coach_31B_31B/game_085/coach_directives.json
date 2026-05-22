@@ -1,0 +1,106 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a player mirrors your language",
+        "action": "BUILD_CONFIRMATION_CHAIN",
+        "rationale_short": "Instead of attacking a player for mirroring your language, use your data to build a confirmation chain.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "action": "ANALYZE_EVIDENCE",
+        "rationale_short": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer claims their role publicly",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Once the Seer claims their role publicly, they must be your priority target for protection.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "action": "ANALYZE_EVIDENCE",
+        "rationale_short": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "SAVE_SEER",
+        "rationale_short": "While self-preservation is tempting, the Seer is a higher-value target.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "players are quietly steering the vote against Villagers",
+        "action": "POISON_STEERERS",
+        "rationale_short": "In Round 2, you failed to use your poison potion on the wolves who were quietly steering the vote against the Villagers.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "action": "ANALYZE_EVIDENCE",
+        "rationale_short": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting'",
+        "action": "ANALYZE_EVIDENCE",
+        "rationale_short": "When players argue over labels like 'Social Mimicry' or 'Tonal Gaslighting,' they are often ignoring the actual evidence.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "loudest player targets a specific player",
+        "action": "SCRUTINIZE_TARGET_INDEPENDENTLY",
+        "rationale_short": "Do not simply vote for whoever the loudest player targets.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "players are silent and supportive of the dominant narrative",
+        "action": "ACCUSE_QUIET_STEERERS",
+        "rationale_short": "Pay attention to the 'Quiet Steerers'\u2014the wolves in this game successfully blended in by simply agreeing with the loudest voice.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "Seer was killed",
+        "action": "SCRUTINIZE_QUIET_PLAYERS",
+        "rationale_short": "When the Seer was killed, you shifted to aggressive isolation of other villagers rather than scrutinizing the players who had remained silent and supportive.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 12,
+    "emitted": 11,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=12 but emitted+dropped=11"
+  }
+}

@@ -130,7 +130,7 @@ class BasePlayer(ABC):
 
     def __init__(
         self,
-        player_id: int,
+        name: str,
         role: Role,
         model: BaseChatModel,
         game_id: str = "",
@@ -139,7 +139,7 @@ class BasePlayer(ABC):
         system_prompt: str = "",  # role definition template; receives {name}
         personality: str = "",
     ) -> None:
-        self._player_id = player_id
+        self._name = name
         self._role = role
         self._model = model
         self._game_id = game_id

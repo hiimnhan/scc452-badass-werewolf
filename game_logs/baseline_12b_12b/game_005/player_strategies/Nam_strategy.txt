@@ -1,0 +1,35 @@
+{
+  "Night Phase": [
+    "As Guard: Prioritize protecting the Seer. If the Seer is absent, protect the Witch. If both are absent, protect the player receiving the most logical accusations (avoid protecting players who are aggressively deflecting). Rotate protection targets to avoid predictability.",
+    "Consider the previous night's events and adjust protection based on suspected wolf targets. Prioritize protecting anyone targeted by wolves."
+  ],
+  "Day Discussion": [
+    "Summarize night events, emphasizing targets and protection. State *why* protection was given.",
+    "IF a player claims Seer: Demand verifiable results. Cross-reference claims with voting patterns and target selections. Vote out inconsistent claimants immediately.",
+    "IF a Save occurs: Immediately demand a detailed explanation from the Witch. Prioritize Seer investigation on the Witch if the explanation is vague or lacks supporting evidence.",
+    "Aggressively call out deflection. Note the *reason* for deflection, not just the act. Identify and note defenders and their justifications.",
+    "IF multiple players align without clear reasoning: Suspect a wolf pack. Prioritize Seer investigation on the aligned group.",
+    "IF a player consistently echoes another’s accusations without independent reasoning: Suspect coordination. Investigate their relationship.",
+    "IF a player attempts to control the discussion or pushes for premature votes: Observe their reasoning carefully and vote against illogical suggestions.",
+    "IF a player offers a defense without clear reasoning or evidence: Prioritize Seer investigation on the defended player.",
+    "Be wary of players who immediately shift blame after a night event without a plausible explanation. These are likely wolves attempting to deflect suspicion."
+  ],
+  "Voting Phase": [
+    "Vote based on observed behavior and reasoning, *not* solely on claims.",
+    "Support consensus *only* if the reasoning is sound and logically consistent.",
+    "Prioritize voting out players exhibiting repeated deflection, especially when defended by others.",
+    "IF a Save occurred, prioritize voting out the saved player *if* they fail to provide a credible and verifiable explanation.",
+    "Scrutinize groups strongly defending a single person without logical reasoning or supporting evidence.",
+    "Prioritize the most consistent deflector among multiple suspects.",
+    "Abstain only if genuinely unsure, documenting reasons for abstaining.",
+    "If a player’s initial accusations are easily disproven and they immediately pivot, they are highly suspect."
+  ],
+  "Specific Situations": [
+    "IF a player consistently defends another without logical reasoning or evidence: Investigate the connection. Vote out the defender.",
+    "IF a player’s voting pattern contradicts their stated reasoning: Suspect deception. Re-evaluate credibility.",
+    "IF a player attempts to control the Guard’s protection choices: Suspect they are a wolf attempting to protect another wolf. Prioritize Seer investigation.",
+    "IF a player claims information but refuses to share: Consider them untrustworthy.",
+    "IF multiple players claim Seer: Demand specific, verifiable results and cross-reference. Vote out inconsistent claimants immediately.",
+    "IF a player acts overly eager to declare someone innocent without evidence: Highly suspicious; likely a wolf attempting to manipulate the group."
+  ]
+}

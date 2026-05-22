@@ -1,0 +1,184 @@
+{
+  "evaluated_game_id": "020",
+  "directives_source_game_id": "019",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "claiming_role_or_results",
+        "directive_action": "AVOID_PERSONAL_ATTACKS",
+        "directive_rationale": "avoid escalating into personal attacks, as this allows wolves to mimic 'reasonable' villager logic",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan claimed the Seer role and results, and described Riley's dismissal as 'highly suspect' and a 'textbook tactic'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan focused on Riley's behavior and tactical patterns rather than launching personal attacks."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "claiming_role_or_results",
+        "directive_action": "MAINTAIN_FIRMLY",
+        "directive_rationale": "Maintain your claims firmly",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated 'I am Nhan, the Seer' and later reiterated 'I am the Seer, and my result is fact' despite Riley's skepticism.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan maintained his role claim and the validity of his result throughout the debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your priority is the Seer... they must be protected every single night.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong protected Nhan on Night 1.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Cong protected the Seer on Night 1, but failed to do so on Night 2, choosing to protect himself instead."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "AVOID_PROTECTING_RANDOM_VILLAGERS",
+        "directive_rationale": "Protecting random villagers (Nhan) while the Seer is under threat is a strategic failure.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong chose to protect himself instead of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "While he failed to protect the Seer, he did not protect a random villager; he protected himself."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_claimed_seer",
+        "directive_action": "AVOID_POISON_X",
+        "directive_rationale": "Never use a POISON potion on a claimed Seer",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch did not use the poison potion on Nhan, the claimed Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "target_is_cleared_villager",
+        "directive_action": "AVOID_POISON_X",
+        "directive_rationale": "Never use a POISON potion on... a cleared villager.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam used the POISON potion on Cong, who had been cleared by the Seer in Round 1.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam poisoned Cong despite Cong being a cleared villager."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear",
+        "directive_action": "ACCEPT_AS_FACT",
+        "directive_rationale": "Stop treating Seer results as 'claims' to be validated. A Seer's clear is an objective fact",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang accepted the clear of Cong and voted for Riley. Nam, however, called the insistence on Cong's innocence 'concerning'.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Most villagers followed the directive, but Nam treated the clear as a point of suspicion."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demanding_proof_of_seer_clear",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "anyone demanding proof or calling the Seer 'erratic' for asserting their role is likely a wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley questioned Nhan's claims. Jin and Hoang accused Riley of using wolf tactics to sow doubt.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Villagers Jin and Hoang identified Riley's skepticism as a wolf tactic and voted to exile him."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_is_cleared_by_seer",
+        "directive_action": "FORM_UNBREAKABLE_VOTING_BLOCK_WITH_SEER",
+        "directive_rationale": "Once a player is cleared, you must form an unbreakable voting block with the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Jin and Hoang voted for Riley, coinciding with Nhan and Cong's votes.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The majority of the village formed a voting block with the Seer and the cleared player."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolves_frame_seer_confidence_as_erratic",
+        "directive_action": "DEFEND_SEER",
+        "directive_rationale": "failing to recognize that attacking the Seer is a primary wolf objective",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley called Nhan's declaration 'rehearsed' and 'too convenient'. Hoang stated we need to 'prioritize protecting our Seer'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang defended the Seer against Riley's framing."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_was_cleared_before_seer_died",
+        "directive_action": "AVOID_EXILING_CLEARED_PLAYER",
+        "directive_rationale": "After the Seer died, the village ignored the fact that Nhan was cleared, eventually exiling him",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Cong (the cleared player) died during the night, so he was not exiled by a vote."
+      },
+      {
+        "directive_id": "VILLAGER-006",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "multiple_players_using_identical_phrasing_to_attack_seer",
+        "directive_action": "IDENTIFY_COORDINATION",
+        "directive_rationale": "When the wolves (Riley/Meg) used identical phrasing to call the Seer 'controlling' or 'erratic,' it was a clear signal of coordination.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley called Nhan's reveal 'rehearsed'. Meg called it 'performative'. Jin noted 'the timing and intensity suggest an attempt to sow discord and protect a fellow wolf'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin identified the coordination between Riley and Meg's attacks."
+      },
+      {
+        "directive_id": "VILLAGER-007",
+        "directive_phase": "VOTE",
+        "directive_trigger": "conflict_between_seer_data_and_wolf_vibes",
+        "directive_action": "TRUST_SEER_DATA",
+        "directive_rationale": "Trust the Seer's data over the wolves' 'vibes.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Riley and Meg argued based on the 'feel' and 'showmanship' of Nhan's claim. Jin and Hoang voted for Riley, trusting the Seer's data.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The villager players (Jin, Hoang) prioritized the Seer's results over the wolves' vibe-based arguments."
+      }
+    ]
+  }
+}

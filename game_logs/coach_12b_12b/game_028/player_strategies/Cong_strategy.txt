@@ -1,0 +1,28 @@
+{
+  "Night Phase": [
+    "**Guard Protection (Priority 1):** ALWAYS protect the Seer. Verify Seer presence before acting. If the Seer is eliminated, IMMEDIATELY protect the Witch. NO EXCEPTIONS.",
+    "**Witch Save (Conditional):** IF the Seer is targeted by wolves AND Save is available, use Save IMMEDIATELY and announce 'Seer saved!' Do NOT waste Save on anyone else.",
+    "**Witch Poison (Extremely Limited):** ONLY use Poison if a player is definitively identified as a wolf by the Seer AND demonstrates a mechanical contradiction. NEVER use Poison on the Seer or confirmed Villagers. Announce 'Poison used on [Player] due to mechanical contradiction.'",
+    "**Self-Protection (Last Resort):** ONLY protect myself if the Seer and Witch are both unavailable for protection. This is a last resort, prioritizing the roles over my own safety."
+  ],
+  "Day Discussion": [
+    "**Seer Claims are Absolute (Priority 1):** Treat Seer claims as undeniable truth. Repeat the Seer’s result. State: 'The Seer has confirmed [Player] is clear.'",
+    "**Immediate Counter to 'Convenience' Claims:** IF anyone claims a Seer's 'Clear' is 'convenient' or 'too quick', IMMEDIATELY state: 'Accusing the Seer of bias is a wolf tactic to invalidate objective information. Focus on the accuser.'",
+    "**Reject Behavioral Analysis:** Disregard claims of 'suspicious behavior' or 'vibes.' Focus *solely* on mechanical evidence and Seer results. Actively challenge anyone using such language. State: 'That is not evidence.'",
+    "**Anchor Defense:** IF a Seer-cleared player is attacked based on behavioral claims, immediately state: 'Attacking a Seer-cleared player based on feelings is a wolf tactic. Their skepticism is designed to undermine our trust. Do not engage with the attacker's reasoning.'",
+    "**Post-Seer Death – Maintain Clears:** IF the Seer dies, state: 'The Seer’s previous clears remain absolute facts. Anyone attempting to invalidate these clears is highly suspect. We must trust the previous information.' Focus on identifying the source of the disruption attempting to invalidate previous clears.",
+    "**Address Contradictions Directly:** IF a player contradicts a Seer clear, directly state: 'This is a mechanical contradiction. Their claim is false and suggests wolf activity.'"
+  ],
+  "Voting Phase": [
+    "**Evidence-Based Voting ONLY:** Vote ONLY on confirmed Seer results or demonstrable mechanical contradictions.",
+    "**Protect the Seer (Absolute Priority):** Do NOT vote out the Seer unless irrefutable mechanical evidence exists. Demand clear proof. State: 'I require evidence to vote against the Seer.'",
+    "**Anchor Protection:** IF a Seer-cleared player is attacked, vote for the attacker unless they provide impeccable mechanical reasoning. State: 'Voting for [attacker] to punish their attack on a confirmed villager.'",
+    "**Strategic Abstention (If Necessary):** IF no clear target exists and a vote could benefit wolves, strategically abstain. Prioritize preventing a bad vote. State: 'Abstaining to prevent a harmful vote.'",
+    "**Reject 'Vibe' Based Votes:** Actively challenge any vote based on feelings or intuition, demanding mechanical evidence. State: 'This vote lacks evidence and is susceptible to wolf manipulation.'"
+  ],
+  "Post-Seer Death": [
+    "**Seer Clears Remain Absolute:** Repeatedly and forcefully maintain that Seer’s prior clears are absolute facts. Do not allow any attempts to invalidate them. State: 'The Seer's clear of [player] remains valid.'",
+    "**Identify Disruption Source:** Immediately focus on identifying the player attempting to discredit Seer clears. Their reasoning and motivations are paramount. Observe which players actively try to dismiss previous Seer results.',
+    "**Re-evaluate Trust:** The death of the Seer necessitates a complete re-evaluation of trust. Prioritize information from confirmed villagers only. Observe behavior for signs of coordinated attacks on previously cleared players. Treat all claims with extreme caution."
+  ]
+}

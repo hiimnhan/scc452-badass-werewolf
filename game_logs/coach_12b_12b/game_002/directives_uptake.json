@@ -1,0 +1,91 @@
+{
+  "evaluated_game_id": "002",
+  "directives_source_game_id": "001",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "challenged_on_mechanics",
+        "directive_action": "EXPLAIN_MECHANICS",
+        "directive_rationale": "When challenged, explain the mechanics clearly to avoid appearing like a lying wolf.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Jin was challenged on his motives and the 'convenience' of his claims, but no one challenged the actual mechanics of the Seer role."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "challenged_on_witch_save",
+        "directive_action": "EXPLAIN_COEXISTENCE",
+        "directive_rationale": "failed to explain how a Witch's save and a Seer's investigation can coexist",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Witch's save of Nhan happened in secret; no one challenged the coexistence of a save and an investigation during the debate."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "intending_to_save_target",
+        "directive_action": "DO_NOT_POISON_TARGET",
+        "directive_rationale": "Never poison a target you intend to protect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Nhan and did not use the poison potion on themselves.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan saved themselves and did not poison themselves."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "considering_guilt_based_on_convenience",
+        "directive_action": "QUESTION_MECHANICAL_POSSIBILITY",
+        "directive_rationale": "Stop using 'convenience' as a metric for guilt... Instead of asking 'Who is lying?', ask 'How is this possible?'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated that Jin's insistence on Nhan's innocence 'without explanation, is unusual' and that Meg's observation about controlling the narrative was 'valid'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam based his suspicion on the 'unusual' nature of the claim and the narrative of control, rather than questioning the mechanical possibility of a Seer identifying an innocent."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_confirmed_innocent",
+        "directive_action": "PROTECT_INFORMATION",
+        "directive_rationale": "If a Seer provides a confirmed innocent, protect that information unless a mechanical impossibility is proven.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong voted to exile Jin, stating that Jin's behavior was 'unsettling' and his defensiveness raised 'red flags'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong did not protect the information provided by Jin; instead, he voted to exile the Seer based on behavioral suspicion."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conflict_between_seer_testimony_and_narrative_suspicion",
+        "directive_action": "PRIORITIZE_SEER_TESTIMONY",
+        "directive_rationale": "use your bidding power to prioritize the Seer's testimony over narrative suspicions",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam expressed that Meg's observation about Jin controlling the narrative was 'valid' and voted to exile Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam prioritized the narrative suspicion raised by Meg over the Seer's testimony regarding Nhan's innocence."
+      }
+    ]
+  }
+}

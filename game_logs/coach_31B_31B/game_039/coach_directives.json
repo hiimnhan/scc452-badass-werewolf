@@ -1,0 +1,89 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "ESTABLISH_GROUND_TRUTH",
+        "rationale_short": "establishing ground truth early",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "player_deflects_investigation",
+        "action": "TREAT_AS_CONFUSION_MASK",
+        "rationale_short": "treating deflection as a 'Confusion Mask'",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "player_uses_vague_narrative",
+        "action": "AGGRESSIVE_ROLE_CALL",
+        "rationale_short": "Continue using aggressive role-calls to isolate wolves who rely on vague narratives.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting oneself in Round 1 instead of the Seer is a critical risk",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "any_round",
+        "action": "PRIORITIZE_SEER_OVER_SELF",
+        "rationale_short": "Always prioritize the Seer over your own survival.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "intent_to_save_player",
+        "action": "COMMUNICATE_SAVE_INTENT_TO_GUARD",
+        "rationale_short": "ensure you explicitly communicate your save intent to the Guard to avoid wasting resources.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "any_round",
+        "action": "MAINTAIN_INDEPENDENT_SCRUTINY",
+        "rationale_short": "Always maintain a level of independent scrutiny.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "any_round",
+        "action": "BID_HIGHER_TO_PRESENT_LOGIC",
+        "rationale_short": "villagers should bid higher to present their own logic and avoid appearing as 'silent wolves' or 'safe-echoes'.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "any_round",
+        "action": "PROVIDE_INDEPENDENT_ANALYSIS",
+        "rationale_short": "attempt to provide independent analysis of player behavior to avoid being mistaken for a wolf 'bussing' a teammate.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 9,
+    "dropped": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "player_X_attacks_you_or_your_cleared_player",
+        "action": "ACCUSE_PLAYER_X",
+        "rationale_short": "once that was established, anyone attacking you or the Guard was a Wolf",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_you",
+        "action": "DEFEND_SEER",
+        "rationale_short": "When a Seer clears you, your sole purpose is to protect them",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_you",
+        "action": "AMPLIFY_SEER_FINDINGS",
+        "rationale_short": "When a Seer clears you, your sole purpose is to... amplify their findings",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "VOTE",
+        "trigger": "seer_clears_you",
+        "action": "VOTE_AGAINST_SEERS_TARGETS",
+        "rationale_short": "not to question their 'narrative' to avoid suspicion",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_identified",
+        "action": "COORDINATE_PROTECTION_WITH_GUARD",
+        "rationale_short": "coordinate with the Guard to ensure the Seer is the priority target for protection",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_X_attacks_seer_cleared_player_Y",
+        "action": "ACCUSE_PLAYER_X",
+        "rationale_short": "If the Seer says 'Player X is clear,' and Player Y attacks Player X, Player Y is a Wolf.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_X_contradicts_seer_findings",
+        "action": "VOTE_AGAINST_PLAYER_X",
+        "rationale_short": "start voting based on who contradicts the Seer",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "player_X_seems_aggressive",
+        "action": "ABSTAIN_FROM_VOTING_ON_X",
+        "rationale_short": "Stop voting based on who seems 'aggressive'",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "wolf_claims_seer_is_performative_or_erratic",
+        "action": "IGNORE_BEHAVIORAL_ADJECTIVES",
+        "rationale_short": "Ignore how a player sounds; focus on the Seer's results",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 9,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=9"
+  }
+}

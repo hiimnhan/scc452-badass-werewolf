@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 2,
+                "reason": "No statements have been made. I have no evidence or Seer leads yet. I will listen for behavioral red flags andclaims to identify the Seer before intervening."
+            },
+            {
+                "Cong": 7,
+                "reason": "No-kill night is a critical data point. I must immediately pressure all players for role claims and monitor for over-alignment with any Seer claim to identify wolves early."
+            },
+            {
+                "Nam": 6,
+                "reason": "No one died tonight. This is a critical anomaly. I need to push for role claims (Seer/Witch/Guard) immediately to determine if a save occurred or if the wolves failed."
+            },
+            {
+                "Jin": 2,
+                "reason": "First day, no one dead. No evidence or claims yet. Better to listen and identify wolf signals through others' opening statements."
+            },
+            {
+                "Hoang": 9,
+                "reason": "I have confirmed Nhan is not a werewolf. Establishing a ground truth early is critical to narrowing the suspect pool and coordinating the village."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must establish a baseline of trust immediately. I need to claim a role and set the analytical tone to avoid 'stealth wolf' labels before others dictate the narrative."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to establish myself as a Villager early. Since no one died, the village will be confused; I must guide the narrative toward questioning Nhan's survival to flag them as a power role."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Hoang claimed Seer and cleared me. I must immediately validate this claim to establish the Trusted Core, securing the Seer's survival and signaling that any attack on Hoang is a wolf signal."
+            },
+            {
+                "Cong": 7,
+                "reason": "Must enforce role-claim pressure immediately. No-kill night is a critical data point; I need to identify who uses it as a shield or over-aligns with Hoang to detect wolf mimicry."
+            },
+            {
+                "Nam": 6,
+                "reason": "Hoang is proactively coordinating a trusted core by claiming Seer and clearing Nhan. I need to support this framework and monitor others for 'process attacking' or deflection signals."
+            },
+            {
+                "Jin": 2,
+                "reason": "Hoang claimed Seer and cleared Nhan. I will support the Seer but have no evidence against others yet. I'll listen for wolf signals during other players' responses."
+            },
+            {
+                "Riley": 7,
+                "reason": "Need to establish a role claim immediately to avoid 'stealth wolf' labels and align with Hoang's Seer claim to embed myself in the trusted core."
+            },
+            {
+                "Meg": 6,
+                "reason": "I need to claim Villager immediately and anchor myself to Hoang's clear of Nhan to establish myself as part of the trusted core early on."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Nhan is exhibiting classic wolf mimicry. A no-kill night occurred, and Nhan is immediately pushing a 'Trusted Core' to shield themselves. I must force other role claims and flag Nhan's over-alignment."
+            },
+            {
+                "Nam": 5,
+                "reason": "Hoang is proactively coordinating and Nhan is supporting the core. I need to monitor if others label this as 'aggressive' or 'railroading,' which would trigger my strategy's primary suspect signals."
+            },
+            {
+                "Jin": 5,
+                "reason": "Hoang claimed Seer and cleared Nhan. I need to publicly confirm my alignment as a Villager to support the trusted core and signal my cooperation, preventing any wolf-led narrative that I am hiding something."
+            },
+            {
+                "Hoang": 8,
+                "reason": "I have established a Trusted Core with Nhan. I must now pressure the remaining players to claim roles or reveal their logic to force wolf errors and deflection patterns."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must claim Villager immediately to avoid 'stealth wolf' labels. Need to align with the 'Trusted Core' narrative established by Hoang and Nhan to secure a safe position early."
+            },
+            {
+                "Meg": 6,
+                "reason": "Need to immediately claim Villager and anchor myself to Hoang's Trusted Core to establish legitimacy and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong is Process Attacking the Trusted Core and framing my coordination as wolf behavior. I must immediately shut down this distraction and pivot the village's suspicion toward Cong's behavioral red flags."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is exhibiting a clear Process Attacker signal by labeling the trusted core as 'too aggressive' to deflect from Hoang's Seer claim. I must push this accusation to secure an early wolf exile."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong exhibited a definitive wolf signal by labeling Nhan's coordination as 'too aggressive' and attacking the timing of the Trusted Core. I must immediately call out this deflection and back the Seer."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong challenged a confirmed innocent (Nhan) and labeled coordination as 'too aggressive', which is a werewolf deflection pattern. I must expose this gaslighting and lead the vote against Cong immediately."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must claim Villager immediately to establish baseline trust and avoid 'stealth wolf' labels. Need to mirror 'Trusted Core' terminology to align with Hoang/Nhan and marginalize Cong's dissent."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong is attacking the Seer's clear and the Trusted Core. I must immediately frame this as a wolf signal and anchor myself to Hoang to secure my position."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Cong is exhibiting clear behavioral red flags by process attacking the Trusted Core and attacking a Seer-cleared player. I must decisively reinforce Hoang's lead and push for Cong's exile to secure the win."
+            },
+            {
+                "Cong": 10,
+                "reason": "Hoang is attempting to exile me using Deflection Mirroring and coordination enforcement. I must counter this wolf signal and expose the Hoang-Nhan pairing to prevent my own exile."
+            },
+            {
+                "Nam": 9,
+                "reason": "Cong is exhibiting high-confidence wolf signals by labeling coordination as 'too aggressive' and attacking a cleared player. I must decisively support the push for Cong's exile to prevent a tie and secure a win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong exhibited a definitive wolf signal by labeling structural coordination as 'too aggressive' and attacking a Seer-cleared player. I must immediately back Hoang and push for Cong's exile to secure a win."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish a role claim immediately to avoid 'stealth wolf' labels. I will align with Hoang's Seer claim to integrate into the 'trusted core' and push the vote toward Cong."
+            },
+            {
+                "Meg": 9,
+                "reason": "Hoang is pushing Cong. I must immediately align with the Seer, claim Villager, and amplify the 'wolf signal' against Cong to secure an early innocent exile and anchor myself to the trusted core."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong is exhibiting multiple behavioral red flags: process attacking and attacking a Seer-cleared player. I must aggressively defend the Trusted Core and push for Cong's immediate exile to secure the win."
+            },
+            {
+                "Nam": 10,
+                "reason": "Cong is exhibiting primary wolf signals: process attacking, labeling coordination as 'too aggressive', and claiming a power role only under pressure. I must push for Cong's exile immediately to secure a villager win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is exhibiting textbook wolf signals by labeling coordination as 'too aggressive' and attacking the Seer's tone. I must immediately align with the trusted core and push for Cong's exile to secure a win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong is using werewolf deflection and gaslighting. He labeled coordination 'too aggressive' and claimed my lead is a 'wolf signal' without a counter-claim. I must lead the village to exile him immediately."
+            },
+            {
+                "Riley": 6,
+                "reason": "Need to establish my role claim immediately to avoid 'stealth wolf' labels and align with the current lead (Hoang) to secure a spot in the trusted core."
+            },
+            {
+                "Meg": 9,
+                "reason": "Cong is attacking the Seer and the Trusted Core. I must immediately align with Hoang, claim Villager, and frame Cong's behavior as a wolf signal to ensure his exile."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 8,
+                "reason": "Hoang (Seer) survived the night, likely due to my protection. I must immediately reinforce the Trusted Core and push for a target based on Hoang's data to maintain momentum."
+            },
+            {
+                "Nam": 8,
+                "reason": "Two consecutive kill-less nights are an anomaly. I must push for role claims from Jin, Riley, and Meg to identify the Guard and Witch and expose any wolves hiding in silence."
+            },
+            {
+                "Jin": 4,
+                "reason": "Need to maintain pressure on the remaining suspects and support Hoang's Seer results to prevent wolf deflection. Will push for structured claims from Nam, Riley, and Meg."
+            },
+            {
+                "Hoang": 10,
+                "reason": "I have confirmed Nhan and Nam are innocent. Revealing this now narrows the suspect pool to Jin, Riley, and Meg, forcing the remaining wolves to react and reveal themselves through deflection."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must establish a role claim immediately to avoid 'stealth wolf' labels. Need to align with the analytical framework and integrate into the trusted core before others dictate the narrative."
+            },
+            {
+                "Meg": 7,
+                "reason": "Need to establish myself as a Villager immediately and align with Hoang's 'Trusted Core' to secure my position and push suspicion onto Nam or Jin."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "I must immediately validate Hoang's Seer claim to solidify the Trusted Core and push the village to focus on the unknowns: Jin, Riley, and Meg."
+            },
+            {
+                "Nam": 7,
+                "reason": "Hoang has cleared me and Nhan. I must reinforce the trusted core and pressure Jin, Riley, and Meg to claim roles or provide logic, as their continued silence is a wolf signal."
+            },
+            {
+                "Jin": 8,
+                "reason": "Hoang requested a commitment to the truth. As per strategy, I must claim my role immediately and decisively to avoid being flagged as a wolf for silence."
+            },
+            {
+                "Riley": 7,
+                "reason": "Must claim Villager immediately to establish a baseline and avoid 'stealth wolf' labels. Need to align with Hoang's 'trusted core' and mirror his analytical framing to deflect suspicion from Meg and myself."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang's Seer claim creates a 'Trusted Core' that excludes me. I must immediately claim Villager and anchor myself to his clears to avoid being an easy target for the next exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 7,
+                "reason": "I must reinforce the Trusted Core (Hoang, Nam, Nhan) and support Jin's push for accountability from Riley and Meg to prevent wolf-led stalling or manufactured consensus."
+            },
+            {
+                "Nam": 7,
+                "reason": "Hoang has cleared me and Nhan. I must reinforce the trusted core and push Riley and Meg to provide logic for their silence, as silence without justification is a wolf signal per my strategy."
+            },
+            {
+                "Hoang": 8,
+                "reason": "I must maintain control of the narrative. Jin is pressing Riley and Meg; I need to immediately analyze their responses for deflection or gaslighting to identify the wolf."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is aggressively isolating Meg and me. I must immediately claim a role to establish trust and pivot the focus away from the 'unknowns' to avoid being the next target."
+            },
+            {
+                "Meg": 9,
+                "reason": "Jin is directly targeting me and Riley. I must immediately claim Villager, align with Hoang's core, and pivot the suspicion toward Jin by questioning the evidence used to target us."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is exhibiting clear behavioral red flags by attacking the process and framing the Trusted Core's coordination as a wolf signal. I must intervene to defend the core and push for Riley's exile."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is exhibiting Rhetoric Mirroring, attacking the 'haste' and 'aggression' of the process, exactly like exiled wolf Cong. This is a primary wolf signal. I must push for Riley's exile immediately."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley just exhibited a textbook wolf signal by labeling my alignment with the Seer as 'aggressive' and attacking my tone/haste. I must immediately call out this deflection pattern to secure the vote."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using a diversionary tactic by attacking Jin's 'haste' and 'aggression' to deflect from their own unknown alignment. I must immediately expose this as werewolf deflection to secure the vote."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin and Hoang are focusing on me and Riley. I must claim Villager immediately, anchor myself to the Seer's core, and support Riley's framing of Jin to deflect suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is exhibiting a clear Process Attacker red flag by framing Seer-anchored coordination as a wolf signal. I must intervene to defend the Trusted Core and push for Riley's exile to secure a victory."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is exhibiting Rhetoric Mirroring by attacking 'haste' and 'aggression,' exactly as the exiled wolf Cong did. I must decisively push for Riley's exile based on these high-confidence wolf signals."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using a diversionary tactic by attacking Jin's 'haste' and 'aggression' to undermine the Seer's coordination. I must intervene to label this as werewolf deflection and secure the vote."
+            },
+            {
+                "Riley": 9,
+                "reason": "Jin is aggressively pushing for my exile and framing my defense as a wolf signal. I must immediately counter-attack Jin's behavioral inconsistency and pivot the village's focus to avoid being exiled."
+            },
+            {
+                "Meg": 7,
+                "reason": "Jin is pushing the focus onto me and Riley. I must intervene to support Riley's evidence-based inquiry and frame Jin's aggression as a wolf signal to deflect suspicion from myself."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley is exhibiting a clear 'Process Attacker' red flag by framing Seer-anchored coordination as a wolf signal. I must decisively back the Trusted Core and push for Riley's immediate exile."
+            },
+            {
+                "Nam": 10,
+                "reason": "Riley is exhibiting textbook Rhetoric Mirroring, attacking the 'haste' and 'aggression' of the coordination process exactly like Cong did. This is a high-confidence wolf signal. I must push for Riley's immediate exile to secure victory."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley has exhibited definitive wolf signals by attacking the Seer's coordination and framing my alignment. I must push for a decisive vote to eliminate Riley immediately."
+            },
+            {
+                "Riley": 10,
+                "reason": "Hoang and Jin have completely isolated me. I must immediately pivot, potentially sacrifice Meg or frame Jin's aggression as a behavioral inconsistency to survive the imminent vote."
+            },
+            {
+                "Meg": 9,
+                "reason": "My teammate Riley is being targeted by the Seer and Jin. I must pivot immediately to support Riley's exile to maintain my cover and avoid being linked to him as a fellow wolf."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "The Seer (Hoang) is dead. I must immediately establish the remaining Trusted Core (Nam, Jin) and pivot the village to target the most passive remaining player, Meg, to prevent a wolf victory."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang (Seer) has been killed. Strategy dictates I immediately execute the Seer's final lead. Meg is the primary suspect based on Hoang's flagging and silence analysis. I must drive the vote against her now."
+            },
+            {
+                "Jin": 10,
+                "reason": "Hoang (Seer) was killed. Meg is the only player not cleared by the Seer and the only remaining suspect. I must push for Meg's immediate exile to secure a Villager victory."
+            },
+            {
+                "Meg": 8,
+                "reason": "Hoang is dead. I must immediately seize the narrative leadership, claim Villager, and frame the night's death as a result of Hoang's failures or Jin's manipulation to prevent suspicion from shifting to me."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "The Seer is dead. Meg is the only remaining unvetted player and the only logical suspect. I must immediately align with Jin to secure the vote and eliminate the last wolf."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang (Seer) is dead. Strategy dictates immediate execution of the Seer's final lead. Meg is the only unvetted player and Hoang flagged her for silence. I must decisively support Jin's push to secure victory."
+            },
+            {
+                "Meg": 10,
+                "reason": "Jin has explicitly targeted me and claims the others are cleared. I must immediately deflect, claim Villager, and frame Jin's baseless accusation as a wolf signal to survive this round."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "The Trusted Core (Jin, Nam, Nhan) is intact. Meg is the sole remaining unknown and the only logical suspect. I must speak immediately to solidify the consensus and execute the final vote to win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is the last remaining suspect. I must push for immediate exile to secure the win before she can attempt to deflect or manipulate the vote."
+            },
+            {
+                "Meg": 10,
+                "reason": "Jin and Nam are coordinating a direct attack on me. I must immediately claim Villager, deflect using their lack of evidence, and frame Jin's aggression as a wolf signal to survive."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "The Trusted Core (Nam, Jin) has identified Meg as the final wolf. As the Guard, I must provide the final decisive vote to secure an immediate villager victory and eliminate the remaining threat."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang is dead. Strategy dictates immediate execution of the Seer's final lead. Meg is the last unvetted player and has exhibited silence signals. I must push for her immediate exile to secure victory."
+            },
+            {
+                "Meg": 10,
+                "reason": "I am the sole target and the village is ready to vote. I must immediately claim Villager and flip the 'wolf signal' narrative onto Jin to survive."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "The Trusted Core (Jin and Nam) has isolated Meg as the final wolf. I must speak immediately to solidify this consensus and force the vote to secure a Villager victory."
+            },
+            {
+                "Jin": 10,
+                "reason": "Meg is the only remaining suspect. I must maintain maximum pressure and ensure the vote is locked in to secure an immediate Villager victory."
+            },
+            {
+                "Meg": 10,
+                "reason": "Jin and Nam are coordinating a direct execution. I must immediately claim Villager, challenge the lack of evidence, and frame Nam's claim about Hoang as a deflection tactic."
+            }
+        ],
+        [
+            {
+                "Nam": 0,
+                "reason": "The core is unified. Meg is the sole remaining suspect and has failed to respond. There is no need for further debate; we only need to proceed to the vote."
+            },
+            {
+                "Jin": 10,
+                "reason": "The target is isolated. Meg is the only remaining suspect and has exhibited a definitive wolf signal through silence. I must drive the vote to exile her immediately to secure the win."
+            },
+            {
+                "Meg": 10,
+                "reason": "I am the sole target of a coordinated rush vote. I must immediately claim Villager, challenge the lack of specific evidence, and flip the 'wolf signal' narrative onto Jin and Nam to survive."
+            }
+        ]
+    ]
+}

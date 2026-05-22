@@ -1,0 +1,150 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Hoang (Guard) chose to protect Nhan.",
+            "Jin (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Nhan (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "I am the Seer, Nhan is confirmed NOT a werewolf."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Guard, and I protected Nhan last night. Jin claims Nhan is confirmed non-werewolf. Let's prioritize validating Jin's claim and ensure Nhan's safety."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin claims to be Seer and cleared Nhan. Hoang claims to be Guard and protected Nhan. I request Jin investigate Nam to prove their Seer claim. A clear is needed."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Confirmed Villager: Nhan, based on Jin\u2019s investigation. I, Hoang, the Guard, protected Nhan last night to ensure his safety. We must validate Jin's claim and defend him from attacks."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Cong requests I investigate Nam to validate my claim. I will do so. However, Cong's demand, instead of acknowledging Nhan's confirmed innocence, suggests a disruptive tactic. Attacking a confirmed innocent is a Wolf tactic."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Jin's deflection is concerning. Instead of immediately investigating Nam, they accuse me of disruptive tactics. Prove your Seer claim, Jin, by investigating Riley. A clear is needed to validate your role."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Cong",
+                "reasoning": "Nhan voted to exile Cong. Reason: Cong's insistence on Riley's investigation, after Jin was asked to prove his Seer claim, is a distraction. We need verifiable information, not manufactured narratives."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Jin",
+                "reasoning": "Cong voted to exile Jin. Reason: Jin has not proven their Seer claim. Their defensive reaction to scrutiny suggests deception. We need a verified Seer to win."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Cong",
+                "reasoning": "Nam voted to exile Cong. Reason: Cong's insistence on immediate verification and subsequent accusations are disruptive. Wolves deflect and attack. We must prioritize removing threats to the Seer's process."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Cong",
+                "reasoning": "Jin voted to exile Cong. Reason: Cong prioritizes testing over accepting validated information. This is disruptive and a tactic to destabilize the village. Attacking confirmed innocents is a Wolf tactic."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Cong",
+                "reasoning": "Hoang voted to exile Cong. Reason: Cong's refusal to acknowledge Nhan's confirmed innocence and constant attempts to shift the focus away from validating the Seer's claim raise serious concerns. He is actively undermining our efforts."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's insistence on investigating Nam immediately after Jin\u2019s claim and Hoang's protection seems suspicious. He's trying to deflect attention from himself and potentially protect a fellow wolf."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: Cong's behavior is erratic and his constant requests for investigations seem designed to sow discord and distract us from the real threat. We need to prioritize stability and focus."
+            }
+        ],
+        "day_exiled": "Cong"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Jin.",
+            "Hoang (Guard) chose to protect Hoang.",
+            "Jin (Seer) investigated Riley. Riley is a wolf.",
+            "Nhan (Witch) used POISON potion on Jin"
+        ],
+        "night_eliminated": [
+            "Jin"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Nhan",
+                "statement": "Cong's relentless focus on Riley, echoing Jin's prior concerns, strongly suggests coordination. He's actively directing suspicion, a classic Wolf tactic."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's defense of Riley, mirroring Cong's previous accusations, is highly suspect. Nhan's loyalty to Jin is now demonstrably questionable."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Hoang's accusations mirror Cong's. This coordinated deflection from Riley's genuine suspicion is a clear Wolf tactic. I propose we investigate Hoang\u2019s claims of being the Guard."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's repeated defense of Riley, mirroring Cong\u2019s earlier accusations, is a clear attempt to deflect suspicion. Nhan is actively coordinating with a wolf, and I propose we vote Nhan."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Hoang's insistence on Nhan, mirroring Cong's previous line, feels manufactured. Why so much energy on one person? It\u2019s a distraction. Let's examine Hoang's motives closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Nhan's unwavering defense of Riley, echoing Cong\u2019s accusations, is a clear attempt to obfuscate the truth. I propose we vote Nhan."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Hoang",
+                "reasoning": "Nhan voted to exile Hoang. Reason: Hoang's behavior strongly suggests wolf coordination. His mirroring of Cong\u2019s accusations is a deliberate attempt to deflect suspicion and manipulate the village."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Hoang",
+                "reasoning": "Nam voted to exile Hoang. Reason: Hoang's unwavering protection of Nhan, following Jin's false claim, demonstrates a coordinated wolf strategy. We must eliminate this threat to the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's actions mirror Cong's, demonstrating coordination. His defense of Riley is a clear deflection. We must vote Nhan to disrupt their strategy."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's constant attempts to deflect suspicion and his unwavering support for Riley are deeply concerning. It feels like a calculated distraction tactic. We must act decisively."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's repeated accusations and mirroring of previous claims feel very calculated. It\u2019s a distraction tactic designed to muddy the waters and protect a wolf. We need to cut through the noise."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Witch",
+        "Cong": "Villager",
+        "Nam": "Villager",
+        "Jin": "Seer",
+        "Hoang": "Guard",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

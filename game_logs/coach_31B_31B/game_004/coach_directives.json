@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "providing_investigation_data",
+        "action": "AVOID_ULTIMATUMS",
+        "rationale_short": "Issuing ultimatums ('explain your silence or you are the target') creates friction and makes you look like a wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "providing_investigation_data",
+        "action": "PROVIDE_DATA_WITHOUT_DIRECTIVE",
+        "rationale_short": "Provide the data and let the village deduce the target.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "selecting_protection_target",
+        "action": "COMMUNICATE_TARGETS_EFFECTIVELY",
+        "rationale_short": "You failed to communicate your protection targets effectively.",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "attempting_to_claim_role",
+        "action": "AVOID_FABRICATING_MECHANICS",
+        "rationale_short": "Never lie about game mechanics to justify a hunch.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "mid_game",
+        "action": "INCREASE_ACTIVITY",
+        "rationale_short": "You were too passive in the mid-game.",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_identifies_confirmed_core",
+        "action": "COORDINATE_PROTECTION_WITH_SEER",
+        "rationale_short": "failed to coordinate with the Seer to protect the confirmed core.",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "DEBATE",
+        "trigger": "discrepancy_between_seer_data_and_villager_suspicion",
+        "action": "BRIDGE_DATA_AND_SUSPICION",
+        "rationale_short": "Use your voice to bridge the gap between the Seer's data and the Villagers' suspicions.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_silent_or_low_utility",
+        "action": "AVOID_ACCUSING_BASED_ON_SILENCE",
+        "rationale_short": "Stop treating 'silence' or 'lack of utility' as evidence of guilt.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "comparing_behavioral_vibes_vs_mechanical_contradictions",
+        "action": "PRIORITIZE_MECHANICAL_CONTRADICTIONS",
+        "rationale_short": "Prioritize mechanical contradictions over behavioral vibes",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "confirmed_core_narrative_presented",
+        "action": "QUESTION_BENEFICIARY_OF_NARROW_SUSPECT_POOL",
+        "rationale_short": "The village accepted the 'confirmed core' narrative without questioning who benefited most from narrowing the suspect pool",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

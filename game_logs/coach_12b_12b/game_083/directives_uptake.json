@@ -1,0 +1,132 @@
+{
+  "evaluated_game_id": "083",
+  "directives_source_game_id": "082",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "revealing_investigation_result",
+        "directive_action": "PROVIDE_RESULTS_CLINICALLY",
+        "directive_rationale": "Provide results clinically. Avoid aggressive rhetoric.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated: 'I am the Seer, and Nhan is confirmed. Nhan is a Villager. Let us focus on gathering information and protecting our village.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The initial announcement of the result was clinical and lacked aggressive rhetoric."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "revealing_investigation_result",
+        "directive_action": "AVOID_AGGRESSIVE_RHETORIC",
+        "directive_rationale": "Avoid aggressive rhetoric like 'blatant attempts' or 'desperate'",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated: 'Hoang's attempts to shift blame and discredit confirmed Villagers are blatant Wolf tactics.'",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam specifically used the phrase 'blatant Wolf tactics', which the directive explicitly listed as an example of aggressive rhetoric to avoid."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Once the Seer is identified, they must be protected every night until the game ends.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "After Nam claimed Seer in Round 1, Jin protected Nam in Round 2."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identified",
+        "directive_action": "IGNORE_OTHER_PLAYERS",
+        "directive_rationale": "Protecting anyone else is a waste of resources.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin focused exclusively on protecting the claimed Seer in the round after the Seer was identified."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "DO_NOT_POISON_X",
+        "directive_rationale": "Never use your poison on a player cleared by the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the POISON potion on Riley.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Riley had not been cleared by the Seer; Nhan and Hoang were the cleared players. Hoang did not poison them."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "TREAT_AS_FACTUAL_ALLY",
+        "directive_rationale": "When the Seer clears a player, that player is a factually confirmed ally.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated: 'Nam claims to be Seer and has cleared me. I accept this information for now and will defend Nam's claim.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan accepted the clear and acted as an ally to the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_demands_proof_of_seer_role_or_questions_clear",
+        "directive_action": "ACCUSE_WOLF",
+        "directive_rationale": "Anyone demanding 'proof' of the Seer's role or questioning a clear... is likely a Wolf",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan voted for Riley, citing Riley's attacks on Nam and defense of Hoang's skepticism as suspicious.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan accused Riley of being suspicious because Riley questioned Nam's claims and the clear."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_under_attack",
+        "directive_action": "IDENTIFY_AGGRESSIVE_BEHAVIORAL_ACCUSERS",
+        "directive_rationale": "When a Seer is under attack, look at who is pushing the hardest for the exile using 'behavioral concerns.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan identified Riley's behavior as suspicious, noting Riley's attacks on the Seer (Nam).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan identified Riley as a threat based on Riley's aggressive questioning of the Seer's behavior."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "VOTE",
+        "directive_trigger": "mechanical_clear_vs_behavioral_vibe",
+        "directive_action": "VOTE_BASED_ON_MECHANICAL_CLEAR",
+        "directive_rationale": "Trust the mechanical clear over the 'vibe' of the debate.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Riley, explicitly stating that the village must 'focus on verifiable information, not manufactured doubt.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan prioritized the mechanical clear of himself and the Seer over the behavioral suspicions raised by others."
+      }
+    ]
+  }
+}

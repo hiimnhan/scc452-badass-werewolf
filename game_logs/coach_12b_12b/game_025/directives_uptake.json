@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "025",
+  "directives_source_game_id": "024",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "revealed_investigation_result == 'Non-Wolf'",
+        "directive_action": "DEMAND_TRUST_IN_OBJECTIVE_FACT",
+        "directive_rationale": "failed to aggressively demand the village trust your result as objective fact",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan (Seer) investigated Cong and found him to be Non-Wolf, but Nhan never revealed this objective result to the village during the Day 1 debate."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "witch_action_contradicts_seer_result",
+        "directive_action": "FRAME_AS_CATASTROPHIC_ERROR_OR_WOLF_LIE",
+        "directive_rationale": "When the Witch contradicted you, you should have framed it as a catastrophic error or a wolf lie",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "While Nam (Witch) claimed to save Nhan, there was no contradiction of a revealed Seer result because Nhan had not revealed any investigation results."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your protocol must be: Protect the Seer every single night until they are dead.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Guard) chose to protect Nhan (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer on the first night while the Seer was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_result_for_target != 'Wolf'",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Using the Poison potion on a player without a Seer's 'Wolf' result is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Witch) used the POISON potion on Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam used the poison potion on Jin despite no Seer result indicating Jin was a wolf (the Seer had been exiled in Round 1)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "intuition_only_no_mechanical_evidence",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use poison based on intuition.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nam (Witch) used the POISON potion on Jin.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam used the poison potion without any mechanical evidence (Seer result), relying instead on intuition or behavioral analysis from Round 1."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_uses_keywords(['erratic behavior', 'too aggressive', 'deflection'])",
+        "directive_action": "DISREGARD_BEHAVIORAL_ANALYSIS",
+        "directive_rationale": "Terms like 'erratic behavior,' 'too aggressive,' and 'deflection' are wolf keywords used to distract from mechanical results.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang both cited Nhan's 'deflection' and 'aggressive' behavior, and then voted to exile him.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Villagers Jin and Hoang accepted and acted upon the behavioral analysis (deflection, aggressiveness) rather than disregarding it."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_provides_clear AND player_attempts_to_invalidate_based_on_suspicion",
+        "directive_action": "TARGET_PLAYER_FOR_EXILE",
+        "directive_rationale": "When the Seer provided a clear, any player attempting to invalidate that result based on 'suspicion' should have been your primary target.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan claimed to be the Seer but did not provide a clear investigation result (e.g., 'Player X is a wolf/not a wolf')."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "VOTE",
+        "directive_trigger": "conflict_between_objective_data_and_convincing_speech",
+        "directive_action": "VOTE_BASED_ON_OBJECTIVE_DATA",
+        "directive_rationale": "You voted based on who sounded more 'convincing' rather than who had the objective data.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "There was no objective data (Seer results) presented in the game to conflict with speech/behavioral arguments."
+      }
+    ]
+  }
+}

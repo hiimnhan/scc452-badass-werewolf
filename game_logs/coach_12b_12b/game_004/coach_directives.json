@@ -1,0 +1,90 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "investigation_result == CLEAR",
+        "action": "REVEAL_INVESTIGATION_AS_HARD_FACT",
+        "rationale_short": "When you clear a player, state it as a hard fact.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "village_doubts_seer_based_on_behavioral_patterns",
+        "action": "CHALLENGE_LACK_OF_MECHANICAL_EVIDENCE",
+        "rationale_short": "If the village begins to doubt you based on 'behavioral patterns,' call out the lack of mechanical evidence immediately.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your priority is the Seer. Protecting a cleared villager while the Seer is alive is a wasted action.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player",
+        "action": "ANNOUNCE_SAVE",
+        "rationale_short": "When the Seer clears a player, announce your save to create a 'Confirmed Block' of safe players.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "logic_is_vibe_based",
+        "action": "DEMAND_MECHANICAL_EVIDENCE",
+        "rationale_short": "Stop using 'vibe-based' logic... Demand mechanical evidence.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "VOTE_AGAINST_OTHER",
+        "rationale_short": "If a player is cleared by the Seer, they are an objective asset; exiling them based on 'behavior' is a catastrophic loss of information.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "lead_accuser_identified",
+        "action": "REQUEST_MECHANICAL_PROOF",
+        "rationale_short": "When this happens, stop and ask: 'What mechanical proof does the lead accuser have?'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "The village exiled the Seer in Round 1 despite him providing a valid clear.",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "The Guard protected a cleared villager instead of the Seer",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "The village relied entirely on 'deflection' and 'mirroring' accusations.",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "The Witch and Guard failed to publicly align with the Seer",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

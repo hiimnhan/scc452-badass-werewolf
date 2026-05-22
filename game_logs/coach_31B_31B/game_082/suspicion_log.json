@@ -1,0 +1,424 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Killed Night 1."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data available to shift suspicion."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Validated Seer data and correctly flagged Riley's social mimicry. Behavior aligns with required debate flow. Consistently identifies wolf tactics (gaslighting) used by Riley. High alignment with villager objectives."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data available to shift suspicion."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Flagged for Social Mimicry (echoing 'trust anchor'). Now exhibiting Behavioral Gaslighting and Tonal Fixation by attacking the Seer's 'rigidity' rather than the data. Using Aggression Framing to label the validation of Seer data as a 'wolf pair' tactic. High wolf signal."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No data available to shift suspicion."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Killed Night 1."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Seer immediately. Provided result for Nhan. Establishing Power Core. Effectively identifying social mimicry in Riley. High utility for villager victory."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "No data available. Actively supports the Seer's Power Core and correctly identifies Riley's social mimicry, aligning with villager strategy. Latest statement reinforces the priority of Seer data and correctly flags Riley's behavioral gaslighting."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No data available. Awaiting day discussion to check for social mimicry or gaslighting."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No data available. Exhibiting Social Mimicry by repeating Cong's 'trust anchor' and 'data' terminology without providing original logic. Flagged by the Seer as a high-risk wolf tactic. Now exhibiting Behavioral Gaslighting by attacking the Seer's communication style ('rigidity') and fabricating a narrative of a 'wolf pair' to dismiss factual data."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available. Awaiting day discussion to check for social mimicry or gaslighting."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1. Cleared as not a werewolf by Cong's claim."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Cleared Nhan. Used rigid jargon ('trust anchor'), but is now actively identifying wolf signals (mimicry) in others. Providing the only available factual data for the village."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No data available."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No data available."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No data available. Exhibiting Social Mimicry by echoing Cong's 'trust anchor' phrasing without contributing original analysis. Now employing Behavioral Gaslighting by attacking the Seer's rigidity and accusing a coordinated wolf push to discredit the Seer's data. High-confidence werewolf signal."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed innocent by Cong's Seer claim. Eliminated during Night 1."
+            },
+            "Cong": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Investigated Nhan and found them innocent. Actively identifying social mimicry and behavioral red flags in others to protect the Seer's role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information available. Baseline suspicion."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Baseline suspicion. Actively supporting the Seer's findings and flagging Riley's mimicry as a red flag. Correctly identified Riley's attempt to discredit the Seer as gaslighting, aligning with Power Core logic."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Initially supported Cong's Seer claim but was flagged for Social Mimicry. Now utilizing Behavioral Gaslighting by claiming the coordination between Cong and Jin is 'too convenient' and a 'wolf pair,' which is a high-probability wolf signal used to undermine the Power Core."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No information available. Baseline suspicion."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Killed during the night."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Claimed Nhan was innocent. Currently attacking Riley. Supporting this claim to maintain a low profile."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No information yet. Potential target if they don't claim a role."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "No information yet. Now actively supporting Cong's Seer claim and pushing for Riley's exile. High alignment with power core. Latest statement cements Riley as the target."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No information yet. Potential target if they don't claim a role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. Zero threat. Now the consensus target of the Seer and Jin; ready for strategic sacrifice. Attempted to counter-accuse Cong and Jin but failed to gain traction."
+            }
+        }
+    },
+    "end_game": {
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Killed Night 1."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "CONFIRMED not a wolf via Seer investigation. Trust Anchor. Actively enforcing the data hierarchy and defending the Seer's methodology. Correctly identified and flagged Meg's Social Mimicry and narrative deflection."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Consistently validates Seer data and identifies wolf tactics. No negative signals."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Unknown alignment. No data available to shift suspicion. Currently being pressured by Meg to provide a role claim. Latest statement uses Aggression Framing against Meg but correctly prioritizes Seer data. Now supported by Trust Anchor Nam's observation of Meg's framing."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Flagged for Social Mimicry (echoing 'trust anchor'). Now exhibiting Behavioral Gaslighting and Tonal Fixation by attacking the Seer's 'rigidity' rather than the data. Using Aggression Framing to label the validation of Seer data as a 'wolf pair' tactic. High wolf signal. Exiled."
+            },
+            "Meg": {
+                "score": 0.7,
+                "reason": "Unknown alignment. No data available to shift suspicion. Flagged for Social Mimicry: echoes Seer's logic and Nam's transparency demands without adding original logical analysis. Attempting to align with the Trust Anchor/Seer axis. Now attempting to isolate Hoang. Formally flagged by Trust Anchor Nam for shifting from data to narrative, a critical wolf signal."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role. Killed Night 1."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Claimed Seer and established Power Core. The fact that no one died suggests the wolves targeted the Seer and were blocked by my protection. High utility confirmed. Latest statement reinforces the Power Core, designates Nam as Trust Anchor, and correctly identifies Meg's Social Mimicry, narrowing the suspect pool."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Continues to support Seer data and correctly identify wolf tactics. No evidence of mimicry. Identified by Cong as one of the three unverified variables."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "No new data. Identified by Cong as one of the three unverified variables. Currently under pressure from Meg. Latest statement effectively counters Meg's narrative shift and redirects focus to the Seer's data, showing alignment with the Power Core and resisting isolation tactics."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No data available. Exhibiting Social Mimicry by repeating Cong's 'trust anchor' and 'data' terminology without providing original logic. Flagged by the Seer as a high-risk wolf tactic. Now exhibiting Behavioral Gaslighting by attacking the Seer's communication style ('rigidity') and fabricating a narrative of a 'wolf pair' to dismiss factual data. Exiled."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "No new data. Identified by Cong as one of the three unverified variables. Latest statement exhibits Social Mimicry: echoing the Seer's 'logic' without providing original analysis. Attempting to force Hoang's hand, which may be a tactic to steer the narrative. Now formally flagged by the Seer for textbook deflection and narrative pressure."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Killed night 1. Cleared as not a werewolf by Cong's claim."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Targeted by wolves last night, confirming his value to the village and high risk to the wolves. Saved by my potion. Providing active clears. Latest statement reinforces his commitment to data-driven analysis and correctly identifies behavioral wolf signals in Meg."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed innocent by Cong (Seer). Safety lock applied. Actively supporting the Seer's data-driven approach and pushing for variable isolation. Correctly identified Meg's social mimicry and narrative shift, further validating his alignment."
+            },
+            "Hoang": {
+                "score": 0.9,
+                "reason": "No data available; remains an unconfirmed variable. Now a primary target for isolation. Failure to claim a role while others are transparent increases suspicion. Latest statement exhibits behavioral gaslighting by accusing Meg of framing him and deflecting from the need for transparency. High-confidence wolf signal."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Exiled. High-confidence werewolf signal due to social mimicry and behavioral gaslighting."
+            },
+            "Meg": {
+                "score": 0.95,
+                "reason": "No data available; remains an unconfirmed variable. Now a primary target for isolation. Currently supporting the Seer and pushing for Hoang's claim, though showing signs of social mimicry. Nam has flagged her for echoing Cong's logic while attempting to isolate Hoang, which is a high-risk wolf signal. Now officially flagged by Cong (Seer) for textbook deflection and narrative pressure, elevating her to high-confidence werewolf status."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed innocent by Cong's Seer claim. Eliminated during Night 1."
+            },
+            "Cong": {
+                "score": 0.1,
+                "reason": "Claimed Seer. The lack of a kill suggests he was the target and was successfully protected by the Power Core, increasing his likelihood of being a legitimate power role. Now actively clearing players and narrowing the suspect pool. Consistently prioritizing data over narrative pressure."
+            },
+            "Nam": {
+                "score": 0.0,
+                "reason": "Confirmed Trust Anchor by Cong's Seer claim. Treated as absolute truth per strategy. Actively reinforcing the Seer's authority and demanding evidence-based debate to isolate wolves. Correctly identified Meg's attempt to isolate Hoang as a wolf signal."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Strongly aligned with the Seer's logic and identified Riley's gaslighting. The successful night protection further validates the coordination he supports."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "Initially supported Cong's Seer claim but was flagged for Social Mimicry. Now utilizing Behavioral Gaslighting by claiming the coordination between Cong and Jin is 'too convenient' and a 'wolf pair,' which is a high-probability wolf signal used to undermine the Power Core. Exiled."
+            },
+            "Meg": {
+                "score": 0.95,
+                "reason": "One of the few remaining unverified players. Now utilizing aggressive deflection by pressuring Hoang to 'claim' a role, despite the fact that basic Villagers have no role to claim. This attempt to frame silence as suspicious is a classic wolf tactic to isolate a target. Now flagged by Trust Anchor Nam and the Seer for Social Mimicry and narrative-shifting. Behavior identified as textbook deflection."
+            }
+        }
+    }
+}

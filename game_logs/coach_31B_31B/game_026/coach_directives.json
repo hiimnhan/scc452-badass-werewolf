@@ -1,0 +1,83 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your decision to claim early and provide data... forced the wolves to react.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "any player claims your data is 'unverifiable'",
+        "action": "ACCUSE_X",
+        "rationale_short": "any player who claims your data is 'unverifiable' is likely a wolf attempting to paralyze the village.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Seer is the village's only source of objective truth; you must prioritize their survival above all else.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "seer_was_attacked",
+        "action": "SAVE_SEER",
+        "rationale_short": "Your use of the Save potion on the Seer in Round 2 was the turning point of the game.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player shows 'Confusion Masks' (stalling/vague excuses) AND seer_is_unavailable",
+        "action": "POISON_X",
+        "rationale_short": "do not hesitate to use your Poison potion on players showing 'Confusion Masks' (stalling/vague excuses) if the Seer is unavailable.",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REQUEST_ROLE_CALL",
+        "rationale_short": "Continue this 'Role-Call Enforcement' to trap wolves in contradictions.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "VOTE",
+        "trigger": "conflict between Seer-cleared player and uncleared player's intuition",
+        "action": "VOTE_AGAINST_UNCLEARED",
+        "rationale_short": "Always prioritize Seer-cleared players over the 'intuition' of uncleared players.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 7,
+    "dropped": [
+      {
+        "advice_verbatim": "The Guard protected the Witch instead of the Seer in Night 1.",
+        "reason": "other"
+      },
+      {
+        "advice_verbatim": "the village almost fell for Meg's 'coordinated effort' narrative because they lacked a living Seer-clear for the aggressive players.",
+        "reason": "subjective_only"
+      }
+    ],
+    "coverage_warning": "total_advice_pieces=8 but emitted+dropped=9"
+  }
+}

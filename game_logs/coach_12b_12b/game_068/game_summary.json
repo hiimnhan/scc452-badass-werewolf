@@ -1,0 +1,150 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Nhan.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. Nhan is confirmed not a werewolf. Let us proceed with caution and observe who attempts to undermine this verifiable truth."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam claims to be Seer and cleared me. I await verification of this claim. Let's see if Nam's claims hold up under scrutiny."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. Nhan is confirmed not a werewolf. His immediate demand for verification, before any other discussion, is a tactic to sow doubt and deflect suspicion. Observe him closely."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Witch, and I saved Nhan last night. Nam's claim of Seer status and Nhan's innocence requires immediate validation. Let's focus on verifying Nam's claims rather than immediate accusations."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer, and Nhan is confirmed not a werewolf. His immediate demand for verification, before any other discussion, is a tactic to sow doubt and deflect suspicion. Observe him closely."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Nam's insistence on his Seer claim and immediate dismissal of my request for verification, combined with Hoang's contradictory claim of saving me, strongly suggests coordination. Nam, demonstrate your Seer ability."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Nam",
+                "reasoning": "Nhan voted to exile Nam. Reason: Nam's refusal to demonstrate his Seer ability and his aggressive accusations against me suggest he's attempting to deflect suspicion. His claim is contradicted by Hoang\u2019s save."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Nhan",
+                "reasoning": "Cong voted to exile Nhan. Reason: Nhan's behavior is suspicious. His insistence on verifying Nam before any other discussion seems designed to sow doubt and deflect attention. I vote Nhan."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Nhan",
+                "reasoning": "Nam voted to exile Nhan. Reason: Nhan's insistence on immediate proof and subsequent dismissal of verifiable Seer information is highly suspicious. He is actively attempting to sow doubt and deflect from the truth."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Nam",
+                "reasoning": "Jin voted to exile Nam. Reason: Nam's behavior is highly suspect. His rapid accusations and demand for unquestioning belief indicate a potential Wolf attempting to manipulate the village."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Nhan",
+                "reasoning": "Hoang voted to exile Nhan. Reason: Nhan's reaction to being saved and his aggressive questioning of Nam's Seer claim are concerning. He's deflecting suspicion; let's exile him."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Nhan",
+                "reasoning": "Riley voted to exile Nhan. Reason: Nhan's behavior is unsettling. The constant demands for verification and his attempts to pit Nam and Hoang against each other suggest he's hiding something. Let's investigate further by exiling him."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Nhan",
+                "reasoning": "Meg voted to exile Nhan. Reason: Nhan's insistence on verification and quick accusations seem designed to muddy the waters. We need to establish trust and root out potential agitators, and Nhan\u2019s actions raise serious concerns."
+            }
+        ],
+        "day_exiled": "Nhan"
+    },
+    "2": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Hoang. Hoang is NOT a wolf.",
+            "Hoang (Witch) used POISON potion on Nam"
+        ],
+        "night_eliminated": [
+            "Nam"
+        ],
+        "day_debate": [
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's save of Nhan, followed by Nhan's immediate accusations, reeks of coordinated Wolf play. I demand a vote on Hoang."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "Hoang's save of Nhan, followed by Nhan's immediate accusations, is highly suspicious. I vote for Hoang."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin and Cong are mirroring each other's accusations. Their immediate and identical claims against me, following Nhan's exile, are a classic wolf tactic to create a false consensus. I vote Jin."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Hoang's deflection is blatant. He accuses me of mirroring Cong while simultaneously mirroring Cong's accusations. A vote for Hoang is a vote for safety."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Jin and Cong's identical accusations are a clear deflection. Their mirroring behavior, echoing each other's claims, proves they are working together. I vote Jin."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "Hoang's desperate attempts to shift blame are transparent. Mirroring accusations? That's a tactic wolves use when cornered. I vote Hoang."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Cong",
+                "vote_for": "Hoang",
+                "reasoning": "Cong voted to exile Hoang. Reason: Hoang's mirroring accusations and deflection tactics are a clear attempt to mislead us. We must exile him to protect the village."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Hoang",
+                "reasoning": "Jin voted to exile Hoang. Reason: Hoang's desperate attempts to shift blame and accuse Jin and Cong of mirroring are a classic Wolf tactic. A vote for Hoang is a vote for safety."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Jin",
+                "reasoning": "Hoang voted to exile Jin. Reason: Jin and Cong are mirroring accusations, a classic wolf tactic. Riley blindly supports them. Voting Jin is a vote to expose their coordinated deception."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Hoang",
+                "reasoning": "Riley voted to exile Hoang. Reason: Hoang's reaction to Nhan's exile was far too aggressive. The mirroring accusations are a desperate attempt to mislead us. We must protect the village."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Hoang",
+                "reasoning": "Meg voted to exile Hoang. Reason: Hoang's behavior is increasingly erratic and defensive. His attempts to blame Jin and Cong are transparent; a vote for Hoang is a vote for safety and clarity."
+            }
+        ],
+        "day_exiled": "Hoang"
+    },
+    "winner": "Werewolves",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

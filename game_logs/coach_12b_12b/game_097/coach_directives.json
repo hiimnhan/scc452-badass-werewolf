@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a villager attacks a player the Seer has cleared",
+        "action": "ACCUSE_X",
+        "rationale_short": "Once you clear a player, any villager who continues to attack that player should be your primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "village argues about a cleared player's tone",
+        "action": "COMMAND_VILLAGE",
+        "rationale_short": "You were too passive in Round 1 when the village began arguing about the Witch's 'tone' despite your clear.",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "round_num == 1",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Guard protected the Witch in Round 1 instead of hard-locking the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "NIGHT",
+        "trigger": "always",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your sole priority is the Seer; protecting anyone else is a waste of a move.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_available",
+        "action": "SAVE_SEER",
+        "rationale_short": "Witch wasted the Save potion on a basic Villager instead of prioritizing the Seer.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Poisoning a cleared villager is a game-ending mistake that actively helps the Wolves.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "save_potion_available",
+        "action": "SAVE_SEER",
+        "rationale_short": "The Witch must save the Seer",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_is_cleared_by_seer",
+        "action": "ENDORSE_X",
+        "rationale_short": "If the Seer clears someone, they are a teammate regardless of how 'controlling' or 'suspicious' they seem.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "behavioral_analysis_or_vibes_presented",
+        "action": "IGNORE_ARGUMENT",
+        "rationale_short": "Stop using 'behavioral analysis' or 'vibes' to judge players.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "seer_results_available",
+        "action": "VOTE_AS_BLOC",
+        "rationale_short": "the village must vote as a bloc based on the Seer's results, ignoring all 'personality' arguments.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

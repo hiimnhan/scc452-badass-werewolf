@@ -1,0 +1,133 @@
+{
+  "evaluated_game_id": "079",
+  "directives_source_game_id": "078",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "established_trust_anchors",
+        "directive_action": "ESTABLISH_TRUST_ANCHORS",
+        "directive_rationale": "Your strategy of establishing 'Trust Anchors' was excellent",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang declared himself the Seer and explicitly labeled Nhan as a 'Trust Anchor' after confirming Nhan was not a werewolf.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang explicitly used the 'Trust Anchor' terminology to secure a confirmed innocent player."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "providing_leads",
+        "directive_action": "PROVIDE_DATA_DRIVEN_LEADS",
+        "directive_rationale": "Continue providing clear, data-driven leads to the village.",
+        "confidence": 1.0,
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang provided the specific result of his investigation (Nhan is not a wolf) and used this to lead the village toward suspecting Nam.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Seer provided clear investigation data to guide the village's voting."
+      },
+      {
+        "directive_id": "SEER-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "power_roles_alive",
+        "directive_action": "MAINTAIN_SHARED_CONFIRMED_INNOCENT_LIST",
+        "directive_rationale": "The Seer, Guard, and Witch failed to maintain a shared 'Confirmed Innocent' list",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "There is no record of the Seer coordinating a shared list with the Guard or Witch during the night phases.",
+        "verdict": "IGNORED",
+        "verdict_notes": "While power roles were alive, no shared list was maintained; communication only occurred during public debate."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "you must protect them every single night until they are dead",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Hoang (Seer) during Round 2 night actions.",
+        "verdict": "PARTIALLY_FOLLOWED",
+        "verdict_notes": "Nhan protected the Seer in Round 2, but failed to do so in Round 1 (protected self) and Round 3 (protected Meg)."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "power_roles_alive",
+        "directive_action": "MAINTAIN_SHARED_CONFIRMED_INNOCENT_LIST",
+        "directive_rationale": "The Seer, Guard, and Witch failed to maintain a shared 'Confirmed Innocent' list",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "There is no record of Nhan coordinating a shared list with other power roles during night phases.",
+        "verdict": "IGNORED",
+        "verdict_notes": "No shared list was maintained among the power roles."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_cleared_by_seer",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a player who has been cleared by the Seer",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Witch) did not use any potions in Round 2, including the poison potion, despite Nhan being cleared by the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch did not poison any player cleared by the Seer."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "high_probability_wolf_suspect_lacks_seer_clear",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Use poison only on high-probability wolf suspects who lack a Seer clear",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Despite Jin making a fake Guard claim and attacking the Seer (making him a high-probability suspect), Cong did not use the poison potion.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch did not utilize the poison potion on a high-probability suspect."
+      },
+      {
+        "directive_id": "WITCH-003",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "power_roles_alive",
+        "directive_action": "MAINTAIN_SHARED_CONFIRMED_INNOCENT_LIST",
+        "directive_rationale": "The Seer, Guard, and Witch failed to maintain a shared 'Confirmed Innocent' list",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "There is no record of Cong coordinating a shared list with other power roles during night phases.",
+        "verdict": "IGNORED",
+        "verdict_notes": "No shared list was maintained among the power roles."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_repeats_power_role_logic_without_original_reasoning",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player simply agrees with the logic of the power roles without providing original reasoning, treat it as a high-probability wolf signal",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam (Villager) observed Nhan mirroring Hoang's phrasing and explicitly accused Nhan of 'Social Mimicry,' proposing to exile Hoang based on this observation.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified the mirroring behavior and treated it as a wolf signal, acting on it by accusing the players involved."
+      }
+    ]
+  }
+}

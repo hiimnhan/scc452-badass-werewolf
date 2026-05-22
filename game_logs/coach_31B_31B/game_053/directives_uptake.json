@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "053",
+  "directives_source_game_id": "052",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "player_is_stalling AND other_non_cleared_players_exist",
+        "directive_action": "PRIORITIZE_VOTE_ON_NON_CLEARED_OVER_STALLING_PLAYER",
+        "directive_rationale": "avoid targeting innocent Villagers based on 'stalling' alone if there are other non-cleared players",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) did not encounter a situation in the VOTE phase where they had to choose between a stalling player and other non-cleared players; in Round 1, the consensus was on Riley, and in Round 2, the consensus was on Meg."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_refuses_to_commit_role_during_role_call",
+        "directive_action": "ACCUSE_AS_WOLF",
+        "directive_rationale": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin explicitly stated that Meg had remained silent and avoided claiming a role throughout the game, calling this silence a 'confession' and demanding Meg's immediate exile.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin correctly identified Meg's failure to claim during the role-call and accused her of being a wolf."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Priority must always be Seer > Witch > Villager",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "In Round 2 Night, Hoang (Guard) chose to protect Jin (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer while the Seer was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_identified_wolf AND poison_potion_remaining",
+        "directive_action": "POISON_IDENTIFIED_WOLF",
+        "directive_rationale": "once the Seer had identified the wolf, you should have used the poison immediately during the night",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) never identified a specific player as a wolf through investigation (Jin cleared Nhan and Hoang), although he flagged Riley's behavior. The trigger 'seer_has_identified_wolf' usually refers to a positive investigation result."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_refuses_to_commit_role_during_role_call",
+        "directive_action": "ACCUSE_AS_WOLF",
+        "directive_rationale": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan stated that Meg's behavior was a textbook wolf signal because she refused to claim during Role-Call and attacked the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan accused Meg of being a wolf based on the failure to claim during the role-call."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_refuses_to_commit_role_during_role_call",
+        "directive_action": "ACCUSE_AS_WOLF",
+        "directive_rationale": "when a player refuses to commit to a role during a coordinated role-call, treat it as a confession",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong and Nam both cited Meg's silence/refusal to claim during the initial role-call as a major red flag and a wolf signal, leading to their accusations and votes against her.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Villagers treated Meg's failure to commit to a role as a signal of wolf alignment."
+      }
+    ]
+  }
+}

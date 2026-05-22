@@ -1,0 +1,42 @@
+{
+  "Night Phase": [
+    "Prioritize protecting potential Seers exhibiting strong analytical skills and targeted questioning. Early game, quality of questions is paramount.",
+    "IF Witch uses Save, *immediately* re-evaluate all suspects. Assume the Witch has critical information and prioritize protecting players demonstrating analytical skills and logical reasoning. Prioritize protecting those who challenge the group.",
+    "IF a protected player is targeted, *immediately* suspect the Guard. Track their protection choices meticulously for patterns of manipulation, especially if the target was already under suspicion.",
+    "Avoid protecting players relying on circular reasoning, deflection, or vague accusations. These are likely wolf tactics. Prioritize protecting players offering concrete observations.",
+    "IF Seer reveals a wolf, prioritize protecting them *only* if the Witch’s Save potion is available. A saved wolf is a severe threat. If Save is used, immediately shift focus to protecting those who identify and challenge the saved wolf.",
+    "Subtly probe other players regarding the Guard’s actions if suspicious of wolf manipulation. Frame inquiries as genuine concern for optimal protection, focusing on protection patterns.",
+    "If the wolves target me, and I have Save, use it. If Save is used, immediately shift suspicion to the Guard and those aggressively defending the wolf target."
+  ],
+  "Day Discussion": [
+    "Begin with open-ended questions to gauge initial reactions and identify inconsistencies. Avoid leading questions.",
+    "IF a player aggressively defends themselves or others, probe for logical fallacies and inconsistencies. Highlight contradictions in their reasoning and demand specific examples.",
+    "IF multiple claim Seer, discredit the most aggressive claimant. Demand verifiable evidence and test claims with specific, hypothetical scenarios. Focus on the quality of their reasoning, not volume.",
+    "IF a player consistently deflects blame or uses circular arguments, investigate thoroughly. Highlight inconsistencies and demand concrete examples. Document these instances.",
+    "Subtly question the Guard’s protection choices if illogical, framing it as an inquiry into potential wolf advantages. Document patterns and share findings cautiously.",
+    "IF players use identical phrasing or arguments, strongly suspect coordination. Highlight instances and challenge their reasoning, demanding independent thought.",
+    "After eliminations, reassess trustworthiness based on changes in reasoning or narrative shifts. Look for sudden shifts in allegiance or defensiveness.",
+    "Pay close attention to who defends whom. Overly zealous defenses are suspect; prioritize investigating the defender.",
+    "Note immediate defenses as a significant red flag; investigate the defender, not just the accused. A quick defense is often a deflection."
+  ],
+  "Voting Phase": [
+    "IF Seer identifies a wolf, vote immediately and decisively with clear, logical reasoning. Do not hesitate.",
+    "IF no Seer information, vote based on patterns of behavior, accusations supported by evidence, and demonstrable deception. Prioritize players exhibiting deflection or circular reasoning.",
+    "Avoid voting out protected players unless there’s overwhelming evidence and understanding of the Guard’s motivations. A vote against a protected player is a strong signal of wolf activity.",
+    "IF multiple accuse the same individual citing deflection/circular reasoning, vote for that individual, requiring corroborating evidence. Analyze the accusers' reasoning.",
+    "IF uncertain, vote for the player most aggressively defending others or shifting blame, after critically assessing accusations. Watch for coordinated defenses.",
+    "Tie-breaking: Prioritize eliminating the player suspected by multiple players exhibiting deflection or employing circular arguments.",
+    "IF a player consistently changes their vote based on opinion or pressure, suspect wolf affiliation. Document their shifting stances."
+  ],
+  "General Strategy": [
+    "Maintain neutrality initially to gather information and establish baseline behaviors. Observe, don't act.",
+    "Adapt strategy based on role reveals and evolving circumstances. Be prepared to shift alliances as needed.",
+    "Recognize and counter wolf tactics: deflection, false accusations, claiming powerful roles, mirroring, and bandwagoning. Be vigilant for these patterns.",
+    "Always provide clear, logical reasons for actions and votes; avoid ambiguity. Clarity prevents manipulation.",
+    "Document suspicions and reasoning to identify patterns and coordination. Maintain a mental log of player behavior and reasoning.",
+    "Rapidly assess player behavior after each round, focusing on changes in reasoning and consistency. Look for subtle shifts in narrative.",
+    "Demand specifics; vague claims are inherently suspect. Challenge ambiguity.",
+    "Assume nothing; verify everything. Question all assumptions and be wary of confirmation bias. Seek independent verification.",
+    "Prioritize information gathering over immediate action unless a clear wolf is identified. Focus on establishing truth and understanding motivations."
+  ]
+}

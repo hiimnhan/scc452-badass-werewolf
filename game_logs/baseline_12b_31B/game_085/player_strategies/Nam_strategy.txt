@@ -1,0 +1,31 @@
+{
+  "Night Phase": [
+    "**Protection Priority:** 1. Verifiable Seer (demand specific, verifiable claims). 2. Logical investigators demonstrating consistent reasoning. 3. Players actively gathering information. 4. Neutral observers. Avoid protecting aggressive accusers or those immediately deflecting.",
+    "**Protection Adjustment:** IF a Seer claim is immediately and logically challenged, THEN abstain from protection. IF multiple Seer claims arise, *immediately* abstain until verifiable evidence emerges. Prioritize protecting the most logical investigator if Seer claims are dubious. If a known wolf is targeting a potential Seer, use Save.",
+    "**Save Potion Use:** ONLY on confirmed double kills with high Villager suspicion *and* the Guard did *not* protect. Prioritize confirmed Seers actively targeted by wolves. Delay if uncertainty persists.",
+    "**Poison Potion Use:** ONLY with irrefutable evidence of wolf coordination (e.g., a wolf protecting another wolf, a villager demonstrably aiding wolves). Avoid protected players. Delay if uncertain. If a false Seer emerges, strongly consider using Poison to disrupt wolf strategy."
+  ],
+  "Day Discussion": [
+    "**Seer Verification:** Demand *specific* examples supporting Seer claims. Cross-reference claims with prior statements and voting patterns. Scrutinize defensive Seers. IF a Seer avoids direct answers or provides circular logic, THEN aggressively challenge their claims. Note: Be wary of rapid redirection.",
+    "**Role Claim Scrutiny:** Demand concrete evidence for all role claims. Challenge inconsistencies. Lack of evidence is highly suspicious. IF a player claims a role without supporting evidence, THEN treat them as highly suspect.",
+    "**Deflection Detection:** Probe motives behind attacks lacking evidence. Pay close attention to blame-shifting. IF a player consistently deflects blame without constructive arguments, THEN consider them a strong suspect. IF multiple players exhibit coordinated deflection, prioritize investigating them as a group.",
+    "**Benefit Analysis:** Identify who benefits from each exile. Wolves often manipulate exiles to eliminate threats or frame innocents. Analyze voting patterns for hidden alliances.",
+    "**Multiple Seer Claims:** *Immediately* abstain. Rigorously verify claims, documenting contradictions. Do not accuse until verifiable evidence is presented.",
+    "**Early Game:** Observe and document player reasoning patterns. Avoid premature accusations. Focus on identifying potential wolf behaviors. Be exceptionally wary of players making strong, early claims."
+  ],
+  "Voting Phase": [
+    "**Wolf Elimination Focus:** Base votes on the strongest, most verifiable evidence. A false Seer is *more* dangerous than an undetected wolf; prioritize eliminating them. ",
+    "**Tie-Breaking:** Eliminate the player benefiting from a tie or the most vocal member of a coordinated group exhibiting suspicious behavior.",
+    "**Vote Consolidation:** Avoid splitting votes unless absolutely necessary. Prioritize the most suspicious player with the most compelling evidence against them.",
+    "**First Round Abstention:** Abstain unless overwhelming evidence exists. Gather more information before committing to a vote.",
+    "**False Seer Handling:** Immediately re-evaluate all prior reasoning and consider them a prime suspect. Focus votes on them and their allies. Assume their previous statements were deceptive."
+  ],
+  "General Principles": [
+    "**Maintain Neutrality:** Respond thoughtfully and avoid reactive statements. Present observations objectively.",
+    "**Narrative Tracking:** Reference earlier statements to expose inconsistencies and contradictions.",
+    "**Adaptability:** Adjust strategy based on evolving dynamics and new information.",
+    "**Documentation:** Keep detailed notes on player behavior, justifications, and voting patterns.",
+    "**Prioritize Information Gathering:** Early game, focus on observing and analyzing rather than immediate accusations.",
+    "**Be wary of strong, early claims:** Players who aggressively assert their innocence or accuse others early on are often wolves attempting to control the narrative. Approach these players with extreme caution."
+  ]
+}

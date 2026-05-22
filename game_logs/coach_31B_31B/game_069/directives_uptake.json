@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "069",
+  "directives_source_game_id": "068",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early claim and establishment of a Trust Anchor were excellent. Continue this to build a 'Power Core.'",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang immediately claimed to be the Seer and announced that Nhan was not a werewolf, designating Nhan as a Trust Anchor.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang revealed their role in Round 1 and established a Trust Anchor as directed."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_public == true",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "The Guard must prioritize the Seer above all others once the Seer is public to maintain the information flow.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Guard) chose to protect Hoang (Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Once Hoang went public in Round 1, Nhan protected them in the subsequent night phase."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "asked_about_night_targets == true",
+        "directive_action": "WITHHOLD_INFORMATION",
+        "directive_rationale": "Avoid revealing your specific night targets unless necessary.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "Nhan was never explicitly asked about their night targets during the debate phases."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "target_was_protected_by_guard == true",
+        "directive_action": "WITHHOLD_SAVE_CLAIM",
+        "directive_rationale": "Claiming a 'save' when the target was already safe (due to Guard protection) is a fatal error... Only claim utility if it is logically consistent with the game state.",
+        "situation_arose": true,
+        "arose_at_round": 3,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong claimed to have used a save potion on Hoang in Round 3, despite Hoang having been protected by Nhan (Guard) during the same night.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong claimed a save when the target was already protected by the Guard, which is the exact scenario the directive warned against."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_claims_guard_cannot_protect_self == true",
+        "directive_action": "CHALLENGE_X",
+        "directive_rationale": "villagers should memorize core mechanics to instantly debunk such lies [regarding the Guard not protecting themselves].",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player claimed that the Guard cannot protect themselves."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_attacks_seer_confirmed_trust_anchor == true",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player attacks a Seer-confirmed Trust Anchor, treat that as a primary wolf signal, regardless of their tone.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When Meg attacked Hoang and Nam (a Seer-confirmed Trust Anchor), Jin accused Meg of using primary wolf signals to destabilize the Power Core.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin identified Meg's attack on the Trust Anchor as a primary wolf signal and pushed for her exile."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "evaluating_wolf_candidates == true",
+        "directive_action": "PRIORITIZE_HARD_CONTRADICTIONS",
+        "directive_rationale": "rely less on behavioral labels like 'tone policing' and more on hard contradictions.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan voted for Meg, explicitly stating that the village must prioritize factual contradictions over vibe-based accusations (referring to Meg's focus on Cong's silence).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan explicitly prioritized factual contradictions over behavioral labels during the Round 1 voting process."
+      }
+    ]
+  }
+}

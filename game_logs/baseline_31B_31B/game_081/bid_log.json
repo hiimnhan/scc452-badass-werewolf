@@ -1,0 +1,140 @@
+{
+    "1": [
+        [
+            {
+                "Cong": 2,
+                "reason": "First day, no information available. I need to listen for role claims, specifically the Seer, and monitor for Process Attacks or Blending before making a move."
+            },
+            {
+                "Nam": 9,
+                "reason": "Nhan was confirmed innocent and killed. I must reveal this ground truth immediately to prevent the village from wasting votes on a confirmed innocent and to establish my role as Seer."
+            },
+            {
+                "Jin": 2,
+                "reason": "No data yet. I need to listen for Seer claims and Wolf Signals (passive alignment, narrative framing) before asserting a position or directing the vote."
+            },
+            {
+                "Hoang": 2,
+                "reason": "First day, no information available. I need to listen for Seer claims or behavioral signals (process attacks, gaslighting) before intervening."
+            },
+            {
+                "Riley": 0,
+                "reason": "No accusations made yet. Following 'Passive Observation' and 'The Closer' roles; staying silent to let villagers initiate conflicts."
+            },
+            {
+                "Meg": 2,
+                "reason": "No accusations have been made. I will remain silent and let others lead to establish a baseline and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Cong": 3,
+                "reason": "Nam claimed Seer and provided a binary result for Nhan. I need to monitor for competing Seer claims or players using Process Attacks/Deflection before making a move."
+            },
+            {
+                "Jin": 2,
+                "reason": "Nam claimed Seer with mechanical evidence. Per strategy, this is ground truth. I have no counter-evidence or wolf signals yet; I will listen for passive alignment or deflection from others."
+            },
+            {
+                "Hoang": 6,
+                "reason": "Nam claimed Seer and confirmed Nhan. I must acknowledge Nam as the ground truth and push for others to commit to roles or positions to identify passive wolves or process attackers."
+            },
+            {
+                "Riley": 2,
+                "reason": "Nam claimed Seer. I must remain passive and observe the sequence of responses. No majority exists yet, so I will not initiate accusations."
+            },
+            {
+                "Meg": 3,
+                "reason": "Nam claimed Seer. I need to establish a baseline as a villager without leading. I will wait for others to react to Nam before aligning with the majority."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Hoang is exhibiting textbook Blender and Deflection behavior by labeling doubt as a 'wolf signal' and accepting Nam's claim as 'ground truth' without verification. I must flag this immediately to prevent the village from being manipulated."
+            },
+            {
+                "Nam": 8,
+                "reason": "Hoang is mirroring my mechanical terminology ('ground truth', 'wolf signal') without providing evidence. This is a high-probability wolf signal per strategy. I must flag this behavior immediately before the village trusts him."
+            },
+            {
+                "Jin": 2,
+                "reason": "Nam provided a mechanical anchor and Hoang is enforcing the strategy. I have no new evidence or wolf signals to report yet. Listening to others to detect passive alignment or deflection is priority."
+            },
+            {
+                "Riley": 1,
+                "reason": "Nam claimed Seer. Hoang supported him. No majority target exists yet. I must remain silent as the Closer and avoid initiating accusations per strategy."
+            },
+            {
+                "Meg": 3,
+                "reason": "Nam claimed Seer and is a priority night kill. Hoang is currently leading the narrative. I will stay quiet to blend in and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Nam": 9,
+                "reason": "Hoang is using mirroring and deflection to force consensus around my claim. I must distance myself from Hoang and validate Cong's mechanical analysis to prevent the village from trusting a wolf's endorsement."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong is exhibiting blatant Wolf Signals by labeling logical coordination as a 'process attack' and 'shielding' to undermine Nam's Seer claim. I must intervene to expose this deflection and secure the vote against Cong."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Cong utilized 'process attack' language by labeling my analysis as a 'textbook process attack'. This is a definitive werewolf deflection signal. I must immediately expose this to ensure Cong is exiled."
+            },
+            {
+                "Riley": 0,
+                "reason": "Villagers are currently in conflict. I will remain silent as a passive observer until a majority forms or a mechanical sequence develops."
+            },
+            {
+                "Meg": 6,
+                "reason": "Cong is the most aggressive accuser. I will align with him to establish trust and a safe villager baseline by targeting Hoang."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Hoang is using a direct Process Attack and Deflection to flip the narrative onto me. I must expose his mimicry of my analysis terminology as a wolf signal before the village is swayed."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang is mirroring my terminology and using deflection to frame Cong. I must expose Hoang's behavioral patterns to prevent the village from being manipulated by a wolf pretending to support the Seer."
+            },
+            {
+                "Jin": 10,
+                "reason": "Cong is exhibiting clear Wolf Signals by labeling logical coordination as 'process attacks' and 'shielding'. I must intervene immediately to validate the Seer's ground truth and push for Cong's exile based on strategy."
+            },
+            {
+                "Riley": 1,
+                "reason": "Villagers are currently divided and accusing each other. Following the 'Passive Observation' strategy, I will remain silent during this conflict to avoid establishing a pattern."
+            },
+            {
+                "Meg": 6,
+                "reason": "Hoang is aggressively targeting Cong. I will align with the most aggressive accuser to establish a safe villager baseline and push Cong toward exile."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Hoang and Jin are executing coordinated Process Attacks and Deflections to frame me. I must expose their mirroring and Blender behavior to prevent my own exile and flip the target."
+            },
+            {
+                "Nam": 10,
+                "reason": "Hoang and Jin are using Mirroring Detection and Coordination Analysis patterns to weaponize my role and frame Cong. I must intervene to prevent the exile of a likely villager and expose their coordination."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Cong used 'process attack' language to deflect from the Seer's ground truth. I must solidify the accusation and ensure the village exiles this confirmed wolf signal immediately."
+            },
+            {
+                "Riley": 2,
+                "reason": "Villagers are currently conflicted. I will remain silent and observe the sequence of accusations to act as the 'Closer' once a majority forms against Cong."
+            },
+            {
+                "Meg": 7,
+                "reason": "Hoang and Jin are aggressively targeting Cong. I must align with the majority now to establish a safe villager baseline and secure Cong's exile."
+            }
+        ]
+    ]
+}

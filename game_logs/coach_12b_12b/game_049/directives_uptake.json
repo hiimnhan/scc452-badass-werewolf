@@ -1,0 +1,106 @@
+{
+  "evaluated_game_id": "049",
+  "directives_source_game_id": "048",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "revealing_investigation_results",
+        "directive_action": "PRESENT_AS_OBJECTIVE_FACTS",
+        "directive_rationale": "present your results as objective facts",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong stated, 'The Seer has confirmed Nhan is clear' and later referred to it as 'objective information'.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong presented the investigation result as a factual confirmation."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "communicating_with_village",
+        "directive_action": "AVOID_CHARACTER_ATTACKS",
+        "directive_rationale": "avoid attacking others' characters",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong accused Jin of using 'wolf tactics' and having 'blatant disregard' for information.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong attacked Jin's behavior and motives rather than avoiding character attacks."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "DEFEND_CLEARED_PLAYER",
+        "directive_rationale": "When the Seer clears someone... defend them regardless of the social noise",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam voted for Jin, who was attacking the cleared player (Nhan), but by Round 2, Nam stated that Cong's defense of Nhan 'raises serious concerns' and he voted to exile Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam eventually turned against the Seer and the cleared player (Nhan) in Round 2, citing 'coordinated defense' as suspicious."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "considering_poison_potion",
+        "directive_action": "WITHHOLD_POISON_UNLESS_CONFLICTING_CLAIM_OR_CONTRADICTION",
+        "directive_rationale": "Never poison a player unless there is a conflicting Seer claim or a logical contradiction",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin did not use the poison potion in Round 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Witch withheld the poison potion."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "considering_save_potion",
+        "directive_action": "SAVE_SEER",
+        "directive_rationale": "Prioritize saving the Seer above all others",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin used the SAVE potion on Nhan instead of the Seer (Cong).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin saved Nhan, not the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "seer_cleared_player",
+        "directive_action": "VOTE_AGAINST_OTHER_THAN_CLEARED_PLAYER",
+        "directive_rationale": "Stop prioritizing 'vibes' over role data. The Seer provided a mechanical clear for the Villager in Round 1; voting against the Seer because their tone felt 'manufactured' is a fatal error.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nhan (Villager) voted for Cong (the Seer) in Round 2.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan voted for the Seer who had previously cleared him."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "hearing_psychological_buzzwords",
+        "directive_action": "IGNORE_BUZZWORDS_FOCUS_ON_LOGICAL_CONTRADICTIONS",
+        "directive_rationale": "Ignore psychological buzzwords like 'suspicious' or 'deflective' and focus only on logical contradictions",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang stated that Nam's observation of 'coordinated defense' and 'mirroring behavior' was 'concerning' and 'required further scrutiny'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang focused on social/behavioral buzzwords ('coordinated defense', 'mirroring') to justify voting for the Seer."
+      }
+    ]
+  }
+}

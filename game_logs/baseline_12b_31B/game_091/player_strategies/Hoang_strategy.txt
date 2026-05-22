@@ -1,0 +1,41 @@
+{
+  "Night Phase": [
+    "Prioritize self-preservation: If targeted, immediate Witch Save is paramount, even if it means sacrificing information.",
+    "Investigate logically consistent players: Focus on players exhibiting clear reasoning and avoiding deflection. Prioritize those actively contributing to the discussion.",
+    "Early Game Investigation: Target players making broad accusations without evidence or those quickly defending others without explanation.",
+    "Late Game Investigation: If suspicion falls on multiple players, investigate the one most likely to reveal wolf alliances or disrupt their plans."
+  ],
+  "Day Discussion": [
+    "Initial Round: Identify mirroring behavior (players consistently defending each other without reasoning). Note who quickly defends whom.",
+    "Seer Claims - Validate: Demand specific evidence for Seer claims. Vague or unsubstantiated claims warrant immediate skepticism. Challenge inconsistencies.",
+    "Accusation Without Reasoning: Press for a logical chain of thought. Redirect focus back to the accuser if reasoning is absent. Don't let them control the narrative.",
+    "Defensive Without Contributing: Suspect collusion. Analyze coordinated defenses and note who is being shielded. Challenge their lack of contribution.",
+    "Power Role Claims: Aggressively question. Demand verifiable evidence and expose inconsistencies. Highlight any convenient timing.",
+    "Rapid Accusations After Questioning: Flag as deflection. Redirect focus back to the accuser.",
+    "Seer Eliminated: Intensify observation of logical consistency and coordinated defenses. Watch for shifts in blame and who benefits. Prioritize identifying new alliances.",
+    "Player Accused: Evaluate the accuser's reasoning and the accused's response. Suspiciously quick defenses without logic are red flags.",
+    "Recognize Mirroring: Challenge claims directly and expose connections. Analyze tone and content. Point out inconsistencies.",
+    "Consistent Blame Redirection: Flag as highly suspect; focus questioning on motives and lack of evidence. Call them out directly.",
+    "If a player frames others as deflecting, suspect they are deflecting themselves; challenge directly.",
+    "Convenient Power Role Claims: Question aggressively; often a desperate sympathy play. Demand proof."
+  ],
+  "Voting Phase": [
+    "Confirmed Wolf: Vote immediately and decisively.",
+    "No Clear Suspect: Vote for the most disruptive player hindering information gathering (deflection, confusion).",
+    "Multiple Suspects: Disrupt wolf plans by exposing alliances. Target those with the strongest mutual defense; break alliances.",
+    "Suspecting a Wolf Without Proof: Strategic vote to reveal alliances, even if risky. Focus on disrupting coordinated defenses.",
+    "Defense Based on Attacking Others: Vote them out – a clear deflection tactic.",
+    "Convenient Power Role Claim: Vote them out – often a desperate sympathy play.",
+    "Consistent Mutual Defense: Vote one out to break the alliance; key indicator.",
+    "Avoid Bandwagoning: Assess reasoning; don't blindly follow.",
+    "Tie Vote Nearing Exile: Analyze defenders to expose alliances; focus on who protects whom. Identify the most critical alliance to disrupt.",
+    "If a vote seems strategically advantageous for the wolves, vote against it."
+  ],
+  "Post-Elimination Analysis": [
+    "Analyze eliminated player’s behavior (defensiveness, evasiveness, aggression, reasoning). Note deception patterns. Did they attempt to control the narrative?",
+    "Assess elimination’s impact: Did it benefit wolves? A wolf elimination shifts the balance. A villager elimination reveals strategy. Who benefits most?",
+    "Adjust strategy based on new information and the evolving balance.",
+    "Note remaining players’ reactions (suspicious behavior, relief, disappointment). Look for subtle shifts in alliances.",
+    "If a player suddenly becomes very agreeable after an elimination, suspect a wolf attempting to gain trust."
+  ]
+}

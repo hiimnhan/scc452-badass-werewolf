@@ -1,0 +1,556 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.95,
+                "reason": "No information available; baseline suspicion. Attempting to flag Jin as a blender, but basing the accusation on behavioral signals ('red flag', 'untrustworthy') rather than mechanical evidence. Identified as a Process Attacker by Nam. Latest statement: Inverted the Process Attack signal to frame Nam; attempting to discredit the coordination around the Seer's ground truth. Primary Wolf signal. Now doubling down on behavioral jargon to avoid providing mechanical evidence."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "No information available; baseline suspicion. Successfully flagged Cong's Process Attack and redirected the focus back to mechanical evidence (Seer's ground truth). Latest statement: Correctly identified Cong's attempt to use process-based attacks as a deflection tactic, further validating Nam's alignment with the Villager strategy."
+            },
+            "Jin": {
+                "score": 0.6,
+                "reason": "No information available; baseline suspicion. Echoing Hoang's Seer claim and requesting roles from others. Acting as a blender; lacking independent analysis."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Claimed Seer; cleared Nhan. Currently providing mechanical evidence to the group. Monitoring for consistency with future night deaths."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No information available; baseline suspicion."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No information available; baseline suspicion."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by Hoang (Seer claim). Treated as innocent based on Seer priority strategy."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Not cleared by Seer claim. Attacking Jin's process and tone rather than addressing factual evidence; using behavioral jargon to deflect. Latest statement doubles down on 'Process Attack' accusations, shifting focus from mechanical evidence to behavioral critique, a high-probability wolf signal."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Not cleared by Seer claim. Mirrors Hoang's lead and pushes for roles. Currently acting as a coordinator, but provides no unique mechanical insight."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Claimed Seer. First claimant. Cleared Nhan. Prioritizing first Seer as per strategy."
+            },
+            "Riley": {
+                "score": 0.6,
+                "reason": "Not cleared by Seer claim. Potential wolf target."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "Not cleared by Seer claim. Potential wolf target."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by Hoang's Seer claim."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Attacked the efficiency of the debate and framed the acceptance of Seer results as a 'red flag'. Now framing the request for mechanical evidence as a 'Process Attack' and claiming coordination is a sign of wolf behavior. This is consistent Narrative Framing and a direct attack on the village's coordination process."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Identified Cong's Process Attack and defended the Seer's ground truth. Pushing for mechanical evidence over tone-policing, which aligns with villager strategy. Reaffirmed that attacking process and tone is a wolf signal, showing consistent logical alignment."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Claimed Seer. Provided a clear result clearing Nhan. Pushing for efficiency and accountability in the debate."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "No data yet."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data yet."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed innocent via Seer investigation."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Unknown alignment. Attacked Jin for accepting Seer ground truth; labeling the acceptance of confirmed innocence as a 'red flag' is a diversionary tactic to create distrust. Now utilizing 'Process Attack' labels against Nam to deflect from his own opposition to ground truth. Attempting to frame coordination as a wolf conspiracy. Doubling down on attacking the process of others to avoid addressing the ground truth."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Unknown alignment. Correctly identified Cong's attack on Jin as a diversionary tactic and a wolf signal. Supports the use of Seer ground truth. Targeted by Cong's process attack. Consistently exposes Cong's attempts to use behavioral labels as a shield to deflect from the logic of the Seer's claim."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Claims Villager. Accepts Seer ground truth. Pushing for roles/observations from others; mirroring my request for clear reasoning, which may be an attempt to gain legitimacy."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No evidence to increase or decrease suspicion."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment. No evidence to increase or decrease suspicion."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Survived a kill attempt; likely the target of the Guard or Witch. Cleared by Hoang."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No actions recorded. Challenging Jin's acceptance of Hoang's claim. Currently voting Nam based on the nature of the argument."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "No actions recorded. Now accusing Cong based on the nature of Cong's argument. Accused by Cong. Latest statement relies on 'wolf signals' rather than mechanical game actions."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Claimed Villager. Validated Hoang's claim and is coordinating role declarations."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "Claimed Seer; cleared Nhan. High-value target for elimination."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Survived the night. Cleared by Hoang. Low threat."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Baseline threat. Attacking Jin for accepting the Seer's claim. Now the primary target of Nam. Latest statement focuses on 'Process Attacks' and tone rather than mechanical evidence, making him easy to frame as a wolf."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Baseline threat. Aligning with Seer's claim and attacking Cong's lack of mechanical evidence. Successfully framing Cong using mechanical justifications."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Claimed Villager. Accepting Hoang's claim. Attempting to lead and force role claims."
+            },
+            "Hoang": {
+                "score": 0.7,
+                "reason": "Claimed Seer. Cleared Nhan. High threat if genuine; potential target if fake."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Teammate."
+            }
+        }
+    },
+    "3": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.95,
+                "reason": "No information available; baseline suspicion. Attempting to flag Jin as a blender, but basing the accusation on behavioral signals ('red flag', 'untrustworthy') rather than mechanical evidence. Identified as a Process Attacker by Nam. Latest statement: Inverted the Process Attack signal to frame Nam; attempting to discredit the coordination around the Seer's ground truth. Primary Wolf signal. Now doubling down on behavioral jargon to avoid providing mechanical evidence."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Validated by identifying Process Attacks. No night events contradict this. Latest: Directly flagged Riley's attempt to deflect from Hoang's result as a Process Attack, showing alignment with mechanical analysis and the Seer's ground truth."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Still acting as a blender; no new evidence to change score. Latest: Identified Riley's 'Power Role Attack' and rejected the redirection to Nam. This shift toward mechanical analysis and defense of the Seer significantly reduces suspicion."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Survival is consistent with my protection; still providing ground truth. Latest statement: Provided a mechanical identification of Riley as a wolf, consistent with Seer role behavior."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Baseline suspicion; no night action impacts this player. Now identified as a werewolf by the Seer (Hoang). Moves to priority rank 1 for voting. Latest: Executed a Power Role Attack by using the lack of night deaths to discredit Hoang's Seer claim. Attempted Redirection by shifting focus to Nam's silence. Latest statement: Executed a Process Attack by framing the collective agreement on the Seer's result as 'forced coordination' and attempting to use timing/behavioral signals to frame Nam."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Baseline suspicion; no night action impacts this player."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by the prioritized Seer claim. Latest statement identifies Riley's deflection and attempt to target Nam's silence, reinforcing the focus on the Seer's evidence."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Not cleared by Seer claim. Attacking Jin's process and tone rather than addressing factual evidence; using behavioral jargon to deflect. Exiled."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Continuing to mirror and coordinate without providing unique mechanical analysis. Latest statement supports the Seer and flags Riley's deflection, but uses behavioral jargon ('Power Role Attack') and echoes the demand for an immediate vote."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "First Seer claimant; results are currently accepted. Provided a direct result on Riley."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "No new information from zero-death night; now identified as a werewolf by the prioritized Seer claim. Employs deflection by attacking the 'consistency' of night outcomes and targets Nam's silence to shift focus from the Seer's result. Latest statement attempts to frame the majority as a coordinated wolf pack based on timing, a high-probability wolf signal used to evade a Seer's direct accusation."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "No new information from zero-death night; remains a potential wolf target."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.05,
+                "reason": "Cleared by Hoang's Seer claim. Latest statement correctly identifies Riley's Power Role Attack and diversion tactics. Actively supports the Seer's results and village coordination."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Attacked the efficiency of the debate and framed the acceptance of Seer results as a 'red flag'. Now framing the request for mechanical evidence as a 'Process Attack' and claiming coordination is a sign of wolf behavior. This is consistent Narrative Framing and a direct attack on the village's coordination process."
+            },
+            "Nam": {
+                "score": 0.05,
+                "reason": "Consistently identifies wolf signals and supports coordination efficiency. Latest statement correctly identifies Riley's deflection and supports the Seer's result, further lowering suspicion."
+            },
+            "Hoang": {
+                "score": 0.1,
+                "reason": "Claimed Seer and cleared Nhan. Now identifies Riley as a werewolf. Providing direct, mechanical results and driving efficiency. No evidence to contradict the claim yet."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Identified as werewolf by Hoang's Seer investigation. Performed Power Role Attack by questioning night kills to discredit Hoang. Now exhibiting high-confidence Wolf Signals by framing the village's coordination as 'forcing a vote', which is a direct Process Attack on the efficiency of the debate. Attempting to paint consensus as a conspiracy to avoid exile."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data yet. Remained passive during the night."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "CONFIRMED innocent via Seer investigation. Ground truth. Latest statement correctly identifies Riley's diversion and deflection toward Nam as a wolf signal, providing additive logical support for the Seer."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Already exiled. Removed from active tracking."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Consistently identifies wolf diversion tactics and supports ground truth. No evidence to increase suspicion; currently targeted by Riley's diversion. Latest statement correctly labels Riley's process attack as a deflection due to lack of factual defense."
+            },
+            "Jin": {
+                "score": 0.3,
+                "reason": "Accepts ground truth. Initially exhibited mirroring, but latest statement provides additive analysis by correctly labeling Riley's diversion as a Power Role Attack. This demonstrates alignment with villager logic."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "CONFIRMED werewolf via Seer investigation. Now utilizing contradiction analysis and diversionary tactics by questioning night outcomes to discredit the Seer and attacking Nam to deflect suspicion. Latest statement is a blatant process attack, labeling the village's coordination as 'forcing a vote' to deflect from the confirmed result."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Passive. No additive analysis or binary commitments provided. Remains a suspect."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.2,
+                "reason": "Cleared by Hoang. Low threat and useful as a shield/distraction. Latest statement reinforces the Seer's claim and aligns with the majority, further reducing immediate threat to pack."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Baseline threat. Attacking Jin for accepting the Seer's claim. Latest statement focuses on 'Process Attacks' and tone rather than mechanical evidence, making him easy to frame as a wolf."
+            },
+            "Nam": {
+                "score": 0.7,
+                "reason": "Using mechanical justifications to lead the village. Increasing threat due to effective framing of others. Latest statement reinforces the majority and labels Riley's defense as a 'process attack', effectively sealing Riley's fate."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Pushing for role claims. Moderate threat if they coordinate with Hoang. Latest statement reinforces the Seer's claim and pushes for Riley's exile, positioning himself as a facilitator."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Claimed Seer and survived a targeted kill. High threat; likely protected by Guard or saved by Witch. Now actively targeting Riley with a definitive claim."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Teammate. Currently the target of Hoang's Seer claim. Must be distanced to ensure my own survival. Latest statement attempts to deflect to Nam, which now looks like desperate manipulation given the overwhelming majority. Now attacking the timing of the vote, confirming their status as the primary target."
+            }
+        }
+    },
+    "4": {
+        "Nhan": {
+            "Cong": {
+                "score": 1.0,
+                "reason": "Already exiled. Identified as a Process Attacker."
+            },
+            "Nam": {
+                "score": 0.9,
+                "reason": "Previously low suspicion. Now flagged for a Process Attack; labels the use of technical analysis and coordination as 'mirroring jargon' and a 'coordinated attempt' to exile a villager. This is a primary wolf signal used to redirect suspicion away from Meg. Latest behavior shows strong coordination with Meg's narrative."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Maintains low suspicion for identifying Riley's Power Role Attack and defending the Seer's ground truth. Correctly identifies the loss of the Seer as a strategic wolf move and applies the Silence Penalty to Meg. Latest statement correctly flags Nam's Process Attack and identifies the mirroring between Nam and Meg."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Confirmed as Seer; killed by wolves to remove ground truth. Highly valid."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Already exiled! Identified as wolf by the now-confirmed Seer."
+            },
+            "Meg": {
+                "score": 0.9,
+                "reason": "Baseline suspicion increased. Subject to Silence Penalty; persistent passivity and failure to provide mechanical evidence is a wolf signal. Latest statement is a Process Attack; labels technical analysis and assertive coordination as 'manipulation', a primary wolf signal."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.7,
+                "reason": "Cleared by the prioritized Seer (Hoang) before their death. However, now exhibiting heavy mirroring behavior by echoing Jin's specific jargon ('textbook Process Attack') to push for Meg's exile without adding unique mechanical analysis. Latest statement is a direct Deflection Attack against Nam, prioritizing narrative over evidence. This coordinated behavior with Jin strongly suggests wolf alignment despite prior clearance."
+            },
+            "Cong": {
+                "score": 0.95,
+                "reason": "Exiled."
+            },
+            "Jin": {
+                "score": 0.95,
+                "reason": "Still mirroring and using behavioral jargon. Now aggressively pushing for Meg's exile using behavioral labels ('passive alignment') rather than mechanical analysis. Latest statement uses 'Process Attack' to deflect from factual critique and attempts to group Nam with Meg without evidence. This is a high-probability wolf signal."
+            },
+            "Hoang": {
+                "score": 0.0,
+                "reason": "Eliminated. Confirmed as the prioritized Seer target."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Exiled."
+            },
+            "Meg": {
+                "score": 0.4,
+                "reason": "Previously passive, but now correctly calling out Jin's lack of mechanical evidence. Her defense is logically sound and aligns with the strategy of prioritizing factual contradictions over behavioral jargon."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.6,
+                "reason": "Low threat. Was cleared by Hoang. However, now actively supporting Jin's push to exile me and using 'Process Attack' terminology to invalidate my defense. Now framed by Nam as mirroring Jin to deflect. Latest statement reinforces the 'forcing a kill' narrative by targeting both me and Nam in a sequence."
+            },
+            "Cong": {
+                "score": 0.9,
+                "reason": "Baseline threat. Attacking Jin for accepting the Seer's claim. Latest statement focuses on 'Process Attacks' and tone rather than mechanical evidence, making him easy to frame as a wolf. Exiled."
+            },
+            "Nam": {
+                "score": 0.8,
+                "reason": "Highly dangerous. Uses mechanical justifications and leads the village. Most likely to spot my patterns if I deviate from the majority. Currently defending me by attacking Jin/Nhan's lack of mechanical evidence."
+            },
+            "Jin": {
+                "score": 0.9,
+                "reason": "Moderate threat. Pushes for role claims and facilitates votes. Now aggressively targeting me with non-mechanical justifications ('passive alignment'), which I can frame as forcing a kill to manipulate the village. Now targeted by Nam. Latest statement doubles down on narrative labels and groups me with Nam, making him the primary target for 'forcing a kill'."
+            },
+            "Hoang": {
+                "score": 1.0,
+                "reason": "Claimed Seer and survived a targeted kill. High threat; likely protected by Guard or saved by Witch. Now actively targeting Riley with a definitive claim. Deceased."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Teammate. Currently the target of Hoang's Seer claim. Must be distanced to ensure my own survival. Latest statement attempts to deflect to Nam, which now looks like desperate manipulation given the overwhelming majority. Exiled."
+            }
+        }
+    }
+}

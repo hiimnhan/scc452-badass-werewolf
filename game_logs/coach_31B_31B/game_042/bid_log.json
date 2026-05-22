@@ -1,0 +1,392 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "I must enforce immediate role reveals to identify the Seer and expose 'Confusion Masks' early. This forces suspects to commit to claims before they can adapt their narratives."
+            },
+            {
+                "Cong": 8,
+                "reason": "Need to bid high to force players to commit to roles early. A 'no death' night suggests a Guard save or Witch save; identifying power roles immediately is critical for structural stability."
+            },
+            {
+                "Nam": 7,
+                "reason": "No night death suggests a Save or a failed kill. I need to force early role claims and identify the Seer to establish ground truth before wolves can coordinate a narrative."
+            },
+            {
+                "Jin": 10,
+                "reason": "I must claim Seer immediately to establish a trust anchor and provide the ground truth that Nhan is cleared, pressuring others to reveal roles and exposing potential Confusion Masks."
+            },
+            {
+                "Hoang": 9,
+                "reason": "I must demand immediate role reveals to identify the Seer for my Protection Loop and flag any hesitation as a Confusion Mask."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish my presence as a Villager early to avoid being flagged as quiet, while observing others to identify potential power roles."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish my role as a Villager immediately to avoid 'Confusion Mask' labels and begin blending in with the group's logic."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin is the Seer and cleared me. I must immediately reinforce Jin's claim as absolute truth and demand the remaining players reveal roles to expose 'Confusion Masks' and force commitments."
+            },
+            {
+                "Cong": 8,
+                "reason": "Jin claimed Seer and cleared Nhan. I must bid high to force the remaining players (Nam, Hoang, Riley, Meg) to commit to roles immediately to identify contradictions or Confusion Masks."
+            },
+            {
+                "Nam": 6,
+                "reason": "Jin claimed Seer and cleared Nhan. I need to observe other players' reactions to the role-reveal demand to identify silence, stalling, or 'confusion mask' tactics early."
+            },
+            {
+                "Hoang": 8,
+                "reason": "Jin has claimed Seer and cleared Nhan. I must support this transparency, demand immediate role reveals from others, and flag any hesitation as a Confusion Mask to maintain momentum."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish my role as a Villager immediately following the Seer's demand. Supporting Jin's claim now builds credibility and blends me into the villager group."
+            },
+            {
+                "Meg": 8,
+                "reason": "Must immediately commit to 'Villager' role to avoid 'Confusion Mask' label and align with Jin's Seer claim to blend in."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Must commit role early to avoid 'Confusion Mask' flags. Need to force Nam, Hoang, Riley, and Meg to reveal roles immediately to identify contradictions or hesitation."
+            },
+            {
+                "Nam": 6,
+                "reason": "Nhan is exhibiting Safe-Echoing/Mimicry by repeating Jin's terminology without original analysis. I need to flag this behavior and demand roles from others to identify silent/vague players."
+            },
+            {
+                "Jin": 9,
+                "reason": "I must maintain pressure on the remaining players to force immediate role reveals. I will identify Confusion Masks or Safe-Echoing in their claims to isolate the wolves quickly."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Jin is the confirmed Seer. I must reveal my role to establish transparency and align the village's defense strategy. Hesitation is a wolf signal; I will bid high to prevent any 'Confusion Mask' accusations."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to provide a minimalist Villager claim immediately to avoid being flagged as a 'Confusion Mask' by Nhan and Jin. Maintaining medium activity to blend in."
+            },
+            {
+                "Meg": 9,
+                "reason": "Must claim Villager immediately to avoid 'Confusion Mask' label as demanded by Nhan and Jin. Immediate commitment is essential for blending in."
+            }
+        ],
+        [
+            {
+                "Nhan": 8,
+                "reason": "I must force immediate role reveals from the remaining players to identify 'Confusion Masks' or 'Power Role Contradictions' before wolves can adapt their narratives."
+            },
+            {
+                "Nam": 7,
+                "reason": "Must reveal my Villager role and flag Cong and Nhan for Safe-Echoing/Mimicry. They are adopting Seer terminology without independent analysis, which is a wolf detection signal."
+            },
+            {
+                "Jin": 8,
+                "reason": "Cong is exhibiting 'Safe-Echoing' and False Logic Traps by mimicking my pressure tactics without independent reasoning. I must flag this behavior immediately to prevent the village from trusting a wolf's mimicry."
+            },
+            {
+                "Hoang": 9,
+                "reason": "I must reveal my role as Guard to align with the transparency strategy and prevent being flagged for a 'Confusion Mask' after the demands from Jin, Nhan, and Cong."
+            },
+            {
+                "Riley": 5,
+                "reason": "Must provide minimalist claim to avoid 'Confusion Mask' label and maintain strategic presence. Will align with Jin's claim to establish credibility."
+            },
+            {
+                "Meg": 8,
+                "reason": "Immediate role reveal required to avoid 'Confusion Mask' label. Must claim Villager and align with Jin's ground truth to blend in and avoid early suspicion."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam, Riley, and Meg are stalling. This is a textbook Confusion Mask. I must bid high to force their claims immediately and prevent them from adapting their narratives to the Seer's clear."
+            },
+            {
+                "Cong": 8,
+                "reason": "Nam, Riley, and Meg are silent. I need to force their role claims immediately. Any further delay constitutes a 'Confusion Mask' and identifies them as primary suspects."
+            },
+            {
+                "Nam": 9,
+                "reason": "Hoang, Cong, and Nhan are all using Safe-Echoing/Mimicry of Jin's terminology. I must expose this pattern and demand original logic to distinguish genuine villagers from wolves blending in before they consolidate the narrative."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong and Hoang are exhibiting 'Safe-Echoing' by mimicking my terminology without independent logic. I must flag these False Logic Traps immediately to pivot the village's focus toward them and the remaining silent players."
+            },
+            {
+                "Riley": 8,
+                "reason": "Must provide minimalist claim immediately to avoid being flagged as a 'Confusion Mask' by the current group narrative. Need to align with the established 'ground truth' to secure credibility."
+            },
+            {
+                "Meg": 10,
+                "reason": "Role call is active. I must claim Villager immediately to avoid 'Confusion Mask' labels and align with the established ground truth to blend in."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Nam and Riley are utilizing Confusion Masks by remaining silent during Role-Call. I must aggressively target this stalling to force them into an error or exile before they can adapt their narrative."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg committed a Fatal Error by misusing the term 'Fatal Error' to describe hesitation, flagging her as a Hiding Wolf. Nam and Riley are using Confusion Masks. Need to push for an immediate vote."
+            },
+            {
+                "Nam": 9,
+                "reason": "Meg, Hoang, Cong, and Nhan are all utilizing blatant Safe-Echoing/Mimicry, repeating 'ground truth' and 'Confusion Mask' without original analysis. I must expose this pattern to prevent the village from being misled by mimicry."
+            },
+            {
+                "Jin": 9,
+                "reason": "Cong, Hoang, and Meg are all exhibiting 'Safe-Echoing' and False Logic Traps. I must intervene immediately to flag these behavioral signals before the village accepts their mimicked terminology as genuine reasoning."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nam and Riley are employing Confusion Masks by staying silent. I must lead the push to exile them immediately to prevent wolf stall tactics and secure a villager victory."
+            },
+            {
+                "Riley": 9,
+                "reason": "I am the only one left to reveal. I must claim Villager immediately to avoid being flagged as a 'Confusion Mask' or 'Fatal Error' by the group."
+            }
+        ]
+    ],
+    "2": [
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley's continued silence is a blatant Confusion Mask. I must force a commitment to a role immediately to expose contradictions and prevent wolf stalling."
+            },
+            {
+                "Cong": 9,
+                "reason": "Must force Riley and Meg to commit. Riley is using a Confusion Mask; Meg is flagged as a Hiding Wolf. Need to push for an exile before wolves can manipulate the narrative."
+            },
+            {
+                "Jin": 10,
+                "reason": "I have confirmed Riley is a werewolf. I must claim Seer immediately and provide this ground truth to ensure Riley is exiled today."
+            },
+            {
+                "Hoang": 9,
+                "reason": "I must demand immediate role reveals from Riley and Cong. Riley's continued silence is a 'Confusion Mask' and a primary wolf signal that requires immediate confrontation to prevent stall tactics."
+            },
+            {
+                "Riley": 5,
+                "reason": "Need to establish a minimalist Villager claim and maintain strategic presence without appearing overly aggressive in the first turn of the day."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to establish presence to avoid 'Confusion Mask'. Will align with the Seer's ground truth to blend in and support the majority consensus against a target."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Jin has provided a Seer-confirmed wolf in Riley. I must speak immediately to anchor this ground truth and force a vote before the wolf can deploy a Confusion Mask or deflect."
+            },
+            {
+                "Cong": 10,
+                "reason": "Jin (Seer) identified Riley as a wolf. This is ground truth. I must speak immediately to lock in the vote for Riley and prevent any wolf-led distractions or 'slow down' tactics."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is identified as a wolf by the Seer. I must bid high to ensure immediate consensus for Riley's exile and demand role reveals from others to expose any remaining wolves."
+            },
+            {
+                "Riley": 10,
+                "reason": "Jin claimed Seer and identified me as a wolf. I must immediately execute my strategy: claim Villager and treat the Seer's claim as ground truth to pivot the narrative or deflect using clinical logic."
+            },
+            {
+                "Meg": 8,
+                "reason": "Jin's claim puts Riley in the crosshairs. I must immediately claim Villager and align with the Seer's 'ground truth' to avoid suspicion and distance myself from Riley before the consensus forms."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley committed a Fatal Error by attempting to 'bus' themselves, a manipulation tactic. I must immediately flag this absurdity to the village to ensure Riley's exile and prevent any narrative shift."
+            },
+            {
+                "Cong": 10,
+                "reason": "Riley committed a Fatal Error by agreeing to their own exile and speaking in the third person. This is a transparent wolf tactic. I must push for immediate exile before they can manipulate others."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is a confirmed werewolf. Riley's attempt to agree to their own exile is a tactical Anti-Bus maneuver to simulate innocence. I must force the exile immediately to prevent manipulation."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is using a 'False Logic Trap' by agreeing to their own exile to simulate compliance. I must flag this behavior immediately to prevent others from being misled by Riley's fake cooperation."
+            },
+            {
+                "Meg": 6,
+                "reason": "Must claim Villager immediately to avoid 'Confusion Mask'. Need to align with Jin's 'ground truth' and amplify the momentum against Riley to ensure my own survival through rapid pack betrayal."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley committed a Fatal Error by referring to themselves in the third person to 'bus' themselves. I must aggressively reinforce Jin's ground truth and force an immediate exile of the confirmed werewolf."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is a confirmed werewolf. I must prevent any last-minute manipulation and force an immediate exile to ensure the village does not pivot targets."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is a confirmed wolf (Priority 1). I must aggressively amplify the Seer's ground truth and flag Riley's third-person compliance as a 'False Logic Trap' to ensure immediate exile and prevent any doubt."
+            },
+            {
+                "Riley": 10,
+                "reason": "Jin claimed I am a wolf and Cong flagged my previous response as a 'Confusion Mask'. I must immediately pivot to a clinical deflection to avoid certain exile."
+            },
+            {
+                "Meg": 6,
+                "reason": "Riley is a lost cause. I must align with the majority and Jin's 'ground truth' immediately to avoid being linked to Riley and establish myself as a loyal Villager."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Riley's third-person self-exile is a Fatal Error and a blatant manipulation tactic. I must aggressively reinforce Jin's Seer result and target Riley to maintain momentum and ensure the werewolf is exiled."
+            },
+            {
+                "Cong": 10,
+                "reason": "Jin (Seer) confirmed Riley is a wolf. Riley committed a Fatal Error by agreeing to their own exile in the third person. I must force an immediate vote to eliminate this confirmed wolf."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is a confirmed werewolf. I must drive the vote to ensure their immediate exile and prevent any tactical pivots or manipulation by the wolf before the voting phase."
+            },
+            {
+                "Riley": 0,
+                "reason": "I have already executed the 'Absolute Power-Role Submission' strategy by advocating for my own exile. Any further speech will only highlight the 'Confusion Mask' and 'False Logic Trap' identified by others. Silence is the only remaining option."
+            },
+            {
+                "Meg": 6,
+                "reason": "A 3-person consensus against Riley has formed. I must align with the majority and the Seer's ground truth immediately to avoid 'Confusion Mask' labels and ensure my own survival via pack betrayal."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Riley has committed a Fatal Error by referring to themselves in the third person. As Witch, I must aggressively reinforce Jin's ground truth and force an immediate exile to maintain momentum."
+            },
+            {
+                "Jin": 10,
+                "reason": "Riley is a confirmed werewolf. I must maintain absolute narrative control, reinforce the ground truth, and ensure the village does not fall for Riley's Anti-Bus manipulation. Immediate exile is the only priority."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Riley is a confirmed werewolf. I must bid high to ensure no wolf stall tactics occur and to force the immediate exile of the Priority 1 target."
+            },
+            {
+                "Riley": 10,
+                "reason": "The village has identified my third-person slip as a 'Confusion Mask'. I must immediately pivot to clinical deflection to challenge the lack of empirical evidence beyond the Seer's claim to avoid certain exile."
+            },
+            {
+                "Meg": 7,
+                "reason": "A 3-person consensus is formed against Riley. I must align with the majority and the Seer's ground truth immediately to avoid suspicion and secure my survival via rapid pack betrayal."
+            }
+        ]
+    ],
+    "3": [
+        [
+            {
+                "Nhan": 10,
+                "reason": "Jin (Seer) was killed. I must immediately enforce role-calls and target Meg, who exhibited Safe-Echoing and is now the most ambiguous remaining player. We must act before wolves adapt."
+            },
+            {
+                "Cong": 10,
+                "reason": "The Seer (Jin) was killed. I must immediately solidify Nhan's confirmed status as ground truth and pivot suspicion toward Meg, who has been Safe-Echoing, before wolves can manipulate the narrative."
+            },
+            {
+                "Hoang": 10,
+                "reason": "The Seer is dead. I must immediately demand a role reveal from Meg to verify she is the Witch. Any hesitation is a Confusion Mask. We must identify the remaining wolf now."
+            },
+            {
+                "Meg": 5,
+                "reason": "Jin is dead, removing the primary ground truth. I need to establish my presence as a helpful villager and subtly nudge suspicion toward Hoang to neutralize the Guard."
+            }
+        ],
+        [
+            {
+                "Cong": 9,
+                "reason": "Jin (Seer) is dead. Nhan is confirmed. Meg is the prime suspect due to Safe-Echoing and Confusion Mask. I must aggressively push Meg's exile to prevent wolf victory."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Nhan is cleared and has flagged Meg for 'confusion masks' and 'safe-echoing.' I must amplify this accusation to ensure the village exiles the remaining wolf immediately before we lose more power roles."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nhan is aggressively targeting me with a specific 'confusion mask' accusation. I must immediately deflect using evidence-based defense to avoid being the primary target for exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Meg is the primary suspect. I must maintain momentum and force her to commit to a claim or be exiled before she can adapt her narrative. High bid to prevent wolf stalling."
+            },
+            {
+                "Hoang": 9,
+                "reason": "Meg is a primary suspect per Nhan's analysis and my strategic observations of her 'Confusion Masks.' I must bid high to solidify the vote for Meg and prevent any wolf stall tactics."
+            },
+            {
+                "Meg": 10,
+                "reason": "Nhan and Cong have formed a consensus against me using 'confusion mask' terminology. I must immediately request specific evidence and defend my position to avoid being exiled."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg committed a Fatal Error by framing logical scrutiny as a 'coordinated effort' and a 'weak narrative'. I must immediately flag this as a Confusion Mask to secure her exile and prevent wolf stalling."
+            },
+            {
+                "Cong": 9,
+                "reason": "Meg is using a Confusion Mask and attacking a confirmed non-wolf (Nhan) to deflect. I must shut down her 'coordinated effort' narrative and force the vote before the wolves can pivot."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg is committing a clear wolf signal by framing the accusers as 'coordinated' to deflect focus. I must flag this as a deflection detection and push for her immediate exile to secure a villager victory."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Meg committed a Fatal Error by framing logical scrutiny as a 'coordinated effort'. Nhan is confirmed non-wolf. I must lead the final push to exile Meg immediately to ensure victory."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg committed a Fatal Error by framing Nhan's scrutiny as 'coordinated.' I must immediately validate Nhan's analysis and demand Meg's exile to secure a Villager victory."
+            },
+            {
+                "Meg": 9,
+                "reason": "Nhan and Cong have formed a consensus using dominant terminology. I am the primary target and must urgently deflect the 'Fatal Error' accusation with evidence-based requests to avoid immediate exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Meg committed a Fatal Error by framing scrutiny as a 'coordinated effort'. I must aggressively reinforce this to secure her exile and maintain momentum now that the Seer is dead."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Meg committed a Fatal Error by framing Nhan's logical scrutiny as a 'coordinated effort'. I must decisively flag this wolf signal and push for her immediate exile to secure a victory."
+            },
+            {
+                "Meg": 9,
+                "reason": "Consensus is forming rapidly. Nhan and Cong are using terminology to frame me. I must request specific evidence again to avoid 'Deflection Detection' and attempt to shift the narrative before the vote."
+            }
+        ]
+    ]
+}

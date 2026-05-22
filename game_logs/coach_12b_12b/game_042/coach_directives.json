@@ -1,0 +1,102 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "have_investigated_villager",
+        "action": "STATE_HARD_CLEAR",
+        "rationale_short": "Instead of suggesting 'observation,' you must state 'Nhan is 100% Villager; anyone attacking him is a Wolf.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "village_treating_clear_as_opinion",
+        "action": "ASSERT_ABSOLUTE_TRUTH",
+        "rationale_short": "Hard clears are the only absolute truth in this game; do not let the village treat them as 'opinions.'",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive AND confirmed_wolves_count == 0",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Until the Seer is dead or a confirmed wolf is found, they are your primary target for protection.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_witch",
+        "action": "LEAD_VILLAGE",
+        "rationale_short": "Never attack the Seer for clearing you; instead, use that clear to lead the village.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_witch",
+        "action": "DEFEND_SEER",
+        "rationale_short": "Never attack the Seer for clearing you",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_player AND player_is_attacked",
+        "action": "ACCUSE_ATTACKER",
+        "rationale_short": "When a Seer clears a player, any person attacking that cleared player is a primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_clears_witch",
+        "action": "SHIFT_FOCUS_TO_WITCH_ATTACKERS",
+        "rationale_short": "In Round 1, the moment the Seer cleared the Witch, the focus should have shifted to those attacking the Witch.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_hard_data",
+        "action": "PRIORITIZE_DATA_OVER_ADJECTIVES",
+        "rationale_short": "You prioritized adjectives like 'erratic' and 'suspicious' over the Seer's hard data.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 13,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "Ignoring the Hard Clear: The village exiled the Seer despite a clear result",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The Witch and Guard failed to coordinate to protect the Seer",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Falling for Cross-fire: The village split into warring factions",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Validation Error: The village treated the Seer's claim as something that 'required validation'",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "Protecting the Witch in Round 1 left the Seer vulnerable",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

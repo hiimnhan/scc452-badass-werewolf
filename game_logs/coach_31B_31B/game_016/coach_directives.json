@@ -1,0 +1,86 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num >= 1",
+        "action": "REVEAL_INVESTIGATION",
+        "rationale_short": "Continue providing factual clears to create a 'safe zone' for the village.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_alive == True",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Your absolute priority is the Seer; do not deviate until they are eliminated.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "save_potion_remaining == True AND seer_is_alive == True",
+        "action": "SAVE_SEER",
+        "rationale_short": "prioritize the Seer for the save potion",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "NIGHT",
+        "trigger": "player_contradicts_seer_data == True",
+        "action": "POISON_PLAYER",
+        "rationale_short": "only use poison on those who directly contradict Seer data.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "debate_topic == 'mirroring' OR debate_topic == 'rhetorical styles'",
+        "action": "CHALLENGE_TOPIC",
+        "rationale_short": "Stop analyzing 'mirroring' or 'rhetorical styles.' Behavioral meta-gaming is a distraction",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "seer_data_available == True",
+        "action": "ENDORSE_SEER_DATA",
+        "rationale_short": "trust the Seer's data as absolute truth.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_cleared_player == True",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "Anyone attacking a cleared player is a primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player_claims_confused_or_processing == True",
+        "action": "ACCUSE_PLAYER",
+        "rationale_short": "When a player claims to be 'confused' or 'processing' to avoid taking a stand... flag them as high-probability suspects.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "Your early claim and consistent data were the engine of victory.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

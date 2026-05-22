@@ -1,0 +1,98 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "village doubts Seer based on 'mirroring'",
+        "action": "DOUBLE_DOWN_ON_MECHANICAL_CLEAR",
+        "rationale_short": "when the village began to doubt you based on 'mirroring,' you should have doubled down on the mechanical fact of the clear",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "village doubts Seer based on 'mirroring'",
+        "action": "FORCE_CHOICE_VISION_VS_FEELING",
+        "rationale_short": "Force the village to choose between the Seer's vision and a villager's 'feeling.'",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protecting the Seer every single night is the only way to ensure the village retains its objective information.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "player was saved by Witch",
+        "action": "DO_NOT_ACCUSE_WOLF",
+        "rationale_short": "Claiming a saved player is a wolf because they were targeted is illogical",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "no conflicting role claim from Seer",
+        "action": "DO_NOT_ATTACK_SEER",
+        "rationale_short": "Never attack the Seer unless you have a conflicting role claim.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "player has been cleared by Seer",
+        "action": "DO_NOT_VOTE_AGAINST",
+        "rationale_short": "Never vote against a cleared player based on 'suspicious behavior' or 'mirroring.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "Seer and cleared player agree",
+        "action": "TREAT_AS_FACT",
+        "rationale_short": "When the Seer and a cleared player agree, they are not 'coordinating'\u2014they are stating a fact.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "psychological noise like 'too convenient'",
+        "action": "IGNORE_AND_DEMAND_MECHANICAL_CONTRADICTIONS",
+        "rationale_short": "Ignore psychological noise like 'too convenient'; demand mechanical contradictions.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "player suggests a Seer-cleared person is suspicious",
+        "action": "ACCUSE_PLAYER_AS_WOLF",
+        "rationale_short": "If a player suggests a Seer-cleared person is suspicious, that player is likely a Wolf attempting a frame.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "Wolves began echoing 'coordination' theory",
+        "action": "USE_HIGH_BID_TO_PIVOT_TO_CLEARS",
+        "rationale_short": "When the Wolves (Riley/Meg) began echoing Nam's 'coordination' theory, a high bid should have been used to pivot the conversation back to the Seer's confirmed clears.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 10,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=11 but emitted+dropped=10"
+  }
+}

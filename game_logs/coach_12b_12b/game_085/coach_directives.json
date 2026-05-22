@@ -1,0 +1,105 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "revealing_investigation_results",
+        "action": "PRESENT_NEUTRALLY",
+        "rationale_short": "Present your clears neutrally",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "targeting_silent_players_without_evidence",
+        "action": "WITHHOLD_ACCUSATION",
+        "rationale_short": "By aggressively targeting 'silent' players without evidence, you gave the Wolves a behavioral hook",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "leading_the_hunt",
+        "action": "AVOID_VIBE_BASED_LEADERSHIP",
+        "rationale_short": "don't lead the hunt with 'vibes,' as it invites gaslighting",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "VOTE",
+        "trigger": "seer_revealed_clear_on_self",
+        "action": "VOTE_AGAINST_OTHER",
+        "rationale_short": "The Guard voted for the Seer who cleared them. This provided the 'social proof' the Wolves needed",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "seer_revealed_clear_on_self",
+        "action": "ENDORSE_SEER",
+        "rationale_short": "Once a Seer reveals a clear on you, you are the only person who can objectively vouch for their authenticity",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "NIGHT",
+        "trigger": "seer_revealed_self",
+        "action": "PROTECT_SEER",
+        "rationale_short": "Protect the Seer exclusively once they reveal",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "VOTE",
+        "trigger": "seer_providing_clears",
+        "action": "VOTE_AGAINST_OTHER",
+        "rationale_short": "Never vote against a Seer who is providing clears, regardless of their tone",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "seer_providing_clears",
+        "action": "AVOID_BEHAVIORAL_ANALYSIS",
+        "rationale_short": "By questioning the Seer's targeting and voting to exile them, you neutralized your own power",
+        "confidence": 0.9
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "ACCUSE_ATTACKERS_OF_SEER_OR_CLEARED",
+        "rationale_short": "When a Seer provides a clear, anyone attacking that Seer or the cleared player becomes the primary suspect",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "request_for_role_proof",
+        "action": "IGNORE_REQUEST",
+        "rationale_short": "Ignore requests for 'proof' of the role; the role's output is the only proof needed",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "seer_provides_clear",
+        "action": "PRIORITIZE_INFORMATION_OVER_TONE",
+        "rationale_short": "You prioritized 'how' the Seer spoke (defensiveness, aggression) over 'what' the Seer knew",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 11,
+    "dropped": []
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "evaluated_game_id": "054",
+  "directives_source_game_id": "053",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Your early role-claim... [was] perfect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam stated, 'I am the Seer,' during the Day 1 debate.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam revealed his role as Seer in Round 1 as directed."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_deflecting",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "immediate identification of Riley's deflection were perfect.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam accused Riley of using a classic deflection tactic by labeling the push for role clarity as 'aggression.'",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam identified Riley's deflection in Round 2 and accused them."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_NHAN",
+        "directive_rationale": "Your protection of Nhan (Night 1)... was strategically sound",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nhan during Night 1.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Jin protected Nhan in Round 1 as directed."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 2",
+        "directive_action": "PROTECT_JIN",
+        "directive_rationale": "Your protection of... Jin (Night 2) was strategically sound",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Jin chose to protect Nam during Night 2.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin protected Nam instead of himself (Jin) as the directive specified."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "REVEAL_ROLE",
+        "directive_rationale": "Witch's decision to claim their role immediately in Round 1 is a high-risk strategy",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Hoang did not reveal the Witch role in Round 1; he only supported the Seer's result.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang did not reveal his role in Round 1."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_has_confirmed_player_not_wolf",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never use the poison potion on a player the Seer has already cleared.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang used the SAVE potion on Nam and did not use the poison potion on Nhan or Hoang (both cleared by the Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Hoang did not poison any player cleared by the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "role_call_in_progress",
+        "directive_action": "MONITOR_SIGNALS",
+        "directive_rationale": "Your vigilance during the role-call was excellent.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan called for immediate role claims and monitored Meg's reaction to the Seer's clearing of Nhan.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nhan actively managed and monitored the role call in Round 1."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_frames_other_for_delay",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "correctly identified 'wolf signals'\u2014specifically Riley's attempt to frame Cong for a delay",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong accused Riley of attacking Nhan to distract from his own guilt after Riley accused Cong of mirroring.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong identified Riley's behavior as a deflection and accused him."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_is_silent",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "correctly identified 'wolf signals'\u2014specifically... Meg's silence.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No player was silent enough to trigger an accusation based on silence in this game; Meg spoke immediately in Round 1."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolves_label_efficiency_as_hijacking_or_aggression",
+        "directive_action": "IGNORE_ACCUSATION",
+        "directive_rationale": "By ignoring the wolves' attempts to label your efficiency as 'hijacking' or 'aggression,' you avoided common gaslighting traps.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan did not ignore Riley's accusation of 'sudden aggression'; instead, he voted for Riley and cited the accusation as a textbook wolf signal.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan did not ignore the accusation; he actively used it as a basis for accusing Riley."
+      }
+    ]
+  }
+}

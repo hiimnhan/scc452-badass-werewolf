@@ -1,0 +1,89 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "others questioned this or accused you of 'manufacturing' a narrative",
+        "action": "DOUBLE_DOWN_ON_OBJECTIVE_TRUTH",
+        "rationale_short": "When others questioned this or accused you of 'manufacturing' a narrative, you should have doubled down on the fact that your role provides objective truth, not a 'feeling.'",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Guard protected the Witch instead of the Seer",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "supporting the Seer",
+        "action": "EXPLAIN_WHY_DATA_IS_PRIORITY",
+        "rationale_short": "avoid 'mirroring' phrases. Instead, explain why the Seer's data is the priority.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "player is already targeted by Wolves",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "The Witch used a poison potion on a player already targeted by Wolves, effectively helping the Wolves eliminate a villager.",
+        "confidence": 0.8
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "VOTE",
+        "trigger": "Seer provides you with a clear",
+        "action": "VOTE_NOT_AGAINST_SEER",
+        "rationale_short": "Never cast doubt on a Seer who provides you with a clear; doing so helps the Wolves create chaos.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "Seer is alive",
+        "action": "SAVE_SEER",
+        "rationale_short": "prioritize saving the Seer with your healing potion to preserve the village's source of truth.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "VOTE",
+        "trigger": "Seer provides objective data on a player",
+        "action": "PRIORITIZE_DATA_OVER_BEHAVIORAL_SUSPICIONS",
+        "rationale_short": "The village voted to exile the Guard (a power role) based on behavioral suspicions while ignoring the objective data provided by the Seer.",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "Seer clears someone",
+        "action": "ACCUSE_ATTACKERS_OF_CLEARED_OR_SEER",
+        "rationale_short": "When the Seer clears someone, anyone attacking that cleared player or the Seer is a primary suspect.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "VOTE",
+        "trigger": "Seer confirmation exists",
+        "action": "IGNORE_VIBES",
+        "rationale_short": "Do not let 'vibes' override a Seer's confirmation.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 9,
+    "emitted": 9,
+    "dropped": []
+  }
+}

@@ -1,0 +1,18 @@
+Night Phase:
+- Death Logging: Log all deaths and role claims to identify contradictions.
+- Activity Tracking: Monitor nights with zero deaths to track Guard/Witch efficiency.
+- Potion Management (If Witch): Save the Save potion for confirmed power roles. Use Poison only on players mechanically proven as wolves.
+
+Day Discussion:
+- Seer Priority: Accept a single Seer's results as mechanical truth. Any attack on a Seer-cleared player is a primary wolf signal.
+- Conflicting Claims: IF multiple players claim Seer, THEN prioritize the one who provided results first or whose results align with the death sequence.
+- Mirroring Detection: Monitor for players echoing logic without adding analysis. IF a player mirrors a verified Seer, treat it as coordination; IF they mirror a non-power role or the crowd, treat it as a wolf signal.
+- Silence Policy: Treat silence as neutral until a power role asks a direct question. Failure to respond to a Seer's direct query is a wolf signal.
+- Role Disclosure (If Witch): Do NOT reveal role on Day 1.
+- Coordination: Support the Seer's findings but provide independent supporting evidence to avoid being flagged as a 'mirror'.
+- Narrative Control: Flag players who attempt to 'organize' the debate or force binary answers as potential wolves. HOWEVER, distinguish between 'narrative control' and 'logical coordination based on Seer data' to avoid attacking fellow villagers.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who contradict the Seer or create mechanical contradictions.
+- Protective Voting: Vote for anyone attempting to exile a Seer-cleared individual.
+- Narrative Targeting: IF no mechanical contradiction exists, vote for the player most consistently using behavioral jargon or attempting to force consensus/binary takes to deflect from facts, provided they are not the Seer or a Seer-cleared player.

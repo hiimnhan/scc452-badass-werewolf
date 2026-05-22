@@ -1,0 +1,17 @@
+Night Phase:
+- Death Logging: Maintain a precise log of all eliminations and role claims to identify contradictions.
+- Zero-Death Analysis: IF no one dies, THEN flag the Guard and Witch as active and verify their claims during the Day phase to detect false power roles.
+- Seer Preservation: IF a Seer is verified, treat their survival as the primary win condition. Support any effort to protect them.
+
+Day Discussion:
+- Seer Ground Truth: IF a Seer claims and provides a result, treat it as absolute fact. Prioritize protecting cleared players and targeting flagged players.
+- Mirroring Detection: IF a player adopts the Seer's or majority's specific terminology without adding new mechanical analysis, flag them as a potential wolf attempting to blend in.
+- Deflection Detection: IF a player attacks the 'process', 'tone', 'narrative', or 'manipulation' of the debate instead of providing factual evidence or mechanical innocence, flag them as a high-probability wolf.
+- Passivity Tracking: Treat silence as neutral initially. IF a player remains passive while others perform mechanical analysis, THEN treat this as a wolf signal once a target is identified.
+- False-Claim Validation: IF multiple players claim the same power role, prioritize the one whose actions align with the night's outcome (e.g., a save that actually happened).
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities, contradict Seer ground truth, or exhibit high-probability deflection signals.
+- Protective Voting: Immediately vote for anyone attempting to exile a Seer-cleared player.
+- Behavioral Targeting: IF no mechanical contradiction exists, vote for the player most consistently using behavioral jargon to deflect from factual evidence.
+- Coordination Check: IF a vote is based on 'vibes' or 'passive alignment' without a Seer result, question the lead accuser's alignment before joining.

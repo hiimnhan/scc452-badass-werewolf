@@ -1,0 +1,28 @@
+{
+  "Night Phase": [
+    "Guard Protection: Prioritize confirmed Seers/Guards. If parity approaches, protect the player exhibiting the most consistent, logical reasoning, *avoiding* deflection. If no confirmed roles, protect the player least likely to be a wolf based on previous day discussions. If a player consistently protects another, suspect both; prioritize protecting the initiator.",
+    "Witch Investigation: ALWAYS investigate BEFORE saving. IF a confirmed Seer/Guard is targeted, investigate the *most aggressive* defender. IF mirroring is suspected, investigate IMMEDIATELY. IF parity is approaching, investigate suspected wolves defending deflectors. Prioritize investigating players who suddenly become vocal defenders or exhibit coordinated deflection. If Save is available and a potential wolf is defending a deflector, investigate the deflector first.",
+    "Witch Save: ABSTAIN unless a confirmed Seer/Guard is targeted AND I have the Save. NEVER save a player aggressively defending deflectors. IF mirroring is strongly suspected AND parity is approaching, SAVE IMMEDIATELY. Save a Seer ONLY if they are actively being defended by a suspected wolf, and I have confirmed their Seer status through prior investigation.",
+    "Poison Usage: Prioritize poisoning suspected wolves actively disrupting village reasoning or consistently defending deflectors/mirrorers. IF parity is near, prioritize eliminating the most likely wolf controller. Consider poisoning players unusually silent then suddenly aggressive defenders. WHEN parity is imminent and a player controls the vote, prioritize them. If a player demonstrably lies about their investigation results, prioritize them."
+  ],
+  "Day Discussion": [
+    "Mirroring Detection: Immediately identify mirroring. Publicly call out mirroring, focusing on the leader's justification. Directly question the leader's reasoning. Prioritize exposing the *protected* mirrorer. IF a player defends a mirrored accusation, they are HIGHLY suspect.",
+    "Deflection Analysis: Aggressively question the *reason* behind deflection. Demand concrete justifications. Highlight inconsistencies. Note who they deflect to and why. Publicly call out consistent deflectors. Ask 'Why are you bringing that up now?' when a player deflects.  If a player deflects and then immediately defends another, suspect both.",
+    "Silence Assessment: Probe silent players cautiously, avoiding aggressive targeting without evidence. Be wary of sudden vocalization siding with deflectors. Silent players supporting deflectors are suspect. Track which players remain silent during accusations involving suspected wolves.",
+    "Early Game: Establish baselines. Note alliances. Observe voting patterns. Focus on identifying deflectors and mirrorers. Question claims of certainty early on.",
+    "Mid-Game: Highlight inconsistencies. Challenge illogical arguments. Target actively deflecting and defending deflectors. Publicly state reasoning with examples. Be wary of players who shift blame rapidly.",
+    "Late-Game (Parity Approaching): Eliminate the player most likely to protect a wolf or control the vote. Prioritize mirrorers and those consistently defending deflectors. Disrupt wolf coordination. Prioritize players who consistently defend others without providing substantial reasoning."
+  ],
+  "Voting Phase": [
+    "Mirroring: Vote on mirrorers, prioritizing the one protected. IF parity approaches, eliminate the most likely wolf.",
+    "Deflection: Vote on consistently deflecting players, especially linked to mirroring.",
+    "Parity Prevention: IF parity approaches, vote for the player most likely to protect a wolf or control the vote.",
+    "Role-Based Voting: IF a Seer’s claims are consistently disproven, re-evaluate alignment and vote accordingly. Be cautious of Seers who change their stories frequently.",
+    "Unanimous Votes: IF a unanimous vote occurs without clear justification, vote for the most suspected wolf. If a unanimous vote targets a player who has been consistently logical, reconsider."
+  ],
+  "Post-Vote Analysis": [
+    "Assess impact of exile on wolf alliances. Reassess targets if a suspected wolf was exiled. IF a villager was exiled, focus on identifying responsible wolves. Immediately analyze voting patterns surrounding the exile.",
+    "Monitor player reactions. Look for relief or disappointment indicating involvement.",
+    "Analyze voting patterns immediately following an exile. Shifts in alliances are highly suspect. Pay close attention to who defends the exiled player - they are likely complicit.  Note if players who previously aligned are now silent or actively opposing each other."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "evaluated_game_id": "017",
+  "directives_source_game_id": "016",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "village_questions_validity",
+        "directive_action": "EMPHASIZE_SEER_CLAIM_AS_ONLY_MECHANICAL_TRUTH",
+        "directive_rationale": "When the village questions you, emphasize that the Seer's claim is the only mechanical source of truth.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin claimed Nhan was Not Wolf. When Cong and Nhan demanded mechanical reasoning for his claims and questioned his validity, Jin did not explain the Seer's mechanical role; instead, he accused Cong of obstructing the investigation and diverting attention.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin failed to emphasize the Seer's role as the source of truth, instead engaging in a debate about Cong's behavior."
+      },
+      {
+        "directive_id": "SEER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "conversation_shifts_to_behavior_or_defensiveness",
+        "directive_action": "REFOCUS_CONVERSATION_ON_RESULTS",
+        "directive_rationale": "Do not let the conversation shift to your 'behavior' or 'defensiveness'\u2014keep the focus on the result.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "When the conversation shifted to Jin's 'coordinated attack' and 'deflection tactics', Jin responded by criticizing Cong's 'insistence on mechanical reasoning' and 'suspicious actions' rather than refocusing on the result that Nhan was confirmed Not Wolf.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Jin shifted the conversation to the behavior of others rather than maintaining focus on the Seer results."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_is_alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Your sole priority is the Seer. Protecting anyone else while the Seer is alive is a critical failure.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang chose to protect Nhan (the Witch) in Round 1, despite Jin (the Seer) being alive.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Hoang protected the Witch instead of the Seer."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "save_potion_available",
+        "directive_action": "SAVE_SEER_OR_TRUSTED_CORE",
+        "directive_rationale": "Your Save potion is for the Seer or the Trusted Core.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the SAVE potion on Cong.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan used the potion on Cong, who was not the Seer and was not part of a trusted core (in fact, Nhan was actively attacking the Seer in the debate)."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "player_defended_by_seer_or_part_of_core",
+        "directive_action": "WITHHOLD_POISON_POTION",
+        "directive_rationale": "never use your Poison potion on a player who is being defended by the Seer or is part of the potential core.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan used the POISON potion on Jin (the Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nhan poisoned the Seer, which is the opposite of withholding the potion from the core/Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_makes_claim",
+        "directive_action": "STOP_DEMANDING_MECHANICAL_PROOF",
+        "directive_rationale": "Stop demanding 'mechanical proof' from the Seer.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong demanded 'mechanical reasoning' and asked 'How does this mechanically make me a wolf?' after Jin's claim.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong explicitly demanded mechanical proof from the Seer."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_clears_player",
+        "directive_action": "DEFEND_SEER_AND_FORM_TRUSTED_CORE",
+        "directive_rationale": "When a Seer clears you, your primary duty is to defend them and form a 'Trusted Core.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer cleared Nhan (Witch) and Nam (Villager). Nam did not interact during the Round 1 debate to defend the Seer, and the clear for Nam happened in Night 2, before the game ended in Night 2."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "seer_validity_questioned_on_vibes_or_lack_of_proof",
+        "directive_action": "REJECT_SKEPTICISM_LOGIC",
+        "directive_rationale": "Questioning the Seer's validity based on 'vibes' or a lack of proof is a wolf tactic.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nam voted for Jin, stating that 'Jin's claim of Nhan being 'confirmed' is demonstrably false' and that his reasoning was 'weak'.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam joined the skepticism against the Seer rather than rejecting it."
+      }
+    ]
+  }
+}

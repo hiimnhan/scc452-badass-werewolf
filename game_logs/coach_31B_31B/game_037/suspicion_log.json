@@ -1,0 +1,476 @@
+{
+    "1": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            }
+        },
+        "Riley": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Meg": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Jin": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment and role."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Fellow Werewolf. Ally and coordination partner."
+            }
+        }
+    },
+    "2": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.5,
+                "reason": "No behavioral data yet. Unknown alignment."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Villager. Actively enforcing role-call reveals and treating Seer results as ground truth. Correctly flagged Riley's attempt to frame transparency as aggression as a Confusion Mask. Consistently aligning with optimal villager strategy."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Claimed Seer. Confirmed Nhan as not a werewolf. Actively demanding immediate role reveals to identify contradictions, aligning with village strategy. Latest statement reinforces the identification of Riley's Confusion Mask and maintains pressure for role reveals."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No behavioral data yet. Unknown alignment."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Committed a Fatal Error by framing requests for transparency and role-call enforcement as 'aggressive' and 'forcing a narrative.' Utilizing a Confusion Mask to stall the investigation. Now double-flagged by both the Seer and Nam."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No behavioral data yet. Unknown alignment."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Cleared by Jin (Seer). Now treated as a trust anchor. Correctly identifies Riley's use of a Confusion Mask and supports the call for role transparency."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Exhibiting 'Safe-Echoing' by blindly accepting Jin's result as ground truth without independent analysis. Pressuring others to claim roles quickly and attempting to isolate Riley by grouping others with them."
+            },
+            "Jin": {
+                "score": 0.4,
+                "reason": "Claimed Seer; cleared Nhan. Now actively identifying Riley's behavior as a 'Confusion Mask' and pushing for role transparency. Alignment with Nam is noted, but the focus on identifying wolf signals is consistent with villager interests."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No night action evidence to change status. Has not yet claimed role."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Frames Nam's request for role claims as 'aggression' and attempts to slow down the exile process, signaling a 'Confusion Mask'. This behavior has now been flagged by Nam, Jin, and the trust anchor Nhan."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No night action evidence to change status. Has not yet claimed role."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Cleared by Jin (Seer). Currently treated as a trust anchor. Echoing the identification of Riley's Confusion Mask, reinforcing the villager consensus."
+            },
+            "Cong": {
+                "score": 0.6,
+                "reason": "No night deaths provide no specific evidence to clear or implicate. Failing to claim role despite repeated demands from the Seer, Nam, and Nhan."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Cleared Nhan. Actively pushing for role transparency and correctly flagged Riley's Confusion Mask, aligning with villager-side strategy."
+            },
+            "Hoang": {
+                "score": 0.6,
+                "reason": "No night deaths provide no specific evidence to clear or implicate. Failing to claim role despite repeated demands from the Seer, Nam, and Nhan."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Claimed Villager but immediately used a Confusion Mask. Framed the demand for transparency as 'aggressive' and 'forcing a narrative' to deflect from the role call. Now corroborated by the Seer and Nhan as using a Confusion Mask. High suspicion."
+            },
+            "Meg": {
+                "score": 0.6,
+                "reason": "No night deaths provide no specific evidence to clear or implicate. Failing to claim role despite repeated demands from the Seer, Nam, and Nhan."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed not a werewolf via Seer investigation. Actively supporting the trust anchor by identifying Riley's Confusion Mask and pushing for role claims."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no behavioral data available. Has not yet claimed role."
+            },
+            "Nam": {
+                "score": 0.4,
+                "reason": "Claimed Villager. Echoed Seer's demand for role claims and accepted Nhan's clear. Correctly identified Riley's use of a Confusion Mask and is proactively pushing for role claims to expose contradictions."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no behavioral data available. Has not yet claimed role."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Unknown alignment. Exhibiting 'Confusion Mask' behaviors: framing transparency as 'aggression' and accusing the village of 'forcing a narrative'. Now flagged as a 'Fatal Error' by both the Seer and a confirmed innocent (Nhan)."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "Unknown alignment; no behavioral data available. Has not yet claimed role."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by Jin (Seer claim). Currently a trust anchor pending verification of Jin's role. Actively enforcing the transparency strategy by flagging Riley's deflection as a Fatal Error and Confusion Mask."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No data available. Awaiting role reveal."
+            },
+            "Nam": {
+                "score": 0.3,
+                "reason": "Claimed Villager. Echoed Jin's demand for role reveals and accepted the Seer's result as ground truth. Actively flagging Riley's deflection and emotional appeals as wolf signals, aligning with the anti-paralysis strategy."
+            },
+            "Jin": {
+                "score": 0.2,
+                "reason": "Claimed Seer. Provided result: Nhan is not a wolf. Proactively demanded role reveals to identify contradictions, aligning with high-transparency villager strategy. Latest statement reinforces the identification of Riley's deflection as a Confusion Mask."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No data available. Flagged as primary suspect for framing Nam's transparency demands as 'aggressive' and attempting to induce village paralysis by cautioning against a 'wrong exile' during the initial role-claim phase. Now further flagged by Jin, Nam, and Nhan for using a Confusion Mask to deflect from role claims."
+            },
+            "Meg": {
+                "score": 0.5,
+                "reason": "No data available. Awaiting role reveal."
+            }
+        },
+        "Meg": {
+            "Nhan": {
+                "score": 0.6,
+                "reason": "Survived the night kill. High probability of being the Guard's target or saved by the Witch. Now cleared by Jin's Seer claim, making them a trust anchor. Latest statement mirrors Nam/Jin's jargon, actively isolating Riley."
+            },
+            "Cong": {
+                "score": 0.5,
+                "reason": "No data yet. Neutral threat."
+            },
+            "Nam": {
+                "score": 0.6,
+                "reason": "Claimed Villager. Using analytical jargon ('ground truth', 'wolf signal') to lead the narrative. Pushing for role claims to establish transparency; currently aggressive toward Riley."
+            },
+            "Jin": {
+                "score": 0.8,
+                "reason": "Claimed Seer. Established Nhan as a trust anchor. High threat if genuine; potential for framing if fake. Now mirroring Nam's 'Confusion Mask' terminology to pressure remaining players."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "No data yet. Neutral threat."
+            },
+            "Riley": {
+                "score": 0.0,
+                "reason": "Packmate. Challenging Nam's aggressive narrative to slow down the voting process. Currently being targeted by Nam, Jin, and Nhan."
+            }
+        }
+    },
+    "end_game": {
+        "Nhan": {
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed innocent by Seer Jin."
+            },
+            "Nam": {
+                "score": 0.1,
+                "reason": "Consistently aligning with optimal villager strategy and enforcing role-calls. LATEST: Correctly identified Meg's deflection as a Confusion Mask and supported the Seer's ground truth to maintain momentum."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Confirmed Seer. Essential information source; survival is a victory for the village. Actively enforcing role-calls and identifying Confusion Masks. Correctly flagged Meg's deflection as a Fatal Error."
+            },
+            "Hoang": {
+                "score": 0.5,
+                "reason": "Previously utilizing a Confusion Mask. LATEST: Claimed Guard. Exhibiting Safe-Echoing by mirroring Jin's terminology ('ground truth', 'Confusion Mask') without providing independent behavioral analysis. Potential Quiet Wolf."
+            },
+            "Riley": {
+                "score": 1.0,
+                "reason": "Exiled. Claimed Villager. Committed a Fatal Error by framing requests for transparency and role-call enforcement as 'aggressive' and 'forcing a narrative.' Utilizing a Confusion Mask to stall the investigation."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Previously utilizing a Confusion Mask. LATEST: Claimed Villager. Committed a Fatal Error by framing requests for transparency/logical scrutiny as a 'wolf play' and attacking Hoang for enforcing the role-call. Attempting to deflect from her own silence by painting the enforcement of ground truth as 'deflecting'. Confirmed as primary target for exile."
+            }
+        },
+        "Cong": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed non-wolf by Jin. Trust anchor. Latest statement correctly identifies Meg's behavior as a Fatal Error and Confusion Mask, aligning with the Seer's ground truth."
+            },
+            "Nam": {
+                "score": 0.5,
+                "reason": "Still flagged for 'Safe-Echoing' and aggressive pressure tactics. Latest statement reinforces Jin's logic against Meg; while correct in target, it lacks independent analysis and continues the pattern of blindly agreeing with power roles to blend in."
+            },
+            "Jin": {
+                "score": 0.0,
+                "reason": "Claimed Seer and cleared Nhan and Cong. Actively identifying Confusion Masks. Treated as ground truth."
+            },
+            "Hoang": {
+                "score": 0.3,
+                "reason": "Initially flagged for Confusion Mask. Now claims Guard, validates Seer Jin, and pressures Meg. Score reduced due to role claim, but still monitored for Safe-Echoing behavior."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Claimed Villager. Frames Nam's request for role claims as 'aggression' and attempts to slow down the exile process, signaling a 'Confusion Mask'. Exiled."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Remains neutral; no role claim provided. Flagged by both Jin and Hoang for utilizing a Confusion Mask. Latest statement uses deflection and emotional appeals ('classic wolf play') to attack Hoang for pressuring her. Frames silence as a strategy for 'ground truth'. Jin has formally flagged her defense as a Fatal Error and a textbook Confusion Mask. Alignment confirmed as wolf."
+            }
+        },
+        "Nam": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed cleared by the Seer. Actively supports the Seer's logic, correctly identifying Meg's Confusion Mask and Fatal Error, pushing for the exile of a high-suspicion target."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Previously suspected for silence, but now confirmed cleared by the Seer's investigation."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Seer claim remains consistent. Actively guiding the village toward transparency and providing clear targets based on role-claim hesitation. Correctly identifying Confusion Masks and Fatal Errors."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Continued silence and failure to claim a role. Refusal to provide transparency was a strong wolf signal; identified as using a Confusion Mask by the Seer. Now claims Guard and supports Seer."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Claimed Villager but immediately used a Confusion Mask. Framed the demand for transparency as 'aggressive' and 'forcing a narrative' to deflect from the role call. Now corroborated by the Seer and Nhan as using a Confusion Mask. High suspicion. Exiled."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Continued silence and failure to claim a role. Refusal to cooperate with the Seer's inquiry is suspicious; identified as using a Confusion Mask. Now employs a Confusion Mask by framing the demand for transparency as 'deflection' and 'wolf play' to avoid exile. Low-value Villager claim made only under pressure. Her attempt to attack the Guard/Seer alignment is a Fatal Error. Now corroborated by Nhan as a Fatal Error."
+            }
+        },
+        "Jin": {
+            "Nhan": {
+                "score": 0.0,
+                "reason": "Confirmed innocent via Seer investigation. Latest statement: Actively reinforces the Seer's analysis by correctly identifying Meg's Fatal Error and Confusion Mask, strengthening the village's logical alignment."
+            },
+            "Cong": {
+                "score": 0.0,
+                "reason": "Confirmed innocent via Seer investigation."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Claimed Villager. Under observation for Safe-Echoing, but currently aiding the village's push for transparency. Latest statement: Correctly identifies Meg's Confusion Mask and Fatal Error, providing independent logical reinforcement of the Seer's position."
+            },
+            "Hoang": {
+                "score": 0.4,
+                "reason": "Maintains suspicion due to initial silence (Confusion Mask). Now claims Guard and echoes Seer's ground truth. This could be a legit claim or a 'Safe-Echoing' tactical move to blend in. Pending verification of role contradiction."
+            },
+            "Riley": {
+                "score": 0.9,
+                "reason": "Unknown alignment. Exhibiting 'Confusion Mask' behaviors: framing transparency as 'aggression' and accusing the village of 'forcing a narrative'. Now flagged as a 'Fatal Error' by both the Seer and a confirmed innocent (Nhan). Exiled."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Maintains high suspicion due to continued silence and failure to claim a role. Lack of activity is a Confusion Mask signal. Now targeted by both Seer and claimed Guard. Latest statement: Claims Villager but uses 'processing' as a shield for silence. Committing a Fatal Error by attacking the trust anchor's logic and framing transparency as a 'wolf play' to deflect suspicion. Now further flagged by confirmed innocent Nhan."
+            }
+        },
+        "Hoang": {
+            "Nhan": {
+                "score": 0.1,
+                "reason": "Cleared by the Seer and actively enforcing the transparency strategy. Latest statement correctly identifies Meg's 'Fatal Error' and 'Confusion Mask,' demonstrating full alignment with the villager victory strategy and reinforcing the Seer's ground truth."
+            },
+            "Cong": {
+                "score": 0.7,
+                "reason": "Still using a Confusion Mask by refusing to reveal a role. The lack of a night kill suggests wolves are playing defensively or targeting the Seer, while Cong remains silent. Now further flagged by Jin's demand for immediate role reveals."
+            },
+            "Nam": {
+                "score": 0.2,
+                "reason": "Maintaining villager alignment by supporting transparency and the Seer's ground truth. Actively identified Meg's 'Confusion Mask' and 'Fatal Error,' aligning with the village victory strategy to prioritize the exile of those attacking the transparency-seekers."
+            },
+            "Jin": {
+                "score": 0.1,
+                "reason": "Confirmed high-value target. The fact that no one died while I protected him suggests the wolves likely targeted him, reinforcing his role as Seer. Actively identifying Confusion Masks and demanding transparency, which aligns with the villager victory strategy. Correctly flagged Meg's 'Fatal Error' in the latest debate."
+            },
+            "Riley": {
+                "score": 0.95,
+                "reason": "No data available. Flagged as primary suspect for framing Nam's transparency demands as 'aggressive' and attempting to induce village paralysis by cautioning against a 'wrong exile' during the initial role-claim phase. Now further flagged by Jin, Nam, and Nhan for using a Confusion Mask to deflect from role claims. Exiled."
+            },
+            "Meg": {
+                "score": 1.0,
+                "reason": "Still using a Confusion Mask by refusing to reveal a role. Lack of transparency while the Seer is under threat is a wolf signal. Now further flagged by Jin's demand for immediate role reveals. Committed a 'Fatal Error' by attacking the Guard (Hoang) and framing transparency demands as 'deflection' and 'wolf play' to shift focus from her own lack of transparency. Jin's latest analysis confirms this as a textbook deflection tactic to avoid scrutiny. Now further corroborated by Nam and Nhan as a textbook Confusion Mask and Fatal Error."
+            }
+        }
+    }
+}

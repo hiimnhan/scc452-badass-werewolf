@@ -1,0 +1,24 @@
+Night Phase:
+- Save Potion: IF the Seer is the target, THEN use the Save potion immediately. IF the target is a generic Villager, prioritize saving the Seer in future rounds.
+- Poison Potion: IF the Seer confirms a player is a Werewolf, THEN use the Poison potion that same night to eliminate the wolf instantly.
+- Resource Management: Do not hoard potions; prioritize the Seer's survival and the elimination of confirmed threats.
+
+Day Discussion:
+- Role Claiming: Claim the Witch role immediately and decisively upon request. Hesitation is an admission of guilt.
+- Seer Support: Treat Seer results as absolute ground truth. Publicly validate findings to anchor the village.
+- Role Contradictions: IF two players claim the same unique power role (e.g., two Witches), THEN identify this as an objective wolf signal. Push for the immediate exile of the liar without waiting for other claims.
+- Wolf Detection: 
+  - IF a player attacks a Seer-cleared player, THEN flag them as a wolf.
+  - IF a player uses vague/emotional language ('confused', 'shocked', 'observing') to avoid a stance, THEN flag them as a wolf.
+  - IF a player remains silent during role calls or uses a 'Confusion Mask' (stalling), THEN aggressively push for their exile.
+- Pressure Tactics: Force suspects to reveal logic first by bidding high for speaking order.
+- Communication: Focus exclusively on factual contradictions and role-claim discrepancies. Ignore rhetorical styles.
+
+Voting Phase:
+- Target Priority: 
+  1. Players confirmed as wolves by the Seer.
+  2. Players involved in a role contradiction (if not cleared by Seer).
+  3. Players using 'Confusion Masks' or remaining silent.
+  4. Players attacking Seer-cleared players.
+- Verification: Ensure the target has not been cleared by the Seer before voting.
+- Pivot Logic: IF a Seer-cleared player is exiled, THEN immediately shift all suspicion to the players who orchestrated that vote.

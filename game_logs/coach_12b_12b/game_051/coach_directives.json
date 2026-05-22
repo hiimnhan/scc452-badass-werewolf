@@ -1,0 +1,66 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a player claims a 'mechanical contradiction' that makes no sense",
+        "action": "EXPLAIN_WHY_NOT_CONTRADICTION",
+        "rationale_short": "if a player claims a 'mechanical contradiction' that makes no sense, explicitly explain WHY it is not a contradiction to the rest of the village",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "VOTE",
+        "trigger": "a power role's confusion dictates the vote",
+        "action": "PRIORITIZE_SEER_INVESTIGATION",
+        "rationale_short": "Do not let a power role's confusion dictate your vote; prioritize the Seer's investigation over a Witch's claim of contradiction",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "a Seer provides a 'clear' for a player you saved",
+        "action": "DO_NOT_DISCREDIT_CLEAR",
+        "rationale_short": "Never use a 'save' to discredit a 'clear'",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "a player claims a Seer's clear is 'impossible' due to other night actions",
+        "action": "CHALLENGE_PLAYER",
+        "rationale_short": "Question any player who claims a Seer's clear is 'impossible' due to other night actions",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 8,
+    "emitted": 4,
+    "dropped": [
+      {
+        "advice_verbatim": "The Witch falsely claimed that saving a player contradicted the Seer's confirmation of that player's innocence.",
+        "reason": "other"
+      },
+      {
+        "advice_verbatim": "The village accepted the Witch's flawed logic as proof of the Seer's deception rather than questioning the Witch's understanding of the rules.",
+        "reason": "other"
+      },
+      {
+        "advice_verbatim": "Once the Witch created the seed of doubt, the Werewolves immediately piled on the Seer, and the Villagers followed the momentum without critical analysis.",
+        "reason": "other"
+      },
+      {
+        "advice_verbatim": "The Witch and Seer should have been the strongest alliance; instead, the Witch's erroneous claim turned them into enemies.",
+        "reason": "subjective_only"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "evaluated_game_id": "072",
+  "directives_source_game_id": "071",
+  "scenario": "coach_12b_12b",
+  "by_role": {
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Seer provides a clear on the Guard",
+        "directive_action": "DEFEND_SEER_CREDIBILITY",
+        "directive_rationale": "Guard, once cleared, your primary responsibility was to defend the Seer's credibility, not question their 'method.'",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Jin) never investigated or provided a clear for the Guard (Hoang)."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "the Witch and Guard must coordinate to ensure the Seer is the most protected and trusted asset.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Hoang (Guard) chose to protect Jin (Seer) during the night of Round 2.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The Guard protected the Seer while the Seer was alive."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Player is claiming Seer and has provided clears",
+        "directive_action": "WITHHOLD_POISON",
+        "directive_rationale": "Never poison a claiming Seer, especially one who has already provided clears.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) used the POISON potion on Nam, who had been cleared by the claiming Seer (Jin).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "The directive was to not poison the claiming Seer. Nhan poisoned Nam, not the Seer (Jin). Therefore, the specific restriction of the directive was followed."
+      },
+      {
+        "directive_id": "WITCH-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "Seer is alive",
+        "directive_action": "COORDINATE_PROTECTION_WITH_GUARD",
+        "directive_rationale": "the Witch and Guard must coordinate to ensure the Seer is the most protected and trusted asset.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Nhan (Witch) used the SAVE potion on themselves, while Hoang (Guard) protected Nhan. No coordination to protect the Seer occurred.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Witch used the save potion on themselves instead of coordinating protection for the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer data is available",
+        "directive_action": "VOTE_BASED_ON_SEER_DATA",
+        "directive_rationale": "Villagers, you lost this game because you prioritized 'behavioral vibes' over hard data.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam (Villager) voted for Cong, citing Cong's behavior/deflection rather than the Seer's clear of Nhan.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Nam voted based on Cong's behavior ('classic deflection tactic') rather than using the Seer's data to narrow down targets."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Two players use nearly identical vague language to frame others",
+        "directive_action": "ACCUSE_PLAYERS_OF_MIRRORING",
+        "directive_rationale": "Failure to recognize Wolf mirroring: Riley and Meg used nearly identical vague language... which should have been a signal of their partnership.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Riley and Meg both used vague concerns about Cong's skepticism ('feels forced', 'unsettling'). Nam accused Cong of mirroring Nhan, but did not accuse Riley and Meg of mirroring each other.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Villager (Nam) failed to identify the mirroring behavior between the two wolves (Riley and Meg)."
+      },
+      {
+        "directive_id": "VILLAGER-003",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "Players use vague terms like 'unsettling' and 'erratic' to target a player",
+        "directive_action": "IDENTIFY_AS_MIRRORING",
+        "directive_rationale": "When the Wolves used vague terms like 'unsettling' and 'erratic' to target Nam, they were mirroring each other to create a false consensus.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Meg used the term 'unsettling' to target Cong. Nam did not identify this as mirroring.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Villager failed to identify the use of vague language as a mirroring tactic."
+      },
+      {
+        "directive_id": "VILLAGER-004",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "A player attacks a Seer or a player cleared by the Seer",
+        "directive_action": "ACCUSE_PLAYER",
+        "directive_rationale": "When a Seer provides a clear, any player attacking that clear or the Seer is an immediate primary suspect.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Cong attacked the Seer (Jin) by demanding proof and dismissing the claim. Nam accused Cong of being suspicious for undermining the Seer.",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Nam correctly accused Cong for attacking the Seer's claim."
+      },
+      {
+        "directive_id": "VILLAGER-005",
+        "directive_phase": "VOTE",
+        "directive_trigger": "Seer results are available",
+        "directive_action": "FOLLOW_MECHANICAL_TRUTH",
+        "directive_rationale": "Ignore the 'tone' of the debate and follow the mechanical truth of the Seer's results.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "VOTE",
+        "actual_player_behavior": "Nam voted for Cong based on Cong's 'deflection tactic' (tone/behavior) rather than using the Seer's clear of Nhan to mechanically narrow the pool.",
+        "verdict": "IGNORED",
+        "verdict_notes": "The Villager's vote was based on behavioral analysis of 'deflection' rather than the mechanical truth of the Seer's results."
+      }
+    ]
+  }
+}

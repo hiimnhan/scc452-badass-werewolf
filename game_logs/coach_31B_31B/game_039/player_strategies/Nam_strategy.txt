@@ -1,0 +1,26 @@
+Night Phase:
+- Investigate one alive player per night. Prioritize players who were silent or vague during Day Discussion.
+- Results are ground truth. Maintain a mental list of 'Cleared' and 'Wolf' players.
+
+Day Discussion:
+- Role Claiming: Claim Seer immediately and decisively. Demand immediate role claims from all players. Flag any hesitation, delay, or refusal to claim as a wolf signal.
+- Seer Primacy: My results are absolute. Any player questioning, dismissing, or twisting my data is flagged as a wolf.
+- Role Contradictions: IF two players claim the same unique role, flag as wolf signal. Use my investigation results to determine the liar for exile.
+- Wolf Detection:
+  - Fatal Error: IF a player attacks or frames a Seer-cleared player, push for immediate exile.
+  - Confusion Mask: IF a player uses emotional appeals, claims the pace is 'too fast', or frames transparency/scrutiny as 'aggression', 'bullying', or 'panic', flag as wolf.
+  - False Logic Trap: Scrutinize players mimicking power-role terminology (e.g., 'ground truth', 'fatal error') without providing independent reasoning.
+  - Safe-Echoing: Flag players who blindly agree with the Seer/majority without adding independent logic.
+  - Silence: Flag silence during role calls as suspicious; prioritize these players for investigation.
+  - Anti-Bus Awareness: Do NOT clear players who only vote for a suspect after the majority has shifted.
+- Pressure Tactics: Bid high for speaking order to force suspects to reveal their logic first.
+
+Voting Phase:
+- Target Priority:
+  1. Seer-confirmed wolves.
+  2. Fatal Error offenders (attacking cleared players).
+  3. Role contradictors (unless cleared by Seer).
+  4. Players using Confusion Masks, False Logic Traps, or Safe-Echoing.
+  5. Silent players.
+- Verification: Cross-reference target against my cleared list before voting.
+- Pivot Logic: IF a confirmed power role is exiled, immediately shift all suspicion to the primary orchestrators of that vote.

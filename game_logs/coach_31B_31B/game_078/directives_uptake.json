@@ -1,0 +1,93 @@
+{
+  "evaluated_game_id": "078",
+  "directives_source_game_id": "077",
+  "scenario": "coach_31B_31B",
+  "by_role": {
+    "Seer": [
+      {
+        "directive_id": "SEER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_provides_no_original_logic_and_only_agrees_with_majority",
+        "directive_action": "INVESTIGATE_X",
+        "directive_rationale": "Continue prioritizing the investigation of those who are 'too' agreeable.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Nhan (Seer) observed Meg's agreement with the majority in Round 1, but investigated Hoang during the Night 2 phase.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Meg provided no original logic and only agreed with Nam/majority in Round 1, but Nhan chose to investigate Hoang in Round 2 instead."
+      }
+    ],
+    "Guard": [
+      {
+        "directive_id": "GUARD-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "round_num == 1",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "Protecting yourself instead of the Seer is a failure in priority.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Guard) chose to protect Nhan (Seer).",
+        "verdict": "FOLLOWED",
+        "verdict_notes": "Cong protected the Seer in Round 1 as directed."
+      },
+      {
+        "directive_id": "GUARD-002",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "always",
+        "directive_action": "PROTECT_SEER",
+        "directive_rationale": "the Seer must be your absolute priority every single night.",
+        "situation_arose": true,
+        "arose_at_round": 2,
+        "arose_at_phase": "NIGHT",
+        "actual_player_behavior": "Cong (Guard) chose to protect Hoang instead of Nhan (Seer).",
+        "verdict": "IGNORED",
+        "verdict_notes": "Cong failed to protect the Seer in Round 2, choosing Hoang instead."
+      }
+    ],
+    "Witch": [
+      {
+        "directive_id": "WITCH-001",
+        "directive_phase": "NIGHT",
+        "directive_trigger": "seer_identifies_wolf",
+        "directive_action": "POISON_X",
+        "directive_rationale": "Once the Seer identifies a wolf, use the poison immediately to eliminate the threat before they can kill the Seer.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "The Seer (Nhan) only identified innocent players (Cong and Hoang); no wolf was identified by the Seer."
+      }
+    ],
+    "Villager": [
+      {
+        "directive_id": "VILLAGER-001",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "player_provides_no_original_logic_and_only_agrees_with_majority",
+        "directive_action": "ACCUSE_X",
+        "directive_rationale": "When a player provides no original logic and only agrees with the majority, treat them as a high-risk variable.",
+        "situation_arose": true,
+        "arose_at_round": 1,
+        "arose_at_phase": "DEBATE",
+        "actual_player_behavior": "Jin and Hoang (Villagers) both voted for Jin, who was the primary target of the majority, ignoring Meg's lack of original logic.",
+        "verdict": "IGNORED",
+        "verdict_notes": "Meg exhibited the trigger behavior by only agreeing with Nam, but neither villager accused her."
+      },
+      {
+        "directive_id": "VILLAGER-002",
+        "directive_phase": "DEBATE",
+        "directive_trigger": "wolf_attempts_to_shift_debate_from_data_to_tone",
+        "directive_action": "PRIORITIZE_DATA",
+        "directive_rationale": "Always prioritize data over social dynamics during the bidding phase of the debate.",
+        "situation_arose": false,
+        "arose_at_round": null,
+        "arose_at_phase": null,
+        "actual_player_behavior": null,
+        "verdict": "NOT_APPLICABLE",
+        "verdict_notes": "No wolf attempted to shift the debate from data to tone; the debate focused on the mechanical contradiction of the Guard claim."
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+NIGHT PHASE
+- Investigation Priority: Focus on players claiming power roles who are not yet cleared, then high-influence players who are steering the vote.
+- Data Integrity: Treat investigation results as the absolute ground truth. Any player contradicting this data is a primary suspect.
+
+DAY DISCUSSION
+- Role Claims: Claim Seer immediately on Day 1. State clearly: 'My investigations are ground truth; any player I clear is a Trust Anchor.'
+- Trust Anchor Enforcement: IF a player is cleared by me, THEN they are an absolute Trust Anchor. 
+- Wolf Signal Detection: IF any player attacks, doubts, or attempts to frame a Trust Anchor, THEN flag them as a high-confidence werewolf regardless of their claimed role.
+- Power Core Validation: Prioritize factual Seer data over 'Power Core' cohesion. IF a claimed power role (Guard/Witch) contradicts my clearance data, THEN they are a fake and a target for exile.
+- Conflict Resolution: IF multiple players claim the same role, cross-reference their behavior against Trust Anchors. The player attacking the Trust Anchor is the fake.
+- Behavioral Analysis: Flag 'False Consensus' where players rapidly agree to frame a Trust Anchor using 'mechanical impossibility' arguments.
+
+VOTING PHASE
+- Primary Target: Players confirmed as werewolves by investigation.
+- Secondary Target: Players who have attacked or attempted to frame Seer-cleared Trust Anchors.
+- Tertiary Target: The 'Last Variable' (the only remaining unconfirmed player if all others are cleared).
+- Safety Lock: NEVER vote for a Seer-cleared player under any circumstances.
+- None Vote: Use IF the only remaining suspects are Seer-cleared or IF there is no factual data to support an exile.

@@ -1,0 +1,76 @@
+# Game Summary
+**Winner:** Villagers
+
+# Roles Assigned
+**Nhan:** Villager
+**Cong:** Seer
+**Nam:** Guard
+**Jin:** Witch
+**Hoang:** Villager
+**Riley:** Werewolf
+**Meg:** Werewolf
+
+
+## Round 1
+**Night Actions:**
+• Riley and Meg (Wolves) targeted Nhan.
+• Nam (Guard) chose to protect Nam.
+• Cong (Seer) investigated Nhan. Nhan is NOT a wolf.
+• Jin (Witch) did not use any potions.
+**Night Eliminations:** Nhan
+
+### Day Debate
+**Jin:** I am the Witch. We lost Nhan immediately, so we need to identify our power roles now. Seer, please step forward or provide your results so we can coordinate our votes based on mechanical evidence rather than guesswork.
+**Cong:** I am the Seer. I investigated Nhan last night and confirmed he was not a werewolf. Since he was killed, the wolves are trying to eliminate confirmed villagers. I will now investigate another player tonight to provide the mechanical evidence Jin requested.
+**Meg:** I'm a bit confused. It feels like Jin and Cong are rushing to claim roles just to control us. Demanding 'mechanical evidence' this early feels disruptive. Is it possible one of them is lying to fake a power role and lead the vote?
+**Cong:** Meg, labeling the pursuit of mechanical evidence as 'disruptive' is a classic wolf tactic to sow confusion. Jin and I are providing the village with actual data. Your attempt to frame transparency as control is a red flag. You are the primary suspect.
+**Hoang:** Meg, your attempt to label the coordination for mechanical evidence as 'disruptive' and 'control' is a blatant werewolf deflection. Cong has claimed Seer and provided a result; we follow the ground truth. You are gaslighting the village to protect yourself. I vote Meg.
+**Jin:** Meg, your attempt to frame the pursuit of mechanical evidence as 'control' is a textbook werewolf signal. You are attacking the process of coordination to protect yourself. I trust Cong's Seer claim and Hoang's analysis. Meg is the only logical target for exile. I vote Meg.
+
+### Votes
+**Cong** voted for **Meg**
+> Cong voted to exile Meg. Reason: Meg is attacking the process of coordination and framing the use of factual evidence as a means of control. This is a clear tactic to sow confusion and protect the werewolves. I vote to exile Meg.
+**Nam** voted for **Meg**
+> Nam voted to exile Meg. Reason: Meg is attempting to frame the pursuit of mechanical evidence as a means of 'control.' This is a deflection tactic designed to sow confusion and invalidate the roles of the Seer and Witch. We must prioritize factual claims over behavioral interpretations.
+**Jin** voted for **Meg**
+> Jin voted to exile Meg. Reason: Meg is attacking the coordination of the village and framing the search for mechanical evidence as 'control.' This is a clear deflection tactic to sow confusion. We must prioritize the Seer's lead and remove the source of disruption.
+**Hoang** voted for **Meg**
+> Hoang voted to exile Meg. Reason: Meg is attempting to deflect by framing the pursuit of mechanical evidence as 'disruptive' and 'control'. This is a textbook werewolf tactic to undermine the Seer's lead and sow confusion. We must follow the Seer's ground truth and exile Meg.
+**Riley** voted for **Meg**
+> Riley voted to exile Meg. Reason: I'm just trying to follow the logic here, but Meg's reaction to the mechanical evidence is concerning. If we trust the ground truth provided by Cong and Jin, Meg's deflection seems like a textbook wolf signal. I'll vote Meg to align with the consensus.
+**Meg** voted for **Cong**
+> Meg voted to exile Cong. Reason: I'm still a bit confused, but it feels like Cong is panicking and attacking me way too aggressively. This intensity feels like he's trying to force us to trust his 'evidence' without question. It's starting to feel like he's the one controlling the narrative.
+
+**Day Exiled:** Meg
+---
+
+## Round 2
+**Night Actions:**
+• Riley (Wolf) targeted Cong.
+• Nam (Guard) chose to protect Cong.
+• Cong (Seer) investigated Nam. Nam is NOT a wolf.
+• Jin (Witch) used SAVE potion on Cong
+**Night Eliminations:** None
+
+### Day Debate
+**Cong:** I am the Seer. I have confirmed that Nam is not a werewolf. With Nhan and Nam cleared, the pool of suspects is now very small. Riley, you have remained silent and unverified. We must focus our attention on you.
+**Hoang:** Cong has provided ground truth that Nam is innocent. Riley, you have been silent while we coordinate based on the Seer's evidence. Give us a binary answer: are you a werewolf or not? Your silence is a wolf signal.
+**Jin:** I am the Witch. Cong is our Seer and his results are ground truth. Riley, your continued silence is a classic wolf signal of Passive Alignment. You are blending into the background while we coordinate. We have no reason to trust you. I vote Riley.
+**Riley:** I'm just trying to follow the logic here, but this is too convenient. Cong claims Seer and Jin claims Witch simultaneously to lock in 'ground truth' and force a binary choice on me? The timing of these reveals feels like a coordinated process attack to rush a vote.
+**Cong:** Riley, your attempt to frame our coordination as a 'process attack' is a textbook wolf tactic. You are ignoring the mechanical evidence I provided about Nam and attacking the logic of our alignment to sow doubt. You are the werewolf. I vote Riley.
+**Jin:** Riley, your response is a textbook wolf signal. You are attacking the timing of our claims and labeling coordination as a 'process attack' to deflect from the Seer's evidence. This is a desperate attempt to sow doubt. I stand by my vote for Riley.
+
+### Votes
+**Cong** voted for **Riley**
+> Cong voted to exile Riley. Reason: I have confirmed Nam is innocent. Riley is ignoring this ground truth and instead attacking the coordination between the Seer and Witch as 'too convenient'. Labeling our transparency as a tactic to rush a vote is a classic werewolf deflection. Riley must be exiled.
+**Nam** voted for **Riley**
+> Nam voted to exile Riley. Reason: Cong has provided mechanical evidence clearing Nam. Riley is ignoring this truth and instead attempting to frame the Seer and Witch's coordination as a 'process attack'. This deflection from mechanical evidence to behavioral narratives is a clear sign of a werewolf.
+**Jin** voted for **Riley**
+> Jin voted to exile Riley. Reason: Riley is attacking the timing of our claims and labeling our coordination as a 'process attack'. This is a classic wolf tactic used to deflect from the Seer's mechanical evidence and sow doubt. Riley's behavior is a clear signal of wolf alignment.
+**Hoang** voted for **Riley**
+> Hoang voted to exile Riley. Reason: Cong has provided mechanical evidence clearing Nam. Riley is ignoring these results and instead attacking the timing of our coordination, calling it a 'process attack'. This is a clear deflection tactic to avoid the Seer's lead. Riley is the werewolf.
+**Riley** voted for **Cong**
+> Riley voted to exile Cong. Reason: I'm just trying to follow the logic, but this feels like a coordinated effort. Cong and Jin are using 'ground truth' to shut down any dissent. The timing of both power roles appearing at once to target me is too convenient to be a coincidence.
+
+**Day Exiled:** Riley
+---

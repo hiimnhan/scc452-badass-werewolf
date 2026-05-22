@@ -1,0 +1,153 @@
+{
+    "1": {
+        "night_actions": [
+            "Riley and Meg (Wolves) targeted Nhan.",
+            "Jin (Guard) chose to protect Jin.",
+            "Nam (Seer) investigated Nhan. Nhan is NOT a wolf.",
+            "Hoang (Witch) used SAVE potion on Nhan"
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I am the Seer. I investigated Nhan last night and confirmed Nhan is not a werewolf. Nhan is our Trust Anchor. I now demand the Guard and Witch identify themselves immediately so we can coordinate the Power Core."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "I am the Witch. Nam, I validate your claim as Seer. Nhan is our Trust Anchor. Everyone else: provide your roles or explain your logic now. We move based on Nam's data."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "I am the Guard. Nam, your data is clear. Nhan is the Trust Anchor. Hoang, your validation of Nam strengthens the Power Core. Cong, Riley, Meg\u2014your silence is a variable. Speak now or be the primary targets for exile."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I am a Villager. Nam, Jin, and Hoang have already claimed roles, and their coordination is efficient. This logic holds. Cong and Riley, provide your roles now so we can identify the wolves."
+            },
+            {
+                "speaker": "Riley",
+                "statement": "I'm a Villager. The Power Core is moving fast, and while the logic holds, this sudden coordination is almost too convenient. Cong, your silence is the only missing piece here. If you can't justify your role, you're the most logical target for exile."
+            },
+            {
+                "speaker": "Cong",
+                "statement": "I am a Villager. Riley, you are attempting to shift the focus from Nam's Seer data to 'convenience' and behavioral suspicions. Attacking me while ignoring the established Trust Anchor is a clear wolf signal. The village should focus on you."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Riley",
+                "reasoning": "Nhan voted to exile Riley. Reason: Nam has cleared me as the Trust Anchor. Riley is attempting to discredit the Power Core's coordination as 'convenient' and is pushing for Cong's exile based on vibes rather than data. This deflection from the Seer's hard information is a clear werewolf signal."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Riley",
+                "reasoning": "Cong voted to exile Riley. Reason: Nam has provided clear Seer data confirming Nhan. Riley is attempting to distract us with behavioral suspicions and 'convenience' rather than evidence. This is a classic wolf tactic to divert attention from the Seer's findings. Riley must be exiled."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Riley",
+                "reasoning": "Nam voted to exile Riley. Reason: Riley is attempting to undermine the Power Core and shift focus away from confirmed data toward vague behavioral suspicions. Attacking a fellow villager while questioning the Seer's coordination is a classic werewolf tactic to create confusion. Riley is the primary suspect."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Riley",
+                "reasoning": "Jin voted to exile Riley. Reason: Riley is attempting to frame the coordinated efforts of the power roles as 'too convenient' and is aggressively pushing to exile Cong without evidence. This deflection from the Seer's data is a classic wolf tactic to sow doubt and eliminate innocent villagers."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Riley",
+                "reasoning": "Hoang voted to exile Riley. Reason: Riley is attempting to undermine the Power Core and shift focus away from Nam's Seer data by calling our coordination 'too convenient.' This deflection is a classic wolf signal. We must trust the Seer's data and exile the one trying to disrupt it."
+            },
+            {
+                "voter": "Riley",
+                "vote_for": "Cong",
+                "reasoning": "Riley voted to exile Cong. Reason: Cong's attempt to label my logical inquiry as a 'wolf signal' is a transparent deflection. Rather than contributing to the Power Core's coordination, he is attacking a fellow villager. This pattern fits the profile of a wolf trying to sow discord."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": "Cong",
+                "reasoning": "Meg voted to exile Cong. Reason: I agree with Riley. Cong's delay in claiming and attempt to deflect from the Power Core's logic makes them the most plausible target."
+            }
+        ],
+        "day_exiled": "Riley"
+    },
+    "2": {
+        "night_actions": [
+            "Meg (Wolf) targeted Nam.",
+            "Jin (Guard) chose to protect Nam.",
+            "Nam (Seer) investigated Cong. Cong is NOT a wolf.",
+            "Hoang (Witch) did not use any potions."
+        ],
+        "night_eliminated": [],
+        "day_debate": [
+            {
+                "speaker": "Nam",
+                "statement": "I have confirmed that both Nhan and Cong are not werewolves. With Jin and Hoang claiming power roles, Meg is the only remaining variable. Meg, you have remained silent while the rest of us are verified. We must exile Meg now."
+            },
+            {
+                "speaker": "Meg",
+                "statement": "I am a Villager. Nam, your claim that I am the only variable is a logical leap. Why are you so desperate to isolate me? Provide a factual contradiction to my role or explain why you are pushing this so aggressively."
+            },
+            {
+                "speaker": "Jin",
+                "statement": "Meg, your attempt to frame Nam's factual clearances as 'desperation' is a classic wolf signal. Nam has cleared Nhan and Cong; you are the only remaining variable. Stop stalling and accept the evidence. We vote Meg."
+            },
+            {
+                "speaker": "Hoang",
+                "statement": "Meg, your attempt to label the Seer's data as a 'logical leap' is a desperate wolf signal. Nam has cleared Nhan and Cong, and Jin and I are power roles. You are the last variable. We exile you now."
+            },
+            {
+                "speaker": "Nhan",
+                "statement": "Meg, you are the Last Variable. Nam has cleared Cong and me, and Jin and Hoang are our power core. Your attempt to frame Nam's data as a 'logical leap' is a red flag. There is no one else left. We vote Meg."
+            },
+            {
+                "speaker": "Nam",
+                "statement": "Meg, calling ground truth a 'logical leap' is a transparent attempt to discredit the Seer. I have cleared Nhan and Cong. With Jin and Hoang as our power core, you are the Last Variable. Your deflection is the final proof. We vote Meg."
+            }
+        ],
+        "votes": [
+            {
+                "voter": "Nhan",
+                "vote_for": "Meg",
+                "reasoning": "Nhan voted to exile Meg. Reason: Nam has cleared Cong and me. With Jin and Hoang as the power core, Meg is the last remaining variable. Her attempt to discredit the Seer's factual clearances as a 'logical leap' is a transparent wolf signal. We must exile Meg to win."
+            },
+            {
+                "voter": "Cong",
+                "vote_for": "Meg",
+                "reasoning": "Cong voted to exile Meg. Reason: Nam has cleared Nhan and me. With Jin and Hoang as our power roles, Meg is the last variable. Meg's attempt to dismiss the Seer's data as a 'logical leap' is a clear wolf signal. We must exile Meg to win."
+            },
+            {
+                "voter": "Nam",
+                "vote_for": "Meg",
+                "reasoning": "Nam voted to exile Meg. Reason: I have confirmed Nhan and Cong are not werewolves. With Jin and Hoang as our power core, Meg is the last remaining variable. Meg's attempt to frame factual clears as a 'logical leap' is a clear wolf signal. We must exile Meg."
+            },
+            {
+                "voter": "Jin",
+                "vote_for": "Meg",
+                "reasoning": "Jin voted to exile Meg. Reason: Nam has cleared Nhan and Cong. With the power roles accounted for, Meg is the only remaining variable. Her attempt to discredit the Seer's factual data as a 'logical leap' is a clear wolf signal. We must exile her to win."
+            },
+            {
+                "voter": "Hoang",
+                "vote_for": "Meg",
+                "reasoning": "Hoang voted to exile Meg. Reason: Nam has cleared Nhan and Cong. With Jin and myself filling the power roles, Meg is the only remaining variable. Her attempt to discredit the Seer's factual clearances as a 'logical leap' is a clear wolf signal. We must exile her now."
+            },
+            {
+                "voter": "Meg",
+                "vote_for": null,
+                "reasoning": "Meg voted to exile None. Reason: I have declared my role as Villager. I cannot vote for Nam or the others without a factual contradiction to their claims, and I cannot vote for myself."
+            }
+        ],
+        "day_exiled": "Meg"
+    },
+    "winner": "Villagers",
+    "roles": {
+        "Nhan": "Villager",
+        "Cong": "Villager",
+        "Nam": "Seer",
+        "Jin": "Guard",
+        "Hoang": "Witch",
+        "Riley": "Werewolf",
+        "Meg": "Werewolf"
+    }
+}

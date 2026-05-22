@@ -1,0 +1,94 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "challenged_on_clear",
+        "action": "STATE_SEER_ROLE_AND_CONFIRMATION",
+        "rationale_short": "When challenged, do not argue 'behavior' or 'disruption'; instead, state: 'I am the Seer, Nhan is confirmed.'",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "challenged_on_clear",
+        "action": "ACCUSE_ATTACKERS_OF_BEING_WOLVES",
+        "rationale_short": "Anyone attacking this fact is likely a Wolf trying to kill the Seer.",
+        "confidence": 1.0
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_alive_and_trusted_core_not_established",
+        "action": "PROTECT_SEER",
+        "rationale_short": "You must protect the Seer every night until a Trusted Core is established.",
+        "confidence": 1.0
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "VOTE",
+        "trigger": "seer_cleared_witch",
+        "action": "VOTE_FOR_SEER_NOT_ALLOWED",
+        "rationale_short": "You committed the ultimate betrayal by voting for the Seer who just cleared you.",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "VOTE",
+        "trigger": "seer_cleared_witch",
+        "action": "VOTE_FOR_SEER_PROTECTION",
+        "rationale_short": "The Seer is your highest priority",
+        "confidence": 0.9
+      },
+      {
+        "id": "WITCH-003",
+        "phase": "NIGHT",
+        "trigger": "player_attacking_seer",
+        "action": "POISON_ATTACKER",
+        "rationale_short": "any player attacking the Seer should be your primary target for the poison potion.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "seer_claim_exists",
+        "action": "PRIORITIZE_CLAIM_OVER_TONE",
+        "rationale_short": "Never prioritize 'vibes' or 'tone' over a Seer's claim.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "multiple_players_using_identical_phrasing_to_attack_seer",
+        "action": "IDENTIFY_WOLF_ECHO_CHAMBER",
+        "rationale_short": "When multiple players (Villager, Witch) use identical phrasing like 'verifiable information' to attack a Seer, you are in a Wolf-led echo chamber.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 11,
+    "emitted": 8,
+    "dropped": [
+      {
+        "advice_verbatim": "The phrase 'unsubstantiated claim' is a logical fallacy in this game\u2014the Seer's role is the substance.",
+        "reason": "subjective_only"
+      },
+      {
+        "advice_verbatim": "The village exiled their only source of objective truth based on 'suspicious' behavior",
+        "reason": "not_role_specific"
+      },
+      {
+        "advice_verbatim": "The village ignored that Nam, Cong, and Nhan used nearly identical language to frame the Seer",
+        "reason": "not_role_specific"
+      }
+    ]
+  }
+}

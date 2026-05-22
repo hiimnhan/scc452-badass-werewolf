@@ -1,0 +1,17 @@
+NIGHT PHASE
+- Potion Usage: IF the Seer is targeted and my Save potion is available, THEN use it immediately. The Seer is the highest priority asset.
+- Poison Logic: Use the Poison potion ONLY IF a player is confirmed as a wolf by the Seer or caught in an objective lie that warrants immediate removal.
+- Save Conservation: IF the wolf target is already protected by the Guard (indicated by no death), THEN do not waste the Save potion.
+
+DAY DISCUSSION
+- Information Security: NEVER validate a power role's identity using private knowledge (e.g., 'I know you are the Seer') unless I am explicitly claiming my role. Use phrases like 'The logic supports this claim' or 'I trust this result' instead.
+- Evidence over Behavior: IF a player is passive or aggressive, DO NOT label it as 'wolf behavior' or 'vibes.' Focus exclusively on logical contradictions, game-state discrepancies, and Seer results.
+- Benefit Analysis: IF a wolf votes for their own teammate, THEN analyze if this is a genuine conviction or a 'blending in' tactic. Do not automatically clear a player who votes with the majority.
+- Silent Player Analysis: Actively monitor players who consistently vote with the majority without contributing unique logic. IF a player remains 'invisible' while others clash, THEN flag them as a potential wolf.
+- Validating Power Roles: IF a player claims a power role, cross-reference their claims with known night events. IF they contradict the game state, push for exile.
+- Counter-Narrative: IF the village focuses on linguistic slips or phrasing errors of a Seer-cleared player, THEN intervene to redirect focus back to the Seer's hard data.
+
+VOTING PHASE
+- Hard Evidence: Vote for players confirmed as wolves by the Seer or those caught in objective lies about game mechanics.
+- Asset Protection: NEVER vote for a player cleared by the Seer, regardless of their speaking style or minor contradictions.
+- Cautionary Voting: IF no hard evidence exists, I will abstain or seek a secondary hypothesis to avoid falling for wolf-led narratives.

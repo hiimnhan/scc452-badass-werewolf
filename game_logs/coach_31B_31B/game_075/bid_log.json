@@ -1,0 +1,164 @@
+{
+    "1": [
+        [
+            {
+                "Nhan": 7,
+                "reason": "I saved myself last night, which explains why no one died. I need to guide the village toward forming the Power Core and encourage the Seer to reveal themselves while I still have the power to protect them."
+            },
+            {
+                "Cong": 10,
+                "reason": "Must immediately claim Witch to establish the Power Core and demand the Seer and Guard identify themselves for coordination."
+            },
+            {
+                "Nam": 7,
+                "reason": "No one died night 1. This implies a Guard protect and/or Witch save occurred. I need to push for Seer, Guard, and Witch identification immediately to establish the Power Core."
+            },
+            {
+                "Jin": 10,
+                "reason": "I must claim Seer immediately on Day 1 to establish the Power Core and declare Nhan as a Trust Anchor to guide the village."
+            },
+            {
+                "Hoang": 2,
+                "reason": "No statements have been made. I must wait for the Seer to claim to establish the Power Core. I will only intervene to validate the Seer's claim as per strategy."
+            },
+            {
+                "Riley": 3,
+                "reason": "No accusations yet. I will stay quiet to avoid becoming a target and wait for a 'logic-leader' to emerge so I can mirror their terminology and integrate into the Power Core."
+            },
+            {
+                "Meg": 2,
+                "reason": "I must claim Villager immediately but should not lead Day 1 accusations. Low bid allows me to blend in and wait for others to initiate the debate."
+            }
+        ],
+        [
+            {
+                "Nhan": 9,
+                "reason": "Jin claimed Seer and cleared me. I must validate Jin's claim and confirm my role as Witch now to establish the Power Core, ensuring the Guard and Seer are coordinated for survival."
+            },
+            {
+                "Cong": 10,
+                "reason": "Following strategy: I must immediately claim Witch to establish the Power Core with Jin (Seer) and the Guard to ensure coordination and survival."
+            },
+            {
+                "Nam": 2,
+                "reason": "Jin has claimed Seer and established Nhan as a Trust Anchor. I am a basic Villager; I should listen for Guard/Witch validation to confirm the Power Core before acting."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin claimed Seer and established a Trust Anchor. Per strategy, I must immediately validate the Seer's claim to establish the Power Core and coordinate defense."
+            },
+            {
+                "Riley": 6,
+                "reason": "Jin is positioning as the logic-leader. I need to mirror his 'Trust Anchor' and 'Power Core' terminology immediately to integrate into the core and avoid early suspicion."
+            },
+            {
+                "Meg": 5,
+                "reason": "Need to immediately claim Villager and align with Jin's Power Core to blend in and establish trust early."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong claimed my role. This is a mechanical contradiction and a direct lie. I must expose Cong as a werewolf immediately to prevent the village from trusting a wolf in the Power Core."
+            },
+            {
+                "Nam": 2,
+                "reason": "The Power Core (Seer/Witch) is forming and Nhan is a Trust Anchor. I have no contradictory evidence or accusations. I will listen to see if the Guard claims and if anyone attacks the Seer."
+            },
+            {
+                "Jin": 3,
+                "reason": "Power Core is forming. Cong (Witch) has validated my claim. I now wait for the Guard to identify themselves to complete the core before analyzing remaining players."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Must immediately claim Guard to complete the Power Core Establishment as per strategy. Validating Jin (Seer) and Cong (Witch) is critical to securing the village's coordination and defense."
+            },
+            {
+                "Riley": 5,
+                "reason": "Jin and Cong are forming a Power Core. I must mirror their terminology and validate their claims now to integrate into the core as a secondary observer and avoid becoming an early target."
+            },
+            {
+                "Meg": 2,
+                "reason": "Power Core is establishing. I must declare my role and align with the Seer/Witch immediately to blend in, but I don't need to lead the narrative yet."
+            }
+        ],
+        [
+            {
+                "Cong": 10,
+                "reason": "Nhan is using a high-confidence wolf signal by claiming my role to discredit the Power Core and shifting the debate to my 'suspicious behavior'. I must defend my role and flag Nhan's aggression as a wolf signal."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan is attacking the Power Core and claiming a power role to contradict Cong. This is a primary wolf signal. I must intervene to protect the Seer/Witch coordination and target Nhan."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nhan is Seer-confirmed. Cong's claim contradicts a Trust Anchor, making Cong a confirmed Werewolf. I must lead the village to exile Cong immediately to secure an early win."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Nhan is attempting a binary hunt by faking the Witch role to disrupt the Power Core. I must validate Jin and Cong immediately to isolate Nhan as the wolf."
+            },
+            {
+                "Riley": 6,
+                "reason": "Nhan is the current logic-leader. I need to mirror Nhan's terminology and support the accusation against Cong to integrate into the Power Core and establish myself as a reliable observer."
+            },
+            {
+                "Meg": 5,
+                "reason": "I must claim Villager immediately per strategy. A Power Core conflict has emerged between Cong and Nhan; I need to align with the dominant side once a consensus forms."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Cong and Hoang are collaborating to frame me using mechanical contradictions. I must expose their fake Power Core and prevent my own exile to ensure a Villager victory."
+            },
+            {
+                "Cong": 10,
+                "reason": "Nhan is attempting to frame me and dismantle the Power Core by faking the Witch role. I must aggressively counter this wolf signal and solidify the vote against Nhan to ensure a villager victory."
+            },
+            {
+                "Nam": 10,
+                "reason": "Nhan is exhibiting primary wolf signals: attacking the Seer/Power Core and committing a factual contradiction by claiming Witch after Cong. I must push for Nhan's immediate exile to secure the win."
+            },
+            {
+                "Jin": 10,
+                "reason": "Nhan is a confirmed Trust Anchor. Cong's fake claim and Hoang's attack on Nhan are high-confidence wolf signals. I must immediately expose Cong and Hoang to prevent the exile of a confirmed innocent."
+            },
+            {
+                "Riley": 7,
+                "reason": "Hoang is the logic-leader. I must mirror his terminology regarding the 'Power Core' and 'wolf signals' to integrate into the core and push the village toward exiling Nhan."
+            },
+            {
+                "Meg": 8,
+                "reason": "Must immediately claim Villager and align with the established Power Core (Jin, Cong, Hoang) to secure my cover and push for Nhan's exile."
+            }
+        ],
+        [
+            {
+                "Nhan": 10,
+                "reason": "Hoang is actively framing me to the village. I must expose the mechanical contradiction of Cong's fake Witch claim and Hoang's false validation to prevent my own exile and secure the wolves' removal."
+            },
+            {
+                "Cong": 10,
+                "reason": "Jin has pivoted to attack the Power Core and is framing me and Hoang. I must expose this high-confidence wolf signal and stop a rush-vote to preserve the village's coordination hub."
+            },
+            {
+                "Nam": 10,
+                "reason": "Jin is exhibiting a primary wolf signal by attacking the Power Core (Hoang/Cong) and contradicting his own initial strategy. I must call out this factual contradiction to prevent the village from exiling the Guard/Witch."
+            },
+            {
+                "Hoang": 10,
+                "reason": "Jin has pivoted to attack me and Cong despite my validation. I must defend the Power Core and expose Nhan's fake claim to prevent an incorrect exile and ensure a Villager victory."
+            },
+            {
+                "Riley": 6,
+                "reason": "Hoang is the current logic-leader. I need to mirror his terminology and support the existing accusation against Nhan to integrate into the Power Core while avoiding the primary target spot."
+            },
+            {
+                "Meg": 5,
+                "reason": "I must claim Villager immediately per strategy. Jin is driving the narrative and targeting Cong; aligning with Jin now secures my position as a compliant villager."
+            }
+        ]
+    ]
+}

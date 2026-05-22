@@ -1,0 +1,34 @@
+{
+  "Night Phase": [
+    "Priority 1: Protect the Seer. Absolute, unwavering priority. No exceptions.",
+    "IF Seer is targeted: *Immediately* use Save potion. Subsequent nights: Prioritize Seer protection above all else.",
+    "IF Seer is *not* targeted: Protect the Witch. ONLY if Seer is safe.",
+    "Poison Potion Use: STRICTLY reserved for players demonstrably contradicting confirmed Seer results AND the Seer is currently protected. Never poison confirmed innocents or the Guard.",
+    "IF Guard has flexibility (Seer and Witch protected): Investigate players exhibiting 'Clinical Mask' (excessive analytical language, constant abstention). Prioritize those exhibiting this behavior the most."
+  ],
+  "Day Discussion Phase": [
+    "Immediately state confirmed 'Not Wolf' players, citing Seer validation. Frame as undisputed fact. Aggressively defend, pivoting to Seer validation when challenged.",
+    "IMMEDIATELY flag players using formal/analytical language AND abstaining ('None' votes). Demand explanation: 'Why are you abstaining?' Treat abstention as HIGH suspicion. Force a direct vote. Do NOT accept justifications using clinical language.",
+    "IF a player claims Seer: Demand immediate 'Wolf' or 'Not Wolf' declaration. Hesitation is deception. Validate via Seer investigation (if possible). Dismiss subsequent claims as deception.",
+    "Prioritize identifying and voting out initiators of 'Wolf Pack Votes' ('None' votes).",
+    "IF a player contradicts a Seer result: Immediately label as suspect, clearly explaining the contradiction. Press for explanation.",
+    "Interrupt 'chaos loops'; redirect discussion to the Seer's last result.",
+    "Aggressively defend Seer-validated players. Any attack is a high-priority target.",
+    "Actively call out 'Observer Signals' - players abstaining while claiming to analyze volatility. Demand they commit to a vote."
+  ],
+  "Voting Phase": [
+    "Base votes *solely* on validated Seer results. If uncertain, abstain and state 'Insufficient verifiable information'.",
+    "IF Seer provides a lead, prioritize voting for anyone contradicting it.",
+    "NEVER vote against a player confirmed 'Not Wolf' by the Seer. Anyone attacking the Seer or a confirmed innocent is a high-priority target.",
+    "Prioritize voting out consistently abstaining players, especially power role claimants. Treat 'None' votes as HIGH-probability Wolf signals.",
+    "IF multiple claim Seer: Vote out the one who hasn’t provided a clear result.",
+    "DO NOT vote based on perceived 'vibes' or behavioral analysis. Focus on data."
+  ],
+  "Specific Situations": [
+    "IF a player demands 'proof' of a Seer's claim: Immediately suspect them as a Wolf. Do not engage. This is a Verification Trap.",
+    "IF a player is consistently using analytical language to justify abstention: Treat as HIGH suspicion. Force a direct vote.",
+    "IF a protected player dies: Assume the Witch intervened. Do not immediately accuse the Seer.",
+    "Recognize a Witch saving a targeted player does *not* contradict a Seer's 'Not Wolf' result.",
+    "Treat 'None' votes as a deliberate tactic to avoid accountability and stall the vote."
+  ]
+}

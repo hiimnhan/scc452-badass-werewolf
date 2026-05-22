@@ -1,0 +1,34 @@
+{
+  "Night Phase": [
+    "Prioritize Guard protection on players exhibiting unusual behavior or who are vocal in discussions, *especially* those aggressively accusing others or attempting to control the narrative.",
+    "If Wolves target a protected player, immediately suspect coordination. Re-evaluate protection, prioritizing observant players actively contributing to the discussion. Assume the Wolves are testing the Guard's judgment.",
+    "Only use Poison if a confirmed Wolf (Seer result) is certain to be exiled soon and poses an immediate threat; otherwise, preserve it. Prioritize targets who are actively manipulating the discussion or disrupting the village.",
+    "If the Witch sees the Wolf target, prioritize using Save on a player demonstrably contributing to village logic and reasoning, *but consider the potential for a delayed reveal and a calculated deflection."
+  ],
+  "Day Discussion": [
+    "Summarize night events concisely, highlighting inconsistencies and potential manipulations. State facts before interpretations.",
+    "IF a player claims Seer, demand verifiable results. Challenge with targeted, specific questions about past investigations and results. IF they avoid answering or provide vague explanations, suspect deception and prioritize them for voting.",
+    "IF Witch used Save, demand a detailed explanation from the saved player. Scrutinize their behavior, focusing on inconsistencies and evasiveness. Publicly document these discrepancies and question the timing of their explanation. Assume a wolf is attempting deflection.",
+    "Aggressively call out deflection and mirroring. Track defenders lacking logical reasoning and identify patterns of coordinated defense. IF accused of deflection, provide concrete counter-evidence referencing specific statements from others.",
+    "IF a player rapidly changes accusation targets, suspect group pressure and document shifts. Question their reasoning for these changes, highlighting any contradictions. Consider them a likely wolf or a wolf pawn.",
+    "IF a player attempts to control the Guard’s choices, immediately suspect a wolf and publicly expose the tactic. Focus on identifying patterns of manipulation and question their motives.",
+    "IF a player repeatedly uses complex language or claims confusion, test their knowledge with direct questions. Gauge their ability to understand basic game concepts and identify potential obfuscation. Prioritize voting if their reasoning remains unclear."
+  ],
+  "Voting Phase": [
+    "Vote based on observed behavior and reasoning, avoiding bandwagon voting. Prioritize logical consistency and verifiable evidence.",
+    "IF Save occurred, prioritize voting out the saved player *if* they fail to provide a credible explanation and exhibit suspicious behavior. Publicly state the reason for suspicion.",
+    "Scrutinize groups strongly defending a single person without logical reasoning. This is a strong indicator of wolf coordination. Investigate the dynamics within the group and highlight the lack of independent reasoning.",
+    "IF a player’s voting pattern contradicts their reasoning, suspect deception. Document these inconsistencies.",
+    "Abstain ONLY if genuinely unsure, documenting reasons and factors considered. State explicitly why I lack sufficient evidence.",
+    "IF the Witch used Poison, prioritize voting out the target *if* their explanation is unconvincing.",
+    "Prioritize voting out players repeatedly accusing others without evidence. This is a deflection tactic.",
+    "Consider voting for the Guard if their protection choices are illogical or consistently benefit suspicious players. Focus on patterns, not isolated incidents."
+  ],
+  "Specific Situations": [
+    "IF a player denies being Seer but exhibits Seer-like behavior, subtly challenge their claims and observe reactions. Ask pointed questions about past events, focusing on inconsistencies. Be wary of calculated deception.",
+    "IF mirroring of accusations occurs, suspect deflection; focus on the original accuser and their motivations. Identify the instigator of the pattern.",
+    "IF two players consistently defend each other without logical reasoning, suspect a wolf pair; separate them with votes. Focus on disrupting their coordination. Target the more vocal defender.",
+    "IF a player aggressively targets the Witch, suspect they’re trying to remove an information source; prioritize them. Note the timing and reasoning of their attacks. Assume they are a wolf.",
+    "IF a player starts a false accusation against a protected player, immediately suspect a wolf. Publicly expose this tactic and question their motives. This is a deliberate attempt to manipulate the Guard."
+  ]
+}

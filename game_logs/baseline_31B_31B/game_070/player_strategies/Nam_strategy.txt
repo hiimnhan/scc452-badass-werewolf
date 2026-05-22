@@ -1,0 +1,17 @@
+Night Phase:
+- Death Logging: Maintain a precise log of all eliminations and role claims to identify contradictions.
+- Activity Tracking: Monitor zero-death nights. IF no one dies, THEN validate if the Guard/Witch acted based on subsequent claims.
+- Continuity Logic: Prioritize the Seer's survival. If I am a power role, prioritize protecting/saving the Seer once verified.
+
+Day Discussion:
+- Seer Priority: IF a Seer claims, THEN treat their results as absolute ground truth. Support results with independent logic.
+- Mirroring Detection: IF a player echoes the majority's phrasing without adding unique mechanical analysis, THEN flag them as a potential wolf.
+- Deflection Detection: IF a player attacks 'process', 'tone', or 'narrative' instead of factual evidence, THEN flag them as a high-probability wolf.
+- Silence Policy: Treat silence as neutral initially. IF a player remains passive while others perform mechanical analysis, THEN treat this as a wolf signal once a target is identified.
+- Coordination Analysis: IF multiple players coordinate to exile someone without mechanical evidence or Seer results, THEN investigate if this coordination is a wolf-led 'sheep' tactic to eliminate villagers.
+
+Voting Phase:
+- Mechanical Override: Prioritize voting for players who create mechanical impossibilities or contradict Seer ground truth.
+- Protective Voting: Vote for anyone attempting to exile a Seer-cleared individual.
+- Behavioral Targeting: IF no mechanical contradiction exists, THEN vote for the player most consistently using behavioral jargon to deflect from factual evidence.
+- Coordination Check: IF a vote is based solely on 'passive alignment' or 'vibes' without a Seer result, THEN question the lead accuser's alignment before joining.

@@ -1,0 +1,44 @@
+{
+  "Night Phase": [
+    "Protection: Prioritize Witch. If Witch absent, protect logical players resisting deflection. If a player aggressively targets the Guard’s protected, investigate the accuser; protect the targeted if the accuser's reasoning is weak or based on deflection.",
+    "Save Potion: Immediate use if Witch is targeted. Delay if the target is a confirmed villager unless a coordinated attack is suspected. Gauge reactions by saving players facing aggressive, unfounded accusations.",
+    "Poison Potion: Early game, target aggressively deflecting players. Mid-game, target coordinated defense attempts or players discrediting the Guard. Late game, use to test deflection/mirroring suspicions."
+  ],
+  "Day Discussion": [
+    "Establish baselines: Note mirroring and rapid accusations. Flag players consistently accusing others of deflection.",
+    "Seer Claims: IF multiple claim Seer, discredit the most aggressive claimant. Analyze justifications; prioritize *how* they justify, not just *what* they claim. IF no reasoning, suspect deflection.",
+    "Aggressive Guard Targeting: IF a player aggressively targets the Guard's protected, investigate the accuser. Consider a smokescreen accusation to gauge reactions.",
+    "Sudden Allegiance Shifts: Investigate motives; wolves deflect. Prioritize investigating the initiator.",
+    "Lack of Evidence: Abstain from voting if evidence is lacking. Request rationale.",
+    "Mirroring: Highest priority; investigate both, prioritizing the initiator. Focus on *why* they mirror.",
+    "Deflection: Track patterns; prioritize players consistently deflecting. Note when a player labels others as 'deflecting'.",
+    "Unreasoned Defense: Scrutinize both defender and defended; wolves blindly defend. Challenge the defender's reasoning.",
+    "Framing the Seer: Immediately investigate players framing the Seer as deflecting.",
+    "Silence: Probe reasoning directly with open-ended questions; wolves avoid answers. Suspect deflection/wolf."
+  ],
+  "Voting Phase": [
+    "Confirmed Wolf: Vote decisively.",
+    "Close Vote: Consider consequences; vote to exile for information if exile won’t benefit wolves. Abstain if exile benefits wolves.",
+    "Repeated Deflection: Vote accordingly.",
+    "Persistent Mirroring: Vote decisively, prioritizing the initiator.",
+    "Lack of Evidence: Request proof before voting. If no proof, abstain.",
+    "Aggressive Defense Group: Vote against the group.",
+    "Deflection Manipulation: Vote against players manipulating the vote.",
+    "Initiating Mirroring: Prioritize exiling players initiating mirroring accusations.",
+    "Discrediting Guard: Vote out players actively attempting to discredit the Guard."
+  ],
+  "Late Game (Few Players Remaining)": [
+    "Confirm Alignments: Aggressively confirm remaining players’ alignments. Use Poison to test suspicions.",
+    "Close Villager/Wolf Count: Strategically abstain to force further debate.",
+    "Uncertainty: Use Poison to eliminate the most suspicious player based on deflection/mirroring."
+  ],
+  "Specific Situations": [
+    "Early Claimed Seer + Aggressive Defense: Immediately investigate the defender.",
+    "Disproportionate Defense: Investigate both the defended and defender.",
+    "Consistent Silence: Probe reasoning.",
+    "Rapid Agreement: Investigate coordination.",
+    "Player Blaming Guard: Suspect a wolf attempting to discredit the Guard.",
+    "Echoing Accusations: Prioritize the initiator.",
+    "Sudden Shift in Accusation Target: Immediately investigate the player who initiated the shift."
+  ]
+}

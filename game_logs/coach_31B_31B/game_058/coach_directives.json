@@ -1,0 +1,130 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "a cleared player makes logically impossible claims",
+        "action": "RE_EVALUATE_NARRATIVE",
+        "rationale_short": "the Seer and the village failed to realize that a 'cleared' player making logically impossible claims is a signal to re-evaluate the entire narrative",
+        "confidence": 1.0
+      },
+      {
+        "id": "SEER-002",
+        "phase": "DEBATE",
+        "trigger": "a cleared player's claim contradicts the game state",
+        "action": "CHALLENGE_X",
+        "rationale_short": "don't let a clearance blind you to factual lies",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-003",
+        "phase": "DEBATE",
+        "trigger": "two power-role claimants enter a hard contradiction",
+        "action": "EVALUATE_LOGICAL_CONSISTENCY",
+        "rationale_short": "you must evaluate the logical consistency of the people you clear",
+        "confidence": 0.9
+      },
+      {
+        "id": "SEER-004",
+        "phase": "DEBATE",
+        "trigger": "a player's only argument is 'The Seer said so'",
+        "action": "ACCUSE_X",
+        "rationale_short": "If a player's only argument is 'The Seer said so,' they are often simulating compliance to hide their identity",
+        "confidence": 0.8
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "DEBATE",
+        "trigger": "a contradiction occurs",
+        "action": "PRESENT_TIMELINE_CLEARLY",
+        "rationale_short": "When a contradiction occurs, instead of aggressively attacking, present the timeline of your action clearly",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "a contradiction occurs",
+        "action": "AVOID_AGGRESSIVE_ATTACK",
+        "rationale_short": "instead of aggressively attacking, present the timeline of your action clearly",
+        "confidence": 0.9
+      },
+      {
+        "id": "GUARD-003",
+        "phase": "DEBATE",
+        "trigger": "a player's only argument is 'The Seer said so'",
+        "action": "ACCUSE_X",
+        "rationale_short": "If a player's only argument is 'The Seer said so,' they are often simulating compliance to hide their identity",
+        "confidence": 0.8
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "NIGHT",
+        "trigger": "in a role contradiction without external confirmation from the Seer that the other claimant is a wolf",
+        "action": "WITHHOLD_POISON",
+        "rationale_short": "Never poison a fellow power-role claimant without external confirmation from the Seer that they are a wolf",
+        "confidence": 1.0
+      },
+      {
+        "id": "WITCH-002",
+        "phase": "DEBATE",
+        "trigger": "a player's only argument is 'The Seer said so'",
+        "action": "ACCUSE_X",
+        "rationale_short": "If a player's only argument is 'The Seer said so,' they are often simulating compliance to hide their identity",
+        "confidence": 0.8
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "a player is confident or decisive",
+        "action": "AVOID_EQUATING_CONFIDENCE_WITH_INNOCENCE",
+        "rationale_short": "Stop equating 'confidence' or 'decisiveness' with innocence",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "a player's claim contradicts the game state (e.g. claiming a save when no one died)",
+        "action": "TREAT_AS_PRIMARY_RED_FLAG",
+        "rationale_short": "When a player's claim contradicts the game state... treat it as a primary red flag regardless of how 'stalling' others seem",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "two power-roles claim to have saved the same person",
+        "action": "FOCUS_DEBATE_ON_CONTRADICTION",
+        "rationale_short": "The village ignored the paradox of both the Guard and Witch claiming to save the same person. This should have been the central focus of the debate",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-004",
+        "phase": "DEBATE",
+        "trigger": "a player's only argument is 'The Seer said so'",
+        "action": "ACCUSE_X",
+        "rationale_short": "If a player's only argument is 'The Seer said so,' they are often simulating compliance to hide their identity",
+        "confidence": 0.8
+      },
+      {
+        "id": "VILLAGER-005",
+        "phase": "DEBATE",
+        "trigger": "a player's tone is aggressive or questioning while identifying factual inconsistencies",
+        "action": "PRIORITIZE_GAME_LOGIC_OVER_TONE",
+        "rationale_short": "the village prioritized the tone of the debate over game logic",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 15,
+    "emitted": 14,
+    "dropped": [],
+    "coverage_warning": "total_advice_pieces=15 but emitted+dropped=14"
+  }
+}

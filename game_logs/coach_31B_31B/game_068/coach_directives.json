@@ -1,0 +1,73 @@
+{
+  "by_role": {
+    "Seer": [
+      {
+        "id": "SEER-001",
+        "phase": "DEBATE",
+        "trigger": "round_num == 1",
+        "action": "REVEAL_ROLE",
+        "rationale_short": "Your early claim and establishment of a Trust Anchor were excellent. Continue this to build a 'Power Core.'",
+        "confidence": 0.9
+      }
+    ],
+    "Guard": [
+      {
+        "id": "GUARD-001",
+        "phase": "NIGHT",
+        "trigger": "seer_is_public == true",
+        "action": "PROTECT_SEER",
+        "rationale_short": "The Guard must prioritize the Seer above all others once the Seer is public to maintain the information flow.",
+        "confidence": 1.0
+      },
+      {
+        "id": "GUARD-002",
+        "phase": "DEBATE",
+        "trigger": "asked_about_night_targets == true",
+        "action": "WITHHOLD_INFORMATION",
+        "rationale_short": "Avoid revealing your specific night targets unless necessary.",
+        "confidence": 0.9
+      }
+    ],
+    "Witch": [
+      {
+        "id": "WITCH-001",
+        "phase": "DEBATE",
+        "trigger": "target_was_protected_by_guard == true",
+        "action": "WITHHOLD_SAVE_CLAIM",
+        "rationale_short": "Claiming a 'save' when the target was already safe (due to Guard protection) is a fatal error... Only claim utility if it is logically consistent with the game state.",
+        "confidence": 1.0
+      }
+    ],
+    "Villager": [
+      {
+        "id": "VILLAGER-001",
+        "phase": "DEBATE",
+        "trigger": "player_claims_guard_cannot_protect_self == true",
+        "action": "CHALLENGE_X",
+        "rationale_short": "villagers should memorize core mechanics to instantly debunk such lies [regarding the Guard not protecting themselves].",
+        "confidence": 0.9
+      },
+      {
+        "id": "VILLAGER-002",
+        "phase": "DEBATE",
+        "trigger": "player_attacks_seer_confirmed_trust_anchor == true",
+        "action": "ACCUSE_X",
+        "rationale_short": "When a player attacks a Seer-confirmed Trust Anchor, treat that as a primary wolf signal, regardless of their tone.",
+        "confidence": 1.0
+      },
+      {
+        "id": "VILLAGER-003",
+        "phase": "DEBATE",
+        "trigger": "evaluating_wolf_candidates == true",
+        "action": "PRIORITIZE_HARD_CONTRADICTIONS",
+        "rationale_short": "rely less on behavioral labels like 'tone policing' and more on hard contradictions.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  "coverage": {
+    "total_advice_pieces": 7,
+    "emitted": 7,
+    "dropped": []
+  }
+}
