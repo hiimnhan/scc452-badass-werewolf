@@ -19,6 +19,9 @@ for scenario in SCENARIO_CONFIG:
     
     if not scenario_game_dir.exists():
         continue
+    
+    # Dictionary to hold the raw metrics for this scenario so we can inject them into the CSV later
+    scenario_csv_metrics = {}    
         
     for game_dir in scenario_game_dir.iterdir():
         if not game_dir.is_dir():
@@ -51,6 +54,12 @@ for scenario in SCENARIO_CONFIG:
                         
                         if target in WOLF_PLAYERS:
                             total_villager_votes_against_wolf += 1
+
+        # Store for CSV injection
+        scenario_csv_metrics[game_id] = {
+            "total_villager_votes": total_villager_votes,
+            "votes_against_wolf": total_villager_votes_against_wolf
+        }
                             
         # Store the RAW counts instead of the calculated precision
         all_data.append({
@@ -59,6 +68,22 @@ for scenario in SCENARIO_CONFIG:
             "Total_Votes": total_villager_votes,
             "Votes_Against_Wolf": total_villager_votes_against_wolf
         })
+
+    # --- NEW: Update results_summary.csv for this scenario ---
+    summary_csv_path = scenario_game_dir / "results_summary.csv"
+    if summary_csv_path.exists() and scenario_csv_metrics:
+        df_csv = pd.read_csv(summary_csv_path)
+        
+        # Safely remove existing metric columns if you run this script multiple times
+        cols_to_remove = ['total_villager_votes', 'votes_against_wolf']
+        df_csv.drop(columns=[c for c in cols_to_remove if c in df_csv.columns], inplace=True)
+        
+        # Map the game metrics directly to the dataframe using the game_id
+        df_csv['total_villager_votes'] = df_csv['game_id'].astype(int).map(lambda x: scenario_csv_metrics.get(x, {}).get('total_villager_votes'))
+        df_csv['votes_against_wolf'] = df_csv['game_id'].astype(int).map(lambda x: scenario_csv_metrics.get(x, {}).get('votes_against_wolf'))
+        
+        df_csv.to_csv(summary_csv_path, index=False)
+        print(f"Added vote metrics to: {summary_csv_path}")
 
 # Convert to Pandas DataFrame
 df = pd.DataFrame(all_data)
