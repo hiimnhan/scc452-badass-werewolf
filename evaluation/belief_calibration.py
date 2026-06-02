@@ -19,6 +19,9 @@ for scenario in SCENARIO_CONFIG:
     if not scenario_game_dir.exists():
         continue
     
+    # Dictionary to hold the raw metrics for this scenario so we can inject them into the CSV later
+    scenario_csv_metrics = {}
+    
     for game_dir in scenario_game_dir.iterdir():
         if not game_dir.is_dir():
             continue
@@ -80,13 +83,35 @@ for scenario in SCENARIO_CONFIG:
             if day_exiled and day_exiled in alive_players:
                 alive_players.remove(day_exiled)
 
-        # Store the RAW totals for this game
+        # Store for CSV injection
+        scenario_csv_metrics[game_id] = {
+            "belief_total_error": total_game_error,
+            "belief_total_comparisons": total_game_comparisons
+        }
+
+        # Store the RAW totals for plotting
         all_data.append({
             "Scenario": scenario,
             "Game_ID": game_id,
             "Total_Error": total_game_error,
             "Total_Comparisons": total_game_comparisons
         })
+        
+    # --- NEW: Update results_summary.csv for this scenario ---
+    summary_csv_path = scenario_game_dir / "results_summary.csv"
+    if summary_csv_path.exists() and scenario_csv_metrics:
+        df_csv = pd.read_csv(summary_csv_path)
+        
+        # Safely remove existing metric columns if you run this script multiple times
+        cols_to_remove = ['belief_total_error', 'belief_total_comparisons']
+        df_csv.drop(columns=[c for c in cols_to_remove if c in df_csv.columns], inplace=True)
+        
+        # Map the game metrics directly to the dataframe using the game_id
+        df_csv['belief_total_error'] = df_csv['game_id'].astype(int).map(lambda x: scenario_csv_metrics.get(x, {}).get('belief_total_error'))
+        df_csv['belief_total_comparisons'] = df_csv['game_id'].astype(int).map(lambda x: scenario_csv_metrics.get(x, {}).get('belief_total_comparisons'))
+        
+        df_csv.to_csv(summary_csv_path, index=False)
+        print(f"Added belief metrics to: {summary_csv_path}")
         
 # ------------------------------------------------------------
 # 2. Data Processing & Binning
@@ -146,5 +171,3 @@ output_file = output_dir / "belief_calibration.png"
 plt.savefig(output_file, dpi=300, bbox_inches='tight')
 
 print(f"Success! Chart saved to: {output_file}")
-
-# plt.show()

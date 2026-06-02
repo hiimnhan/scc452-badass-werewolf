@@ -38,6 +38,12 @@ llm_eval[['follow_count', 'ignore_count', 'total_directives']] = llm_eval['compl
     lambda x: pd.Series(get_compliance_counts(x))
 )
 
+# --- NEW: Save the precalculated data to a new CSV ---
+llm_eval.drop(columns=['compliance_data', 'feedback_overlap_score', 'summarization_reasoning'], inplace=True)
+precalculated_path = "evaluation/llm_eval_precalculated.csv"
+llm_eval.to_csv(precalculated_path, index=False)
+print(f"Precalculated metrics successfully saved to: {precalculated_path}")
+
 # --- 2. Create Bins & Aggregate ---
 
 # Create the 25-game Bins based on game_id
@@ -49,7 +55,6 @@ binned_df = llm_eval.groupby(['scenario', 'Bin_Index', 'Bin_Label']).agg(
     total_follow=('follow_count', 'sum'),
     total_directives=('total_directives', 'sum'),
     total_summarization=('summarization_score', 'sum'),
-    total_overlap=('feedback_overlap_score', 'sum'),
     row_count=('game_id', 'count') # Counts the number of rows in this bin
 ).reset_index()
 
@@ -62,9 +67,6 @@ binned_df['Compliance_Rate'] = binned_df.apply(
 
 # Summarization Ability = total summarization_score / number of rows
 binned_df['Summarization_Ability'] = binned_df['total_summarization'] / binned_df['row_count']
-
-# Feedback Overlap Proportion = total feedback_overlap_score / number of rows
-binned_df['Feedback_Overlap (%)'] = (binned_df['total_overlap'] / binned_df['row_count']) * 100
 
 # Sort to ensure chronological order
 binned_df = binned_df.sort_values(by='Bin_Index')
@@ -124,7 +126,6 @@ def plot_metric(data, y_col, title, ylabel, filename, is_percentage=False, y_max
 plot_metric(
     data=binned_df,
     y_col='Compliance_Rate',
-    # title='Villager Compliance Rate per 25-Game Bin',
     title='',
     ylabel='Compliance Rate (%)',
     filename='compliance_rate.png',
@@ -136,22 +137,9 @@ plot_metric(
 plot_metric(
     data=binned_df,
     y_col='Summarization_Ability',
-    # title='Villager Summarization Ability per 25-Game Bin',
     title='',
     ylabel='Summarization Score (0-10)',
     filename='summarization_ability.png',
     is_percentage=False,
     y_max=11 # Max score of 10 + headroom
-)
-
-# Chart 3: Feedback Overlap Proportion
-plot_metric(
-    data=binned_df,
-    y_col='Feedback_Overlap (%)',               # Updated column name
-    # title='Feedback Overlap Proportion per 25-Game Bin',
-    title='',
-    ylabel='Overlap Proportion (%)',            # Updated y-axis label
-    filename='feedback_overlap.png',
-    is_percentage=True,                         # Automatically formats to %.1f%%
-    y_max=115                                   # Updated headroom for a 0-100 scale
 )
